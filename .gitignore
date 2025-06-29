@@ -23,3 +23,17 @@ node_modules/
 
 # OS specific
 .DS_Store
+
+# Local settings
+.claude/settings.local.json
+
+# Development logs
+ai/context/agent-history.yaml
+ai/features/*/meta/development-log.md
+
+# Temporary files
+*.tmp
+
+# IDE
+.vscode/
+.idea/
