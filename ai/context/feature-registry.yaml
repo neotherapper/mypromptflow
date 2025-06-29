@@ -1,0 +1,20 @@
+# Feature registry - tracks all features in development
+features:
+  active_features: []
+  completed_features: []
+  planned_features: []
+
+  feature_details:
+    # This will be populated as features are created
+    # Format:
+    # - name: "feature-name"
+    #   status: "planning|development|testing|completed"
+    #   created_date: "YYYY-MM-DD"
+    #   documents:
+    #     - feature-spec: "path/to/spec.md"
+    #     - user-stories: "path/to/stories.md"
+    #     - api-contracts: "path/to/api.md"
+    #   implementation_status:
+    #     backend: "not-started|in-progress|completed"
+    #     frontend: "not-started|in-progress|completed"
+    #     tests: "not-started|in-progress|completed"

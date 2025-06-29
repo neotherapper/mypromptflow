@@ -1,0 +1,180 @@
+# Document dependency configuration
+document_dependencies:
+  # Strategic Documents (Tier 4)
+  statement-of-purpose:
+    type: foundational
+    tier: 4
+    dependencies: []
+    outputs:
+      - business_vision
+      - core_values
+      - target_audience
+
+  market-analysis:
+    type: research
+    tier: 4
+    dependencies: []
+    outputs:
+      - market_size
+      - competitors
+      - opportunities
+      - trends
+
+  user-research:
+    type: research
+    tier: 4
+    dependencies: []
+    outputs:
+      - user_interviews
+      - survey_results
+      - behavioral_insights
+
+  user-personas:
+    type: synthesis
+    tier: 4
+    dependencies:
+      - user-research
+      - market-analysis
+    outputs:
+      - persona_profiles
+      - user_segments
+      - journey_maps
+
+  # Product Documents (Tier 2-3)
+  prd:
+    type: synthesis
+    tier: 2
+    dependencies:
+      - statement-of-purpose
+      - market-analysis
+      - user-research
+      - user-personas
+    outputs:
+      - functional_requirements
+      - non_functional_requirements
+      - success_metrics
+      - mvp_scope
+
+  user-stories:
+    type: breakdown
+    tier: 3
+    dependencies:
+      - prd
+      - user-personas
+    outputs:
+      - story_backlog
+      - acceptance_criteria
+      - story_points
+
+  feature-specifications:
+    type: detailed
+    tier: 3
+    dependencies:
+      - user-stories
+      - technical-requirements
+    outputs:
+      - detailed_behavior
+      - edge_cases
+      - integration_points
+
+  # Technical Documents (Tier 1)
+  system-architecture:
+    type: technical
+    tier: 2
+    dependencies:
+      - technical-requirements
+      - prd
+    outputs:
+      - component_design
+      - technology_stack
+      - deployment_architecture
+
+  api-documentation:
+    type: technical
+    tier: 1
+    dependencies:
+      - system-architecture
+      - database-schemas
+    outputs:
+      - endpoint_definitions
+      - request_schemas
+      - response_schemas
+      - authentication_methods
+
+  database-schemas:
+    type: technical
+    tier: 1
+    dependencies:
+      - domain-models
+      - data-requirements
+    outputs:
+      - table_definitions
+      - relationships
+      - constraints
+      - indexes
+
+  technical-requirements:
+    type: technical
+    tier: 1
+    dependencies:
+      - prd
+      - system-architecture
+    outputs:
+      - performance_specs
+      - scalability_needs
+      - security_requirements
+      - integration_points
+
+  # Quality Assurance Documents (Tier 2)
+  test-plans:
+    type: quality
+    tier: 2
+    dependencies:
+      - functional-requirements
+      - acceptance-criteria
+    outputs:
+      - test_scenarios
+      - coverage_matrix
+      - automation_strategy
+
+  # Feature-Specific Documents
+  priority-feature-list:
+    type: planning
+    tier: 3
+    dependencies:
+      - prd
+    outputs:
+      - feature_priorities
+      - implementation_phases
+      - effort_estimates
+      - dependency_map
+
+# Dependency chains for common workflows
+workflow_chains:
+  create_prd:
+    order:
+      - parallel:
+          - statement-of-purpose
+          - market-analysis
+          - user-research
+      - sequential:
+          - user-personas
+          - prd
+
+  create_feature:
+    order:
+      - parallel:
+          - user-stories
+          - technical-requirements
+      - sequential:
+          - feature-specifications
+          - api-documentation
+          - test-plans
+
+  technical_implementation:
+    order:
+      - system-architecture
+      - parallel:
+          - database-schemas
+          - api-documentation
+      - technical-requirements

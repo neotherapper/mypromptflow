@@ -1,0 +1,96 @@
+# Document structure validation tests
+test_suites:
+  document_structure_validation:
+    prd_structure_test:
+      description: "Ensure PRD is generated with correct structure and location"
+      test_cases:
+        - name: "PRD location verification"
+          check:
+            path: "ai/knowledge/product/prd/main-prd.md"
+            exists: true
+
+        - name: "PRD frontmatter validation"
+          check:
+            frontmatter_fields:
+              - document_type: "prd"
+              - version: "string"
+              - dependencies: "array"
+              - status: ["draft", "review", "approved"]
+              - ai_context: "object"
+
+        - name: "PRD content structure"
+          check:
+            required_sections:
+              - "# Product Requirements Document"
+              - "## Executive Summary"
+              - "## Functional Requirements"
+              - "## Non-Functional Requirements"
+              - "## Success Metrics"
+              - "## AI Agent Instructions"
+
+        - name: "PRD dependencies exist"
+          check:
+            dependency_files:
+              - "ai/knowledge/strategic/statement-of-purpose.md"
+              - "ai/knowledge/strategic/market-requirements.md"
+              - "ai/knowledge/user-experience/research/user-personas.md"
+
+    tier1_document_tests:
+      description: "Validate Tier 1 high-value AI documents"
+      test_cases:
+        - name: "API documentation structure"
+          check:
+            path: "ai/knowledge/technical/api/api-documentation.md"
+            format: "markdown_with_openapi"
+            includes_typescript_types: true
+
+        - name: "Database schema format"
+          check:
+            path: "ai/knowledge/technical/database/schemas/"
+            file_format: [".sql", ".prisma", ".md"]
+            includes_relationships: true
+
+        - name: "Technical requirements completeness"
+          check:
+            required_specs:
+              - performance_requirements
+              - scalability_metrics
+              - security_requirements
+              - integration_points
+
+    feature_workspace_tests:
+      description: "Validate feature documentation structure"
+      test_cases:
+        - name: "Feature workspace completeness"
+          check:
+            required_folders:
+              - requirements
+              - design
+              - technical
+              - tests
+              - analytics
+              - meta
+
+        - name: "Feature spec validation"
+          check:
+            path: "ai/features/{feature}/feature-spec.md"
+            required_sections:
+              - overview
+              - problem_statement
+              - solution_approach
+              - success_criteria
+
+        - name: "User stories format"
+          check:
+            path: "ai/features/{feature}/requirements/user-stories.md"
+            story_format: "As a .*, I want .* so that .*"
+            includes_acceptance_criteria: true
+
+        - name: "API contracts validation"
+          check:
+            path: "ai/features/{feature}/technical/api-contracts.md"
+            includes:
+              - endpoint_definitions
+              - request_schemas
+              - response_schemas
+              - error_codes
