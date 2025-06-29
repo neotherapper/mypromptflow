@@ -1,23 +1,24 @@
 # Document registry - tracks all documents in the knowledge base
 registry:
-  last_updated: ""
-  total_documents: 0
+  last_updated: "2024-06-29"
+  total_documents: 1
   documents_by_tier:
     tier1: []
     tier2: []
-    tier3: []
+    tier3: ["user-authentication-feature"]
     tier4: []
 
   documents:
-    # This will be populated as documents are created
-    # Format:
-    # - id: "document-id"
-    #   type: "document-type"
-    #   path: "relative/path/to/document.md"
-    #   version: "1.0"
-    #   status: "draft|review|approved"
-    #   created_date: "YYYY-MM-DD"
-    #   last_modified: "YYYY-MM-DD"
-    #   dependencies_satisfied: true|false
-    #   tier: 1|2|3|4
-    #   ai_value: 60-95
+    - id: "user-authentication-feature"
+      type: "feature-specification"
+      path: "ai/features/user-authentication/feature-spec.md"
+      version: "1.0"
+      status: "approved"
+      created_date: "2024-01-20"
+      last_modified: "2024-01-20"
+      dependencies_satisfied: false
+      tier: 3
+      ai_value: 78
+      missing_dependencies:
+        - user-management
+        - security-framework
