@@ -1,6 +1,8 @@
 # AI Knowledge Base Project Instructions
 
-This project uses an orchestrated agent system to build comprehensive business documentation.
+## Project Explanation
+
+This project is an AI Knowledge Base system designed to build comprehensive business documentation using an orchestrated agent system.
 
 ## Key Concepts
 
@@ -8,6 +10,8 @@ This project uses an orchestrated agent system to build comprehensive business d
 2. **Agent Orchestration**: Specialized agents handle different document types
 3. **Interactive Workflows**: Claude suggests and creates missing documents
 4. **Context Propagation**: Documents reference each other for coherent knowledge
+5. **Structured Documents:** All documents require YAML frontmatter, AI agent instructions, cross-references, and TypeScript examples.
+6. **Feature Development:** A dedicated workflow exists for creating features, where agents generate all associated documentation.
 
 ## Workflow Commands
 
