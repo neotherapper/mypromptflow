@@ -6,12 +6,25 @@ echo "🔍 Validating AI Knowledge Base..."
 echo "Checking directory structure..."
 required_dirs=(
     ".claude/commands"
-    ".claude/prompts/meta-prompts"
-    ".claude/prompts/document-templates"
-    "ai/knowledge/strategic"
-    "ai/knowledge/product"
+    "ai/context/"
+    "ai/features/_template/design"
+    "ai/features/_template/meta"
+    "ai/features/_template/requirements"
+    "ai/features/_template/technical"
+    "ai/features/_template/tests"
+    "ai/features/_template/user-authentication"
+    "ai/knowledge/product/prd"
+    "ai/knowledge/product/strategic"
+    "ai/knowledge/quality-assurance"
     "ai/knowledge/technical"
-    "ai/features"
+    "ai/knowledge/user-experience/design"
+    "ai/knowledge/strategic"
+    "ai/prompts/document-templates"
+    "ai/prompts/meta"
+    "ai/prompts/meta-prompts"
+    "ai/scratchpads/"
+    "ai/tests/"
+
 )
 
 for dir in "${required_dirs[@]}"; do
@@ -28,6 +41,22 @@ required_files=(
     ".claude/CLAUDE.md"
     "ai/context/dependencies.yaml"
     "ai/context/tier-configuration.yaml"
+    "ai/context/document-registry.yaml"
+    "ai/context/feature-registry.yaml"
+    "ai/features/_template/design/ui-mockups.md"
+    "ai/features/_template/meta/ai-instructions.md"
+    "ai/features/_template/requirements/acceptance-criteria.md"
+    "ai/features/_template/requirements/user-stories.md"
+    "ai/features/_template/technical/api-contracts.md"
+    "ai/features/_template/technical/data-models.md"
+    "ai/features/_template/tests/test-strategy.md"
+    "ai/features/_template/feature-spec.md"
+    "ai/features/_template/README.md"
+    "ai/features/user-authentication/feature-spec.md"
+    "ai/tests/ai-context-tests.yaml"
+    "ai/tests/dependency-validation-tests.yaml"
+    "ai/tests/document-structure-tests.yaml"
+
 )
 
 for file in "${required_files[@]}"; do
