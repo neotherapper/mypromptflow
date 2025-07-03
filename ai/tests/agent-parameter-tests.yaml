@@ -1,0 +1,283 @@
+# AI Agent Parameter Tests - Validate agent spawning and parameter passing
+test_suites:
+  agent_spawning_validation:
+    description: "Ensure agents are spawned with correct parameters and context"
+    test_cases:
+      - name: "Market Analysis Agent Parameters"
+        test_type: "agent_parameter_validation"
+        trigger_command: "create-document market-analysis"
+        expected_agent_spawn:
+          agent_type: "Document Generator"
+          specialization: "Market Analysis Specialist"
+          required_parameters:
+            document_type: "market-analysis"
+            tier: 4
+            template_path: "@ai/prompts/document-templates/tier4/market-analysis.md"
+            output_path: "ai/knowledge/strategic/market-analysis.md"
+            context_documents: []  # Tier 4 has no dependencies
+          agent_instructions_must_contain:
+            - "You are a Market Analysis Specialist"
+            - "Create market-analysis.md"
+            - "Focus: Competitive landscape, market opportunities"
+            - "Include proper YAML frontmatter"
+            - "Add AI instructions section"
+            - "Template: @ai/prompts/document-templates/tier4/market-analysis.md"
+        validation:
+          - all_required_parameters_provided: true
+          - context_documents_accessible: true
+          - template_path_valid: true
+          - output_path_writable: true
+          - instructions_contain_specific_focus: true
+
+      - name: "PRD Agent Parameters in Orchestration"
+        test_type: "multi_agent_parameter_validation"
+        trigger_command: "orchestrate-agents prd"
+        expected_agent_sequence:
+          parallel_phase_1:
+            - agent_id: "market_analysis_agent"
+              parameters:
+                document_type: "market-analysis"
+                context_documents:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                template: "@ai/prompts/document-templates/tier4/market-analysis.md"
+                focus: "Competitive landscape, market opportunities"
+            - agent_id: "user_research_agent"
+              parameters:
+                document_type: "user-research"
+                context_documents:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                template: "@ai/prompts/document-templates/tier4/user-research.md"
+                focus: "User personas, pain points, journey mapping"
+          sequential_phase_2:
+            - agent_id: "user_personas_agent"
+              parameters:
+                document_type: "user-personas"
+                context_documents:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                  - "ai/knowledge/strategic/market-analysis.md"  # From Phase 1
+                  - "ai/knowledge/user-experience/research/user-research.md"  # From Phase 1
+                template: "@ai/prompts/document-templates/tier4/user-personas.md"
+                dependencies: ["market-analysis", "user-research"]
+          synthesis_phase_3:
+            - agent_id: "prd_agent"
+              parameters:
+                document_type: "prd"
+                context_documents:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                  - "ai/knowledge/strategic/market-analysis.md"
+                  - "ai/knowledge/user-experience/research/user-research.md"
+                  - "ai/knowledge/user-experience/research/user-personas.md"
+                template: "@ai/prompts/document-templates/tier2/prd.md"
+                focus: "Comprehensive product requirements"
+        validation:
+          - agents_spawn_in_correct_order: true
+          - context_accumulates_between_phases: true
+          - dependencies_satisfied_before_spawn: true
+          - all_context_files_accessible: true
+
+      - name: "Feature Creation Agent Parameters"
+        test_type: "feature_agent_parameter_validation"
+        trigger_command: "create-feature payment-system"
+        expected_agent_sequence:
+          orchestrator_agent:
+            agent_type: "Feature Orchestrator"
+            parameters:
+              feature_name: "payment-system"
+              workspace_path: "ai/features/payment-system/"
+              orchestrator_instructions: "@ai/prompts/meta-prompts/feature-orchestrator.md"
+          phase_agents:
+            requirements_analyst:
+              parameters:
+                feature_name: "payment-system"
+                phase: "requirements"
+                context_documents:
+                  - "@ai/knowledge/product/prd/" # if exists
+                  - "@ai/knowledge/product/user-stories/" # if exists
+                template_directory: "@ai/features/_template/requirements/"
+                output_files:
+                  - "requirements/user-stories.md"
+                  - "requirements/acceptance-criteria.md"
+                  - "requirements/dependencies.md"
+                instructions: "Create comprehensive requirements for payment-system"
+            design_specialist:
+              parameters:
+                feature_name: "payment-system"
+                phase: "design"
+                context_documents:
+                  - "ai/features/payment-system/requirements/" # From previous phase
+                  - "@ai/knowledge/user-experience/design/" # if exists
+                template_directory: "@ai/features/_template/design/"
+                output_files:
+                  - "design/ui-mockups.md"
+                  - "design/interaction-flow.md"
+                  - "design/design-decisions.md"
+            technical_architect:
+              parameters:
+                feature_name: "payment-system"
+                phase: "technical"
+                context_documents:
+                  - "ai/features/payment-system/requirements/"
+                  - "ai/features/payment-system/design/"
+                  - "@ai/knowledge/technical/architecture/" # if exists
+                template_directory: "@ai/features/_template/technical/"
+                output_files:
+                  - "technical/api-contracts.md"
+                  - "technical/data-models.md"
+                  - "technical/implementation-plan.md"
+                  - "technical/architecture-decisions.md"
+        validation:
+          - feature_name_passed_to_all_agents: true
+          - workspace_path_consistent: true
+          - context_builds_between_phases: true
+          - output_files_specified_correctly: true
+
+  context_document_validation:
+    description: "Validate that agents receive correct context documents and can access them"
+    test_cases:
+      - name: "Context Document Accessibility"
+        test_type: "context_validation"
+        setup:
+          - create_test_documents:
+              - "ai/knowledge/strategic/statement-of-purpose.md"
+              - "ai/knowledge/strategic/market-analysis.md"
+        trigger_command: "create-document user-personas"
+        agent_spawn_check:
+          context_documents_provided:
+            - "@ai/knowledge/strategic/statement-of-purpose.md"
+            - "ai/knowledge/strategic/market-analysis.md"
+          validation_required:
+            - all_context_files_exist: true
+            - all_context_files_readable: true
+            - context_files_have_valid_yaml: true
+            - context_files_have_content: true
+        agent_instructions_check:
+          must_contain:
+            - "Read all context documents using @file_path references"
+            - "Extract key information for document generation"
+            - "Reference existing documents where applicable"
+            - "Create cross-references to related documents"
+
+      - name: "Cross-Reference Parameter Passing"
+        test_type: "cross_reference_validation"
+        trigger_command: "orchestrate-agents prd"
+        agent_parameter_checks:
+          each_agent_must_receive:
+            - list_of_related_documents: "array"
+            - cross_reference_instructions: "string"
+            - bidirectional_linking_requirements: "boolean"
+          final_agent_receives:
+            - all_created_documents_from_workflow: "array"
+            - cross_reference_map: "object"
+            - registry_update_instructions: "object"
+
+  template_parameter_validation:
+    description: "Ensure agents receive correct template references and can access them"
+    test_cases:
+      - name: "Document Template Access"
+        test_type: "template_validation"
+        test_scenarios:
+          tier_4_document:
+            command: "create-document market-analysis"
+            expected_template: "@ai/prompts/document-templates/tier4/market-analysis.md"
+            validation:
+              - template_file_exists: true
+              - template_has_yaml_structure: true
+              - template_has_content_sections: true
+          tier_2_document:
+            command: "create-document prd"
+            expected_template: "@ai/prompts/document-templates/tier2/prd.md"
+            validation:
+              - template_references_dependencies: true
+              - template_has_synthesis_instructions: true
+          feature_template:
+            command: "create-feature test-feature"
+            expected_templates:
+              - "@ai/features/_template/requirements/"
+              - "@ai/features/_template/design/"
+              - "@ai/features/_template/technical/"
+              - "@ai/features/_template/tests/"
+              - "@ai/features/_template/analytics/"
+            validation:
+              - all_template_directories_exist: true
+              - templates_have_placeholder_content: true
+
+  agent_communication_validation:
+    description: "Test inter-agent communication and parameter handoff"
+    test_cases:
+      - name: "Sequential Agent Handoff"
+        test_type: "agent_communication"
+        setup:
+          - simulate_multi_agent_workflow: "orchestrate-agents prd"
+        communication_checks:
+          agent_a_to_agent_b:
+            agent_a: "Market Analysis Agent"
+            agent_b: "User Personas Agent"
+            handoff_parameters:
+              - previous_agent_output: "ai/knowledge/strategic/market-analysis.md"
+              - context_integration_instructions: "Reference market analysis findings"
+              - consistency_requirements: "Maintain competitive landscape insights"
+          agent_sequence_to_final:
+            sequence_agents: ["Market Analysis", "User Research", "User Personas"]
+            final_agent: "PRD Specialist"
+            handoff_parameters:
+              - all_prerequisite_documents: "array of file paths"
+              - synthesis_instructions: "Integrate all previous findings"
+              - cross_reference_requirements: "Create bidirectional links"
+
+  error_handling_validation:
+    description: "Test agent parameter validation and error handling"
+    test_cases:
+      - name: "Missing Context Document Handling"
+        test_type: "error_handling"
+        setup:
+          - remove_required_context: "@ai/knowledge/strategic/statement-of-purpose.md"
+        trigger_command: "create-document prd"
+        expected_behavior:
+          - agent_spawn_fails_gracefully: true
+          - error_message_indicates_missing_context: true
+          - recovery_options_provided: true
+          - user_prompted_to_create_missing_context: true
+
+      - name: "Invalid Template Reference"
+        test_type: "error_handling"
+        setup:
+          - corrupt_template: "@ai/prompts/document-templates/tier2/prd.md"
+        trigger_command: "create-document prd"
+        expected_behavior:
+          - template_validation_fails: true
+          - fallback_template_used: true
+          - error_logged_but_process_continues: true
+
+      - name: "Agent Communication Failure"
+        test_type: "error_handling"
+        setup:
+          - simulate_agent_failure: "second_agent_in_sequence"
+        trigger_command: "orchestrate-agents prd"
+        expected_behavior:
+          - workflow_pauses_at_failure_point: true
+          - partial_results_preserved: true
+          - retry_mechanism_available: true
+          - user_notified_of_failure_and_options: true
+
+validation_framework:
+  parameter_checkers:
+    - agent_spawn_parameter_validator: "validates all required parameters present"
+    - context_document_accessibility_checker: "ensures all context files readable"
+    - template_reference_validator: "verifies template paths valid and accessible"
+    - cross_reference_parameter_checker: "validates cross-reference instructions"
+    - agent_instruction_content_validator: "checks agent instructions complete"
+
+  monitoring_tools:
+    - agent_spawn_monitor: "tracks agent creation with parameters"
+    - context_access_monitor: "logs context document access attempts"
+    - parameter_handoff_tracker: "monitors inter-agent communication"
+    - error_condition_detector: "identifies parameter-related failures"
+
+  success_criteria:
+    all_tests_must_verify:
+      - agents_receive_complete_parameter_sets: true
+      - context_documents_accessible_and_valid: true
+      - templates_available_and_properly_formatted: true
+      - inter_agent_communication_successful: true
+      - error_conditions_handled_gracefully: true
+      - parameter_validation_prevents_invalid_spawns: true

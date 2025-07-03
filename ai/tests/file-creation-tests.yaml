@@ -1,0 +1,326 @@
+# File Creation Validation Tests - Verify actual output files and content quality
+test_suites:
+  document_creation_validation:
+    description: "Validate that commands create actual files with correct structure and content"
+    test_cases:
+      - name: "Market Analysis Document Creation"
+        test_type: "file_creation_validation"
+        trigger_command: "create-document market-analysis"
+        expected_file_creation:
+          output_file: "ai/knowledge/strategic/market-analysis.md"
+          file_requirements:
+            must_exist: true
+            must_be_readable: true
+            minimum_size_bytes: 500
+            maximum_size_bytes: 50000
+        content_validation:
+          yaml_frontmatter:
+            required_fields:
+              document_type: "research"
+              version: "1.0"
+              created_date: "YYYY-MM-DD format"
+              dependencies: "empty array for tier 4"
+              status: "draft"
+              ai_context:
+                primary_purpose: "string"
+                key_insights: "array"
+            validation_rules:
+              - yaml_syntax_valid: true
+              - document_type_matches_command: true
+              - dependencies_array_correct: true
+              - status_in_valid_states: ["draft", "review", "approved"]
+          content_structure:
+            required_sections:
+              - "# Market Analysis"
+              - "## Executive Summary"
+              - "## Market Size and Opportunity"
+              - "## Competitive Landscape"
+              - "## Market Trends"
+              - "## AI Agent Instructions"
+              - "## Cross-References"
+            section_validation:
+              - all_sections_have_content: true
+              - hierarchical_structure_correct: true
+              - ai_instructions_actionable: true
+          content_quality:
+            requirements:
+              - structured_data_present: true  # tables, lists, etc.
+              - cross_references_formatted_correctly: true  # @ai/knowledge/ format
+              - no_placeholder_text_remaining: true
+              - content_relevant_to_document_type: true
+
+      - name: "PRD Document Creation via Orchestration"
+        test_type: "orchestrated_file_creation"
+        trigger_command: "orchestrate-agents prd"
+        setup:
+          - ensure_dependencies_available:
+              - "ai/knowledge/strategic/statement-of-purpose.md"
+        expected_file_sequence:
+          intermediate_files:
+            - path: "ai/knowledge/strategic/market-analysis.md"
+              created_by: "Market Analysis Specialist Agent"
+              creation_order: 1
+            - path: "ai/knowledge/user-experience/research/user-research.md"
+              created_by: "User Research Specialist Agent"
+              creation_order: 1  # Parallel with market-analysis
+            - path: "ai/knowledge/user-experience/research/user-personas.md"
+              created_by: "User Personas Specialist Agent"
+              creation_order: 2  # After market-analysis and user-research
+          final_file:
+            - path: "ai/knowledge/product/prd/prd.md"
+              created_by: "PRD Specialist Agent"
+              creation_order: 3  # After all dependencies
+        content_integration_validation:
+          prd_file_must_reference:
+            - "@ai/knowledge/strategic/statement-of-purpose.md"
+            - "ai/knowledge/strategic/market-analysis.md"
+            - "ai/knowledge/user-experience/research/user-research.md"
+            - "ai/knowledge/user-experience/research/user-personas.md"
+          cross_reference_validation:
+            - all_references_use_correct_format: true
+            - all_referenced_files_exist: true
+            - bidirectional_references_created: true
+
+  feature_workspace_creation_validation:
+    description: "Validate complete feature workspace creation with all files"
+    test_cases:
+      - name: "User Authentication Feature Workspace"
+        test_type: "feature_workspace_validation"
+        trigger_command: "create-feature user-authentication"
+        expected_directory_structure:
+          base_path: "ai/features/user-authentication/"
+          required_directories:
+            - "requirements/"
+            - "design/"
+            - "technical/"
+            - "tests/"
+            - "analytics/"
+            - "meta/"
+          directory_validation:
+            - all_directories_created: true
+            - directory_permissions_correct: true
+        expected_file_creation:
+          phase_1_files:
+            - path: "requirements/user-stories.md"
+              created_by: "Requirements Analyst Agent"
+              content_requirements:
+                - contains_user_story_format: "As a .*, I want .* so that .*"
+                - includes_acceptance_criteria: true
+                - yaml_frontmatter_present: true
+            - path: "requirements/acceptance-criteria.md"
+              content_requirements:
+                - criteria_linked_to_user_stories: true
+                - testable_conditions_defined: true
+            - path: "requirements/dependencies.md"
+              content_requirements:
+                - technical_dependencies_listed: true
+                - business_dependencies_identified: true
+          phase_2_files:
+            - path: "design/ui-mockups.md"
+              created_by: "Design Specialist Agent"
+              content_requirements:
+                - references_requirements_phase: true
+                - includes_visual_descriptions: true
+            - path: "design/interaction-flow.md"
+              content_requirements:
+                - user_journey_mapped: true
+                - decision_points_identified: true
+            - path: "design/design-decisions.md"
+              content_requirements:
+                - rationale_for_decisions: true
+                - alternatives_considered: true
+          phase_3_files:
+            - path: "technical/api-contracts.md"
+              created_by: "Technical Architect Agent"
+              content_requirements:
+                - endpoint_definitions_present: true
+                - request_response_schemas: true
+                - typescript_interfaces_included: true
+            - path: "technical/data-models.md"
+              content_requirements:
+                - database_schema_defined: true
+                - relationships_documented: true
+                - typescript_types_present: true
+            - path: "technical/implementation-plan.md"
+              content_requirements:
+                - development_phases_outlined: true
+                - technical_tasks_defined: true
+            - path: "technical/architecture-decisions.md"
+              content_requirements:
+                - adr_format_followed: true
+                - decisions_justified: true
+          phase_4_files:
+            - path: "tests/test-strategy.md"
+              created_by: "Test Strategist Agent"
+              content_requirements:
+                - testing_approach_defined: true
+                - test_types_specified: true
+            - path: "tests/test-scenarios.md"
+              content_requirements:
+                - scenarios_cover_user_stories: true
+                - edge_cases_identified: true
+            - path: "tests/test-data.md"
+              content_requirements:
+                - test_data_requirements: true
+                - data_setup_instructions: true
+          phase_5_files:
+            - path: "analytics/success-metrics.md"
+              created_by: "Analytics Specialist Agent"
+              content_requirements:
+                - kpis_defined: true
+                - measurement_methods: true
+            - path: "analytics/tracking-plan.md"
+              content_requirements:
+                - tracking_events_defined: true
+                - analytics_implementation: true
+          meta_files:
+            - path: "meta/ai-instructions.md"
+              content_requirements:
+                - implementation_guidance: true
+                - code_generation_hints: true
+                - typescript_examples: true
+        file_interdependencies:
+          - design_files_reference_requirements: true
+          - technical_files_reference_design: true
+          - test_files_reference_all_phases: true
+          - analytics_files_reference_requirements: true
+          - meta_instructions_synthesize_all_phases: true
+
+  content_quality_validation:
+    description: "Validate content quality standards across all created files"
+    test_cases:
+      - name: "YAML Frontmatter Quality"
+        test_type: "frontmatter_validation"
+        applies_to: "all_created_documents"
+        validation_rules:
+          yaml_syntax:
+            - valid_yaml_structure: true
+            - proper_field_types: true
+            - no_syntax_errors: true
+          required_fields:
+            document_type: "string matching document category"
+            version: "semantic version format"
+            created_date: "ISO date format"
+            dependencies: "array of dependency IDs"
+            status: "enum: [draft, review, approved]"
+            ai_context: "object with purpose and insights"
+          optional_fields:
+            last_modified: "ISO date format"
+            author: "string"
+            reviewers: "array"
+            tags: "array"
+
+      - name: "AI Instructions Quality"
+        test_type: "ai_instructions_validation"
+        applies_to: "all_created_documents"
+        validation_rules:
+          section_presence:
+            - ai_instructions_section_exists: true
+            - instructions_not_empty: true
+          content_quality:
+            - instructions_actionable: true
+            - context_usage_explained: true
+            - examples_provided: true
+            - integration_guidance_clear: true
+          formatting:
+            - proper_markdown_structure: true
+            - code_examples_formatted: true
+            - links_functional: true
+
+      - name: "Cross-References Quality"
+        test_type: "cross_reference_validation"
+        applies_to: "all_created_documents"
+        validation_rules:
+          reference_format:
+            - uses_at_ai_format: "@ai/knowledge/..."
+            - paths_relative_to_project_root: true
+            - no_broken_references: true
+          bidirectional_linking:
+            - referenced_files_reference_back: true
+            - reference_descriptions_consistent: true
+          reference_relevance:
+            - references_support_content: true
+            - no_circular_references: true
+
+      - name: "TypeScript Examples Quality"
+        test_type: "typescript_validation"
+        applies_to: "technical_documents"
+        validation_rules:
+          code_presence:
+            - typescript_code_blocks_present: true
+            - code_blocks_have_language_tags: true
+          code_quality:
+            - interfaces_properly_defined: true
+            - types_consistent_across_documents: true
+            - examples_compilable: true
+            - examples_relevant_to_content: true
+
+  file_system_validation:
+    description: "Validate file system operations and organization"
+    test_cases:
+      - name: "File Path Correctness"
+        test_type: "path_validation"
+        validation_rules:
+          document_placement:
+            strategic_docs: "ai/knowledge/strategic/"
+            product_docs: "ai/knowledge/product/"
+            technical_docs: "ai/knowledge/technical/"
+            ux_docs: "ai/knowledge/user-experience/"
+            feature_docs: "ai/features/{feature-name}/"
+          naming_conventions:
+            - lowercase_with_hyphens: true
+            - no_spaces_in_filenames: true
+            - descriptive_names: true
+            - md_extension: true
+
+      - name: "File Permissions and Access"
+        test_type: "file_access_validation"
+        validation_rules:
+          file_permissions:
+            - files_readable: true
+            - files_writable: true
+            - no_permission_errors: true
+          directory_structure:
+            - parent_directories_created: true
+            - directory_traversal_works: true
+
+  cleanup_and_recovery_validation:
+    description: "Test file creation cleanup and error recovery"
+    test_cases:
+      - name: "Partial Creation Recovery"
+        test_type: "error_recovery_validation"
+        setup:
+          - simulate_agent_failure: "middle_of_orchestration"
+        validation_rules:
+          partial_file_handling:
+            - partial_files_identified: true
+            - cleanup_options_provided: true
+            - recovery_mechanism_available: true
+          state_consistency:
+            - registry_reflects_actual_files: true
+            - no_orphaned_entries: true
+
+validation_framework:
+  file_validators:
+    - yaml_frontmatter_validator: "parses and validates YAML syntax and content"
+    - content_structure_validator: "checks markdown structure and required sections"
+    - cross_reference_validator: "validates @ai/ references and bidirectional links"
+    - typescript_code_validator: "checks TypeScript examples for syntax and relevance"
+    - file_system_validator: "validates paths, permissions, and organization"
+
+  quality_metrics:
+    - content_completeness_score: "percentage of required sections with content"
+    - cross_reference_validity_score: "percentage of valid references"
+    - ai_optimization_score: "structured data usage and AI readability"
+    - typescript_quality_score: "code example quality and consistency"
+
+  success_criteria:
+    all_tests_must_verify:
+      - files_created_at_correct_paths: true
+      - yaml_frontmatter_valid_and_complete: true
+      - content_structure_follows_standards: true
+      - cross_references_valid_and_bidirectional: true
+      - typescript_examples_present_and_valid: true
+      - ai_instructions_actionable_and_clear: true
+      - file_system_organization_correct: true
+      - no_broken_links_or_references: true
