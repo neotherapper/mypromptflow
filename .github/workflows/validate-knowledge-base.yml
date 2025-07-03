@@ -1,0 +1,40 @@
+name: Validate Knowledge Base
+
+on:
+  push:
+    paths:
+      - "ai/**"
+      - ".claude/**"
+  pull_request:
+    paths:
+      - "ai/**"
+      - ".claude/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validate directory structure
+        run: |
+          chmod +x scripts/validate-knowledge-base.sh
+          ./scripts/validate-knowledge-base.sh
+
+      - name: Check YAML syntax
+        run: |
+          pip install yamllint
+          yamllint ai/context/*.yaml
+
+      - name: Validate markdown files
+        uses: DavidAnson/markdownlint-cli2-action@v11
+        with:
+          globs: |
+            ai/**/*.md
+            .claude/**/*.md
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress './ai/**/*.md'

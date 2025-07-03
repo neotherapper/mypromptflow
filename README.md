@@ -1,5 +1,33 @@
-# mypromptflow
+# mypromptflow AI-Enabled Knowledge Base
 
-A CLI-driven Claude Code-based meta-prompting framework for agentic research, chaining, and tooling discovery.
+An orchestrated document generation system using Claude Code for comprehensive business and technical documentation.
 
-...
+## Overview
+
+This repository implements an AI-powered knowledge base that:
+
+- Generates 67 types of business and technical documents
+- Orchestrates multi-agent workflows for complex documentation
+- Provides feature-driven development workspaces
+- Optimizes all content for AI agent consumption
+
+## Quick Start
+
+1. Clone this repository
+2. Run the setup script: `./setup.sh`
+3. Start with: `/analyze-dependencies prd`
+
+## Documentation Structure
+
+- `ai/knowledge/` - Main knowledge base organized by domain
+- `ai/features/` - Feature-specific documentation workspaces
+- `.claude/` - Claude Code commands and prompts
+
+## Key Commands
+
+- `/orchestrate-agents [document]` - Generate document with dependencies
+- `/create-feature [name]` - Create complete feature workspace
+- `/generate-tier-documents [tier]` - Generate all documents in a tier
+- `/validate` - Validate entire knowledge base
+
+See `.claude/CLAUDE.md` for detailed instructions.

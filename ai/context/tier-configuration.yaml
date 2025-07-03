@@ -1,0 +1,157 @@
+# Tier-based document configuration
+tier_definitions:
+  tier1_highest_value:
+    ai_value_range: [90, 95]
+    focus: "Technical precision for code generation"
+    documents:
+      api_documentation:
+        path: "technical/api/api-documentation.md"
+        ai_value: 95
+        template: "tier1/api-documentation.md"
+        dependencies: ["system-architecture", "database-schemas"]
+        outputs:
+          [
+            "endpoint_definitions",
+            "request_schemas",
+            "response_schemas",
+            "authentication",
+          ]
+
+      database_schemas:
+        path: "technical/database/schemas/"
+        ai_value: 92
+        template: "tier1/database-schemas.md"
+        dependencies: ["data-requirements", "domain-models"]
+        outputs:
+          ["table_definitions", "relationships", "constraints", "indexes"]
+
+      technical_requirements:
+        path: "technical/requirements.md"
+        ai_value: 90
+        template: "tier1/technical-requirements.md"
+        dependencies: ["prd", "system-architecture"]
+        outputs:
+          ["performance_specs", "scalability_needs", "integration_points"]
+
+  tier2_high_value:
+    ai_value_range: [80, 89]
+    focus: "Development planning and quality assurance"
+    documents:
+      test_plans:
+        path: "quality-assurance/test-plans/"
+        ai_value: 88
+        template: "tier2/test-plans.md"
+        dependencies: ["functional-requirements", "acceptance-criteria"]
+        outputs: ["test_scenarios", "coverage_matrix", "automation_strategy"]
+
+      prd:
+        path: "product/prd/main-prd.md"
+        ai_value: 85
+        template: "tier2/prd.md"
+        dependencies:
+          ["statement-of-purpose", "market-analysis", "user-research"]
+        outputs:
+          [
+            "functional_requirements",
+            "non_functional_requirements",
+            "success_metrics",
+          ]
+
+      system_architecture:
+        path: "technical/architecture/system-architecture.md"
+        ai_value: 80
+        template: "tier2/system-architecture.md"
+        dependencies: ["technical-requirements", "prd"]
+        outputs:
+          ["component_design", "technology_stack", "deployment_architecture"]
+
+  tier3_medium_high_value:
+    ai_value_range: [70, 79]
+    focus: "Implementation guidance and UX design"
+    documents:
+      user_stories:
+        path: "product/user-stories/"
+        ai_value: 75
+        template: "tier3/user-stories.md"
+        dependencies: ["user-personas", "prd"]
+        outputs: ["story_format", "acceptance_criteria", "story_points"]
+
+      feature_specifications:
+        path: "features/{feature}/feature-spec.md"
+        ai_value: 72
+        template: "tier3/feature-specifications.md"
+        dependencies: ["user-stories", "technical-requirements"]
+        outputs: ["detailed_behavior", "edge_cases", "integration_points"]
+
+      business_process:
+        path: "business-analysis/business-process.md"
+        ai_value: 70
+        template: "tier3/business-process.md"
+        dependencies: ["current-state", "future-state"]
+        outputs:
+          ["workflow_diagrams", "decision_points", "automation_opportunities"]
+
+  tier4_medium_value:
+    ai_value_range: [60, 69]
+    focus: "Strategic context and design foundations"
+    documents:
+      user_personas:
+        path: "user-experience/research/user-personas.md"
+        ai_value: 65
+        template: "tier4/user-personas.md"
+        dependencies: ["user-research", "market-analysis"]
+        outputs:
+          [
+            "demographic_profiles",
+            "goals_motivations",
+            "pain_points",
+            "behaviors",
+          ]
+
+      competitive_analysis:
+        path: "business-analysis/competitive-analysis.md"
+        ai_value: 60
+        template: "tier4/competitive-analysis.md"
+        dependencies: ["market-analysis"]
+        outputs: ["competitor_matrix", "differentiators", "market_gaps"]
+
+      design_system:
+        path: "user-experience/design/design-system.md"
+        ai_value: 68
+        template: "tier4/design-system.md"
+        dependencies: ["brand-guidelines", "accessibility-requirements"]
+        outputs: ["component_library", "style_tokens", "usage_guidelines"]
+
+# Feature document structure configuration
+feature_document_structure:
+  required_sections:
+    - requirements
+    - design
+    - technical
+    - tests
+    - analytics
+    - meta
+
+  document_templates:
+    feature_spec:
+      template: "feature/feature-spec.md"
+      sections:
+        [
+          "overview",
+          "problem_statement",
+          "solution_approach",
+          "success_criteria",
+        ]
+    user_stories:
+      template: "feature/user-stories.md"
+      format: "As a [user], I want [goal] so that [benefit]"
+    acceptance_criteria:
+      template: "feature/acceptance-criteria.md"
+      format: "Given [context], When [action], Then [outcome]"
+    api_contracts:
+      template: "feature/api-contracts.md"
+      sections:
+        ["endpoints", "request_schemas", "response_schemas", "error_handling"]
+    test_strategy:
+      template: "feature/test-strategy.md"
+      sections: ["test_types", "coverage_goals", "automation_approach"]
