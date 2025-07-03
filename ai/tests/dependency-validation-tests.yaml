@@ -1,0 +1,37 @@
+# Dependency validation tests
+test_suites:
+  dependency_validation:
+    cross_document_references:
+      description: "Ensure documents properly reference dependencies"
+      test_cases:
+        - name: "Dependency chain integrity"
+          check:
+            start_document: "prd"
+            can_trace_to:
+              - "statement-of-purpose"
+              - "market-analysis"
+              - "user-research"
+
+        - name: "Circular dependency detection"
+          check:
+            no_circular_references: true
+            max_dependency_depth: 5
+
+        - name: "Missing dependency detection"
+          check:
+            all_referenced_files_exist: true
+            all_dependencies_satisfied: true
+
+    workflow_validation:
+      description: "Validate workflow chains work correctly"
+      test_cases:
+        - name: "PRD workflow chain"
+          check:
+            workflow: "create_prd"
+            all_parallel_groups_valid: true
+            sequential_order_maintained: true
+
+        - name: "Feature workflow chain"
+          check:
+            workflow: "create_feature"
+            dependencies_resolved_before_creation: true

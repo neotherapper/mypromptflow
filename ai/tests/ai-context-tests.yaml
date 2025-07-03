@@ -1,0 +1,49 @@
+# AI context and optimization tests
+test_suites:
+  ai_context_validation:
+    ai_readability_tests:
+      description: "Ensure documents are optimized for AI processing"
+      test_cases:
+        - name: "Structured data presence"
+          check:
+            uses_structured_formats:
+              - tables
+              - lists
+              - code_blocks
+              - yaml_frontmatter
+
+        - name: "AI instructions clarity"
+          check:
+            has_ai_instructions_section: true
+            instructions_use_explicit_references: true
+            includes_examples: true
+
+        - name: "Cross-reference format"
+          check:
+            reference_format: "@ai/knowledge/.*"
+            references_are_valid_paths: true
+
+        - name: "TypeScript examples"
+          check:
+            includes_typescript_code: true
+            code_blocks_have_language_tag: true
+            interfaces_properly_defined: true
+
+  feature_implementation_flow:
+    end_to_end_test:
+      description: "Test complete feature creation workflow"
+      test_cases:
+        - name: "Feature creation command"
+          simulate:
+            command: "/create-feature user-authentication"
+            expected_outputs:
+              - "Feature workspace created"
+              - "Spawning Requirements Analyst"
+              - "Spawning Design Specialist"
+              - "Spawning Technical Architect"
+
+        - name: "Agent coordination"
+          check:
+            agents_complete_in_order: true
+            outputs_reference_previous_agents: true
+            final_workspace_is_complete: true

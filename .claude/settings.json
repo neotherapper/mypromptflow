@@ -1,0 +1,17 @@
+{
+  "project": {
+    "type": "ai-knowledge-base",
+    "primaryLanguage": "typescript",
+    "documentationStandard": "comprehensive"
+  },
+  "agents": {
+    "parallelLimit": 5,
+    "defaultTimeout": 300,
+    "retryAttempts": 3
+  },
+  "validation": {
+    "enforceStructure": true,
+    "requireAIInstructions": true,
+    "checkDependencies": true
+  }
+}
