@@ -1,0 +1,281 @@
+# Registry Update Tests - Validate automatic registry updates after operations
+test_suites:
+  document_registry_updates:
+    description: "Validate document-registry.yaml updates after document creation"
+    test_cases:
+      - name: "Single Document Registry Update"
+        test_type: "registry_update_validation"
+        trigger_command: "create-document market-analysis"
+        pre_test_state:
+          registry_file: "ai/context/document-registry.yaml"
+          initial_document_count: "count_existing_documents"
+          backup_registry: true
+        expected_registry_changes:
+          new_entry_added:
+            id: "market-analysis"
+            type: "research"
+            path: "ai/knowledge/strategic/market-analysis.md"
+            version: "1.0"
+            status: "draft"
+            created_date: "today's date"
+            last_modified: "today's date"
+            dependencies_satisfied: true  # Tier 4 has no dependencies
+            tier: 4
+            ai_value: "60-95 range"
+            dependencies: []
+            cross_references: []
+          registry_structure_validation:
+            - yaml_syntax_remains_valid: true
+            - total_document_count_incremented: true
+            - tier_classification_updated: true
+            - no_duplicate_entries: true
+        post_test_validation:
+          - new_document_findable_in_registry: true
+          - registry_file_readable: true
+          - registry_structure_intact: true
+
+      - name: "Multi-Document Registry Updates via Orchestration"
+        test_type: "orchestration_registry_validation"
+        trigger_command: "orchestrate-agents prd"
+        pre_test_state:
+          backup_registries: ["document-registry.yaml"]
+          initial_counts:
+            total_documents: "count"
+            tier_4_documents: "count"
+            tier_2_documents: "count"
+        expected_sequential_updates:
+          after_market_analysis_creation:
+            registry_changes:
+              - new_document: "market-analysis"
+              - tier_4_count_incremented: true
+              - total_count_incremented: true
+          after_user_research_creation:
+            registry_changes:
+              - new_document: "user-research"
+              - tier_4_count_incremented_again: true
+          after_user_personas_creation:
+            registry_changes:
+              - new_document: "user-personas"
+              - dependencies_field_populated: ["market-analysis", "user-research"]
+              - dependencies_satisfied: true
+          after_prd_creation:
+            registry_changes:
+              - new_document: "prd"
+              - tier_2_count_incremented: true
+              - dependencies_field_populated: ["statement-of-purpose", "market-analysis", "user-research", "user-personas"]
+              - dependencies_satisfied: true
+        final_validation:
+          - all_documents_registered: true
+          - dependency_chain_complete: true
+          - cross_references_bidirectional: true
+
+  feature_registry_updates:
+    description: "Validate feature-registry.yaml updates after feature creation"
+    test_cases:
+      - name: "Feature Workspace Registry Update"
+        test_type: "feature_registry_validation"
+        trigger_command: "create-feature user-authentication"
+        pre_test_state:
+          registry_file: "ai/context/feature-registry.yaml"
+          initial_feature_count: "count_existing_features"
+          backup_registry: true
+        expected_registry_changes:
+          new_feature_entry:
+            id: "user-authentication"
+            name: "User Authentication"
+            path: "ai/features/user-authentication/"
+            status: "documented"
+            created_date: "today's date"
+            documentation_complete: true
+            implementation_status: "pending"
+            dependencies: []  # Will be populated if feature has dependencies
+            related_documents: []  # Will link to relevant knowledge base docs
+            phases_completed:
+              - "requirements"
+              - "design"
+              - "technical"
+              - "tests"
+              - "analytics"
+            workspace_files:
+              - "feature-spec.md"
+              - "requirements/user-stories.md"
+              - "requirements/acceptance-criteria.md"
+              - "design/ui-mockups.md"
+              - "design/interaction-flow.md"
+              - "technical/api-contracts.md"
+              - "technical/data-models.md"
+              - "tests/test-strategy.md"
+              - "analytics/success-metrics.md"
+              - "meta/ai-instructions.md"
+        validation_checks:
+          - feature_count_incremented: true
+          - all_workspace_files_listed: true
+          - status_reflects_completion: true
+          - yaml_structure_valid: true
+
+  cross_reference_registry_updates:
+    description: "Validate bidirectional cross-reference updates"
+    test_cases:
+      - name: "Document Cross-Reference Updates"
+        test_type: "cross_reference_validation"
+        setup:
+          - ensure_documents_exist:
+              - "ai/knowledge/strategic/statement-of-purpose.md"
+              - "ai/knowledge/strategic/market-analysis.md"
+        trigger_command: "create-document user-personas"
+        expected_cross_reference_updates:
+          new_document_references:
+            - document: "user-personas"
+              references:
+                - "@ai/knowledge/strategic/statement-of-purpose.md"
+                - "@ai/knowledge/strategic/market-analysis.md"
+          bidirectional_updates:
+            - referenced_document: "statement-of-purpose.md"
+              should_now_contain:
+                - cross_reference_to: "user-personas.md"
+                - reference_type: "referenced_by"
+            - referenced_document: "market-analysis.md"
+              should_now_contain:
+                - cross_reference_to: "user-personas.md"
+                - reference_type: "referenced_by"
+        registry_reflection:
+          document_registry_updates:
+            - user_personas_entry_has_references: true
+            - referenced_documents_updated_with_backlinks: true
+
+      - name: "Feature-Knowledge Base Cross-References"
+        test_type: "feature_knowledge_cross_reference"
+        setup:
+          - ensure_knowledge_base_documents:
+              - "ai/knowledge/product/prd/prd.md"
+              - "ai/knowledge/product/user-stories/authentication-stories.md"
+        trigger_command: "create-feature authentication-system"
+        expected_cross_linking:
+          feature_to_knowledge:
+            - feature_documents_reference_prd: true
+            - feature_documents_reference_user_stories: true
+          knowledge_to_feature:
+            - prd_updated_with_feature_reference: true
+            - user_stories_updated_with_implementation_link: true
+        registry_updates:
+          feature_registry:
+            - related_documents_field_populated: true
+            - links_to_relevant_knowledge: true
+          document_registry:
+            - knowledge_docs_show_feature_usage: true
+
+  dependency_satisfaction_updates:
+    description: "Validate dependency satisfaction tracking in registries"
+    test_cases:
+      - name: "Dependency Chain Completion Tracking"
+        test_type: "dependency_satisfaction_validation"
+        trigger_command: "orchestrate-agents prd"
+        dependency_tracking:
+          initial_state:
+            - statement_of_purpose_satisfied: true  # Pre-existing
+            - market_analysis_satisfied: false
+            - user_research_satisfied: false
+            - user_personas_satisfied: false
+            - prd_satisfied: false
+          after_tier_4_completion:
+            - market_analysis_satisfied: true
+            - user_research_satisfied: true
+            - user_personas_dependencies_checked: true
+          after_user_personas_completion:
+            - user_personas_satisfied: true
+            - prd_dependencies_checked: true
+          after_prd_completion:
+            - prd_satisfied: true
+            - all_dependencies_in_chain_satisfied: true
+        registry_validation:
+          document_registry_reflects:
+            - accurate_dependency_satisfaction_status: true
+            - dependency_chain_integrity: true
+            - no_circular_dependencies: true
+
+  registry_integrity_validation:
+    description: "Validate overall registry integrity and consistency"
+    test_cases:
+      - name: "Registry File Integrity"
+        test_type: "registry_integrity_validation"
+        validation_checks:
+          yaml_structure:
+            - valid_yaml_syntax: true
+            - required_top_level_keys: true
+            - consistent_field_types: true
+          data_consistency:
+            - no_duplicate_document_ids: true
+            - all_paths_point_to_existing_files: true
+            - dependency_references_valid: true
+            - cross_reference_paths_valid: true
+          metadata_accuracy:
+            - document_counts_accurate: true
+            - tier_classifications_correct: true
+            - creation_dates_reasonable: true
+            - version_numbers_valid: true
+
+      - name: "Registry Synchronization"
+        test_type: "registry_sync_validation"
+        validation_checks:
+          file_system_sync:
+            - all_registered_files_exist: true
+            - all_existing_docs_registered: true
+            - no_orphaned_registry_entries: true
+          cross_registry_consistency:
+            - feature_references_to_docs_valid: true
+            - document_references_to_features_valid: true
+            - dependency_chains_consistent: true
+
+  registry_update_error_handling:
+    description: "Test registry update error scenarios and recovery"
+    test_cases:
+      - name: "Registry Update Failure Recovery"
+        test_type: "error_recovery_validation"
+        test_scenarios:
+          registry_file_locked:
+            - simulate_file_lock: "ai/context/document-registry.yaml"
+            - trigger_command: "create-document test-doc"
+            - expected_behavior:
+                - graceful_error_handling: true
+                - retry_mechanism_available: true
+                - document_creation_not_blocked: true
+          corrupted_registry:
+            - corrupt_registry_file: "invalid_yaml_syntax"
+            - trigger_command: "create-document test-doc"
+            - expected_behavior:
+                - registry_validation_fails: true
+                - backup_registry_used: true
+                - registry_repair_offered: true
+          partial_update_failure:
+            - simulate_failure: "mid_registry_update"
+            - expected_behavior:
+                - atomic_update_rollback: true
+                - registry_consistency_maintained: true
+                - user_notified_of_failure: true
+
+validation_framework:
+  registry_validators:
+    - yaml_syntax_validator: "validates YAML structure and syntax"
+    - document_entry_validator: "validates document registry entry completeness"
+    - feature_entry_validator: "validates feature registry entry completeness"
+    - cross_reference_validator: "validates bidirectional reference consistency"
+    - dependency_chain_validator: "validates dependency satisfaction tracking"
+    - registry_integrity_checker: "validates overall registry consistency"
+
+  update_monitors:
+    - registry_change_monitor: "tracks registry modifications during operations"
+    - cross_reference_update_tracker: "monitors bidirectional link updates"
+    - dependency_satisfaction_tracker: "monitors dependency status changes"
+    - registry_sync_monitor: "ensures file system and registry sync"
+
+  success_criteria:
+    all_tests_must_verify:
+      - registries_updated_after_every_operation: true
+      - yaml_syntax_remains_valid_after_updates: true
+      - document_entries_complete_and_accurate: true
+      - feature_entries_complete_and_accurate: true
+      - cross_references_bidirectional_and_valid: true
+      - dependency_satisfaction_accurately_tracked: true
+      - registry_file_system_sync_maintained: true
+      - error_conditions_handled_gracefully: true
+      - registry_integrity_preserved_throughout: true

@@ -1,0 +1,257 @@
+# Command Execution Tests - Real execution validation, not simulation
+test_suites:
+  ai_help_command_tests:
+    description: "Test /ai-help interactive command interface"
+    test_cases:
+      - name: "ai-help command display"
+        test_type: "command_execution"
+        command: "/ai-help"
+        expected_outputs:
+          - contains: "🤖 AI Knowledge Base Assistant"
+          - contains: "Available commands:"
+          - contains: "create-document"
+          - contains: "orchestrate-agents"
+          - contains: "create-feature"
+          - contains: "validate"
+        validation:
+          - interface_properly_formatted: true
+          - all_commands_listed: true
+          - instructions_clear: true
+
+      - name: "ai-help command file reading"
+        test_type: "file_access"
+        check:
+          - command_file_exists: ".claude/commands/ai-help.md"
+          - command_file_readable: true
+          - instructions_section_present: true
+
+  create_document_tests:
+    description: "Test create-document command execution and file creation"
+    test_cases:
+      - name: "create-document market-analysis"
+        test_type: "full_workflow"
+        setup:
+          - ensure_clean_test_environment: true
+          - backup_existing_files: true
+        command: "create-document market-analysis"
+        execution_steps:
+          1. "Read .claude/commands/create-document.md"
+          2. "Parse dependencies.yaml for market-analysis"
+          3. "Check existing documents in ai/knowledge/"
+          4. "Present missing document options to user"
+          5. "Execute document creation workflow"
+        expected_file_outputs:
+          - path: "ai/knowledge/strategic/market-analysis.md"
+            must_exist: true
+            yaml_frontmatter_required:
+              - document_type: "research"
+              - version: "string"
+              - dependencies: "array"
+              - status: "draft"
+              - ai_context: "object"
+            required_sections:
+              - "# Market Analysis"
+              - "## Executive Summary"
+              - "## AI Agent Instructions"
+              - "## Cross-References"
+        registry_updates:
+          - file: "ai/context/document-registry.yaml"
+            must_contain:
+              - id: "market-analysis"
+              - type: "research"
+              - path: "ai/knowledge/strategic/market-analysis.md"
+        cleanup:
+          - restore_backup_files: true
+
+      - name: "create-document with dependencies"
+        test_type: "dependency_workflow"
+        command: "create-document prd"
+        execution_steps:
+          1. "Read dependencies for prd from dependencies.yaml"
+          2. "Identify missing: market-analysis, user-research, user-personas"
+          3. "Offer to create dependencies first"
+          4. "If user accepts, create dependencies in correct order"
+        expected_behavior:
+          - dependency_check_performed: true
+          - missing_dependencies_identified: true
+          - user_prompted_for_dependency_creation: true
+          - dependencies_created_before_target: true
+
+  orchestrate_agents_tests:
+    description: "Test multi-agent orchestration workflows"
+    test_cases:
+      - name: "orchestrate-agents prd workflow"
+        test_type: "multi_agent_workflow"
+        setup:
+          - clean_knowledge_base: true
+          - ensure_statement_of_purpose_exists: true
+        command: "orchestrate-agents prd"
+        expected_agent_spawning:
+          - parallel_phase:
+              - agent_type: "Market Analysis Specialist"
+                context_files:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                template: "@ai/prompts/document-templates/tier4/market-analysis.md"
+                output_file: "ai/knowledge/strategic/market-analysis.md"
+              - agent_type: "User Research Specialist"
+                context_files:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                template: "@ai/prompts/document-templates/tier4/user-research.md"
+                output_file: "ai/knowledge/user-experience/research/user-research.md"
+          - sequential_phase:
+              - agent_type: "User Personas Specialist"
+                context_files:
+                  - "ai/knowledge/strategic/market-analysis.md"
+                  - "ai/knowledge/user-experience/research/user-research.md"
+                dependencies: ["market-analysis", "user-research"]
+                output_file: "ai/knowledge/user-experience/research/user-personas.md"
+          - synthesis_phase:
+              - agent_type: "PRD Specialist"
+                context_files:
+                  - "@ai/knowledge/strategic/statement-of-purpose.md"
+                  - "ai/knowledge/strategic/market-analysis.md"
+                  - "ai/knowledge/user-experience/research/user-research.md"
+                  - "ai/knowledge/user-experience/research/user-personas.md"
+                template: "@ai/prompts/document-templates/tier2/prd.md"
+                output_file: "ai/knowledge/product/prd/prd.md"
+        validation:
+          - all_agents_receive_correct_context: true
+          - agent_spawning_order_correct: true
+          - parallel_agents_run_simultaneously: true
+          - sequential_agents_wait_for_dependencies: true
+          - all_output_files_created: true
+          - registry_updated_after_each_creation: true
+
+  create_feature_tests:
+    description: "Test complete feature workspace creation"
+    test_cases:
+      - name: "create-feature user-authentication"
+        test_type: "feature_workflow"
+        setup:
+          - clean_features_directory: true
+        command: "create-feature user-authentication"
+        execution_steps:
+          1. "Execute ./scripts/create-feature.sh user-authentication"
+          2. "Verify directory structure created"
+          3. "Spawn Feature Orchestrator Agent"
+          4. "Execute 5-phase agent sequence"
+        expected_file_structure:
+          base_path: "ai/features/user-authentication/"
+          required_directories:
+            - "requirements/"
+            - "design/"
+            - "technical/"
+            - "tests/"
+            - "analytics/"
+            - "meta/"
+          required_files:
+            - "feature-spec.md"
+            - "requirements/user-stories.md"
+            - "requirements/acceptance-criteria.md"
+            - "design/ui-mockups.md"
+            - "design/interaction-flow.md"
+            - "technical/api-contracts.md"
+            - "technical/data-models.md"
+            - "tests/test-strategy.md"
+            - "analytics/success-metrics.md"
+            - "meta/ai-instructions.md"
+        agent_sequence_validation:
+          phase_1:
+            - agent: "Requirements Analyst"
+            - creates: ["user-stories.md", "acceptance-criteria.md"]
+            - context: "existing PRD and personas if available"
+          phase_2:
+            - agent: "Design Specialist"
+            - creates: ["ui-mockups.md", "interaction-flow.md"]
+            - context: "Requirements from Phase 1"
+          phase_3:
+            - agent: "Technical Architect"
+            - creates: ["api-contracts.md", "data-models.md"]
+            - context: "Requirements and Design from previous phases"
+          phase_4:
+            - agent: "Test Strategist"
+            - creates: ["test-strategy.md", "test-scenarios.md"]
+            - context: "All previous phases"
+          phase_5:
+            - agent: "Analytics Specialist"
+            - creates: ["success-metrics.md", "tracking-plan.md"]
+            - context: "Complete feature specification"
+        registry_validation:
+          - file: "ai/context/feature-registry.yaml"
+            must_contain:
+              - id: "user-authentication"
+              - path: "ai/features/user-authentication/"
+              - status: "documented"
+              - documentation_complete: true
+
+  validate_command_tests:
+    description: "Test knowledge base validation command"
+    test_cases:
+      - name: "validate-knowledge-base execution"
+        test_type: "validation_workflow"
+        setup:
+          - create_test_knowledge_base: true
+          - introduce_test_issues: true
+        command: "validate-knowledge-base"
+        execution_steps:
+          1. "Read .claude/commands/validate-knowledge-base.md"
+          2. "Execute structure validation"
+          3. "Execute dependency validation"
+          4. "Execute content validation"
+          5. "Execute cross-reference validation"
+          6. "Generate AI optimization score"
+        expected_validation_report:
+          format: "structured_report"
+          sections:
+            - "🔍 Knowledge Base Validation Report"
+            - "📁 Structure Check"
+            - "🔗 Dependency Check" 
+            - "📝 Content Check"
+            - "🔗 Cross-Reference Check"
+            - "🤖 AI Optimization"
+            - "📊 Summary"
+            - "🔧 Recommendations"
+        validation_checks:
+          - structure_validation_runs: true
+          - dependency_graph_built: true
+          - missing_files_identified: true
+          - broken_references_found: true
+          - recommendations_actionable: true
+
+execution_framework:
+  test_runner: "bash"
+  test_environment: "isolated"
+  cleanup_after_tests: true
+  report_format: "yaml_and_console"
+  
+validation_criteria:
+  file_creation:
+    - files_exist_at_expected_paths: true
+    - yaml_frontmatter_valid: true
+    - required_sections_present: true
+    - cross_references_valid: true
+  
+  agent_parameters:
+    - context_files_provided: true
+    - templates_referenced_correctly: true
+    - output_paths_specified: true
+    - dependencies_respected: true
+  
+  registry_updates:
+    - document_registry_updated: true
+    - feature_registry_updated: true
+    - cross_references_bidirectional: true
+    - dependencies_marked_satisfied: true
+
+error_handling_tests:
+  missing_files:
+    - test: "command execution with missing dependencies.yaml"
+    - expected: "graceful error message and recovery options"
+  
+  invalid_commands:
+    - test: "non-existent command execution"
+    - expected: "helpful error with command suggestions"
+  
+  agent_failures:
+    - test: "agent spawn failure during orchestration"
+    - expected: "retry mechanism and partial result handling"

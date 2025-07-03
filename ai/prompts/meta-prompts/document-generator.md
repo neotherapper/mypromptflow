@@ -69,6 +69,57 @@ ai_context:
 ## TypeScript Examples
 
 ```typescript
-// Relevant code examples
+// Relevant code examples based on document type
 ```
+
+## Cross-References
+
+{List of @ai/knowledge/ references to related documents}
+
+## Command Integration
+
+This document was generated via the AI Knowledge Base command system.
+
+Commands that may have created this document:
+- `/project:create-document {document_type}` - Direct document creation
+- `/project:orchestrate-agents {target}` - As part of larger workflow
+
+Next steps:
+- Use `/project:validate` to check document quality
+- Use `/project:orchestrate-agents [dependent-doc]` to create dependent documents
 ````
+
+## Command Integration Instructions
+
+When invoked via Command Executor Agent:
+
+### Input Processing
+1. **Document Type**: Extracted from command arguments
+2. **Context Documents**: Provided by Command Executor
+3. **Template**: Loaded from @ai/prompts/document-templates/
+4. **Dependencies**: Read from @ai/context/dependencies.yaml
+
+### Execution Process
+1. Read all context documents using @file_path references
+2. Apply document template structure
+3. Generate content based on document type and context
+4. Include proper YAML frontmatter with dependencies
+5. Add AI instructions section
+6. Create cross-references to related documents
+7. Include TypeScript examples where applicable
+
+### Registry Integration
+After document creation, ensure:
+1. Document is registered in @ai/context/document-registry.yaml
+2. Cross-references are bidirectional
+3. Dependencies are marked as satisfied
+4. Tier classification is correct
+
+### Quality Standards
+All generated documents must include:
+- Proper YAML frontmatter
+- Clear hierarchical structure (H1, H2, H3)
+- AI agent instructions section
+- Cross-references using @ai/knowledge/ paths
+- TypeScript examples (where applicable)
+- Version and status tracking

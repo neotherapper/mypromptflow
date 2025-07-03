@@ -60,6 +60,20 @@ When creating feature: {FEATURE_NAME}
    - Create bidirectional references
    - Generate implementation tickets
 
+## Command Integration
+
+This orchestrator can be invoked via:
+- **Direct**: `/project:create-feature [feature-name]` (user command)
+- **Programmatic**: Command Executor Agent reading @.claude/commands/create-feature.md
+
+### Command Execution Flow:
+1. Command Executor reads create-feature.md
+2. Executes initialization script
+3. Spawns Feature Orchestrator Agent (this prompt)
+4. Feature Orchestrator spawns 5 specialized agents
+5. Each agent creates documentation in sequence
+6. Registry updates applied automatically
+
 ## AI Instructions Template:
 
 Each feature must include meta/ai-instructions.md:
@@ -72,6 +86,7 @@ Each feature must include meta/ai-instructions.md:
 - Feature Type: [type]
 - Complexity: [level]
 - Dependencies: [list]
+- Command Used: /project:create-feature {FEATURE_NAME}
 
 ## Implementation Approach
 
@@ -95,4 +110,18 @@ interface {FeatureName}Config {
   // Configuration
 }
 ```
+
+## Command Integration
+
+This feature was created using the AI Knowledge Base command system:
+- Command: `/project:create-feature {FEATURE_NAME}`
+- Documentation: Complete (5 phases)
+- Registry: Updated in @ai/context/feature-registry.yaml
+- Next Steps: Use AI instructions below for implementation
+
+## Related Commands
+
+- `/project:orchestrate-agents prd` - If PRD needs updating
+- `/project:validate` - Validate feature documentation
+- `/project:create-document [type]` - Create additional documents
 ````
