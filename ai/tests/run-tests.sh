@@ -580,15 +580,30 @@ main() {
     # Generate report
     generate_test_report "$total_tests" "$passed_tests" "$failed_tests"
     
-    # Restore from backup
+    # Automatic cleanup - NO USER CHOICE
     echo ""
-    read -p "Restore from backup? (y/N): " -n 1 -r
-    echo
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        restore_from_backup
-        echo -e "${GREEN}System restored from backup${NC}"
+    echo "Automatically cleaning up test artifacts..."
+    restore_from_backup
+    echo -e "${GREEN}System restored from backup${NC}"
+    
+    # MANDATORY: Clean up any remaining test artifacts
+    echo "Cleaning up any remaining test artifacts..."
+    rm -rf ai/knowledge/strategic/market-analysis.md 2>/dev/null
+    rm -rf ai/knowledge/product 2>/dev/null
+    rm -rf ai/knowledge/user-experience 2>/dev/null
+    rm -rf ai/features/test-authentication 2>/dev/null
+    rm -rf ai/features/payment-system 2>/dev/null
+    rm -rf ai/tests/backups 2>/dev/null
+    rm -rf ai/tests/results 2>/dev/null
+    rm -rf ai/tests/temp 2>/dev/null
+    
+    # Verify cleanup
+    if [ -d "ai/knowledge/strategic" ] && [ -f "ai/knowledge/strategic/market-analysis.md" ]; then
+        echo -e "${RED}❌ CLEANUP FAILED - Test artifacts still present!${NC}"
+        echo "Run: git status to see remaining artifacts"
+        exit 1
     else
-        echo -e "${YELLOW}Test artifacts preserved${NC}"
+        echo -e "${GREEN}✅ Test artifacts cleaned up successfully${NC}"
     fi
     
     # Exit with appropriate code
