@@ -629,7 +629,11 @@ echo "- Configuration validation: completed"
 
 ## Post-Test Cleanup
 
-**CRITICAL:** Clean up all test artifacts to avoid committing them
+**🚨 CRITICAL - AUTOMATIC CLEANUP REQUIRED 🚨**
+
+**ALL TEST ARTIFACTS MUST BE CLEANED UP AUTOMATICALLY - NO MANUAL CLEANUP ALLOWED**
+
+Test artifacts WILL contaminate the repository if not properly cleaned up. The cleanup process is now AUTOMATIC and MANDATORY.
 
 ```bash
 # Remove test documents
@@ -668,6 +672,16 @@ cd /
 rm -rf "$TEST_WORKSPACE"
 
 echo "🧹 Test cleanup completed - no artifacts will be committed"
+
+# MANDATORY VERIFICATION: Check that cleanup worked
+if [ -d "ai/knowledge/strategic" ] || [ -d "ai/knowledge/product" ] || [ -d "ai/knowledge/user-experience" ] || [ -d "ai/features/test-authentication" ] || [ -d "ai/features/payment-system" ]; then
+    echo "❌ CLEANUP FAILED - TEST ARTIFACTS STILL PRESENT"
+    echo "Run: git status to see remaining artifacts"
+    echo "MUST clean up before proceeding!"
+    exit 1
+else
+    echo "✅ Cleanup verification PASSED - no test artifacts remain"
+fi
 ```
 
 ## Test Results Validation
