@@ -1,0 +1,301 @@
+# Test Agent Evaluation Report Template
+# AI INSTRUCTIONS: Use this template for observational evaluation of research processes
+
+evaluation_report:
+  # Evaluation Session Information
+  evaluation_id: "eval_session_YYYYMMDD_HHMMSS"
+  linked_research_session: "research_session_YYYYMMDD_HHMMSS"
+  evaluating_agent: "test_agent_identifier"
+  evaluation_start: "2024-07-04T10:00:00Z"
+  evaluation_end: "2024-07-04T10:45:30Z"
+  evaluation_duration_seconds: 0
+  
+  # Research Context Evaluation
+  context_evaluation:
+    user_request_analysis:
+      request_clarity: "clear|ambiguous|incomplete"
+      request_complexity: "simple|moderate|complex"
+      request_scope: "narrow|moderate|broad"
+      evaluation_confidence: 0.0
+      
+    context_extraction_assessment:
+      extraction_accuracy: 0.0
+      missing_parameters: []
+      incorrect_parameters: []
+      extraction_appropriateness: "appropriate|questionable|inappropriate"
+      evaluation_reasoning: "why_this_assessment_was_made"
+  
+  # Orchestrator Decision Evaluation
+  orchestrator_evaluation:
+    complexity_assessment_review:
+      assessed_complexity: "simple|moderate|complex"
+      evaluator_complexity_opinion: "simple|moderate|complex"
+      complexity_agreement: true
+      complexity_reasoning: "why_evaluator_agrees_or_disagrees"
+      factors_missed: []
+      factors_overweighted: []
+      
+    method_selection_analysis:
+      selected_methods: []
+      evaluator_recommended_methods: []
+      method_appropriateness: "appropriate|questionable|inappropriate"
+      selection_reasoning_quality: "sound|weak|flawed"
+      alternative_methods_considered: []
+      selection_confidence_assessment: 0.0
+      
+    execution_pattern_evaluation:
+      selected_pattern: "sequential|parallel|hybrid"
+      pattern_appropriateness: "appropriate|questionable|inappropriate"
+      pattern_reasoning: "why_this_pattern_assessment"
+      efficiency_considerations: []
+      
+  # Research Process Monitoring
+  process_monitoring:
+    method_execution_compliance:
+      - method_name: "method_identifier"
+        compliance_score: 0.0
+        compliance_issues: []
+        steps_executed_correctly: 0
+        steps_executed_incorrectly: 0
+        steps_skipped: 0
+        deviation_reasons: []
+        impact_of_deviations: "minimal|moderate|significant"
+        
+      # Additional methods as needed
+    
+    quality_checkpoint_evaluation:
+      - checkpoint_name: "checkpoint_identifier"
+        checkpoint_appropriate: true
+        checkpoint_executed: true
+        checkpoint_effectiveness: 0.0
+        validation_criteria_sound: true
+        issues_detected: []
+        improvements_suggested: []
+        
+      # Additional checkpoints as needed
+    
+    resource_gathering_assessment:
+      source_quality_evaluation: 0.0
+      source_diversity_evaluation: 0.0
+      source_relevance_evaluation: 0.0
+      missing_source_types: []
+      questionable_sources: []
+      search_strategy_effectiveness: 0.0
+      
+  # Research Quality Observations
+  quality_observations:
+    research_depth_assessment:
+      depth_level: "surface|moderate|deep"
+      depth_appropriateness: "appropriate|insufficient|excessive"
+      depth_reasoning: "why_this_depth_assessment"
+      areas_needing_deeper_analysis: []
+      areas_over_analyzed: []
+      
+    logical_consistency_check:
+      consistency_score: 0.0
+      logical_gaps_identified: []
+      contradictions_found: []
+      reasoning_chain_quality: "sound|weak|flawed"
+      
+    completeness_evaluation:
+      completeness_score: 0.0
+      missing_aspects: []
+      unnecessary_aspects: []
+      scope_adherence: "on_scope|scope_creep|scope_narrow"
+      
+    bias_detection:
+      potential_biases_identified: []
+      bias_severity: "none|low|moderate|high"
+      bias_types: []
+      mitigation_attempts_observed: []
+      mitigation_effectiveness: 0.0
+  
+  # Performance Analysis
+  performance_analysis:
+    efficiency_evaluation:
+      time_utilization: 0.0
+      resource_utilization: 0.0
+      method_efficiency: 0.0
+      bottlenecks_identified: []
+      optimization_opportunities: []
+      
+    agent_behavior_assessment:
+      decision_making_quality: 0.0
+      adaptability_score: 0.0
+      error_handling_effectiveness: 0.0
+      learning_indicators: []
+      concerning_patterns: []
+      
+  # Issue Detection and Flagging
+  issues_detected:
+    critical_issues:
+      - issue_description: "description_of_critical_issue"
+        issue_category: "method_selection|execution|quality|orchestrator"
+        issue_severity: "critical"
+        issue_impact: "how_issue_affects_research"
+        recommended_action: "immediate_action_needed"
+        escalation_required: true
+        
+      # Additional critical issues as needed
+    
+    moderate_issues:
+      - issue_description: "description_of_moderate_issue"
+        issue_category: "method_selection|execution|quality|orchestrator"
+        issue_severity: "moderate"
+        issue_impact: "how_issue_affects_research"
+        recommended_action: "action_for_improvement"
+        escalation_required: false
+        
+      # Additional moderate issues as needed
+    
+    minor_observations:
+      - observation: "description_of_minor_observation"
+        observation_category: "efficiency|quality|process"
+        improvement_potential: "potential_for_improvement"
+        suggested_enhancement: "how_to_improve"
+        
+      # Additional minor observations as needed
+  
+  # Pattern Recognition
+  pattern_observations:
+    successful_patterns:
+      - pattern_description: "description_of_successful_pattern"
+        pattern_frequency: "how_often_observed"
+        pattern_effectiveness: 0.0
+        pattern_conditions: "when_this_pattern_works"
+        replication_value: "value_of_replicating_pattern"
+        
+      # Additional successful patterns as needed
+    
+    problematic_patterns:
+      - pattern_description: "description_of_problematic_pattern"
+        pattern_frequency: "how_often_observed"
+        pattern_impact: "negative_impact_of_pattern"
+        pattern_conditions: "when_this_pattern_occurs"
+        avoidance_recommendations: "how_to_avoid_pattern"
+        
+      # Additional problematic patterns as needed
+    
+    neutral_patterns:
+      - pattern_description: "description_of_neutral_pattern"
+        pattern_frequency: "how_often_observed"
+        pattern_significance: "why_pattern_is_noteworthy"
+        monitoring_value: "value_of_continued_monitoring"
+        
+      # Additional neutral patterns as needed
+  
+  # Recommendations and Insights
+  recommendations:
+    immediate_improvements:
+      - improvement_description: "specific_improvement_recommendation"
+        improvement_priority: "high|medium|low"
+        improvement_category: "method_selection|execution|quality|orchestrator"
+        implementation_difficulty: "easy|moderate|difficult"
+        expected_impact: "expected_benefit_of_improvement"
+        
+      # Additional immediate improvements as needed
+    
+    long_term_considerations:
+      - consideration_description: "long_term_consideration"
+        consideration_category: "strategic|tactical|operational"
+        consideration_importance: "high|medium|low"
+        consideration_timeline: "timeframe_for_consideration"
+        
+      # Additional long-term considerations as needed
+    
+    research_quality_enhancements:
+      - enhancement_description: "quality_enhancement_suggestion"
+        enhancement_target: "completeness|accuracy|depth|clarity"
+        enhancement_method: "how_to_achieve_enhancement"
+        enhancement_effort: "effort_required"
+        enhancement_value: "value_of_enhancement"
+        
+      # Additional quality enhancements as needed
+  
+  # Success Metrics Assessment
+  success_metrics_evaluation:
+    research_objectives_met: true
+    method_selection_appropriateness: 0.0
+    execution_quality: 0.0
+    output_quality: 0.0
+    process_efficiency: 0.0
+    
+    overall_assessment:
+      research_success_level: "high|medium|low"
+      success_reasoning: "detailed_explanation_of_success_assessment"
+      key_success_factors: []
+      key_limiting_factors: []
+      
+  # Learning Opportunities
+  learning_opportunities:
+    orchestrator_learning:
+      - learning_opportunity: "what_orchestrator_could_learn"
+        learning_category: "method_selection|context_analysis|quality_assessment"
+        learning_value: "value_of_this_learning"
+        learning_method: "how_to_capture_this_learning"
+        
+      # Additional orchestrator learning as needed
+    
+    agent_learning:
+      - learning_opportunity: "what_agent_could_learn"
+        learning_category: "execution|quality|efficiency|decision_making"
+        learning_value: "value_of_this_learning"
+        learning_method: "how_to_capture_this_learning"
+        
+      # Additional agent learning as needed
+    
+    system_learning:
+      - learning_opportunity: "what_system_could_learn"
+        learning_category: "process|workflow|integration|monitoring"
+        learning_value: "value_of_this_learning"
+        learning_method: "how_to_capture_this_learning"
+        
+      # Additional system learning as needed
+  
+  # Human Review Recommendations
+  human_review_recommendations:
+    review_priority: "high|medium|low"
+    review_focus_areas: []
+    specific_questions_for_human: []
+    escalation_items: []
+    
+    review_materials:
+      - material_type: "research_output|execution_log|evaluation_report"
+        material_path: "path_to_material"
+        review_importance: "critical|important|optional"
+        review_reason: "why_human_should_review_this"
+        
+      # Additional review materials as needed
+  
+  # Evaluation Metadata
+  evaluation_metadata:
+    evaluation_version: "1.0.0"
+    evaluation_completeness: 1.0
+    evaluation_confidence: 0.0
+    evaluation_limitations: []
+    evaluation_assumptions: []
+    
+    evaluation_quality_indicators:
+      observation_thoroughness: 0.0
+      analysis_depth: 0.0
+      recommendation_quality: 0.0
+      pattern_recognition_effectiveness: 0.0
+      
+  # Related Documents and References
+  related_documents:
+    - document_path: "research/findings/topic/research_output.md"
+      relationship: "primary_research_output"
+      
+    - document_path: "research/findings/topic/research-execution-log.yaml"
+      relationship: "execution_log_being_evaluated"
+      
+    # Additional related documents as needed
+  
+  # Evaluation Summary
+  evaluation_summary:
+    overall_evaluation: "positive|neutral|negative"
+    key_strengths: []
+    key_weaknesses: []
+    most_important_insight: "single_most_important_finding"
+    most_critical_issue: "single_most_critical_issue"
+    overall_recommendation: "overall_recommendation_for_research_quality"

@@ -1,0 +1,251 @@
+# Meta-Prompt Methods Index
+# AI INSTRUCTIONS: Complete index of all 15 meta-prompting techniques in the orchestrator
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2024-06-30"
+  total_methods: 15
+  purpose: "Complete index of existing and advanced meta-prompting methods"
+
+# EXISTING METHODS (11 methods from @ai/prompts/meta/)
+existing_methods:
+  location: "research/orchestrator/methods/existing/"
+  source: "Originally from @ai/prompts/meta/, moved to research framework"
+  count: 11
+  
+  methods:
+    adaptive_chain_of_thought:
+      file: "adaptive_chain_of_thought.md"
+      category: "cognitive"
+      complexity_support: ["moderate", "complex"]
+      description: "Systematic reasoning with metacognitive checks and validation"
+    
+    complex_research:
+      file: "complex_research.md"
+      category: "decomposition"
+      complexity_support: ["complex"]
+      description: "Modular breakdown with dependency mapping and integration logic"
+    
+    domain_adaptive:
+      file: "domain_adaptive.md"
+      category: "domain"
+      complexity_support: ["moderate", "complex"]
+      description: "Domain expertise with stakeholder adaptation and methodology translation"
+    
+    domain_specific_research:
+      file: "domain_specific_research.md"
+      category: "domain"
+      complexity_support: ["moderate", "complex"]
+      description: "Concrete adaptation with audience-appropriate professional context"
+    
+    iterative_research_refinement:
+      file: "iterative_research_refinement.md"
+      category: "quality"
+      complexity_support: ["simple", "moderate", "complex"]
+      description: "Self-improvement with quality progression and evaluation criteria"
+    
+    modular_task_decomposition:
+      file: "modular_task_decomposition.md"
+      category: "decomposition"
+      complexity_support: ["moderate", "complex"]
+      description: "Clear modules with dependency analysis and parallel planning"
+    
+    multi_perspective_approach:
+      file: "multi_perspective_approach.md"
+      category: "comprehensive"
+      complexity_support: ["moderate", "complex"]
+      description: "Comprehensive coverage with expert differentiation and integration framework"
+    
+    primary_research:
+      file: "primary_research.md"
+      category: "general"
+      complexity_support: ["simple", "moderate"]
+      description: "Comprehensive framework with clear structure and methodology guidance"
+    
+    step_by_step_research:
+      file: "step_by_step_research.md"
+      category: "systematic"
+      complexity_support: ["simple", "moderate"]
+      description: "Clear phases with time-bounded practical guidance"
+    
+    textgrad_iterative:
+      file: "textgrad_iterative.md"
+      category: "quality"
+      complexity_support: ["moderate", "complex"]
+      description: "Feedback loops with self-improvement and stabilization detection"
+    
+    universal_research:
+      file: "universal_research.md"
+      category: "general"
+      complexity_support: ["simple", "moderate"]
+      description: "Comprehensive template with flexible application and validation criteria"
+
+# ADVANCED METHODS (4 new methods in research framework)
+advanced_methods:
+  location: "research/orchestrator/methods/advanced/"
+  source: "Created for AI Research Framework Phase 1"
+  count: 4
+  
+  methods:
+    constitutional_ai:
+      file: "constitutional_ai.md"
+      category: "advanced_quality"
+      complexity_support: ["simple", "moderate", "complex"]
+      description: "Ethical alignment with self-correction and principle-based validation"
+    
+    ensemble_methods:
+      file: "ensemble_methods.md"
+      category: "advanced_orchestration"
+      complexity_support: ["complex"]
+      description: "Method combination with robustness and comprehensive coverage"
+    
+    self_consistency:
+      file: "self_consistency.md"
+      category: "advanced_quality"
+      complexity_support: ["simple", "moderate", "complex"]
+      description: "Reliability improvement through consensus building and error reduction"
+    
+    tree_of_thoughts:
+      file: "tree_of_thoughts.md"
+      category: "advanced_cognitive"
+      complexity_support: ["complex"]
+      description: "Multi-path exploration with backtracking and alternative evaluation"
+
+# METHOD ORGANIZATION BY CHARACTERISTICS
+method_organization:
+  by_complexity:
+    simple_compatible: 
+      - "universal_research"
+      - "step_by_step_research" 
+      - "primary_research"
+      - "iterative_research_refinement"
+      - "constitutional_ai"
+      - "self_consistency"
+    
+    moderate_compatible:
+      - "adaptive_chain_of_thought"
+      - "domain_adaptive"
+      - "domain_specific_research"
+      - "modular_task_decomposition"
+      - "multi_perspective_approach"
+      - "textgrad_iterative"
+      - "constitutional_ai"
+      - "self_consistency"
+    
+    complex_compatible:
+      - "complex_research"
+      - "multi_perspective_approach"
+      - "tree_of_thoughts"
+      - "ensemble_methods"
+      - "adaptive_chain_of_thought"
+      - "domain_adaptive"
+      - "domain_specific_research"
+      - "modular_task_decomposition"
+      - "iterative_research_refinement"
+      - "textgrad_iterative"
+      - "constitutional_ai"
+      - "self_consistency"
+  
+  by_category:
+    cognitive: ["adaptive_chain_of_thought"]
+    decomposition: ["complex_research", "modular_task_decomposition"]
+    domain: ["domain_adaptive", "domain_specific_research"]
+    quality: ["iterative_research_refinement", "textgrad_iterative"]
+    general: ["primary_research", "universal_research"]
+    systematic: ["step_by_step_research"]
+    comprehensive: ["multi_perspective_approach"]
+    advanced_cognitive: ["tree_of_thoughts"]
+    advanced_quality: ["constitutional_ai", "self_consistency"]
+    advanced_orchestration: ["ensemble_methods"]
+  
+  by_execution_pattern:
+    sequential_optimized:
+      - "step_by_step_research"
+      - "iterative_research_refinement"
+      - "textgrad_iterative"
+      - "universal_research"
+    
+    parallel_capable:
+      - "multi_perspective_approach"
+      - "ensemble_methods"
+      - "self_consistency"
+      - "modular_task_decomposition"
+    
+    hybrid_adaptive:
+      - "tree_of_thoughts"
+      - "complex_research"
+      - "adaptive_chain_of_thought"
+      - "constitutional_ai"
+
+# ORCHESTRATOR INTEGRATION PATHS
+integration_mapping:
+  method_file_locations:
+    existing_methods_path: "research/orchestrator/methods/existing/"
+    advanced_methods_path: "research/orchestrator/methods/advanced/"
+    registry_config: "research/orchestrator/config/method-registry.yaml"
+    selection_rules: "research/orchestrator/config/selection-rules.yaml"
+  
+  usage_in_orchestrator:
+    context_analysis: "research/orchestrator/engines/context-analyzer.yaml"
+    workflow_integration: "research/orchestrator/integration/workflow-orchestrator.yaml"
+    claude_integration: "research/orchestrator/integration/claude-integration.yaml"
+  
+  original_ai_prompts_relationship:
+    status: "Methods copied from @ai/prompts/meta/ to research framework"
+    rationale: "Centralize all orchestrator components in research/ folder"
+    backward_compatibility: "Original @ai/prompts/meta/ files remain for legacy workflows"
+    future_updates: "Research framework methods are now the canonical versions"
+
+# QUALITY ASSURANCE AND VALIDATION
+quality_metrics:
+  method_coverage:
+    total_methods: 15
+    complexity_coverage:
+      simple: "6 methods"
+      moderate: "12 methods" 
+      complex: "12 methods"
+    
+    category_coverage:
+      cognitive_reasoning: "2 methods"
+      task_decomposition: "2 methods"
+      domain_specialization: "2 methods"
+      quality_enhancement: "4 methods"
+      general_purpose: "2 methods"
+      systematic_execution: "1 method"
+      comprehensive_analysis: "1 method"
+      advanced_techniques: "1 method"
+  
+  orchestrator_completeness:
+    phase_1_requirements: "15 meta-prompting techniques ✅"
+    intelligent_selection: "Context-aware method selection ✅"
+    quality_enhancement: "Advanced quality methods available ✅"
+    execution_patterns: "Sequential, parallel, hybrid patterns ✅"
+
+# AI INSTRUCTIONS FOR METHOD USAGE
+ai_instructions:
+  claude_file_access:
+    - "Use Read tool with exact file paths: research/orchestrator/methods/existing/[method].md"
+    - "For advanced methods: research/orchestrator/methods/advanced/[method].md"
+    - "Configuration files: research/orchestrator/config/[config].yaml"
+    - "No @ prefixes needed - use direct paths from project root"
+  
+  method_selection_process:
+    - "Use context analysis to determine appropriate complexity level"
+    - "Select primary method from complexity-compatible options"
+    - "Add quality enhancement methods based on requirements"
+    - "Verify method compatibility using compatibility matrix"
+    - "Choose execution pattern based on method characteristics"
+  
+  method_execution_guidance:
+    - "Read method file from appropriate location (existing/ or advanced/)"
+    - "Apply method-specific instructions and templates"
+    - "Customize method parameters based on research context"
+    - "Follow execution pattern (sequential/parallel/hybrid)"
+    - "Apply quality checkpoints as specified by method"
+  
+  quality_assurance:
+    - "Always include at least one quality enhancement method"
+    - "Use constitutional_ai for ethical and principle validation"
+    - "Use self_consistency for critical accuracy requirements"
+    - "Apply iterative methods for continuous improvement"
+    - "Document method effectiveness for future optimization"

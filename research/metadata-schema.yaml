@@ -1,0 +1,56 @@
+# Research Document Metadata Schema
+# AI INSTRUCTIONS: All research documents must include this frontmatter structure
+
+required_fields:
+  title: "string - Descriptive title of the research"
+  research_type: "enum - primary|secondary|comparative|analysis"
+  subject: "string - Main subject or tool being researched"
+  conducted_by: "string - AI agent or researcher identifier"
+  date_conducted: "ISO date - When research was performed"
+  date_updated: "ISO date - Last update to document"
+  version: "semver - Document version"
+  status: "enum - draft|in_progress|completed|archived"
+  confidence_level: "enum - high|medium|low - Research quality assessment"
+
+optional_fields:
+  sources_count: "integer - Number of sources consulted"
+  methodology: "array - Research methods used"
+  keywords: "array - Key terms and concepts"
+  related_tasks: "array - Associated task IDs"
+  dependencies: "array - Documents this research depends on"
+  impacts: "array - Documents impacted by this research"
+  priority: "enum - critical|high|medium|low"
+  estimated_hours: "integer - Time investment in research"
+
+validation_requirements:
+  - All required fields must be present
+  - Dates must be in ISO 8601 format
+  - Status must progress logically (draft -> in_progress -> completed)
+  - Confidence level should reflect source quality and verification
+  - Version must follow semantic versioning
+
+ai_consumption_notes:
+  - Structure content for easy AI agent parsing
+  - Include executive summary for quick understanding
+  - Provide actionable insights section
+  - Use consistent formatting across all research documents
+  - Cross-reference related knowledge base documents
+
+example_frontmatter: |
+  ---
+  title: "Taskmaster AI Tool Capabilities Analysis"
+  research_type: "primary"
+  subject: "Taskmaster"
+  conducted_by: "Claude-4-Research-Agent"
+  date_conducted: "2024-06-29"
+  date_updated: "2024-06-29"
+  version: "1.0.0"
+  status: "completed"
+  confidence_level: "high"
+  sources_count: 12
+  methodology: ["web_research", "documentation_analysis", "feature_comparison"]
+  keywords: ["task_management", "ai_tools", "productivity", "automation"]
+  related_tasks: [5, 6]
+  priority: "critical"
+  estimated_hours: 4
+  ---

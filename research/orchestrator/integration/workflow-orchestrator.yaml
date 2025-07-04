@@ -1,0 +1,297 @@
+# Meta-Prompt Orchestrator Workflow Integration
+# AI INSTRUCTIONS: This YAML file defines how to use the orchestrator system practically
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2024-06-30"
+  purpose: "YAML-based integration layer for functional orchestrator"
+  dependencies: ["method-registry.yaml", "context-analyzer.yaml", "selection-rules.yaml"]
+
+# ORCHESTRATOR WORKFLOW DEFINITIONS
+workflows:
+  standard_research_orchestration:
+    description: "Complete research workflow with intelligent method selection"
+    
+    steps:
+      - step_1_context_analysis:
+          input_template: |
+            research_context:
+              research_topic: "${research_topic}"
+              research_scope: "${research_scope}"
+              quality_requirements: "${quality_requirements}"
+              time_constraints: "${time_constraints}"
+              domain_specificity: "${domain_specificity}"
+              stakeholder_level: "${stakeholder_level}"
+          
+          analysis_process:
+            - apply_complexity_assessment_rules: "from context-analyzer.yaml"
+            - determine_domain_type: "from context-analyzer.yaml"
+            - calculate_quality_requirements: "from context-analyzer.yaml"
+            - assess_resource_constraints: "from context-analyzer.yaml"
+          
+          output_format:
+            complexity_assessment:
+              level: "simple|moderate|complex"
+              reasoning: "explanation of complexity determination"
+              confidence: "0.0 to 1.0"
+            domain_analysis:
+              type: "general|specialized|cross_domain|emerging"
+              expertise_required: "none|basic|intermediate|expert"
+            quality_requirements:
+              required_level: "basic|high|critical"
+              validation_needs: "array of validation approaches"
+      
+      - step_2_method_selection:
+          input: "context_analysis_results"
+          
+          selection_process:
+            - load_method_registry: "from method-registry.yaml"
+            - apply_selection_rules: "from selection-rules.yaml"
+            - validate_compatibility: "check compatibility_matrix"
+            - optimize_combination: "balance quality vs efficiency"
+          
+          output_format:
+            selected_methods: "array of method names"
+            execution_pattern: "sequential|parallel|hybrid"
+            rationale: "explanation of selection reasoning"
+            estimated_duration: "time estimate string"
+      
+      - step_3_execution_guidance:
+          input: "method_selection_results"
+          
+          guidance_generation:
+            - create_preparation_steps: "from method characteristics"
+            - define_execution_sequence: "based on execution pattern"
+            - set_quality_checkpoints: "from validation needs"
+            - establish_success_metrics: "from quality requirements"
+          
+          output_format:
+            preparation_steps: "array of setup actions"
+            execution_sequence: "step-by-step execution plan"
+            quality_checkpoints: "validation points during execution"
+            success_metrics: "criteria for successful completion"
+
+  adaptive_research_orchestration:
+    description: "Dynamic workflow with mid-execution adaptation"
+    
+    steps:
+      - initial_orchestration:
+          inherit: "standard_research_orchestration"
+      
+      - monitoring_checkpoints:
+          frequency: "after each method execution"
+          assessments:
+            - quality_assessment: "evaluate intermediate results"
+            - resource_utilization: "check time and computational usage"
+            - context_changes: "detect any requirement changes"
+          
+          adaptation_triggers:
+            quality_below_threshold: "if quality_score < required_level"
+            resource_constraint_hit: "if resources exceed availability"
+            context_change_detected: "if requirements updated"
+      
+      - dynamic_adaptation:
+          adaptation_rules:
+            method_substitution:
+              if: "primary_method_underperforming"
+              action: "select_alternative_method"
+              source: "selection-rules.yaml alternative_suggestions"
+            
+            quality_enhancement:
+              if: "quality_below_critical_threshold"
+              action: "add_quality_enhancement_method"
+              source: "selection-rules.yaml enhancement_selection"
+            
+            resource_optimization:
+              if: "resource_constraints_tightening"
+              action: "switch_to_efficient_methods"
+              source: "selection-rules.yaml resource_constraints"
+
+# INTEGRATION WITH EXISTING RESEARCH FRAMEWORK
+framework_integration:
+  research_document_creation:
+    orchestrator_enhanced_workflow:
+      - pre_creation_orchestration:
+          action: "run standard_research_orchestration"
+          input: "document_requirements + user_context"
+          output: "optimized_method_selection"
+      
+      - document_generation:
+          method: "apply selected methods from orchestrator"
+          template: "use @ai/prompts/document-templates/ based on selection"
+          enhancement: "apply enhancement methods from orchestrator"
+      
+      - quality_validation:
+          checkpoints: "use orchestrator quality_checkpoints"
+          validation: "apply orchestrator success_metrics"
+          improvement: "use orchestrator adaptation if needed"
+  
+  feature_development_orchestration:
+    enhanced_feature_workflow:
+      - feature_context_analysis:
+          input: "feature_requirements + technical_constraints"
+          orchestration: "adaptive_research_orchestration"
+          specialization: "technical_analysis context pattern"
+      
+      - component_method_mapping:
+          feature_spec: "use selected methods for requirement analysis"
+          technical_docs: "use selected methods for architecture design"
+          test_strategy: "use selected methods for validation planning"
+      
+      - cross_component_validation:
+          consistency: "apply constitutional_ai if selected"
+          completeness: "apply multi_perspective_approach if selected"
+          quality: "apply self_consistency if selected"
+
+  task_management_integration:
+    orchestrator_task_enhancement:
+      - task_complexity_assessment:
+          input: "task_description + context"
+          analysis: "use context_analyzer complexity assessment"
+          output: "enhanced_task_metadata"
+      
+      - method_based_subtask_creation:
+          process: "decompose based on selected methods"
+          dependencies: "reflect method execution patterns"
+          estimates: "use method characteristics for time estimation"
+      
+      - quality_milestone_integration:
+          checkpoints: "orchestrator quality_checkpoints become task milestones"
+          validation: "orchestrator success_metrics become acceptance criteria"
+
+# PRACTICAL USAGE TEMPLATES
+usage_templates:
+  simple_research_request:
+    template: |
+      # Orchestrated Research Request
+      research_topic: "${topic}"
+      research_scope: "moderate"
+      quality_requirements: "high"
+      time_constraints: "normal"
+      domain_specificity: "general"
+      
+      # Auto-generated orchestration:
+      # 1. Context Analysis: ${context_analysis}
+      # 2. Selected Methods: ${selected_methods}
+      # 3. Execution Pattern: ${execution_pattern}
+      # 4. Quality Checkpoints: ${quality_checkpoints}
+    
+    example_completion:
+      research_topic: "Impact of remote work on team productivity"
+      context_analysis:
+        complexity_level: "moderate"
+        domain_type: "business"
+        quality_level: "high"
+      selected_methods: ["domain_adaptive", "constitutional_ai"]
+      execution_pattern: "sequential"
+      quality_checkpoints: ["source_verification", "consistency_checks"]
+
+  complex_research_request:
+    template: |
+      # Advanced Orchestrated Research
+      research_topic: "${complex_topic}"
+      research_scope: "broad"
+      quality_requirements: "critical"
+      time_constraints: "extended"
+      domain_specificity: "cross_domain"
+      stakeholder_level: "expert"
+      
+      # Auto-generated orchestration:
+      # 1. Context Analysis: ${context_analysis}
+      # 2. Selected Methods: ${selected_methods}
+      # 3. Execution Pattern: ${execution_pattern}
+      # 4. Quality Assurance: ${quality_methods}
+    
+    example_completion:
+      research_topic: "Ethical implications of AGI development on global economic systems"
+      context_analysis:
+        complexity_level: "complex"
+        domain_type: "cross_domain"
+        quality_level: "critical"
+      selected_methods: ["multi_perspective_approach", "tree_of_thoughts", "constitutional_ai"]
+      execution_pattern: "hybrid"
+      quality_methods: ["self_consistency", "expert_validation"]
+
+# AI AGENT INSTRUCTIONS FOR USING THE ORCHESTRATOR
+ai_agent_instructions:
+  how_to_use_orchestrator:
+    step_1_assess_context:
+      - "Extract research_topic, scope, quality_requirements from user request"
+      - "Determine domain_specificity, time_constraints, stakeholder_level from context"
+      - "Apply context_analyzer.yaml rules to get complexity and domain analysis"
+    
+    step_2_select_methods:
+      - "Use selection-rules.yaml with context analysis results"
+      - "Check method-registry.yaml for method characteristics"
+      - "Validate method compatibility using compatibility_matrix"
+      - "Optimize selection for quality-efficiency balance"
+    
+    step_3_execute_with_guidance:
+      - "Follow execution_pattern (sequential/parallel/hybrid)"
+      - "Apply selected methods in appropriate order"
+      - "Use quality_checkpoints for validation during execution"
+      - "Apply enhancement methods for quality improvement"
+    
+    step_4_adapt_if_needed:
+      - "Monitor quality and resource usage during execution"
+      - "Apply adaptation rules if triggers are met"
+      - "Document any adaptations made for future learning"
+  
+  method_execution_guidance:
+    existing_methods:
+      - "Use files from research/orchestrator/methods/existing/ for existing methods"
+      - "Apply method-specific instructions from each file"
+      - "Customize based on context analysis results"
+    
+    advanced_methods:
+      - "Use documentation from research/orchestrator/methods/advanced/"
+      - "Combine with existing methods as per compatibility_matrix"
+      - "Apply integration patterns from selection-rules.yaml"
+  
+  quality_assurance_integration:
+    validation_methods:
+      - "constitutional_ai: Apply ethical and principle-based validation"
+      - "self_consistency: Run multiple approaches and check consensus"
+      - "expert_validation: Flag for human expert review when needed"
+      - "source_validation: Verify credibility and accuracy of sources"
+    
+    quality_improvement:
+      - "iterative_research_refinement: Apply feedback loops for improvement"
+      - "textgrad_iterative: Use gradient-based improvement approach"
+      - "multi_perspective_approach: Ensure comprehensive viewpoint coverage"
+
+# ORCHESTRATOR SUCCESS METRICS
+success_metrics:
+  implementation_success:
+    functional_requirements:
+      - "Can analyze research context and determine complexity"
+      - "Can select appropriate methods based on requirements"
+      - "Can provide execution guidance and quality checkpoints"
+      - "Can adapt dynamically when conditions change"
+    
+    quality_improvements:
+      - "15-25% improvement in research quality (Phase 1 target)"
+      - "Automated method selection for 80% of research contexts"
+      - "Seamless integration with existing workflows"
+      - "Reduced planning time through intelligent recommendations"
+  
+  integration_success:
+    workflow_enhancement:
+      - "All research workflows can leverage orchestrator intelligence"
+      - "Task management integration provides better estimates"
+      - "Quality validation is consistent and systematic"
+      - "Method selection is context-appropriate and optimized"
+
+# NEXT STEPS FOR COMPLETION
+next_steps:
+  immediate_actions:
+    - "Test orchestrator with sample research requests"
+    - "Validate method selection accuracy against manual selection"
+    - "Ensure integration points work with existing framework"
+    - "Document any gaps or improvements needed"
+  
+  phase_1_completion:
+    - "Achieve 15 meta-prompting techniques with intelligent orchestration"
+    - "Demonstrate functional knowledge fabric with semantic search"
+    - "Implement validation framework meeting academic standards"
+    - "Show 25-35% improvement in research quality"

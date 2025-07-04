@@ -1,0 +1,367 @@
+# Meta-Prompt Orchestrator Context Analyzer
+# AI INSTRUCTIONS: Use this analyzer to intelligently assess research context and recommend optimal meta-prompting approaches
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2024-06-29"
+  purpose: "Intelligent context analysis for meta-prompt method selection"
+
+# CONTEXT ANALYSIS FRAMEWORK
+context_analysis_framework:
+  input_parameters:
+    required:
+      - research_topic: "string - Main research subject"
+      - research_scope: "enum - narrow|moderate|broad"
+      - quality_requirements: "enum - basic|high|critical"
+      - time_constraints: "enum - urgent|normal|extended|flexible"
+    
+    optional:
+      - domain_specificity: "enum - general|specialized|cross_domain"
+      - resource_availability: "enum - limited|standard|extensive"
+      - stakeholder_level: "enum - general|professional|expert"
+      - output_format: "enum - report|presentation|documentation|analysis"
+      - collaboration_needs: "enum - individual|team|multi_agent"
+
+  output_structure:
+    complexity_assessment:
+      level: "enum - simple|moderate|complex"
+      reasoning: "string - Explanation of complexity determination"
+      confidence: "float - 0.0 to 1.0"
+    
+    domain_analysis:
+      type: "enum - general|specialized|cross_domain|emerging"
+      expertise_required: "enum - none|basic|intermediate|expert"
+      domain_categories: "array - List of relevant domains"
+    
+    quality_analysis:
+      required_level: "enum - basic|high|critical"
+      quality_factors: "array - Specific quality requirements"
+      validation_needs: "array - Required validation approaches"
+    
+    resource_analysis:
+      time_estimate: "string - Expected time requirement"
+      computational_load: "enum - low|medium|high|very_high"
+      human_oversight: "enum - minimal|moderate|extensive"
+    
+    method_recommendations:
+      primary_methods: "array - Main recommended methods"
+      enhancement_methods: "array - Supporting/enhancement methods"
+      quality_assurance: "array - Validation and QA methods"
+      execution_pattern: "enum - sequential|parallel|hybrid"
+
+# COMPLEXITY ASSESSMENT RULES
+complexity_assessment_rules:
+  simple_indicators:
+    topic_characteristics:
+      - well_established_domain
+      - clear_boundaries
+      - abundant_reliable_sources
+      - straightforward_objectives
+    
+    scope_indicators:
+      - single_domain_focus
+      - limited_stakeholder_perspectives
+      - basic_analysis_required
+      - standard_output_format
+    
+    example_topics:
+      - "Best practices for project management"
+      - "Overview of renewable energy types"
+      - "Introduction to machine learning concepts"
+    
+    recommended_methods: ["universal_research", "step_by_step_research", "primary_research"]
+  
+  moderate_indicators:
+    topic_characteristics:
+      - moderately_established_domain
+      - some_interdisciplinary_aspects
+      - mixed_source_reliability
+      - multiple_sub_objectives
+    
+    scope_indicators:
+      - multi_domain_considerations
+      - several_stakeholder_perspectives
+      - analytical_synthesis_required
+      - customized_output_needs
+    
+    example_topics:
+      - "Impact of remote work on team productivity"
+      - "Blockchain applications in supply chain"
+      - "Digital transformation strategies for SMEs"
+    
+    recommended_methods: ["domain_adaptive", "modular_task_decomposition", "adaptive_chain_of_thought"]
+  
+  complex_indicators:
+    topic_characteristics:
+      - emerging_or_rapidly_evolving_domain
+      - high_interdisciplinary_complexity
+      - conflicting_or_limited_sources
+      - multiple_competing_objectives
+    
+    scope_indicators:
+      - cross_domain_synthesis_required
+      - many_stakeholder_perspectives
+      - novel_analytical_approaches_needed
+      - sophisticated_output_requirements
+    
+    example_topics:
+      - "Ethical implications of AGI development"
+      - "Future of work in post-pandemic economy"
+      - "Quantum computing impact on cybersecurity"
+    
+    recommended_methods: ["complex_research", "multi_perspective_approach", "tree_of_thoughts", "ensemble_methods"]
+
+# DOMAIN ANALYSIS RULES
+domain_analysis_rules:
+  general_domain:
+    characteristics:
+      - broad_applicability
+      - well_established_knowledge_base
+      - standard_research_methodologies
+      - abundant_resources
+    
+    method_preferences: ["universal_research", "primary_research", "step_by_step_research"]
+    enhancement_options: ["constitutional_ai", "self_consistency"]
+  
+  specialized_domain:
+    characteristics:
+      - specific_expert_knowledge_required
+      - domain_specific_terminology
+      - specialized_methodologies
+      - niche_resources
+    
+    method_preferences: ["domain_adaptive", "domain_specific_research"]
+    enhancement_options: ["constitutional_ai", "iterative_research_refinement"]
+  
+  cross_domain:
+    characteristics:
+      - multiple_domain_intersection
+      - synthesis_challenges
+      - diverse_methodologies
+      - complex_validation_needs
+    
+    method_preferences: ["multi_perspective_approach", "ensemble_methods"]
+    enhancement_options: ["self_consistency", "constitutional_ai"]
+  
+  emerging_domain:
+    characteristics:
+      - limited_established_knowledge
+      - rapidly_evolving_information
+      - experimental_methodologies
+      - high_uncertainty
+    
+    method_preferences: ["tree_of_thoughts", "adaptive_chain_of_thought"]
+    enhancement_options: ["self_consistency", "iterative_research_refinement"]
+
+# QUALITY REQUIREMENTS ANALYSIS
+quality_requirements_analysis:
+  basic_quality:
+    characteristics:
+      - informational_purpose
+      - general_audience
+      - standard_accuracy_needs
+      - time_efficiency_priority
+    
+    recommended_approaches:
+      - single_method_execution
+      - standard_validation
+      - efficiency_optimized
+    
+    quality_methods: ["constitutional_ai"]
+  
+  high_quality:
+    characteristics:
+      - professional_decision_making
+      - expert_audience
+      - high_accuracy_requirements
+      - balanced_time_quality_tradeoff
+    
+    recommended_approaches:
+      - enhanced_method_execution
+      - multi_source_validation
+      - quality_optimized
+    
+    quality_methods: ["constitutional_ai", "iterative_research_refinement"]
+  
+  critical_quality:
+    characteristics:
+      - strategic_decision_making
+      - high_stakes_outcomes
+      - maximum_accuracy_requirements
+      - quality_over_efficiency
+    
+    recommended_approaches:
+      - ensemble_method_execution
+      - comprehensive_validation
+      - quality_maximized
+    
+    quality_methods: ["self_consistency", "constitutional_ai", "multi_perspective_approach"]
+
+# CONTEXT ANALYSIS DECISION TREE
+decision_tree:
+  root_analysis:
+    step_1_complexity:
+      input: "research_topic + research_scope"
+      process: "apply_complexity_assessment_rules"
+      output: "complexity_level"
+    
+    step_2_domain:
+      input: "research_topic + domain_specificity"
+      process: "apply_domain_analysis_rules"
+      output: "domain_type + expertise_required"
+    
+    step_3_quality:
+      input: "quality_requirements + stakeholder_level"
+      process: "apply_quality_requirements_analysis"
+      output: "quality_level + validation_needs"
+    
+    step_4_resources:
+      input: "time_constraints + resource_availability"
+      process: "apply_resource_constraint_analysis"
+      output: "resource_profile + execution_pattern"
+  
+  method_selection_logic:
+    primary_selection:
+      condition: "complexity_level + domain_type"
+      process: "select_from_method_registry"
+      fallback: "universal_research"
+    
+    enhancement_selection:
+      condition: "quality_level + validation_needs"
+      process: "add_quality_enhancement_methods"
+      optional: true
+    
+    optimization:
+      condition: "resource_profile + time_constraints"
+      process: "optimize_method_combination"
+      ensure: "feasibility_within_constraints"
+
+# ANALYSIS ALGORITHMS
+analysis_algorithms:
+  complexity_scoring:
+    algorithm: |
+      def calculate_complexity_score(topic, scope, domain_indicators):
+          base_score = 0.5
+          
+          # Topic complexity factors
+          if has_emerging_technology(topic): base_score += 0.2
+          if has_multiple_domains(topic): base_score += 0.15
+          if has_ethical_implications(topic): base_score += 0.1
+          if has_conflicting_sources(topic): base_score += 0.15
+          
+          # Scope complexity factors
+          scope_multipliers = {"narrow": 0.8, "moderate": 1.0, "broad": 1.3}
+          base_score *= scope_multipliers.get(scope, 1.0)
+          
+          # Domain complexity factors
+          if domain_indicators.get("interdisciplinary"): base_score += 0.1
+          if domain_indicators.get("specialized_expertise"): base_score += 0.1
+          
+          return min(1.0, base_score)
+    
+    scoring_thresholds:
+      simple: "score < 0.6"
+      moderate: "0.6 <= score < 0.8"
+      complex: "score >= 0.8"
+  
+  quality_assessment:
+    algorithm: |
+      def assess_quality_needs(requirements, stakeholder, output_format):
+          quality_score = {"basic": 0.3, "high": 0.7, "critical": 0.9}[requirements]
+          
+          # Stakeholder adjustments
+          stakeholder_adj = {"general": 0.0, "professional": 0.1, "expert": 0.2}
+          quality_score += stakeholder_adj.get(stakeholder, 0.0)
+          
+          # Output format adjustments
+          format_adj = {"report": 0.1, "presentation": 0.05, "documentation": 0.15, "analysis": 0.2}
+          quality_score += format_adj.get(output_format, 0.0)
+          
+          return min(1.0, quality_score)
+    
+    quality_thresholds:
+      basic: "score < 0.5"
+      high: "0.5 <= score < 0.8"
+      critical: "score >= 0.8"
+
+# CONTEXT MATCHING PATTERNS
+context_patterns:
+  academic_research:
+    indicators: ["peer_review_needed", "literature_review", "theoretical_framework"]
+    recommended_methods: ["systematic_literature_review", "constitutional_ai", "iterative_research_refinement"]
+    enhancement: ["self_consistency"]
+  
+  business_intelligence:
+    indicators: ["market_analysis", "competitive_intelligence", "strategic_planning"]
+    recommended_methods: ["multi_perspective_approach", "domain_adaptive", "complex_research"]
+    enhancement: ["constitutional_ai"]
+  
+  technical_analysis:
+    indicators: ["technology_assessment", "implementation_planning", "technical_feasibility"]
+    recommended_methods: ["tree_of_thoughts", "modular_task_decomposition", "domain_specific_research"]
+    enhancement: ["self_consistency"]
+  
+  policy_research:
+    indicators: ["regulatory_analysis", "stakeholder_impact", "policy_implications"]
+    recommended_methods: ["multi_perspective_approach", "constitutional_ai", "domain_adaptive"]
+    enhancement: ["self_consistency", "iterative_research_refinement"]
+  
+  exploratory_research:
+    indicators: ["emerging_trends", "future_scenarios", "innovation_potential"]
+    recommended_methods: ["tree_of_thoughts", "adaptive_chain_of_thought", "multi_perspective_approach"]
+    enhancement: ["self_consistency"]
+
+# OUTPUT FORMATTING
+output_templates:
+  analysis_report:
+    structure:
+      context_summary:
+        research_topic: "string"
+        complexity_assessment: "object"
+        domain_analysis: "object"
+        quality_requirements: "object"
+        resource_constraints: "object"
+      
+      recommendations:
+        primary_method: "string"
+        enhancement_methods: "array"
+        execution_pattern: "string"
+        estimated_duration: "string"
+        resource_requirements: "object"
+      
+      rationale:
+        selection_reasoning: "string"
+        trade_offs: "array"
+        alternatives_considered: "array"
+        risk_factors: "array"
+      
+      execution_guidance:
+        preparation_steps: "array"
+        execution_sequence: "array"
+        quality_checkpoints: "array"
+        success_metrics: "array"
+
+# AI INSTRUCTIONS FOR CONTEXT ANALYSIS
+ai_instructions:
+  analysis_process:
+    - "Always start with complexity_assessment using topic and scope indicators"
+    - "Follow with domain_analysis to determine specialization needs"
+    - "Apply quality_requirements_analysis based on stakeholder and output needs"
+    - "Consider resource_constraints to ensure feasible recommendations"
+    - "Use decision_tree logic for systematic method selection"
+    - "Validate recommendations against compatibility_matrix"
+    - "Provide clear rationale for all recommendations"
+  
+  quality_assurance:
+    - "Cross-check complexity assessment with multiple indicators"
+    - "Verify domain analysis matches topic characteristics"
+    - "Ensure quality level aligns with stakeholder expectations"
+    - "Confirm resource requirements are within stated constraints"
+    - "Validate method compatibility and synergy potential"
+  
+  adaptation_guidelines:
+    - "Adjust recommendations based on specific context nuances"
+    - "Consider non-standard requirements or constraints"
+    - "Provide alternative options when primary recommendations may not fit"
+    - "Suggest method customizations for unique situations"
+    - "Enable iterative refinement of recommendations based on feedback"
