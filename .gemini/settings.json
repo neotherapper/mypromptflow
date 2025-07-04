@@ -1,5 +1,18 @@
 {
   "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/georgepilitsoglou/Desktop",
+        "/Users/georgepilitsoglou/Downloads"
+      ]
+    },
+    "MCP_DOCKER": {
+      "command": "docker",
+      "args": ["mcp", "gateway", "run"]
+    },
     "task-master-ai": {
       "command": "npx",
       "args": ["-y", "--package=task-master-ai", "task-master-ai"],

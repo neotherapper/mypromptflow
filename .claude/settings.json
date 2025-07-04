@@ -13,24 +13,5 @@
     "enforceStructure": true,
     "requireAIInstructions": true,
     "checkDependencies": true
-  },
-  "mcp": {
-    "servers": {
-      "filesystem": {
-        "command": "npx",
-        "args": [
-          "-y",
-          "@modelcontextprotocol/server-filesystem",
-          "ai/",
-          "docs/",
-          "scripts/",
-          ".claude/"
-        ]
-      },
-      "git": {
-        "command": "npx",
-        "args": ["@modelcontextprotocol/server-git", "--repository", "."]
-      }
-    }
   }
 }
