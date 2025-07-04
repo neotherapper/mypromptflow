@@ -54,3 +54,7 @@ All documents must include:
 2. Agents will generate complete documentation
 3. Review and refine generated content
 4. Use for implementation guidance
+
+## AI Research System
+
+**Available to all AI agents:** This project includes a research framework at `research/` that any AI agent can use autonomously.

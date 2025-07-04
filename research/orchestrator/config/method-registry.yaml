@@ -1,0 +1,285 @@
+# Meta-Prompting Method Registry
+# AI INSTRUCTIONS: This registry defines all available meta-prompting methods and their characteristics
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2024-06-29"
+  total_methods: 15
+  categories: ["cognitive", "decomposition", "domain", "quality", "advanced"]
+
+# EXISTING METHODS (from @ai/prompts/meta/)
+existing_methods:
+  adaptive_chain_of_thought:
+    category: "cognitive"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "high"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["systematic_reasoning", "metacognitive_checks", "validation"]
+    weaknesses: ["linear_reasoning", "no_backtracking"]
+    best_for: ["analytical_problems", "systematic_analysis"]
+    integration_compatibility: ["tree_of_thoughts", "constitutional_ai"]
+    
+  complex_research:
+    category: "decomposition"
+    complexity_support: ["complex"]
+    quality_level: "high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["modular_breakdown", "dependency_mapping", "integration_logic"]
+    weaknesses: ["static_modules", "limited_adaptation"]
+    best_for: ["large_projects", "systematic_breakdown"]
+    integration_compatibility: ["modular_task_decomposition", "multi_perspective_approach"]
+    
+  domain_adaptive:
+    category: "domain"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "high"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["domain_expertise", "stakeholder_adaptation", "methodology_translation"]
+    weaknesses: ["requires_domain_knowledge", "limited_cross_domain"]
+    best_for: ["specialized_research", "industry_specific"]
+    integration_compatibility: ["domain_specific_research", "constitutional_ai"]
+    
+  domain_specific_research:
+    category: "domain"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "high"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["concrete_adaptation", "audience_appropriate", "professional_context"]
+    weaknesses: ["template_based", "limited_domains"]
+    best_for: ["industry_research", "professional_contexts"]
+    integration_compatibility: ["domain_adaptive", "multi_perspective_approach"]
+    
+  iterative_research_refinement:
+    category: "quality"
+    complexity_support: ["simple", "moderate", "complex"]
+    quality_level: "very_high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["self_improvement", "quality_progression", "evaluation_criteria"]
+    weaknesses: ["fixed_iterations", "single_axis_improvement"]
+    best_for: ["high_quality_research", "refinement_focused"]
+    integration_compatibility: ["textgrad_iterative", "constitutional_ai"]
+    
+  modular_task_decomposition:
+    category: "decomposition"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "high"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["clear_modules", "dependency_analysis", "parallel_planning"]
+    weaknesses: ["static_count", "limited_recomposition"]
+    best_for: ["goal_achievement", "systematic_breakdown"]
+    integration_compatibility: ["complex_research", "ensemble_methods"]
+    
+  multi_perspective_approach:
+    category: "comprehensive"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "very_high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["comprehensive_coverage", "expert_differentiation", "integration_framework"]
+    weaknesses: ["fixed_perspectives", "no_dynamic_selection"]
+    best_for: ["comprehensive_research", "multiple_viewpoints"]
+    integration_compatibility: ["ensemble_methods", "self_consistency"]
+    
+  primary_research:
+    category: "general"
+    complexity_support: ["simple", "moderate"]
+    quality_level: "medium"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["comprehensive_framework", "clear_structure", "methodology_guidance"]
+    weaknesses: ["generic_approach", "limited_specialization"]
+    best_for: ["general_research", "systematic_approach"]
+    integration_compatibility: ["constitutional_ai", "self_consistency"]
+    
+  step_by_step_research:
+    category: "systematic"
+    complexity_support: ["simple", "moderate"]
+    quality_level: "medium"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["clear_phases", "time_bounded", "practical_guidance"]
+    weaknesses: ["rigid_structure", "no_adaptation"]
+    best_for: ["time_constrained", "systematic_execution"]
+    integration_compatibility: ["primary_research", "iterative_research_refinement"]
+    
+  textgrad_iterative:
+    category: "quality"
+    complexity_support: ["moderate", "complex"]
+    quality_level: "very_high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["feedback_loops", "self_improvement", "stabilization_detection"]
+    weaknesses: ["text_only_feedback", "single_dimension"]
+    best_for: ["continuous_improvement", "feedback_driven"]
+    integration_compatibility: ["iterative_research_refinement", "constitutional_ai"]
+    
+  universal_research:
+    category: "general"
+    complexity_support: ["simple", "moderate"]
+    quality_level: "medium"
+    execution_time: "short"
+    resource_requirements: "low"
+    strengths: ["comprehensive_template", "flexible_application", "validation_criteria"]
+    weaknesses: ["generic_approach", "limited_customization"]  
+    best_for: ["general_research", "structured_approach"]
+    integration_compatibility: ["constitutional_ai", "self_consistency"]
+
+# ADVANCED METHODS (newly created)
+advanced_methods:
+  tree_of_thoughts:
+    category: "advanced_cognitive"
+    complexity_support: ["complex"]
+    quality_level: "very_high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["multi_path_exploration", "backtracking", "alternative_evaluation"]
+    weaknesses: ["resource_intensive", "complexity_overhead"]
+    best_for: ["complex_problem_solving", "exploration_needed"]
+    integration_compatibility: ["adaptive_chain_of_thought", "self_consistency"]
+    
+  self_consistency:
+    category: "advanced_quality"
+    complexity_support: ["simple", "moderate", "complex"]
+    quality_level: "very_high"
+    execution_time: "long"
+    resource_requirements: "high"
+    strengths: ["reliability_improvement", "consensus_building", "error_reduction"]
+    weaknesses: ["resource_multiplication", "time_intensive"]
+    best_for: ["high_reliability_needed", "validation_critical"]
+    integration_compatibility: ["all_methods"]
+    
+  constitutional_ai:
+    category: "advanced_quality"
+    complexity_support: ["simple", "moderate", "complex"]
+    quality_level: "very_high"
+    execution_time: "medium"
+    resource_requirements: "standard"
+    strengths: ["ethical_alignment", "self_correction", "principle_based"]
+    weaknesses: ["requires_principle_definition", "may_be_restrictive"]
+    best_for: ["ethical_research", "quality_assurance"]
+    integration_compatibility: ["all_methods"]
+    
+  ensemble_methods:
+    category: "advanced_orchestration"
+    complexity_support: ["complex"]
+    quality_level: "very_high"
+    execution_time: "very_long"
+    resource_requirements: "very_high"
+    strengths: ["method_combination", "robustness", "comprehensive_coverage"]
+    weaknesses: ["very_resource_intensive", "coordination_complexity"]
+    best_for: ["maximum_quality", "comprehensive_research"]
+    integration_compatibility: ["all_methods"]
+
+# METHOD COMPATIBILITY MATRIX
+compatibility_matrix:
+  high_synergy_pairs:
+    - ["adaptive_chain_of_thought", "tree_of_thoughts"]
+    - ["complex_research", "modular_task_decomposition"]
+    - ["domain_adaptive", "domain_specific_research"]
+    - ["iterative_research_refinement", "textgrad_iterative"]
+    - ["multi_perspective_approach", "ensemble_methods"]
+    - ["constitutional_ai", "self_consistency"]
+  
+  complementary_combinations:
+    - systematic: ["step_by_step_research", "primary_research", "universal_research"]
+    - quality_focused: ["constitutional_ai", "self_consistency", "iterative_research_refinement"]
+    - comprehensive: ["multi_perspective_approach", "complex_research", "ensemble_methods"]
+    - domain_specialized: ["domain_adaptive", "domain_specific_research"]
+    - cognitive_advanced: ["tree_of_thoughts", "adaptive_chain_of_thought"]
+  
+  incompatible_combinations:
+    - ["universal_research", "domain_specific_research"]  # Generic vs specialized conflict
+    - ["step_by_step_research", "tree_of_thoughts"]       # Rigid vs flexible conflict
+
+# SELECTION CRITERIA
+selection_criteria:
+  complexity_mapping:
+    simple: ["universal_research", "step_by_step_research", "primary_research"]
+    moderate: ["domain_adaptive", "modular_task_decomposition", "adaptive_chain_of_thought"]
+    complex: ["complex_research", "multi_perspective_approach", "tree_of_thoughts", "ensemble_methods"]
+  
+  quality_requirements:
+    basic: ["universal_research", "primary_research"]
+    high: ["domain_adaptive", "modular_task_decomposition", "iterative_research_refinement"]
+    critical: ["constitutional_ai", "self_consistency", "multi_perspective_approach", "ensemble_methods"]
+  
+  resource_constraints:
+    low: ["universal_research", "step_by_step_research"]
+    standard: ["primary_research", "domain_adaptive", "modular_task_decomposition"]
+    high: ["complex_research", "multi_perspective_approach", "iterative_research_refinement"]
+    very_high: ["tree_of_thoughts", "self_consistency", "ensemble_methods"]
+  
+  time_constraints:
+    urgent: ["universal_research", "step_by_step_research"]
+    normal: ["primary_research", "domain_adaptive", "constitutional_ai"]
+    extended: ["complex_research", "iterative_research_refinement", "textgrad_iterative"]
+    flexible: ["multi_perspective_approach", "tree_of_thoughts", "ensemble_methods"]
+
+# PERFORMANCE METRICS
+performance_characteristics:
+  accuracy_ratings:
+    universal_research: 0.75
+    step_by_step_research: 0.78
+    primary_research: 0.80
+    domain_adaptive: 0.85
+    modular_task_decomposition: 0.82
+    adaptive_chain_of_thought: 0.88
+    complex_research: 0.90
+    multi_perspective_approach: 0.92
+    iterative_research_refinement: 0.94
+    textgrad_iterative: 0.93
+    tree_of_thoughts: 0.91
+    self_consistency: 0.96
+    constitutional_ai: 0.89
+    ensemble_methods: 0.98
+  
+  efficiency_ratings:
+    universal_research: 0.95
+    step_by_step_research: 0.90
+    primary_research: 0.85
+    domain_adaptive: 0.80
+    modular_task_decomposition: 0.82
+    adaptive_chain_of_thought: 0.75
+    complex_research: 0.65
+    multi_perspective_approach: 0.60
+    iterative_research_refinement: 0.55
+    textgrad_iterative: 0.58
+    tree_of_thoughts: 0.50
+    self_consistency: 0.45
+    constitutional_ai: 0.75
+    ensemble_methods: 0.30
+
+# USAGE STATISTICS (for future optimization)
+usage_tracking:
+  success_rates: {}
+  execution_times: {}
+  resource_consumption: {}
+  user_satisfaction: {}
+  integration_success: {}
+
+# AI INSTRUCTIONS
+ai_instructions:
+  method_selection:
+    - "Use complexity_mapping as primary selection criterion"
+    - "Consider quality_requirements for enhancement selection"
+    - "Check resource_constraints before finalizing selection"
+    - "Verify compatibility_matrix for method combinations"
+    - "Optimize for accuracy vs efficiency based on requirements"
+  
+  performance_optimization:
+    - "Track usage_statistics for continuous improvement"
+    - "Monitor performance_characteristics for method effectiveness"
+    - "Adjust selection criteria based on empirical results"
+    - "Experiment with new method combinations"
+  
+  integration_guidance:
+    - "Prioritize high_synergy_pairs for method combination"
+    - "Use complementary_combinations for comprehensive coverage"
+    - "Avoid incompatible_combinations unless specifically required"
+    - "Consider ensemble_methods for maximum quality requirements"

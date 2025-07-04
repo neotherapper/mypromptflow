@@ -1,0 +1,396 @@
+# Meta-Prompt Orchestrator Selection Rules
+# AI INSTRUCTIONS: Use these rules for intelligent method selection and combination
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2024-06-29"
+  purpose: "Intelligent method selection rules for optimal research orchestration"
+
+# CORE SELECTION PRINCIPLES
+selection_principles:
+  context_optimization:
+    principle: "Select methods that best match research context and requirements"
+    implementation: "Use context analysis output to drive method selection"
+    priority: "primary"
+  
+  quality_maximization:
+    principle: "Optimize for highest achievable quality within resource constraints"
+    implementation: "Balance quality enhancement with efficiency requirements"
+    priority: "high"
+  
+  synergy_leverage:
+    principle: "Combine methods that complement and enhance each other"
+    implementation: "Use compatibility matrix to identify optimal combinations"
+    priority: "high"
+  
+  resource_efficiency:
+    principle: "Achieve objectives within available time and resource constraints"
+    implementation: "Consider execution time and computational requirements"
+    priority: "medium"
+  
+  adaptability:
+    principle: "Enable dynamic adjustment based on intermediate results"
+    implementation: "Support method switching and parameter tuning"
+    priority: "medium"
+
+# PRIMARY METHOD SELECTION RULES
+primary_method_selection:
+  complexity_based:
+    simple_research:
+      criteria:
+        complexity_level: "simple"
+        time_constraints: ["urgent", "normal"]
+        resource_availability: ["limited", "standard"]
+      
+      method_options:
+        first_choice: "universal_research"
+        alternatives: ["step_by_step_research", "primary_research"]
+        rationale: "Efficient, well-structured approaches for straightforward research"
+      
+      customization:
+        time_urgent: "step_by_step_research"
+        quality_focused: "primary_research + constitutional_ai"
+        resource_limited: "universal_research"
+    
+    moderate_research:
+      criteria:
+        complexity_level: "moderate"
+        quality_requirements: ["basic", "high"]
+        domain_specificity: ["general", "specialized"]
+      
+      method_options:
+        domain_general: "adaptive_chain_of_thought"
+        domain_specialized: "domain_adaptive"
+        decomposition_needed: "modular_task_decomposition"
+      
+      enhancement_options:
+        quality_boost: "constitutional_ai"
+        reliability_focus: "iterative_research_refinement"
+        comprehensive_coverage: "multi_perspective_approach"
+    
+    complex_research:
+      criteria:
+        complexity_level: "complex"
+        quality_requirements: ["high", "critical"]
+        resource_availability: ["standard", "extensive"]
+      
+      method_options:
+        systematic_breakdown: "complex_research"
+        comprehensive_analysis: "multi_perspective_approach"
+        creative_exploration: "tree_of_thoughts"
+        maximum_quality: "ensemble_methods"
+      
+      mandatory_enhancements:
+        quality_assurance: "constitutional_ai"
+        reliability_validation: "self_consistency"
+
+# ENHANCEMENT METHOD SELECTION
+enhancement_selection:
+  quality_enhancement:
+    basic_quality_needs:
+      methods: ["constitutional_ai"]
+      application: "post_processing_validation"
+      resource_cost: "low"
+    
+    high_quality_needs:
+      methods: ["constitutional_ai", "iterative_research_refinement"]
+      application: "integrated_quality_improvement"
+      resource_cost: "medium"
+    
+    critical_quality_needs:
+      methods: ["self_consistency", "constitutional_ai", "textgrad_iterative"]
+      application: "multi_layer_quality_assurance"
+      resource_cost: "high"
+  
+  reliability_enhancement:
+    single_path_validation:
+      methods: ["constitutional_ai"]
+      use_case: "basic_fact_checking_and_principle_alignment"
+    
+    multi_path_validation:
+      methods: ["self_consistency"]
+      use_case: "consensus_building_across_multiple_approaches"
+    
+    iterative_improvement:
+      methods: ["iterative_research_refinement", "textgrad_iterative"]
+      use_case: "continuous_quality_improvement_through_feedback"
+  
+  comprehensiveness_enhancement:
+    perspective_diversity:
+      methods: ["multi_perspective_approach"]
+      use_case: "ensuring_multiple_viewpoints_covered"
+    
+    method_diversity:
+      methods: ["ensemble_methods"]
+      use_case: "combining_different_methodological_approaches"
+    
+    domain_coverage:
+      methods: ["domain_adaptive", "domain_specific_research"]
+      use_case: "ensuring_domain_expertise_and_specialization"
+
+# EXECUTION PATTERN SELECTION
+execution_patterns:
+  sequential_execution:
+    when_to_use:
+      - dependency_between_methods
+      - resource_constraints_limit_parallelism
+      - iterative_improvement_workflow
+      - building_from_general_to_specific
+    
+    pattern_types:
+      foundation_to_specialization:
+        sequence: ["universal_research", "domain_specific_research", "constitutional_ai"]
+        use_case: "general_to_specialized_research_progression"
+      
+      analysis_to_synthesis:
+        sequence: ["modular_task_decomposition", "multi_perspective_approach", "self_consistency"]
+        use_case: "systematic_breakdown_followed_by_comprehensive_analysis"
+      
+      iterative_refinement:
+        sequence: ["primary_research", "iterative_research_refinement", "constitutional_ai"]
+        use_case: "continuous_improvement_workflow"
+  
+  parallel_execution:
+    when_to_use:
+      - independent_method_compatibility
+      - sufficient_resource_availability
+      - time_efficiency_priority
+      - comprehensive_coverage_needed
+    
+    pattern_types:
+      multi_perspective_parallel:
+        methods: ["quantitative_analysis", "qualitative_analysis", "industry_practice", "future_trends"]
+        coordination: "multi_perspective_approach_framework"
+        use_case: "comprehensive_viewpoint_coverage"
+      
+      method_diversity_parallel:
+        methods: ["tree_of_thoughts", "adaptive_chain_of_thought", "domain_adaptive"]
+        coordination: "ensemble_methods_framework"
+        use_case: "methodological_diversity_for_robustness"
+      
+      validation_parallel:
+        methods: ["self_consistency", "constitutional_ai"]
+        coordination: "quality_assurance_framework"
+        use_case: "multi_dimensional_quality_validation"
+  
+  hybrid_execution:
+    when_to_use:
+      - complex_workflow_requirements
+      - mixed_dependency_patterns
+      - optimal_resource_utilization
+      - sophisticated_quality_needs
+    
+    pattern_types:
+      parallel_then_sequential:
+        phase_1: "parallel_exploration_methods"
+        phase_2: "sequential_synthesis_and_validation"
+        use_case: "comprehensive_exploration_followed_by_integration"
+      
+      sequential_with_parallel_validation:
+        main_flow: "sequential_method_execution"
+        validation_layer: "parallel_quality_assurance"
+        use_case: "structured_workflow_with_comprehensive_validation"
+      
+      adaptive_hybrid:
+        decision_points: "dynamic_pattern_adjustment_based_on_intermediate_results"
+        use_case: "context_adaptive_execution_optimization"
+
+# DYNAMIC SELECTION ALGORITHMS
+dynamic_algorithms:
+  context_score_calculation:
+    algorithm: |
+      def calculate_method_fit_score(method, context):
+          base_score = 0.0
+          
+          # Complexity alignment
+          complexity_match = {
+              "simple": {"universal_research": 0.9, "step_by_step_research": 0.85, "primary_research": 0.8},
+              "moderate": {"domain_adaptive": 0.9, "modular_task_decomposition": 0.85, "adaptive_chain_of_thought": 0.8},
+              "complex": {"complex_research": 0.9, "multi_perspective_approach": 0.95, "tree_of_thoughts": 0.9, "ensemble_methods": 1.0}
+          }
+          base_score += complexity_match.get(context.complexity, {}).get(method, 0.5)
+          
+          # Quality requirement alignment
+          quality_bonus = {
+              "critical": {"self_consistency": 0.2, "constitutional_ai": 0.15, "ensemble_methods": 0.25},
+              "high": {"constitutional_ai": 0.15, "iterative_research_refinement": 0.1},
+              "basic": {"universal_research": 0.1}
+          }
+          base_score += quality_bonus.get(context.quality_level, {}).get(method, 0.0)
+          
+          # Resource constraint penalties
+          resource_penalties = {
+              "limited": {"ensemble_methods": -0.4, "tree_of_thoughts": -0.3, "self_consistency": -0.2},
+              "standard": {"ensemble_methods": -0.2},
+              "extensive": {}
+          }
+          base_score += resource_penalties.get(context.resources, {}).get(method, 0.0)
+          
+          return max(0.0, min(1.0, base_score))
+    
+    selection_threshold: 0.7
+    minimum_methods: 1
+    maximum_methods: 4
+  
+  combination_optimization:
+    algorithm: |
+      def optimize_method_combination(selected_methods, context, constraints):
+          optimized = []
+          
+          # Ensure primary method coverage
+          primary_methods = [m for m in selected_methods if is_primary_method(m)]
+          if not primary_methods:
+              primary_methods = [select_default_primary(context)]
+          optimized.extend(primary_methods)
+          
+          # Add quality enhancement if needed
+          if context.quality_level in ["high", "critical"]:
+              quality_methods = [m for m in selected_methods if is_quality_method(m)]
+              if not quality_methods:
+                  quality_methods = [select_quality_method(context)]
+              optimized.extend(quality_methods)
+          
+          # Check resource constraints
+          total_cost = sum(get_method_cost(m) for m in optimized)
+          if total_cost > constraints.max_cost:
+              optimized = reduce_combination(optimized, constraints)
+          
+          # Verify compatibility
+          if not check_compatibility(optimized):
+              optimized = resolve_incompatibilities(optimized)
+          
+          return optimized
+    
+    optimization_objectives:
+      - maximize_quality_within_constraints
+      - ensure_compatibility_and_synergy
+      - balance_coverage_and_efficiency
+      - maintain_minimum_viable_approach
+
+# CONDITIONAL SELECTION RULES
+conditional_rules:
+  domain_specific_rules:
+    academic_research:
+      required_methods: ["constitutional_ai"]  # Ensure academic rigor
+      preferred_methods: ["systematic_literature_review", "iterative_research_refinement"]
+      avoided_methods: ["tree_of_thoughts"]  # Too exploratory for academic context
+    
+    business_intelligence:
+      required_methods: ["multi_perspective_approach"]  # Multiple stakeholder views
+      preferred_methods: ["domain_adaptive", "complex_research"]
+      time_critical_alternatives: ["step_by_step_research", "primary_research"]
+    
+    technical_analysis:
+      required_methods: ["modular_task_decomposition"]  # Systematic breakdown needed
+      preferred_methods: ["tree_of_thoughts", "domain_specific_research"]
+      quality_critical_additions: ["self_consistency"]
+    
+    policy_research:
+      required_methods: ["constitutional_ai", "multi_perspective_approach"]  # Ethics and multiple views
+      preferred_methods: ["domain_adaptive"]
+      high_stakes_additions: ["self_consistency", "iterative_research_refinement"]
+  
+  stakeholder_specific_rules:
+    executive_audience:
+      focus: "strategic_insights_and_implications"
+      preferred_formats: "high_level_synthesis"
+      required_methods: ["multi_perspective_approach"]
+      time_constraints: "usually_tight"
+    
+    technical_audience:
+      focus: "detailed_analysis_and_implementation"
+      preferred_formats: "comprehensive_technical_documentation"
+      preferred_methods: ["modular_task_decomposition", "tree_of_thoughts"]
+      quality_priority: "depth_over_breadth"
+    
+    academic_audience:
+      focus: "methodological_rigor_and_evidence"
+      preferred_formats: "structured_research_report"
+      required_methods: ["constitutional_ai", "iterative_research_refinement"]
+      quality_priority: "accuracy_and_citation"
+  
+  constraint_specific_rules:
+    time_critical:
+      maximum_methods: 2
+      forbidden_methods: ["ensemble_methods", "tree_of_thoughts", "iterative_research_refinement"]
+      preferred_patterns: ["sequential_execution"]
+      quality_trade_offs: "accept_moderate_quality_for_speed"
+    
+    quality_critical:
+      minimum_quality_methods: 2
+      required_methods: ["constitutional_ai"]
+      preferred_methods: ["self_consistency", "multi_perspective_approach"]
+      execution_patterns: ["hybrid_with_extensive_validation"]
+    
+    resource_limited:
+      maximum_methods: 2
+      forbidden_methods: ["ensemble_methods", "self_consistency"]
+      preferred_methods: ["universal_research", "step_by_step_research"]
+      enhancement_approach: "single_quality_method_only"
+
+# SELECTION VALIDATION RULES
+validation_rules:
+  compatibility_checks:
+    method_pairs:
+      incompatible:
+        - ["universal_research", "domain_specific_research"]
+        - ["step_by_step_research", "tree_of_thoughts"]
+      
+      highly_compatible:
+        - ["adaptive_chain_of_thought", "tree_of_thoughts"]
+        - ["complex_research", "modular_task_decomposition"]
+        - ["constitutional_ai", "self_consistency"]
+      
+      synergistic:
+        - ["multi_perspective_approach", "ensemble_methods"]
+        - ["domain_adaptive", "constitutional_ai"]
+        - ["iterative_research_refinement", "textgrad_iterative"]
+  
+  resource_validation:
+    time_limits:
+      urgent: "max_2_methods_low_complexity_only"
+      normal: "max_3_methods_mixed_complexity"
+      extended: "max_4_methods_high_complexity_allowed"
+      flexible: "unlimited_within_resource_constraints"
+    
+    computational_limits:
+      low: "single_method_or_simple_combination"
+      medium: "up_to_3_standard_methods"
+      high: "complex_methods_and_combinations_allowed"
+      very_high: "ensemble_methods_and_full_combinations"
+  
+  quality_validation:
+    minimum_quality_requirements:
+      basic: "at_least_one_primary_method"
+      high: "primary_method_plus_quality_enhancement"
+      critical: "multiple_methods_with_validation_layer"
+    
+    quality_assurance_coverage:
+      accuracy: "constitutional_ai_or_self_consistency_required"
+      completeness: "multi_perspective_or_comprehensive_method_required"
+      reliability: "self_consistency_or_iterative_refinement_required"
+
+# AI INSTRUCTIONS FOR METHOD SELECTION
+ai_instructions:
+  selection_process:
+    - "Start with context analysis to understand research requirements"
+    - "Apply primary method selection rules based on complexity and domain"
+    - "Add enhancement methods based on quality requirements"
+    - "Select execution pattern based on method dependencies and resources"
+    - "Validate selection against compatibility and resource constraints"
+    - "Optimize combination for best quality-efficiency balance"
+    - "Document selection rationale and trade-offs made"
+  
+  decision_priorities:
+    - "Context fit takes precedence over method preferences"
+    - "Quality requirements must be met within resource constraints"
+    - "Method compatibility is essential for successful execution"
+    - "Resource efficiency should be optimized without compromising quality"
+    - "Adaptability should be maintained for dynamic adjustment"
+  
+  quality_assurance:
+    - "Always validate method selection against context requirements"
+    - "Ensure quality methods are included for high-stakes research"
+    - "Check resource feasibility before finalizing selection"
+    - "Verify method compatibility and synergy potential"
+    - "Consider alternative combinations if primary selection fails validation"
