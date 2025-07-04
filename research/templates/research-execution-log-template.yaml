@@ -1,0 +1,311 @@
+# Research Execution Log Template
+# AI INSTRUCTIONS: Use this template for all research execution tracking
+
+research_execution_log:
+  # Session Information
+  session_id: "research_session_YYYYMMDD_HHMMSS"
+  ai_agent: "claude-4|gemini-pro|other"
+  research_topic: "extracted_from_user_request"
+  user_request: "original_user_request_text"
+  start_time: "2024-07-04T10:00:00Z"
+  end_time: "2024-07-04T10:45:30Z"
+  total_duration_seconds: 0
+  total_duration_human: "0m 0s"
+  
+  # Context Extraction and Analysis
+  context_extraction:
+    extracted_parameters:
+      research_topic: "main_subject_of_research"
+      research_scope: "narrow|moderate|broad"
+      quality_requirements: "basic|high|critical"
+      time_constraints: "urgent|normal|extended|flexible"
+      domain_specificity: "general|specialized|cross_domain"
+      stakeholder_level: "general|professional|expert"
+      output_format: "report|presentation|documentation|analysis"
+    extraction_confidence: 0.0
+    extraction_reasoning: "why_these_parameters_were_extracted"
+  
+  # Orchestrator Decision Process
+  orchestrator_analysis:
+    complexity_assessment:
+      level: "simple|moderate|complex"
+      score: 0.0
+      reasoning: "detailed_explanation_of_complexity_assessment"
+      confidence: 0.0
+      factors_considered:
+        - emerging_technology_keywords: false
+        - multiple_domain_indicators: false
+        - ethical_implications: false
+        - technical_depth_required: false
+        - cross_domain_analysis: false
+    
+    domain_analysis:
+      type: "general|specialized|cross_domain|emerging"
+      categories: []
+      expertise_required: "basic|intermediate|expert"
+      domain_confidence: 0.0
+      domain_reasoning: "why_this_domain_classification"
+    
+    method_selection:
+      primary_methods: []
+      enhancement_methods: []
+      execution_pattern: "sequential|parallel|hybrid"
+      selection_reasoning: "detailed_explanation_of_method_selection"
+      alternatives_considered: []
+      selection_confidence: 0.0
+      compatibility_verified: true
+  
+  # Performance Metrics
+  performance_metrics:
+    orchestrator_overhead:
+      context_analysis_time_seconds: 0
+      method_selection_time_seconds: 0
+      planning_time_seconds: 0
+      total_overhead_seconds: 0
+    
+    method_execution_times:
+      - method_name: "method_identifier"
+        start_time: "2024-07-04T10:05:00Z"
+        end_time: "2024-07-04T10:25:00Z"
+        duration_seconds: 0
+        duration_human: "0m 0s"
+        execution_status: "completed|failed|partial"
+        error_messages: []
+      
+      # Additional methods as needed
+  
+  # Research Plan and Evolution
+  research_plan:
+    initial_plan:
+      created_at: "2024-07-04T10:02:00Z"
+      plan_steps: []
+      estimated_duration: "estimated_time_to_complete"
+      research_approach: "primary_method_name"
+    
+    plan_revisions:
+      - revision_time: "2024-07-04T10:15:00Z"
+        revision_number: 1
+        reason: "why_plan_was_revised"
+        changes_made: []
+        revised_duration: "updated_time_estimate"
+        impact_assessment: "how_revision_affects_research"
+    
+    final_plan_assessment:
+      plan_followed: true
+      deviations: []
+      deviation_reasons: []
+      plan_effectiveness: "how_well_plan_worked"
+  
+  # Resources Gathered
+  resources_gathered:
+    web_sources:
+      - title: "resource_title"
+        url: "https://example.com/resource"
+        access_time: "2024-07-04T10:08:00Z"
+        relevance_score: 0.0
+        content_type: "technical_guide|documentation|research_paper|blog_post|news_article"
+        source_quality: "high|medium|low"
+        credibility_assessment: "authoritative|reliable|questionable"
+        key_insights: []
+        content_summary: "brief_summary_of_content"
+        
+      # Additional web sources as needed
+    
+    internal_sources:
+      - document_path: "@ai/knowledge/path/to/document.md"
+        access_time: "2024-07-04T10:06:00Z"
+        relevance_score: 0.0
+        content_used: "how_content_was_used"
+        cross_reference_value: "how_it_connected_to_other_sources"
+        
+      # Additional internal sources as needed
+    
+    resource_quality_metrics:
+      total_sources_found: 0
+      sources_deeply_analyzed: 0
+      sources_skimmed: 0
+      sources_discarded: 0
+      cross_references_found: 0
+      source_diversity_score: 0.0
+      information_freshness_score: 0.0
+      credibility_score: 0.0
+  
+  # Research Intelligence and Decision Points
+  research_intelligence:
+    search_queries:
+      - query: "search_query_text"
+        timestamp: "2024-07-04T10:07:00Z"
+        results_found: 0
+        results_used: 0
+        query_effectiveness: 0.0
+        search_strategy: "why_this_query_was_chosen"
+        
+      # Additional queries as needed
+    
+    knowledge_gaps_identified:
+      - gap: "description_of_knowledge_gap"
+        identified_at: "2024-07-04T10:20:00Z"
+        resolution_attempt: "how_agent_tried_to_fill_gap"
+        resolution_success: true
+        impact_on_research: "how_gap_affected_research_quality"
+        
+      # Additional gaps as needed
+    
+    decision_points:
+      - timestamp: "2024-07-04T10:15:00Z"
+        decision: "what_decision_was_made"
+        decision_type: "method_selection|scope_adjustment|source_prioritization|analysis_approach"
+        reasoning: "why_this_decision_was_made"
+        alternatives_considered: []
+        decision_confidence: 0.0
+        impact_on_research: "how_decision_affected_research"
+        
+      # Additional decision points as needed
+  
+  # Method Execution Tracking
+  method_execution:
+    - method_name: "method_identifier"
+      method_file_accessed: "research/orchestrator/methods/existing/method_name.md"
+      execution_start: "2024-07-04T10:05:00Z"
+      execution_end: "2024-07-04T10:25:00Z"
+      
+      method_steps:
+        - step_name: "step_identifier"
+          step_description: "what_this_step_does"
+          execution_time: "2024-07-04T10:07:00Z"
+          completion_status: "completed|failed|skipped"
+          step_output: "summary_of_step_output"
+          issues_encountered: []
+          
+        # Additional steps as needed
+      
+      quality_checkpoints:
+        - checkpoint_name: "checkpoint_identifier"
+          checkpoint_time: "2024-07-04T10:15:00Z"
+          checkpoint_status: "passed|failed|warning"
+          validation_criteria: "what_was_being_validated"
+          results: "checkpoint_results"
+          corrective_actions: []
+          
+        # Additional checkpoints as needed
+      
+      method_effectiveness:
+        completion_rate: 1.0
+        quality_score: 0.0
+        efficiency_score: 0.0
+        method_appropriateness: 0.0
+        issues_identified: []
+        improvements_suggested: []
+    
+    # Additional method executions as needed
+  
+  # File Access Tracking
+  files_accessed:
+    - file_path: "research/orchestrator/config/method-registry.yaml"
+      access_time: "2024-07-04T10:03:00Z"
+      access_purpose: "method_selection|configuration|validation|reference"
+      access_success: true
+      content_used: "how_file_content_was_used"
+      
+    # Additional file accesses as needed
+  
+  # Quality Assurance and Validation
+  quality_validation:
+    automated_checks:
+      - check_name: "source_quality_verification"
+        check_time: "2024-07-04T10:30:00Z"
+        check_status: "passed|failed|warning"
+        check_results: "detailed_results_of_check"
+        issues_found: []
+        corrections_made: []
+        
+      # Additional checks as needed
+    
+    quality_metrics:
+      research_completeness: 0.0
+      source_diversity: 0.0
+      logical_consistency: 0.0
+      methodological_rigor: 0.0
+      factual_accuracy: 0.0
+      bias_detection_score: 0.0
+      
+    overall_quality_assessment:
+      quality_score: 0.0
+      quality_level: "high|medium|low"
+      quality_reasoning: "detailed_explanation_of_quality_assessment"
+      improvement_areas: []
+      strengths_identified: []
+  
+  # Research Output Information
+  research_output:
+    document_created: "research/findings/topic/research_output.md"
+    document_size_words: 0
+    document_structure_compliance: true
+    metadata_compliance: true
+    cross_references_included: 0
+    actionable_insights_count: 0
+    
+    output_quality_indicators:
+      depth_of_analysis: 0.0
+      practical_applicability: 0.0
+      innovation_level: 0.0
+      comprehensiveness: 0.0
+      clarity_score: 0.0
+  
+  # Agent Performance and Behavior
+  agent_performance:
+    adherence_to_orchestrator: true
+    method_compliance_rate: 0.0
+    error_recovery_instances: 0
+    adaptation_instances: 0
+    efficiency_score: 0.0
+    
+    behavioral_observations:
+      - observation: "description_of_agent_behavior"
+        observation_time: "2024-07-04T10:20:00Z"
+        behavior_type: "positive|negative|neutral"
+        impact_on_research: "how_behavior_affected_research"
+        
+      # Additional observations as needed
+  
+  # Error and Issue Tracking
+  issues_encountered:
+    - issue_id: "ISS_001"
+      issue_type: "method_execution|resource_access|quality_validation|orchestrator_decision"
+      issue_description: "detailed_description_of_issue"
+      issue_time: "2024-07-04T10:25:00Z"
+      issue_severity: "critical|high|medium|low"
+      resolution_attempted: "how_issue_was_addressed"
+      resolution_success: true
+      impact_on_research: "how_issue_affected_research"
+      lessons_learned: "what_can_be_improved"
+      
+    # Additional issues as needed
+  
+  # Success Metrics and Outcomes
+  success_metrics:
+    research_completion_rate: 1.0
+    user_intent_fulfillment: 0.0
+    method_selection_appropriateness: 0.0
+    execution_efficiency: 0.0
+    quality_threshold_met: true
+    
+    outcome_assessment:
+      research_value: "high|medium|low"
+      user_satisfaction_predicted: 0.0
+      reusability_score: 0.0
+      knowledge_contribution: 0.0
+      
+  # Metadata and Administrative
+  log_metadata:
+    log_version: "1.0.0"
+    log_creation_time: "2024-07-04T10:45:30Z"
+    log_creator: "ai_agent_identifier"
+    log_validation_status: "valid|invalid|pending"
+    log_completeness: 1.0
+    
+    related_documents:
+      - document_path: "research/findings/topic/research_output.md"
+        relationship: "primary_output|supporting_document|reference"
+        
+      # Additional related documents as needed

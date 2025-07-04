@@ -1,0 +1,351 @@
+# Orchestrator Performance Report Template
+# AI INSTRUCTIONS: Use this template for periodic human-readable performance analysis
+
+orchestrator_performance_report:
+  # Report Information
+  report_id: "REPORT_YYYYMMDD"
+  report_period:
+    start_date: "2024-07-04T00:00:00Z"
+    end_date: "2024-07-11T23:59:59Z"
+    period_description: "Week 1 of July 2024"
+    days_covered: 7
+  
+  report_metadata:
+    generated_by: "pattern_recognition_system"
+    generation_date: "2024-07-11T16:00:00Z"
+    report_version: "1.0.0"
+    data_sources: ["execution_logs", "evaluation_reports", "pattern_observations"]
+    
+  # Executive Summary
+  executive_summary:
+    total_research_sessions: 0
+    total_ai_agents_involved: 0
+    avg_research_duration_minutes: 0.0
+    overall_success_rate: 0.0
+    
+    key_insights:
+      - "Most significant finding from this period"
+      - "Second most important insight"
+      - "Third key observation"
+    
+    key_concerns:
+      - "Most critical issue identified"
+      - "Second priority concern"
+      - "Third area for attention"
+    
+    recommendations_summary:
+      - "Top recommendation for improvement"
+      - "Second priority recommendation"
+      - "Third suggested enhancement"
+  
+  # Research Activity Overview
+  research_activity_overview:
+    session_statistics:
+      total_sessions: 0
+      completed_sessions: 0
+      failed_sessions: 0
+      partially_completed_sessions: 0
+      completion_rate: 0.0
+      
+    agent_activity:
+      claude_sessions: 0
+      gemini_sessions: 0
+      other_agent_sessions: 0
+      agent_success_rates:
+        claude: 0.0
+        gemini: 0.0
+        other: 0.0
+        
+    research_topics_breakdown:
+      technology_research: 0
+      business_research: 0
+      academic_research: 0
+      general_research: 0
+      cross_domain_research: 0
+      
+    complexity_distribution:
+      simple_research: 0
+      moderate_research: 0
+      complex_research: 0
+  
+  # Orchestrator Performance Analysis
+  orchestrator_performance:
+    context_analysis_performance:
+      context_extraction_accuracy: 0.0
+      complexity_assessment_accuracy: 0.0
+      domain_identification_accuracy: 0.0
+      
+      common_extraction_issues:
+        - issue: "Description of common extraction problem"
+          frequency: 0
+          impact: "high|medium|low"
+          
+      complexity_assessment_issues:
+        - issue: "Description of complexity assessment problem"
+          frequency: 0
+          impact: "high|medium|low"
+          
+    method_selection_performance:
+      appropriate_selections: 0
+      questionable_selections: 0
+      inappropriate_selections: 0
+      selection_appropriateness_rate: 0.0
+      
+      method_usage_statistics:
+        universal_research: 0
+        step_by_step_research: 0
+        domain_adaptive: 0
+        multi_perspective_approach: 0
+        constitutional_ai: 0
+        self_consistency: 0
+        # Additional methods as used
+        
+      method_effectiveness_scores:
+        universal_research: 0.0
+        step_by_step_research: 0.0
+        domain_adaptive: 0.0
+        multi_perspective_approach: 0.0
+        constitutional_ai: 0.0
+        self_consistency: 0.0
+        # Additional methods as used
+        
+    execution_pattern_performance:
+      sequential_executions: 0
+      parallel_executions: 0
+      hybrid_executions: 0
+      
+      pattern_success_rates:
+        sequential: 0.0
+        parallel: 0.0
+        hybrid: 0.0
+        
+      execution_efficiency_scores:
+        sequential: 0.0
+        parallel: 0.0
+        hybrid: 0.0
+  
+  # Quality Analysis
+  quality_analysis:
+    research_quality_metrics:
+      avg_research_completeness: 0.0
+      avg_source_diversity: 0.0
+      avg_logical_consistency: 0.0
+      avg_factual_accuracy: 0.0
+      avg_bias_detection_score: 0.0
+      
+    quality_trend_analysis:
+      quality_improving_areas: []
+      quality_declining_areas: []
+      stable_quality_areas: []
+      
+    quality_factors_analysis:
+      high_quality_correlations:
+        - factor: "Factor that correlates with high quality"
+          correlation_strength: 0.0
+          statistical_significance: 0.0
+          
+      low_quality_correlations:
+        - factor: "Factor that correlates with low quality"
+          correlation_strength: 0.0
+          statistical_significance: 0.0
+          
+    quality_checkpoint_effectiveness:
+      constitutional_ai_effectiveness: 0.0
+      self_consistency_effectiveness: 0.0
+      source_verification_effectiveness: 0.0
+      bias_detection_effectiveness: 0.0
+  
+  # Performance Metrics
+  performance_metrics:
+    timing_analysis:
+      avg_total_research_time: 0.0
+      avg_orchestrator_overhead: 0.0
+      avg_method_execution_time: 0.0
+      avg_quality_checkpoint_time: 0.0
+      
+    efficiency_indicators:
+      time_per_quality_point: 0.0
+      sources_found_per_minute: 0.0
+      insights_generated_per_hour: 0.0
+      
+    resource_utilization:
+      peak_usage_periods: []
+      resource_bottlenecks: []
+      optimization_opportunities: []
+  
+  # Pattern Analysis Results
+  pattern_analysis:
+    confirmed_patterns:
+      - pattern_name: "Name of confirmed pattern"
+        pattern_type: "positive|negative|neutral"
+        confidence_level: 0.0
+        frequency: 0
+        impact_assessment: "Description of pattern impact"
+        
+    emerging_patterns:
+      - pattern_name: "Name of emerging pattern"
+        pattern_type: "positive|negative|neutral"
+        confidence_level: 0.0
+        frequency: 0
+        monitoring_recommendation: "How to monitor this pattern"
+        
+    refuted_patterns:
+      - pattern_name: "Name of refuted pattern"
+        original_hypothesis: "What we thought the pattern was"
+        refutation_evidence: "Why the pattern was refuted"
+        learning_outcome: "What we learned from this"
+        
+    pattern_relationships:
+      correlated_patterns: []
+      contradictory_patterns: []
+      causal_relationships: []
+  
+  # Issue Analysis
+  issue_analysis:
+    critical_issues:
+      - issue_description: "Description of critical issue"
+        issue_frequency: 0
+        issue_impact: "Detailed impact assessment"
+        root_cause_analysis: "Identified or suspected root cause"
+        recommended_action: "Immediate action needed"
+        escalation_status: "escalated|pending|resolved"
+        
+    moderate_issues:
+      - issue_description: "Description of moderate issue"
+        issue_frequency: 0
+        issue_impact: "Impact assessment"
+        recommended_action: "Suggested improvement action"
+        
+    resolved_issues:
+      - issue_description: "Description of resolved issue"
+        resolution_method: "How the issue was resolved"
+        resolution_effectiveness: 0.0
+        prevention_measures: "Measures to prevent recurrence"
+        
+    issue_trends:
+      increasing_issues: []
+      decreasing_issues: []
+      stable_issues: []
+  
+  # Success Stories and Highlights
+  success_stories:
+    exceptional_research_sessions:
+      - session_id: "session_identifier"
+        research_topic: "Topic of exceptional research"
+        success_factors: []
+        quality_scores: {}
+        user_feedback: "Any available user feedback"
+        replication_value: "Value of replicating this success"
+        
+    method_success_highlights:
+      - method_name: "Name of successful method"
+        success_metrics: {}
+        success_conditions: []
+        success_impact: "Impact of this success"
+        
+    innovation_discoveries:
+      - discovery_description: "Description of innovative discovery"
+        discovery_value: "Value of this discovery"
+        application_potential: "How this could be applied"
+  
+  # Comparative Analysis
+  comparative_analysis:
+    period_over_period_comparison:
+      current_period_metrics: {}
+      previous_period_metrics: {}
+      improvement_areas: []
+      decline_areas: []
+      
+    agent_performance_comparison:
+      claude_performance: {}
+      gemini_performance: {}
+      performance_differences: []
+      
+    method_performance_comparison:
+      best_performing_methods: []
+      underperforming_methods: []
+      method_optimization_opportunities: []
+  
+  # Recommendations and Action Items
+  recommendations:
+    immediate_actions:
+      - action_description: "Immediate action needed"
+        action_priority: "critical|high|medium|low"
+        action_owner: "Who should take this action"
+        action_timeline: "When this should be completed"
+        success_criteria: "How to measure success"
+        
+    short_term_improvements:
+      - improvement_description: "Short-term improvement opportunity"
+        improvement_effort: "Effort required"
+        improvement_impact: "Expected impact"
+        implementation_timeline: "Timeline for implementation"
+        
+    long_term_strategic_items:
+      - strategic_item: "Long-term strategic consideration"
+        strategic_value: "Value of addressing this item"
+        strategic_timeline: "Timeline for consideration"
+        resource_requirements: "Resources needed"
+        
+    investigation_recommendations:
+      - investigation_area: "Area requiring further investigation"
+        investigation_rationale: "Why this needs investigation"
+        investigation_method: "How to investigate"
+        investigation_timeline: "When to investigate"
+  
+  # Monitoring and Follow-up
+  monitoring_plan:
+    key_metrics_to_watch:
+      - metric_name: "Name of key metric"
+        current_value: 0.0
+        target_value: 0.0
+        monitoring_frequency: "daily|weekly|monthly"
+        alert_thresholds: {}
+        
+    pattern_monitoring:
+      patterns_to_monitor: []
+      monitoring_methods: []
+      review_frequency: "weekly|monthly|quarterly"
+      
+    quality_monitoring:
+      quality_indicators: []
+      quality_thresholds: {}
+      quality_review_process: "Process for quality review"
+  
+  # Data Quality and Reliability
+  data_quality_assessment:
+    data_completeness: 0.0
+    data_accuracy: 0.0
+    data_consistency: 0.0
+    data_reliability: 0.0
+    
+    data_limitations:
+      - limitation: "Description of data limitation"
+        impact: "How this limitation affects analysis"
+        mitigation: "How to mitigate this limitation"
+        
+    confidence_levels:
+      overall_report_confidence: 0.0
+      pattern_analysis_confidence: 0.0
+      performance_analysis_confidence: 0.0
+      recommendation_confidence: 0.0
+  
+  # Appendices
+  appendices:
+    detailed_statistics:
+      raw_data_summary: "Summary of raw data used"
+      statistical_methods: "Statistical methods applied"
+      calculation_details: "Detailed calculation explanations"
+      
+    methodology_notes:
+      analysis_methodology: "How analysis was conducted"
+      assumptions_made: "Key assumptions in analysis"
+      limitations_acknowledged: "Known limitations of analysis"
+      
+    glossary:
+      - term: "Technical term"
+        definition: "Definition of the term"
+        
+    references:
+      - reference: "Reference to related documentation"
+        relevance: "How this reference is relevant"
