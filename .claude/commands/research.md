@@ -106,7 +106,7 @@ Use intelligent meta-prompt orchestrator for research requests: $ARGUMENTS
 
 **Integration Guidance:**
 - Workflow Templates: `research/orchestrator/integration/workflow-orchestrator.yaml`
-- Claude Instructions: `research/orchestrator/integration/claude-integration.yaml`
+- Claude Instructions: `research/orchestrator/integration/claude-orchestrator-integration.yaml`
 
 ## Usage Examples:
 
