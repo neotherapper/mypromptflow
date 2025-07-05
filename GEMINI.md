@@ -58,3 +58,8 @@ All documents must include:
 ## AI Research System
 
 **Available to all AI agents:** This project includes a research framework at `research/` that any AI agent can use autonomously.
+
+## Development Workflow
+
+- **NEVER** commit directly to the `master` branch.
+- Always create a new feature branch for your work.

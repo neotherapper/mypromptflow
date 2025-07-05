@@ -1,14 +1,5 @@
 {
   "mcpServers": {
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "/Users/georgepilitsoglou/Desktop",
-        "/Users/georgepilitsoglou/Downloads"
-      ]
-    },
     "MCP_DOCKER": {
       "command": "docker",
       "args": ["mcp", "gateway", "run"]
