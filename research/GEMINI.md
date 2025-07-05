@@ -32,12 +32,14 @@ research/
 
 ## 📋 For AI Agents
 
-**Read**: `@research/orchestrator/integration/ai-agent-integration.yaml`
+**Read**: `@research/orchestrator/integration/gemini-orchestrator-integration.yaml`
 
-This integration file contains complete instructions for using the research framework, including:
+This Gemini-specific integration file contains complete instructions for using the research framework, including:
 
-- CLI workflow patterns
-- Orchestrator usage instructions
-- Method selection guidance
+- Gemini-optimized workflow patterns
+- Multimodal analysis capabilities
+- Large context window utilization
+- Adaptive reasoning integration
+- Real-time method selection
 - Quality assurance procedures
-- Logging and evaluation requirements
+- Gemini-enhanced orchestrator usage

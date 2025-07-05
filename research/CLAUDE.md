@@ -32,9 +32,9 @@ research/
 
 ## 📋 For AI Agents
 
-**Read**: `@research/orchestrator/integration/ai-agent-integration.yaml`
+**Read**: `@research/orchestrator/integration/claude-orchestrator-integration.yaml`
 
-This integration file contains complete instructions for using the research framework, including:
+This Claude-specific integration file contains complete instructions for using the research framework, including:
 
 - CLI workflow patterns
 - Orchestrator usage instructions

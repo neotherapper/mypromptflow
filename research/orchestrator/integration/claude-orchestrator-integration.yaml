@@ -1,0 +1,458 @@
+# Claude AI Research Orchestrator Integration Layer
+# AI INSTRUCTIONS: This file provides comprehensive integration instructions for Claude to use the research orchestrator
+# FILE REFERENCES: Direct file paths for Claude to access orchestrator components
+
+metadata:
+  version: "2.0.0"
+  last_updated: "2024-07-04"
+  purpose: "Enable Claude to use YAML-based research orchestrator system with automatic research detection"
+  target: "Claude AI agents working with research framework"
+  supersedes: "ai-agent-integration.yaml"
+
+# CLAUDE FILE REFERENCE PATTERNS
+orchestrator_file_references:
+  config_files:
+    context_analyzer: "research/orchestrator/engines/context-analyzer.yaml"
+    method_registry: "research/orchestrator/config/method-registry.yaml"
+    selection_rules: "research/orchestrator/config/selection-rules.yaml"
+  
+  method_files:
+    existing_methods: "research/orchestrator/methods/existing/"
+    advanced_methods: "research/orchestrator/methods/advanced/"
+    methods_index: "research/orchestrator/methods/methods-index.yaml"
+  
+  integration_files:
+    workflow_orchestrator: "research/orchestrator/integration/workflow-orchestrator.yaml"
+    claude_integration: "research/orchestrator/integration/claude-orchestrator-integration.yaml"
+  
+  claude_usage_notes:
+    - "Use Read tool with these exact paths"
+    - "Claude can access all files directly using file_path parameter"
+    - "No @ prefixes needed for research/ folder - use direct paths"
+    - "Files are organized for systematic orchestrator workflow"
+
+# RESEARCH INTENTION DETECTION
+research_intention_detection:
+  automatic_triggers:
+    direct_keywords:
+      - "research"
+      - "analyze"
+      - "investigate"
+      - "explore"
+      - "study"
+      - "examine"
+      - "assess"
+      - "evaluate"
+    
+    phrase_patterns:
+      - "help me understand"
+      - "what are the implications"
+      - "comprehensive analysis"
+      - "in-depth look"
+      - "detailed examination"
+      - "systematic review"
+      - "thorough investigation"
+    
+    context_indicators:
+      - multi_domain_questions: "contains 'and', 'intersection', 'impact on', 'relationship between'"
+      - complex_scenarios: "emerging technology, ethical implications, future trends"
+      - comparative_analysis: "compare", "contrast", "versus", "differences between"
+      - strategic_planning: "strategy", "roadmap", "implementation", "approach"
+  
+  activation_conditions:
+    always_use_orchestrator:
+      - "User explicitly requests research"
+      - "Question involves multiple domains"
+      - "Request requires structured analysis"
+      - "Topic involves emerging technologies"
+      - "User asks for comprehensive coverage"
+    
+    consider_orchestrator:
+      - "Complex problem-solving requests"
+      - "Feature development workflows"
+      - "Document creation requiring research"
+      - "Quality requirements appear high"
+    
+    skip_orchestrator:
+      - "Simple factual questions"
+      - "Code debugging or syntax help"
+      - "Direct file operations"
+      - "Basic conversational queries"
+
+# CLAUDE ORCHESTRATOR USAGE WORKFLOW
+claude_orchestrator_workflow:
+  step_1_detect_research_intent:
+    process: "Check user request against research_intention_detection patterns"
+    output: "decision: use_orchestrator | skip_orchestrator | uncertain"
+    
+    uncertain_handling:
+      - "Ask user: 'Would you like me to use the research framework for this?'"
+      - "Explain benefit: 'The research framework will provide more comprehensive analysis'"
+      - "Default to orchestrator for complex or ambiguous requests"
+  
+  step_2_extract_context:
+    action: "Parse user request to extract orchestrator input parameters"
+    required_parameters:
+      - research_topic: "Main subject of research from user request"
+      - quality_requirements: "Infer from user language: basic/high/critical"
+      - time_constraints: "Infer from user urgency: urgent/normal/extended/flexible"
+    
+    optional_parameters:
+      - research_scope: "Determine from topic breadth: narrow/moderate/broad"
+      - domain_specificity: "Assess domain needs: general/specialized/cross_domain"
+      - stakeholder_level: "Infer from user expertise: general/professional/expert"
+      - output_format: "Type of deliverable: report/presentation/documentation/analysis"
+    
+    extraction_examples:
+      simple_request:
+        input: "Research remote work productivity"
+        output:
+          research_topic: "remote work productivity impact"
+          research_scope: "moderate"
+          quality_requirements: "high"
+          time_constraints: "normal"
+          domain_specificity: "business"
+      
+      complex_request:
+        input: "I need a comprehensive analysis of AGI ethical implications on global economics for my PhD thesis"
+        output:
+          research_topic: "AGI ethical implications on global economics"
+          research_scope: "broad"
+          quality_requirements: "critical"
+          time_constraints: "extended"
+          domain_specificity: "cross_domain"
+          stakeholder_level: "expert"
+          output_format: "academic analysis"
+  
+  step_3_run_context_analysis:
+    reference_file: "research/orchestrator/engines/context-analyzer.yaml"
+    process:
+      complexity_assessment:
+        - check_emerging_technology: "Look for AI, quantum, blockchain, etc."
+        - check_multiple_domains: "Look for 'and', 'intersection', 'impact', etc."
+        - check_ethical_implications: "Look for ethical, bias, privacy keywords"
+        - apply_scoring_algorithm: "Use complexity_scoring from context-analyzer.yaml"
+      
+      domain_analysis:
+        - map_to_domain_categories: "Use domain_mapping from context-analyzer.yaml"
+        - determine_expertise_required: "Based on domain_specificity"
+        - identify_context_patterns: "Match against context_patterns"
+    
+    output_format:
+      complexity_level: "simple|moderate|complex"
+      domain_type: "general|specialized|cross_domain|emerging"
+      quality_level: "basic|high|critical"
+      confidence_score: "0.0-1.0"
+  
+  step_4_select_methods:
+    reference_files:
+      - "research/orchestrator/config/selection-rules.yaml"
+      - "research/orchestrator/config/method-registry.yaml"
+    
+    selection_process:
+      primary_method_selection:
+        - use_complexity_mapping: "From selection-rules.yaml complexity_based"
+        - consider_domain_preferences: "From context-analyzer.yaml domain_analysis_rules"
+        - apply_selection_principles: "From selection-rules.yaml selection_principles"
+      
+      enhancement_selection:
+        - add_quality_methods: "Based on quality_requirements from selection-rules.yaml"
+        - check_compatibility: "Use compatibility_matrix from method-registry.yaml"
+        - optimize_combination: "Apply combination_optimization algorithm"
+    
+    output_format:
+      selected_methods:
+        primary: ["method_name"]
+        enhancement: ["method_name"]
+      execution_pattern: "sequential|parallel|hybrid"
+      estimated_duration: "time estimate"
+      selection_rationale: "explanation of why these methods were chosen"
+  
+  step_5_execute_methods:
+    method_access:
+      existing_methods: "research/orchestrator/methods/existing/[method_name].md"
+      advanced_methods: "research/orchestrator/methods/advanced/[method_name].md"
+    
+    execution_guidance:
+      preparation_steps: "Extract from selected method characteristics"
+      execution_sequence: "Order methods based on pattern and dependencies"
+      quality_checkpoints: "Based on validation_needs from quality analysis"
+      success_metrics: "Derived from quality_requirements and context"
+    
+    quality_validation:
+      constitutional_ai: "For ethical validation and bias checking"
+      self_consistency: "For critical accuracy verification"
+      iterative_refinement: "For continuous improvement during execution"
+  
+  step_6_orchestrator_summary:
+    always_provide: "Comprehensive orchestrator analysis summary"
+    format: "Use claude_output_templates.orchestrator_summary_template"
+    include:
+      - context_analysis_results
+      - method_selection_rationale
+      - execution_plan_overview
+      - quality_checkpoints_planned
+      - estimated_duration
+
+# CLAUDE DECISION TREES
+claude_decision_trees:
+  research_activation_decision:
+    check_direct_research_request:
+      if: "user_request contains research_keywords"
+      then: "activate_orchestrator"
+      confidence: "high"
+    
+    check_complexity_indicators:
+      if: "multi_domain OR emerging_tech OR ethical_implications"
+      then: "activate_orchestrator"
+      confidence: "high"
+    
+    check_analysis_depth:
+      if: "comprehensive OR in_depth OR thorough OR systematic"
+      then: "activate_orchestrator"
+      confidence: "medium"
+    
+    check_uncertainty:
+      if: "ambiguous_request OR complex_topic"
+      then: "ask_user_preference"
+      confidence: "low"
+    
+    default_action: "proceed_without_orchestrator"
+  
+  method_selection_decision_tree:
+    context_complexity_simple:
+      if: "complexity_level == 'simple'"
+      then:
+        time_urgent: "step_by_step_research"
+        quality_focused: "primary_research + constitutional_ai"
+        resource_limited: "universal_research"
+        default: "universal_research"
+    
+    context_complexity_moderate:
+      if: "complexity_level == 'moderate'"
+      then:
+        domain_general: "adaptive_chain_of_thought"
+        domain_specialized: "domain_adaptive"
+        decomposition_needed: "modular_task_decomposition"
+        quality_high: "add constitutional_ai"
+        default: "domain_adaptive"
+    
+    context_complexity_complex:
+      if: "complexity_level == 'complex'"
+      then:
+        systematic_breakdown_needed: "complex_research"
+        comprehensive_analysis_needed: "multi_perspective_approach"
+        creative_exploration_needed: "tree_of_thoughts"
+        maximum_quality_needed: "ensemble_methods"
+        mandatory_quality: "always add constitutional_ai + self_consistency"
+  
+  execution_pattern_decision_tree:
+    resource_assessment:
+      computational_load_very_high: "hybrid"
+      computational_load_high: "parallel"
+      time_constraints_urgent: "sequential"
+      quality_requirements_critical: "hybrid"
+      method_dependencies_exist: "sequential"
+      default: "sequential"
+
+# CLAUDE OUTPUT TEMPLATES
+claude_output_templates:
+  orchestrator_summary_template: |
+    ## 🧠 Research Orchestrator Analysis
+    
+    **Context Analysis:**
+    - Complexity: ${complexity_level} (${complexity_confidence}% confidence)
+    - Domain: ${domain_type} requiring ${expertise_required} expertise
+    - Quality Target: ${quality_level} with ${validation_needs}
+    
+    **Selected Methods:**
+    - Primary: ${primary_methods}
+    - Enhancement: ${enhancement_methods}
+    - Pattern: ${execution_pattern}
+    
+    **Execution Plan:**
+    ${execution_sequence}
+    
+    **Quality Checkpoints:**
+    ${quality_checkpoints}
+    
+    **Estimated Duration:** ${estimated_duration}
+  
+  method_application_template: |
+    ## 📋 Applying ${method_name}
+    
+    **Method Context:** ${method_description}
+    **Why Selected:** ${selection_rationale}
+    **Expected Outcome:** ${expected_outcome}
+    
+    ${method_execution_content}
+    
+    **Quality Check:** ${quality_validation}
+  
+  research_activation_template: |
+    ## 🔍 Research Framework Activated
+    
+    **Detected:** ${detection_reason}
+    **Approach:** Using orchestrated research methods for comprehensive analysis
+    **Benefit:** Enhanced quality, systematic methodology, and structured insights
+    
+    ${orchestrator_summary}
+
+# PRACTICAL CLAUDE WORKFLOWS
+claude_workflows:
+  automatic_research_detection:
+    user_request: "Help me understand the impact of AI on healthcare"
+    
+    claude_process:
+      - detect_research_intent:
+          triggers: ["understand", "impact", "multi-domain context"]
+          decision: "activate_orchestrator"
+          confidence: "high"
+      
+      - extract_context:
+          research_topic: "AI impact on healthcare"
+          research_scope: "moderate"
+          quality_requirements: "high"
+          domain_specificity: "cross_domain"
+      
+      - run_orchestrator_analysis:
+          complexity_level: "moderate"
+          domain_type: "cross_domain"
+          selected_methods: ["domain_adaptive", "constitutional_ai"]
+          execution_pattern: "sequential"
+      
+      - execute_research:
+          provide_orchestrator_summary: true
+          apply_selected_methods: true
+          follow_quality_checkpoints: true
+  
+  user_triggered_research:
+    user_request: "Research the ethical implications of AGI development"
+    
+    claude_process:
+      - detect_research_intent:
+          triggers: ["research", "ethical implications", "emerging technology"]
+          decision: "activate_orchestrator"
+          confidence: "high"
+      
+      - extract_context:
+          research_topic: "ethical implications of AGI development"
+          research_scope: "broad"
+          quality_requirements: "critical"
+          domain_specificity: "cross_domain"
+          stakeholder_level: "expert"
+      
+      - run_orchestrator_analysis:
+          complexity_level: "complex"
+          domain_type: "cross_domain"
+          selected_methods: ["multi_perspective_approach", "constitutional_ai", "self_consistency"]
+          execution_pattern: "hybrid"
+      
+      - execute_research:
+          provide_orchestrator_summary: true
+          apply_all_selected_methods: true
+          extensive_quality_validation: true
+
+# INTEGRATION WITH CLAUDE CODE COMMANDS
+claude_code_integration:
+  command_compatibility:
+    research_command: ".claude/commands/research.md"
+    relationship: "complementary"
+    usage: "Command file provides CLI interface, this file provides comprehensive orchestrator logic"
+  
+  command_enhancement:
+    before_command_execution:
+      - "Check this file for research intention detection"
+      - "Use orchestrator workflow if research intent detected"
+      - "Apply method selection logic from this file"
+    
+    during_command_execution:
+      - "Follow orchestrator workflow steps"
+      - "Use file references from this file"
+      - "Apply quality checkpoints"
+    
+    after_command_execution:
+      - "Provide orchestrator summary"
+      - "Document effectiveness for future optimization"
+
+# QUALITY ASSURANCE FOR CLAUDE
+claude_quality_guidelines:
+  research_activation_validation:
+    - "Verify research intent detection is accurate"
+    - "Confirm orchestrator activation is appropriate"
+    - "Check user expectation alignment"
+  
+  orchestrator_execution_validation:
+    - "Verify all required context parameters are extracted"
+    - "Confirm complexity assessment reasoning is sound"
+    - "Check domain analysis matches research topic"
+    - "Validate method selection against orchestrator rules"
+  
+  method_application_validation:
+    - "Follow method-specific instructions exactly"
+    - "Apply enhancement methods as selected"
+    - "Execute quality checkpoints at specified intervals"
+    - "Validate against success metrics"
+  
+  output_quality_validation:
+    - "Provide orchestrator analysis summary"
+    - "Document method effectiveness"
+    - "Check research output quality against requirements"
+    - "Ensure user expectations are met"
+
+# SUCCESS METRICS FOR CLAUDE
+claude_success_metrics:
+  research_detection_accuracy:
+    - "Correctly identifies research requests: >90%"
+    - "Appropriate orchestrator activation: >85%"
+    - "User satisfaction with research quality: >90%"
+  
+  orchestrator_effectiveness:
+    - "Method selection aligns with orchestrator recommendations: >95%"
+    - "Quality improvements are measurable: >80%"
+    - "Execution follows orchestrator guidance: >90%"
+  
+  integration_success:
+    - "Seamless integration with existing workflows: >85%"
+    - "Command system compatibility: 100%"
+    - "User experience enhancement: >90%"
+
+# ADAPTIVE ORCHESTRATION
+adaptive_orchestration:
+  mid_execution_optimization:
+    triggers:
+      - "Method not producing expected results"
+      - "User feedback indicates different approach needed"
+      - "Time constraints require adaptation"
+      - "Quality requirements change during execution"
+    
+    adaptation_process:
+      - assess_current_situation: "Analyze progress and identify issues"
+      - re_run_context_analysis: "Update context with new information"
+      - adjust_method_selection: "Select alternative or additional methods"
+      - update_execution_plan: "Modify approach based on new analysis"
+      - communicate_changes: "Inform user of adaptations and rationale"
+    
+    adaptation_examples:
+      quality_insufficient:
+        trigger: "Initial method not meeting quality requirements"
+        adaptation: "Add constitutional_ai + self_consistency validation"
+        communication: "Enhancing analysis with additional quality methods"
+      
+      scope_expansion:
+        trigger: "User requests broader analysis mid-execution"
+        adaptation: "Switch to multi_perspective_approach or ensemble_methods"
+        communication: "Expanding research scope with comprehensive methods"
+      
+      time_constraints:
+        trigger: "User indicates urgency during execution"
+        adaptation: "Switch to step_by_step_research or universal_research"
+        communication: "Optimizing for speed while maintaining quality"
+
+# VERSION COMPATIBILITY
+version_compatibility:
+  current_version: "2.0.0"
+  compatible_versions: ["2.0.0", "2.0.1", "2.0.2"]
+  breaking_changes: "None from v1.0.0"
+  migration_notes: "Automatic migration from ai-agent-integration.yaml"
+  deprecation_warnings: "ai-agent-integration.yaml will be removed"
