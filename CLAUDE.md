@@ -64,11 +64,13 @@ All documents must include:
 **Automatic Research Framework Activation:** Claude should automatically detect research intentions and activate the research orchestrator when users:
 
 **Direct Research Triggers:**
+
 - Use keywords: "research", "analyze", "investigate", "explore", "study", "examine", "assess", "evaluate"
 - Ask for "comprehensive analysis", "in-depth look", "detailed examination", "systematic review"
 - Request "help me understand", "what are the implications", "thorough investigation"
 
 **Context-Based Triggers:**
+
 - Multi-domain questions (contains "and", "intersection", "impact on", "relationship between")
 - Emerging technology topics (AI, quantum, blockchain, etc.)
 - Ethical implications or complex scenarios
@@ -76,6 +78,7 @@ All documents must include:
 - Strategic planning requests ("strategy", "roadmap", "implementation", "approach")
 
 **When Research Framework Should Be Used:**
+
 - Any request explicitly asking for research
 - Questions involving multiple domains or perspectives
 - Requests requiring structured systematic analysis
@@ -84,3 +87,8 @@ All documents must include:
 - Complex problem-solving that benefits from orchestrated methods
 
 **Integration:** Read `research/orchestrator/integration/claude-orchestrator-integration.yaml` for complete workflow instructions when research intent is detected.
+
+## Development Workflow
+
+- **NEVER** commit directly to the `master` branch.
+- Always create a new feature branch for your work.
