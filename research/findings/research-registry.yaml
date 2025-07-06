@@ -121,6 +121,7 @@ research_dependencies:
     depends_on: ["ai_validation_frameworks", "ai_agent_failure_patterns", "ai_workflow_reproducibility"]
     enables: ["task_list_automation", "research_compliance_enforcement"]
 
+ui_ux_documentation_research:
   ui_ux_documentation_best_practices:
     session_id: "ui-ux-docs-2025-01-06"
     date: "2025-01-06"
