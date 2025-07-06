@@ -59,6 +59,8 @@ All documents must include:
 
 **Available to all AI agents:** This project includes a research framework at `research/` that any AI agent can use autonomously.
 
+**MANDATORY:** For all research tasks, you *must* consult and strictly adhere to the guidelines outlined in `research/orchestrator/integration/gemini-orchestrator-integration.yaml`. This file contains the comprehensive instructions for using the research orchestrator and ensuring compliance with research protocols.
+
 ## Development Workflow
 
 - **NEVER** commit directly to the `master` branch.

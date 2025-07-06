@@ -17,7 +17,8 @@ Every project follows this standard structure:
 
 ```
 projects/[project-name]/
-├── CLAUDE.md               # AI agent instructions and project context
+├── CLAUDE.md               # AI CLAUDE agent instructions and project context
+├── GEMINI.md               # AI GEMINI agent instructions and project context
 ├── README.md               # Human-readable project overview
 ├── project-purpose.md      # Goals and success criteria
 ├── task-list.md           # Current tasks with priorities and status
@@ -30,7 +31,7 @@ projects/[project-name]/
 
 ### For AI Agents
 
-1. **Read CLAUDE.md first** - This contains all the context you need about the project
+1. **Read GEMINI.md first** - This contains all the context you need about the project
 2. **Check task-list.md** - Find the highest priority uncompleted task
 3. **Review research-integration.md** - Understand relevant research context
 4. **Update progress.md** - Document what you accomplish
@@ -132,7 +133,7 @@ projects/[project-name]/
 
 ### For AI Agents
 
-- Always read CLAUDE.md to understand project context
+- Always read GEMINI.md to understand project context
 - Check research-integration.md for relevant knowledge
 - Update progress and task lists when making changes
 - Maintain quality standards defined in project documentation
