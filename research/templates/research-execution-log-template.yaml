@@ -1,5 +1,26 @@
 # Research Execution Log Template
 # AI INSTRUCTIONS: Use this template for all research execution tracking
+#
+# ========================================================================
+# MANDATORY RESEARCH COMPLETION REQUIREMENTS - NON-NEGOTIABLE
+# ========================================================================
+# 
+# BEFORE marking research as complete, AI agents MUST create these files:
+#
+# 1. research-plan.md (REQUIRED)
+#    - Use template: research/templates/research-plan-template.md
+#    - Extract plan from orchestrator analysis and execution log
+#    - Include: topic, context, methods, approach, quality validation
+#
+# 2. research-sources.md (REQUIRED) 
+#    - Use template: research/templates/research-sources-template.md
+#    - Log ALL sources accessed during research
+#    - Include: URLs, file paths, search queries, timestamps
+#    - Track: WebFetch, WebSearch, Read tool usage, file access
+#
+# FAILURE TO CREATE THESE FILES = INCOMPLETE RESEARCH SESSION
+# These files provide Claude Desktop-style research experience
+# ========================================================================
 
 research_execution_log:
   # Session Information
