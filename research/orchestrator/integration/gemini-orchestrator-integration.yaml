@@ -87,6 +87,10 @@ research_intention_detection:
 
 # GEMINI ORCHESTRATOR USAGE WORKFLOW
 gemini_orchestrator_workflow:
+  # IMPORTANT: Gemini agents MUST internalize and strictly follow these workflow steps.
+  # Failure to adhere to this workflow will result in incomplete or non-compliant research outputs.
+  # Each step is designed to leverage Gemini's strengths and ensure high-quality research.
+
   step_1_detect_research_intent:
     process: "Analyze user request using Gemini's advanced pattern recognition"
     gemini_advantages:
@@ -205,6 +209,8 @@ gemini_orchestrator_workflow:
       selection_rationale: "explanation including Gemini-specific advantages"
   
   step_5_execute_methods:
+    # MANDATORY: Use the content of the selected method's .md file to generate internal prompts for sub-tasks.
+    # These internal prompts and their outputs MUST be logged in the research-execution-log.yaml.
     gemini_execution_advantages:
       - "Leverage large context window for comprehensive analysis"
       - "Use multimodal capabilities for diverse input processing"
