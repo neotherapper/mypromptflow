@@ -18,7 +18,7 @@ Every project follows this standard structure:
 ```
 projects/[project-name]/
 ├── CLAUDE.md               # AI agent instructions and project context
-├── README.md               # Human-readable project overview  
+├── README.md               # Human-readable project overview
 ├── project-purpose.md      # Goals and success criteria
 ├── task-list.md           # Current tasks with priorities and status
 ├── progress.md            # What's been accomplished
@@ -46,17 +46,20 @@ projects/[project-name]/
 ## Task Management
 
 ### Task Categories
+
 - **Research Tasks**: Review existing research or conduct new research
 - **Planning Tasks**: Define scope, create roadmaps, analyze requirements
 - **Implementation Tasks**: Execute the main project work
 - **Validation Tasks**: Review progress and validate outcomes
 
 ### Task Format
+
 ```markdown
 - [ ] Task description [Priority: High/Medium/Low] [Type: Research/Planning/Implementation/Validation]
 ```
 
 ### Task Execution
+
 - AI agents work on highest priority available tasks
 - Research tasks can trigger the research orchestrator when needed
 - Completed tasks automatically update progress tracking
@@ -65,11 +68,13 @@ projects/[project-name]/
 ## Research Integration
 
 ### Existing Research
+
 - AI automatically scans @research/findings/ for relevant content
 - Projects link to applicable research files
 - Research insights inform project decisions
 
 ### Research Gaps
+
 - AI identifies areas where additional research would benefit the project
 - Research tasks are created for knowledge gaps
 - New research feeds back into the research framework
@@ -77,12 +82,14 @@ projects/[project-name]/
 ## Quality Standards
 
 ### Project Documentation
+
 - Clear, concise project purpose and goals
 - Specific, actionable tasks with priorities
 - Regular progress updates with concrete outcomes
 - Integration with relevant research findings
 
 ### AI Agent Instructions
+
 - Complete context for understanding the project
 - Clear guidance on how to approach tasks
 - Specific preferences and constraints
@@ -91,11 +98,13 @@ projects/[project-name]/
 ## Integration with Existing Systems
 
 ### Research Framework
+
 - Projects automatically suggest relevant research files
 - Research gaps trigger research orchestrator workflows
 - Research findings update project context
 
 ### AI Knowledge Base
+
 - Projects can reference @ai/knowledge/ documents
 - Project outcomes can inform knowledge base updates
 - Shared patterns improve future project creation
@@ -108,18 +117,21 @@ projects/[project-name]/
 ## Best Practices
 
 ### For Project Creation
+
 - Provide clear, specific project descriptions
 - Identify constraints and preferences upfront
 - Link to relevant existing knowledge
 - Define concrete success criteria
 
 ### For Project Execution
+
 - Work on highest priority tasks first
 - Update progress regularly
 - Add new tasks as understanding evolves
 - Validate work against original goals
 
 ### For AI Agents
+
 - Always read CLAUDE.md to understand project context
 - Check research-integration.md for relevant knowledge
 - Update progress and task lists when making changes
