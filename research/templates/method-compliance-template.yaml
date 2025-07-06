@@ -1,0 +1,150 @@
+# Method Compliance Validation Template
+# This template tracks whether sub-agents properly followed research method prompts
+
+method_compliance_validation:
+  session_id: "research_session_YYYYMMDD_HHMMSS"
+  research_topic: "extracted_from_user_request"
+  method_used: "method_name_from_orchestrator"
+  validation_timestamp: "2024-07-04T10:00:00Z"
+  
+  # Method-Specific Validation
+  method_validation:
+    multi_perspective_approach:
+      required_perspectives: 4
+      expected_outputs:
+        - "perspective-1-quantitative.md"
+        - "perspective-2-qualitative.md" 
+        - "perspective-3-industry-practice.md"
+        - "perspective-4-future-trends.md"
+      validation_criteria:
+        - "Each perspective has distinct expert persona"
+        - "Unique methodology for each perspective"
+        - "Different source priorities documented"
+        - "Complementary output formats"
+        - "Integration of all perspectives in final analysis"
+      compliance_checks:
+        perspective_count: 0  # Number of perspectives actually generated
+        distinct_personas: false  # Whether each perspective has unique expert role
+        methodology_variance: false  # Whether methodologies differ between perspectives
+        source_diversity: false  # Whether different source types were used
+        integration_quality: 0.0  # Score 0-1 for how well perspectives were integrated
+    
+    step_by_step_research:
+      required_phases: 5
+      expected_deliverables:
+        - "Phase 1: Discovery & Scoping deliverables"
+        - "Phase 2: Broad Information Gathering results"
+        - "Phase 3: Deep Analysis findings"
+        - "Phase 4: Synthesis & Insights report"
+        - "Phase 5: Validation & Documentation summary"
+      validation_criteria:
+        - "Each phase completed with specific deliverables"
+        - "Time estimates roughly followed"
+        - "Phase progression logic maintained"
+        - "Specific questions addressed at each stage"
+      compliance_checks:
+        phases_completed: 0  # Number of phases actually completed
+        deliverables_present: false  # Whether phase deliverables are documented
+        time_allocation_followed: false  # Whether phases took appropriate time
+        progression_logic: false  # Whether phases built on each other
+    
+    primary_research:
+      required_components: 5
+      expected_structure:
+        - "Role Definition: Specific expert persona"
+        - "Task Decomposition: 3-5 logical phases"
+        - "Methodology Framework: Search strategies and criteria"
+        - "Output Specifications: Format and components"
+        - "Quality Metrics: Evaluation criteria"
+      validation_criteria:
+        - "Clear expert role definition"
+        - "Logical phase breakdown"
+        - "Specific methodology described"
+        - "Output format clearly specified"
+        - "Quality validation criteria included"
+      compliance_checks:
+        role_definition_present: false
+        task_decomposition_clear: false
+        methodology_specified: false
+        output_format_defined: false
+        quality_metrics_included: false
+    
+    constitutional_ai:
+      required_phases: 6
+      expected_components:
+        - "Constitutional Principles Definition"
+        - "Initial Research Execution"
+        - "Constitutional Self-Evaluation"
+        - "Constitutional Correction"
+        - "Constitutional Validation"
+        - "Constitutional Documentation"
+      validation_criteria:
+        - "All 6 research ethics principles addressed"
+        - "All 6 quality standards applied"
+        - "Self-evaluation conducted for each principle"
+        - "Corrections implemented based on evaluation"
+        - "Final validation completed"
+        - "Compliance report generated"
+      compliance_checks:
+        principles_defined: false
+        self_evaluation_conducted: false
+        corrections_implemented: false
+        final_validation_completed: false
+        compliance_report_generated: false
+        constitutional_score: 0.0  # Overall constitutional compliance score
+    
+    complex_research:
+      required_modules: "4-6"
+      expected_structure:
+        - "Project Analysis: Objectives and dependencies"
+        - "Module Creation: 4-6 independent modules"
+        - "Sequencing Logic: Execution order"
+        - "Individual Module Prompts: Specific prompts per module"
+        - "Final Integration Prompt: Synthesis approach"
+      validation_criteria:
+        - "Clear module boundaries and objectives"
+        - "Modules can be researched separately"
+        - "Logical connections between modules"
+        - "Manageable scope per module"
+        - "Integration strategy defined"
+      compliance_checks:
+        modules_created: 0  # Number of modules actually created
+        module_independence: false  # Whether modules can be researched separately
+        clear_boundaries: false  # Whether module scope is well-defined
+        integration_strategy: false  # Whether synthesis approach is specified
+  
+  # General Validation Results
+  overall_compliance:
+    method_prompt_followed: false  # Whether the method prompt structure was followed
+    expected_outputs_generated: false  # Whether all expected outputs were created
+    validation_criteria_met: 0.0  # Percentage of validation criteria satisfied
+    compliance_score: 0.0  # Overall compliance score (0-1)
+    
+  # Issues and Recommendations
+  compliance_issues:
+    - issue_type: "missing_output|incorrect_structure|insufficient_detail"
+      issue_description: "description_of_compliance_issue"
+      severity: "critical|high|medium|low"
+      recommendation: "how_to_fix_the_issue"
+      
+  # File Tracking
+  research_files_generated:
+    - file_path: "research/findings/topic/research/filename.md"
+      file_type: "perspective|phase|module|main_analysis"
+      method_component: "which_part_of_method_this_represents"
+      compliance_status: "compliant|non_compliant|partial"
+      
+  # Quality Assessment
+  research_quality_indicators:
+    follows_method_structure: false
+    contains_required_elements: false
+    appropriate_depth_and_detail: false
+    methodology_correctly_applied: false
+    integration_quality_satisfactory: false
+    
+  # Validation Metadata
+  validation_metadata:
+    validator_version: "1.0.0"
+    validation_completeness: 1.0
+    validation_confidence: 0.0
+    validation_notes: "additional_observations_about_compliance"

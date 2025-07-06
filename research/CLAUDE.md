@@ -44,21 +44,101 @@ This Claude-specific integration file contains complete instructions for using t
 
 ## 🚨 MANDATORY RESEARCH COMPLETION REQUIREMENTS
 
-**ALL AI AGENTS MUST CREATE THESE FILES WHEN CONDUCTING RESEARCH:**
+**ALL AI AGENTS MUST FOLLOW ENHANCED FILE STRUCTURE AND VALIDATION:**
+
+### Enhanced File Structure (Required)
+
+All research must use the enhanced folder structure:
+
+```
+research/findings/[topic]/
+├── research/                    # All research content
+│   ├── comprehensive-analysis.md  # Main combined analysis
+│   ├── perspective-1-quantitative.md  # Individual outputs (multi-perspective)
+│   ├── perspective-2-qualitative.md   # Individual outputs (multi-perspective)
+│   ├── phase-1-discovery.md          # Individual outputs (step-by-step)
+│   └── [other method-specific files]  # Based on method used
+└── meta/                        # All metadata and tracking
+    ├── research-execution-log.yaml
+    ├── research-metadata.yaml
+    ├── method-compliance.yaml      # NEW: Method validation
+    ├── research-plan.md
+    └── research-sources.md
+```
 
 ### Required Files (Non-Negotiable)
 
-1. **research-plan.md** - Research approach and method selection
-2. **research-sources.md** - Complete source tracking with timestamps
+**Research Content Files:**
+1. **comprehensive-analysis.md** - Main research output
+2. **Individual method outputs** - All sub-agent research (perspectives, phases, modules)
+
+**Meta Documentation Files:**
+3. **research-plan.md** - Research approach and method selection
+4. **research-sources.md** - Complete source tracking with timestamps
+5. **method-compliance.yaml** - Method validation and compliance tracking
+6. **research-execution-log.yaml** - Complete execution tracking
+
+### Method Compliance Validation (NEW)
+
+**AI agents must validate that sub-agents properly follow research method prompts:**
+
+- **Multi-Perspective Method**: Must generate 4 distinct perspective files with unique expert personas
+- **Step-by-Step Method**: Must complete all 5 phases with documented deliverables
+- **Constitutional AI**: Must complete all 6 phases including self-evaluation and correction
+- **Complex Research**: Must create all planned modules with clear boundaries
+- **All Methods**: Must follow the specific structure and requirements of the chosen method
 
 ### Templates Available
 
 - `research/templates/research-plan-template.md`
 - `research/templates/research-sources-template.md`
+- `research/templates/method-compliance-template.yaml` (NEW)
+- `research/templates/research-execution-log-template.yaml`
 
 ### Enforcement
 
-- **INCOMPLETE RESEARCH** = Missing these files
-- Use Write tool to create both files before ending research
+- **INCOMPLETE RESEARCH** = Missing required files OR failing method compliance
+- Use Write tool to create ALL required files before ending research
+- Validate method compliance using the compliance template
 - Track ALL sources: WebFetch, WebSearch, Read, file access
 - Include timestamps and relevance for each source
+- **No research is considered complete without method compliance validation**
+
+## 🔍 How to Use Method Compliance Validation
+
+### Step 1: During Research Execution
+1. **Follow Method Prompts**: Use the exact structure from `research/orchestrator/methods/[method].md`
+2. **Create Individual Outputs**: Save each sub-agent research as separate files
+3. **Document Method Steps**: Track completion of each method component
+
+### Step 2: After Research Completion
+1. **Create Compliance File**: Use `research/templates/method-compliance-template.yaml`
+2. **Validate Method Adherence**: Check if all method requirements were met
+3. **Score Compliance**: Rate how well the method was followed (0-1 scale)
+4. **Document Issues**: Record any deviations from method requirements
+
+### Step 3: Quality Verification
+1. **Check File Structure**: Ensure all files are in correct research/ and meta/ folders
+2. **Verify Individual Outputs**: Confirm all method components have corresponding files
+3. **Validate Integration**: Ensure individual outputs are properly combined in main analysis
+4. **Update Execution Log**: Include compliance results in research-execution-log.yaml
+
+### Example: Multi-Perspective Method Validation
+```yaml
+method_validation:
+  multi_perspective_approach:
+    required_perspectives: 4
+    expected_outputs:
+      - "perspective-1-quantitative.md" ✓
+      - "perspective-2-qualitative.md" ✓ 
+      - "perspective-3-industry-practice.md" ✓
+      - "perspective-4-future-trends.md" ✓
+    compliance_checks:
+      perspective_count: 4
+      distinct_personas: true
+      methodology_variance: true
+      source_diversity: true
+      integration_quality: 0.92
+```
+
+**This validation system ensures no research work is lost and method prompts are properly followed.**
