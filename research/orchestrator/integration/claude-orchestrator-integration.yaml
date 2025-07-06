@@ -96,12 +96,14 @@ claude_orchestrator_workflow:
       - research_topic: "Main subject of research from user request"
       - quality_requirements: "Infer from user language: basic/high/critical"
       - time_constraints: "Infer from user urgency: urgent/normal/extended/flexible"
+  
     
     optional_parameters:
       - research_scope: "Determine from topic breadth: narrow/moderate/broad"
       - domain_specificity: "Assess domain needs: general/specialized/cross_domain"
       - stakeholder_level: "Infer from user expertise: general/professional/expert"
       - output_format: "Type of deliverable: report/presentation/documentation/analysis"
+  
     
     extraction_examples:
       simple_request:
@@ -123,6 +125,7 @@ claude_orchestrator_workflow:
           domain_specificity: "cross_domain"
           stakeholder_level: "expert"
           output_format: "academic analysis"
+  
   
   step_3_run_context_analysis:
     reference_file: "research/orchestrator/engines/context-analyzer.yaml"
@@ -193,6 +196,52 @@ claude_orchestrator_workflow:
       - execution_plan_overview
       - quality_checkpoints_planned
       - estimated_duration
+  
+  step_7_create_research_files:
+    CRITICAL_REQUIREMENT: "MANDATORY FILE CREATION - RESEARCH INCOMPLETE WITHOUT THESE"
+    enforcement_level: "NON_NEGOTIABLE"
+    
+    required_files:
+      research_plan_md:
+        status: "MANDATORY - MUST CREATE"
+        template: "research/templates/research-plan-template.md"
+        action: "Create research-plan.md file in research findings folder"
+        source_data: "Extract from orchestrator_analysis section of execution log"
+        required_content:
+          - research_topic: "From context extraction"
+          - session_info: "Session ID, start time, duration, AI agent"
+          - complexity_analysis: "From orchestrator complexity_assessment"
+          - method_selection: "Primary methods, enhancement methods, reasoning"
+          - execution_approach: "Research plan steps and approach"
+          - quality_validation: "Constitutional AI, self-consistency plans"
+        validation: "File must exist and contain all required sections"
+      
+      research_sources_md:
+        status: "MANDATORY - MUST CREATE" 
+        template: "research/templates/research-sources-template.md"
+        action: "Create research-sources.md file in research findings folder"
+        source_tracking: "Track ALL tool usage during research execution"
+        required_tracking:
+          - web_sources: "EVERY WebFetch/WebSearch URL with timestamp"
+          - internal_docs: "EVERY Read tool file path with timestamp"
+          - external_files: "EVERY file system access with timestamp"
+          - search_queries: "EVERY search performed with timestamp"
+        required_content:
+          - session_summary: "Topic, duration, total source counts"
+          - categorized_sources: "Organized by type with metadata"
+          - source_quality: "Diversity, freshness, credibility scores"
+        validation: "File must exist with complete source tracking"
+    
+    COMPLETION_GATE: "Research session is NOT COMPLETE until both files are created"
+    FAILURE_CONSEQUENCE: "Missing files = failed research session"
+    SUCCESS_CRITERIA: "Both research-plan.md and research-sources.md exist and contain required content"
+    
+    ai_agent_enforcement:
+      - "Check file existence before marking research complete"
+      - "Use Write tool to create both files using templates"
+      - "Populate templates with actual research data"
+      - "Verify files contain all required sections"
+      - "Do not end research session without both files"
 
 # CLAUDE DECISION TREES
 claude_decision_trees:

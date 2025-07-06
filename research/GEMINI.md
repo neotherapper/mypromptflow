@@ -43,3 +43,24 @@ This Gemini-specific integration file contains complete instructions for using t
 - Real-time method selection
 - Quality assurance procedures
 - Gemini-enhanced orchestrator usage
+
+## 🚨 MANDATORY RESEARCH COMPLETION REQUIREMENTS
+
+**ALL AI AGENTS MUST CREATE THESE FILES WHEN CONDUCTING RESEARCH:**
+
+### Required Files (Non-Negotiable)
+
+1. **research-plan.md** - Research approach and method selection
+2. **research-sources.md** - Complete source tracking with timestamps
+
+### Templates Available
+
+- `research/templates/research-plan-template.md`
+- `research/templates/research-sources-template.md`
+
+### Enforcement
+
+- **INCOMPLETE RESEARCH** = Missing these files
+- Use Write tool to create both files before ending research
+- Track ALL sources: WebFetch, WebSearch, Read, file access
+- Include timestamps and relevance for each source
