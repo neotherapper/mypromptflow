@@ -242,6 +242,13 @@ research_execution_log:
         
       # Additional checks as needed
     
+    method_compliance_validation:
+      compliance_check_performed: true
+      method_compliance_file: "research/findings/topic/meta/method-compliance.yaml"
+      overall_compliance_score: 0.0
+      critical_issues_found: []
+      compliance_summary: "summary_of_method_compliance_results"
+    
     quality_metrics:
       research_completeness: 0.0
       source_diversity: 0.0
@@ -249,6 +256,7 @@ research_execution_log:
       methodological_rigor: 0.0
       factual_accuracy: 0.0
       bias_detection_score: 0.0
+      method_adherence_score: 0.0  # New metric for method compliance
       
     overall_quality_assessment:
       quality_score: 0.0
@@ -259,12 +267,26 @@ research_execution_log:
   
   # Research Output Information
   research_output:
-    document_created: "research/findings/topic/research_output.md"
-    document_size_words: 0
-    document_structure_compliance: true
-    metadata_compliance: true
-    cross_references_included: 0
-    actionable_insights_count: 0
+    file_structure_used: "enhanced"  # "enhanced" with research/ and meta/ folders
+    
+    research_documents:
+      main_analysis: "research/findings/topic/research/comprehensive-analysis.md"
+      individual_outputs: []  # List of individual research files (perspectives, phases, modules)
+      
+    meta_documents:
+      execution_log: "research/findings/topic/meta/research-execution-log.yaml"
+      metadata: "research/findings/topic/meta/research-metadata.yaml"
+      compliance_validation: "research/findings/topic/meta/method-compliance.yaml"
+      research_plan: "research/findings/topic/meta/research-plan.md"
+      research_sources: "research/findings/topic/meta/research-sources.md"
+    
+    document_metrics:
+      total_research_files: 0
+      total_words_all_files: 0
+      document_structure_compliance: true
+      metadata_compliance: true
+      cross_references_included: 0
+      actionable_insights_count: 0
     
     output_quality_indicators:
       depth_of_analysis: 0.0
