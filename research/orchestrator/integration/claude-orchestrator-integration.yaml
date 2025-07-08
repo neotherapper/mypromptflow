@@ -3,8 +3,8 @@
 # FILE REFERENCES: Direct file paths for Claude to access orchestrator components
 
 metadata:
-  version: "2.0.0"
-  last_updated: "2024-07-04"
+  version: "3.0.0"
+  last_updated: "2025-01-08"
   purpose: "Enable Claude to use YAML-based research orchestrator system with automatic research detection"
   target: "Claude AI agents working with research framework"
   supersedes: "ai-agent-integration.yaml"
@@ -79,7 +79,7 @@ research_intention_detection:
       - "Direct file operations"
       - "Basic conversational queries"
 
-# CLAUDE ORCHESTRATOR USAGE WORKFLOW
+# CLAUDE HYBRID ORCHESTRATOR USAGE WORKFLOW
 claude_orchestrator_workflow:
   step_1_detect_research_intent:
     process: "Check user request against research_intention_detection patterns"
@@ -89,6 +89,24 @@ claude_orchestrator_workflow:
       - "Ask user: 'Would you like me to use the research framework for this?'"
       - "Explain benefit: 'The research framework will provide more comprehensive analysis'"
       - "Default to orchestrator for complex or ambiguous requests"
+  
+  step_1b_determine_execution_mode:
+    process: "Claude Code always uses multi-agent mode with Task tool capability"
+    reference_file: "research/orchestrator/engines/hybrid-orchestrator-controller.yaml"
+    
+    claude_code_default_mode:
+      agent_type: "Claude Code"
+      execution_mode: "multi_agent"
+      method_directory: "research/orchestrator/methods/multi-agent/"
+      capabilities: "Sub-agent spawning, parallel execution, result synthesis, individual file saving"
+      default_behavior: "Always spawn specialized sub-agents for comprehensive research"
+    
+    mode_announcement:
+      template: |
+        🔀 Research Execution Mode: multi_agent
+        Agent Type: Claude Code  
+        Capabilities: Sub-agent spawning, parallel execution, result synthesis
+        Method Directory: research/orchestrator/methods/multi-agent/
   
   step_2_extract_context:
     action: "Parse user request to extract orchestrator input parameters"
@@ -172,17 +190,40 @@ claude_orchestrator_workflow:
       selection_rationale: "explanation of why these methods were chosen"
   
   step_5_execute_methods:
-    method_access:
-      existing_methods: "research/orchestrator/methods/existing/[method_name].md"
-      advanced_methods: "research/orchestrator/methods/advanced/[method_name].md"
+    claude_code_multi_agent_execution:
+      method_access:
+        multi_agent_methods: "research/orchestrator/methods/multi-agent/[method_name].md"
+        sub_agent_spawner: "research/orchestrator/engines/sub-agent-spawner.yaml"
+      
+      execution_process:
+        - "Load multi-agent method specification from methods/multi-agent/"
+        - "Extract sub-agent specifications and task prompts"
+        - "Spawn specialized sub-agents using Task tool with individual file saving"
+        - "Coordinate parallel sub-agent execution"
+        - "Monitor sub-agent progress and completion"
+        - "Collect and validate sub-agent outputs"
+        - "Save all individual sub-agent research files"
+        - "Apply synthesis instructions to integrate results"
+        - "Create comprehensive analysis file combining all perspectives"
+      
+      file_saving_requirements:
+        reports_folder: "MANDATORY - All research content in reports/ folder"
+        individual_sub_agent_files: "MANDATORY - Each sub-agent saves to reports/perspective-X-name.md or reports/module-X-name.md"
+        comprehensive_analysis: "MANDATORY - Create reports/comprehensive-analysis.md combining all sub-agent work"
+        meta_folder: "MANDATORY - All session info in .meta/ folder (hidden)"
+        research_log: "MANDATORY - Create .meta/research-log.md using research-log-template.md"
+        sources_tracking: "MANDATORY - Create .meta/sources.md with full URLs using sources-template.md"
+        session_info: "MANDATORY - Create .meta/session-info.yaml using session-info-template.yaml"
+        inline_citations: "MANDATORY - All research reports must include (Source, Year [https://full-url]) format"
+      
+      quality_validation:
+        sub_agent_level: "Validate each sub-agent output against quality requirements"
+        file_existence: "Verify all individual sub-agent files are saved"
+        synthesis_level: "Ensure comprehensive integration of all perspectives"
+        cross_agent_validation: "Check consistency across sub-agent outputs"
+        completeness_check: "Confirm no sub-agent work is lost in synthesis"
     
-    execution_guidance:
-      preparation_steps: "Extract from selected method characteristics"
-      execution_sequence: "Order methods based on pattern and dependencies"
-      quality_checkpoints: "Based on validation_needs from quality analysis"
-      success_metrics: "Derived from quality_requirements and context"
-    
-    quality_validation:
+    universal_quality_validation:
       constitutional_ai: "For ethical validation and bias checking"
       self_consistency: "For critical accuracy verification"
       iterative_refinement: "For continuous improvement during execution"

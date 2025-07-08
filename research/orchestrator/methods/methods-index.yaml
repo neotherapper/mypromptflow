@@ -2,16 +2,35 @@
 # AI INSTRUCTIONS: Complete index of all 15 meta-prompting techniques in the orchestrator
 
 metadata:
-  version: "1.0.0"
-  last_updated: "2024-06-30"
+  version: "2.0.0"
+  last_updated: "2025-01-08"
   total_methods: 15
-  purpose: "Complete index of existing and advanced meta-prompting methods"
+  execution_modes: ["single_agent", "multi_agent", "hybrid"]
+  purpose: "Complete index of meta-prompting methods with multi-agent orchestration support"
+
+# METHOD EXECUTION MODES
+execution_modes:
+  single_agent:
+    location: "research/orchestrator/methods/single-agent/"
+    description: "Enhanced prompts for agents without sub-agent spawning capability"
+    file_structure: "reports/ and .meta/ folders with inline citations"
+    
+  multi_agent:
+    location: "research/orchestrator/methods/multi-agent/"
+    description: "Sub-agent orchestration for agents with Task tool capability (Claude Code)"
+    file_structure: "reports/ and .meta/ folders with parallel agent coordination"
+    
+  existing_fallback:
+    location: "research/orchestrator/methods/existing/"
+    description: "Original method files for backward compatibility"
+    file_structure: "Legacy format"
 
 # EXISTING METHODS (11 methods from @ai/prompts/meta/)
 existing_methods:
   location: "research/orchestrator/methods/existing/"
   source: "Originally from @ai/prompts/meta/, moved to research framework"
   count: 11
+  status: "Legacy format - use single_agent or multi_agent versions when available"
   
   methods:
     adaptive_chain_of_thought:
@@ -19,12 +38,18 @@ existing_methods:
       category: "cognitive"
       complexity_support: ["moderate", "complex"]
       description: "Systematic reasoning with metacognitive checks and validation"
+      multi_agent_available: false
+      single_agent_available: false
     
     complex_research:
       file: "complex_research.md"
       category: "decomposition"
       complexity_support: ["complex"]
       description: "Modular breakdown with dependency mapping and integration logic"
+      multi_agent_available: true
+      single_agent_available: true
+      multi_agent_file: "research/orchestrator/methods/multi-agent/complex_research.md"
+      single_agent_file: "research/orchestrator/methods/single-agent/complex_research.md"
     
     domain_adaptive:
       file: "domain_adaptive.md"
@@ -55,6 +80,10 @@ existing_methods:
       category: "comprehensive"
       complexity_support: ["moderate", "complex"]
       description: "Comprehensive coverage with expert differentiation and integration framework"
+      multi_agent_available: true
+      single_agent_available: true
+      multi_agent_file: "research/orchestrator/methods/multi-agent/multi_perspective_approach.md"
+      single_agent_file: "research/orchestrator/methods/single-agent/multi_perspective_approach.md"
     
     primary_research:
       file: "primary_research.md"
@@ -85,6 +114,7 @@ advanced_methods:
   location: "research/orchestrator/methods/advanced/"
   source: "Created for AI Research Framework Phase 1"
   count: 4
+  multi_agent_conversion_priority: "medium"
   
   methods:
     constitutional_ai:
@@ -177,9 +207,55 @@ method_organization:
       - "adaptive_chain_of_thought"
       - "constitutional_ai"
 
+# MULTI-AGENT METHOD CONVERSION STATUS
+multi_agent_conversion:
+  completed:
+    - name: "multi_perspective_approach"
+      status: "Converted to true sub-agent spawning with 4 specialized agents"
+      agents: ["quantitative_analysis", "qualitative_insights", "industry_practice", "future_trends"]
+      
+    - name: "complex_research" 
+      status: "Converted to modular agent spawning with 5 specialized agents"
+      agents: ["market_landscape", "technical_feasibility", "risk_assessment", "financial_impact", "implementation_planning"]
+  
+  in_progress:
+    - name: "modular_task_decomposition"
+      priority: "high"
+      proposed_agents: ["task_module_agents"]
+      
+    - name: "ensemble_methods"
+      priority: "high" 
+      proposed_agents: ["method_cluster_agents"]
+      
+    - name: "self_consistency"
+      priority: "medium"
+      proposed_agents: ["reasoning_path_agents"]
+  
+  future_candidates:
+    - "domain_adaptive"
+    - "tree_of_thoughts"
+    - "textgrad_iterative"
+
+# FILE STRUCTURE STANDARDS
+file_structure_standards:
+  reports_folder:
+    location: "reports/"
+    description: "Clean research content only"
+    files: ["comprehensive-analysis.md", "perspective-X-name.md", "module-X-name.md"]
+    
+  meta_folder:
+    location: ".meta/"
+    description: "Hidden session tracking and metadata"
+    files: ["research-log.md", "sources.md", "session-info.yaml"]
+    
+  citation_format: "(Source Name, Year [https://full-url-here])"
+  mandatory_inline_citations: true
+
 # ORCHESTRATOR INTEGRATION PATHS
 integration_mapping:
   method_file_locations:
+    multi_agent_methods: "research/orchestrator/methods/multi-agent/"
+    single_agent_methods: "research/orchestrator/methods/single-agent/"
     existing_methods_path: "research/orchestrator/methods/existing/"
     advanced_methods_path: "research/orchestrator/methods/advanced/"
     registry_config: "research/orchestrator/config/method-registry.yaml"
@@ -220,6 +296,9 @@ quality_metrics:
     intelligent_selection: "Context-aware method selection ✅"
     quality_enhancement: "Advanced quality methods available ✅"
     execution_patterns: "Sequential, parallel, hybrid patterns ✅"
+    multi_agent_orchestration: "True sub-agent spawning for Claude Code ✅"
+    simplified_structure: "Clean reports/ and .meta/ folders ✅"
+    inline_citations: "Full URLs in research reports ✅"
 
 # AI INSTRUCTIONS FOR METHOD USAGE
 ai_instructions:

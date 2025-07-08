@@ -1,0 +1,256 @@
+# Hybrid Orchestrator Controller
+# AI INSTRUCTIONS: Routes between single-agent and multi-agent execution modes
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-01-08"
+  purpose: "Control routing between single-agent and multi-agent research execution modes"
+  assumptions:
+    claude_code: "Has Task tool capability for sub-agent spawning"
+    other_agents: "Do not have Task tool capability, use single-agent mode"
+
+# AGENT IDENTIFICATION AND ROUTING
+agent_identification:
+  claude_code_detection:
+    indicators:
+      - "Agent identifies as Claude Code"
+      - "Has access to Task tool"
+      - "Can spawn independent sub-agents"
+    execution_mode: "multi_agent"
+    method_directory: "research/orchestrator/methods/multi-agent/"
+  
+  other_agents_detection:
+    indicators:
+      - "Any agent other than Claude Code"
+      - "No Task tool capability"
+      - "Single-agent execution only"
+    execution_mode: "single_agent"
+    method_directory: "research/orchestrator/methods/single-agent/"
+
+# ROUTING DECISION LOGIC
+routing_logic:
+  primary_decision_tree:
+    step_1_agent_type_check:
+      if: "agent_name == 'Claude Code' OR has_task_tool == true"
+      then: "route_to_multi_agent_mode"
+      else: "route_to_single_agent_mode"
+    
+    step_2_method_availability_check:
+      multi_agent_path: "check research/orchestrator/methods/multi-agent/[method_name].md"
+      single_agent_path: "check research/orchestrator/methods/single-agent/[method_name].md"
+      fallback: "use research/orchestrator/methods/existing/[method_name].md"
+    
+    step_3_execution_configuration:
+      multi_agent_mode:
+        orchestrator_role: "spawn_and_coordinate_sub_agents"
+        execution_pattern: "parallel"
+        result_synthesis: "aggregate_sub_agent_outputs"
+      
+      single_agent_mode:
+        orchestrator_role: "apply_enhanced_prompts"
+        execution_pattern: "sequential_perspectives"
+        result_synthesis: "integrated_single_agent_analysis"
+
+# MULTI-AGENT MODE EXECUTION
+multi_agent_execution:
+  prerequisites:
+    - "Confirm Task tool availability"
+    - "Load multi-agent method specifications"
+    - "Prepare sub-agent coordination framework"
+  
+  execution_workflow:
+    step_1_load_method:
+      action: "Read research/orchestrator/methods/multi-agent/[method_name].md"
+      extract: "sub_agent_specifications and orchestrator_instructions"
+    
+    step_2_spawn_sub_agents:
+      process: |
+        For each sub_agent in method.sub_agent_specifications:
+          1. Create Task tool invocation with sub_agent.task_prompt
+          2. Set sub_agent.agent_description as task description  
+          3. Include research topic substitution: [INSERT_RESEARCH_GOAL] -> actual_topic
+          4. Spawn sub-agent and track execution
+      
+      coordination:
+        - "Track sub-agent progress and completion status"
+        - "Monitor for sub-agent failures or timeouts"
+        - "Collect sub-agent outputs upon completion"
+    
+    step_3_result_synthesis:
+      process: |
+        1. Collect all sub-agent research outputs
+        2. Apply method.synthesis_instructions
+        3. Create comprehensive integrated analysis
+        4. Validate cross-perspective consistency
+      
+      quality_validation:
+        - "Verify all expected sub-agent outputs received"
+        - "Check synthesis integrates all perspectives"
+        - "Confirm quality requirements met"
+  
+  error_handling:
+    sub_agent_failure:
+      action: "Retry sub-agent execution or fallback to single-agent mode"
+    
+    partial_completion:
+      action: "Synthesize available results and note missing perspectives"
+    
+    timeout_handling:
+      action: "Collect partial results and provide status update"
+
+# SINGLE-AGENT MODE EXECUTION  
+single_agent_execution:
+  prerequisites:
+    - "Load single-agent method specifications"
+    - "Prepare enhanced prompting framework"
+  
+  execution_workflow:
+    step_1_load_method:
+      action: "Read research/orchestrator/methods/single-agent/[method_name].md"
+      extract: "single_agent_prompt and output_structure"
+    
+    step_2_apply_enhanced_prompt:
+      process: |
+        1. Substitute [INSERT_RESEARCH_GOAL] with actual research topic
+        2. Apply method.single_agent_prompt
+        3. Execute research following prompt instructions
+        4. Structure output according to method.output_structure
+      
+      persona_management:
+        - "Switch between expert personas as defined in prompt"
+        - "Maintain perspective separation within single agent"
+        - "Ensure all required perspectives are covered"
+    
+    step_3_result_integration:
+      process: |
+        1. Verify all perspective sections are complete
+        2. Apply integration requirements from method
+        3. Create synthesis across perspectives
+        4. Generate final comprehensive analysis
+      
+      quality_validation:
+        - "Confirm all required perspectives covered"
+        - "Check perspective distinctiveness"
+        - "Validate integration completeness"
+
+# METHOD ROUTING CONFIGURATION
+method_routing:
+  supported_methods:
+    multi_perspective_approach:
+      multi_agent: "research/orchestrator/methods/multi-agent/multi_perspective_approach.md"
+      single_agent: "research/orchestrator/methods/single-agent/multi_perspective_approach.md"
+      fallback: "research/orchestrator/methods/existing/multi_perspective_approach.md"
+    
+    complex_research:
+      multi_agent: "research/orchestrator/methods/multi-agent/complex_research.md"
+      single_agent: "research/orchestrator/methods/single-agent/complex_research.md"
+      fallback: "research/orchestrator/methods/existing/complex_research.md"
+    
+    # Add other methods as they are converted
+    universal_research:
+      single_agent_only: "research/orchestrator/methods/existing/universal_research.md"
+    
+    step_by_step_research:
+      single_agent_only: "research/orchestrator/methods/existing/step_by_step_research.md"
+  
+  routing_rules:
+    if_multi_agent_available:
+      priority: "Use multi-agent version for better parallelization"
+      fallback: "Use single-agent version if multi-agent fails"
+    
+    if_single_agent_only:
+      action: "Use single-agent version regardless of agent capability"
+    
+    if_method_not_converted:
+      action: "Use existing method from research/orchestrator/methods/existing/"
+
+# EXECUTION MODE REPORTING
+execution_reporting:
+  mode_announcement_template: |
+    🔀 Research Execution Mode: ${execution_mode}
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    Agent Type: ${agent_type}
+    Method: ${method_name}
+    Execution Pattern: ${execution_pattern}
+    ${mode_specific_details}
+  
+  multi_agent_details: |
+    Sub-Agents: ${sub_agent_count}
+    Coordination: Parallel execution with result synthesis
+    Quality: Cross-perspective validation and integration
+  
+  single_agent_details: |
+    Perspectives: ${perspective_count} 
+    Execution: Sequential perspective analysis within single agent
+    Quality: Integrated analysis with perspective synthesis
+
+# QUALITY ASSURANCE ACROSS MODES
+quality_assurance:
+  consistency_requirements:
+    - "Both modes should produce equivalent quality output"
+    - "Core research insights should be consistent across modes"
+    - "Method-specific quality requirements must be met"
+    - "Integration depth should be comparable"
+  
+  mode_specific_validation:
+    multi_agent_mode:
+      - "All sub-agents complete successfully"
+      - "Sub-agent outputs meet individual quality requirements"
+      - "Synthesis properly integrates all sub-agent perspectives"
+      - "No sub-agent insights are lost in synthesis"
+    
+    single_agent_mode:
+      - "All required perspectives are distinctly addressed"
+      - "Persona switching is clear and consistent"
+      - "Integration maintains perspective diversity"
+      - "Single-agent limitations don't compromise quality"
+
+# AI AGENT INSTRUCTIONS
+ai_agent_instructions:
+  orchestrator_usage:
+    step_1_determine_mode:
+      - "Identify agent type and capabilities"
+      - "Route to appropriate execution mode"
+      - "Load corresponding method specifications"
+    
+    step_2_configure_execution:
+      - "Apply mode-specific execution workflow"
+      - "Configure quality checkpoints for mode"
+      - "Prepare result synthesis approach"
+    
+    step_3_execute_and_validate:
+      - "Execute research using selected mode"
+      - "Apply mode-specific quality validation"
+      - "Ensure consistency with quality requirements"
+  
+  mode_switching:
+    when_to_switch:
+      - "Multi-agent execution fails or times out"
+      - "Sub-agent capabilities are insufficient"
+      - "Single-agent mode explicitly requested"
+    
+    how_to_switch:
+      - "Gracefully terminate any active sub-agents"
+      - "Switch to single-agent method specification"
+      - "Restart execution with single-agent workflow"
+      - "Maintain research quality and completeness"
+
+# PERFORMANCE OPTIMIZATION
+performance_optimization:
+  multi_agent_optimizations:
+    - "Spawn sub-agents in parallel for maximum efficiency"
+    - "Use appropriate timeouts for sub-agent execution"
+    - "Cache sub-agent results for potential reuse"
+    - "Monitor resource usage and adjust parallelism"
+  
+  single_agent_optimizations:
+    - "Optimize prompt structure for clear persona switching"
+    - "Use structured output formatting for better integration"
+    - "Apply efficient perspective synthesis techniques"
+    - "Maintain context across perspective switches"
+  
+  universal_optimizations:
+    - "Cache method specifications for faster loading"
+    - "Use consistent quality validation across modes"
+    - "Optimize result synthesis for better integration"
+    - "Track performance metrics for continuous improvement"

@@ -1,0 +1,334 @@
+# Sub-Agent Spawning System
+# AI INSTRUCTIONS: Use Task tool to spawn independent research sub-agents
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-01-08"
+  purpose: "Spawn and coordinate independent research sub-agents using Task tool"
+  requirements: "Task tool capability for sub-agent execution"
+
+# SUB-AGENT SPAWNING FRAMEWORK
+spawning_framework:
+  task_tool_integration:
+    description: "Use Task tool to spawn independent AI agents for specialized research"
+    
+    spawning_process: |
+      def spawn_research_sub_agent(sub_agent_spec, research_topic):
+          """
+          Spawn a specialized research sub-agent using Task tool
+          
+          Args:
+              sub_agent_spec: Sub-agent specification from method file
+              research_topic: Actual research topic to substitute
+          
+          Returns:
+              task_id: Reference to spawned sub-agent task
+          """
+          
+          # Prepare sub-agent prompt with research topic substitution
+          agent_prompt = sub_agent_spec.task_prompt.replace(
+              "[INSERT_RESEARCH_GOAL]", 
+              research_topic
+          )
+          
+          # Spawn sub-agent using Task tool
+          task_id = Task(
+              description=sub_agent_spec.agent_description,
+              prompt=agent_prompt
+          )
+          
+          return task_id
+    
+    coordination_process: |
+      def coordinate_sub_agents(sub_agent_specs, research_topic):
+          """
+          Spawn and coordinate multiple sub-agents for parallel research
+          
+          Args:
+              sub_agent_specs: Dictionary of sub-agent specifications
+              research_topic: Research topic for all sub-agents
+          
+          Returns:
+              coordination_results: Sub-agent outputs and coordination status
+          """
+          
+          spawned_agents = {}
+          
+          # Spawn all sub-agents in parallel
+          for agent_name, agent_spec in sub_agent_specs.items():
+              task_id = spawn_research_sub_agent(agent_spec, research_topic)
+              spawned_agents[agent_name] = {
+                  "task_id": task_id,
+                  "spec": agent_spec,
+                  "status": "running"
+              }
+          
+          # Monitor and collect results
+          results = {}
+          for agent_name, agent_info in spawned_agents.items():
+              try:
+                  # Wait for sub-agent completion and collect results
+                  agent_output = wait_for_task_completion(agent_info["task_id"])
+                  results[agent_name] = {
+                      "output": agent_output,
+                      "status": "completed",
+                      "quality_check": validate_sub_agent_output(
+                          agent_output, 
+                          agent_info["spec"].quality_requirements
+                      )
+                  }
+              except TaskTimeoutError:
+                  results[agent_name] = {
+                      "status": "timeout",
+                      "error": "Sub-agent execution timed out"
+                  }
+              except Exception as e:
+                  results[agent_name] = {
+                      "status": "failed", 
+                      "error": str(e)
+                  }
+          
+          return results
+
+# SUB-AGENT SPECIFICATIONS PROCESSING
+specification_processing:
+  prompt_preparation:
+    variable_substitution:
+      research_topic: "Replace [INSERT_RESEARCH_GOAL] with actual research topic"
+      context_variables: "Substitute any other context-specific variables"
+    
+    prompt_enhancement:
+      clarity_improvement: "Ensure sub-agent instructions are clear and unambiguous"
+      scope_definition: "Clearly define sub-agent research boundaries"
+      output_specification: "Specify expected output format and structure"
+      quality_criteria: "Include quality requirements and success metrics"
+  
+  task_configuration:
+    description_formatting:
+      pattern: "{agent_description} - {research_topic_summary}"
+      example: "Quantitative Research Specialist - AI impact on healthcare"
+    
+    prompt_structuring:
+      sections:
+        - "Role definition and expertise area"
+        - "Research topic and specific focus"
+        - "Research methodology and approach"
+        - "Source priorities and quality requirements"
+        - "Output format and deliverable specifications"
+        - "Integration context and handoff points"
+
+# PARALLEL EXECUTION MANAGEMENT
+parallel_execution:
+  spawning_strategy:
+    simultaneous_spawn:
+      description: "Spawn all sub-agents at the same time for maximum parallelism"
+      benefits: "Fastest execution, true parallel processing"
+      considerations: "Higher resource usage, coordination complexity"
+    
+    sequential_spawn:
+      description: "Spawn sub-agents one after another"
+      benefits: "Lower resource usage, easier monitoring"
+      considerations: "Slower execution, less parallelism"
+    
+    batch_spawn:
+      description: "Spawn sub-agents in smaller batches"
+      benefits: "Balanced resource usage and parallelism"
+      considerations: "Moderate complexity, good for resource constraints"
+  
+  coordination_mechanisms:
+    task_tracking:
+      - "Maintain registry of spawned sub-agent tasks"
+      - "Track task status and completion"
+      - "Monitor for timeouts and failures"
+      - "Collect and validate sub-agent outputs"
+    
+    result_aggregation:
+      - "Collect outputs from all completed sub-agents"
+      - "Validate output quality against specifications"
+      - "Organize results for synthesis process"
+      - "Handle partial results from failed sub-agents"
+    
+    error_handling:
+      - "Retry failed sub-agent executions"
+      - "Graceful degradation with partial results"
+      - "Fallback to single-agent mode if needed"
+      - "Error reporting and diagnostic information"
+
+# QUALITY VALIDATION FOR SUB-AGENTS
+quality_validation:
+  output_validation:
+    completeness_check:
+      - "Verify all required sections are present"
+      - "Check deliverables match specifications"
+      - "Ensure research scope is adequately covered"
+    
+    quality_criteria_validation:
+      - "Apply sub-agent specific quality requirements"
+      - "Validate research methodology adherence"
+      - "Check source quality and diversity"
+      - "Verify output format compliance"
+    
+    consistency_validation:
+      - "Check consistency with sub-agent role and expertise"
+      - "Validate research focus alignment"
+      - "Ensure appropriate depth and detail level"
+  
+  validation_algorithms: |
+    def validate_sub_agent_output(output, quality_requirements):
+        """
+        Validate sub-agent output against quality requirements
+        
+        Args:
+            output: Sub-agent research output
+            quality_requirements: List of quality criteria
+        
+        Returns:
+            validation_result: Quality validation score and feedback
+        """
+        
+        validation_score = 0.0
+        validation_feedback = []
+        
+        for requirement in quality_requirements:
+            if check_requirement_met(output, requirement):
+                validation_score += 1.0
+                validation_feedback.append(f"✓ {requirement}")
+            else:
+                validation_feedback.append(f"✗ {requirement}")
+        
+        validation_score = validation_score / len(quality_requirements)
+        
+        return {
+            "score": validation_score,
+            "feedback": validation_feedback,
+            "passed": validation_score >= 0.8
+        }
+
+# RESULT SYNTHESIS COORDINATION
+synthesis_coordination:
+  pre_synthesis_validation:
+    - "Verify all sub-agents completed successfully"
+    - "Validate individual sub-agent output quality"
+    - "Check for missing perspectives or gaps"
+    - "Prepare synthesis input data structure"
+  
+  synthesis_process:
+    step_1_collect_outputs:
+      action: "Gather all sub-agent research outputs"
+      organization: "Structure by perspective and research aspect"
+    
+    step_2_cross_reference_analysis:
+      action: "Identify convergent and divergent findings"
+      techniques: "Cross-perspective comparison and analysis"
+    
+    step_3_integrated_synthesis:
+      action: "Create comprehensive analysis integrating all perspectives"
+      approach: "Multi-dimensional synthesis with strategic recommendations"
+  
+  post_synthesis_validation:
+    - "Verify all sub-agent insights are represented"
+    - "Check synthesis quality and completeness"
+    - "Validate strategic recommendations"
+    - "Ensure no perspective dominates unfairly"
+
+# ERROR HANDLING AND RECOVERY
+error_handling:
+  sub_agent_failures:
+    timeout_handling:
+      detection: "Monitor sub-agent execution time against thresholds"
+      response: "Collect partial results and continue with available data"
+      recovery: "Retry sub-agent execution with modified parameters"
+    
+    execution_failures:
+      detection: "Monitor sub-agent task status and error conditions"
+      response: "Log failure details and attempt recovery"
+      recovery: "Retry with simplified prompt or fallback to single-agent mode"
+    
+    quality_failures:
+      detection: "Validate sub-agent output against quality requirements"
+      response: "Request sub-agent output refinement or regeneration"
+      recovery: "Use available quality outputs and note limitations"
+  
+  coordination_failures:
+    partial_completion:
+      scenario: "Some sub-agents complete while others fail"
+      handling: "Synthesize available results and document missing perspectives"
+    
+    total_failure:
+      scenario: "All or most sub-agents fail to execute"
+      handling: "Fallback to single-agent mode execution"
+    
+    synthesis_failures:
+      scenario: "Sub-agents complete but synthesis fails"
+      handling: "Provide individual sub-agent outputs with basic integration"
+
+# PERFORMANCE OPTIMIZATION
+performance_optimization:
+  resource_management:
+    parallel_execution_limits:
+      - "Monitor system resource usage during parallel spawning"
+      - "Adjust parallelism based on available computational resources"
+      - "Implement queuing for resource-constrained environments"
+    
+    timeout_optimization:
+      - "Set appropriate timeouts based on research complexity"
+      - "Allow longer timeouts for complex research tasks"
+      - "Implement progressive timeout strategies"
+  
+  efficiency_improvements:
+    prompt_optimization:
+      - "Optimize sub-agent prompts for clarity and efficiency"
+      - "Reduce unnecessary prompt complexity"
+      - "Use structured prompt templates for consistency"
+    
+    result_processing:
+      - "Streamline result collection and validation"
+      - "Optimize synthesis process for faster integration"
+      - "Cache validated outputs for potential reuse"
+
+# INTEGRATION WITH ORCHESTRATOR
+orchestrator_integration:
+  workflow_integration:
+    trigger_point: "When multi-agent mode is selected by hybrid controller"
+    input_requirements: "Method specification with sub-agent specifications"
+    output_delivery: "Synthesized research results with coordination metadata"
+  
+  coordination_handoffs:
+    pre_execution: "Receive method specifications and research context"
+    during_execution: "Provide status updates and progress monitoring"
+    post_execution: "Deliver synthesized results and quality validation"
+  
+  fallback_coordination:
+    trigger_conditions: "Sub-agent failures or coordination problems"
+    fallback_action: "Signal hybrid controller to switch to single-agent mode"
+    data_preservation: "Preserve any successful sub-agent outputs for potential use"
+
+# AI AGENT INSTRUCTIONS
+ai_agent_instructions:
+  how_to_use_spawner:
+    step_1_prepare_specifications:
+      - "Load multi-agent method specification"
+      - "Extract sub-agent specifications and requirements"
+      - "Prepare research topic substitution"
+    
+    step_2_spawn_coordination:
+      - "Use Task tool to spawn sub-agents with prepared prompts"
+      - "Monitor sub-agent execution and status"
+      - "Collect sub-agent outputs upon completion"
+    
+    step_3_result_processing:
+      - "Validate sub-agent outputs against quality requirements"
+      - "Organize results for synthesis process"
+      - "Apply synthesis instructions from method specification"
+    
+    step_4_quality_assurance:
+      - "Verify synthesis integrates all sub-agent perspectives"
+      - "Check final output meets overall quality requirements"
+      - "Document coordination process and any issues encountered"
+  
+  best_practices:
+    - "Always validate sub-agent output quality before synthesis"
+    - "Provide clear, unambiguous prompts to sub-agents"
+    - "Monitor resource usage and adjust parallelism accordingly"
+    - "Implement graceful degradation for partial failures"
+    - "Document coordination process for debugging and improvement"
