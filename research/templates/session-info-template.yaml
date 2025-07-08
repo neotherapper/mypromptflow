@@ -1,0 +1,35 @@
+# Simple Session Information Template
+# AI INSTRUCTIONS: Use this minimal template for .meta/session-info.yaml
+
+session:
+  id: "research_YYYYMMDD_HHMM"
+  topic: "Main research topic"
+  method: "method_name_used"
+  agent: "Claude Code"
+  start_time: "YYYY-MM-DDTHH:MM:SSZ"
+  end_time: "YYYY-MM-DDTHH:MM:SSZ"
+  duration_minutes: 0
+
+execution_mode: "multi_agent|single_agent"
+
+files_created:
+  reports:
+    - "comprehensive-analysis.md"
+    # Add individual sub-agent or phase files
+  meta:
+    - "research-log.md"
+    - "sources.md"
+    - "session-info.yaml"
+
+research_summary:
+  sub_agents_spawned: 0  # For multi-agent mode
+  research_phases: 0     # For single-agent mode  
+  sources_accessed: 0
+  research_quality: "high|medium|basic"
+  key_insights_count: 0
+
+completion_status:
+  all_files_saved: true
+  citations_included: true
+  synthesis_completed: true
+  quality_validated: true

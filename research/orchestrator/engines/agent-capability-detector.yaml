@@ -1,0 +1,324 @@
+# Agent Capability Detection System
+# AI INSTRUCTIONS: Use this system to detect agent capabilities and route to appropriate execution mode
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-01-08"
+  purpose: "Detect agent capabilities and determine execution mode for research orchestration"
+  compatibility: "Universal - works with any AI agent"
+
+# CAPABILITY DETECTION SYSTEM
+capability_detection:
+  detection_methods:
+    tool_availability_check:
+      description: "Check if agent has access to Task tool for sub-agent spawning"
+      method: "attempt_tool_detection"
+      indicators:
+        has_task_tool: "Agent can spawn sub-agents using Task tool"
+        has_parallel_execution: "Agent can execute multiple tasks concurrently"
+        has_agent_communication: "Agent can coordinate between spawned sub-agents"
+      
+      detection_algorithm: |
+        def detect_task_tool_capability():
+          """
+          Detect if agent has Task tool capability for sub-agent spawning
+          Returns: capability_profile with execution_mode recommendation
+          """
+          capability_profile = {
+            "has_task_tool": False,
+            "has_parallel_execution": False,
+            "has_agent_communication": False,
+            "execution_mode": "single_agent",
+            "confidence": 0.0
+          }
+          
+          # Check for Task tool availability
+          try:
+            # This is a conceptual check - actual implementation depends on agent architecture
+            if hasattr(self, 'Task') or 'Task' in available_tools:
+              capability_profile["has_task_tool"] = True
+              capability_profile["execution_mode"] = "multi_agent"
+              capability_profile["confidence"] = 0.9
+              
+              # Check for parallel execution capability
+              if can_execute_parallel_tasks():
+                capability_profile["has_parallel_execution"] = True
+                capability_profile["confidence"] = 0.95
+                
+              # Check for agent communication capability
+              if can_coordinate_agents():
+                capability_profile["has_agent_communication"] = True
+                capability_profile["confidence"] = 1.0
+                
+          except Exception:
+            # Fallback to single-agent mode
+            capability_profile["execution_mode"] = "single_agent"
+            capability_profile["confidence"] = 1.0
+            
+          return capability_profile
+    
+    performance_profiling:
+      description: "Profile agent performance characteristics"
+      method: "analyze_execution_patterns"
+      indicators:
+        processing_speed: "Agent's processing capability"
+        context_handling: "Agent's ability to maintain context across tasks"
+        resource_availability: "Available computational resources"
+      
+      profiling_algorithm: |
+        def profile_agent_performance():
+          """
+          Profile agent performance to optimize execution strategy
+          Returns: performance_profile for execution optimization
+          """
+          performance_profile = {
+            "processing_speed": "standard",
+            "context_handling": "good",
+            "resource_availability": "medium",
+            "optimal_parallelism": 1,
+            "recommended_batch_size": 1
+          }
+          
+          # Assess processing speed
+          if can_handle_complex_tasks():
+            performance_profile["processing_speed"] = "high"
+            performance_profile["optimal_parallelism"] = 4
+            
+          # Assess context handling
+          if can_maintain_long_context():
+            performance_profile["context_handling"] = "excellent"
+            performance_profile["recommended_batch_size"] = 3
+            
+          return performance_profile
+
+# EXECUTION MODE ROUTING
+execution_mode_routing:
+  mode_selection_rules:
+    multi_agent_mode:
+      requirements:
+        - has_task_tool: true
+        - has_parallel_execution: true
+        - processing_speed: ["high", "standard"]
+      
+      benefits:
+        - "True parallel execution of research methods"
+        - "Independent sub-agent specialization"
+        - "Advanced result synthesis from multiple perspectives"
+        - "Scalable research complexity handling"
+      
+      use_cases:
+        - "Complex research requiring multiple perspectives"
+        - "Time-sensitive research with parallel processing needs"
+        - "High-quality research requiring specialized sub-agents"
+        - "Research with clear method decomposition"
+    
+    single_agent_mode:
+      requirements:
+        - "Always available as fallback"
+        - "No special tool requirements"
+      
+      benefits:
+        - "Universal compatibility with any AI agent"
+        - "Lower resource requirements"
+        - "Simpler execution and debugging"
+        - "Consistent with existing workflows"
+      
+      use_cases:
+        - "Agents without Task tool capability"
+        - "Simple to moderate research complexity"
+        - "Resource-constrained environments"
+        - "Debugging and development scenarios"
+    
+    hybrid_mode:
+      requirements:
+        - has_task_tool: true
+        - adaptive_capability: true
+      
+      benefits:
+        - "Dynamic switching between modes based on requirements"
+        - "Optimal resource utilization"
+        - "Fallback capability for partial failures"
+        - "Context-aware execution optimization"
+      
+      use_cases:
+        - "Adaptive research with changing requirements"
+        - "Resource optimization scenarios"
+        - "Fault-tolerant research execution"
+        - "Performance-critical applications"
+
+# CAPABILITY PROFILES
+capability_profiles:
+  claude_code_with_task_tool:
+    description: "Claude Code with Task tool capability"
+    capabilities:
+      has_task_tool: true
+      has_parallel_execution: true
+      has_agent_communication: true
+      processing_speed: "high"
+      context_handling: "excellent"
+    
+    recommended_mode: "multi_agent"
+    max_concurrent_agents: 4
+    optimal_methods: ["multi_perspective_approach", "complex_research", "ensemble_methods"]
+    
+    execution_preferences:
+      default_pattern: "parallel"
+      quality_enhancement: "always_use_constitutional_ai"
+      result_synthesis: "advanced_aggregation"
+  
+  claude_code_standard:
+    description: "Claude Code without Task tool capability"
+    capabilities:
+      has_task_tool: false
+      has_parallel_execution: false
+      has_agent_communication: false
+      processing_speed: "high"
+      context_handling: "excellent"
+    
+    recommended_mode: "single_agent"
+    max_concurrent_agents: 1
+    optimal_methods: ["adaptive_chain_of_thought", "domain_adaptive", "iterative_research_refinement"]
+    
+    execution_preferences:
+      default_pattern: "sequential"
+      quality_enhancement: "constitutional_ai_validation"
+      result_synthesis: "integrated_analysis"
+  
+  gemini_with_orchestration:
+    description: "Gemini with orchestration capabilities"
+    capabilities:
+      has_task_tool: true
+      has_parallel_execution: true
+      has_agent_communication: true
+      processing_speed: "high"
+      context_handling: "good"
+    
+    recommended_mode: "multi_agent"
+    max_concurrent_agents: 3
+    optimal_methods: ["multi_perspective_approach", "tree_of_thoughts", "self_consistency"]
+    
+    execution_preferences:
+      default_pattern: "hybrid"
+      quality_enhancement: "multi_validation"
+      result_synthesis: "consensus_building"
+  
+  generic_ai_agent:
+    description: "Generic AI agent with unknown capabilities"
+    capabilities:
+      has_task_tool: false
+      has_parallel_execution: false
+      has_agent_communication: false
+      processing_speed: "standard"
+      context_handling: "good"
+    
+    recommended_mode: "single_agent"
+    max_concurrent_agents: 1
+    optimal_methods: ["universal_research", "step_by_step_research", "primary_research"]
+    
+    execution_preferences:
+      default_pattern: "sequential"
+      quality_enhancement: "basic_validation"
+      result_synthesis: "simple_integration"
+
+# DETECTION WORKFLOW
+detection_workflow:
+  step_1_initial_detection:
+    process: "Run capability detection algorithms"
+    output: "capability_profile"
+    fallback: "Assume generic_ai_agent profile"
+  
+  step_2_profile_matching:
+    process: "Match detected capabilities to known profiles"
+    output: "matched_profile or custom_profile"
+    fallback: "Use generic_ai_agent profile"
+  
+  step_3_mode_selection:
+    process: "Select execution mode based on profile and requirements"
+    output: "execution_mode_recommendation"
+    considerations:
+      - "Research complexity requirements"
+      - "Quality requirements"
+      - "Time constraints"
+      - "Resource availability"
+  
+  step_4_optimization:
+    process: "Optimize execution parameters for selected mode"
+    output: "execution_configuration"
+    parameters:
+      - "Parallel agent count"
+      - "Method selection preferences"
+      - "Quality checkpoint configuration"
+      - "Result synthesis approach"
+
+# AI AGENT INSTRUCTIONS
+ai_agent_instructions:
+  how_to_use_detector:
+    step_1_run_detection:
+      - "Execute capability detection at start of research session"
+      - "Cache results for session duration"
+      - "Use fallback profile if detection fails"
+    
+    step_2_apply_routing:
+      - "Route to appropriate execution mode based on detection"
+      - "Configure orchestrator for detected capabilities"
+      - "Adapt method selection to capability profile"
+    
+    step_3_execution_optimization:
+      - "Use capability profile to optimize execution"
+      - "Adjust parallelism based on detected capabilities"
+      - "Configure quality checkpoints for execution mode"
+    
+    step_4_fallback_handling:
+      - "Always maintain single-agent mode as fallback"
+      - "Gracefully degrade from multi-agent to single-agent"
+      - "Provide consistent experience regardless of mode"
+
+# INTEGRATION POINTS
+integration_points:
+  orchestrator_integration:
+    trigger_point: "Before context analysis"
+    output: "execution_mode and capability_profile"
+    usage: "Configure orchestrator behavior based on capabilities"
+  
+  method_selection_integration:
+    trigger_point: "During method selection"
+    output: "capability_adjusted_method_preferences"
+    usage: "Adjust method selection based on execution capabilities"
+  
+  execution_integration:
+    trigger_point: "Before method execution"
+    output: "execution_configuration"
+    usage: "Configure execution parameters for optimal performance"
+  
+  result_synthesis_integration:
+    trigger_point: "After method execution"
+    output: "synthesis_configuration"
+    usage: "Configure result synthesis based on execution mode"
+
+# VALIDATION AND TESTING
+validation_framework:
+  capability_detection_tests:
+    test_scenarios:
+      - "Agent with Task tool capability"
+      - "Agent without Task tool capability"
+      - "Agent with partial capabilities"
+      - "Agent with unknown capabilities"
+    
+    validation_criteria:
+      - "Correct capability detection"
+      - "Appropriate mode selection"
+      - "Graceful fallback handling"
+      - "Consistent execution quality"
+  
+  execution_mode_tests:
+    test_scenarios:
+      - "Multi-agent mode execution"
+      - "Single-agent mode execution"
+      - "Hybrid mode execution"
+      - "Mode switching during execution"
+    
+    validation_criteria:
+      - "Correct mode routing"
+      - "Optimal performance for mode"
+      - "Consistent output quality"
+      - "Proper error handling"
