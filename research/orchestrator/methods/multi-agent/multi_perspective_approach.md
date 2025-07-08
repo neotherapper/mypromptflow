@@ -53,11 +53,16 @@ sub_agent_specifications:
       - Trend analysis with numerical evidence
       - Data-driven conclusions and recommendations
       
-      MANDATORY FILE SAVING:
+      MANDATORY FILE SAVING AND CITATIONS:
       Your research findings will be used as the quantitative perspective in a 
-      comprehensive multi-perspective analysis. You MUST save your complete research 
-      to a file named "perspective-1-quantitative.md" using the Write tool before 
-      completing your task.
+      comprehensive multi-perspective analysis. You MUST:
+      
+      1. Save your complete research to "reports/perspective-1-quantitative.md" using Write tool
+      2. Include inline citations with FULL URLs in this format:
+         (Source Name, Year [https://full-url-here])
+      3. For every fact, statistic, or claim, include the complete source URL
+      
+      Example citation: "AI adoption increased 35% in 2024 (McKinsey AI Survey 2024 [https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2024])"
     
     expected_deliverables:
       - "Quantitative analysis with specific metrics"
@@ -105,11 +110,16 @@ sub_agent_specifications:
       - Thematic analysis with narrative understanding
       - Nuanced conclusions with rich interpretation
       
-      MANDATORY FILE SAVING:
+      MANDATORY FILE SAVING AND CITATIONS:
       Your research findings will be used as the qualitative perspective in a 
-      comprehensive multi-perspective analysis. You MUST save your complete research 
-      to a file named "perspective-2-qualitative.md" using the Write tool before 
-      completing your task.
+      comprehensive multi-perspective analysis. You MUST:
+      
+      1. Save your complete research to "reports/perspective-2-qualitative.md" using Write tool
+      2. Include inline citations with FULL URLs in this format:
+         (Source Name, Year [https://full-url-here])
+      3. For every quote, case study, or qualitative insight, include the complete source URL
+      
+      Example citation: "Stakeholders reported implementation challenges (Harvard Business Review Case Study 2024 [https://hbr.org/full-article-url-here])"
     
     expected_deliverables:
       - "Stakeholder analysis and perspectives"
@@ -157,11 +167,16 @@ sub_agent_specifications:
       - Case studies with lessons learned
       - Practical recommendations and best practices
       
-      MANDATORY FILE SAVING:
+      MANDATORY FILE SAVING AND CITATIONS:
       Your research findings will be used as the industry practice perspective in a 
-      comprehensive multi-perspective analysis. You MUST save your complete research 
-      to a file named "perspective-3-industry-practice.md" using the Write tool before 
-      completing your task.
+      comprehensive multi-perspective analysis. You MUST:
+      
+      1. Save your complete research to "reports/perspective-3-industry-practice.md" using Write tool
+      2. Include inline citations with FULL URLs in this format:
+         (Source Name, Year [https://full-url-here])
+      3. For every best practice, case study, or industry standard, include the complete source URL
+      
+      Example citation: "Companies using agile methodology report 25% faster delivery (State of Agile Report 2024 [https://stateofagile.com/report-2024-full-url])"
     
     expected_deliverables:
       - "Current industry practices and standards"
@@ -209,11 +224,16 @@ sub_agent_specifications:
       - Risk assessment and potential disruptions
       - Future-oriented strategic recommendations
       
-      MANDATORY FILE SAVING:
+      MANDATORY FILE SAVING AND CITATIONS:
       Your research findings will be used as the future trends perspective in a 
-      comprehensive multi-perspective analysis. You MUST save your complete research 
-      to a file named "perspective-4-future-trends.md" using the Write tool before 
-      completing your task.
+      comprehensive multi-perspective analysis. You MUST:
+      
+      1. Save your complete research to "reports/perspective-4-future-trends.md" using Write tool
+      2. Include inline citations with FULL URLs in this format:
+         (Source Name, Year [https://full-url-here])
+      3. For every trend prediction, forecast, or strategic insight, include the complete source URL
+      
+      Example citation: "Experts predict 40% growth in quantum computing by 2030 (Gartner Technology Trends 2024 [https://www.gartner.com/full-report-url-here])"
     
     expected_deliverables:
       - "Emerging trends and future developments"
@@ -234,10 +254,10 @@ synthesis_instructions: |
   their research from different perspectives. Your task is to:
   
   1. COLLECT SUB-AGENT OUTPUTS:
-     - Read perspective-1-quantitative.md
-     - Read perspective-2-qualitative.md
-     - Read perspective-3-industry-practice.md
-     - Read perspective-4-future-trends.md
+     - Read reports/perspective-1-quantitative.md
+     - Read reports/perspective-2-qualitative.md
+     - Read reports/perspective-3-industry-practice.md
+     - Read reports/perspective-4-future-trends.md
   
   2. ANALYZE CROSS-PERSPECTIVE INSIGHTS:
      - Identify convergent findings across perspectives
@@ -257,7 +277,12 @@ synthesis_instructions: |
      - Strategic positioning based on future trends analysis
      - Risk mitigation strategies addressing identified challenges
   
-  OUTPUT: Create comprehensive-analysis.md integrating all perspectives and save using Write tool
+  OUTPUT: 
+  - Create reports/comprehensive-analysis.md integrating all perspectives
+  - Create .meta/research-log.md using research-log-template.md
+  - Create .meta/sources.md using sources-template.md 
+  - Create .meta/session-info.yaml using session-info-template.yaml
+  - Save all files using Write tool
 
 execution_pattern: "parallel"
 
@@ -276,12 +301,14 @@ quality_validation:
   - "Ensure cross-perspective insights are identified"
 
 file_structure:
-  sub_agent_outputs:
-    - "Individual sub-agent research results"
-    - "Specialized perspective analysis"
-    - "Domain-specific insights and recommendations"
+  reports_folder:
+    - "reports/perspective-1-quantitative.md"
+    - "reports/perspective-2-qualitative.md"
+    - "reports/perspective-3-industry-practice.md"
+    - "reports/perspective-4-future-trends.md"
+    - "reports/comprehensive-analysis.md"
   
-  synthesis_output:
-    - "comprehensive-analysis.md"
-    - "Cross-perspective synthesis"
-    - "Integrated strategic recommendations"
+  meta_folder:
+    - ".meta/research-log.md"
+    - ".meta/sources.md"
+    - ".meta/session-info.yaml"

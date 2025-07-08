@@ -3,8 +3,8 @@
 # FILE REFERENCES: Direct file paths for Claude to access orchestrator components
 
 metadata:
-  version: "2.0.0"
-  last_updated: "2024-07-04"
+  version: "3.0.0"
+  last_updated: "2025-01-08"
   purpose: "Enable Claude to use YAML-based research orchestrator system with automatic research detection"
   target: "Claude AI agents working with research framework"
   supersedes: "ai-agent-integration.yaml"
@@ -207,11 +207,14 @@ claude_orchestrator_workflow:
         - "Create comprehensive analysis file combining all perspectives"
       
       file_saving_requirements:
-        individual_sub_agent_files: "MANDATORY - Each sub-agent must save its research to individual file"
-        file_naming_convention: "perspective-[number]-[description].md or module-[number]-[description].md"
-        comprehensive_analysis: "MANDATORY - Create comprehensive-analysis.md combining all sub-agent work"
-        research_metadata: "MANDATORY - Save research-metadata.yaml with complete session info"
-        execution_log: "MANDATORY - Save research-execution-log.yaml tracking all sub-agent work"
+        reports_folder: "MANDATORY - All research content in reports/ folder"
+        individual_sub_agent_files: "MANDATORY - Each sub-agent saves to reports/perspective-X-name.md or reports/module-X-name.md"
+        comprehensive_analysis: "MANDATORY - Create reports/comprehensive-analysis.md combining all sub-agent work"
+        meta_folder: "MANDATORY - All session info in .meta/ folder (hidden)"
+        research_log: "MANDATORY - Create .meta/research-log.md using research-log-template.md"
+        sources_tracking: "MANDATORY - Create .meta/sources.md with full URLs using sources-template.md"
+        session_info: "MANDATORY - Create .meta/session-info.yaml using session-info-template.yaml"
+        inline_citations: "MANDATORY - All research reports must include (Source, Year [https://full-url]) format"
       
       quality_validation:
         sub_agent_level: "Validate each sub-agent output against quality requirements"

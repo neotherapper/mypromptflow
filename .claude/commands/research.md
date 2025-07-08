@@ -80,18 +80,22 @@ Use intelligent hybrid orchestrator for research requests: $ARGUMENTS
    - Load multi-agent method specifications
    - Spawn specialized sub-agents using Task tool
    - Coordinate parallel sub-agent execution
-   - Each sub-agent saves its research to individual file
+   - Each sub-agent saves research to reports/ folder with inline citations
    - Collect and validate all sub-agent outputs
-   - Synthesize results into comprehensive-analysis.md
-   - Save all metadata and execution logs
+   - Synthesize results into comprehensive analysis
+   - Save simplified session info to .meta/ folder
    
    File outputs:
-   - Individual sub-agent files: perspective-X-[description].md
-   - Comprehensive synthesis: comprehensive-analysis.md
-   - Research metadata: research-metadata.yaml
-   - Execution log: research-execution-log.yaml
-   - Research plan: research-plan.md
-   - Research sources: research-sources.md
+   Research Reports (reports/ folder):
+   - Individual sub-agent files: reports/perspective-X-[description].md
+   - Comprehensive synthesis: reports/comprehensive-analysis.md
+   
+   Session Info (.meta/ folder - hidden):
+   - Research log: .meta/research-log.md
+   - Source tracking: .meta/sources.md  
+   - Session metadata: .meta/session-info.yaml
+   
+   Citation format: (Source Name, Year [https://full-url-here])
 
 6. **Multi-Agent Orchestrator Summary Output**
 
@@ -142,6 +146,11 @@ Use intelligent hybrid orchestrator for research requests: $ARGUMENTS
 - Existing Methods (Fallback): `research/orchestrator/methods/existing/[method_name].md`
 - Advanced Methods: `research/orchestrator/methods/advanced/[method_name].md`
 - Methods Index: `research/orchestrator/methods/methods-index.yaml`
+
+**Templates:**
+- Research Log: `research/templates/research-log-template.md`
+- Sources: `research/templates/sources-template.md`
+- Session Info: `research/templates/session-info-template.yaml`
 
 **Integration Guidance:**
 - Workflow Templates: `research/orchestrator/integration/workflow-orchestrator.yaml`
@@ -199,26 +208,26 @@ User: "Analyze ethical implications of AGI on global economics"
 
 ---
 
-**AI Instructions for Hybrid System:**
+**AI Instructions for Claude Code Multi-Agent System:**
 
-**For Claude Code (Multi-Agent Capable):**
-1. Always start with mode detection using hybrid controller
-2. Default to multi-agent mode for complex research
-3. Use Task tool to spawn specialized sub-agents
-4. Coordinate parallel execution and result synthesis
-5. Apply cross-agent quality validation
-6. Provide hybrid orchestrator analysis summary
+**Multi-Agent Research Execution:**
+1. Always use multi-agent mode with Task tool
+2. Spawn specialized sub-agents for parallel research
+3. Each sub-agent saves to reports/ folder with inline citations
+4. Create simplified session tracking in .meta/ folder
+5. Synthesize all sub-agent work into comprehensive analysis
+6. Include full URLs in citation format: (Source, Year [https://full-url])
 
-**For Other Agents (Single-Agent Mode):**
-1. Route to single-agent mode automatically
-2. Use enhanced prompts from single-agent method directory
-3. Apply sequential perspective analysis within single agent
-4. Maintain perspective distinctiveness and integration
-5. Provide consistent quality output regardless of mode
+**File Structure Requirements:**
+1. All research reports in reports/ folder (clean, visible)
+2. All session info in .meta/ folder (hidden metadata)
+3. Inline citations with complete URLs in all reports
+4. Use provided templates for .meta/ files
+5. Maintain clean separation between research and metadata
 
-**Universal Instructions:**
-1. Read hybrid controller configuration first
-2. Route to appropriate method directory based on mode
-3. Apply selected methods with mode-specific execution
-4. Follow quality checkpoints appropriate for execution mode
-5. Document method effectiveness and mode performance
+**Quality Standards:**
+1. Every claim must have inline citation with full URL
+2. All sub-agent files must be saved and preserved
+3. Comprehensive synthesis must integrate all perspectives
+4. Session tracking must be simple and minimal
+5. Research quality over administrative complexity
