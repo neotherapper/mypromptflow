@@ -1,0 +1,136 @@
+{
+  "name": "React AI Development Powerhouse - Cursor Configuration",
+  "version": "1.0.0",
+  "description": "Optimized Cursor AI configuration for React development with TypeScript",
+  "settings": {
+    "composer": {
+      "enabled": true,
+      "maxTokens": 128000,
+      "multiFileEditing": true,
+      "contextAware": true,
+      "models": {
+        "primary": "claude-3.5-sonnet",
+        "fallback": "gpt-4"
+      }
+    },
+    "agent": {
+      "enabled": true,
+      "autonomousMode": true,
+      "taskCoordination": true,
+      "qualityGates": true
+    },
+    "chat": {
+      "enabled": true,
+      "architecturalDiscussions": true,
+      "codeExplanations": true,
+      "debuggingAssistance": true
+    },
+    "codeCompletion": {
+      "enabled": true,
+      "inlineCompletion": true,
+      "multiLineCompletion": true,
+      "contextLength": 8192
+    }
+  },
+  "prompts": {
+    "componentGeneration": {
+      "template": "Generate a React component with the following requirements:\n- TypeScript with proper interfaces\n- Responsive design using Tailwind CSS\n- Performance optimizations (React.memo, useMemo, useCallback)\n- Accessibility compliance (WCAG 2.1 AA)\n- Comprehensive error handling\n- Loading and empty states\n- Unit tests with React Testing Library\n\nComponent Name: {componentName}\nRequirements: {requirements}\nProps Interface: {propsInterface}",
+      "variables": ["componentName", "requirements", "propsInterface"]
+    },
+    "testGeneration": {
+      "template": "Generate comprehensive test suites for the React component:\n- Unit tests for all functionality\n- Integration tests for user interactions\n- Performance tests for render optimization\n- Accessibility tests for WCAG compliance\n- Edge cases and error scenarios\n- Mock data and test utilities\n\nComponent: {componentPath}\nTest Framework: Jest + React Testing Library\nCoverage Target: 90%+",
+      "variables": ["componentPath"]
+    },
+    "performanceOptimization": {
+      "template": "Analyze and optimize React component performance:\n- Identify re-render issues\n- Suggest memoization strategies\n- Optimize bundle size\n- Improve Core Web Vitals\n- Memory leak prevention\n- Lazy loading opportunities\n\nComponent: {componentPath}\nPerformance Metrics: {currentMetrics}\nTarget Improvements: {targetMetrics}",
+      "variables": ["componentPath", "currentMetrics", "targetMetrics"]
+    },
+    "codeReview": {
+      "template": "Perform comprehensive code review:\n- Code quality and best practices\n- TypeScript type safety\n- Performance implications\n- Security vulnerabilities\n- Accessibility compliance\n- Testing coverage\n- Documentation quality\n\nCode Changes: {gitDiff}\nFocus Areas: {reviewFocus}",
+      "variables": ["gitDiff", "reviewFocus"]
+    }
+  },
+  "workflows": {
+    "tdd": {
+      "enabled": true,
+      "steps": [
+        "Generate failing tests based on requirements",
+        "Implement minimal code to pass tests",
+        "Refactor for optimization and quality",
+        "Generate additional edge case tests",
+        "Validate performance and accessibility"
+      ]
+    },
+    "featureDevelopment": {
+      "enabled": true,
+      "agents": {
+        "architect": "System design and component planning",
+        "developer": "Component implementation and optimization",
+        "tester": "Test generation and validation",
+        "reviewer": "Code quality and standards compliance"
+      }
+    }
+  },
+  "qualityGates": {
+    "codeGeneration": {
+      "typeScriptCompliance": true,
+      "performanceOptimization": true,
+      "accessibilityCompliance": true,
+      "testCoverage": 90,
+      "securityValidation": true
+    },
+    "codeReview": {
+      "automatedAnalysis": true,
+      "performanceImpact": true,
+      "securityScan": true,
+      "accessibilityCheck": true,
+      "documentationQuality": true
+    }
+  },
+  "integrations": {
+    "vscode": {
+      "enabled": true,
+      "extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ]
+    },
+    "git": {
+      "enabled": true,
+      "preCommitHooks": true,
+      "branchAnalysis": true,
+      "commitMessageGeneration": true
+    },
+    "testing": {
+      "frameworks": ["jest", "react-testing-library", "playwright"],
+      "coverage": true,
+      "automation": true
+    }
+  },
+  "performance": {
+    "monitoring": {
+      "enabled": true,
+      "coreWebVitals": true,
+      "bundleSize": true,
+      "memoryUsage": true
+    },
+    "optimization": {
+      "automatic": true,
+      "suggestions": true,
+      "implementation": true
+    }
+  },
+  "accessibility": {
+    "validation": {
+      "enabled": true,
+      "wcagLevel": "AA",
+      "automation": true
+    },
+    "testing": {
+      "keyboardNavigation": true,
+      "screenReader": true,
+      "colorContrast": true
+    }
+  }
+}
