@@ -42,12 +42,14 @@ This comprehensive guide provides a complete implementation framework for an AI-
 #### AI-Enhanced Workflow Design
 
 **Step 1.1: Intelligent Requirement Analysis**
-**Tools:** Claude Code + JIRA AI
+**Tools:** Claude Code + JIRA (via Atlassian Remote MCP Server)
 **Process:**
 1. Business stakeholders submit requirements in natural language
 2. AI analyzes requirements for completeness and clarity using template matching
 3. Automated gap identification with specific clarification requests
 4. Business impact assessment with priority scoring algorithm
+5. Direct JIRA integration for ticket creation and updates via MCP
+**Source:** Atlassian Remote MCP Server (launched May 2025)
 
 **VanguardAI Example - Fleet Onboarding Enhancement:**
 ```
@@ -72,12 +74,14 @@ AI Analysis Output:
 ```
 
 **Step 1.2: Automated Ticket Creation**
-**Tools:** JIRA AI + Template Libraries + Estimation Models
+**Tools:** JIRA (via Atlassian Remote MCP Server) + Claude Code + Template Libraries + Estimation Models
 **Process:**
 1. Structured ticket generation from analyzed requirements
 2. Automated task breakdown with dependency mapping
 3. Effort estimation based on historical data and complexity analysis
 4. Acceptance criteria generation with testable conditions
+5. Direct JIRA ticket creation and updates via MCP integration
+**Source:** Atlassian Remote MCP Server, Claude Code MCP capabilities
 
 **Generated JIRA Ticket Example:**
 ```
@@ -1182,7 +1186,7 @@ class FeedbackAnalysisSystem:
 
 | Role | Primary Tools | Monthly Cost | ROI Factor |
 |------|---------------|-------------|------------|
-| **Head of Engineering** | Claude Code ($100) + GitHub Copilot ($19) + JIRA AI | $119 | 55.8x |
+| **Head of Engineering** | Claude Code ($100) + GitHub Copilot ($19) + JIRA (via MCP - Free) | $119 | 55.8x |
 | **Lead Frontend Dev** | Claude Code ($100) + Cursor AI ($20) + Vercel v0 ($20) | $140 | 65.3x |
 | **Lead Backend Dev** | GitHub Copilot ($19) + Codeium Pro ($15) + Bito AI ($15) | $49 | 187.8x |
 | **UI/UX Designer** | GitHub Copilot ($19) + Framer AI ($15) + Uizard ($19) | $53 | 80.8x |
