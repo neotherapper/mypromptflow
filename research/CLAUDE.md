@@ -69,14 +69,11 @@ research/findings/[topic]/
 ### Required Files (Non-Negotiable)
 
 **Research Content Files:**
+
 1. **comprehensive-analysis.md** - Main research output
 2. **Individual method outputs** - All sub-agent research (perspectives, phases, modules)
 
-**Meta Documentation Files:**
-3. **research-plan.md** - Research approach and method selection
-4. **research-sources.md** - Complete source tracking with timestamps
-5. **method-compliance.yaml** - Method validation and compliance tracking
-6. **research-execution-log.yaml** - Complete execution tracking
+**Meta Documentation Files:** 3. **research-plan.md** - Research approach and method selection 4. **research-sources.md** - Complete source tracking with timestamps 5. **method-compliance.yaml** - Method validation and compliance tracking 6. **research-execution-log.yaml** - Complete execution tracking
 
 ### Method Compliance Validation (NEW)
 
@@ -107,30 +104,34 @@ research/findings/[topic]/
 ## 🔍 How to Use Method Compliance Validation
 
 ### Step 1: During Research Execution
+
 1. **Follow Method Prompts**: Use the exact structure from `research/orchestrator/methods/[method].md`
 2. **Create Individual Outputs**: Save each sub-agent research as separate files
 3. **Document Method Steps**: Track completion of each method component
 
 ### Step 2: After Research Completion
+
 1. **Create Compliance File**: Use `research/templates/method-compliance-template.yaml`
 2. **Validate Method Adherence**: Check if all method requirements were met
 3. **Score Compliance**: Rate how well the method was followed (0-1 scale)
 4. **Document Issues**: Record any deviations from method requirements
 
 ### Step 3: Quality Verification
+
 1. **Check File Structure**: Ensure all files are in correct research/ and meta/ folders
 2. **Verify Individual Outputs**: Confirm all method components have corresponding files
 3. **Validate Integration**: Ensure individual outputs are properly combined in main analysis
 4. **Update Execution Log**: Include compliance results in research-execution-log.yaml
 
 ### Example: Multi-Perspective Method Validation
+
 ```yaml
 method_validation:
   multi_perspective_approach:
     required_perspectives: 4
     expected_outputs:
       - "perspective-1-quantitative.md" ✓
-      - "perspective-2-qualitative.md" ✓ 
+      - "perspective-2-qualitative.md" ✓
       - "perspective-3-industry-practice.md" ✓
       - "perspective-4-future-trends.md" ✓
     compliance_checks:
