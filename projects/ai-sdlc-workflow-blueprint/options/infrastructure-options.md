@@ -28,6 +28,13 @@ Based on your confirmed AI tool stack and team structure, here are infrastructur
   - Preview deployments for every PR
   - Cost: Free tier generous, Pro at $20/month per user
 
+- **Cloudflare Pages** (Alternative Frontend):
+  - Static site hosting with edge optimization
+  - Unlimited bandwidth and requests on free tier
+  - Built-in CDN and DDoS protection
+  - Cost: Free tier generous, Pro at $20/month
+  - Benefits: Excellent performance, global edge network
+
 - **Railway/Render** (Backend API):
   - Simple deployment for Node.js/Python APIs
   - Database hosting included

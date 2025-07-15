@@ -39,11 +39,18 @@ Create a comprehensive, practical blueprint for implementing AI-assisted SDLC wo
 
 ### 📁 Folder Navigation Guide
 
-#### `/decisions/` - Decision Management
-- **Purpose**: Store all user-agreed choices and reasoning
+#### `/decisions/` - Finalized Decisions
+- **Purpose**: Store ONLY user-agreed choices with confirmed reasoning
 - **Status**: ✅ COMPLETE - All decisions documented
 - **Contents**: Team structure, tool selection, SDLC stages decisions
 - **Guide**: Read `/decisions/CLAUDE.md` for decision protocols
+
+#### `/options/` - Decision Option Analyses
+- **Purpose**: Research-based option evaluations and recommendations
+- **Status**: ✅ COMPLETE - All option analyses available
+- **Contents**: Infrastructure, testing, communication platform options
+- **Guide**: Read `/options/CLAUDE.md` for option analysis protocols
+- **Workflow**: Options → User Decision → Move to `/decisions/`
 
 #### `/knowledge-base/` - Research Intelligence
 - **Purpose**: Organized research findings ready for decision-making

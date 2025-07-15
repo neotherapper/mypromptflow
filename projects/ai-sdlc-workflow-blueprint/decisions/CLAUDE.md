@@ -4,6 +4,13 @@
 
 The `/decisions/` folder contains **only user-agreed choices** with complete reasoning and alternatives considered. This is the authoritative source for what has been decided vs what still needs agreement.
 
+## ⚠️ IMPORTANT: Folder Structure
+
+- **`/decisions/`** - ONLY finalized decisions with user agreement
+- **`/options/`** - Decision option analyses and research-based recommendations
+
+**Rule**: Move files from `/options/` to `/decisions/` only after user confirmation.
+
 ## Decision Status Dashboard
 
 ### ❌ Pending User Decisions
