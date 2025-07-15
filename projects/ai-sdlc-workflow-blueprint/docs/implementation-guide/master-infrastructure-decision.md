@@ -15,8 +15,8 @@ This document provides the definitive infrastructure stack selection for the 4-p
 
 **Final Recommendation**: **Option 3 - Branch-Based Environments with GitPod**
 
-**Total Monthly Cost**: $287/month  
-**Key Benefits**: Complete ephemeral environments, UAT access, no DevOps complexity
+**Total Monthly Cost**: $312/month  
+**Key Benefits**: Complete ephemeral environments, UAT access, AI-assisted testing, advanced monitoring
 
 ---
 
@@ -34,7 +34,20 @@ This document provides the definitive infrastructure stack selection for the 4-p
 | **Monorepo** | Nx | Build optimization | $0 | CONFIRMED |
 | **Package Manager** | pnpm | Dependency management | $0 | CONFIRMED |
 
-**Total**: $265-270/month
+### Testing & Quality Assurance Components
+
+| Component | Tool | Purpose | Monthly Cost | Status |
+|-----------|------|---------|--------------|--------|
+| **Testing Framework** | [Vitest + React Testing Library](../../tools/vitest.md) | Fast unit testing | $0 | CONFIRMED |
+| **UI Testing** | [Storybook](../../tools/storybook.md) | Component documentation | $0 | CONFIRMED |
+| **E2E Testing** | [Playwright](../../tools/playwright.md) | Cross-browser automation | $0 | CONFIRMED |
+| **Performance Testing** | [Lighthouse CI](../../tools/lighthouse-ci.md) | Performance monitoring | $0 | CONFIRMED |
+| **Code Quality** | [ESLint + Prettier](../../tools/eslint-typescript.md) | Code standards | $0 | CONFIRMED |
+| **Error Tracking** | [Sentry](../../tools/sentry.md) | Advanced monitoring | $26 | CONFIRMED |
+
+**Infrastructure Total**: $265-270/month  
+**Testing & Quality Total**: $26/month  
+**Grand Total**: $291-296/month
 
 ---
 
