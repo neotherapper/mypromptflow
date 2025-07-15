@@ -108,7 +108,7 @@
    - Visual mockup processing
    - Free unlimited usage for large-scale tasks
 
-### Additional Confirmed Tool Selections (Updated: 2025-07-14)
+### Additional Confirmed Tool Selections (Updated: 2025-07-15)
 
 #### Testing Framework
 1. **Playwright** 
@@ -127,12 +127,27 @@
    - Cost: $0 (open source)
    - Rationale: Space efficient, fast, excellent monorepo support
 
-### Under Consideration (Research Required)
+### ✅ CONFIRMED Additional Decisions (Updated: 2025-07-15)
 
-- **Cloud Development Environment**: GitPod vs GitHub Codespaces evaluation needed
-- **Team Communication**: Slack vs Teams comparison for development workflow
-- **Documentation Platform**: Notion vs Confluence business case development
-- **Hosting Platform**: Cloudflare addition to hosting options analysis
+#### Team Communication
+1. **Microsoft Teams**
+   - Status: CONFIRMED - Continue with existing Microsoft Teams setup
+   - Cost: $0 (existing subscription optimization)
+   - Rationale: $10,636 savings over 3 years vs Slack migration, zero migration risk
+   - Research: Comprehensive analysis available in `/research/findings/slack-vs-teams-development/`
+
+#### Documentation Platform  
+1. **Notion Team** 
+   - Status: CONFIRMED - Experimental implementation (3 months)
+   - Cost: $32/month (4 users × $8/month)
+   - Rationale: 20,000%+ ROI through Claude MCP integration
+   - Research: Comprehensive analysis available in `/research/findings/notion-claude-productivity-integration/`
+
+### Under Further Investigation
+
+- **Cloud Development Environment**: GitPod vs GitHub Codespaces vs local setup evaluation
+- **Infrastructure Platform**: Database and hosting platform final selection
+- **CI/CD Strategy**: Ephemeral environments implementation approach
 
 ### Not Selected (Per User Decision)
 

@@ -11,7 +11,7 @@
 
 #### Stage 1: Business Ideation & Requirements
 **Duration**: 1-2 days per feature
-**Participants**: Product Owner + Head of Engineering
+**Participants**: Full Team (4 people) - Product Owner + Head of Engineering + Lead Frontend + Lead Backend
 **Tools**: Claude Code Max with JIRA MCP integration
 
 **Key Activities**:
