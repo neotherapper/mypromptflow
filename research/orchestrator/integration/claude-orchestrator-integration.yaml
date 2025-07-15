@@ -207,14 +207,19 @@ claude_orchestrator_workflow:
         - "Create comprehensive analysis file combining all perspectives"
       
       file_saving_requirements:
-        reports_folder: "MANDATORY - All research content in reports/ folder"
-        individual_sub_agent_files: "MANDATORY - Each sub-agent saves to reports/perspective-X-name.md or reports/module-X-name.md"
-        comprehensive_analysis: "MANDATORY - Create reports/comprehensive-analysis.md combining all sub-agent work"
-        meta_folder: "MANDATORY - All session info in .meta/ folder (hidden)"
-        research_log: "MANDATORY - Create .meta/research-log.md using research-log-template.md"
-        sources_tracking: "MANDATORY - Create .meta/sources.md with full URLs using sources-template.md"
-        session_info: "MANDATORY - Create .meta/session-info.yaml using session-info-template.yaml"
+        CRITICAL_PATH_ENFORCEMENT: "RESEARCH FINDINGS MUST GO IN /research/findings/ - NEVER /docs/ OR ANY OTHER LOCATION"
+        correct_base_path: "research/findings/[topic-name]/ - Use this exact pattern"
+        incorrect_paths_forbidden: "NEVER use docs/, projects/, ai/, or any path other than research/findings/"
+        folder_structure: "research/findings/[topic]/ with /reports/ and /.meta/ subfolders"
+        reports_folder: "MANDATORY - All research content in research/findings/[topic]/reports/ folder"
+        individual_sub_agent_files: "MANDATORY - Each sub-agent saves to research/findings/[topic]/reports/perspective-X-name.md or reports/module-X-name.md"
+        comprehensive_analysis: "MANDATORY - Create research/findings/[topic]/reports/comprehensive-analysis.md combining all sub-agent work"
+        meta_folder: "MANDATORY - All session info in research/findings/[topic]/.meta/ folder (hidden)"
+        research_log: "MANDATORY - Create research/findings/[topic]/.meta/research-log.md using research-log-template.md"
+        sources_tracking: "MANDATORY - Create research/findings/[topic]/.meta/sources.md with full URLs using sources-template.md"
+        session_info: "MANDATORY - Create research/findings/[topic]/.meta/session-info.yaml using session-info-template.yaml"
         inline_citations: "MANDATORY - All research reports must include (Source, Year [https://full-url]) format"
+        path_validation: "VERIFY paths start with research/findings/ before creating any files"
       
       quality_validation:
         sub_agent_level: "Validate each sub-agent output against quality requirements"
@@ -246,7 +251,7 @@ claude_orchestrator_workflow:
       research_plan_md:
         status: "MANDATORY - MUST CREATE"
         template: "research/templates/research-plan-template.md"
-        action: "Create research-plan.md file in research findings folder"
+        action: "Create research-plan.md file in research/findings/[topic]/.meta/ folder - NEVER in docs/ or projects/"
         source_data: "Extract from orchestrator_analysis section of execution log"
         required_content:
           - research_topic: "From context extraction"
@@ -260,7 +265,7 @@ claude_orchestrator_workflow:
       research_sources_md:
         status: "MANDATORY - MUST CREATE" 
         template: "research/templates/research-sources-template.md"
-        action: "Create research-sources.md file in research findings folder"
+        action: "Create research-sources.md file in research/findings/[topic]/.meta/ folder - NEVER in docs/ or projects/"
         source_tracking: "Track ALL tool usage during research execution"
         required_tracking:
           - web_sources: "EVERY WebFetch/WebSearch URL with timestamp"
@@ -278,11 +283,14 @@ claude_orchestrator_workflow:
     SUCCESS_CRITERIA: "Both research-plan.md and research-sources.md exist and contain required content"
     
     ai_agent_enforcement:
+      - "CRITICAL: VERIFY all file paths start with research/findings/ - NEVER docs/ or projects/"
       - "Check file existence before marking research complete"
       - "Use Write tool to create both files using templates"
       - "Populate templates with actual research data"
       - "Verify files contain all required sections"
       - "Do not end research session without both files"
+      - "DOUBLE-CHECK: All research content must be in research/findings/[topic]/reports/"
+      - "DOUBLE-CHECK: All metadata must be in research/findings/[topic]/.meta/"
 
 # CLAUDE DECISION TREES
 claude_decision_trees:
