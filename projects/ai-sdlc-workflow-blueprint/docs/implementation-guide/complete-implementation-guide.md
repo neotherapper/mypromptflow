@@ -404,7 +404,7 @@ Review checklist:
 ### Step 5.1: Unit Testing
 
 **WHO**: Developer who wrote the code
-**TOOL**: Claude Code Max + Jest/Testing Framework
+**TOOL**: Claude Code Max + Vitest
 
 Test creation workflow:
 ```
