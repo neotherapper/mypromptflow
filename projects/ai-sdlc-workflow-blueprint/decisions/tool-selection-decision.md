@@ -108,11 +108,37 @@
    - Visual mockup processing
    - Free unlimited usage for large-scale tasks
 
+### Additional Confirmed Tool Selections (Updated: 2025-07-14)
+
+#### Testing Framework
+1. **Playwright** 
+   - Purpose: End-to-end testing framework
+   - Cost: $0 (open source)
+   - Rationale: Modern, reliable, cross-browser testing with excellent AI integration
+
+2. **Storybook**
+   - Purpose: Component development and testing
+   - Cost: $0 (open source)  
+   - Rationale: Component isolation, visual testing, design system development
+
+#### Package Management
+1. **pnpm**
+   - Purpose: Package manager for monorepo and faster installs
+   - Cost: $0 (open source)
+   - Rationale: Space efficient, fast, excellent monorepo support
+
+### Under Consideration (Research Required)
+
+- **Cloud Development Environment**: GitPod vs GitHub Codespaces evaluation needed
+- **Team Communication**: Slack vs Teams comparison for development workflow
+- **Documentation Platform**: Notion vs Confluence business case development
+- **Hosting Platform**: Cloudflare addition to hosting options analysis
+
 ### Not Selected (Per User Decision)
 
 - ❌ Cursor AI subscription (using free plan)
 - ❌ GitHub Copilot
-- ❌ Confluence
+- ❌ Confluence (pending comparison with Notion)
 - ❌ Tabnine Pro
 - ❌ Framer AI
 
