@@ -1,0 +1,241 @@
+# Bootstrap Response Logic Configuration
+# AI INSTRUCTIONS: This file defines how to analyze questionnaire responses and generate recommendations
+
+response_analysis:
+  version: "1.0"
+  
+# Path Detection Rules
+path_detection:
+  new_startup:
+    trigger_conditions:
+      - "current_stage == 'idea_validation'"
+      - "existing_docs in ['no_docs', 'basic_plan']"
+    confidence_threshold: 0.9
+    
+  existing_business:
+    trigger_conditions:
+      - "current_stage in ['requirements_ready', 'existing_business']"
+      - "existing_docs in ['market_research', 'user_research', 'technical_reqs']"
+    confidence_threshold: 0.9
+    
+  market_research_done:
+    trigger_conditions:
+      - "current_stage == 'market_research_done'"
+      - "existing_docs == 'market_research'"
+    confidence_threshold: 0.9
+    
+  validation_needed:
+    trigger_conditions:
+      - "current_stage == 'idea_validation'"
+      - "existing_docs in ['basic_plan']"
+      - "target_users in ['b2c_consumers', 'b2b_professionals']"
+    confidence_threshold: 0.8
+
+# Document Sequence Recommendations
+recommended_sequences:
+  new_startup:
+    description: "For users starting with just an idea"
+    documents:
+      - document: "statement-of-purpose"
+        priority: 1
+        reason: "Define business vision and validate core concept"
+        estimated_effort: "2-4 hours"
+        template_prefill:
+          business_vision:
+            source: "problem"
+            transform: "Convert problem into vision statement"
+          target_audience:
+            source: "target_users"
+            transform: "Map user types to audience description"
+          industry_context:
+            source: "industry"
+            transform: "Add industry-specific considerations"
+        
+      - document: "market-analysis"
+        priority: 2
+        reason: "Research competitive landscape and opportunities"
+        condition: "industry != 'internal_team'"
+        estimated_effort: "4-8 hours"
+        dependencies: ["statement-of-purpose"]
+        template_prefill:
+          industry_focus:
+            source: "industry"
+            transform: "Set industry research scope"
+          target_market:
+            source: "target_users"
+            transform: "Define market segments"
+          competitive_landscape:
+            source: "problem"
+            transform: "Identify competitor categories"
+        
+      - document: "user-research"
+        priority: 3
+        reason: "Validate assumptions with real users"
+        condition: "target_users in ['b2c_consumers', 'b2b_professionals']"
+        estimated_effort: "8-16 hours"
+        dependencies: ["statement-of-purpose"]
+        template_prefill:
+          user_segments:
+            source: "target_users"
+            transform: "Define research participant profiles"
+          research_questions:
+            source: "problem"
+            transform: "Generate validation questions"
+  
+  existing_business:
+    description: "For users with existing business or clear requirements"
+    documents:
+      - document: "prd"
+        priority: 1
+        reason: "Document product requirements and scope"
+        estimated_effort: "6-12 hours"
+        template_prefill:
+          product_overview:
+            source: "app_type"
+            transform: "Describe application type and platform"
+          user_needs:
+            source: "problem"
+            transform: "Convert problem into user needs"
+          target_users:
+            source: "target_users"
+            transform: "Define user segments and personas"
+        
+      - document: "system-architecture"
+        priority: 2
+        reason: "Design technical implementation approach"
+        condition: "app_type in ['web_app', 'mobile_app', 'api_service']"
+        estimated_effort: "8-16 hours"
+        dependencies: ["prd"]
+        template_prefill:
+          application_type:
+            source: "app_type"
+            transform: "Define architecture requirements"
+          industry_requirements:
+            source: "industry"
+            transform: "Add compliance and scaling needs"
+        
+      - document: "user-stories"
+        priority: 3
+        reason: "Break down requirements into actionable stories"
+        estimated_effort: "4-8 hours"
+        dependencies: ["prd"]
+        template_prefill:
+          user_types:
+            source: "target_users"
+            transform: "Create user story roles"
+          problem_context:
+            source: "problem"
+            transform: "Frame stories around problem resolution"
+  
+  market_research_done:
+    description: "For users who have completed market research"
+    documents:
+      - document: "user-personas"
+        priority: 1
+        reason: "Define target user segments based on research"
+        estimated_effort: "3-6 hours"
+        template_prefill:
+          user_types:
+            source: "target_users"
+            transform: "Create detailed persona profiles"
+          industry_context:
+            source: "industry"
+            transform: "Add industry-specific user characteristics"
+        
+      - document: "prd"
+        priority: 2
+        reason: "Document product requirements"
+        estimated_effort: "6-12 hours"
+        dependencies: ["user-personas"]
+        template_prefill:
+          personas:
+            source: "user-personas"
+            transform: "Reference persona insights"
+          problem_statement:
+            source: "problem"
+            transform: "Detailed problem analysis"
+
+# Next Steps Generation
+next_steps:
+  new_startup:
+    immediate_action:
+      command: "/create-document statement-of-purpose"
+      explanation: "Start with defining your business vision and core values"
+    follow_up:
+      action: "After creating statement-of-purpose, run /knowledge-status to see next steps"
+      estimated_timeline: "Complete in 2-4 hours"
+    
+  existing_business:
+    immediate_action:
+      command: "/create-document prd"
+      explanation: "Document your product requirements and scope"
+    follow_up:
+      action: "Consider running /orchestrate-agents prd if you need multiple supporting documents"
+      estimated_timeline: "Complete in 6-12 hours"
+    
+  market_research_done:
+    immediate_action:
+      command: "/create-document user-personas"
+      explanation: "Create user personas based on your market research"
+    follow_up:
+      action: "Use personas to inform your PRD development"
+      estimated_timeline: "Complete in 3-6 hours"
+
+# Special Case Handling
+special_cases:
+  internal_tools:
+    trigger: "target_users == 'internal_team'"
+    skip_documents: ["market-analysis"]
+    modify_sequence:
+      - "Focus on user-research within organization"
+      - "Emphasize workflow optimization"
+      - "Skip competitive analysis"
+    
+  api_platform:
+    trigger: "app_type == 'api_service' AND target_users == 'developers'"
+    priority_documents: ["api-documentation", "developer-onboarding"]
+    modify_sequence:
+      - "Prioritize technical documentation"
+      - "Focus on developer experience"
+      - "Include API design early"
+  
+  regulated_industry:
+    trigger: "industry in ['healthcare', 'fintech', 'insurance']"
+    additional_documents: ["compliance-requirements", "security-framework"]
+    modify_sequence:
+      - "Include compliance considerations early"
+      - "Add regulatory framework analysis"
+      - "Prioritize security documentation"
+
+# Success Metrics
+success_criteria:
+  path_identification:
+    confidence_minimum: 0.8
+    fallback_action: "Ask clarifying questions"
+  
+  recommendation_quality:
+    requirements:
+      - "Specific document sequence provided"
+      - "Clear rationale for each document"
+      - "Actionable next step command"
+      - "Realistic effort estimates"
+  
+  user_understanding:
+    validation_questions:
+      - "Do you understand why we're starting with [first_document]?"
+      - "Does this sequence make sense for your project?"
+      - "Are you ready to begin with the suggested command?"
+
+# Error Recovery
+error_handling:
+  unclear_responses:
+    strategy: "Ask targeted clarifying questions"
+    example: "When you say 'business tool', do you mean internal company use or selling to other businesses?"
+  
+  conflicting_information:
+    strategy: "Highlight conflicts and ask for resolution"
+    example: "You mentioned both 'just an idea' and 'have requirements ready' - which better describes your current stage?"
+  
+  edge_cases:
+    strategy: "Provide multiple options and let user choose"
+    example: "Your project could follow either path A or B. Which resonates more with your situation?"

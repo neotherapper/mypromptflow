@@ -1,0 +1,54 @@
+---
+title: "Nx Monorepo Integration with Ephemeral Environments for React Frontend + FastAPI Backend"
+research_type: "primary"
+subject: "Nx Monorepo with Ephemeral Environments"
+conducted_by: "Claude-Sonnet-4-Research-Agent"
+date_conducted: "2025-01-09"
+date_updated: "2025-01-09"
+version: "1.0.0"
+status: "completed"
+confidence_level: "high"
+sources_count: 15
+methodology: ["web_research", "documentation_analysis", "multi_perspective_approach", "constitutional_ai_validation"]
+keywords: ["nx", "monorepo", "ephemeral_environments", "react", "fastapi", "mcp_server", "deployment", "cicd", "affected_builds", "docker", "typescript", "insurance_compliance"]
+related_tasks: ["research-nx-monorepo-ephemeral", "analyze-nx-mcp-server", "research-nx-deployment-patterns", "research-nx-monorepo-structure", "research-deployment-platform-integration", "research-developer-experience"]
+priority: "high"
+estimated_hours: 6
+research_areas:
+  - "Nx MCP Server Integration for AI-assisted development"
+  - "Nx Deployment Patterns for Ephemeral Environments"
+  - "Nx Monorepo Structure for React/FastAPI applications"
+  - "Integration with Deployment Platforms (Railway, Vercel, Docker)"
+  - "Developer Experience Optimization"
+deployment_platforms:
+  - "Railway"
+  - "Vercel"
+  - "Docker"
+  - "Kubernetes"
+  - "Nx Cloud"
+compliance_requirements:
+  - "Insurance platform compliance"
+  - "GDPR/CCPA data protection"
+  - "HIPAA healthcare security"
+  - "PCI DSS payment standards"
+  - "IFRS 17 financial reporting"
+key_findings:
+  - "Nx MCP Server provides AI-assisted development with architectural awareness"
+  - "Affected builds reduce CI/CD time by 30-70%"
+  - "TypeScript project references enable full-stack type safety"
+  - "Multi-platform deployment requires separate configurations"
+  - "Hot reload and testing strategies optimize developer experience"
+  - "Insurance compliance requires additional security measures"
+implementation_phases:
+  - "Foundation Setup"
+  - "Development Optimization"
+  - "Production Deployment"
+  - "Scaling and Optimization"
+research_quality_indicators:
+  - "Multiple authoritative sources consulted"
+  - "Recent 2025 information prioritized"
+  - "Official documentation referenced"
+  - "Practical implementation examples included"
+  - "Compliance requirements addressed"
+  - "Constitutional AI validation applied"
+---

@@ -1,0 +1,558 @@
+# Master Task Registry - AI-SDLC Implementation
+# This file contains all tasks across all personas with dependencies and tracking
+
+version: "1.0"
+last_updated: "2025-07-15"
+project: "AI-SDLC Workflow Blueprint Implementation"
+team_size: 4
+estimated_duration: "6-8 weeks"
+
+# Task Categories
+categories:
+  - setup_infrastructure
+  - tool_procurement
+  - team_onboarding
+  - design_system
+  - development_environment
+  - training_certification
+  - production_readiness
+
+# Team Personas
+personas:
+  head_of_engineering:
+    name: "Head of Engineering"
+    hardware: "MacBook Pro 14\" M3 24GB RAM (Dark)"
+    claude_subscription: "$100/month (Active)"
+    primary_focus: "Infrastructure setup, team coordination, project leadership"
+    
+  lead_frontend_developer:
+    name: "Lead Frontend Developer"
+    hardware: "MacBook Pro 16\" M4 64GB RAM (Silver)"
+    claude_subscription: "$200/month (Active)"
+    primary_focus: "Frontend development, UI implementation, component library"
+    
+  lead_backend_developer:
+    name: "Lead Backend Developer"
+    hardware: "[To be documented]"
+    claude_subscription: "$100/month (NEW - needs setup)"
+    primary_focus: "API development, database architecture, system integration"
+    
+  ui_ux_engineer:
+    name: "UI/UX Engineer"
+    hardware: "[To be documented]"
+    claude_subscription: "Not required (design-focused role)"
+    primary_focus: "User interface design, user experience optimization, design system"
+
+# Task Registry
+tasks:
+  # Week 1: Tool Procurement & Setup
+  - id: "HE-001"
+    title: "Verify existing Claude Code Max subscription"
+    persona: "head_of_engineering"
+    category: "tool_procurement"
+    priority: "high"
+    status: "completed"
+    estimated_hours: 1
+    due_date: "Week 1, Day 1"
+    dependencies: []
+    validation: "Active subscription confirmed, MCP enabled, JIRA integration tested"
+    
+  - id: "HE-002"
+    title: "Purchase Claude Code Max for Lead Backend Developer"
+    persona: "head_of_engineering"
+    category: "tool_procurement"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 1, Day 2"
+    dependencies: []
+    validation: "Backend developer can generate API endpoints with AI"
+    
+  - id: "HE-003"
+    title: "Create Notion Team workspace"
+    persona: "head_of_engineering"
+    category: "tool_procurement"
+    priority: "medium"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 1, Day 3"
+    dependencies: []
+    validation: "All team members can access and edit workspace"
+    
+  - id: "HE-004"
+    title: "Purchase Figma Professional seats"
+    persona: "head_of_engineering"
+    category: "tool_procurement"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 1, Day 3"
+    dependencies: []
+    validation: "UI/UX and Frontend developers can access Figma Professional"
+    
+  - id: "HE-005"
+    title: "Setup JIRA project for maritime insurance app"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 4
+    due_date: "Week 1, Day 2"
+    dependencies: []
+    validation: "Team can create and manage JIRA tickets"
+    
+  # Frontend Developer Tasks
+  - id: "FE-001"
+    title: "Verify Claude Code Max subscription"
+    persona: "lead_frontend_developer"
+    category: "tool_procurement"
+    priority: "high"
+    status: "completed"
+    estimated_hours: 1
+    due_date: "Week 1, Day 1"
+    dependencies: []
+    validation: "Can generate React components with AI assistance"
+    
+  - id: "FE-002"
+    title: "Configure Claude Code Max for frontend workflows"
+    persona: "lead_frontend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 1, Day 1"
+    dependencies: ["FE-001"]
+    validation: "Can generate production-ready React components"
+    
+  - id: "FE-003"
+    title: "Configure Cursor IDE for frontend development"
+    persona: "lead_frontend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 1, Day 2"
+    dependencies: ["FE-001"]
+    validation: "Can generate and refactor code efficiently with AI"
+    
+  - id: "FE-004"
+    title: "Accept Figma Professional access invitation"
+    persona: "lead_frontend_developer"
+    category: "tool_procurement"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 1
+    due_date: "Week 1, Day 3"
+    dependencies: ["HE-004"]
+    validation: "Can access and edit Figma Professional workspace"
+    
+  # Backend Developer Tasks
+  - id: "BE-001"
+    title: "Purchase and activate Claude Code Max subscription"
+    persona: "lead_backend_developer"
+    category: "tool_procurement"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 1, Day 1"
+    dependencies: ["HE-002"]
+    validation: "Can generate FastAPI endpoints with AI assistance"
+    
+  - id: "BE-002"
+    title: "Configure Claude Code Max for backend workflows"
+    persona: "lead_backend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 1, Day 2"
+    dependencies: ["BE-001"]
+    validation: "Can generate production-ready API endpoints"
+    
+  - id: "BE-003"
+    title: "Install and configure Cursor IDE"
+    persona: "lead_backend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 1, Day 1"
+    dependencies: []
+    validation: "Cursor IDE functional with AI assistance"
+    
+  # UI/UX Engineer Tasks
+  - id: "UX-001"
+    title: "Accept Figma Professional access invitation"
+    persona: "ui_ux_engineer"
+    category: "tool_procurement"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 1
+    due_date: "Week 1, Day 1"
+    dependencies: ["HE-004"]
+    validation: "Can access and edit Figma Professional workspace"
+    
+  - id: "UX-002"
+    title: "Configure Figma for maritime insurance design"
+    persona: "ui_ux_engineer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 4
+    due_date: "Week 1, Day 2"
+    dependencies: ["UX-001"]
+    validation: "Figma workspace is organized and ready for design work"
+    
+  # Week 2: Infrastructure Setup
+  - id: "HE-006"
+    title: "Create GitHub organization"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 2, Day 1"
+    dependencies: []
+    validation: "All team members have organization access"
+    
+  - id: "HE-007"
+    title: "Purchase GitPod Professional team plan"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 2, Day 1"
+    dependencies: []
+    validation: "All team members can access GitPod workspaces"
+    
+  - id: "HE-008"
+    title: "Setup Neon PostgreSQL account"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 4
+    due_date: "Week 2, Day 3"
+    dependencies: []
+    validation: "Database is accessible and branching works"
+    
+  - id: "HE-009"
+    title: "Setup Railway account"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 3, Day 1"
+    dependencies: []
+    validation: "Backend can be deployed to Railway"
+    
+  - id: "HE-010"
+    title: "Setup Vercel account"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 3
+    due_date: "Week 3, Day 2"
+    dependencies: []
+    validation: "Frontend can be deployed to Vercel"
+    
+  - id: "HE-011"
+    title: "Setup Sentry account"
+    persona: "head_of_engineering"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 2
+    due_date: "Week 3, Day 3"
+    dependencies: []
+    validation: "Error tracking is operational"
+    
+  # Week 3: Design System & Component Development
+  - id: "UX-003"
+    title: "Define maritime insurance brand guidelines"
+    persona: "ui_ux_engineer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 8
+    due_date: "Week 2, Day 1"
+    dependencies: ["UX-002"]
+    validation: "Brand guidelines are complete and approved"
+    
+  - id: "UX-004"
+    title: "Create design tokens"
+    persona: "ui_ux_engineer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 6
+    due_date: "Week 2, Day 2"
+    dependencies: ["UX-003"]
+    validation: "Design tokens are systematically organized"
+    
+  - id: "UX-005"
+    title: "Design foundational components"
+    persona: "ui_ux_engineer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 8
+    due_date: "Week 2, Day 3"
+    dependencies: ["UX-004"]
+    validation: "Foundation components are designed and documented"
+    
+  - id: "FE-005"
+    title: "Create maritime insurance design system"
+    persona: "lead_frontend_developer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 8
+    due_date: "Week 3, Day 1"
+    dependencies: ["UX-005", "FE-004"]
+    validation: "Design system foundation is established"
+    
+  - id: "FE-006"
+    title: "Create core UI components"
+    persona: "lead_frontend_developer"
+    category: "design_system"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 12
+    due_date: "Week 3, Day 3"
+    dependencies: ["FE-005"]
+    validation: "Core components are functional and tested"
+    
+  # Week 4: Database & API Development
+  - id: "BE-004"
+    title: "Design maritime insurance database schema"
+    persona: "lead_backend_developer"
+    category: "setup_infrastructure"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 8
+    due_date: "Week 3, Day 3"
+    dependencies: ["HE-008"]
+    validation: "Database schema supports all business requirements"
+    
+  - id: "BE-005"
+    title: "Create FastAPI application structure"
+    persona: "lead_backend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 6
+    due_date: "Week 3, Day 1"
+    dependencies: ["BE-002"]
+    validation: "FastAPI application runs successfully"
+    
+  - id: "BE-006"
+    title: "Create core maritime insurance endpoints"
+    persona: "lead_backend_developer"
+    category: "development_environment"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 16
+    due_date: "Week 3, Day 5"
+    dependencies: ["BE-004", "BE-005"]
+    validation: "Core API endpoints are functional"
+    
+  # Week 5-6: Training & Certification
+  - id: "ALL-001"
+    title: "Complete Claude Code Max training"
+    persona: "all_developers"
+    category: "training_certification"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 16
+    due_date: "Week 5, Day 1-2"
+    dependencies: ["FE-002", "BE-002"]
+    validation: "All developers can efficiently use Claude Code Max"
+    
+  - id: "ALL-002"
+    title: "Complete maritime insurance domain training"
+    persona: "all_team_members"
+    category: "training_certification"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 8
+    due_date: "Week 6, Day 1"
+    dependencies: []
+    validation: "All team members understand maritime insurance domain"
+    
+  - id: "ALL-003"
+    title: "Complete SDLC workflow training"
+    persona: "all_team_members"
+    category: "training_certification"
+    priority: "high"
+    status: "pending"
+    estimated_hours: 12
+    due_date: "Week 6, Day 2-3"
+    dependencies: []
+    validation: "All team members can execute SDLC workflow"
+
+# Critical Path Analysis
+critical_path:
+  - description: "Tool procurement must complete before development environment setup"
+    tasks: ["HE-002", "HE-004", "BE-001", "UX-001"]
+    
+  - description: "Infrastructure setup must complete before team access"
+    tasks: ["HE-006", "HE-007", "HE-008", "HE-009", "HE-010"]
+    
+  - description: "Design system must complete before component development"
+    tasks: ["UX-003", "UX-004", "UX-005", "FE-005", "FE-006"]
+    
+  - description: "Database schema must complete before API development"
+    tasks: ["BE-004", "BE-005", "BE-006"]
+    
+  - description: "Training must complete before production work"
+    tasks: ["ALL-001", "ALL-002", "ALL-003"]
+
+# Resource Allocation
+resource_allocation:
+  week_1:
+    total_hours: 160
+    head_of_engineering: 32
+    lead_frontend_developer: 32
+    lead_backend_developer: 32
+    ui_ux_engineer: 32
+    focus: "Tool procurement and initial setup"
+    
+  week_2:
+    total_hours: 160
+    head_of_engineering: 40
+    lead_frontend_developer: 32
+    lead_backend_developer: 32
+    ui_ux_engineer: 40
+    focus: "Infrastructure setup and design system foundation"
+    
+  week_3:
+    total_hours: 160
+    head_of_engineering: 24
+    lead_frontend_developer: 48
+    lead_backend_developer: 48
+    ui_ux_engineer: 40
+    focus: "Component development and API creation"
+    
+  week_4:
+    total_hours: 160
+    head_of_engineering: 20
+    lead_frontend_developer: 40
+    lead_backend_developer: 40
+    ui_ux_engineer: 32
+    focus: "Testing and quality assurance"
+    
+  week_5_6:
+    total_hours: 320
+    head_of_engineering: 64
+    lead_frontend_developer: 80
+    lead_backend_developer: 80
+    ui_ux_engineer: 64
+    focus: "Training and certification"
+
+# Success Metrics
+success_metrics:
+  completion_rate:
+    target: 100
+    measurement: "Percentage of tasks completed on time"
+    
+  quality_score:
+    target: 95
+    measurement: "Percentage of tasks passing validation criteria"
+    
+  team_satisfaction:
+    target: 85
+    measurement: "Team satisfaction score with AI-enhanced workflow"
+    
+  productivity_improvement:
+    target: 40
+    measurement: "Percentage improvement in development velocity"
+    
+  cost_efficiency:
+    target: 2500
+    measurement: "ROI percentage from AI tool investment"
+
+# Risk Assessment
+risks:
+  - id: "RISK-001"
+    description: "Claude Code Max learning curve longer than expected"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Additional training time allocated, pair programming sessions"
+    
+  - id: "RISK-002"
+    description: "Infrastructure setup delays"
+    probability: "low"
+    impact: "high"
+    mitigation: "Backup infrastructure options identified, parallel setup approach"
+    
+  - id: "RISK-003"
+    description: "Design system complexity exceeds estimates"
+    probability: "medium"
+    impact: "medium"
+    mitigation: "Iterative design approach, MVP component set identified"
+    
+  - id: "RISK-004"
+    description: "Team member availability issues"
+    probability: "low"
+    impact: "high"
+    mitigation: "Cross-training, task redistribution procedures"
+
+# Progress Tracking
+progress_tracking:
+  overall_completion: 5
+  by_category:
+    tool_procurement: 15
+    setup_infrastructure: 0
+    development_environment: 0
+    design_system: 0
+    training_certification: 0
+    production_readiness: 0
+    
+  by_persona:
+    head_of_engineering: 8
+    lead_frontend_developer: 5
+    lead_backend_developer: 0
+    ui_ux_engineer: 0
+    
+  weekly_velocity:
+    target_tasks_per_week: 25
+    actual_tasks_per_week: []
+    
+  quality_metrics:
+    validation_pass_rate: 100
+    rework_rate: 0
+    defect_density: 0
+
+# Budget Tracking
+budget:
+  monthly_costs:
+    ai_tools: 430
+    infrastructure: 286
+    communication: 32
+    monitoring: 26
+    design: 30
+    total: 804
+    
+  one_time_costs:
+    setup: 500
+    training: 1000
+    certification: 200
+    total: 1700
+    
+  roi_calculation:
+    monthly_investment: 804
+    productivity_gains: 15000
+    monthly_roi: 1866
+    annual_roi: 22392
+
+# Notes
+notes:
+  - "All tasks include validation criteria that must be met before marking complete"
+  - "Dependencies are strictly enforced - dependent tasks cannot start until prerequisites complete"
+  - "Resource allocation is flexible and can be adjusted based on actual progress"
+  - "Success metrics are measured weekly and reported to stakeholders"
+  - "Risk mitigation strategies are reviewed and updated weekly"
