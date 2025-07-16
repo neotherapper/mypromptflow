@@ -2,119 +2,127 @@
 
 ## Problem Statement
 
-The existing AI knowledge base system at `@ai/` provides excellent agent orchestration and document generation capabilities, but lacks critical production-ready infrastructure. Based on comprehensive research analysis, **seven critical gaps** prevent the system from being reliable for serious business applications.
+The existing AI knowledge base system at `@ai/` provides excellent agent orchestration and document generation capabilities, but lacks the core functionality users need: **transforming comprehensive business documentation into working application code**. Based on comprehensive research analysis and user feedback, the current focus on validation/error-handling misses the primary objective.
 
 ## Core Business Goal
 
-Transform the experimental AI knowledge base into a **production-ready, generic framework** that can be:
-- **Forked for any business idea** (remove kochu.studio specifics)
-- **Trusted for critical decisions** (validated document quality)
-- **Reliable in production** (error handling and recovery)
-- **Reproducible by AI agents** (complete workflow automation)
+Transform the AI knowledge base into a **document-to-code pipeline** where AI agents can:
+- **Read comprehensive business documentation** (PRDs, user stories, acceptance criteria)
+- **Extract design specifications** from Figma MCP integration
+- **Generate working application features** from documented requirements
+- **Maintain semantic understanding** through vector-enhanced search
+- **Orchestrate complex workflows** using meta-framework patterns
 
 ## Target Outcome
 
-A generic AI knowledge base framework where any AI agent can:
+A sophisticated document-to-code transformation system where AI agents can:
 
-1. **Create high-quality documents** with automated validation (>90% accuracy)
-2. **Recover from failures automatically** (>95% recovery rate)  
-3. **Reproduce successful workflows** perfectly from specifications
-4. **Research complex topics** using the integrated research orchestrator
+1. **Understand business requirements** through 67+ document types and semantic search
+2. **Extract design context** via official Figma MCP Server integration
+3. **Generate test-driven code** from acceptance criteria using BDD patterns
+4. **Orchestrate feature development** through meta-framework coordination
+5. **Bridge design and implementation** through comprehensive specification mapping
 
 ## Success Criteria
 
 ### Quantitative Metrics
-- Document accuracy: >90% (measured by automated validation)
-- Failure recovery rate: >95% (automatic retry and fallback)
-- Workflow reproducibility: 100% (AI agents can recreate exactly)
-- Research integration: All research tasks trigger orchestrator automatically
+- **Design-to-Code Accuracy**: >85% of Figma components automatically mapped to working code
+- **Documentation Coverage**: 67+ business document types with dependency management
+- **Test Generation**: 90%+ acceptance criteria automatically converted to executable tests
+- **Semantic Search Precision**: 85%+ relevant document retrieval through vector similarity
+- **Feature Implementation Speed**: 40% reduction in development time through AI orchestration
 
 ### Qualitative Outcomes
-- **Generic Framework**: Can be forked for any business domain
-- **AI-Agent Focused**: Designed for AI consumption, not human interfaces
-- **Research-Driven**: All enhancements backed by systematic research
-- **Production-Ready**: Suitable for critical business decision making
+- **Comprehensive Document-to-Code Pipeline**: End-to-end transformation from business requirements to working features
+- **Semantic Understanding**: Vector-enhanced search connecting related concepts across document types
+- **Design System Integration**: Seamless Figma MCP workflow with fallback strategies
+- **Meta-Framework Intelligence**: Advanced orchestration patterns from SuperClaude and Claude Flow
 
 ## Key Constraints
 
 ### Technical Constraints
-- **No TypeScript/Code**: Pure AI agent and meta-prompting solutions
-- **Claude Code Integration**: Must work with interactive terminal workflows
-- **Backward Compatibility**: Enhance existing `@ai/` system without breaking changes
-- **Research Framework**: Must use existing research orchestrator at `@research/`
+- **Research Framework Independence**: No external dependencies or modifications to research framework
+- **Vector DB Integration**: Lightweight solutions (Chroma → Qdrant progression) for hybrid search
+- **MCP Protocol Compliance**: Official Figma Dev Mode MCP Server integration
+- **Claude Code Compatibility**: All workflows must integrate with terminal-based commands
 
 ### Business Constraints
-- **Generic Focus**: Remove all kochu.studio business-specific content
-- **Forkable Design**: Any user should be able to adapt for their business
-- **AI-Agent Centric**: Optimize for AI agent workflows, not human interfaces
+- **Document-Centric Focus**: All features serve the document-to-code transformation goal
+- **Semantic Intelligence**: Vector similarity as primary search mechanism with YAML fallback
+- **Design System Integration**: Figma MCP as primary source with graceful degradation
 
-## Approach and Methodology
+## Implementation Architecture (Research-Informed)
+
+### Research Foundation (Completed)
+✅ **Figma MCP Integration Research**: Official Dev Mode MCP Server patterns and SSE configuration  
+✅ **Meta-Framework Analysis**: SuperClaude commands and Claude Flow swarm orchestration  
+✅ **Vector Database Analysis**: Chroma→Qdrant progression with hybrid search architecture
 
 ### Phase-Based Implementation
-1. **Validation & Quality** (Weeks 1-3) - Foundation for trust
-2. **Error Handling & Recovery** (Weeks 4-5) - Reliability infrastructure  
-3. **AI-Agent Reproducibility** (Weeks 6-8) - Complete automation
+1. **Knowledge Status Cache & Bridge** (Week 1) - Instant status with research framework connection
+2. **Figma MCP Protocol Integration** (Weeks 2-3) - Official server with component naming conventions
+3. **Vector-Enhanced Semantic Search** (Weeks 4-5) - Hybrid search with document embeddings
+4. **Meta-Framework Orchestration** (Weeks 6-7) - SuperClaude patterns + Claude Flow swarm intelligence
+5. **Document-to-Code Pipeline** (Week 8) - BDD test generation and feature implementation
 
-### Research-Driven Development
-Each phase begins with research tasks that automatically trigger the research framework:
-- **"Research AI validation frameworks"** → Comprehensive analysis of validation methodologies
-- **"Investigate error handling patterns"** → Deep dive into AI system fault tolerance
-- **"Analyze reproducibility systems"** → Study of workflow reproduction techniques
-
-### Integration Strategy
-- **Build on existing strengths** - Agent orchestration, dependency management
-- **Fill critical gaps** - Validation, error handling, reproducibility
-- **Maintain elegance** - Pure meta-prompting approach, minimal infrastructure
+### Technology Integration Strategy
+- **Figma MCP Server**: `http://localhost:3845/sse` with component naming: `{feature}__{component}__{state}`
+- **Vector Database**: Chroma for prototyping → Qdrant for production with RRF result fusion
+- **Meta-Framework Patterns**: Modular commands (SuperClaude) + swarm coordination (Claude Flow)
+- **Research Bridge**: Internal commands trigger research when knowledge gaps detected
 
 ## Expected Impact
 
 ### For AI Agents
-- **Reliable workflows** - Agents can trust document quality and system reliability
-- **Autonomous operation** - Complete workflows without human intervention required
-- **Learning capability** - Agents can reproduce and improve successful patterns
+- **Semantic Understanding** - Vector-enhanced search finds conceptually related documents across 67+ types
+- **Design Context Awareness** - Direct access to Figma design tokens, components, and specifications
+- **Code Generation Capability** - Transform acceptance criteria into executable BDD tests and features
+- **Intelligent Orchestration** - Meta-framework patterns enable sophisticated workflow coordination
 
 ### For Users
-- **Business confidence** - Trust AI-generated documents for critical decisions
-- **Reduced manual work** - Automated validation and error recovery
-- **Scalable framework** - Easy to fork and adapt for new business domains
+- **Accelerated Development** - 40% reduction in feature implementation time through AI automation
+- **Design-Code Consistency** - Automatic mapping between Figma designs and generated components
+- **Comprehensive Documentation** - Complete business-to-technical specification pipeline
+- **Intelligent Knowledge Discovery** - Find relevant information through semantic similarity, not just keywords
 
 ### For the Ecosystem
-- **Production-ready AI knowledge base** - First comprehensive framework with validation
-- **Open source contribution** - Generic framework others can build upon
-- **Research integration model** - Example of AI research framework integration
+- **Document-to-Code Standard** - Reference implementation for business specification transformation
+- **Figma MCP Integration Model** - Production pattern for design-development workflows  
+- **Vector-Enhanced Knowledge Base** - Hybrid search architecture combining AI and structured metadata
+- **Meta-Framework Application** - Real-world implementation of advanced AI orchestration patterns
 
 ## Risk Mitigation
 
 ### Technical Risks
-- **Integration complexity**: Mitigated by building on existing proven architecture
-- **Performance concerns**: Addressed through intelligent validation and caching
-- **Validation accuracy**: Continuous improvement through research-backed methods
+- **Figma MCP Server Maturity**: Official server launched January 2025 - adopt proven patterns, implement fallbacks
+- **Vector Database Scalability**: Phased approach (Chroma → Qdrant) with clear migration path
+- **Meta-Framework Integration**: Selective pattern adoption, avoid over-engineering
 
-### Adoption Risks
-- **Learning curve**: Minimized by maintaining existing command interfaces
-- **Workflow disruption**: Prevented by backward compatibility requirements
-- **Over-engineering**: Controlled by focusing on measurable, practical improvements
+### Implementation Risks
+- **Design-Code Mapping Accuracy**: Start with simple components, iterate based on feedback
+- **Semantic Search Precision**: Hybrid approach with YAML fallback ensures baseline functionality
+- **Workflow Complexity**: Incremental feature addition with clear success criteria
 
 ## Timeline and Resources
 
 ### Development Timeline
-- **8 weeks total** - 3 phases with research integration
-- **Research-driven** - Each phase begins with automated research
-- **Incremental delivery** - Each phase provides immediate value
+- **8 weeks total** - 5 phases with research-informed implementation
+- **Research-completed** - All foundational research completed in Phase 0
+- **Incremental delivery** - Each phase delivers working functionality
 
 ### Resource Requirements
-- **Single developer** - Designed for solo implementation
-- **Research framework** - Existing `@research/` orchestrator handles complex analysis
-- **Claude Code integration** - Builds on existing terminal-based workflows
+- **Research Foundation** - Comprehensive analysis completed (Figma MCP, meta-frameworks, vector DBs)
+- **Existing Infrastructure** - Build on proven `@ai/` orchestration and `@research/` framework
+- **Integration Focus** - Leverage official Figma MCP Server and established vector DB solutions
 
 ## Definition of Success
 
 The project succeeds when any AI agent can:
 
-1. **Fork the framework** and adapt it to a new business domain in <1 hour
-2. **Generate validated documents** with >90% accuracy automatically
-3. **Recover from any failure** without human intervention  
-4. **Reproduce any workflow** perfectly from stored specifications
-5. **Research complex topics** automatically when knowledge gaps are identified
+1. **Access design context** from Figma MCP Server with automatic component mapping
+2. **Find relevant documents** through semantic similarity across 67+ document types
+3. **Generate working code** from acceptance criteria using BDD patterns
+4. **Orchestrate complex workflows** using meta-framework intelligence
+5. **Bridge design and implementation** through comprehensive specification transformation
 
-This transforms the AI knowledge base from an experimental tool into a production-ready business application framework.
+This creates a document-to-code pipeline that fundamentally changes how AI agents understand and implement business requirements.
