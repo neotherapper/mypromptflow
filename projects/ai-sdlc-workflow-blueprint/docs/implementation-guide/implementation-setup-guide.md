@@ -15,7 +15,7 @@ This guide provides step-by-step instructions for implementing the complete infr
 ## 🚀 IMPLEMENTATION TIMELINE
 
 ### **Week 1: Foundation Setup**
-- Day 1-2: GitPod Professional setup
+- Day 1-2: Local development environment setup
 - Day 3-4: Neon database configuration
 - Day 5: Team onboarding and training
 
@@ -40,10 +40,10 @@ This guide provides step-by-step instructions for implementing the complete infr
 
 ### **Required Accounts**
 - [ ] GitHub organization account
-- [ ] GitPod Professional account (see [GitPod documentation](../../tools/gitpod.md))
 - [ ] Neon database account (see [Neon documentation](../../tools/neon.md))
 - [ ] Railway account (see [Railway documentation](../../tools/railway.md))
 - [ ] Vercel account (see [Vercel documentation](../../tools/vercel.md))
+- [ ] (Optional Year-2) GitPod Professional account (see [GitPod documentation](../../tools/gitpod.md))
 
 ### **Required Information**
 - [ ] Team member email addresses
@@ -61,65 +61,59 @@ This guide provides step-by-step instructions for implementing the complete infr
 
 ## 🔧 DETAILED SETUP INSTRUCTIONS
 
-### **Step 1: GitPod Professional Setup**
+### **Step 1: Local Development Environment Setup**
 
-#### **1.1 Create GitPod Team Account**
+#### **1.1 Create Development Environment Setup Script**
 ```bash
-# Visit: https://gitpod.io/teams
-# Click "Create Team"
-# Select "Professional" plan ($50/month per user)
-# Add team members:
-# - head.engineering@company.com
-# - lead.frontend@company.com
-# - lead.backend@company.com
-# - product.owner@company.com
+# Create setup-dev-environment.sh
+#!/bin/bash
+echo "Setting up local development environment..."
+
+# Install Node.js via nvm
+if ! command -v nvm &> /dev/null; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+  source ~/.bashrc
+fi
+
+# Install and use Node.js 20
+nvm install 20
+nvm use 20
+
+# Install pnpm
+npm install -g pnpm
+
+# Install dependencies
+pnpm install
+
+# Setup pre-commit hooks
+pre-commit install
+
+echo "Development environment setup complete!"
 ```
 
-#### **1.2 Configure GitPod Workspace**
-```yaml
-# Create .gitpod.yml in repository root
-image: gitpod/workspace-full:latest
-
-tasks:
-  - name: Install dependencies
-    init: |
-      # Install Node.js dependencies
-      pnpm install
-      
-      # Install Python dependencies
-      pip install -r requirements.txt
-      
-      # Setup pre-commit hooks
-      pre-commit install
-    
-    command: |
-      # Start development servers
-      pnpm run dev
-
-ports:
-  - port: 3000
-    onOpen: open-browser
-    description: React Frontend
-  - port: 8000
-    onOpen: open-browser
-    description: FastAPI Backend
-  - port: 5432
-    onOpen: ignore
-    description: PostgreSQL
-
-github:
-  prebuilds:
-    master: true
-    branches: true
-    pullRequests: true
-    pullRequestsFromForks: false
+#### **1.2 Configure VS Code/Cursor Settings**
+```json
+# Create .vscode/settings.json
+{
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
+}
 ```
 
-#### **1.3 Install GitPod Browser Extension**
+#### **1.3 Environment Variables Template**
 ```bash
-# Chrome: https://chrome.google.com/webstore/detail/gitpod/dodmmooeoklaejobgleioelladacbeki
-# Firefox: https://addons.mozilla.org/en-US/firefox/addon/gitpod/
-# Edge: https://microsoftedge.microsoft.com/addons/detail/gitpod/jadpogjkmhojhpcghjjbgiajdmiljipg
+# Create .env.example
+DATABASE_URL="postgresql://user:password@localhost:5432/maritime_dev"
+CLAUDE_API_KEY="sk-..."
+SENTRY_DSN="https://..."
+VITE_API_URL="http://localhost:8000"
+NODE_ENV="development"
 ```
 
 ### **Step 2: Neon Database Configuration**
@@ -488,13 +482,17 @@ pnpm nx generate @nxlv/python:poetry-project backend --directory=apps
 
 ## 🧪 TESTING THE SETUP
 
-### **Test 1: GitPod Environment**
+### **Test 1: Local Development Environment**
 ```bash
-# Open GitPod workspace
-https://gitpod.io/#github.com/your-org/maritime-insurance
+# Clone repository locally
+git clone https://github.com/your-org/maritime-insurance
+cd maritime-insurance
+
+# Run setup script
+./setup-dev-environment.sh
 
 # Verify:
-# ✓ Environment loads in <30 seconds
+# ✓ Environment sets up in <2 minutes
 # ✓ Dependencies installed automatically
 # ✓ Development servers start
 # ✓ Database connection works
@@ -534,7 +532,7 @@ git push origin test/infrastructure-setup
 ## 🎯 SUCCESS METRICS
 
 ### **Week 1 Targets**
-- [ ] All team members can access GitPod
+- [ ] All team members have local development setup
 - [ ] Database connections working
 - [ ] Development servers running
 
@@ -559,10 +557,10 @@ git push origin test/infrastructure-setup
 
 ### **Common Issues**
 
-#### **GitPod Issues**
-- **Slow startup**: Check prebuild configuration
-- **Dependencies missing**: Verify .gitpod.yml setup
-- **Ports not accessible**: Check port configuration
+#### **Local Development Issues**
+- **Node.js version mismatch**: Run nvm install && nvm use
+- **Dependencies missing**: Run pnpm install
+- **Ports not accessible**: Check if ports 3000/8000 are available
 
 #### **Database Issues**
 - **Connection failures**: Verify environment variables
@@ -575,7 +573,7 @@ git push origin test/infrastructure-setup
 - **GitHub Actions errors**: Check secrets configuration
 
 ### **Getting Help**
-- **GitPod**: Support via GitPod dashboard
+- **Local Development**: Node.js documentation and community
 - **Neon**: Documentation at neon.tech/docs
 - **Railway**: Support via Railway dashboard
 - **Vercel**: Documentation at vercel.com/docs
@@ -586,19 +584,20 @@ git push origin test/infrastructure-setup
 ## 💰 COST TRACKING
 
 ### **Monthly Costs**
-- **GitPod Professional**: $200 (4 users × $50)
+- **Local Development**: $0 (no ongoing costs)
 - **Neon Database**: $25-30 (with branching)
 - **Railway**: $20 (backend hosting)
 - **Vercel**: $20 (frontend hosting)
 - **GitHub Actions**: $0 (included)
 
-**Total**: $265-270/month
+**Total**: $65-70/month
 
 ### **ROI Calculation**
-- **Time saved**: 48 hours/month
+- **Time saved**: 16 hours/month (vs complex setup)
 - **Team hourly rate**: $75/hour average
-- **Value created**: $3,600/month
-- **ROI**: 1,200%+ return on investment
+- **Value created**: $1,200/month
+- **Cost savings**: $200/month vs GitPod
+- **ROI**: 1,700%+ return on investment
 
 ---
 

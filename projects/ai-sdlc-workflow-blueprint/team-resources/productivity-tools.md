@@ -179,7 +179,7 @@ alias deploy-staging="nx deploy --target=staging"
 **Developer Configuration**:
 ```bash
 # Workspaces
-- Development: GitHub, GitPod, Railway, Vercel
+- Development: GitHub, Local Development, Railway, Vercel
 - Design: Figma, Notion, Storybook
 - Research: Perplexity, Documentation sites
 - Communication: Teams, JIRA, Slack

@@ -6,7 +6,7 @@ This todo list covers all setup, configuration, and development tasks for implem
 
 **Role**: Lead Backend Developer  
 **Hardware**: [To be documented]  
-**Claude Code Max**: $100/month subscription (NEW - needs setup)  
+**Claude Code Max**: $200/month subscription (NEW - needs setup)  
 **Primary Focus**: API development, database architecture, and system integration
 
 ---
@@ -14,9 +14,9 @@ This todo list covers all setup, configuration, and development tasks for implem
 ## 📋 Phase 1: Tool Setup & Configuration (Week 1)
 
 ### AI Development Tools
-- [ ] **Purchase and activate Claude Code Max subscription** ($100/month)
+- [ ] **Purchase and activate Claude Code Max subscription** ($200/month)
   - Navigate to https://claude.ai/signup
-  - Select Claude Code Max tier ($100/month)
+  - Select Claude Code Max tier ($200/month)
   - Enable MCP (Model Context Protocol) features
   - Configure for FastAPI and Python development
   - **Due**: Week 1, Day 1

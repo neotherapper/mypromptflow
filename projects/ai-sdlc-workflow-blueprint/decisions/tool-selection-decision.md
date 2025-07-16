@@ -5,12 +5,12 @@
 **Date**: 2025-07-14
 **Decision Maker**: User
 **Status**: CONFIRMED
-**Budget Approved**: $800-1000/month (actual: $430/month)
+**Budget Approved**: $800-1000/month (actual: $530/month)
 
 ### Final Tool Selection
 
 #### Claude Max Subscriptions
-**Total Claude Cost**: $400/month
+**Total Claude Cost**: $500/month
 
 1. **Head of Engineering**
    - Tool: Claude Code Max $100/month tier
@@ -25,10 +25,10 @@
    - Monthly Capacity: ~31,680 messages/month (based on 8hr/day, 22 days)²
 
 3. **Lead Backend Developer**
-   - Tool: Claude Code Max $100/month tier
+   - Tool: Claude Code Max $200/month tier
    - Status: New subscription required
-   - Usage Capacity: ~225 messages per 5-hour session¹
-   - Monthly Capacity: ~7,920 messages/month (based on 8hr/day, 22 days)²
+   - Usage Capacity: ~450 messages per 5-hour session¹
+   - Monthly Capacity: ~15,840 messages/month (based on 8hr/day, 22 days)²
 
 #### Design Tools
 **Total Figma Cost**: $30/month
@@ -64,7 +64,7 @@
 **Monthly Costs**:
 - New Costs: $130/month (Backend Claude + Figma seats)
 - Existing Costs: $300/month (Frontend & Head of Eng Claude)
-- **Total Monthly**: $430/month
+- **Total Monthly**: $530/month
 - **Total Annual**: $5,160/year
 
 **Budget Utilization**: 43-54% of approved budget ($800-1000/month)

@@ -4,7 +4,7 @@
 **Last Updated**: 2025-07-15  
 **Target Audience**: Head of Engineering  
 **Total Implementation Time**: 4-6 weeks  
-**Total Monthly Cost**: $748 (including all tools and infrastructure)
+**Total Monthly Cost**: $848 (including all tools and infrastructure)
 
 ---
 
@@ -37,12 +37,12 @@ Before starting, ensure you have:
 
 | Category | Monthly Cost | Details |
 |----------|--------------|---------|
-| **AI Tools** | $430 | Claude Code Max subscriptions |
+| **AI Tools** | $530 | Claude Code Max subscriptions |
 | **Communication** | $32 | Notion Team (experimental) |
 | **Infrastructure** | $286 | GitPod, GitHub, Neon, Railway, Vercel |
 | **Monitoring** | $26 | Sentry Pro |
 | **Design** | $30 | Figma Professional (2 seats) |
-| **Total** | **$804/month** | All tools and infrastructure |
+| **Total** | **$904/month** | All tools and infrastructure |
 
 ---
 
@@ -74,7 +74,7 @@ Before starting, ensure you have:
    https://claude.ai/signup
    
    # Select subscription
-   Claude Code Max - $100/month tier
+   Claude Code Max - $200/month tier
    
    # Enable MCP features
    Settings > Advanced > Enable Model Context Protocol
@@ -664,7 +664,7 @@ https://www.figma.com/signup
    - Code review automation
 
 2. **Infrastructure Training** (1.5 hours)
-   - GitPod workspace usage
+   - Local development workflow
    - Deployment workflows
    - Database branching with Neon
    - Monitoring with Sentry

@@ -6,10 +6,10 @@
 ┌─────────────────────────────────────────────────────────────┐
 │                    INVESTMENT SUMMARY                        │
 ├─────────────────┬───────────────────────────────────────────┤
-│ Monthly Cost    │ $430                                      │
-│ Annual Cost     │ $5,160                                    │
+│ Monthly Cost    │ $530                                      │
+│ Annual Cost     │ $6,360                                    │
 │ Team Size       │ 4 people                                  │
-│ Cost per Person │ $107.50/month                             │
+│ Cost per Person │ $132.50/month                             │
 └─────────────────┴───────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
@@ -27,19 +27,19 @@
 ## Cost Breakdown Visualization
 
 ```
-Monthly Tool Costs ($430)
+Monthly Tool Costs ($530)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Claude Max   ████████████████████████████████████ 93% ($400)
-Figma Pro    ███ 7% ($30)
+Claude Max   █████████████████████████████████████████████ 94% ($500)
+Figma Pro    ██ 6% ($30)
 ```
 
 ```
 Cost Allocation by Role
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Lead Frontend    ████████████████████ 49% ($215)
-Lead Backend     ███████████ 23% ($100)
-Head of Eng      ███████████ 23% ($100)
-UI/UX Engineer   ██ 5% ($15)
+Lead Frontend    ████████████████████ 41% ($215)
+Lead Backend     ████████████████████ 38% ($200)
+Head of Eng      ███████████ 19% ($100)
+UI/UX Engineer   ██ 3% ($15)
 ```
 
 ---
@@ -147,10 +147,10 @@ With AI          └────┴────┴──█─┴────┴
 Month    Investment    Return       Net Benefit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 1        -$11,830     +$20,000     +$8,170
-2        -$430        +$42,000     +$41,570
-3        -$430        +$48,000     +$47,570
+2        -$530        +$42,000     +$41,470
+3        -$530        +$48,000     +$47,470
 ...
-12       -$430        +$48,000     +$47,570
+12       -$530        +$48,000     +$47,470
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Total    -$16,560     +$513,000    +$496,440
 ```
@@ -198,7 +198,7 @@ Low Impact       ██          █              ─
 Should We Invest in AI Tools?
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Budget Available?           ✓ Yes ($430 < $1000)
+Budget Available?           ✓ Yes ($530 < $1000)
 Team Ready?                 ✓ Yes (4 skilled developers)
 ROI Acceptable?            ✓ Yes (99x > 10x minimum)
 Risk Acceptable?           ✓ Yes (Low risk, high reward)
@@ -216,7 +216,7 @@ Decision: ████████████ STRONG YES
 │              AI TOOL INVESTMENT AT A GLANCE                  │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  Investment:  ▪▪▪▪▪ $430/month                             │
+│  Investment:  ▪▪▪▪▪ $530/month                             │
 │  Return:      ▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪▪ $42,750/month        │
 │                                                             │
 │  Productivity: ████████████████ +65%                        │
@@ -238,7 +238,7 @@ Decision: ████████████ STRONG YES
 ## Action Items
 
 ### Immediate (This Week)
-1. ✓ Approve $430/month budget
+1. ✓ Approve $530/month budget
 2. ✓ Procure missing tools
 3. ✓ Schedule team training
 
@@ -268,7 +268,7 @@ Metrics:
 □ Hours Saved: _____ (Target: 280)
 
 Financial:
-□ Tool Costs: $430
+□ Tool Costs: $530
 □ Value Created: $_____
 □ Net Benefit: $_____
 □ Actual ROI: _____x

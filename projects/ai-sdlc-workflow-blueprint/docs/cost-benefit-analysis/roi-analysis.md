@@ -5,8 +5,8 @@
 This analysis demonstrates the financial return on investment (ROI) for implementing AI-enhanced development tools with your 4-person team.
 
 **Key Findings**:
-- Monthly Investment: $430
-- Annual Investment: $5,160
+- Monthly Investment: $530
+- Annual Investment: $6,360
 - Expected Annual Return: $540,000 - $720,000
 - ROI: 105x - 140x
 - Payback Period: 2.6 days
@@ -20,9 +20,10 @@ This analysis demonstrates the financial return on investment (ROI) for implemen
 | Tool | Monthly Cost | Annual Cost | Users |
 |------|-------------|------------|-------|
 | Claude Code Max ($200 tier) | $200 | $2,400 | Lead Frontend |
-| Claude Code Max ($100 tier) | $200 | $2,400 | Head of Eng, Lead Backend |
+| Claude Code Max ($100 tier) | $100 | $1,200 | Head of Eng |
+| Claude Code Max ($200 tier) | $200 | $2,400 | Lead Backend |
 | Figma Professional | $30 | $360 | UI/UX, Frontend |
-| **Total Direct Costs** | **$430** | **$5,160** | 4 team members |
+| **Total Direct Costs** | **$530** | **$6,360** | 4 team members |
 
 ### Indirect Costs (One-Time)
 
@@ -34,10 +35,10 @@ This analysis demonstrates the financial return on investment (ROI) for implemen
 | **Total Indirect Costs** | **$11,400** | First month only |
 
 ### Total First-Year Investment
-- Direct Costs: $5,160
+- Direct Costs: $6,360
 - Indirect Costs: $11,400
-- **Total Year 1**: $16,560
-- **Subsequent Years**: $5,160
+- **Total Year 1**: $17,760
+- **Subsequent Years**: $6,360
 
 ---
 
@@ -175,8 +176,8 @@ ROI = 9,736% or 99x
 ### Payback Period
 ```
 Daily value creation: $513,000 / 260 days = $1,973/day
-Daily cost: $430 / 30 days = $14.33/day
-Payback period: $430 / ($1,973 - $14.33) = 0.22 days
+Daily cost: $530 / 30 days = $17.67/day
+Payback period: $530 / ($1,973 - $17.67) = 0.27 days
 Actual payback: 2.6 business days (including setup time)
 ```
 
@@ -290,7 +291,7 @@ Still exceptional return
 ## Recommendations
 
 ### Immediate Actions
-1. **Approve budget**: $430/month is minimal for returns
+1. **Approve budget**: $530/month is minimal for returns
 2. **Start with pilot**: 1-month trial with measurement
 3. **Track metrics**: Set up productivity dashboards
 4. **Document wins**: Capture success stories

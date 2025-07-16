@@ -219,7 +219,7 @@ This guide provides tailored training programs for each team member based on the
 
 #### Day 1-2: API Design and Generation
 **Duration**: 5 hours
-**Tools**: Claude Code Max ($100 tier) + Cursor IDE
+**Tools**: Claude Code Max ($200 tier) + Cursor IDE
 
 **Learning Objectives**:
 - Master API endpoint generation

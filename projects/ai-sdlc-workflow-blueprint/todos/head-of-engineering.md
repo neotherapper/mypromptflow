@@ -19,7 +19,7 @@ This todo list covers all setup, configuration, and leadership tasks for impleme
   - MCP features: Enabled
   - JIRA integration: Tested and working
   
-- [ ] **Purchase Claude Code Max for Lead Backend Developer** ($100/month)
+- [ ] **Purchase Claude Code Max for Lead Backend Developer** ($200/month)
   - Navigate to https://claude.ai/signup
   - Select Claude Code Max tier
   - Enable MCP (Model Context Protocol) features
@@ -39,9 +39,9 @@ This todo list covers all setup, configuration, and leadership tasks for impleme
 - [ ] **Send team access invitations**
   - Send Notion workspace invitations to all 4 team members
   - Send GitHub organization invitations
-  - Send GitPod workspace invitations
   - **Due**: Week 1, Day 3
   - **Validation**: All team members have joined all platforms
+  - **Note**: GitPod moved to year-2 expansion planning
 
 ### Design Tools
 - [ ] **Purchase Figma Professional seats** ($30/month)
@@ -89,15 +89,15 @@ This todo list covers all setup, configuration, and leadership tasks for impleme
   - **Validation**: Repository structure is complete and accessible
 
 ### Development Environment
-- [ ] **Purchase GitPod Professional team plan** ($200/month)
-  - Navigate to https://gitpod.io/teams
-  - Create team: Maritime Insurance Dev Team
-  - Purchase Professional plan: $50/user/month × 4 = $200/month
-  - Configure workspace settings
+- [ ] **Setup standardized local development environment** ($0/month)
+  - Create development environment setup script
+  - Document Node.js version requirements (.nvmrc)
+  - Configure VS Code/Cursor settings template
+  - Create environment variables template (.env.example)
   - **Due**: Week 2, Day 1
-  - **Validation**: All team members can access GitPod workspaces
+  - **Validation**: All team members can set up local development in <2 hours
 
-- [ ] **Configure GitPod workspace**
+- [ ] **Configure local development standards**
   - Create .gitpod.yml in repository root
   - Configure development environment
   - Set up environment variables
@@ -339,8 +339,8 @@ This todo list covers all setup, configuration, and leadership tasks for impleme
   - Improved code quality
 
 ### Cost Management
-- [ ] **Monthly infrastructure costs: $804**
-  - AI Tools: $430
+- [ ] **Monthly infrastructure costs: $904**
+  - AI Tools: $530
   - Infrastructure: $286
   - Communication: $32
   - Monitoring: $26

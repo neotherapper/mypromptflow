@@ -5,7 +5,7 @@
 **Type**: AI-Powered Development Assistant  
 **Category**: Core Development Tool  
 **Status**: CONFIRMED - Primary AI tool for entire team  
-**Monthly Cost**: $400 (3 subscriptions)  
+**Monthly Cost**: $500 (3 subscriptions)  
 **Priority**: CRITICAL - Essential for AI-enhanced SDLC workflow
 
 ---
@@ -72,8 +72,8 @@
 - Continuous testing and optimization
 - Documentation and knowledge sharing
 
-### Lead Backend Developer - $100/month (7,920 messages)
-**Usage Pattern**: API development and system integration
+### Lead Backend Developer - $200/month (15,840 messages)
+**Usage Pattern**: Heavy daily development assistance for API development and system integration
 
 **Key Activities**:
 - **API Development**: FastAPI endpoint creation and optimization

@@ -66,6 +66,14 @@ Sprint 1 Kickoff Agenda:
 ```markdown
 ## AI Tool Usage Protocol
 
+### Unified Feature Branch Strategy
+- ALL team members work on single feature branch: `feature/fleet-risk-assessment`
+- Coordinated commits with clear module separation
+- Frontend changes in `apps/frontend/`
+- Backend changes in `apps/backend/`
+- Design updates in `apps/design-system/`
+- Single PR deployment for complete feature testing
+
 ### Cursor IDE Setup
 - Primary development environment
 - AI-powered code completion enabled
@@ -83,6 +91,7 @@ Sprint 1 Kickoff Agenda:
 - Test coverage minimum 90%
 - Performance benchmarks must be met
 - Security scan on all commits
+- Nx affected commands for selective deployments
 ```
 
 #### 10:00 AM - Development Environment Setup

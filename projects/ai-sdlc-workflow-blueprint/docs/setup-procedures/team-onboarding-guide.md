@@ -79,7 +79,7 @@ This guide helps onboard your 4-person team to the AI-enhanced development workf
 
 #### Lead Backend Developer Setup
 ```
-1. Claude Code Max ($100)
+1. Claude Code Max ($200)
    - New subscription activation
    - API development prompts
    - Database query templates

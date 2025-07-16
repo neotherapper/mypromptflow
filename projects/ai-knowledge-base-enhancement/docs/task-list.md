@@ -38,23 +38,24 @@
 
 ## Next Priority Tasks (Document-to-Code Implementation)
 
-- [ ] **Implement knowledge status caching system** (Priority: High)
-  - Create `ai/context/knowledge-status-cache.yaml` for instant status retrieval
-  - Design hook system at `.claude/hooks/on-document-created.sh` for automatic updates
-  - Build bridge mechanism for research framework integration
-  - Enhance `/knowledge-status` command to read from cache
+- [x] **Fix knowledge status system** (Completed: 2025-07-16)
+  - **FIXED**: Removed incorrect hook references from cache file
+  - **NOTE**: Cache is manual-update only - automatic hooks would need ~/.claude/settings.json configuration
+  - **RESULT**: ai/context/knowledge-status-cache.yaml now accurately reflects manual update system
+  - **NEXT**: Could implement proper Claude Code hooks later if needed
 
-- [ ] **Create Figma MCP integration protocol** (Priority: High)
+- [ ] **Create Figma MCP integration protocol** (Priority: Low)
+  - **NOTE**: Deferred due to complexity - can be simplified later
   - Document official Dev Mode MCP Server setup at `localhost:3845/sse`
   - Establish component naming convention: `{feature}__{component}__{state}`
   - Create CLAUDE.md templates for feature-specific design mapping
   - Design fallback strategies for missing design specifications
 
-- [ ] **Design vector-enhanced semantic search** (Priority: High)
-  - Implement Chroma vector database for document embeddings
-  - Create hybrid search combining vector similarity + YAML metadata
-  - Build automatic document indexing on creation
-  - Design migration path to Qdrant for production scaling
+- [ ] **Simple search improvements** (Priority: Medium)
+  - **NOTE**: Vector databases not needed for core functionality
+  - Improve existing YAML-based search in knowledge base
+  - Add basic semantic clustering in existing cache system
+  - Optional: Consider simple text search if needed later
 
 - [ ] **Implement meta-framework orchestration patterns** (Priority: Medium)
   - Apply SuperClaude modular command structure with specialized categories

@@ -73,8 +73,8 @@
   - ✅ Decision documented in `decisions/team-structure-decision.md`
   
 - [x] **Select AI tools with justification** [Priority: High] [Type: Decision] (Completed: 2025-07-14)
-  - ✅ User selected tools with $430/month budget
-  - ✅ Claude Max ($400), Figma Pro ($30), Free tools (Cursor, Gemini)
+  - ✅ User selected tools with $530/month budget
+  - ✅ Claude Max ($500), Figma Pro ($30), Free tools (Cursor, Gemini)
   - ✅ Decision documented in `decisions/tool-selection-decision.md`
 
 - [x] **Define SDLC stages and processes** [Priority: High] [Type: Decision] (Completed: 2025-07-14)

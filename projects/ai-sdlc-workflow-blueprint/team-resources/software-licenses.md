@@ -5,8 +5,8 @@
 This document tracks all software licenses, subscriptions, and service accounts for the 4-person maritime insurance development team implementing the AI-enhanced SDLC workflow.
 
 **Team Size**: 4 developers  
-**Total Monthly Cost**: $804  
-**Total Annual Cost**: $9,648  
+**Total Monthly Cost**: $704  
+**Total Annual Cost**: $8,448  
 **License Administrator**: Head of Engineering  
 **Budget Owner**: Head of Engineering
 
@@ -17,12 +17,12 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ### Monthly Subscription Costs
 | Category | Monthly Cost | Annual Cost | Details |
 |----------|--------------|-------------|---------|
-| **AI Tools** | $430 | $5,160 | Claude Code Max subscriptions |
-| **Infrastructure** | $286 | $3,432 | GitPod, GitHub, Neon, Railway, Vercel |
+| **AI Tools** | $530 | $6,360 | Claude Code Max subscriptions |
+| **Infrastructure** | $86 | $1,032 | Local Development, GitHub, Neon, Railway, Vercel |
 | **Communication** | $32 | $384 | Notion Team (experimental) |
 | **Design** | $30 | $360 | Figma Professional (2 seats) |
 | **Monitoring** | $26 | $312 | Sentry Pro |
-| **TOTAL** | **$804** | **$9,648** | All subscriptions |
+| **TOTAL** | **$704** | **$8,448** | All subscriptions |
 
 ### One-Time Purchases
 | Tool | Cost | Assigned To | Status |
@@ -40,7 +40,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ### Claude Code Max Subscriptions
 **Provider**: Anthropic  
 **Service**: AI-powered development assistance  
-**Total Monthly Cost**: $430
+**Total Monthly Cost**: $530
 
 #### Head of Engineering
 - **Tier**: Claude Code Max ($100/month)
@@ -61,7 +61,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 - **Payment Method**: Corporate credit card
 
 #### Lead Backend Developer
-- **Tier**: Claude Code Max ($100/month)
+- **Tier**: Claude Code Max ($200/month)
 - **Status**: ⏳ Pending Setup
 - **Account**: [To be created]
 - **Features**: FastAPI endpoints, database schema, API documentation
@@ -91,13 +91,14 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ## 🏗️ Infrastructure & Hosting
 
 ### Development Environment
-**GitPod Professional**: $200/month
-- **Plan**: Team plan (4 users × $50/month)
+**Local Development**: $0/month
+- **Plan**: Standardized local setup across team
 - **Status**: ✅ Active
-- **Features**: Cloud development environments, team collaboration
+- **Features**: Full control, offline capability, no subscription costs
 - **Usage**: Primary development environment for all team members
-- **Renewal**: Monthly auto-renewal
+- **Renewal**: N/A (one-time setup)
 - **Account Administrator**: Head of Engineering
+- **Future Expansion**: GitPod Professional ($200/month) planned for year-2
 
 ### Version Control & CI/CD
 **GitHub Team**: $16/month
@@ -312,7 +313,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 **High Usage (Daily)**:
 - Claude Code Max: 100% team adoption
 - Cursor IDE: 100% developer adoption
-- GitPod: 100% development usage
+- Local Development: 100% development usage
 - GitHub: 100% team usage
 
 **Medium Usage (Weekly)**:
@@ -328,7 +329,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ### ROI Analysis
 **High ROI Tools**:
 - Claude Code Max: 2,000% ROI
-- GitPod: 1,500% ROI
+- Local Development: Infinite ROI (zero cost)
 - Cursor IDE: Infinite ROI (free)
 
 **Medium ROI Tools**:
@@ -348,7 +349,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ### Automatic Renewals
 **Monthly Renewals**:
 - Claude Code Max subscriptions
-- GitPod Professional
+- Future: GitPod Professional (year-2 expansion)
 - GitHub Team
 - Neon PostgreSQL
 - Railway Pro
@@ -381,7 +382,7 @@ This document tracks all software licenses, subscriptions, and service accounts 
 
 ### Vendor Support
 **Claude (Anthropic)**: support@anthropic.com
-**GitPod**: support@gitpod.io
+**Local Development**: Internal team support
 **GitHub**: support@github.com
 **Neon**: support@neon.tech
 **Railway**: support@railway.app
@@ -422,12 +423,12 @@ This document tracks all software licenses, subscriptions, and service accounts 
 ## 📊 Budget Planning
 
 ### Current Annual Budget
-**Total**: $9,648
-- **AI Tools**: $5,160 (53%)
-- **Infrastructure**: $3,432 (36%)
-- **Communication**: $384 (4%)
+**Total**: $8,448
+- **AI Tools**: $6,360 (75%)
+- **Infrastructure**: $1,032 (12%)
+- **Communication**: $384 (5%)
 - **Design**: $360 (4%)
-- **Monitoring**: $312 (3%)
+- **Monitoring**: $312 (4%)
 
 ### Growth Planning
 **Year 2 Projections**:

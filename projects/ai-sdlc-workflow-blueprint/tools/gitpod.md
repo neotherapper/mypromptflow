@@ -1,8 +1,8 @@
-# GitPod Professional - Cloud Development Environment
+# GitPod Professional - Year-2 Expansion Cloud Development Environment
 
 ## Overview
 
-GitPod Professional provides cloud-based development environments that enable instant, consistent, and collaborative coding experiences. For the maritime insurance team, GitPod eliminates setup time and ensures all developers work in identical environments.
+GitPod Professional provides cloud-based development environments that enable instant, consistent, and collaborative coding experiences. For the maritime insurance team, GitPod represents a strategic year-2 expansion option to enhance development productivity after the MVP local development foundation is established.
 
 ## Key Features
 
@@ -24,13 +24,14 @@ GitPod Professional provides cloud-based development environments that enable in
 - **Docker Support**: Custom Docker images for specialized setups
 - **Environment Variables**: Secure management of secrets and configurations
 
-## Cost Structure
+## Cost Structure (Year-2 Expansion)
 
 ### **GitPod Professional Plan**
 - **Cost**: $50/month per user
 - **Team Cost**: $200/month (4 users)
 - **Features**: 50 hours/month, parallel workspaces, team management
 - **Compute**: Standard instances (4 cores, 8GB RAM)
+- **MVP Position**: Not included in initial MVP to minimize costs and complexity
 
 ### **Usage Allocation**
 - **Head of Engineering**: 40 hours/month (management + development)
@@ -125,13 +126,14 @@ RUN git config --global init.defaultBranch main
 3. **Collaborative Review**: Multiple reviewers can access same environment
 4. **Approval**: Merge after thorough testing
 
-## Benefits for Maritime Insurance Team
+## Benefits for Maritime Insurance Team (Year-2 Expansion)
 
 ### **Productivity Gains**
-- **Setup Time**: 8 hours → 30 seconds per developer
-- **Environment Issues**: 2 hours/week → 0 hours/week
-- **Onboarding**: 1 day → 5 minutes for new team members
+- **Setup Time**: 2 hours → 30 seconds per developer (after MVP local setup)
+- **Environment Issues**: 0.5 hours/week → 0 hours/week
+- **Onboarding**: 2 hours → 5 minutes for new team members
 - **Consistency**: Zero configuration drift between team members
+- **Scale Benefits**: Most valuable when team expands beyond 4 developers
 
 ### **Cost Efficiency**
 - **Hardware**: No need for powerful local machines
@@ -213,25 +215,28 @@ RUN git config --global init.defaultBranch main
 - **Support**: Professional support included with plan
 - **Training**: Online training resources available
 
-## ROI Analysis
+## ROI Analysis (Year-2 Expansion)
 
 ### **Cost Comparison**
 - **GitPod Professional**: $200/month
-- **Local Development**: $0 setup + 32 hours/month maintenance
-- **Break-even**: 4 hours of developer time saved per month
-- **Actual Savings**: 32 hours/month × $75/hour = $2,400/month value
+- **Local Development**: $0 setup + 8 hours/month maintenance
+- **Break-even**: 3 hours of developer time saved per month
+- **Actual Savings**: 8 hours/month × $75/hour = $600/month value
+- **Year-2 Justification**: Higher ROI when team is larger and local setup becomes complex
 
-### **Productivity Impact**
-- **Development Speed**: 30% faster due to zero setup time
+### **Productivity Impact (Year-2 Expansion)**
+- **Development Speed**: 20% faster due to zero setup time (after MVP baseline)
 - **Team Collaboration**: 50% better due to shared environments
 - **Onboarding**: 95% faster for new team members
 - **Bug Resolution**: 40% faster due to consistent environments
+- **Team Scaling**: Essential when expanding beyond 4 developers
 
-GitPod Professional provides the foundation for efficient, collaborative development while eliminating the complexity of local environment management.
+GitPod Professional provides excellent value for scaling development teams while eliminating the complexity of local environment management, making it ideal for year-2 expansion.
 
 ---
 
-**Implementation Priority**: High - Foundation for all development work
+**Implementation Priority**: Year-2 Expansion - After MVP local development foundation
 **Setup Time**: 1 day for full team onboarding
 **Maintenance**: Zero ongoing maintenance required
-**ROI**: 1,200% return on investment through time savings
+**ROI**: 300% return on investment through time savings (after MVP baseline)
+**MVP Strategy**: Start with local development, expand to GitPod as team scales

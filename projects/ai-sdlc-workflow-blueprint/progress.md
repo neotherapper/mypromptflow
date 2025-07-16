@@ -116,8 +116,8 @@
    - UI/UX Engineer
    - Documented in `/decisions/team-structure-decision.md`
 
-2. **Tool Selection**: Confirmed with budget of $430/month
-   - Claude Code Max: $100 (Head of Eng), $200 (Frontend), $100 (Backend)
+2. **Tool Selection**: Confirmed with budget of $530/month
+   - Claude Code Max: $100 (Head of Eng), $200 (Frontend), $200 (Backend)
    - Figma Professional: 2 full seats at $15 each
    - Free tools: Cursor IDE, Gemini CLI
    - Documented in `/decisions/tool-selection-decision.md`
@@ -236,7 +236,7 @@
 **Total Investment**: $713/month with comprehensive testing framework
 
 **Final Complete Stack**:
-- ✅ **AI Tools**: Claude Max ($400), Figma Pro ($30)
+- ✅ **AI Tools**: Claude Max ($500), Figma Pro ($30)
 - ✅ **Development**: Playwright, Storybook, pnpm, Nx monorepo
 - ✅ **Environment**: GitPod Professional ($150)
 - ✅ **Documentation**: Notion Team ($32)

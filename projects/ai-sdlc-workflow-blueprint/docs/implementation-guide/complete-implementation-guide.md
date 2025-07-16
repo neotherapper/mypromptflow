@@ -18,7 +18,7 @@ This guide provides detailed, step-by-step procedures for implementing the 6-sta
 **Team Composition**:
 - Head of Engineering (Claude Max $100)
 - Lead Frontend Developer (Claude Max $200, Figma $15)
-- Lead Backend Developer (Claude Max $100)
+- Lead Backend Developer (Claude Max $200)
 - UI/UX Engineer (Figma $15)
 
 **All team members also have**: Cursor IDE (free), Gemini CLI (free)
@@ -255,21 +255,46 @@ Assignment guidelines:
 - **Design updates** → UI/UX Engineer
 - **Integration/Review** → Head of Engineering
 
-### Step 3.4: Development Environment Setup
+### Step 3.4: Unified Feature Branch Setup
 
-**WHO**: Each developer
-**TOOL**: Git + Cursor IDE
-**ACTION**: Create feature branches
+**WHO**: All developers collaborating on feature
+**TOOL**: Git + Cursor IDE + Nx affected commands
+**ACTION**: Create single unified feature branch
+
+**Strategy**: Unified Feature Branch (resolves ephemeral environment integration challenges)
 
 ```bash
+# Team lead creates unified feature branch
+git checkout -b feature/customer-portal-complete
+
+# All developers work on same branch with coordinated commits
 # Frontend developer
-git checkout -b feature/customer-portal-ui
+git checkout feature/customer-portal-complete
+# Work on frontend changes in apps/frontend/
 
-# Backend developer
-git checkout -b feature/customer-portal-api
+# Backend developer  
+git checkout feature/customer-portal-complete
+# Work on backend changes in apps/backend/
 
-# Create draft PRs immediately
-gh pr create --draft --title "Customer Portal UI" --body "..."
+# UI/UX developer
+git checkout feature/customer-portal-complete
+# Work on design updates in apps/design-system/
+
+# Create single PR with all changes
+gh pr create --draft --title "Customer Portal: Complete Feature Implementation" \
+  --body "This PR implements the complete customer portal feature including:
+  - Frontend React components and UI
+  - Backend API endpoints and business logic
+  - Database schema updates
+  - Design system components
+  - Automated tests for all layers"
+```
+
+**Nx Affected Deployment**: Single PR triggers deployment of only affected services
+```bash
+# GitHub Actions will run:
+npx nx affected:apps --base=origin/main --head=HEAD
+# Deploys only changed applications (frontend, backend, etc.)
 ```
 
 ---

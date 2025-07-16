@@ -137,11 +137,11 @@ This document describes the complete workflow from business ideation to producti
 
 ## Stage 4: Implementation
 
-### Development Workflow
+### Development Workflow - Unified Feature Branch Strategy
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   PARALLEL DEVELOPMENT                   │
+│                   COLLABORATIVE DEVELOPMENT              │
 ├─────────────────────┬─────────────────┬─────────────────┤
 │   Lead Frontend     │  Lead Backend   │  UI/UX Engineer │
 │                     │                 │                 │
@@ -157,7 +157,23 @@ This document describes the complete workflow from business ideation to producti
 ┌─────────────────────────────────────────────────────────┐
 │                    Git Repository                        │
 │                                                         │
-│  Feature Branches → Pull Requests → Code Review        │
+│  Single Feature Branch → Unified PR → Integrated Tests │
+│                                                         │
+│  feature/customer-portal-complete                       │
+│  ├── apps/frontend/ (React changes)                     │
+│  ├── apps/backend/ (API changes)                        │
+│  ├── apps/design-system/ (Component updates)            │
+│  └── tests/ (E2E integration tests)                     │
+└─────────────────────────────────────────────────────────┘
+                                │
+                                v
+┌─────────────────────────────────────────────────────────┐
+│              Nx Affected Deployment                      │
+│                                                         │
+│  • Detects changed applications                         │
+│  • Deploys only affected services                       │
+│  • Single ephemeral environment                         │
+│  • Complete feature testing                             │
 └─────────────────────────────────────────────────────────┘
 ```
 

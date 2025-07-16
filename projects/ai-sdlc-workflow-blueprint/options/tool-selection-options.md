@@ -67,8 +67,8 @@ Based on your confirmed team structure (Head of Engineering, Lead Frontend, Lead
 #### Claude Code Max (Selective)
 **Allocation**:
 - Lead Frontend Developer: $200/month (20x usage tier)
-- Lead Backend Developer: $100/month (5x usage tier)
-- **Subtotal**: $300/month
+- Lead Backend Developer: $200/month (20x usage tier)
+- **Subtotal**: $500/month
 
 #### GitHub Copilot (Supplementary)
 **Allocation**:

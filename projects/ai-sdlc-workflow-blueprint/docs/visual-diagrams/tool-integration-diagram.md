@@ -12,7 +12,7 @@ This diagram shows how all AI tools integrate and interact within the developmen
 │                    TEAM TOOL ALLOCATION                        │
 ├─────────────────┬──────────────────┬──────────────────────────┤
 │ Head of Eng     │ Lead Frontend    │ Lead Backend            │
-│ • Claude $100   │ • Claude $200    │ • Claude $100           │
+│ • Claude $100   │ • Claude $200    │ • Claude $200           │
 │ • Cursor Free   │ • Cursor Free    │ • Cursor Free           │
 │ • Gemini Free   │ • Figma $15      │ • Gemini Free           │
 │                 │ • Gemini Free    │                         │
@@ -151,7 +151,7 @@ Team Standup → JIRA Board → Claude Analysis → Task Assignment
 ├──────────────┬──────────────┬───────────────────────┤
 │  Frontend    │   Backend    │    Design             │
 │              │              │                       │
-│ Claude $200  │ Claude $100  │   Figma $15          │
+│ Claude $200  │ Claude $200  │   Figma $15          │
 │ → Code Gen   │ → API Dev    │   → Mockups          │
 │ → Reviews    │ → Database   │   → Specs            │
 │              │              │                       │
@@ -174,14 +174,14 @@ Claude Max   AI Tests    Git Push    Auto JIRA
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│           MONTHLY COST: $430                         │
+│           MONTHLY COST: $530                         │
 ├─────────────────┬───────────────────────────────────┤
 │  Claude Max     │           Free Tools              │
-│   $400/mo       │             $0/mo                 │
+│   $500/mo       │             $0/mo                 │
 │                 │                                   │
 │ • Head: $100    │  • Cursor IDE (all)              │
 │ • Frontend: $200│  • Gemini CLI (all)              │
-│ • Backend: $100 │  • Git/GitHub                    │
+│ • Backend: $200 │  • Git/GitHub                    │
 ├─────────────────┼───────────────────────────────────┤
 │  Figma Pro      │         Existing                  │
 │   $30/mo        │        Infrastructure             │
@@ -231,7 +231,7 @@ When team expands in 8-10 months:
 ┌─────────────────────────────────────────────────────┐
 │           EXPANSION READY ARCHITECTURE               │
 │                                                     │
-│  Current: 4 people, $430/mo                         │
+│  Current: 4 people, $530/mo                         │
 │  ↓                                                  │
 │  Future: 6-8 people, ~$800/mo                       │
 │                                                     │

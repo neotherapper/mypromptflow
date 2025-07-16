@@ -64,7 +64,7 @@ This document provides a comprehensive inventory of all hardware and computing r
   - **Configuration**: Optimized for Python/FastAPI development
 
 **Performance Requirements**:
-- **AI Development**: Claude Code Max $100 tier
+- **AI Development**: Claude Code Max $200 tier
 - **Backend Development**: FastAPI, PostgreSQL, Docker
 - **Database Management**: Neon, Railway, local development
 - **API Testing**: Postman, pytest, integration testing

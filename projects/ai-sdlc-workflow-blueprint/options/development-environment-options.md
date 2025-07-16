@@ -325,9 +325,9 @@ Development → Staging → Production
 ## Decision Questions
 
 ### 1. Development Environment Preference
-- Do you prefer local development or are you open to cloud environments?
+- Do you prefer local development (MVP) or are you open to cloud environments (year-2)?
 - Does your team have Docker experience?
-- What's your budget for development environment costs?
+- What's your budget for development environment costs? ($0 local vs $200+ cloud)
 
 ### 2. Git Workflow Complexity
 - Do you need structured release cycles or prefer continuous deployment?

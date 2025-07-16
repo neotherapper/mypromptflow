@@ -4,7 +4,7 @@
 
 This guide provides step-by-step instructions for procuring and setting up the AI tool stack for your 4-person development team.
 
-**Total Monthly Investment**: $430
+**Total Monthly Investment**: $530
 **Setup Time**: 2-3 days
 **Prerequisites**: Admin access to company payment methods and tool accounts
 
@@ -13,9 +13,9 @@ This guide provides step-by-step instructions for procuring and setting up the A
 ## Tool Procurement Checklist
 
 ### Required Purchases
-- [ ] Claude Code Max - $100 subscription (Backend Developer)
+- [ ] Claude Code Max - $200 subscription (Backend Developer)
 - [ ] Figma Professional - 2 seats at $15 each
-- [ ] Total new monthly cost: $130
+- [ ] Total new monthly cost: $230
 
 ### Already Subscribed
 - [x] Claude Code Max - $200 (Lead Frontend Developer)
@@ -33,11 +33,11 @@ This guide provides step-by-step instructions for procuring and setting up the A
 
 **Who**: Head of Engineering or IT Admin
 **Time**: 15 minutes
-**Cost**: $100/month
+**Cost**: $200/month
 
 #### Purchase Process:
 1. Go to https://claude.ai/subscribe
-2. Select "Max" plan ($100/month option)
+2. Select "Max" plan ($200/month option)
 3. Choose monthly billing
 4. Enter payment details
 5. Assign to Lead Backend Developer
@@ -205,7 +205,7 @@ Viewer access: engineering.head@company.com (Free)
 |------------|----------------|-------|------------|------------|
 | Head of Engineering | $100 (existing) | Viewer (free) | ✓ | ✓ |
 | Lead Frontend Dev | $200 (existing) | $15 Full | ✓ | ✓ |
-| Lead Backend Dev | $100 (new) | Viewer (free) | ✓ | ✓ |
+| Lead Backend Dev | $200 (new) | Viewer (free) | ✓ | ✓ |
 | UI/UX Engineer | - | $15 Full | ✓ | ✓ |
 
 ---
@@ -241,17 +241,17 @@ Viewer access: engineering.head@company.com (Free)
 ### Monthly Costs
 ```
 New Subscriptions:
-- Claude Max (Backend): $100
+- Claude Max (Backend): $200
 - Figma (2 seats): $30
 Subtotal New: $130/month
 
 Existing Subscriptions:
 - Claude Max (Frontend): $200
 - Claude Max (Head of Eng): $100
-Subtotal Existing: $300/month
+Subtotal Existing: $500/month
 
-Total Monthly: $430
-Total Annual: $5,160
+Total Monthly: $530
+Total Annual: $6,360
 ```
 
 ### Cost Optimization Tips

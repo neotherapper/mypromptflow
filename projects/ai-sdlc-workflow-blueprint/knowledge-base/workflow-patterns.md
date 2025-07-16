@@ -245,13 +245,28 @@ Estimated Effort: 32 story points (4-5 weeks with AI assistance)
 
 **Tools Required**: Figma + MCP Integration + AI-enhanced development workflow
 
-### Backend → Frontend Integration
+### Backend → Frontend Integration - Unified Feature Branch Strategy
 
-**Workflow**:
-1. **API Specification**: AI-assisted API specification design
-2. **Code Generation**: Automated client SDK generation
-3. **Type Safety**: Type-safe frontend integration validation
-4. **Documentation**: Automated API documentation updates
+**Unified Branch Workflow** (Resolves Step 3.4 PR discrepancy):
+1. **Single Feature Branch**: Both frontend and backend developers work on the same feature branch
+2. **API Specification**: AI-assisted API specification design within unified branch
+3. **Coordinated Development**: Backend API changes and frontend integration developed simultaneously
+4. **Integrated Testing**: Complete feature testing in single ephemeral environment
+5. **Type Safety**: Automated TypeScript type generation from FastAPI OpenAPI spec
+6. **Unified PR**: Single pull request with all related changes for stakeholder review
+
+**Nx Monorepo Integration**:
+- **Affected Detection**: `nx affected:apps` identifies changed applications
+- **Selective Deployment**: Only modified services deployed to ephemeral environment
+- **Build Optimization**: 30-70% faster CI runs through selective builds
+- **Dependency Management**: Automated dependency graph resolution
+
+**Benefits Over Separate Branch Strategy**:
+- ✅ **Simplified Integration Testing**: Single environment tests complete feature
+- ✅ **Stakeholder UAT**: Business users can validate complete functionality
+- ✅ **Reduced Coordination Overhead**: No complex PR dependency management
+- ✅ **AI Tool Optimization**: Full feature context for better AI assistance
+- ✅ **Faster Development Cycles**: Eliminates separate branch coordination delays
 
 ### Cross-Team Communication Optimization
 
