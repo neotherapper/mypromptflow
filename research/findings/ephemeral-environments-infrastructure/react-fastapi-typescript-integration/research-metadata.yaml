@@ -1,0 +1,23 @@
+---
+title: "React/FastAPI Integration Patterns with TypeScript Generation for Full-Stack Type Safety"
+research_type: "primary"
+subject: "React/FastAPI TypeScript Integration"
+conducted_by: "Claude-4-Research-Agent"
+date_conducted: "2025-01-09"
+date_updated: "2025-01-09"
+version: "1.0.0"
+status: "completed"
+confidence_level: "high"
+sources_count: 25
+methodology: ["web_research", "multi_agent_analysis", "documentation_analysis", "best_practices_synthesis"]
+keywords: ["react", "fastapi", "typescript", "nx-monorepo", "type-safety", "insurance-domain", "openapi", "full-stack"]
+related_tasks: ["research_react_fastapi", "typescript_generation_research", "api_client_management_research", "nx_monorepo_integration_research", "development_workflow_research", "insurance_patterns_research", "testing_validation_research"]
+priority: "high"
+estimated_hours: 8
+dependencies: []
+impacts: ["VanguardAI insurance platform development", "Full-stack TypeScript architecture decisions", "Development workflow optimization"]
+research_scope: "broad"
+domain_specificity: "cross_domain"
+stakeholder_level: "professional"
+output_format: "technical_documentation"
+---

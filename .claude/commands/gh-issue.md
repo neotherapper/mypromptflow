@@ -1,5 +1,5 @@
-Follow the below instructions
+Analyze and work on the GitHub issue: $ARGUMENTS
 
-1. Analyze the GitHub issue: $ARGUMENTS
-2. Use `gh issue view` to get the issue details
-3. There you can read it and take the whole context as new prompt.
+1. Use `gh issue view $ARGUMENTS` to get the issue details
+2. Read the issue context and understand the problem
+3. Take the whole context as a new prompt for resolution

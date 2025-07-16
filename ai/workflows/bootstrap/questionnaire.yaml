@@ -1,0 +1,150 @@
+# Bootstrap Questionnaire Configuration
+# AI INSTRUCTIONS: This file defines the questions for knowledge base bootstrap
+
+questionnaire:
+  version: "1.0"
+  total_questions: 6
+  
+  questions:
+    - id: "app_type"
+      number: 1
+      emoji: "🎯"
+      question: "What kind of application are you building?"
+      type: "multiple_choice"
+      required: true
+      options:
+        - value: "web_app"
+          label: "Web application (SaaS, marketplace, etc.)"
+        - value: "mobile_app"
+          label: "Mobile application (iOS, Android)"
+        - value: "desktop_app"
+          label: "Desktop application"
+        - value: "api_service"
+          label: "API/Backend service"
+        - value: "other"
+          label: "Other"
+          requires_text: true
+          text_prompt: "Please specify what type of application:"
+    
+    - id: "industry"
+      number: 2
+      emoji: "🏢"
+      question: "What industry or domain is this for?"
+      type: "multiple_choice"
+      required: true
+      options:
+        - value: "healthcare"
+          label: "Healthcare"
+        - value: "fintech"
+          label: "Finance/Fintech"
+        - value: "ecommerce"
+          label: "E-commerce/Retail"
+        - value: "education"
+          label: "Education"
+        - value: "insurance"
+          label: "Insurance"
+        - value: "entertainment"
+          label: "Entertainment/Media"
+        - value: "enterprise"
+          label: "Enterprise/Business Tools"
+        - value: "other"
+          label: "Other"
+          requires_text: true
+          text_prompt: "Please specify the industry:"
+    
+    - id: "problem"
+      number: 3
+      emoji: "🎪"
+      question: "What's the main problem you're solving?"
+      type: "open_text"
+      required: true
+      placeholder: "Describe the core problem your application addresses"
+      min_length: 10
+      guidance: "Be specific about the pain point or need your application addresses"
+    
+    - id: "target_users"
+      number: 4
+      emoji: "👥"
+      question: "Who are your target users?"
+      type: "multiple_choice"
+      required: true
+      options:
+        - value: "b2c_consumers"
+          label: "General consumers (B2C)"
+        - value: "b2b_professionals"
+          label: "Business professionals (B2B)"
+        - value: "internal_team"
+          label: "Internal team/employees"
+        - value: "developers"
+          label: "Developers (API/Platform)"
+        - value: "specific_professional"
+          label: "Specific professional group"
+          requires_text: true
+          text_prompt: "Which professional group:"
+    
+    - id: "current_stage"
+      number: 5
+      emoji: "📊"
+      question: "What's your current stage?"
+      type: "multiple_choice"
+      required: true
+      options:
+        - value: "idea_validation"
+          label: "Just an idea - need to validate"
+        - value: "market_research_done"
+          label: "Have market research - ready to plan"
+        - value: "requirements_ready"
+          label: "Have requirements - ready to build"
+        - value: "existing_business"
+          label: "Have existing business - adding features"
+    
+    - id: "existing_docs"
+      number: 6
+      emoji: "🔍"
+      question: "Do you have existing documentation?"
+      type: "multiple_choice"
+      required: true
+      options:
+        - value: "no_docs"
+          label: "No documentation yet"
+        - value: "basic_plan"
+          label: "Basic business plan/idea"
+        - value: "market_research"
+          label: "Market research completed"
+        - value: "user_research"
+          label: "User research/interviews done"
+        - value: "technical_reqs"
+          label: "Technical requirements defined"
+
+# Question Flow Configuration
+flow_config:
+  presentation_style: "sequential"  # Present one question at a time
+  allow_back_navigation: true
+  show_progress: true
+  
+  # Conditional logic for question visibility
+  conditional_questions:
+    - if: "app_type == 'internal_team'"
+      then: "skip market analysis path"
+    - if: "current_stage == 'idea_validation'"
+      then: "emphasize validation documents"
+    - if: "existing_docs == 'technical_reqs'"
+      then: "suggest implementation-ready path"
+
+# Validation Rules
+validation:
+  required_questions: ["app_type", "industry", "problem", "target_users", "current_stage", "existing_docs"]
+  min_text_length: 10
+  max_text_length: 500
+  
+# Response Collection Format
+response_format:
+  structure: "key_value_pairs"
+  include_metadata: true
+  capture_timestamp: true
+  
+  metadata_fields:
+    - "completion_time"
+    - "total_duration"
+    - "question_sequence"
+    - "back_navigation_count"

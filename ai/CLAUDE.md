@@ -5,10 +5,62 @@
 This AI Knowledge Base is a sophisticated system for creating, managing, and orchestrating comprehensive business documentation through AI agent collaboration. It transforms complex documentation workflows into simple interactive commands that work seamlessly with Claude Code.
 
 ### Core Purpose
+
 - **Automate Documentation Creation**: AI agents generate structured, high-quality business documents
 - **Orchestrate Multi-Agent Workflows**: Coordinate specialized agents for complex document dependencies
 - **Interactive Command System**: Simple slash commands (`/ai-help`, `/create-document`) trigger sophisticated workflows
 - **Maintain Knowledge Integrity**: Automatic registry updates, cross-references, and dependency tracking
+
+## Key Concepts
+
+1. **Document Dependencies**: Documents have prerequisites defined in dependencies.yaml
+2. **Agent Orchestration**: Specialized agents handle different document types
+3. **Interactive Workflows**: Claude suggests and creates missing documents
+4. **Context Propagation**: Documents reference each other for coherent knowledge
+5. **Structured Documents:** All documents require YAML frontmatter, AI agent instructions, cross-references, and TypeScript examples.
+6. **Feature Development:** A dedicated workflow exists for creating features, where agents generate all associated documentation.
+
+## Workflow Commands
+
+- `/analyze [doc]` - Check dependencies for a document
+- `/orchestrate-agents [doc]` - Start multi-agent creation workflow
+- `/create-document [type]` - Create single document interactively
+- `/create-feature [name]` - Create feature workspace with all documentation
+- `/generate-tier-documents [tier]` - Generate all documents in a tier
+- `/validate` - Validate entire knowledge base
+
+## Document Structure
+
+All documents must include:
+
+- YAML frontmatter with metadata
+- AI Agent Instructions section
+- Cross-references using @ai/knowledge/ paths
+- TypeScript examples where applicable
+
+## When Working on This Project
+
+1. Always check dependencies before creating documents
+2. Use @file_path references to existing documents
+3. Maintain YAML frontmatter in all documents
+4. Update registries after document creation
+5. Suggest next logical documents to create
+
+## Document Quality Standards
+
+- Clear hierarchical structure (H1, H2, H3)
+- Explicit AI agent instructions
+- Cross-references to related documents
+- Versioning and status tracking
+- Actionable insights for app development
+- TypeScript code examples
+
+## Feature Development Workflow
+
+1. Create feature with `/create-feature [name]`
+2. Agents will generate complete documentation
+3. Review and refine generated content
+4. Use for implementation guidance
 
 ## System Architecture
 
@@ -27,6 +79,7 @@ Specialized Agents → Create documents → Update registries → Report results
 ```
 
 **Key Benefits:**
+
 - ✅ Single source of truth for command definitions
 - ✅ Works with both direct user input and programmatic AI execution
 - ✅ No complex TypeScript infrastructure needed
@@ -47,13 +100,15 @@ Interactive commands that work via AI agent orchestration:
 Specialized agents for different documentation tasks:
 
 **Document Generation Agents:**
+
 - Market Analysis Specialist
-- User Research Specialist  
+- User Research Specialist
 - PRD Specialist
 - Technical Architect
 - Test Strategist
 
 **Orchestration Agents:**
+
 - Command Executor Agent (`ai/agents/command-executor.md`)
 - Feature Orchestrator (`ai/prompts/meta-prompts/feature-orchestrator.md`)
 - Dependency Analyzer (`ai/prompts/meta-prompts/dependency-analyzer.md`)
@@ -109,7 +164,7 @@ Available commands:
 │ • orchestrate-agents   - Multi-document workflows          │
 │ • validate             - Check knowledge base health       │
 ├─────────────────────────────────────────────────────────────┤
-│ 🚀 Feature Development                                      │ 
+│ 🚀 Feature Development                                      │
 ├─────────────────────────────────────────────────────────────┤
 │ • create-feature       - Complete feature workspace        │
 │ • analyse-dependencies - Document dependency analysis      │
@@ -121,22 +176,26 @@ What would you like to do?
 ### `/create-document` - Interactive Document Creation
 
 **User Flow:**
+
 1. User: "create-document"
 2. AI analyzes missing documents and presents options:
+
    ```
    📋 Missing Documents Available to Create:
-   
+
    Strategic Documents (Tier 4):
    • market-analysis     - Competitive landscape and opportunities
    • user-research      - User interviews and behavioral insights
-   
+
    Which document would you like to create?
    ```
+
 3. User selects → AI executes creation workflow
 
 ### `/orchestrate-agents` - Multi-Agent Workflows
 
 **Example: PRD Creation Workflow**
+
 ```
 User: "orchestrate-agents prd"
 ↓
@@ -156,6 +215,7 @@ Final synthesis:
 ### `/create-feature` - Complete Feature Development
 
 **5-Phase Agent Sequence:**
+
 1. **Requirements Analyst** → user-stories.md, acceptance-criteria.md
 2. **Design Specialist** → ui-mockups.md, interaction-flow.md
 3. **Technical Architect** → api-contracts.md, data-models.md
@@ -168,7 +228,7 @@ Final synthesis:
 
 Every document must include:
 
-```markdown
+````markdown
 ---
 document_type: research|synthesis|technical|feature
 version: 1.0
@@ -185,22 +245,29 @@ ai_context:
 # Document Title
 
 ## Executive Summary
+
 Brief overview for AI agents and humans
 
 ## [Content Sections]
+
 Structured content with clear hierarchy
 
 ## AI Agent Instructions
+
 How other agents should use this document
 
 ## Cross-References
+
 - @ai/knowledge/related/document.md
 
 ## TypeScript Examples (if applicable)
+
 ```typescript
 // Relevant code examples
 ```
-```
+````
+
+````
 
 ### AI Optimization Features
 
@@ -250,7 +317,7 @@ document_dependencies:
     tier: 2
     dependencies:
       - statement-of-purpose
-      - market-analysis  
+      - market-analysis
       - user-research
       - user-personas
     outputs:
@@ -267,17 +334,19 @@ workflow_chains:
       - sequential:
           - user-personas
           - prd
-```
+````
 
 ### Registry Management
 
 **Document Registry** tracks all knowledge base documents:
+
 - Document metadata and status
-- Dependency satisfaction tracking  
+- Dependency satisfaction tracking
 - Cross-reference mapping
 - AI value scoring (60-95 range)
 
 **Feature Registry** tracks feature workspaces:
+
 - Feature documentation completion
 - Implementation status
 - Related knowledge base documents
@@ -306,7 +375,7 @@ The testing framework validates actual system behavior:
 # Full test suite
 ./ai/tests/run-tests.sh
 
-# Individual test categories  
+# Individual test categories
 python3 -c "import yaml; print(yaml.safe_load(open('ai/tests/command-execution-tests.yaml')))"
 ```
 
@@ -315,6 +384,7 @@ python3 -c "import yaml; print(yaml.safe_load(open('ai/tests/command-execution-t
 ### Claude Code Integration
 
 Commands work seamlessly with Claude Code:
+
 - Slash command syntax: `/ai-help`, `/create-document market-analysis`
 - Progress reporting in terminal
 - Error messages formatted for CLI
@@ -339,24 +409,28 @@ Commands work seamlessly with Claude Code:
 ### Common Issues
 
 **Command Not Working:**
+
 1. Check `.claude/commands/[command].md` exists
 2. Verify AI agent can read command definition
 3. Check dependencies.yaml syntax
 4. Validate file permissions
 
 **Agent Spawn Failures:**
+
 1. Verify context documents exist and are readable
 2. Check template paths are correct
 3. Validate agent instruction format
 4. Ensure required parameters provided
 
 **Registry Update Errors:**
+
 1. Check YAML syntax in registry files
 2. Verify file write permissions
 3. Validate registry structure
 4. Check for circular dependencies
 
 **File Creation Issues:**
+
 1. Verify directory structure exists
 2. Check template accessibility
 3. Validate YAML frontmatter syntax
@@ -417,7 +491,7 @@ ls -la .claude/commands/
 ### Extension Points
 
 - **Custom Document Types** - Add domain-specific document categories
-- **Specialized Agents** - Create industry-specific agent specialists  
+- **Specialized Agents** - Create industry-specific agent specialists
 - **Integration APIs** - Connect to external systems and data sources
 - **Workflow Automation** - Trigger workflows based on events
 - **Quality Metrics** - Advanced document quality scoring
