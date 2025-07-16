@@ -1,19 +1,19 @@
-# MVP Validation Framework Implementation Plan
+# Validation Framework Implementation Plan
 
 ## Overview
 
-This document outlines a simplified MVP validation framework based on research findings that focus on practical structural and content validation rather than advanced AI ethics or fact-checking systems.
+This document outlines a simplified validation framework based on research findings that focus on practical structural and content validation rather than advanced AI ethics or fact-checking systems. This approach supports the document-to-code transformation vision and uses file-based memory management.
 
 ## Research Foundation
 
-Based on completed research in `research/findings/ai-validation-frameworks/`, the key insights for MVP are:
+Based on completed research in `research/findings/ai-validation-frameworks/`, the key insights are:
 
 - **99% accuracy comes from systematic validation**, not complex multi-agent consensus
 - **Structural validation is most critical** - YAML frontmatter, required sections, cross-references
 - **Simple scoring is more effective** than complex multi-dimensional metrics
-- **Defer advanced features** - Constitutional AI, fact-checking, multi-agent systems
+- **File-based validation suits AI agent consumption**
 
-## MVP Components
+## System Components
 
 ### 1. Simple Document Validator Meta-Prompt
 **Location**: `@ai/validation/simple-validator.md`
@@ -21,25 +21,31 @@ Based on completed research in `research/findings/ai-validation-frameworks/`, th
 **Validation Layers**:
 1. **Structural Validation**
    - YAML frontmatter present and complete
-   - Required sections exist (AI Agent Instructions, Cross-references, TypeScript examples)
+   - Required sections exist (AI Agent Instructions, Cross-references, Code examples)
    - Proper heading hierarchy (H1, H2, H3)
    - Cross-references use correct @ai/knowledge/ format
 
 2. **Content Validation** 
    - Sections have meaningful content (not just placeholders)
-   - TypeScript examples are present where applicable
+   - Code examples are present where applicable
    - AI Agent Instructions section is actionable
    - Document serves stated purpose
 
-3. **Quality Scoring (0-100)**
-   - Structural completeness: 40 points
-   - Content quality: 40 points
-   - Cross-reference accuracy: 20 points
+3. **Code Generation Validation**
+   - Code examples are syntactically correct
+   - Implementation guidance is clear
+   - Document-to-code transformation is possible
+
+4. **Quality Scoring (0-100)**
+   - Structural completeness: 30 points
+   - Content quality: 30 points
+   - Code generation readiness: 25 points
+   - Cross-reference accuracy: 15 points
    - Production threshold: 85+ points
 
 ### 2. Integration Points
 
-**With Existing System**:
+**With Document-to-Code System**:
 - Enhance `@ai/prompts/meta-prompts/quality-validator.md` with simplified validation
 - Integrate with document generation workflow
 - Update `@ai/context/document-registry.yaml` to track validation scores
@@ -47,7 +53,7 @@ Based on completed research in `research/findings/ai-validation-frameworks/`, th
 
 **Validation Triggers**:
 - After document generation
-- Before document finalization
+- Before code generation
 - On-demand via `/validate-document` command
 - Batch validation of existing documents
 
@@ -55,30 +61,28 @@ Based on completed research in `research/findings/ai-validation-frameworks/`, th
 
 **Simple Scoring Criteria**:
 
-```typescript
-interface ValidationScore {
-  structural: {
-    yaml_frontmatter: boolean;     // 10 points
-    required_sections: boolean;    // 15 points  
-    heading_hierarchy: boolean;    // 10 points
-    cross_references: boolean;     // 5 points
-  };
-  content: {
-    meaningful_content: boolean;   // 20 points
-    typescript_examples: boolean;  // 10 points
-    ai_instructions: boolean;      // 10 points
-  };
-  references: {
-    valid_format: boolean;         // 10 points
-    existing_targets: boolean;     // 10 points
-  };
-  total_score: number; // 0-100
-}
+```yaml
+validation_score:
+  structural:
+    yaml_frontmatter: true     # 10 points
+    required_sections: true    # 10 points  
+    heading_hierarchy: true    # 10 points
+  content:
+    meaningful_content: true   # 15 points
+    code_examples: true        # 10 points
+    ai_instructions: true      # 10 points
+  code_generation:
+    implementation_ready: true # 15 points
+    syntax_correct: true       # 10 points
+  references:
+    valid_format: true         # 10 points
+    existing_targets: true     # 5 points
+  total_score: 95 # 0-100
 ```
 
 **Quality Thresholds**:
-- 85-100: Production ready
-- 70-84: Minor issues, needs review
+- 85-100: Production ready, code generation enabled
+- 70-84: Minor issues, needs review before code generation
 - 50-69: Major issues, requires revision  
 - 0-49: Incomplete, significant work needed
 
@@ -115,11 +119,11 @@ interface ValidationScore {
 
 ## Success Metrics
 
-**MVP Success Criteria**:
-- [x] Validation framework operational for basic structural checks
-- [x] Quality scoring integrated with existing workflow  
-- [x] All existing documents can be validated
-- [x] Foundation ready for advanced features
+**Success Criteria**:
+- Validation framework operational for basic structural checks
+- Quality scoring integrated with existing workflow  
+- All existing documents can be validated
+- Foundation ready for advanced features
 
 **Performance Targets**:
 - Validation time: <5 seconds per document
@@ -133,14 +137,31 @@ interface ValidationScore {
 @ai/validation/
 ├── simple-validator.md          # Core validation meta-prompt
 ├── validation-criteria.md       # Detailed scoring criteria
+├── validation-log.yaml          # File-based validation tracking
 └── integration-guide.md         # How to use with existing system
 ```
+
+## Integration with Document-to-Code Pipeline
+
+**Validation Flow**:
+1. Document created/updated
+2. Structural validation checks
+3. Content validation assessment
+4. Code generation readiness evaluation
+5. Quality score calculation
+6. Pass/fail determination for next steps
+
+**Code Generation Prerequisites**:
+- Validation score >= 85
+- Required sections present
+- Implementation guidance clear
+- Cross-references verified
 
 ## Next Steps
 
 1. **Create simple-validator.md** - Core meta-prompt for validation
 2. **Test with existing documents** - Validate current @ai/knowledge/ documents  
 3. **Integrate with workflow** - Connect to document generation process
-4. **Document and deploy** - Make available via slash commands
+4. **Add code generation validation** - Ensure documents support code generation
 
-This MVP approach delivers immediate value while maintaining simplicity and keeping the door open for advanced features when needed.
+This approach delivers immediate value while maintaining simplicity and supporting the document-to-code transformation vision with file-based memory management.

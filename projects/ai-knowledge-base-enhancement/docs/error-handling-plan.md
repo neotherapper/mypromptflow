@@ -1,19 +1,19 @@
-# MVP Error Handling System Implementation Plan
+# Error Handling System Implementation Plan
 
 ## Overview
 
-This document outlines a simplified MVP error handling system based on research findings that focus on practical failure detection and recovery rather than complex multi-agent systems.
+This document outlines a simplified error handling system based on research findings that focus on practical failure detection and recovery rather than complex multi-agent systems. This approach aligns with the document-to-code transformation vision and file-based memory architecture.
 
 ## Research Foundation
 
-Based on completed research in `research/findings/ai-agent-failure-patterns/`, the key insights for MVP are:
+Based on completed research in `research/findings/ai-agent-failure-patterns/`, the key insights are:
 
 - **Communication failures dominate** (35-40% of all failures)
 - **Circuit breaker pattern achieves 85-90% success rate**
 - **Simple retry mechanisms are most effective**
 - **Graceful degradation provides 90-95% functionality preservation**
 
-## MVP Components
+## System Components
 
 ### 1. Simple Failure Detection Meta-Prompt
 **Location**: `@ai/error-handling/failure-detector.md`
@@ -59,21 +59,23 @@ Based on completed research in `research/findings/ai-agent-failure-patterns/`, t
 ### 3. Error Logging and Learning
 **Location**: `@ai/error-handling/error-log.yaml`
 
-**Simple Error Tracking**:
+**File-Based Error Tracking**:
 ```yaml
 error_log:
-  - timestamp: "2025-01-06T19:00:00Z"
+  - timestamp: "2025-01-16T19:00:00Z"
     task: "document-generation"
     failure_type: "communication"
     recovery_method: "retry"
     success: true
     attempts: 2
+    context: "document-to-code-transformation"
 ```
 
 **Learning Patterns**:
 - Track failure frequencies by task type
 - Identify most effective recovery methods
 - Note patterns for future prevention
+- File-based persistence for AI agent learning
 
 ## Implementation Steps
 
@@ -107,7 +109,7 @@ error_log:
 
 ## Success Metrics
 
-**MVP Success Criteria**:
+**Success Criteria**:
 - Automatic failure detection for common scenarios
 - 85%+ recovery success rate with simple retry
 - Error logging integrated with task tracking
@@ -116,7 +118,7 @@ error_log:
 **Performance Targets**:
 - Recovery time: <30 seconds for simple retries
 - Detection accuracy: >90% for clear failure cases
-- Integration: Works with existing document generation
+- Integration: Works with document-to-code transformation
 - Coverage: Handles top 3 failure types (communication, content, workflow)
 
 ## File Structure
@@ -125,15 +127,15 @@ error_log:
 @ai/error-handling/
 ├── failure-detector.md         # Core failure detection meta-prompt
 ├── recovery-strategies.md      # Simple recovery methods
-├── error-log-template.yaml     # Error tracking template
+├── error-log.yaml              # File-based error tracking
 └── integration-guide.md        # How to use with existing system
 ```
 
 ## Integration Points
 
-**With Existing System**:
-- Enhance existing meta-prompts with failure detection
-- Add recovery triggers to document generation workflow
+**With Document-to-Code System**:
+- Enhance meta-prompts with failure detection
+- Add recovery triggers to code generation workflow
 - Integrate error logging with task completion tracking
 - Connect to existing agent orchestration system
 
@@ -150,4 +152,4 @@ error_log:
 3. **Add error logging** - Track failures and recovery success
 4. **Test with existing workflows** - Validate recovery effectiveness
 
-This MVP approach provides immediate failure resilience while keeping complexity minimal and deferring advanced features for future enhancement.
+This approach provides immediate failure resilience while keeping complexity minimal and using file-based memory management as specified in the system requirements.
