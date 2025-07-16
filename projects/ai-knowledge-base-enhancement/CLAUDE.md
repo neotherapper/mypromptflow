@@ -88,30 +88,37 @@ This project enhances the existing AI knowledge base system at `@ai/` with produ
 
 ## File Structure
 
+**Current Structure (Updated):**
 ```
 projects/ai-knowledge-base-enhancement/
-├── docs/
-│   ├── project-purpose.md           # Detailed goals and scope
-│   ├── task-list.md                 # Prioritized implementation tasks
-│   ├── progress.md                  # Implementation progress tracking
-│   └── research-integration.md      # Research findings and applications
-├── validation/
-│   ├── quality-framework.md        # Document quality system design
-│   ├── fact-checking-integration.md # AI fact-checking implementation
-│   └── validation-workflows.md     # Quality assurance processes
-├── error-handling/
-│   ├── failure-detection.md        # Agent failure recognition system
-│   ├── recovery-protocols.md       # Automatic recovery mechanisms
-│   └── fault-tolerance.md          # System resilience design
-├── reproducibility/
-│   ├── workflow-recipes.md          # AI-readable workflow specifications
-│   ├── dependency-snapshots.md     # Version tracking system
-│   └── agent-configurations.md     # Configuration management
-└── integration/
-    ├── research-framework-links.md  # Research integration points
-    ├── existing-system-enhancement.md # How to enhance current @ai/ system
-    └── deployment-strategy.md       # Implementation rollout plan
+├── CLAUDE.md                        # This file - project context and instructions
+├── README.md                        # Human-readable project overview
+├── project-purpose.md               # Detailed goals and scope (moved from docs/)
+├── task-list.md                     # Prioritized implementation tasks (moved from docs/)
+├── progress.md                      # Implementation progress tracking (moved from docs/)
+└── docs/                            # Comprehensive project documentation
+    ├── claude-comprehensive-capabilities.md  # Complete Claude capabilities guide
+    ├── system_overview.md            # AI Knowledge Base system architecture
+    ├── ai_research_framework_overview.md # Research framework capabilities
+    ├── claude_commands_overview.md   # Command system documentation
+    ├── command_integration_guide.md  # Dual interface system architecture
+    ├── knowledge_base_context.md     # Context files and dependencies
+    ├── ai_prompts_overview.md        # AI prompting strategies
+    ├── ai_prompts/                   # Detailed prompting documentation
+    │   ├── document_templates.md
+    │   ├── general_workflow_prompts.md
+    │   ├── meta_prompts_ai_behavior.md
+    │   └── meta_prompts_orchestration.md
+    ├── mvp-error-handling-plan.md    # Error handling implementation plan
+    ├── mvp-reproducibility-plan.md   # Reproducibility framework plan
+    ├── mvp-validation-framework-plan.md # Validation system plan
+    └── research-integration.md       # Research findings and applications
 ```
+
+**Documentation Highlights:**
+- **claude-comprehensive-capabilities.md**: Complete guide to Claude's advanced capabilities, command system, and integration patterns
+- **Consolidated Documentation**: All AI knowledge base enhancement documentation in one project
+- **Enhanced Claude Understanding**: Deep insights into Claude's automatic context loading, multi-agent orchestration, and workflow coordination
 
 ## Research Framework Integration
 
@@ -127,12 +134,20 @@ The research framework at `@research/orchestrator/` will automatically detect th
 
 When working on this project:
 
-1. **Always check task list** before starting work
+1. **Always check task list** before starting work (`project-purpose.md`, `task-list.md`, `progress.md`)
 2. **Use research framework** for any research tasks - do not manually research
-3. **Reference existing system** at `@ai/` for integration points
-4. **Focus on AI-agent consumption** - all solutions should work for AI agents
-5. **Maintain Claude Code compatibility** - interactive terminal workflows
-6. **No TypeScript/code** - pure meta-prompting and agent-based solutions
+3. **Reference comprehensive documentation** in `docs/claude-comprehensive-capabilities.md` for complete Claude capabilities understanding
+4. **Reference existing system** at `@ai/` for integration points
+5. **Focus on AI-agent consumption** - all solutions should work for AI agents
+6. **Maintain Claude Code compatibility** - interactive terminal workflows
+7. **No TypeScript/code** - pure meta-prompting and agent-based solutions
+
+## Key Documentation References
+
+- **Complete Claude Guide**: `@docs/claude-comprehensive-capabilities.md` - Comprehensive analysis of Claude's capabilities, command system, and advanced features
+- **System Architecture**: `@docs/system_overview.md` - AI Knowledge Base system architecture and components
+- **Command System**: `@docs/command_integration_guide.md` - Dual interface system and command execution patterns
+- **Research Framework**: `@docs/ai_research_framework_overview.md` - Advanced research orchestration capabilities
 
 ## Cross-References
 
