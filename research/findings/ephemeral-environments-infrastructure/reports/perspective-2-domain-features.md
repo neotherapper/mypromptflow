@@ -20,7 +20,7 @@ This analysis examines the domain-specific features required for the platform's 
 
 **Ephemeral Environment Considerations:**
 - **Scalable Document Storage**: Auto-scaling document storage for seasonal insurance peaks
-- **Edge Computing**: Distributed processing for real-time vessel tracking data in ephemeral maritime environments
+- **Edge Computing**: Distributed processing for real-time vessel tracking data in ephemeral general environments
 - **Multi-Regional Deployment**: Ephemeral environments supporting global fleet operations with local compliance
 
 ### 2. Broker Competition and Real-Time Policy Comparison
