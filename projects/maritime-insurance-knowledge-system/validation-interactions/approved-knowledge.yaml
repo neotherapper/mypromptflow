@@ -1,0 +1,134 @@
+# Approved Maritime Insurance Knowledge
+# This file contains user-validated maritime insurance knowledge
+
+validation_metadata:
+  last_updated: "2025-01-17"
+  total_approved_facts: 0
+  validation_sessions: 0
+  approval_rate: 0.0
+  confidence_threshold: 70
+
+# User-confirmed business model information
+business_model:
+  platform_type:
+    fact: "VanguardAI is a B2C maritime insurance platform"
+    validated_by: "user"
+    validated_date: "2025-01-17"
+    confidence: 100
+    source: "user_confirmation"
+    notes: "User explicitly confirmed B2C focus, not B2B"
+    
+  target_customers:
+    fact: "Platform serves individual vessel owners and operators"
+    validated_by: "pending"
+    validated_date: null
+    confidence: 85
+    source: "onedrive_analysis"
+    notes: "Inferred from B2C confirmation, awaiting specific validation"
+
+# Risk assessment knowledge (to be populated after validation)
+risk_assessment:
+  # war_risk_factors:
+  #   fact: "War risk calculations include vessel tonnage as primary factor"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 90
+  #   source: "premium_examples"
+  #   notes: "Validated from multiple premium calculation examples"
+  
+  # voyage_risk_models:
+  #   fact: "Voyage risk based on destination port risk ratings"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 85
+  #   source: "risk_calculation_docs"
+  #   notes: "Port-specific risk multipliers confirmed"
+
+# Regulatory compliance knowledge (to be populated after validation)
+regulatory:
+  # sanction_procedures:
+  #   fact: "Sanction screening uses HH Sanction Questionnaire framework"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 75
+  #   source: "sanction_questionnaire"
+  #   notes: "Current as of 2024, may need periodic updates"
+  
+  # kyc_requirements:
+  #   fact: "B2C customers require standard KYC documentation"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 80
+  #   source: "kyc_forms"
+  #   notes: "Standard requirements for individual customers"
+
+# Operational processes knowledge (to be populated after validation)
+operational:
+  # quote_generation:
+  #   fact: "Quote generation follows multi-step workflow with vessel details"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 85
+  #   source: "quote_examples"
+  #   notes: "Consistent workflow across multiple quote examples"
+  
+  # customer_onboarding:
+  #   fact: "B2C onboarding uses controlled registration process"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 80
+  #   source: "registration_docs"
+  #   notes: "B2C controlled registration documented"
+
+# Business intelligence knowledge (to be populated after validation)
+business:
+  # competitive_analysis:
+  #   fact: "Primary competitors include traditional maritime insurers"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 75
+  #   source: "competition_analysis"
+  #   notes: "Based on competition analysis documents"
+  
+  # pricing_strategy:
+  #   fact: "Pricing based on risk assessment and market positioning"
+  #   validated_by: "user"
+  #   validated_date: "2025-01-17"
+  #   confidence: 80
+  #   source: "premium_examples"
+  #   notes: "Consistent pricing approach across examples"
+
+# Knowledge validation statistics
+validation_statistics:
+  total_facts_validated: 1
+  facts_by_category:
+    business_model: 1
+    risk_assessment: 0
+    regulatory: 0
+    operational: 0
+    business: 0
+  
+  approval_rates:
+    approved_as_stated: 1
+    approved_with_modifications: 0
+    rejected_outdated: 0
+    need_more_information: 0
+    
+  confidence_distribution:
+    high_confidence_90_plus: 0
+    medium_confidence_70_89: 0
+    low_confidence_below_70: 0
+    user_confirmed_100: 1
+
+# Validation audit trail
+audit_trail:
+  - timestamp: "2025-01-17T10:00:00Z"
+    action: "initial_setup"
+    user: "system"
+    details: "Created approved knowledge structure"
+    
+  - timestamp: "2025-01-17T10:00:00Z"
+    action: "user_confirmation"
+    user: "user"
+    details: "Confirmed B2C platform type"
+    knowledge_id: "business_model.platform_type"

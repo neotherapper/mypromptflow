@@ -1,0 +1,99 @@
+# Maritime Insurance Knowledge Validation Questions
+# This file contains extracted knowledge awaiting user validation
+
+validation_session:
+  id: "maritime-knowledge-validation-001"
+  created_date: "2025-01-17"
+  status: "pending"
+  total_questions: 0
+  processed_questions: 0
+  priority: "high"
+
+questions:
+  # This section will be populated by maritime-knowledge-extraction command
+  # Format for each question:
+  # - id: "question_001"
+  #   category: "risk_assessment|regulatory|operational|business"
+  #   priority: "high|medium|low"
+  #   source_file: "path/to/onedrive/file"
+  #   file_date: "2024-07-01"
+  #   confidence_score: 85
+  #   question: "Should war risk calculations include vessel tonnage as a primary factor?"
+  #   context: "Found in premium examples showing tonnage-based calculations"
+  #   extracted_knowledge: "War risk premiums are calculated using vessel tonnage as primary factor"
+  #   validation_options:
+  #     - "approve_as_stated"
+  #     - "approve_with_modifications"
+  #     - "reject_outdated"
+  #     - "need_more_information"
+  #     - "skip_for_now"
+  #   status: "pending"
+  #   user_response: null
+  #   validated_date: null
+  #   notes: null
+
+# Sample questions that will be generated (for reference):
+sample_questions:
+  business_model:
+    - question: "Is the VanguardAI platform B2C or B2B?"
+      expected_answer: "B2C (confirmed by user)"
+      context: "Platform serves individual vessel owners and operators"
+      
+  risk_assessment:
+    - question: "Should war risk calculations include vessel tonnage as a primary factor?"
+      context: "Found in premium examples showing tonnage-based calculations"
+      
+    - question: "Are voyage risk models based on destination port risk ratings?"
+      context: "Premium examples show port-specific risk multipliers"
+      
+    - question: "Do static vessel risk calculations consider port security levels?"
+      context: "Found references to port classification in risk documents"
+      
+  regulatory:
+    - question: "Are the sanction screening procedures in HH Sanction Questionnaire current?"
+      context: "Questionnaire dated 2024, may need currency validation"
+      
+    - question: "What KYC requirements apply to B2C maritime insurance customers?"
+      context: "Various KYC forms found, need to identify current requirements"
+      
+    - question: "Which sanctions databases should be checked for compliance?"
+      context: "Multiple references to different sanctions lists"
+      
+  operational:
+    - question: "What are the standard steps in the quote generation workflow?"
+      context: "Multiple quote examples with different processes"
+      
+    - question: "How does customer onboarding work for B2C maritime insurance?"
+      context: "B2C controlled registration documents found"
+      
+    - question: "What vessel data is required for insurance applications?"
+      context: "Various vessel detail forms with different requirements"
+      
+  business_intelligence:
+    - question: "Who are the primary competitors in maritime insurance?"
+      context: "Competition analysis documents with screenshots"
+      
+    - question: "What are the key differentiators for VanguardAI platform?"
+      context: "Platform presentations and positioning documents"
+      
+    - question: "What pricing strategies are most effective for B2C maritime insurance?"
+      context: "Premium examples and pricing model documents"
+
+# Validation workflow status
+workflow_status:
+  extraction_complete: false
+  questions_generated: false
+  validation_in_progress: false
+  validation_complete: false
+  knowledge_approved: false
+  
+# Validation statistics
+statistics:
+  total_onedrive_files: 0
+  processed_files: 0
+  extracted_facts: 0
+  generated_questions: 0
+  approved_knowledge: 0
+  rejected_knowledge: 0
+  modified_knowledge: 0
+  pending_validation: 0
