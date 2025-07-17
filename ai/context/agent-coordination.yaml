@@ -622,15 +622,18 @@ error_handling:
       recovery_strategy: "retry_with_dependency_resolution"
       escalation_threshold: "3_attempts"
       
+      
     agent_timeout:
       description: "Agent fails to respond within timeout"
       recovery_strategy: "reassign_to_backup_agent"
       escalation_threshold: "1_attempt"
       
+      
     quality_validation_failure:
       description: "Generated content fails quality checks"
       recovery_strategy: "regenerate_with_feedback"
       escalation_threshold: "2_attempts"
+      
       
     resource_exhaustion:
       description: "System resources unavailable"
@@ -651,11 +654,13 @@ error_handling:
         - "transient_failures"
         - "timeout_errors"
         - "resource_contention"
+        
     
     agent_reassignment:
       backup_agent_selection: "capability_based"
       context_transfer: "full_state_transfer"
       handoff_validation: "required"
+      
     
     graceful_degradation:
       fallback_strategies:
@@ -667,6 +672,8 @@ error_handling:
         - "repeated_failures"
         - "resource_constraints"
         - "time_constraints"
+        
+        
 
 # ===== PERFORMANCE MONITORING =====
 
@@ -782,6 +789,44 @@ integration_points:
       interface: "validation_framework"
       communication: "quality_checks"
       context_passing: "quality_context"
+    
+    # Validation Framework Integration
+    validation_framework:
+      interface: "ai/validation/framework-config.yaml"
+      communication: "validation_hooks"
+      context_passing: "validation_context"
+      
+      validation_hooks:
+        pre_task_assignment:
+          hook_point: "before_task_assignment"
+          validation_type: "pre_execution_validation"
+          validation_scope: "task_prerequisites"
+          blocking_behavior: "block_on_failure"
+          
+        task_execution_monitoring:
+          hook_point: "during_task_execution"
+          validation_type: "in_progress_validation"
+          validation_scope: "execution_quality"
+          blocking_behavior: "alert_on_issues"
+          
+        post_task_completion:
+          hook_point: "after_task_completion"
+          validation_type: "post_execution_validation"
+          validation_scope: "deliverable_quality"
+          blocking_behavior: "non_blocking"
+          
+        coordination_monitoring:
+          hook_point: "during_coordination"
+          validation_type: "continuous_validation"
+          validation_scope: "coordination_effectiveness"
+          blocking_behavior: "optimization_feedback"
+          
+      validation_data_exchange:
+        coordination_metrics: "bidirectional"
+        quality_assessments: "to_validation_framework"
+        performance_data: "to_validation_framework"
+        validation_results: "from_validation_framework"
+        improvement_recommendations: "from_validation_framework"
 
 # ===== EXTENSION POINTS =====
 
