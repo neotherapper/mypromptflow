@@ -36,7 +36,7 @@ execution_steps:
         - "Nx monorepo patterns"
         - "Monitoring and observability"
       optional:
-        - "VanguardAI insurance platform context"
+        - "insurance platform context"
         - "Ephemeral environment optimization"
         - "ASGI performance tuning"
         - "Container security hardening"

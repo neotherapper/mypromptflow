@@ -15,7 +15,7 @@ related_tasks: ["research_react_fastapi", "typescript_generation_research", "api
 priority: "high"
 estimated_hours: 8
 dependencies: []
-impacts: ["VanguardAI insurance platform development", "Full-stack TypeScript architecture decisions", "Development workflow optimization"]
+impacts: ["insurance platform development", "Full-stack TypeScript architecture decisions", "Development workflow optimization"]
 research_scope: "broad"
 domain_specificity: "cross_domain"
 stakeholder_level: "professional"

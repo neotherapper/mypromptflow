@@ -20,7 +20,7 @@ research_execution_log:
       stakeholder_level: "professional"
       output_format: "technical_documentation"
     extraction_confidence: 0.95
-    extraction_reasoning: "Clear multi-domain technical request with specific requirements for VanguardAI insurance platform"
+    extraction_reasoning: "Clear multi-domain technical request with specific requirements for insurance platform"
   
   # Orchestrator Decision Process
   orchestrator_analysis:
