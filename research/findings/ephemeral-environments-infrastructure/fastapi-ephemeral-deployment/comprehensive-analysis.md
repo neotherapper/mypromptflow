@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document provides a comprehensive technical architecture for deploying FastAPI applications in ephemeral environments, specifically designed for VanguardAI's insurance platform. The architecture emphasizes fast startup times, compliance requirements, and cost optimization while maintaining production-grade security and observability.
+This document provides a comprehensive technical architecture for deploying FastAPI applications in ephemeral environments, specifically designed for the platform's insurance platform. The architecture emphasizes fast startup times, compliance requirements, and cost optimization while maintaining production-grade security and observability.
 
 ## 1. FastAPI Application Architecture for Ephemeral Environments
 
@@ -823,10 +823,10 @@ class APIDocumentationManager:
                 return self.custom_openapi_schema
             
             openapi_schema = get_openapi(
-                title="VanguardAI Insurance API",
+                title="the platform Insurance API",
                 version="1.0.0",
                 description="""
-                ## VanguardAI Insurance Platform API
+                ## the platform Insurance Platform API
                 
                 This API provides comprehensive insurance management capabilities including:
                 - Customer management and GDPR compliance
@@ -849,7 +849,7 @@ class APIDocumentationManager:
                 """,
                 routes=self.app.routes,
                 contact={
-                    "name": "VanguardAI Support",
+                    "name": "the platform Support",
                     "email": "support@vanguardai.com",
                     "url": "https://vanguardai.com/support"
                 },
@@ -897,7 +897,7 @@ class APIDocumentationManager:
             # Add custom extensions
             openapi_schema["x-logo"] = {
                 "url": "https://vanguardai.com/logo.png",
-                "altText": "VanguardAI Logo"
+                "altText": "the platform Logo"
             }
             
             self.custom_openapi_schema = openapi_schema
@@ -1802,7 +1802,7 @@ async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     print("Shutting down FastAPI application...")
 
 app = FastAPI(
-    title="VanguardAI Insurance API",
+    title="the platform Insurance API",
     version="1.0.0",
     lifespan=lifespan,
     docs_url="/docs" if os.getenv("ENVIRONMENT") != "production" else None,
@@ -1961,7 +1961,7 @@ import os
 
 class Settings(BaseSettings):
     # Application settings
-    app_name: str = "VanguardAI Insurance API"
+    app_name: str = "the platform Insurance API"
     environment: str = Field(default="development", env="ENVIRONMENT")
     debug: bool = Field(default=False, env="DEBUG")
     

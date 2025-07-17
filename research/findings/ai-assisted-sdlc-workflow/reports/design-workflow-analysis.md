@@ -1,8 +1,8 @@
-# Design Workflow Analysis: Figma + MCP vs Framer AI for VanguardAI Development
+# Design Workflow Analysis: Figma + MCP vs Framer AI for the platform Development
 
 ## Executive Summary
 
-This analysis evaluates optimal design-to-code workflows for VanguardAI's insurance platform development, comparing Figma + MCP Server integration against Framer AI, with specific consideration for Storybook design system integration and the UI/UX designer's workflow optimization.
+This analysis evaluates optimal design-to-code workflows for the platform's insurance platform development, comparing Figma + MCP Server integration against Framer AI, with specific consideration for Storybook design system integration and the UI/UX designer's workflow optimization.
 
 **Key Findings:**
 - **Figma + MCP + Storybook** provides superior long-term value and industry-standard workflow
@@ -25,10 +25,10 @@ This analysis evaluates optimal design-to-code workflows for VanguardAI's insura
 | **Team Collaboration** | Excellent ✅ | Good | Industry Standard ✅ |
 | **Cost Efficiency** | $15/month dev seat | $15/month | Free ✅ |
 
-### VanguardAI Insurance Platform Requirements
+### the platform Insurance Platform Requirements
 
 #### Design System Complexity
-**VanguardAI Platform Components:**
+**the platform Platform Components:**
 - **Fleet Management Forms:** Multi-step wizards with complex validation states
 - **Policy Comparison Tables:** Data-heavy interfaces with sorting and filtering
 - **Document Upload Interfaces:** File management with progress indicators
@@ -79,7 +79,7 @@ This analysis evaluates optimal design-to-code workflows for VanguardAI's insura
 // UI/UX Designer creates high-fidelity mockups and component library
 
 // 2. MCP-Enhanced Analysis
-claude @figma_component.png "Analyze this VanguardAI fleet upload component and generate:
+claude @figma_component.png "Analyze this the platform fleet upload component and generate:
 - React TypeScript component structure
 - Storybook story with all variants
 - Design token usage documentation
@@ -90,7 +90,7 @@ claude @figma_component.png "Analyze this VanguardAI fleet upload component and 
 
 // 4. Storybook Integration
 export default {
-  title: 'VanguardAI/Forms/FleetUpload',
+  title: 'the platform/Forms/FleetUpload',
   component: FleetUploadComponent,
   parameters: {
     docs: {
@@ -152,7 +152,7 @@ export const StrictValidation = {
 - **Animation Support:** Advanced animation and interaction capabilities
 - **Responsive Design:** Built-in responsive design tools
 
-**Limitations for VanguardAI:**
+**Limitations for the platform:**
 - **Design System Integration:** Limited integration with existing design systems
 - **Storybook Compatibility:** Manual process to integrate with Storybook
 - **Complex Components:** Limited support for complex business logic components
@@ -193,7 +193,7 @@ export default {
 
 ## Storybook Design System Integration
 
-### Storybook Requirements for VanguardAI
+### Storybook Requirements for the platform
 
 **Essential Features:**
 - **Component Documentation:** Comprehensive usage guidelines
@@ -254,7 +254,7 @@ export const FleetUploadForm = {
   },
   parameters: {
     figma: {
-      url: 'https://www.figma.com/file/xyz/VanguardAI-Components?node-id=123:456'
+      url: 'https://www.figma.com/file/xyz/the platform-Components?node-id=123:456'
     },
     docs: {
       description: {
@@ -278,7 +278,7 @@ export const FleetUploadForm = {
 **Enhanced Workflow with AI:**
 ```bash
 # Step 1: Design Analysis
-claude "Analyze this Figma design for VanguardAI broker competition dashboard:
+claude "Analyze this Figma design for the platform broker competition dashboard:
 - Component architecture recommendations
 - State management requirements
 - Performance optimization opportunities
@@ -287,13 +287,13 @@ claude "Analyze this Figma design for VanguardAI broker competition dashboard:
 
 # Step 2: Component Generation
 claude "Generate React TypeScript component based on Figma analysis:
-- Use VanguardAI design tokens
+- Use the platform design tokens
 - Implement proper accessibility
 - Include Storybook story with all variants
 - Add comprehensive prop documentation"
 
 # Step 3: Design System Integration
-claude "Integrate this component with VanguardAI design system:
+claude "Integrate this component with the platform design system:
 - Ensure design token usage consistency
 - Validate against design system guidelines
 - Generate component documentation
@@ -305,7 +305,7 @@ claude "Integrate this component with VanguardAI design system:
 **Multimodal Design Analysis:**
 ```bash
 # Upload Figma screenshot for analysis
-gemini @vanguardai_component_design.png "Convert this VanguardAI insurance form design to:
+gemini @vanguardai_component_design.png "Convert this the platform insurance form design to:
 - React component with TypeScript
 - Tailwind CSS styling using design tokens
 - Form validation with Zod schema
@@ -438,7 +438,7 @@ interface ComponentHandoff {
 
 ## Conclusion
 
-The analysis strongly supports **Figma + MCP + Storybook** as the optimal design workflow for VanguardAI's development team. This approach provides:
+The analysis strongly supports **Figma + MCP + Storybook** as the optimal design workflow for the platform's development team. This approach provides:
 
 **Strategic Advantages:**
 - **31.6x ROI** compared to 1.15x for Framer AI
@@ -458,8 +458,8 @@ The analysis strongly supports **Figma + MCP + Storybook** as the optimal design
 - **High-value integration** with existing development workflows
 - **Future-proof investment** in industry-standard tools and processes
 
-The recommended approach positions VanguardAI's design and development workflow for long-term success while optimizing budget allocation and maximizing team productivity.
+The recommended approach positions the platform's design and development workflow for long-term success while optimizing budget allocation and maximizing team productivity.
 
 ---
 
-*Analysis based on comprehensive design workflow evaluation, tool capability assessment, and VanguardAI insurance platform development requirements.*
+*Analysis based on comprehensive design workflow evaluation, tool capability assessment, and the platform insurance platform development requirements.*

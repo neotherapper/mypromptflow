@@ -41,7 +41,7 @@ graph TD
 
 ## 2. Team Interaction & Tool Ecosystem
 
-This diagram shows the roles within the VanguardAI team, the primary AI tools they use, and how they interact with the core development ecosystem.
+This diagram shows the roles within the the platform team, the primary AI tools they use, and how they interact with the core development ecosystem.
 
 ```mermaid
 graph TD

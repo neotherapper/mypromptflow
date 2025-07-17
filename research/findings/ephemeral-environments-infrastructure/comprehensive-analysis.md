@@ -353,7 +353,7 @@ describe('PR Environment E2E Tests', () => {
 
   it('should load the application', () => {
     cy.visit('/');
-    cy.contains('VanguardAI').should('be.visible');
+    cy.contains('the platform').should('be.visible');
   });
 
   it('should communicate with backend', () => {
@@ -697,7 +697,7 @@ CMD [\"node\", \"dist/main.js\"]
           \"short\": true
         }
       ],
-      \"footer\": \"VanguardAI Ephemeral Environments\",
+      \"footer\": \"the platform Ephemeral Environments\",
       \"ts\": {{TIMESTAMP}}
     }
   ]

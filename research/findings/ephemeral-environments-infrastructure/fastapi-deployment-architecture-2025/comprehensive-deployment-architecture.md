@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document provides a comprehensive technical specification for deploying FastAPI applications in ephemeral environments, specifically focusing on Railway and AWS ECS Fargate platforms. The architecture is designed for VanguardAI insurance platform requirements, emphasizing security, compliance, and performance optimization.
+This document provides a comprehensive technical specification for deploying FastAPI applications in ephemeral environments, specifically focusing on Railway and AWS ECS Fargate platforms. The architecture is designed for the platform insurance platform requirements, emphasizing security, compliance, and performance optimization.
 
 ## 1. FastAPI Application Architecture with ASGI Optimization
 
@@ -26,7 +26,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import uvicorn
 
 app = FastAPI(
-    title="VanguardAI Insurance Platform",
+    title="the platform Insurance Platform",
     description="FastAPI backend for insurance platform",
     version="1.0.0",
     docs_url="/api/docs",
@@ -1215,7 +1215,7 @@ export interface PaginatedResponse<T> {
 // libs/shared/api-client/src/lib/generated-client.ts
 import { ApiResponse, PaginatedResponse, Policy, Customer, Claim } from '@vanguardai/shared/types';
 
-export class VanguardAIApiClient {
+export class the platformApiClient {
   private baseUrl: string;
   private token?: string;
 

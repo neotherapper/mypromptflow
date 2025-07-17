@@ -127,7 +127,7 @@ jobs:
 - Lack of community support
 - Reinventing existing solutions
 
-## Recommendations for VanguardAI Insurance Platform
+## Recommendations for the platform Insurance Platform
 
 ### 1. Tool Selection
 - **Primary Choice**: @hey-api/openapi-ts
@@ -182,6 +182,6 @@ jobs:
 
 ## Conclusion
 
-The @hey-api/openapi-ts tool represents the current state-of-the-art for TypeScript generation from FastAPI applications in 2025. Its seamless integration with FastAPI's OpenAPI schema generation, combined with excellent TypeScript support and developer experience, makes it the ideal choice for the VanguardAI insurance platform.
+The @hey-api/openapi-ts tool represents the current state-of-the-art for TypeScript generation from FastAPI applications in 2025. Its seamless integration with FastAPI's OpenAPI schema generation, combined with excellent TypeScript support and developer experience, makes it the ideal choice for the the platform insurance platform.
 
 The tool's focus on automation, type safety, and real-time synchronization aligns perfectly with the requirements for building robust, maintainable full-stack applications with complex domain models like those found in the insurance industry.

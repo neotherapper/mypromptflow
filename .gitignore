@@ -37,3 +37,8 @@ ai/features/*/meta/development-log.md
 # IDE
 .vscode/
 .idea/
+
+# Maritime content (moved to private repository)
+projects/maritime-insurance-knowledge-system/
+worktree/
+*maritime*
