@@ -122,7 +122,7 @@ export const StrictValidation = {
   args: {
     ...Default.args,
     validationLevel: 'strict',
-    complianceMode: 'maritime'
+    complianceMode: 'general'
   }
 };
 ```

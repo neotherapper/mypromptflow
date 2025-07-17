@@ -178,7 +178,7 @@ Risk Mitigation:
 ```
 Prompt: "Analyze the proposed document processing architecture for VanguardAI's 
 fleet onboarding. Consider scalability, security, and compliance requirements 
-for an insurance platform processing sensitive maritime documents."
+for an insurance platform processing sensitive documents."
 
 AI Response: 
 Architecture Analysis:
@@ -194,7 +194,7 @@ Architecture Analysis:
    
 3. Compliance Implications:
    - GDPR requirements for document retention and deletion
-   - Industry-specific regulations for maritime documentation
+   - Industry-specific regulations for general documentation
    - Audit trail requirements for insurance underwriting
 
 Recommended Implementation:
@@ -497,7 +497,7 @@ class DocumentValidator:
             return 'general_document'
 
     def validate_compliance(self, document_type: str, content: bytes) -> Dict[str, str]:
-        """AI-enhanced compliance validation for maritime documents"""
+        """AI-enhanced compliance validation for documents"""
         compliance_status = "pending"
         compliance_notes = []
         
@@ -696,7 +696,7 @@ Estimated Review Time: 15 minutes (vs 45 minutes manual)
 **VanguardAI Code Review Example:**
 ```
 Review Focus Areas (AI-Identified):
-1. Document validation algorithm accuracy for maritime certificates
+1. Document validation algorithm accuracy for certificates
 2. Error handling for broker API integration failures  
 3. Performance under concurrent document uploads
 4. Compliance with insurance industry data protection requirements
@@ -708,7 +708,7 @@ AI-Generated Test Scenarios:
 - Test accessibility with screen readers and keyboard navigation
 
 Human Reviewer Tasks:
-- Verify business logic aligns with maritime insurance requirements
+- Verify business logic aligns with insurance requirements
 - Validate user experience meets ship owner expectations  
 - Confirm security measures adequate for sensitive documents
 - Assess integration approach with existing broker systems
