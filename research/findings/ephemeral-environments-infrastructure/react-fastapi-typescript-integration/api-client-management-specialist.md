@@ -332,7 +332,7 @@ export class BrokerCompetitionClient {
 }
 ```
 
-## Recommendations for VanguardAI Insurance Platform
+## Recommendations for the platform Insurance Platform
 
 ### 1. Client Library Selection
 - **Primary HTTP Client**: Axios for production stability and interceptor support
@@ -389,4 +389,4 @@ export class BrokerCompetitionClient {
 
 The modern API client management landscape in 2025 emphasizes type safety, performance, and developer experience. The combination of @hey-api/openapi-ts with axios and React Query provides a robust foundation for building maintainable, scalable client applications.
 
-For the VanguardAI insurance platform, this approach ensures type-safe API interactions, comprehensive error handling, and optimized performance for complex insurance domain operations while maintaining backward compatibility and supporting real-time broker competition workflows.
+For the the platform insurance platform, this approach ensures type-safe API interactions, comprehensive error handling, and optimized performance for complex insurance domain operations while maintaining backward compatibility and supporting real-time broker competition workflows.

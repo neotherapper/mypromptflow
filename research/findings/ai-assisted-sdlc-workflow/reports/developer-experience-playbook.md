@@ -4,7 +4,7 @@
 
 While AI tools promise massive productivity gains, their true long-term value is unlocked by focusing on the **Developer Experience (DX)**. A superior DX in an AI-assisted environment leads to higher developer satisfaction, creativity, retention, and ultimately, a higher quality product.
 
-This playbook provides a framework for intentionally designing and measuring a world-class DX for the VanguardAI team. It shifts the focus from "How fast can we code?" to "How effectively can we solve problems and innovate?"
+This playbook provides a framework for intentionally designing and measuring a world-class DX for the the platform team. It shifts the focus from "How fast can we code?" to "How effectively can we solve problems and innovate?"
 
 ---
 
