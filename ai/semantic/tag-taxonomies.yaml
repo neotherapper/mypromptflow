@@ -1,0 +1,700 @@
+# Semantic Tag Taxonomies
+# Hierarchical taxonomies for business and technical concept organization
+
+metadata:
+  version: "1.0.0"
+  created: "2025-07-18"
+  author: "Tag Generation Agent"
+  description: "Hierarchical taxonomies for semantic document classification"
+  taxonomy_types: 7
+  total_concepts: 500+
+
+# Business Domain Taxonomies
+business_domain:
+  # Strategic Business Concepts
+  strategy:
+    parent: "business_domain"
+    level: 1
+    description: "Strategic planning and business direction"
+    children:
+      strategic_planning:
+        level: 2
+        synonyms: ["business-strategy", "strategic-direction", "long-term-planning"]
+        related_concepts: ["vision", "mission", "goals", "objectives"]
+        children:
+          - vision_mission
+          - strategic_goals
+          - competitive_strategy
+          - market_positioning
+          - strategic_initiatives
+          
+      business_model:
+        level: 2
+        synonyms: ["business-model", "revenue-model", "value-creation"]
+        related_concepts: ["value-proposition", "revenue-streams", "cost-structure"]
+        children:
+          - value_proposition
+          - revenue_streams
+          - cost_structure
+          - customer_segments
+          - key_partnerships
+          
+      investment_funding:
+        level: 2
+        synonyms: ["investment", "funding", "capital", "fundraising"]
+        related_concepts: ["investor-relations", "funding-rounds", "valuation"]
+        children:
+          - seed_funding
+          - series_a
+          - series_b
+          - ipo_readiness
+          - investor_relations
+          
+      performance_measurement:
+        level: 2
+        synonyms: ["metrics", "kpi", "measurement", "performance"]
+        related_concepts: ["okr", "north-star", "success-metrics"]
+        children:
+          - okr_system
+          - north_star_metrics
+          - success_metrics
+          - performance_tracking
+          - analytics_framework
+
+  # Product Development Concepts
+  product:
+    parent: "business_domain"
+    level: 1
+    description: "Product development and management"
+    children:
+      product_strategy:
+        level: 2
+        synonyms: ["product-planning", "product-roadmap", "feature-strategy"]
+        related_concepts: ["roadmap", "feature-prioritization", "product-vision"]
+        children:
+          - product_vision
+          - feature_prioritization
+          - product_roadmap
+          - competitive_analysis
+          - market_research
+          
+      product_requirements:
+        level: 2
+        synonyms: ["requirements", "specifications", "feature-definitions"]
+        related_concepts: ["prd", "specifications", "feature-requirements"]
+        children:
+          - functional_requirements
+          - non_functional_requirements
+          - feature_specifications
+          - acceptance_criteria
+          - user_stories
+          
+      product_lifecycle:
+        level: 2
+        synonyms: ["lifecycle", "product-phases", "development-stages"]
+        related_concepts: ["mvp", "launch", "growth", "maturity"]
+        children:
+          - mvp_development
+          - product_launch
+          - growth_phase
+          - maturity_optimization
+          - end_of_life
+          
+      product_analytics:
+        level: 2
+        synonyms: ["analytics", "measurement", "product-metrics"]
+        related_concepts: ["user-analytics", "performance-metrics", "insights"]
+        children:
+          - user_analytics
+          - feature_analytics
+          - conversion_metrics
+          - retention_analysis
+          - behavioral_insights
+
+  # Customer and Market Concepts
+  customer:
+    parent: "business_domain"
+    level: 1
+    description: "Customer research and market analysis"
+    children:
+      customer_research:
+        level: 2
+        synonyms: ["user-research", "customer-insights", "market-research"]
+        related_concepts: ["personas", "segmentation", "journey-mapping"]
+        children:
+          - user_personas
+          - customer_segmentation
+          - journey_mapping
+          - pain_point_analysis
+          - customer_interviews
+          
+      market_analysis:
+        level: 2
+        synonyms: ["market-research", "competitive-analysis", "industry-analysis"]
+        related_concepts: ["competition", "market-size", "opportunity"]
+        children:
+          - competitive_landscape
+          - market_opportunity
+          - industry_trends
+          - market_sizing
+          - competitor_analysis
+          
+      customer_experience:
+        level: 2
+        synonyms: ["cx", "user-experience", "customer-journey"]
+        related_concepts: ["touchpoints", "satisfaction", "loyalty"]
+        children:
+          - touchpoint_mapping
+          - satisfaction_measurement
+          - loyalty_programs
+          - customer_support
+          - feedback_systems
+
+  # Business Process Concepts
+  process:
+    parent: "business_domain"
+    level: 1
+    description: "Business processes and operations"
+    children:
+      workflow_design:
+        level: 2
+        synonyms: ["workflow", "process-design", "operational-procedures"]
+        related_concepts: ["automation", "optimization", "efficiency"]
+        children:
+          - process_mapping
+          - workflow_automation
+          - process_optimization
+          - standard_procedures
+          - decision_points
+          
+      change_management:
+        level: 2
+        synonyms: ["transformation", "change-process", "organizational-change"]
+        related_concepts: ["impact-analysis", "change-control", "stakeholder-management"]
+        children:
+          - change_impact_analysis
+          - stakeholder_management
+          - change_control
+          - transformation_planning
+          - adoption_strategies
+          
+      quality_management:
+        level: 2
+        synonyms: ["quality-control", "process-improvement", "standards"]
+        related_concepts: ["continuous-improvement", "quality-assurance", "standards-compliance"]
+        children:
+          - quality_standards
+          - process_improvement
+          - continuous_improvement
+          - quality_metrics
+          - compliance_monitoring
+
+# Technical Domain Taxonomies
+technical_domain:
+  # System Architecture Concepts
+  architecture:
+    parent: "technical_domain"
+    level: 1
+    description: "System architecture and design patterns"
+    children:
+      system_design:
+        level: 2
+        synonyms: ["architecture", "system-architecture", "design-patterns"]
+        related_concepts: ["scalability", "reliability", "performance"]
+        children:
+          - architectural_patterns
+          - design_principles
+          - system_components
+          - integration_patterns
+          - scalability_design
+          
+      technology_stack:
+        level: 2
+        synonyms: ["tech-stack", "technology-choices", "platform-selection"]
+        related_concepts: ["frameworks", "libraries", "tools", "platforms"]
+        children:
+          - frontend_technologies
+          - backend_technologies
+          - database_technologies
+          - cloud_platforms
+          - development_tools
+          
+      integration_design:
+        level: 2
+        synonyms: ["integration", "api-design", "service-integration"]
+        related_concepts: ["apis", "microservices", "data-flow"]
+        children:
+          - api_design
+          - microservices_architecture
+          - data_integration
+          - service_mesh
+          - event_driven_architecture
+
+  # Data and Database Concepts
+  data:
+    parent: "technical_domain"
+    level: 1
+    description: "Data architecture and management"
+    children:
+      data_architecture:
+        level: 2
+        synonyms: ["data-design", "data-modeling", "information-architecture"]
+        related_concepts: ["database", "schema", "data-flow"]
+        children:
+          - database_design
+          - data_modeling
+          - schema_design
+          - data_relationships
+          - data_governance
+          
+      data_management:
+        level: 2
+        synonyms: ["data-operations", "data-lifecycle", "data-quality"]
+        related_concepts: ["etl", "data-pipeline", "data-warehouse"]
+        children:
+          - data_pipeline
+          - data_quality
+          - data_warehouse
+          - data_lake
+          - data_governance
+          
+      data_analytics:
+        level: 2
+        synonyms: ["analytics", "business-intelligence", "data-insights"]
+        related_concepts: ["reporting", "dashboards", "metrics"]
+        children:
+          - business_intelligence
+          - data_visualization
+          - reporting_systems
+          - analytics_frameworks
+          - predictive_analytics
+
+  # Security and Compliance Concepts
+  security:
+    parent: "technical_domain"
+    level: 1
+    description: "Security architecture and compliance"
+    children:
+      security_architecture:
+        level: 2
+        synonyms: ["security-design", "threat-modeling", "security-controls"]
+        related_concepts: ["authentication", "authorization", "encryption"]
+        children:
+          - authentication_systems
+          - authorization_frameworks
+          - encryption_strategies
+          - security_controls
+          - threat_modeling
+          
+      compliance_framework:
+        level: 2
+        synonyms: ["regulatory-compliance", "standards-adherence", "governance"]
+        related_concepts: ["gdpr", "hipaa", "sox", "audit"]
+        children:
+          - gdpr_compliance
+          - hipaa_compliance
+          - sox_compliance
+          - audit_frameworks
+          - regulatory_standards
+          
+      privacy_protection:
+        level: 2
+        synonyms: ["data-privacy", "privacy-by-design", "data-protection"]
+        related_concepts: ["consent-management", "data-minimization", "privacy-controls"]
+        children:
+          - consent_management
+          - data_minimization
+          - privacy_controls
+          - data_retention
+          - privacy_impact_assessment
+
+# Workflow and Process Taxonomies
+workflow_stages:
+  # Development Lifecycle Stages
+  development_lifecycle:
+    parent: "workflow_stages"
+    level: 1
+    description: "Software development lifecycle stages"
+    children:
+      planning:
+        level: 2
+        synonyms: ["planning", "preparation", "analysis"]
+        related_concepts: ["requirements", "scope", "estimation"]
+        children:
+          - requirements_analysis
+          - scope_definition
+          - effort_estimation
+          - risk_assessment
+          - project_planning
+          
+      design:
+        level: 2
+        synonyms: ["design", "architecture", "specification"]
+        related_concepts: ["wireframes", "mockups", "prototypes"]
+        children:
+          - system_design
+          - interface_design
+          - database_design
+          - api_design
+          - security_design
+          
+      implementation:
+        level: 2
+        synonyms: ["development", "coding", "construction"]
+        related_concepts: ["programming", "integration", "development"]
+        children:
+          - feature_development
+          - api_implementation
+          - database_implementation
+          - frontend_development
+          - backend_development
+          
+      testing:
+        level: 2
+        synonyms: ["testing", "validation", "verification"]
+        related_concepts: ["qa", "quality-assurance", "test-automation"]
+        children:
+          - unit_testing
+          - integration_testing
+          - system_testing
+          - user_acceptance_testing
+          - performance_testing
+          
+      deployment:
+        level: 2
+        synonyms: ["deployment", "release", "launch"]
+        related_concepts: ["ci-cd", "environment", "rollout"]
+        children:
+          - environment_setup
+          - continuous_integration
+          - continuous_deployment
+          - release_management
+          - rollback_procedures
+          
+      maintenance:
+        level: 2
+        synonyms: ["maintenance", "support", "optimization"]
+        related_concepts: ["monitoring", "updates", "bug-fixes"]
+        children:
+          - monitoring_systems
+          - performance_optimization
+          - bug_fixes
+          - feature_updates
+          - system_maintenance
+
+# AI Processing and Quality Taxonomies
+ai_processing:
+  # AI Processing Tiers
+  processing_tiers:
+    parent: "ai_processing"
+    level: 1
+    description: "AI processing value and complexity tiers"
+    children:
+      tier1_highest:
+        level: 2
+        ai_value_range: [90, 95]
+        synonyms: ["tier1", "highest-value", "premium-processing"]
+        related_concepts: ["code-generation", "technical-precision", "automation"]
+        characteristics:
+          - "Highest AI processing value"
+          - "Technical precision focus"
+          - "Excellent for code generation"
+          - "Structured data formats"
+          - "Automated validation possible"
+          
+      tier2_high:
+        level: 2
+        ai_value_range: [80, 89]
+        synonyms: ["tier2", "high-value", "development-planning"]
+        related_concepts: ["planning", "quality-assurance", "development"]
+        characteristics:
+          - "High AI processing value"
+          - "Development planning focus"
+          - "Good for automation"
+          - "Structured requirements"
+          - "Clear validation criteria"
+          
+      tier3_medium_high:
+        level: 2
+        ai_value_range: [70, 79]
+        synonyms: ["tier3", "medium-high-value", "implementation-guidance"]
+        related_concepts: ["implementation", "ux-design", "guidance"]
+        characteristics:
+          - "Medium-high AI processing value"
+          - "Implementation guidance focus"
+          - "Moderate automation potential"
+          - "Mixed structured/unstructured content"
+          - "Context-dependent validation"
+          
+      tier4_medium:
+        level: 2
+        ai_value_range: [60, 69]
+        synonyms: ["tier4", "medium-value", "strategic-context"]
+        related_concepts: ["strategy", "context", "foundation"]
+        characteristics:
+          - "Medium AI processing value"
+          - "Strategic context focus"
+          - "Lower automation potential"
+          - "Unstructured content"
+          - "Qualitative validation"
+
+  # AI Processing Complexity
+  processing_complexity:
+    parent: "ai_processing"
+    level: 1
+    description: "Document processing complexity levels"
+    children:
+      structured_high:
+        level: 2
+        synonyms: ["structured", "formatted", "standardized"]
+        related_concepts: ["apis", "schemas", "specifications"]
+        characteristics:
+          - "High structure and format consistency"
+          - "Standardized templates"
+          - "Automated processing friendly"
+          - "Clear validation rules"
+          
+      semi_structured_medium:
+        level: 2
+        synonyms: ["semi-structured", "mixed-format", "moderate-structure"]
+        related_concepts: ["requirements", "processes", "workflows"]
+        characteristics:
+          - "Mixed structured and unstructured content"
+          - "Moderate standardization"
+          - "Requires context understanding"
+          - "Validation needs human oversight"
+          
+      unstructured_low:
+        level: 2
+        synonyms: ["unstructured", "narrative", "qualitative"]
+        related_concepts: ["research", "analysis", "insights"]
+        characteristics:
+          - "Narrative and qualitative content"
+          - "Low standardization"
+          - "Requires interpretation"
+          - "Subjective validation"
+
+# Content Theme Taxonomies
+content_themes:
+  # Business Function Themes
+  business_function:
+    parent: "content_themes"
+    level: 1
+    description: "Business function and department themes"
+    children:
+      strategy_planning:
+        level: 2
+        synonyms: ["strategic", "planning", "vision"]
+        related_concepts: ["roadmap", "goals", "objectives"]
+        
+      product_management:
+        level: 2
+        synonyms: ["product", "features", "requirements"]
+        related_concepts: ["prd", "backlog", "specifications"]
+        
+      user_experience:
+        level: 2
+        synonyms: ["ux", "ui", "design", "usability"]
+        related_concepts: ["research", "testing", "interface"]
+        
+      engineering:
+        level: 2
+        synonyms: ["technical", "development", "implementation"]
+        related_concepts: ["architecture", "coding", "deployment"]
+        
+      quality_assurance:
+        level: 2
+        synonyms: ["qa", "testing", "validation"]
+        related_concepts: ["test-plans", "quality-control", "verification"]
+        
+      operations:
+        level: 2
+        synonyms: ["ops", "deployment", "maintenance"]
+        related_concepts: ["monitoring", "support", "infrastructure"]
+        
+      compliance_legal:
+        level: 2
+        synonyms: ["legal", "regulatory", "compliance"]
+        related_concepts: ["audit", "governance", "risk"]
+
+  # Technical Function Themes
+  technical_function:
+    parent: "content_themes"
+    level: 1
+    description: "Technical function and specialty themes"
+    children:
+      system_architecture:
+        level: 2
+        synonyms: ["architecture", "system-design", "patterns"]
+        related_concepts: ["scalability", "reliability", "performance"]
+        
+      api_integration:
+        level: 2
+        synonyms: ["api", "integration", "endpoints"]
+        related_concepts: ["rest", "graphql", "webhooks"]
+        
+      database_data:
+        level: 2
+        synonyms: ["database", "data", "schema"]
+        related_concepts: ["sql", "nosql", "data-modeling"]
+        
+      security_privacy:
+        level: 2
+        synonyms: ["security", "privacy", "protection"]
+        related_concepts: ["authentication", "encryption", "compliance"]
+        
+      performance_scalability:
+        level: 2
+        synonyms: ["performance", "scalability", "optimization"]
+        related_concepts: ["load-testing", "capacity", "efficiency"]
+        
+      user_interface:
+        level: 2
+        synonyms: ["ui", "frontend", "interface"]
+        related_concepts: ["components", "responsive", "accessibility"]
+
+# Dependency and Relationship Taxonomies
+dependencies:
+  # Document Relationship Types
+  relationship_types:
+    parent: "dependencies"
+    level: 1
+    description: "Types of relationships between documents"
+    children:
+      depends_on:
+        level: 2
+        synonyms: ["requires", "needs", "prerequisite"]
+        related_concepts: ["input", "foundation", "requirement"]
+        description: "Document requires information from another document"
+        
+      enables:
+        level: 2
+        synonyms: ["supports", "facilitates", "provides-for"]
+        related_concepts: ["output", "foundation", "support"]
+        description: "Document provides information needed by another document"
+        
+      relates_to:
+        level: 2
+        synonyms: ["associated-with", "connected-to", "similar-to"]
+        related_concepts: ["reference", "cross-reference", "similarity"]
+        description: "Document shares concepts or themes with another document"
+        
+      validates:
+        level: 2
+        synonyms: ["confirms", "verifies", "tests"]
+        related_concepts: ["validation", "verification", "testing"]
+        description: "Document validates or tests another document"
+        
+      implements:
+        level: 2
+        synonyms: ["realizes", "executes", "fulfills"]
+        related_concepts: ["implementation", "execution", "realization"]
+        description: "Document implements concepts from another document"
+
+  # Dependency Strength
+  dependency_strength:
+    parent: "dependencies"
+    level: 1
+    description: "Strength of dependencies between documents"
+    children:
+      required:
+        level: 2
+        synonyms: ["mandatory", "critical", "essential"]
+        related_concepts: ["blocker", "prerequisite", "must-have"]
+        description: "Document cannot be created without the dependency"
+        
+      recommended:
+        level: 2
+        synonyms: ["suggested", "beneficial", "helpful"]
+        related_concepts: ["improvement", "enhancement", "support"]
+        description: "Document quality improves with the dependency"
+        
+      optional:
+        level: 2
+        synonyms: ["nice-to-have", "supplementary", "additional"]
+        related_concepts: ["context", "reference", "background"]
+        description: "Document can reference dependency for additional context"
+
+# Tag Relationship Rules
+tag_relationships:
+  # Hierarchical Relationships
+  hierarchical:
+    parent_child:
+      rule: "Child tags inherit parent characteristics"
+      example: "technical-api inherits from technical"
+      
+    sibling:
+      rule: "Sibling tags share parent characteristics"
+      example: "tier1 and tier2 are both AI processing levels"
+      
+  # Semantic Relationships
+  semantic:
+    synonyms:
+      rule: "Tags with similar meanings are grouped"
+      example: "api, endpoints, integration are related"
+      
+    antonyms:
+      rule: "Opposite concepts are explicitly linked"
+      example: "current-state vs future-state"
+      
+    related_concepts:
+      rule: "Thematically related tags are connected"
+      example: "user-research relates to personas, journey-mapping"
+
+# Tag Usage Guidelines
+usage_guidelines:
+  # Tagging Best Practices
+  best_practices:
+    - "Use specific tags rather than generic ones"
+    - "Include both category and functional tags"
+    - "Balance specificity with discoverability"
+    - "Maintain consistent tag vocabulary"
+    - "Regular review and cleanup of unused tags"
+    
+  # Common Tagging Patterns
+  patterns:
+    document_type_pattern:
+      format: "{category}-{document-type}"
+      example: "technical-api-documentation"
+      
+    workflow_stage_pattern:
+      format: "{stage}-{focus}"
+      example: "planning-requirements"
+      
+    relationship_pattern:
+      format: "{relationship}-{target}"
+      example: "depends-on-user-research"
+      
+    quality_pattern:
+      format: "{quality-aspect}-{level}"
+      example: "tier1-highest-value"
+
+# Tag Evolution Framework
+evolution_framework:
+  # Tag Lifecycle Management
+  lifecycle:
+    creation:
+      triggers: ["New document types", "New business domains", "User feedback"]
+      process: ["Identify gap", "Define concept", "Map relationships", "Validate usage"]
+      
+    maintenance:
+      frequency: "Monthly review"
+      activities: ["Usage analysis", "Relationship validation", "Synonym detection", "Cleanup"]
+      
+    retirement:
+      conditions: ["No usage for 6 months", "Replaced by better tags", "Concept obsolete"]
+      process: ["Impact analysis", "Migration planning", "Gradual phase-out", "Documentation update"]
+      
+  # Quality Metrics
+  quality_metrics:
+    coverage: "Percentage of documents with complete tagging"
+    accuracy: "Percentage of tags correctly applied"
+    consistency: "Variation in tag application across similar documents"
+    discoverability: "Success rate of tag-based searches"
+    
+  # Performance Indicators
+  performance_indicators:
+    search_improvement: "Tag-based search vs full-text search performance"
+    user_adoption: "Percentage of users using tag-based workflows"
+    content_discovery: "Time reduction in finding relevant documents"
+    relationship_accuracy: "Precision of tag-based relationship mapping"
