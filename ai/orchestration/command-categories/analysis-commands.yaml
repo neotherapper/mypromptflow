@@ -1,0 +1,157 @@
+# Analysis Commands Category
+# SuperClaude Pattern: 4 specialized analysis commands
+
+category: analysis
+description: "Commands for deep analysis, investigation, and understanding"
+commands:
+  analyze:
+    name: "analyze"
+    description: "Perform comprehensive analysis of systems, code, or data"
+    purpose: "Deep investigation and understanding of complex systems or problems"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "System, code, data, or problem to analyze"
+      - name: "scope"
+        type: "string"
+        required: false
+        description: "Analysis scope (performance, security, architecture, etc.)"
+      - name: "depth"
+        type: "string"
+        required: false
+        description: "Analysis depth level (surface, detailed, comprehensive)"
+      - name: "context"
+        type: "string"
+        required: false
+        description: "Additional context or background information"
+    usage_examples:
+      - "analyze system performance bottlenecks"
+      - "analyze code quality issues --analyzer --think-hard"
+      - "analyze security vulnerabilities --security --ultrathink"
+    integration_points:
+      - "research framework integration"
+      - "multi-perspective analysis"
+      - "systematic investigation"
+
+  troubleshoot:
+    name: "troubleshoot"
+    description: "Diagnose and resolve system issues and problems"
+    purpose: "Identify root causes and provide solutions for system problems"
+    parameters:
+      - name: "issue"
+        type: "string"
+        required: true
+        description: "Problem or issue to troubleshoot"
+      - name: "symptoms"
+        type: "string"
+        required: false
+        description: "Observed symptoms or error messages"
+      - name: "context"
+        type: "string"
+        required: false
+        description: "System context and environment details"
+      - name: "logs"
+        type: "string"
+        required: false
+        description: "Relevant logs or diagnostic information"
+    usage_examples:
+      - "troubleshoot deployment failures"
+      - "troubleshoot database connection issues --backend"
+      - "troubleshoot performance degradation --performance --think"
+    integration_points:
+      - "error diagnosis workflows"
+      - "solution recommendation"
+      - "knowledge base integration"
+
+  explain:
+    name: "explain"
+    description: "Provide clear explanations of complex systems or concepts"
+    purpose: "Make complex topics understandable through detailed explanations"
+    parameters:
+      - name: "topic"
+        type: "string"
+        required: true
+        description: "System, concept, or code to explain"
+      - name: "audience"
+        type: "string"
+        required: false
+        description: "Target audience level (beginner, intermediate, expert)"
+      - name: "format"
+        type: "string"
+        required: false
+        description: "Explanation format (tutorial, reference, overview)"
+      - name: "examples"
+        type: "boolean"
+        required: false
+        description: "Include practical examples"
+    usage_examples:
+      - "explain microservices architecture"
+      - "explain React hooks usage --frontend --mentor"
+      - "explain database normalization --think --compressed"
+    integration_points:
+      - "documentation generation"
+      - "knowledge transfer"
+      - "educational content creation"
+
+  evaluate:
+    name: "evaluate"
+    description: "Assess and rate systems, solutions, or approaches"
+    purpose: "Provide objective evaluation and comparison of options"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "System, solution, or approach to evaluate"
+      - name: "criteria"
+        type: "string"
+        required: false
+        description: "Evaluation criteria and metrics"
+      - name: "alternatives"
+        type: "string"
+        required: false
+        description: "Alternative options to compare"
+      - name: "context"
+        type: "string"
+        required: false
+        description: "Business or technical context"
+    usage_examples:
+      - "evaluate database solutions"
+      - "evaluate frontend frameworks --frontend --architect"
+      - "evaluate security measures --security --ultrathink"
+    integration_points:
+      - "decision support systems"
+      - "comparative analysis"
+      - "recommendation engines"
+
+# Advanced Analysis Features
+research_integration:
+  - "6-step orchestrator workflow"
+  - "Multi-perspective analysis"
+  - "Constitutional AI validation"
+  - "Self-consistency verification"
+
+analysis_depth_levels:
+  surface:
+    description: "Quick overview and basic insights"
+    flags: ["--think"]
+  detailed:
+    description: "Comprehensive analysis with deep insights"
+    flags: ["--think-hard"]
+  comprehensive:
+    description: "Exhaustive analysis with multiple perspectives"
+    flags: ["--ultrathink"]
+
+# Quality Standards
+validation_requirements:
+  - "Analysis must be objective and evidence-based"
+  - "Multiple perspectives must be considered"
+  - "Findings must be actionable"
+  - "Quality checkpoints must be followed"
+
+# Integration Patterns
+workflow_integration:
+  - "Research framework activation"
+  - "Multi-domain question handling"
+  - "Systematic investigation protocols"
+  - "Quality assurance integration"
