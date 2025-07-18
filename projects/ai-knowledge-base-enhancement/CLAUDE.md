@@ -2,20 +2,21 @@
 
 ## Project Overview
 
-This project enhances the existing AI knowledge base system at `@ai/` with production-ready capabilities focusing on validation, error handling, and AI-agent reproducibility. The goal is to transform the experimental framework into a generic, forkable system for any business idea.
+This project enhances the existing AI knowledge base system at `@ai/` to create a **document-to-code transformation pipeline** where AI agents can transform comprehensive business documentation into working application code. The vision is to create a sophisticated system that bridges design, documentation, and implementation.
 
 ## Core Objectives
 
-1. **Validation & Quality Framework** - Automated document quality scoring and fact-checking
-2. **Error Handling & Recovery** - Robust agent failure detection and recovery protocols
-3. **AI-Agent Reproducibility** - Complete workflow reproduction capabilities for AI agents
+1. **Document-to-Code Pipeline** - Transform business documentation into working application features
+2. **Meta-Framework Orchestration** - Advanced AI agent coordination patterns for complex workflows
+3. **File-Based Memory Management** - Simple, AI-agent-friendly state management without SQL dependencies
 
 ## Key Concepts
 
-- **AI-Agent Reproducibility**: Any AI agent can recreate workflows from specifications without human intervention
-- **Research Framework Integration**: All enhancement research triggers the existing research orchestrator
-- **Meta-Prompting Focus**: Pure AI agent solutions, minimal code required
-- **Generic Framework**: Remove business-specific content, make fully forkable
+- **Document-to-Code Transformation**: AI agents read business documentation and generate working code
+- **Meta-Framework Orchestration**: Advanced coordination patterns from SuperClaude and Claude Flow research
+- **File-Based Architecture**: Simple YAML/Markdown approach, no database dependencies
+- **Gradual Implementation**: Test each iteration, grow complexity gradually
+- **Pure AI Agent Solutions**: No Python/TypeScript code, only AI agent orchestration
 
 ## Project Context
 
@@ -29,62 +30,108 @@ This project enhances the existing AI knowledge base system at `@ai/` with produ
 
 ### Critical Gaps Identified
 
-1. **No validation framework** - Documents created but never quality-checked
-2. **No error handling** - Agent failures have no recovery mechanisms
-3. **No reproducibility** - Cannot recreate successful workflows
-4. **Limited integration** - Basic tool interoperability
-5. **No performance monitoring** - No optimization capabilities
+1. **No document-to-code transformation** - System generates documents but not working code
+2. **No meta-framework orchestration** - Limited agent coordination patterns
+3. **No vector database integration** - Missing semantic search capabilities (deferred for later)
+4. **No MCP integration** - Missing design system integration (deferred for later)
+5. **Manual knowledge status caching** - No automatic updates
+
+## Implementation Requirements
+
+### Mandatory Constraints
+
+1. **No Complex Implementation** - Keep solutions simple and testable
+2. **Gradual Growth** - Test each iteration before adding complexity
+3. **No Code Dependencies** - No Python, TypeScript, or other programming languages
+4. **Pure AI Agent Solutions** - Use only AI agent orchestration and file-based systems
+5. **File-Based Memory** - Use YAML/Markdown files instead of SQL databases
+6. **Test Each Iteration** - Validate functionality before proceeding to next phase
+
+### Technical Architecture
+
+1. **File-Based State Management**
+   - Use YAML files for configuration and state
+   - Use Markdown files for documentation and templates
+   - Store agent coordination in `ai/context/agent-coordination.yaml`
+   - Track workflow state in `ai/context/workflow-state.yaml`
+
+2. **Memory Management Approach**
+   - **No SQLite** - Use file-based persistence instead
+   - **Session memory** - Store in `ai/context/session-memory.yaml`
+   - **Agent coordination** - Track active agents and their state in files
+   - **Workflow state** - Persist cross-session information in YAML
+
+3. **Meta-Framework Integration**
+   - Apply SuperClaude command patterns using configuration files
+   - Implement Claude Flow coordination using YAML-based orchestration
+   - Use Queen-agent pattern with file-based coordination
+   - Token optimization through configuration settings
+
+### Quality Standards
+
+1. **Documentation First** - All changes must be documented
+2. **AI Agent Consumable** - All solutions must work for AI agents
+3. **Claude Code Compatible** - Maintain interactive terminal workflows
+4. **Incremental Enhancement** - Each phase must deliver working functionality
 
 ## Implementation Strategy
 
-### Phase 1: Validation & Quality Framework (Weeks 1-3)
+### Phase 1: Foundation Systems (Weeks 1-2)
 
-**Research Tasks:**
+**Current Priority Tasks:**
 
-- Research AI validation frameworks and quality metrics
-- Investigate AI fact-checking integration patterns
-- Analyze document quality measurement systems
-
-**Implementation:**
-
-- Document quality scoring system
-- AI fact-checking integration
-- Source validation workflows
-
-### Phase 2: Error Handling & Recovery (Weeks 4-5)
-
-**Research Tasks:**
-
-- Research AI agent failure patterns and recovery strategies
-- Investigate error handling in AI orchestration systems
-- Analyze fault tolerance patterns for AI workflows
+- Update project documentation to reflect document-to-code vision
+- Implement file-based memory management system
+- Create agent coordination framework using YAML files
+- Update knowledge status caching system
 
 **Implementation:**
 
-- Agent failure detection system
-- Automatic recovery protocols
-- Graceful degradation mechanisms
+- File-based agent coordination system
+- Workflow state management in YAML
+- Enhanced knowledge status cache
+- Session memory persistence
 
-### Phase 3: AI-Agent Reproducibility (Weeks 6-8)
+### Phase 2: Meta-Framework Integration (Weeks 3-4)
 
-**Research Tasks:**
+**Research Foundation:**
 
-- Research AI workflow reproducibility and provenance tracking
-- Investigate dependency management in AI systems
-- Analyze agent configuration management patterns
+- SuperClaude and Claude Flow meta-frameworks analysis (completed)
+- 7 applicable pattern categories identified
+- Queen-agent coordination patterns ready for implementation
 
 **Implementation:**
 
-- Workflow recipe system for AI agents
-- Dependency snapshot and versioning
-- Agent configuration tracking
+- Apply SuperClaude command patterns with flag-based customization
+- Implement Claude Flow Queen-agent coordination using files
+- Add token optimization through configuration settings
+- Create multi-layer quality validation systems
+
+### Phase 3: Document-to-Code Pipeline (Weeks 5-6)
+
+**Implementation:**
+
+- BDD acceptance criteria to test code generation
+- Document-to-code transformation workflows
+- Code generation from comprehensive documentation
+- End-to-end validation and testing
+
+### Phase 4: Advanced Features (Future)
+
+**Deferred for Later Implementation:**
+
+- Vector database integration (Chroma → Qdrant progression)
+- MCP protocol integration (Figma design system)
+- Advanced error handling and recovery systems
+- Workflow reproducibility and provenance tracking
 
 ## Success Criteria
 
-- **Validation**: Document accuracy >90% with automated quality scoring
-- **Recovery**: Agent failure recovery >95% with automatic retry
-- **Reproducibility**: Any AI agent can recreate workflows with 100% fidelity
-- **Research**: All enhancements backed by comprehensive research analysis
+- **Document-to-Code Transformation**: 85%+ accuracy in generating working code from documentation
+- **Meta-Framework Integration**: Advanced agent coordination patterns operational
+- **File-Based Memory**: Simple, maintainable state management without SQL dependencies
+- **Gradual Implementation**: Each phase delivers testable, working functionality
+- **AI Agent Consumption**: All solutions work seamlessly for AI agents
 
 ## File Structure
 
@@ -109,9 +156,9 @@ projects/ai-knowledge-base-enhancement/
     │   ├── general_workflow_prompts.md
     │   ├── meta_prompts_ai_behavior.md
     │   └── meta_prompts_orchestration.md
-    ├── mvp-error-handling-plan.md    # Error handling implementation plan
-    ├── mvp-reproducibility-plan.md   # Reproducibility framework plan
-    ├── mvp-validation-framework-plan.md # Validation system plan
+    ├── error-handling-plan.md        # Error handling implementation plan
+    ├── reproducibility-plan.md       # Reproducibility framework plan
+    ├── validation-framework-plan.md  # Validation system plan
     └── research-integration.md       # Research findings and applications
 ```
 
@@ -135,12 +182,13 @@ The research framework at `@research/orchestrator/` will automatically detect th
 When working on this project:
 
 1. **Always check task list** before starting work (`project-purpose.md`, `task-list.md`, `progress.md`)
-2. **Use research framework** for any research tasks - do not manually research
-3. **Reference comprehensive documentation** in `docs/claude-comprehensive-capabilities.md` for complete Claude capabilities understanding
+2. **Follow implementation constraints** - no complex implementation, gradual growth, test each iteration
+3. **Use file-based memory** - YAML/Markdown files, no SQL databases
 4. **Reference existing system** at `@ai/` for integration points
-5. **Focus on AI-agent consumption** - all solutions should work for AI agents
-6. **Maintain Claude Code compatibility** - interactive terminal workflows
-7. **No TypeScript/code** - pure meta-prompting and agent-based solutions
+5. **Focus on document-to-code transformation** - primary goal is generating working code from documentation
+6. **Apply meta-framework patterns** - use SuperClaude and Claude Flow research findings
+7. **Maintain Claude Code compatibility** - interactive terminal workflows
+8. **Pure AI agent solutions** - no Python/TypeScript code, only AI agent orchestration
 
 ## Key Documentation References
 

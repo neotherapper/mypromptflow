@@ -1,19 +1,19 @@
-# MVP Reproducibility System Implementation Plan
+# Reproducibility System Implementation Plan
 
 ## Overview
 
-This document outlines a simplified MVP reproducibility system based on research findings that focus on practical workflow recreation rather than complex provenance tracking.
+This document outlines a simplified reproducibility system based on research findings that focus on practical workflow recreation rather than complex provenance tracking. This approach uses file-based memory management and supports the document-to-code transformation vision.
 
 ## Research Foundation
 
-Based on completed research in `research/findings/ai-workflow-reproducibility/`, the key insights for MVP are:
+Based on completed research in `research/findings/ai-workflow-reproducibility/`, the key insights are:
 
 - **YAML specifications enable AI agent interpretation** (95% success rate)
 - **Simple workflow recipes more effective** than complex tracking systems
-- **Container technology provides optimal environment reproducibility**
+- **File-based approach optimal for AI agent consumption**
 - **Step-by-step instructions sufficient** for most AI agent workflows
 
-## MVP Components
+## System Components
 
 ### 1. Simple Workflow Recipe Meta-Prompt
 **Location**: `@ai/reproducibility/workflow-recipe.md`
@@ -21,9 +21,9 @@ Based on completed research in `research/findings/ai-workflow-reproducibility/`,
 **Recipe Format**:
 ```yaml
 workflow_recipe:
-  id: "document-generation-basic"
+  id: "document-to-code-basic"
   version: "1.0"
-  description: "Generate knowledge base document"
+  description: "Transform document to code implementation"
   steps:
     - action: "analyze_dependencies"
       input: "document_type"
@@ -34,6 +34,9 @@ workflow_recipe:
     - action: "validate_document"
       input: "draft_document"
       output: "final_document"
+    - action: "generate_code"
+      input: "final_document"
+      output: "implementation_code"
 ```
 
 **Recipe Components**:
@@ -45,7 +48,7 @@ workflow_recipe:
 ### 2. Basic Snapshot System
 **Location**: `@ai/reproducibility/snapshot-manager.md`
 
-**Snapshot Contents**:
+**File-Based Snapshot Contents**:
 1. **Document Dependencies**
    - Current state of referenced documents
    - Dependency versions and timestamps
@@ -102,7 +105,7 @@ workflow_recipe:
 
 ## Success Metrics
 
-**MVP Success Criteria**:
+**Success Criteria**:
 - 100% workflow recreation success for simple documents
 - AI agents can execute recipes independently
 - Snapshot system captures essential state
@@ -112,7 +115,7 @@ workflow_recipe:
 - Recipe creation: <5 minutes for standard workflows
 - Recreation time: <2x original workflow duration
 - Accuracy: >95% identical output for same inputs
-- Coverage: Works with all document types in @ai/knowledge/
+- Coverage: Works with document-to-code transformation
 
 ## File Structure
 
@@ -123,13 +126,13 @@ workflow_recipe:
 ├── recreation-guide.md          # AI agent recreation instructions
 └── recipe-templates/            # Common workflow templates
     ├── document-generation.yaml
-    ├── validation-workflow.yaml
-    └── multi-document-creation.yaml
+    ├── code-generation.yaml
+    └── validation-workflow.yaml
 ```
 
 ## Integration Points
 
-**With Existing System**:
+**With Document-to-Code System**:
 - Enhance document generation with automatic recipe creation
 - Add snapshot triggers to major workflow completions
 - Integrate with existing dependency management
@@ -143,12 +146,12 @@ workflow_recipe:
 
 ## Workflow Examples
 
-### Simple Document Generation Recipe
+### Document-to-Code Generation Recipe
 ```yaml
 workflow_recipe:
-  id: "knowledge-doc-generation"
+  id: "document-to-code-generation"
   version: "1.0"
-  description: "Generate single knowledge document"
+  description: "Generate code from knowledge document"
   prerequisites:
     - dependencies_analyzed: true
     - template_available: true
@@ -160,10 +163,14 @@ workflow_recipe:
       meta_prompt: "@ai/prompts/meta-prompts/document-generator.md"
     - action: "validate_output"
       meta_prompt: "@ai/validation/simple-validator.md"
+    - action: "generate_code"
+      input: "validated_document"
+      meta_prompt: "@ai/prompts/meta-prompts/code-generator.md"
   success_criteria:
     - yaml_frontmatter_complete: true
     - required_sections_present: true
     - validation_score: ">85"
+    - code_generated: true
 ```
 
 ## Next Steps
@@ -173,4 +180,4 @@ workflow_recipe:
 3. **Test recreation process** - Verify AI agents can execute recipes
 4. **Integrate with existing workflows** - Add recipe capture to document generation
 
-This MVP approach provides practical workflow reproducibility while maintaining simplicity and deferring complex provenance tracking for future enhancement.
+This approach provides practical workflow reproducibility while maintaining simplicity and using file-based memory management as specified in the system requirements.
