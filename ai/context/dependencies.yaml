@@ -1,18 +1,110 @@
 # Document dependency configuration
 document_dependencies:
-  # Strategic Documents (Tier 4)
+  # Strategic Foundation Documents (Tier 4: 60-69/100 AI Value)
   statement-of-purpose:
     type: foundational
     tier: 4
+    ai_processing_value: 65
     dependencies: []
     outputs:
       - business_vision
       - core_values
       - target_audience
 
+  business-model-canvas:
+    type: strategic
+    tier: 4
+    ai_processing_value: 62
+    dependencies: []
+    outputs:
+      - value_propositions
+      - revenue_streams
+      - key_partnerships
+      - cost_structure
+
+  lean-canvas:
+    type: strategic
+    tier: 4
+    ai_processing_value: 63
+    dependencies: []
+    outputs:
+      - problem_solution_fit
+      - unique_value_proposition
+      - customer_segments
+      - key_metrics
+
+  market-requirements-document:
+    type: research
+    tier: 4
+    ai_processing_value: 64
+    dependencies: []
+    outputs:
+      - market_opportunities
+      - competitive_landscape
+      - market_size
+      - target_segments
+
+  value-proposition-canvas:
+    type: strategic
+    tier: 4
+    ai_processing_value: 61
+    dependencies:
+      - business-model-canvas
+    outputs:
+      - customer_jobs
+      - pains_and_gains
+      - value_propositions
+
+  strategic-roadmap:
+    type: planning
+    tier: 4
+    ai_processing_value: 66
+    dependencies:
+      - business-model-canvas
+      - statement-of-purpose
+    outputs:
+      - product_vision
+      - strategic_initiatives
+      - timeline_milestones
+
+  okr-documentation:
+    type: planning
+    tier: 4
+    ai_processing_value: 67
+    dependencies:
+      - strategic-roadmap
+    outputs:
+      - objectives
+      - key_results
+      - success_metrics
+
+  investment-readiness-level:
+    type: strategic
+    tier: 4
+    ai_processing_value: 60
+    dependencies:
+      - business-model-canvas
+      - strategic-roadmap
+    outputs:
+      - milestone_tracking
+      - fundraising_metrics
+      - investor_readiness
+
+  north-star-metric:
+    type: strategic
+    tier: 4
+    ai_processing_value: 68
+    dependencies:
+      - okr-documentation
+    outputs:
+      - primary_success_metric
+      - measurement_framework
+      - progress_tracking
+
   market-analysis:
     type: research
     tier: 4
+    ai_processing_value: 64
     dependencies: []
     outputs:
       - market_size
@@ -23,6 +115,7 @@ document_dependencies:
   user-research:
     type: research
     tier: 4
+    ai_processing_value: 65
     dependencies: []
     outputs:
       - user_interviews
@@ -32,6 +125,7 @@ document_dependencies:
   user-personas:
     type: synthesis
     tier: 4
+    ai_processing_value: 65
     dependencies:
       - user-research
       - market-analysis
@@ -40,10 +134,11 @@ document_dependencies:
       - user_segments
       - journey_maps
 
-  # Product Documents (Tier 2-3)
+  # Product Development Documents (Tier 2-3: 70-89/100 AI Value)
   prd:
     type: synthesis
     tier: 2
+    ai_processing_value: 85
     dependencies:
       - statement-of-purpose
       - market-analysis
@@ -55,20 +150,103 @@ document_dependencies:
       - success_metrics
       - mvp_scope
 
+  epic-documentation:
+    type: planning
+    tier: 3
+    ai_processing_value: 78
+    dependencies:
+      - prd
+    outputs:
+      - epic_themes
+      - story_groupings
+      - epic_acceptance_criteria
+
+  user-story-backlog:
+    type: breakdown
+    tier: 3
+    ai_processing_value: 75
+    dependencies:
+      - epic-documentation
+      - user-personas
+    outputs:
+      - prioritized_stories
+      - story_points
+      - sprint_planning
+
   user-stories:
     type: breakdown
     tier: 3
+    ai_processing_value: 75
     dependencies:
-      - prd
+      - user-story-backlog
       - user-personas
     outputs:
       - story_backlog
       - acceptance_criteria
       - story_points
 
+  acceptance-criteria-specifications:
+    type: detailed
+    tier: 3
+    ai_processing_value: 76
+    dependencies:
+      - user-stories
+    outputs:
+      - completion_conditions
+      - test_scenarios
+      - validation_rules
+
+  product-analytics-strategy:
+    type: analysis
+    tier: 3
+    ai_processing_value: 77
+    dependencies:
+      - prd
+      - north-star-metric
+    outputs:
+      - data_collection_plan
+      - analysis_methodology
+      - reporting_framework
+
+  mvp-specifications:
+    type: planning
+    tier: 3
+    ai_processing_value: 79
+    dependencies:
+      - prd
+      - user-stories
+    outputs:
+      - core_features
+      - minimum_functionality
+      - success_criteria
+
+  build-measure-learn:
+    type: methodology
+    tier: 3
+    ai_processing_value: 73
+    dependencies:
+      - mvp-specifications
+      - product-analytics-strategy
+    outputs:
+      - iteration_cycles
+      - learning_objectives
+      - pivot_criteria
+
+  pivot-persevere-decisions:
+    type: strategic
+    tier: 3
+    ai_processing_value: 71
+    dependencies:
+      - build-measure-learn
+    outputs:
+      - decision_framework
+      - pivot_documentation
+      - strategic_adjustments
+
   feature-specifications:
     type: detailed
     tier: 3
+    ai_processing_value: 72
     dependencies:
       - user-stories
       - technical-requirements
@@ -77,45 +255,332 @@ document_dependencies:
       - edge_cases
       - integration_points
 
-  # Technical Documents (Tier 1)
-  system-architecture:
+  release-notes:
+    type: communication
+    tier: 3
+    ai_processing_value: 74
+    dependencies:
+      - feature-specifications
+    outputs:
+      - feature_releases
+      - change_documentation
+      - user_impact
+
+  product-backlog-management:
+    type: planning
+    tier: 3
+    ai_processing_value: 76
+    dependencies:
+      - user-story-backlog
+      - strategic-roadmap
+    outputs:
+      - feature_prioritization
+      - backlog_refinement
+      - sprint_planning
+
+  jobs-to-be-done:
+    type: research
+    tier: 3
+    ai_processing_value: 70
+    dependencies:
+      - user-research
+      - user-personas
+    outputs:
+      - customer_outcomes
+      - job_statements
+      - success_criteria
+
+  # UX/Research Documents (Tier 3-4: 60-75/100 AI Value)
+  user-research-plans:
+    type: research
+    tier: 4
+    ai_processing_value: 63
+    dependencies:
+      - statement-of-purpose
+    outputs:
+      - research_methodology
+      - research_objectives
+      - participant_criteria
+
+  usability-testing-reports:
+    type: research
+    tier: 4
+    ai_processing_value: 64
+    dependencies:
+      - user-research-plans
+    outputs:
+      - usability_findings
+      - user_experience_issues
+      - improvement_recommendations
+
+  empathy-maps:
+    type: synthesis
+    tier: 4
+    ai_processing_value: 62
+    dependencies:
+      - user-research
+      - user-personas
+    outputs:
+      - user_thoughts
+      - user_feelings
+      - user_behaviors
+
+  user-interview-guides:
+    type: research
+    tier: 4
+    ai_processing_value: 61
+    dependencies:
+      - user-research-plans
+    outputs:
+      - interview_questions
+      - conversation_flow
+      - data_collection_methods
+
+  information-architecture:
+    type: design
+    tier: 3
+    ai_processing_value: 69
+    dependencies:
+      - user-personas
+      - user-research
+    outputs:
+      - content_organization
+      - navigation_systems
+      - site_structure
+
+  wireframes-mockups:
+    type: design
+    tier: 3
+    ai_processing_value: 68
+    dependencies:
+      - information-architecture
+      - user-stories
+    outputs:
+      - interface_layouts
+      - interaction_patterns
+      - visual_hierarchy
+
+  design-system-documentation:
+    type: design
+    tier: 3
+    ai_processing_value: 68
+    dependencies:
+      - wireframes-mockups
+    outputs:
+      - ui_components
+      - style_guidelines
+      - design_tokens
+
+  accessibility-audit-reports:
+    type: quality
+    tier: 3
+    ai_processing_value: 67
+    dependencies:
+      - design-system-documentation
+    outputs:
+      - wcag_compliance
+      - accessibility_issues
+      - remediation_plan
+
+  ab-testing-documentation:
+    type: analysis
+    tier: 3
+    ai_processing_value: 72
+    dependencies:
+      - product-analytics-strategy
+    outputs:
+      - test_hypotheses
+      - test_results
+      - statistical_significance
+
+  card-sorting-results:
+    type: research
+    tier: 4
+    ai_processing_value: 60
+    dependencies:
+      - information-architecture
+    outputs:
+      - content_categorization
+      - mental_models
+      - navigation_insights
+
+  prototype-documentation:
+    type: design
+    tier: 3
+    ai_processing_value: 70
+    dependencies:
+      - wireframes-mockups
+    outputs:
+      - interactive_prototypes
+      - user_flows
+      - interaction_design
+
+  customer-journey-analytics:
+    type: analysis
+    tier: 3
+    ai_processing_value: 73
+    dependencies:
+      - user-personas
+      - product-analytics-strategy
+    outputs:
+      - behavioral_data
+      - interaction_patterns
+      - conversion_funnel
+
+  ethnographic-study-reports:
+    type: research
+    tier: 4
+    ai_processing_value: 61
+    dependencies:
+      - user-research-plans
+    outputs:
+      - contextual_insights
+      - behavioral_observations
+      - environmental_factors
+
+  heuristic-evaluation-reports:
+    type: quality
+    tier: 3
+    ai_processing_value: 66
+    dependencies:
+      - usability-testing-reports
+    outputs:
+      - usability_assessments
+      - interface_issues
+      - improvement_priorities
+
+  design-challenge-statements:
+    type: design
+    tier: 4
+    ai_processing_value: 65
+    dependencies:
+      - user-research
+      - empathy-maps
+    outputs:
+      - problem_framing
+      - design_constraints
+      - success_criteria
+
+  # Technical Architecture Documents (Tier 1-2: 80-95/100 AI Value)
+  software-architecture-document:
     type: technical
     tier: 2
+    ai_processing_value: 82
     dependencies:
       - technical-requirements
       - prd
+    outputs:
+      - system_design
+      - architectural_patterns
+      - quality_attributes
+
+  system-architecture:
+    type: technical
+    tier: 2
+    ai_processing_value: 80
+    dependencies:
+      - software-architecture-document
+      - technical-requirements
     outputs:
       - component_design
       - technology_stack
       - deployment_architecture
 
+  api-documentation-openapi:
+    type: technical
+    tier: 1
+    ai_processing_value: 95
+    dependencies:
+      - system-architecture
+      - database-design-document
+    outputs:
+      - openapi_specifications
+      - endpoint_documentation
+      - api_contracts
+
   api-documentation:
     type: technical
     tier: 1
+    ai_processing_value: 95
     dependencies:
-      - system-architecture
-      - database-schemas
+      - api-documentation-openapi
     outputs:
       - endpoint_definitions
       - request_schemas
       - response_schemas
       - authentication_methods
 
+  database-design-document:
+    type: technical
+    tier: 1
+    ai_processing_value: 93
+    dependencies:
+      - software-architecture-document
+    outputs:
+      - data_models
+      - schema_specifications
+      - normalization_strategy
+
   database-schemas:
     type: technical
     tier: 1
+    ai_processing_value: 92
     dependencies:
-      - domain-models
-      - data-requirements
+      - database-design-document
     outputs:
       - table_definitions
       - relationships
       - constraints
       - indexes
 
+  system-context-diagram:
+    type: technical
+    tier: 2
+    ai_processing_value: 84
+    dependencies:
+      - software-architecture-document
+    outputs:
+      - system_boundaries
+      - external_interactions
+      - stakeholder_mapping
+
+  container-diagram:
+    type: technical
+    tier: 2
+    ai_processing_value: 83
+    dependencies:
+      - system-context-diagram
+    outputs:
+      - deployment_units
+      - technology_choices
+      - container_interactions
+
+  component-diagram:
+    type: technical
+    tier: 2
+    ai_processing_value: 85
+    dependencies:
+      - container-diagram
+    outputs:
+      - internal_structure
+      - component_interactions
+      - interface_definitions
+
+  technical-specifications-document:
+    type: technical
+    tier: 1
+    ai_processing_value: 91
+    dependencies:
+      - component-diagram
+    outputs:
+      - implementation_details
+      - technical_constraints
+      - interface_specifications
+
   technical-requirements:
     type: technical
     tier: 1
+    ai_processing_value: 90
     dependencies:
       - prd
       - system-architecture
@@ -125,22 +590,316 @@ document_dependencies:
       - security_requirements
       - integration_points
 
-  # Quality Assurance Documents (Tier 2)
+  integration-architecture:
+    type: technical
+    tier: 2
+    ai_processing_value: 86
+    dependencies:
+      - api-documentation
+      - technical-specifications-document
+    outputs:
+      - integration_patterns
+      - external_dependencies
+      - data_flow_diagrams
+
+  security-architecture:
+    type: technical
+    tier: 2
+    ai_processing_value: 87
+    dependencies:
+      - system-architecture
+      - technical-requirements
+    outputs:
+      - security_controls
+      - authentication_design
+      - authorization_model
+
+  performance-requirements:
+    type: technical
+    tier: 2
+    ai_processing_value: 81
+    dependencies:
+      - technical-requirements
+    outputs:
+      - response_times
+      - throughput_specifications
+      - scalability_metrics
+
+  deployment-guide:
+    type: technical
+    tier: 2
+    ai_processing_value: 88
+    dependencies:
+      - container-diagram
+      - security-architecture
+    outputs:
+      - deployment_procedures
+      - environment_setup
+      - release_processes
+
+  configuration-management-plan:
+    type: technical
+    tier: 2
+    ai_processing_value: 89
+    dependencies:
+      - deployment-guide
+    outputs:
+      - configuration_settings
+      - environment_variables
+      - change_management
+
+  # Business Analysis Documents (Tier 3-4: 60-70/100 AI Value)
+  competition-analysis:
+    type: analysis
+    tier: 4
+    ai_processing_value: 60
+    dependencies:
+      - market-analysis
+    outputs:
+      - competitive_landscape
+      - competitor_features
+      - market_positioning
+
+  stakeholder-analysis:
+    type: analysis
+    tier: 4
+    ai_processing_value: 62
+    dependencies:
+      - statement-of-purpose
+    outputs:
+      - stakeholder_mapping
+      - influence_assessment
+      - engagement_strategy
+
+  current-state-analysis:
+    type: analysis
+    tier: 4
+    ai_processing_value: 64
+    dependencies:
+      - stakeholder-analysis
+    outputs:
+      - existing_processes
+      - current_capabilities
+      - baseline_metrics
+
+  future-state-design:
+    type: planning
+    tier: 3
+    ai_processing_value: 68
+    dependencies:
+      - current-state-analysis
+      - strategic-roadmap
+    outputs:
+      - target_capabilities
+      - improved_processes
+      - success_vision
+
+  gap-analysis:
+    type: analysis
+    tier: 4
+    ai_processing_value: 66
+    dependencies:
+      - current-state-analysis
+      - future-state-design
+    outputs:
+      - capability_gaps
+      - improvement_priorities
+      - resource_requirements
+
+  requirements-traceability-matrix:
+    type: analysis
+    tier: 3
+    ai_processing_value: 69
+    dependencies:
+      - prd
+      - technical-requirements
+    outputs:
+      - requirement_links
+      - validation_mapping
+      - coverage_analysis
+
+  change-impact-analysis:
+    type: analysis
+    tier: 3
+    ai_processing_value: 67
+    dependencies:
+      - gap-analysis
+    outputs:
+      - impact_assessment
+      - risk_evaluation
+      - mitigation_strategies
+
+  business-process-documentation:
+    type: process
+    tier: 3
+    ai_processing_value: 70
+    dependencies:
+      - current-state-analysis
+      - future-state-design
+    outputs:
+      - workflow_procedures
+      - decision_points
+      - process_optimization
+
+  # Quality Assurance and Testing Documents (Tier 2: 80-88/100 AI Value)
+  quality-assurance-plan:
+    type: quality
+    tier: 2
+    ai_processing_value: 85
+    dependencies:
+      - technical-requirements
+      - acceptance-criteria-specifications
+    outputs:
+      - testing_strategy
+      - quality_standards
+      - qa_processes
+
   test-plans:
     type: quality
     tier: 2
+    ai_processing_value: 88
     dependencies:
+      - quality-assurance-plan
       - functional-requirements
-      - acceptance-criteria
     outputs:
       - test_scenarios
       - coverage_matrix
       - automation_strategy
 
+  test-data-management:
+    type: quality
+    tier: 2
+    ai_processing_value: 82
+    dependencies:
+      - test-plans
+      - database-schemas
+    outputs:
+      - test_data_generation
+      - data_privacy_procedures
+      - test_environment_setup
+
+  performance-testing-results:
+    type: quality
+    tier: 2
+    ai_processing_value: 84
+    dependencies:
+      - performance-requirements
+      - test-plans
+    outputs:
+      - load_testing_results
+      - capacity_planning
+      - performance_metrics
+
+  compliance-testing-documentation:
+    type: quality
+    tier: 2
+    ai_processing_value: 83
+    dependencies:
+      - quality-assurance-plan
+    outputs:
+      - regulatory_validation
+      - compliance_evidence
+      - audit_trails
+
+  user-acceptance-testing-plans:
+    type: quality
+    tier: 2
+    ai_processing_value: 86
+    dependencies:
+      - acceptance-criteria-specifications
+      - stakeholder-analysis
+    outputs:
+      - uat_procedures
+      - stakeholder_validation
+      - acceptance_criteria
+
+  # Compliance and Legal Documents (Tier 3-4: 60-70/100 AI Value)
+  data-privacy-impact-assessment:
+    type: compliance
+    tier: 3
+    ai_processing_value: 68
+    dependencies:
+      - database-design-document
+      - security-architecture
+    outputs:
+      - privacy_risk_assessment
+      - gdpr_compliance
+      - data_protection_measures
+
+  security-documentation:
+    type: compliance
+    tier: 3
+    ai_processing_value: 70
+    dependencies:
+      - security-architecture
+      - technical-requirements
+    outputs:
+      - threat_modeling
+      - vulnerability_assessments
+      - security_controls
+
+  terms-of-service-privacy-policy:
+    type: legal
+    tier: 4
+    ai_processing_value: 62
+    dependencies:
+      - business-model-canvas
+      - data-privacy-impact-assessment
+    outputs:
+      - legal_agreements
+      - data_handling_policies
+      - user_rights
+
+  audit-documentation:
+    type: compliance
+    tier: 3
+    ai_processing_value: 69
+    dependencies:
+      - compliance-testing-documentation
+    outputs:
+      - audit_evidence
+      - internal_controls
+      - compliance_reports
+
+  hipaa-sox-compliance:
+    type: compliance
+    tier: 3
+    ai_processing_value: 67
+    dependencies:
+      - audit-documentation
+      - security-documentation
+    outputs:
+      - regulatory_compliance
+      - industry_standards
+      - compliance_procedures
+
+  risk-register:
+    type: compliance
+    tier: 4
+    ai_processing_value: 64
+    dependencies:
+      - change-impact-analysis
+    outputs:
+      - risk_identification
+      - mitigation_strategies
+      - risk_monitoring
+
+  intellectual-property-documentation:
+    type: legal
+    tier: 4
+    ai_processing_value: 60
+    dependencies:
+      - business-model-canvas
+    outputs:
+      - patent_research
+      - ip_protection
+      - trademark_strategy
+
   # Feature-Specific Documents
   priority-feature-list:
     type: planning
     tier: 3
+    ai_processing_value: 74
     dependencies:
       - prd
     outputs:
@@ -151,6 +910,91 @@ document_dependencies:
 
 # Dependency chains for common workflows
 workflow_chains:
+  strategic_foundation:
+    order:
+      - parallel:
+          - statement-of-purpose
+          - market-requirements-document
+          - user-research-plans
+      - sequential:
+          - business-model-canvas
+          - strategic-roadmap
+          - okr-documentation
+          - north-star-metric
+
+  product_development:
+    order:
+      - parallel:
+          - strategic-roadmap
+          - user-personas
+          - market-analysis
+      - sequential:
+          - prd
+          - epic-documentation
+          - user-story-backlog
+          - acceptance-criteria-specifications
+          - feature-specifications
+
+  user_experience_design:
+    order:
+      - parallel:
+          - user-research
+          - user-personas
+      - sequential:
+          - empathy-maps
+          - information-architecture
+          - wireframes-mockups
+          - design-system-documentation
+          - prototype-documentation
+
+  technical_architecture:
+    order:
+      - parallel:
+          - prd
+          - technical-requirements
+      - sequential:
+          - software-architecture-document
+          - system-context-diagram
+          - container-diagram
+          - component-diagram
+          - api-documentation-openapi
+          - database-design-document
+
+  quality_assurance:
+    order:
+      - parallel:
+          - technical-requirements
+          - acceptance-criteria-specifications
+      - sequential:
+          - quality-assurance-plan
+          - test-plans
+          - test-data-management
+          - user-acceptance-testing-plans
+
+  compliance_and_legal:
+    order:
+      - parallel:
+          - business-model-canvas
+          - security-architecture
+      - sequential:
+          - data-privacy-impact-assessment
+          - security-documentation
+          - terms-of-service-privacy-policy
+          - audit-documentation
+
+  business_analysis:
+    order:
+      - parallel:
+          - stakeholder-analysis
+          - market-analysis
+      - sequential:
+          - current-state-analysis
+          - future-state-design
+          - gap-analysis
+          - change-impact-analysis
+          - business-process-documentation
+
+  # Legacy workflows (maintained for backward compatibility)
   create_prd:
     order:
       - parallel:
@@ -178,3 +1022,102 @@ workflow_chains:
           - database-schemas
           - api-documentation
       - technical-requirements
+
+# AI Processing Value Tiers
+ai_processing_tiers:
+  tier_1:
+    range: "90-95"
+    description: "Highest AI Value - Excellent for automated code generation"
+    documents:
+      - api-documentation
+      - api-documentation-openapi
+      - database-schemas
+      - technical-requirements
+      - technical-specifications-document
+      - database-design-document
+
+  tier_2:
+    range: "80-89"
+    description: "High AI Value - Good for development planning and automation"
+    documents:
+      - test-plans
+      - user-acceptance-testing-plans
+      - prd
+      - quality-assurance-plan
+      - performance-testing-results
+      - deployment-guide
+      - configuration-management-plan
+      - security-architecture
+      - integration-architecture
+      - component-diagram
+      - system-context-diagram
+      - container-diagram
+      - software-architecture-document
+      - system-architecture
+      - performance-requirements
+      - test-data-management
+      - compliance-testing-documentation
+
+  tier_3:
+    range: "70-79"
+    description: "Medium-High AI Value - Useful for UI/UX and workflow automation"
+    documents:
+      - user-stories
+      - user-story-backlog
+      - acceptance-criteria-specifications
+      - feature-specifications
+      - release-notes
+      - product-backlog-management
+      - epic-documentation
+      - product-analytics-strategy
+      - mvp-specifications
+      - build-measure-learn
+      - pivot-persevere-decisions
+      - jobs-to-be-done
+      - business-process-documentation
+      - ab-testing-documentation
+      - customer-journey-analytics
+      - prototype-documentation
+      - information-architecture
+      - wireframes-mockups
+      - design-system-documentation
+      - requirements-traceability-matrix
+      - future-state-design
+      - change-impact-analysis
+      - accessibility-audit-reports
+      - heuristic-evaluation-reports
+      - data-privacy-impact-assessment
+      - security-documentation
+      - audit-documentation
+      - hipaa-sox-compliance
+
+  tier_4:
+    range: "60-69"
+    description: "Medium AI Value - Important for business context and decisions"
+    documents:
+      - user-personas
+      - competition-analysis
+      - statement-of-purpose
+      - market-analysis
+      - user-research
+      - business-model-canvas
+      - lean-canvas
+      - market-requirements-document
+      - value-proposition-canvas
+      - strategic-roadmap
+      - okr-documentation
+      - investment-readiness-level
+      - north-star-metric
+      - user-research-plans
+      - usability-testing-reports
+      - empathy-maps
+      - user-interview-guides
+      - card-sorting-results
+      - ethnographic-study-reports
+      - design-challenge-statements
+      - stakeholder-analysis
+      - current-state-analysis
+      - gap-analysis
+      - risk-register
+      - terms-of-service-privacy-policy
+      - intellectual-property-documentation
