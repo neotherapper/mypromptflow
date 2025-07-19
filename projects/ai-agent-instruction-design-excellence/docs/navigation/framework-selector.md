@@ -49,6 +49,13 @@
    - [ ] Features performance benchmarks without actionable thresholds
    - [ ] Uses cognitive overhead patterns (background, context, justification sections)
 
+6. **🚨 Cognitive Contamination Detection**:
+   - [ ] Contains fabricated statistics or performance claims without sources
+   - [ ] Uses academic writing style in operational instructions
+   - [ ] Includes research-style language ("studies show", "research indicates")
+   - [ ] Features unverified effectiveness percentages or metrics
+   - [ ] Mixes human knowledge with AI agent execution instructions
+
 #### Step 2: Framework Selection Logic
 
 **Based on your answers above:**
@@ -61,6 +68,7 @@ selection_logic:
     if_external_dependencies: "Self-Sufficiency Framework"
     if_not_executable: "Actionable Framework"
     if_cognitive_overhead_detected: "Concreteness Framework + Cognitive Overhead Elimination"
+    if_cognitive_contamination_detected: "IMMEDIATE Cognitive Contamination Cleanup + Framework Selection"
   
   multiple_issues_detected:
     vague_AND_external_deps: "Self-Sufficiency → Concreteness"
@@ -89,6 +97,7 @@ selection_logic:
 - **Dependencies only** → **[Self-Sufficiency Framework](../design-principles/self-sufficiency/overview.md)**
 - **Executability only** → **[Actionable Framework](../design-principles/actionable/overview.md)**
 - **Cognitive Overhead only** → **[Concreteness Framework with Cognitive Overhead Elimination](../design-principles/concreteness/overview.md)** (See Technique 13: Academic Justification Removal)
+- **🚨 Cognitive Contamination detected** → **IMMEDIATE contamination cleanup required** (See Decision Tree D below)
 
 #### Decision Tree B: Multiple Framework Selection
 
@@ -142,6 +151,53 @@ target_actionable_content_ratio: ≥80%
 maximum_academic_justification: 0_lines
 ```
 
+#### Decision Tree D: 🚨 Cognitive Contamination Emergency Protocol
+
+**If cognitive contamination is detected (fabricated statistics, academic writing, research claims):**
+
+```yaml
+contamination_cleanup_protocol:
+  step_1_immediate_action:
+    priority: "CRITICAL - Stop all processing"
+    action: "Identify contamination sources"
+    time_limit: "30 seconds"
+  
+  step_2_quarantine:
+    priority: "HIGH - Separate content types"
+    action: "Quarantine academic content from operational instructions"
+    target: "Move academic content to knowledge-vault/"
+  
+  step_3_cleanup:
+    priority: "HIGH - Remove contamination"
+    remove_patterns:
+      - "Fabricated statistics (X% effectiveness, Y% reduction)"
+      - "Academic language (studies show, research indicates)"
+      - "Unverified performance claims"
+      - "Research justification in operational instructions"
+  
+  step_4_validation:
+    priority: "MEDIUM - Verify cleanup"
+    verify: "100% actionable content, 0% academic contamination"
+    check: "No fabricated claims, no research-style language"
+  
+  step_5_framework_selection:
+    priority: "LOW - Resume normal processing"
+    action: "Apply standard framework selection logic"
+    note: "Only after contamination is eliminated"
+```
+
+**Contamination Recovery Examples:**
+
+**Before (Contaminated)**:
+```markdown
+Based on research findings, this approach achieves 85% effectiveness rates across multiple domains...
+```
+
+**After (Clean)**:
+```markdown
+**Configuration**: Timeout thresholds: 30-60 seconds, retry limit: 3 attempts
+```
+
 ### Common Problem Patterns
 
 #### Pattern 1: "Coordinate agents effectively using best practices"
@@ -164,13 +220,13 @@ maximum_academic_justification: 0_lines
 **Framework Selection**: Self-Sufficiency → Purpose-Driven
 **Expected Load**: 900-1200 lines of context
 
-#### Pattern 5: AI Agent Instruction with Cognitive Overhead (NEW)
-**Example**: "## Research Foundation\n\nBased on validated research findings from AI agent failure patterns analysis:\n- Communication failures dominate multi-agent system failures at 35-40% of total failures"
-**Analysis**: Academic justification + cognitive overhead + no actionable value for AI agents
-**Framework Selection**: Cognitive Overhead Elimination → Concreteness Framework
-**Detection Triggers**: "Research Foundation", "validated research", "based on studies", performance statistics without thresholds
-**Transformation**: Remove academic sections, keep only actionable parameters and thresholds
-**Expected Token Reduction**: 50-70% through cognitive overhead elimination
+#### Pattern 5: AI Agent Instruction with Cognitive Contamination (UPDATED)
+**Example**: "Based on comprehensive research, this framework achieves 85% effectiveness rates across multiple validation scenarios..."
+**Analysis**: 🚨 COGNITIVE CONTAMINATION - Fabricated statistics + academic language + no verifiable source
+**Framework Selection**: IMMEDIATE Contamination Cleanup → Standard Framework Selection
+**Detection Triggers**: Fabricated percentages, "research shows", unverified effectiveness claims, academic justification in operational instructions
+**Contamination Cleanup**: Remove fabricated statistics, eliminate academic language, replace with actionable configuration parameters
+**Required Action**: Apply Decision Tree D (Cognitive Contamination Emergency Protocol)
 
 ### Context Loading Optimization
 
