@@ -42,6 +42,13 @@
    - [ ] Missing step-by-step procedures
    - [ ] No clear success/failure criteria
 
+5. **AI Agent Consumption Efficiency**:
+   - [ ] Contains academic justification without actionable value ("Research Foundation", "validated studies")
+   - [ ] Includes explanatory text that doesn't change AI agent behavior
+   - [ ] Has credibility building language ("research-proven", "comprehensive analysis")
+   - [ ] Features performance benchmarks without actionable thresholds
+   - [ ] Uses cognitive overhead patterns (background, context, justification sections)
+
 #### Step 2: Framework Selection Logic
 
 **Based on your answers above:**
@@ -53,12 +60,20 @@ selection_logic:
     if_purpose_unclear: "Purpose-Driven Framework"
     if_external_dependencies: "Self-Sufficiency Framework"
     if_not_executable: "Actionable Framework"
+    if_cognitive_overhead_detected: "Concreteness Framework + Cognitive Overhead Elimination"
   
   multiple_issues_detected:
     vague_AND_external_deps: "Self-Sufficiency → Concreteness"
     vague_AND_not_executable: "Actionable → Concreteness"
     unclear_purpose_AND_external_deps: "Self-Sufficiency → Purpose-Driven"
     unclear_purpose_AND_not_executable: "Purpose-Driven → Actionable"
+    cognitive_overhead_AND_any_issue: "Apply Cognitive Overhead Elimination FIRST, then selected framework"
+  
+  ai_agent_instruction_assessment:
+    mandatory_consumption_efficiency_check: true
+    cognitive_overhead_elimination_required: true
+    target_consumption_ratio: "≥80% actionable content"
+    maximum_academic_justification: "0 lines"
 ```
 
 ### Automated Framework Recommendation
@@ -73,6 +88,7 @@ selection_logic:
 - **Purpose only** → **[Purpose-Driven Framework](../design-principles/purpose-driven/overview.md)**
 - **Dependencies only** → **[Self-Sufficiency Framework](../design-principles/self-sufficiency/overview.md)**
 - **Executability only** → **[Actionable Framework](../design-principles/actionable/overview.md)**
+- **Cognitive Overhead only** → **[Concreteness Framework with Cognitive Overhead Elimination](../design-principles/concreteness/overview.md)** (See Technique 13: Academic Justification Removal)
 
 #### Decision Tree B: Multiple Framework Selection
 
@@ -86,6 +102,45 @@ selection_logic:
 
 **3+ Categories Checked:**
 - **Comprehensive transformation needed** → Use [Implementation Path Guide](implementation-paths.md) for systematic multi-framework application
+
+#### Decision Tree C: AI Agent Instruction Assessment (Special Case)
+
+**⚠️ MANDATORY when assessing AI agent instructions FOR AI agents:**
+
+**Cognitive Overhead Detection (Always check first):**
+1. **Scan for Academic Patterns**:
+   - "Research Foundation" sections
+   - "Based on validated research findings"
+   - "Performance benchmarks" without actionable thresholds
+   - "This tool achieves X% effectiveness" (unless it sets usage thresholds)
+
+2. **Apply Elimination Rules**:
+   - **Remove**: Any content that doesn't change AI agent behavior
+   - **Keep**: Only configuration parameters, usage instructions, error handling
+   - **Transform**: Academic justification → actionable thresholds
+   - **Target**: ≥80% actionable content ratio
+
+3. **Consumption Efficiency Validation**:
+   - Token density: Information per token ratio
+   - Actionability score: Executable instructions percentage  
+   - Cognitive load: Academic overhead detection
+   - AI agent readiness: Can execute within 5-8 minutes without interpretation
+
+**AI Agent Assessment Protocol:**
+```bash
+# Step 1: Cognitive overhead detection
+if [academic_sections_detected]; then
+  apply_cognitive_overhead_elimination_first
+fi
+
+# Step 2: Standard framework selection
+apply_standard_framework_selection_logic
+
+# Step 3: Consumption efficiency validation  
+validate_ai_agent_consumption_efficiency
+target_actionable_content_ratio: ≥80%
+maximum_academic_justification: 0_lines
+```
 
 ### Common Problem Patterns
 
@@ -108,6 +163,14 @@ selection_logic:
 **Analysis**: External dependency ("industry standards") + technical complexity
 **Framework Selection**: Self-Sufficiency → Purpose-Driven
 **Expected Load**: 900-1200 lines of context
+
+#### Pattern 5: AI Agent Instruction with Cognitive Overhead (NEW)
+**Example**: "## Research Foundation\n\nBased on validated research findings from AI agent failure patterns analysis:\n- Communication failures dominate multi-agent system failures at 35-40% of total failures"
+**Analysis**: Academic justification + cognitive overhead + no actionable value for AI agents
+**Framework Selection**: Cognitive Overhead Elimination → Concreteness Framework
+**Detection Triggers**: "Research Foundation", "validated research", "based on studies", performance statistics without thresholds
+**Transformation**: Remove academic sections, keep only actionable parameters and thresholds
+**Expected Token Reduction**: 50-70% through cognitive overhead elimination
 
 ### Context Loading Optimization
 

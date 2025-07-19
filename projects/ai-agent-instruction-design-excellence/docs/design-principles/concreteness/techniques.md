@@ -429,6 +429,80 @@ check_appropriately → [appropriate_checking_methods]
 - [ ] Success/failure conditions established
 - [ ] Reporting mechanisms defined for results
 
+## Technique 13: Cognitive Overhead Elimination (AI Agent Consumption Optimization)
+
+### Detection Pattern
+Identify academic justification and cognitive overhead that provides no actionable value for AI agents:
+- **Academic Patterns**: "Research Foundation", "Based on validated research findings", "This tool achieves X% effectiveness"
+- **Cognitive Overhead**: Background sections, performance benchmarks without thresholds, credibility building language
+- **Non-Actionable Content**: Explanatory text that doesn't change AI agent behavior, justification sections
+- **Penalty**: -0.50 per academic section (highest penalty due to token waste)
+
+### Transformation Formula
+```
+ACADEMIC_JUSTIFICATION → ACTIONABLE_THRESHOLD
+Research Foundation → Remove entirely or convert to threshold
+"X% effectiveness" → "Use threshold X for production deployment"
+Performance claims → Configuration parameters only
+Background explanations → Remove unless they contain actionable parameters
+```
+
+### Implementation Steps
+1. **Scan for Academic Patterns** in the instruction
+   - "Research Foundation" sections
+   - "Based on research" introductions  
+   - "Performance benchmarks" without actionable thresholds
+   - Explanatory text that doesn't affect execution
+
+2. **Apply Elimination Rules**
+   - **Remove entirely**: Academic background, research justification, credibility building
+   - **Transform to thresholds**: Performance claims that contain actionable values
+   - **Keep only**: Configuration parameters, usage instructions, error handling, specific thresholds
+
+3. **Validate AI Agent Consumption Efficiency**
+   - **Token density**: Calculate information per token ratio
+   - **Actionability percentage**: Executable instructions vs. total content
+   - **Target ratio**: ≥80% actionable content
+   - **Maximum academic justification**: 0 lines
+
+4. **Test Immediate Executability**
+   - AI agent can execute within 5-8 minutes without external interpretation
+   - No cognitive preprocessing required
+   - All necessary context embedded in actionable instructions
+
+### Examples
+
+**Before (Academic Overhead)**:
+```markdown
+## Research Foundation
+
+Based on validated research findings from AI agent failure patterns analysis:
+- **Communication failures dominate multi-agent system failures** at 35-40% of total failures
+- **Timeout failures** represent 15-20% of total failures with 75-80% recovery success
+
+## Research-Proven Performance
+- **35-40% failure prevention** through proactive communication pattern validation
+- **85-90% success rate** in preventing cascade failures
+```
+
+**After (AI Agent Optimized)**:
+```markdown
+## Communication Pattern Validator
+
+**Timeout Configuration**: 30-60 second thresholds, exponential backoff enabled
+**Circuit Breaker**: 3 failure threshold, 60s timeout, 300s recovery  
+**Success Criteria**: ≥90 points for production deployment
+```
+
+### Validation Checklist
+- [ ] All "Research Foundation" sections removed or converted to actionable thresholds
+- [ ] Academic justification language eliminated ("based on research", "proven effectiveness")
+- [ ] Performance claims converted to configuration parameters only
+- [ ] AI agent consumption efficiency ≥80% actionable content
+- [ ] Zero cognitive overhead patterns remaining
+- [ ] Immediate executability without interpretation verified
+- [ ] Token efficiency optimized (50-70% reduction typical)
+
 ## Technique Application Summary
 
 ### Quick Reference Table
@@ -447,6 +521,7 @@ check_appropriately → [appropriate_checking_methods]
 | "appropriate format" | Technique 10 | Data Schemas | +0.20 concreteness |
 | "integrate properly" | Technique 11 | Interface Protocols | +0.25 concreteness |
 | "ensure quality" | Technique 12 | Validation Criteria | +0.20 concreteness |
+| "Research Foundation" | Technique 13 | Cognitive Overhead Elimination | +0.50 concreteness |
 
 ### Combined Technique Usage
 

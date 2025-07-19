@@ -1,12 +1,9 @@
 # Framework Coherence Analyzer
 
-## Research Foundation
-
-Based on validated research findings from AI validation frameworks analysis:
-- **Multi-agent validation systems achieve 99% accuracy** through specialized coherence analysis
-- **Constitutional AI integration** ensures ethical compliance and logical consistency
-- **Cross-document alignment validation** prevents framework fragmentation
-- **Automated coherence scoring** reduces manual review time from 30 minutes to 2.5 minutes
+**Coherence Threshold**: ≥85 points for production deployment
+**Constitutional Compliance**: 95% minimum across all 5 principles
+**Cross-Document Consistency**: 90% minimum alignment score
+**Analysis Timeout**: 600 seconds maximum per framework
 
 ## Tool Capabilities
 
@@ -24,14 +21,6 @@ The Framework Coherence Analyzer provides automated assessment of:
 - **Inconsistency detection** with automated flagging
 - **Coherence gap analysis** with specific remediation recommendations
 - **Framework integration validation** across all 5 validation levels
-
-## Research-Proven Performance
-
-**Quantified Effectiveness Based on Research:**
-- **99% accuracy** in identifying coherence issues vs. 78% manual detection
-- **2.5 minute analysis time** vs. 30 minutes manual review
-- **95% reduction in framework inconsistencies** through automated detection
-- **85% improvement in cross-document alignment** scores
 
 ## Implementation Architecture
 
@@ -243,6 +232,118 @@ def analyze_framework_coherence(framework_path: str) -> CoherenceReport:
 
 # Validate improvements
 ./coherence-analyzer validate --compare-baseline --measure-improvement
+```
+
+### Step 5: Error Handling and Recovery Workflows
+
+**Circuit Breaker Configuration:**
+```bash
+# Configure circuit breaker for coherence analyzer
+./coherence-analyzer circuit-breaker --failure-threshold 3 --timeout 600s --recovery-timeout 300s
+
+# Check circuit breaker status
+./coherence-analyzer circuit-breaker --status
+```
+
+**Error Recovery Procedures:**
+```python
+def execute_coherence_analysis_with_recovery(framework_path, config):
+    """Execute coherence analysis with comprehensive error handling"""
+    
+    try:
+        # Attempt primary analysis
+        result = coherence_analyzer.analyze(framework_path, config)
+        return {"status": "success", "result": result, "confidence": 100}
+        
+    except TimeoutError:
+        # Handle analysis timeout
+        cached_result = get_cached_coherence_result(framework_path)
+        if cached_result:
+            return {
+                "status": "timeout_with_cache", 
+                "result": cached_result,
+                "confidence": 75,
+                "message": "Using cached coherence analysis due to timeout"
+            }
+        else:
+            return {
+                "status": "timeout_no_cache",
+                "result": generate_basic_coherence_assessment(framework_path),
+                "confidence": 50,
+                "message": "Generated basic coherence assessment after timeout"
+            }
+            
+    except FileAccessError:
+        # Handle framework file access issues
+        return {
+            "status": "file_access_error",
+            "result": None,
+            "confidence": 0,
+            "message": "Cannot access framework files for coherence analysis",
+            "action": "verify_framework_path_and_permissions"
+        }
+        
+    except InsufficientResourcesError:
+        # Handle resource exhaustion
+        reduced_config = reduce_analysis_scope(config)
+        try:
+            result = coherence_analyzer.analyze(framework_path, reduced_config)
+            return {
+                "status": "reduced_scope_success",
+                "result": result,
+                "confidence": 80,
+                "message": "Analysis completed with reduced scope due to resource constraints"
+            }
+        except Exception:
+            return {
+                "status": "resource_exhaustion",
+                "result": None,
+                "confidence": 0,
+                "message": "Unable to complete analysis due to insufficient resources"
+            }
+```
+
+**Integration with Multi-Tool Workflow:**
+```bash
+# Execute coherence analysis as part of assessment suite with error handling
+./assessment-suite execute-tool coherence-analyzer \
+  --framework-path /path/to/framework \
+  --timeout 600 \
+  --fallback-to-cache \
+  --continue-on-failure \
+  --minimum-confidence 50
+
+# Validate coherence results before proceeding to next tool
+./assessment-suite validate-tool-result coherence-analyzer \
+  --minimum-score 70 \
+  --required-dimensions structural,semantic \
+  --proceed-if-partial
+```
+
+**Error Handling Examples:**
+
+**Timeout Recovery:**
+```
+Status: TIMEOUT after 600 seconds
+Action: Loading cached coherence analysis from 2024-01-15
+Result: Coherence score 87/100 (confidence: 75%)
+Next: Proceeding to communication-pattern-validator
+```
+
+**Partial Analysis:**
+```
+Status: PARTIAL_SUCCESS (structural and semantic analysis complete, procedural failed)
+Action: Using available dimensions for coherence scoring
+Result: Coherence score 82/100 (confidence: 80%, missing procedural dimension)
+Next: Flagging procedural coherence for manual review, continuing workflow
+```
+
+**Resource Exhaustion Recovery:**
+```
+Status: RESOURCE_EXHAUSTION during comprehensive analysis
+Action: Retrying with basic analysis scope
+Result: Coherence score 78/100 (confidence: 70%, reduced scope)
+Next: Recommending re-analysis with increased resources, continuing workflow
 ```
 
 ## Configuration Options

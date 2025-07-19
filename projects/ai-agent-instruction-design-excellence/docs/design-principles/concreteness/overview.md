@@ -8,7 +8,8 @@
 ✗ **Subjective measures** - "high quality", "efficient", "optimal", "effective"  
 ✗ **Undefined quantities** - "many", "several", "some", "various", "multiple"  
 ✗ **Ambiguous actions** - "optimize", "improve", "enhance", "analyze", "review"  
-✗ **Relative references** - "as needed", "when necessary", "if required", "depending on"  
+✗ **Relative references** - "as needed", "when necessary", "if required", "depending on"
+✗ **Cognitive overhead** - "Research Foundation", "validated studies", academic justification sections  
 
 **If 3+ items match your instruction, this framework will transform it to concrete, measurable specifications.**
 

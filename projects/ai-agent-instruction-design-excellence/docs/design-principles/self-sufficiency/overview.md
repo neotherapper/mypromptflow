@@ -43,6 +43,34 @@
 - Embedded fallback context for critical information
 - Internal template and pattern libraries
 
+### Critical Distinction: Embed vs Cross-Reference
+
+**When to EMBED internal content** (Essential Fallback):
+- Core parameters required if @file_path unavailable (<200 words)
+- Critical execution thresholds needed for immediate task completion
+- Essential validation criteria that enable basic functionality
+- Activation triggers and basic workflow summaries
+
+**When to CROSS-REFERENCE internal content** (Progressive Loading):
+- Detailed procedures that exist in knowledge base (>200 words)
+- Complete templates/schemas available in dedicated files
+- Academic justification or research background sections
+- Comprehensive documentation that duplicates existing knowledge
+
+**Decision Framework**:
+```yaml
+embed_decision:
+  content_size: <200_words
+  criticality: essential_for_execution
+  availability_requirement: must_work_offline
+  
+cross_reference_decision:
+  content_size: >200_words
+  criticality: enhances_but_not_required
+  availability_requirement: can_load_on_demand
+  duplication_status: exists_elsewhere_in_project
+```
+
 ### 2. Dependency Scoring System
 
 **Self-Sufficiency Score Calculation**:

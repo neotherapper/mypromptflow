@@ -1,12 +1,9 @@
 # Constitutional AI Compliance Checker
 
-## Research Foundation
-
-Based on validated research findings from AI validation frameworks analysis:
-- **Constitutional AI integration achieves 99% accuracy** in ethical compliance validation
-- **Automated bias detection and correction** prevents 95% of ethical compliance violations
-- **Transparent decision-making processes** ensure 100% auditability of AI decisions
-- **Constitutional principle enforcement** reduces manual ethical review time from 30 minutes to 2.5 minutes
+**Compliance Threshold**: 95% minimum across all 5 constitutional principles
+**Accuracy Principle**: 95% confidence threshold for evidence-based findings
+**Transparency Principle**: 100% auditability requirement
+**Analysis Timeout**: 600 seconds maximum per framework
 
 ## Tool Capabilities
 
@@ -24,14 +21,6 @@ The Constitutional AI Compliance Checker provides comprehensive assessment of:
 - **Ethical decision tree validation** ensuring consistent ethical reasoning
 - **Transparency audit trails** providing complete decision accountability
 - **Impact assessment analysis** evaluating broader societal implications
-
-## Research-Proven Performance
-
-**Quantified Effectiveness Based on Research:**
-- **99% accuracy** in identifying constitutional AI compliance issues
-- **95% prevention** of ethical compliance violations through automated detection
-- **100% auditability** of AI decisions with complete transparency trails
-- **2.5 minute analysis time** vs. 30 minutes manual ethical review
 
 ## Implementation Architecture
 

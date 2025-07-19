@@ -1,12 +1,9 @@
 # Workflow Completeness Inspector
 
-## Research Foundation
-
-Based on validated research findings from multi-agent validation systems analysis:
-- **Multi-agent validation systems achieve 99% accuracy** in workflow completeness assessment
-- **End-to-end workflow coverage** reduces deployment failures by 85-90%
-- **Automated completeness validation** reduces manual review time from 30 minutes to 2.5 minutes
-- **Systematic workflow analysis** prevents 70-80% of integration failures through comprehensive coverage
+**Completeness Threshold**: ≥95 points for production deployment
+**Integration Coverage**: 90% minimum for all integration points
+**Error Path Coverage**: 85% minimum for all error scenarios
+**Analysis Timeout**: 600 seconds maximum per framework
 
 ## Tool Capabilities
 
@@ -24,14 +21,6 @@ The Workflow Completeness Inspector provides comprehensive assessment of:
 - **Integration boundary validation** across all system interfaces
 - **State transition completeness** with comprehensive state machine validation
 - **Performance criteria coverage** ensuring all performance requirements addressed
-
-## Research-Proven Performance
-
-**Quantified Effectiveness Based on Research:**
-- **99% accuracy** in identifying workflow completeness gaps
-- **85-90% reduction** in deployment failures through comprehensive coverage validation
-- **2.5 minute analysis time** vs. 30 minutes manual workflow review
-- **70-80% prevention** of integration failures through systematic coverage analysis
 
 ## Implementation Architecture
 
@@ -184,7 +173,7 @@ def inspect_workflow_completeness(framework_path: str) -> WorkflowCompletenessRe
             (output_score, 0.10)
         ]),
         gap_analysis=gap_analysis,
-        failure_prevention_rate=calculate_failure_prevention_rate(),
+        failure_prevention_effectiveness=calculate_failure_prevention_effectiveness(),
         completeness_recommendations=generate_completeness_recommendations()
     )
 ```
@@ -321,7 +310,7 @@ performance:
 {
   "workflow_completeness_analysis": {
     "overall_score": 94,
-    "failure_prevention_rate": 87,
+    "failure_prevention_effectiveness": 87,
     "analysis_timestamp": "2025-01-18T11:30:00Z",
     "analysis_duration": "2.4 minutes"
   },

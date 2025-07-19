@@ -554,6 +554,35 @@ Context Loading Opportunities:
 **Progressive context**: Information that builds from basic to advanced
 **Optional context**: Enhancement information for specific user needs
 
+#### Step 1.5: Apply Embed vs Cross-Reference Decision Matrix
+
+**EMBED (Essential Fallback Context)**:
+- Core parameters needed if @file_path unavailable
+- Critical execution thresholds (<200 words)
+- Basic activation triggers and workflow summaries
+- Essential validation criteria for functionality
+
+**CROSS-REFERENCE (Progressive Loading)**:
+- Detailed procedures existing in knowledge base (>200 words)
+- Complete templates/schemas available in dedicated files
+- Academic justification or research background sections
+- Comprehensive documentation duplicating existing knowledge
+
+**Decision Criteria**:
+```yaml
+embed_if:
+  size: <200_words
+  criticality: essential_for_execution
+  offline_requirement: true
+  duplication_status: unique_content
+
+cross_reference_if:
+  size: >200_words
+  criticality: enhances_but_not_required
+  offline_requirement: false
+  duplication_status: exists_elsewhere
+```
+
 #### Step 2: Create Loading Triggers
 **User choice**: Explicit selection of analysis type or approach
 **Complexity assessment**: Automatic determination based on problem characteristics

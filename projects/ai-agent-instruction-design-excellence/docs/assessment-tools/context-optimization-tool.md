@@ -1,12 +1,9 @@
 # Context Optimization Tool
 
-## Research Foundation
-
-Based on validated research findings from meta-frameworks analysis and token optimization studies:
-- **SuperClaude achieves 70% token reduction** through systematic optimization strategies
-- **Progressive context loading** enables efficient processing of 2,300-3,500 line frameworks
-- **Hierarchical coordination patterns** optimize context management with 60% memory efficiency improvement
-- **Token optimization analysis** reduces context overhead by 70% while maintaining 95% functionality
+**Optimization Threshold**: ≥70% token reduction for production deployment
+**Functionality Preservation**: 95% minimum preservation requirement
+**Knowledge Duplication Detection**: Identifies embedded content that should be cross-referenced
+**Analysis Timeout**: 600 seconds maximum per framework
 
 ## Tool Capabilities
 
@@ -18,20 +15,22 @@ The Context Optimization Tool provides comprehensive assessment and optimization
 3. **Hierarchical Context Management** - Structured context organization for optimal accessibility
 4. **Memory Utilization Optimization** - Efficient memory usage patterns for sustained performance
 5. **Context Relevance Scoring** - Intelligent context prioritization based on usage patterns
+6. **Knowledge Duplication Detection** - Identifies embedded content that should be cross-referenced instead
 
 ### Advanced Optimization Features
 - **Semantic compression** achieving 70% token reduction with 95% information preservation
 - **Context dependency mapping** with intelligent loading order optimization
 - **Memory footprint analysis** with automatic optimization recommendations
 - **Performance impact assessment** measuring optimization effectiveness
+- **Embedded knowledge detection** flagging content that should use cross-references
+- **Academic overhead elimination** removing non-actionable research justification sections
 
-## Research-Proven Performance
+## Performance Targets
 
-**Quantified Effectiveness Based on Research:**
-- **70% token reduction** achieved through systematic optimization strategies
-- **60% memory efficiency improvement** through hierarchical context management
-- **4x faster context loading** through progressive loading implementation
-- **95% functionality preservation** while achieving substantial optimization gains
+- **Token Reduction**: ≥70% through optimization strategies
+- **Memory Efficiency**: ≥60% improvement via hierarchical management
+- **Loading Speed**: 4x faster through progressive loading
+- **Functionality Preservation**: ≥95% maintained
 
 ## Implementation Architecture
 
@@ -123,8 +122,60 @@ interface ContextOptimizationAnalysis {
     prioritization_effectiveness: number;
     relevance_insights: RelevanceInsight[];
   };
+  
+  knowledge_duplication_detection: {
+    score: number; // 0-100
+    embedded_content_detected: EmbeddedContent[];
+    cross_reference_opportunities: CrossReferenceOpportunity[];
+    academic_overhead_sections: AcademicOverhead[];
+    optimization_recommendations: DuplicationOptimization[];
+  };
 }
 ```
+
+## Knowledge Duplication Detection
+
+### Detection Methodology
+
+**Embedded Content Patterns** (Flag for Cross-Reference):
+- **Detailed Procedures**: Step-by-step workflows that exist in knowledge base
+- **Configuration Templates**: YAML/JSON templates duplicated from framework files
+- **Academic Sections**: "Research Foundation", "Based on validated studies", performance statistics
+- **Framework Documentation**: Content that duplicates existing @file_path references
+
+**Decision Matrix: Embed vs Cross-Reference**:
+```yaml
+embed_criteria:
+  essential_fallback: true        # Core functionality if @file_path unavailable
+  size_threshold: <200_words      # Small, critical context only
+  execution_dependency: high      # Required for immediate task execution
+  
+cross_reference_criteria:
+  detailed_procedures: true       # Step-by-step workflows belong in knowledge base
+  academic_justification: true    # Non-actionable research content
+  template_duplication: true      # YAML/JSON schemas exist elsewhere
+  size_threshold: >200_words      # Large content blocks should be referenced
+```
+
+**Automated Detection Patterns**:
+- **Academic Overhead**: "Research Foundation", "Based on validated", "studies show"
+- **Template Duplication**: Embedded YAML/JSON that exists in templates/
+- **Procedure Duplication**: Detailed workflows that exist in orchestrator/
+- **Schema Duplication**: Metadata schemas that exist in dedicated schema files
+
+### Knowledge Organization Validation
+
+**Cross-Reference Efficiency Check**:
+1. Scan for embedded content >200 words
+2. Check if equivalent exists in @research/, @templates/, @knowledge/
+3. Validate cross-reference accessibility
+4. Flag optimization opportunities
+
+**Academic Overhead Elimination**:
+1. Detect research justification sections
+2. Measure actionable content ratio (<80% actionable = flag)
+3. Recommend academic content removal
+4. Preserve only essential parameters and thresholds
 
 ## Integration with Multi-Level Validation
 
@@ -179,10 +230,13 @@ def optimize_framework_context(framework_path: str) -> ContextOptimizationReport
     # 5. Context Relevance Scoring
     relevance_optimization = optimize_context_relevance(framework_path)
     
-    # 6. Semantic Compression
+    # 6. Knowledge Duplication Detection
+    duplication_analysis = detect_knowledge_duplication(framework_path)
+    
+    # 7. Semantic Compression
     compression_results = apply_semantic_compression(framework_path)
     
-    # 7. Performance Impact Assessment
+    # 8. Performance Impact Assessment
     performance_analysis = assess_optimization_impact(framework_path)
     
     return ContextOptimizationReport(

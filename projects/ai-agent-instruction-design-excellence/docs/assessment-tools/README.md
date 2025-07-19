@@ -292,6 +292,145 @@ Stress testing and validation:
 - Automated optimization application
 - Performance trend analysis and reporting
 
+## Tool Integration Error Workflows
+
+### AI Agent Multi-Tool Assessment Pattern
+
+For comprehensive framework assessment, AI agents must execute multiple tools in sequence with proper error handling:
+
+```yaml
+multi_tool_assessment_workflow:
+  sequence:
+    1. framework_coherence_analyzer
+    2. communication_pattern_validator  
+    3. workflow_completeness_inspector
+    4. constitutional_ai_compliance_checker
+    5. resilience_assessment_engine
+    6. context_optimization_tool
+    7. multi_agent_coordination_dashboard
+    
+  error_handling:
+    circuit_breaker_pattern:
+      failure_threshold: 3 # tool failures before circuit opens
+      timeout_duration: 300 # seconds per tool
+      recovery_timeout: 600 # seconds before retry
+      
+    timeout_handling:
+      per_tool_timeout: 600 # seconds
+      total_workflow_timeout: 3600 # seconds
+      timeout_action: "proceed_with_partial_results"
+      
+    error_recovery:
+      tool_failure_action: "log_and_continue"
+      cascade_prevention: true
+      partial_results_acceptable: true
+      minimum_tools_required: 4 # out of 7
+```
+
+### Circuit Breaker Implementation
+
+**Tool Failure Circuit Breaker:**
+```python
+def execute_assessment_tool_with_circuit_breaker(tool_name, framework_path, config):
+    """Execute assessment tool with circuit breaker protection"""
+    
+    circuit_breaker = get_circuit_breaker(tool_name)
+    
+    if circuit_breaker.is_open():
+        return {
+            "status": "circuit_open",
+            "message": f"Circuit breaker open for {tool_name}",
+            "fallback_result": get_cached_result(tool_name, framework_path)
+        }
+    
+    try:
+        with timeout(config.per_tool_timeout):
+            result = execute_tool(tool_name, framework_path, config)
+            circuit_breaker.record_success()
+            return {"status": "success", "result": result}
+            
+    except TimeoutError:
+        circuit_breaker.record_failure()
+        return {
+            "status": "timeout", 
+            "message": f"{tool_name} exceeded {config.per_tool_timeout}s timeout",
+            "action": "proceed_with_partial_assessment"
+        }
+        
+    except ToolExecutionError as e:
+        circuit_breaker.record_failure()
+        return {
+            "status": "tool_error",
+            "message": f"{tool_name} execution failed: {e}",
+            "action": "log_error_and_continue"
+        }
+```
+
+### Error Recovery Procedures
+
+**Cascade Failure Prevention:**
+1. **Tool Isolation**: Each tool failure isolated to prevent cascade
+2. **Partial Results**: Accept partial assessment results from successful tools
+3. **Graceful Degradation**: Provide meaningful results even with tool failures
+4. **Error Aggregation**: Collect and report all tool errors systematically
+
+**Recovery Actions:**
+- **Tool Timeout**: Log timeout, use cached results if available, continue with remaining tools
+- **Tool Crash**: Log error details, mark tool as failed, continue assessment workflow
+- **Configuration Error**: Report configuration issue, skip tool, continue with valid tools
+- **Resource Exhaustion**: Implement backoff strategy, retry with reduced resource allocation
+
+### Workflow Completeness Validation
+
+**Pre-Assessment Validation:**
+```bash
+# Validate tool availability and configuration
+./assessment-suite validate-tools --framework-path /path/to/framework --required-tools 4
+
+# Check resource availability
+./assessment-suite check-resources --memory-limit 2GB --timeout-budget 3600s
+
+# Verify framework accessibility
+./assessment-suite verify-framework --path /path/to/framework --read-test
+```
+
+**Post-Assessment Validation:**
+```bash
+# Validate assessment completeness
+./assessment-suite validate-results --minimum-tools 4 --required-scores coherence,communication,workflow,constitutional
+
+# Generate comprehensive report with partial results
+./assessment-suite generate-report --handle-missing-tools --partial-results-acceptable
+```
+
+### Error Handling Examples
+
+**Example 1: Tool Timeout Recovery**
+```
+Tool: framework-coherence-analyzer
+Status: TIMEOUT (exceeded 600s)
+Action: Using cached coherence analysis from previous run
+Impact: Assessment continues with 6/7 tools completed
+Result: 85% assessment confidence (above 80% threshold)
+```
+
+**Example 2: Circuit Breaker Activation**
+```
+Tool: context-optimization-tool  
+Status: CIRCUIT_OPEN (3 consecutive failures)
+Action: Skipping optimization analysis, using default recommendations
+Impact: Assessment continues with optimization scored as "needs_attention"
+Result: Overall assessment valid, optimization section flagged for manual review
+```
+
+**Example 3: Graceful Degradation**
+```
+Tools Failed: resilience-assessment-engine, multi-agent-coordination-dashboard
+Tools Successful: 5/7 (coherence, communication, workflow, constitutional, context)
+Action: Generate assessment report with resilience section marked as incomplete
+Result: 78% assessment confidence, recommend re-running failed tools separately
+```
+
 ## Getting Started
 
 1. **Install Assessment Tools**: Follow installation guide in each tool's documentation

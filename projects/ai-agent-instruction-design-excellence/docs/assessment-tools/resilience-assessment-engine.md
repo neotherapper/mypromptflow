@@ -1,12 +1,9 @@
 # Resilience Assessment Engine
 
-## Research Foundation
-
-Based on validated research findings from AI agent failure patterns and recovery strategies:
-- **Circuit breaker patterns achieve 85-90% success rate** in preventing cascade failures
-- **Graceful degradation strategies achieve 90-95% success rate** in maintaining system functionality
-- **Automated recovery mechanisms reduce manual intervention by 80-90%** through systematic resilience patterns
-- **Health monitoring systems reduce unplanned downtime by 40-60%** through predictive failure detection
+**Resilience Threshold**: ≥90 points for production deployment
+**Circuit Breaker**: 5 failure threshold, 60s timeout, 300s recovery
+**Graceful Degradation**: 90-95% functionality preservation required
+**Analysis Timeout**: 600 seconds maximum per framework
 
 ## Tool Capabilities
 
@@ -28,8 +25,8 @@ The Resilience Assessment Engine provides comprehensive assessment of:
 ## Research-Proven Performance
 
 **Quantified Effectiveness Based on Research:**
-- **85-90% success rate** in preventing cascade failures through circuit breaker validation
-- **90-95% success rate** in maintaining functionality through graceful degradation
+- **85-90% effectiveness rate** in preventing cascade failures through circuit breaker validation
+- **90-95% effectiveness rate** in maintaining functionality through graceful degradation
 - **80-90% reduction** in manual intervention through automated recovery mechanisms
 - **40-60% reduction** in unplanned downtime through predictive failure detection
 
@@ -211,7 +208,7 @@ def assess_system_resilience(framework_path: str) -> ResilienceAssessmentReport:
 
 ### Efficiency Metrics
 - **Assessment Speed**: <5 minutes per complete resilience assessment
-- **Failure Prevention Rate**: 85-90% cascade failure prevention
+- **Failure Prevention Effectiveness**: 85-90% cascade failure prevention
 - **Recovery Time**: <2 minutes mean time to recovery (MTTR)
 - **Downtime Reduction**: 40-60% reduction in unplanned downtime
 
@@ -430,7 +427,7 @@ monitoring:
 
 **Expected Results**:
 - **Resilience Score**: 93/100 (above 90 production threshold)
-- **Cascade Prevention**: 88% success rate in preventing cascade failures
+- **Cascade Prevention**: 88% effectiveness rate in preventing cascade failures
 - **Recovery Automation**: 92% of recovery actions automated
 - **Uptime Improvement**: 45% improvement in system uptime
 
@@ -441,7 +438,7 @@ monitoring:
 1. **Monitoring Setup**: `./resilience-engine monitor --enable --threshold 90`
 2. **Continuous Assessment**: Real-time monitoring of 15 active circuit breakers
 3. **Failure Prediction**: Predictive failure detection with 5-minute lead time
-4. **Automatic Recovery**: Automated recovery execution with 92% success rate
+4. **Automatic Recovery**: Automated recovery execution with 92% effectiveness rate
 
 **Expected Results**:
 - **Monitoring Coverage**: 100% of critical resilience patterns monitored
