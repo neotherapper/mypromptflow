@@ -1,19 +1,8 @@
 # Vagueness Detection Scanner
 
-## Purpose
-
-Automated detection and scoring of vague terms in instruction files to accelerate framework assessment from 6-8 minutes to 2-3 minutes while maintaining accuracy and preventing fictional assessments.
-
-## Anti-Fiction Validation Requirements
-
-**CRITICAL**: This tool requires actual file analysis - no estimation or guessing permitted.
-
-- ✅ **MUST read and analyze the actual target instruction file**
-- ✅ **MUST apply regex patterns to real file content**  
-- ✅ **MUST document findings with specific line references**
-- ✅ **MUST calculate scores using documented formulas**
-- ❌ **CANNOT estimate vagueness levels without file analysis**
-- ❌ **CANNOT create fictional vagueness scores**
+**Input**: Target instruction file (absolute path required)
+**Output**: Vagueness density percentage with line references
+**Calculation**: (total_vague_terms * severity_weights) / total_words * 100
 
 ## Automated Vagueness Detection Patterns
 
@@ -267,55 +256,5 @@ optimization_methods:
     time_savings: "Reduces documentation time by 60%"
 ```
 
-## Success Metrics
-
-### Time Reduction Targets
-```yaml
-time_metrics:
-  traditional_vagueness_assessment:
-    manual_checklist_application: "2-3 minutes"
-    manual_calculation: "30-60 seconds"
-    manual_documentation: "1-2 minutes"
-    total_traditional_time: "3.5-5.5 minutes"
-    
-  automated_vagueness_assessment:
-    automated_pattern_detection: "30-45 seconds"
-    automated_calculation: "5-10 seconds"
-    automated_documentation: "15-20 seconds"
-    total_automated_time: "50-75 seconds"
-    
-  time_reduction_achieved: "75-80% reduction in vagueness assessment time"
-```
-
-### Accuracy Validation
-```yaml
-accuracy_requirements:
-  pattern_detection_accuracy: ">95% compared to manual identification"
-  scoring_calculation_accuracy: "100% mathematical accuracy"
-  evidence_collection_completeness: ">90% of findings properly documented"
-  false_positive_rate: "<5% incorrect vagueness identification"
-```
-
-## Error Prevention
-
-### Common Assessment Errors Prevented
-```yaml
-error_prevention:
-  fictional_vagueness_scores:
-    prevention: "Requires actual regex pattern matches before scoring"
-    validation: "No scores generated without documented text matches"
-    
-  missed_vague_terms:
-    prevention: "Comprehensive regex pattern coverage"
-    validation: "All pattern sets applied systematically"
-    
-  incorrect_severity_classification:
-    prevention: "Automated severity assignment based on documented criteria"
-    validation: "Severity levels assigned according to established point values"
-    
-  calculation_errors:
-    prevention: "Automated mathematical calculation"
-    validation: "Formula application verified and documented"
-```
-
-This vagueness detection scanner automates the most time-consuming aspect of framework assessment while maintaining the rigorous accuracy standards required by the anti-fiction validation protocol. It reduces vagueness assessment time by 75-80% while ensuring no fictional results are generated.
+**Success Threshold**: >95% pattern detection accuracy
+**Performance Target**: 75-80% time reduction from manual assessment
