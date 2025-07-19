@@ -14,6 +14,54 @@ Our assessment tools are built on extensive research findings:
 - **Constitutional AI**: Prevents 95% of ethical compliance violations
 - **Meta-Frameworks Analysis**: SuperClaude achieves 70% token reduction through optimization
 
+## ⚠️ MANDATORY: Assessment Methodology Compliance
+
+### Prohibited Actions (Results in Invalid Assessment)
+
+**❌ NO FICTIONAL ASSESSMENTS ALLOWED**
+- Creating assessment scores without applying documented checklists
+- Generating fabricated performance metrics or percentages  
+- Estimating results instead of calculating using provided formulas
+- Skipping actual checklist application and making up findings
+- Creating reports without reading and analyzing target files
+- Using placeholder scores or "example" results as real findings
+
+### Required Actions (For Valid Assessment)
+
+**✅ MANDATORY METHODOLOGY APPLICATION**
+- **Must apply exact checklists** from `docs/navigation/framework-selector.md`
+- **Must use documented scoring formulas** (0-5 scale + documented weightings)
+- **Must document actual findings** with specific file references and line numbers
+- **Must show methodology work**: checklist results → scoring calculation → recommendations
+- **Must reference specific assessment tools** and validation methods used
+- **Must provide real time taken** for assessment (realistic: 5-8 minutes per instruction)
+
+### Assessment Validation Requirements
+
+**Every assessment report must include:**
+1. **Methodology Section**: Which framework tools were applied
+2. **Checklist Evidence**: Actual checklist results with specific findings
+3. **Scoring Calculation**: Show math using documented formulas  
+4. **File References**: Line numbers and specific text quotes from analyzed files
+5. **Time Documentation**: Actual time taken for thorough assessment
+
+**Assessment Time Reality Check:**
+- **Claimed Time**: 30 seconds (unrealistic)
+- **Actual Required Time**: 5-8 minutes per instruction for thorough assessment
+- **Quick Screening Time**: 2-3 minutes for basic issue identification
+
+### Quality Control Protocol
+
+**Before submitting any assessment:**
+- [ ] Applied documented checklists to actual file content
+- [ ] Calculated scores using documented formulas  
+- [ ] Referenced specific file lines and text
+- [ ] Documented methodology and tools used
+- [ ] Provided realistic time estimates
+- [ ] Verified findings against actual file content
+
+**Invalid assessments will be rejected and must be redone using proper methodology.**
+
 ## Assessment Tools Suite
 
 ### 1. Framework Coherence Analyzer

@@ -4,9 +4,21 @@
 
 **Use this automated analysis to select the optimal framework for your instruction problem.**
 
+## ⚠️ CRITICAL: No Fictional Assessments
+
+**BEFORE USING THIS FRAMEWORK:**
+- ✅ **MUST read and analyze the actual target instruction file**
+- ✅ **MUST apply these checklists to real file content**  
+- ✅ **MUST document findings with specific line references**
+- ✅ **MUST calculate scores using documented formulas**
+- ❌ **CANNOT estimate, guess, or fabricate assessment results**
+- ❌ **CANNOT create fictional scores or placeholder findings**
+
+**Realistic Assessment Time**: 5-8 minutes per instruction (not 30 seconds)
+
 ### Instruction Analysis Workflow
 
-#### Step 1: Analyze the Problem Instruction (30 seconds)
+#### Step 1: Analyze the Problem Instruction (5-8 minutes realistic)
 
 **Read your instruction and answer these questions:**
 
