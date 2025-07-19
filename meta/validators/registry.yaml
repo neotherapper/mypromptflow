@@ -1,0 +1,238 @@
+# Project Validator Registry
+# Auto-generated asset discovery for AI agents
+# DO NOT manually edit - use discovery tools to update
+
+validator_registry:
+  discovery_date: "2025-01-19"
+  total_validators: 11
+  coverage_analysis: "Comprehensive across AI instructions, some gaps in language-specific validation"
+  
+  existing_validators:
+    # Primary Production Validators
+    - name: "claude-command-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/claude-command-evaluator.md"
+      file_types: [".claude/commands/*.md"]
+      capabilities: 
+        - "Command structure validation"
+        - "Syntax checking"
+        - "Documentation quality assessment"
+        - "Best practices compliance"
+        - "Usage example validation"
+      spawn_pattern: "Task tool with claude-command-evaluator agent"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      
+    - name: "ai-agent-instruction-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/ai-agent-instruction-evaluator.md"
+      file_types: 
+        - "ai/agents/*.md"
+        - "ai/prompts/**/*.md"
+        - "**/CLAUDE.md"
+        - "knowledge-vault/**/*.md"
+      capabilities:
+        - "AI Agent Instruction Design Excellence framework compliance (93% effective)"
+        - "Comprehensive project-wide AI instruction detection"
+        - "Multi-level validation (5 levels)"
+        - "Effectiveness scoring >90%"
+        - "Constitutional AI compliance validation"
+        - "Content-based and location-based detection"
+      spawn_pattern: "Task tool with ai-agent-instruction-evaluator agent"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      
+    # Specialized Workflow Validators
+    - name: "quality-validator"
+      location: "ai/prompts/meta-prompts/quality-validator.md"
+      file_types: ["general validation workflows"]
+      capabilities: ["Quality assurance workflows", "Multi-domain validation"]
+      spawn_pattern: "Meta-prompt execution"
+      authority_level: "Meta-prompt"
+      parallel_safe: true
+      production_ready: false
+      
+    # Chain Validators (Workflow-Specific)
+    - name: "strategic-to-product-validator"
+      location: "ai/validation/chain-validators/strategic-to-product-validator.md"
+      file_types: ["workflow validation between strategic and product layers"]
+      capabilities: ["Cross-layer validation", "Strategic alignment checking"]
+      spawn_pattern: "Workflow chain validation"
+      authority_level: "Workflow Validator"
+      parallel_safe: false
+      production_ready: false
+      
+    - name: "research-to-design-validator"
+      location: "ai/validation/chain-validators/research-to-design-validator.md"
+      file_types: ["workflow validation between research and design layers"]
+      capabilities: ["Research-design alignment", "Design feasibility validation"]
+      spawn_pattern: "Workflow chain validation"
+      authority_level: "Workflow Validator"
+      parallel_safe: false
+      production_ready: false
+      
+    - name: "business-to-technical-validator"
+      location: "ai/validation/chain-validators/business-to-technical-validator.md"
+      file_types: ["workflow validation between business and technical layers"]
+      capabilities: ["Business-technical alignment", "Implementation feasibility"]
+      spawn_pattern: "Workflow chain validation"
+      authority_level: "Workflow Validator"
+      parallel_safe: false
+      production_ready: false
+      
+    - name: "requirements-to-testing-validator"
+      location: "ai/validation/chain-validators/requirements-to-testing-validator.md"
+      file_types: ["workflow validation between requirements and testing layers"]
+      capabilities: ["Requirements-testing alignment", "Test coverage validation"]
+      spawn_pattern: "Workflow chain validation"
+      authority_level: "Workflow Validator"
+      parallel_safe: false
+      production_ready: false
+      
+    # Framework Template Validators (Development Use)
+    - name: "communication-pattern-validator"
+      location: "projects/ai-agent-instruction-design-excellence/docs/assessment-tools/communication-pattern-validator.md"
+      file_types: ["AI agent communication patterns"]
+      capabilities: ["Communication pattern assessment", "Coordination validation"]
+      spawn_pattern: "Framework assessment tool"
+      authority_level: "Assessment Tool"
+      parallel_safe: true
+      production_ready: false
+      
+    - name: "constitutional-ai-compliance-checker"
+      location: "projects/ai-agent-instruction-design-excellence/docs/assessment-tools/constitutional-ai-compliance-checker.md"
+      file_types: ["Constitutional AI compliance checking"]
+      capabilities: ["Constitutional AI validation", "Ethical compliance checking"]
+      spawn_pattern: "Framework assessment tool"
+      authority_level: "Assessment Tool"
+      parallel_safe: true
+      production_ready: false
+      
+    # Worker Templates (Development Templates)
+    - name: "compliance-checker-worker-template"
+      location: "projects/ai-agent-instruction-design-excellence/docs/template-library/worker-templates/compliance-checker-worker-template.md"
+      file_types: ["template for compliance checking workers"]
+      capabilities: ["Worker template for compliance checking"]
+      spawn_pattern: "Template instantiation"
+      authority_level: "Worker Template"
+      parallel_safe: true
+      production_ready: false
+      
+    - name: "documentation-validator-worker-template"
+      location: "projects/ai-agent-instruction-design-excellence/docs/template-library/worker-templates/documentation-validator-worker-template.md"
+      file_types: ["template for documentation validation workers"]
+      capabilities: ["Worker template for documentation validation"]
+      spawn_pattern: "Template instantiation"
+      authority_level: "Worker Template"
+      parallel_safe: true
+      production_ready: false
+
+  production_ready_validators:
+    count: 2
+    validators: 
+      - "claude-command-evaluator"
+      - "ai-agent-instruction-evaluator"
+    
+  development_validators:
+    count: 9
+    categories:
+      - "Chain validators (4): workflow-specific validation"
+      - "Framework assessment tools (2): development and testing"
+      - "Worker templates (2): template instantiation"
+      - "Meta-prompts (1): quality validation workflows"
+
+  coverage_analysis:
+    well_covered_types:
+      - ".claude/commands/*.md": ["claude-command-evaluator"]
+      - "ai/agents/*.md": ["ai-agent-instruction-evaluator"]
+      - "ai/prompts/**/*.md": ["ai-agent-instruction-evaluator"]
+      - "**/CLAUDE.md": ["ai-agent-instruction-evaluator"]
+      
+    partially_covered_types:
+      - "workflow validations": ["chain validators - development stage"]
+      - "constitutional AI": ["constitutional-ai-compliance-checker - development stage"]
+      
+    uncovered_types:
+      - "*.ts, *.tsx": ["TypeScript/React validation missing"]
+      - "*.js, *.jsx": ["JavaScript validation missing"]
+      - "*.py": ["Python validation missing"]
+      - "*.yaml, *.yml": ["YAML validation missing"]
+      - "*.json": ["JSON validation missing"]
+      - "*.md (general)": ["Markdown linting missing"]
+      - "*.css, *.scss": ["Styling validation missing"]
+      - "test files": ["Test-specific validation missing"]
+      - "API definitions": ["API validation missing"]
+      - "Docker files": ["Container validation missing"]
+
+  recommended_next_validators:
+    high_priority:
+      - name: "typescript-frontend-validator"
+        file_types: ["*.ts", "*.tsx", "src/**/*"]
+        justification: "Large TypeScript codebase needs validation"
+        
+      - name: "python-backend-validator"
+        file_types: ["*.py", "api/**/*", "backend/**/*"]
+        justification: "Python backend validation missing"
+        
+      - name: "test-validator"
+        file_types: ["*.test.ts", "*.spec.js", "test/**/*", "tests/**/*"]
+        justification: "Test quality validation needed"
+        
+    medium_priority:
+      - name: "yaml-config-validator"
+        file_types: ["*.yaml", "*.yml", "docker-compose.yml"]
+        justification: "Configuration file validation"
+        
+      - name: "json-schema-validator"
+        file_types: ["*.json", "package.json", "tsconfig.json"]
+        justification: "JSON structure validation"
+        
+    low_priority:
+      - name: "markdown-linter"
+        file_types: ["*.md (general content)"]
+        justification: "General markdown quality (separate from AI instructions)"
+        
+      - name: "api-definition-validator"
+        file_types: ["openapi.yaml", "swagger.json", "api/**/*"]
+        justification: "API specification validation"
+
+  progressive_loading_opportunities:
+    current_issue: "validate-pr.md loads ALL detection patterns regardless of PR content"
+    token_waste: "Estimated 50-80% token waste for simple PRs"
+    
+    solution_architecture:
+      coordinator: "validate-pr.md (50 lines) - discovery and routing only"
+      specialists: "Load only relevant validators based on detected file types"
+      
+    efficiency_examples:
+      - scenario: "PR with only .claude/commands/ files"
+        current_load: "500 lines (all detection patterns)"
+        optimized_load: "100 lines (coordinator + claude-command-evaluator)"
+        savings: "80%"
+        
+      - scenario: "PR with TypeScript + Claude commands"
+        current_load: "500 lines (all detection patterns)"
+        optimized_load: "160 lines (coordinator + typescript + claude-command validators)"
+        savings: "68%"
+        
+      - scenario: "Complex PR with 4 file types"
+        current_load: "500 lines (all detection patterns)"
+        optimized_load: "250 lines (coordinator + 4 relevant validators)"
+        savings: "50%"
+
+  integration_notes:
+    existing_references:
+      - "validate-pr.md references claude-command-evaluator and ai-agent-instruction-evaluator"
+      - "Both referenced validators exist and are production-ready"
+      - "Current system should USE existing validators rather than create duplicates"
+      
+    path_verification:
+      - "projects/ai-pr-validation-system/ai/agents/ - VERIFIED EXISTS"
+      - "claude-command-evaluator.md - VERIFIED EXISTS"
+      - "ai-agent-instruction-evaluator.md - VERIFIED EXISTS"
+      
+    progressive_loading_strategy:
+      - "Leverage existing production validators for AI instruction files"
+      - "Create missing language-specific validators only for gaps"
+      - "Implement conditional loading based on PR file type detection"
+      - "Optimize token usage through intelligent validator selection"

@@ -18,9 +18,62 @@
 
 ### Instruction Analysis Workflow
 
+#### Step 0: MANDATORY Asset Discovery (30 seconds)
+
+**⚠️ CRITICAL: Always check for existing assets before framework application**
+
+```bash
+# MANDATORY FIRST STEP - Asset Discovery Protocol
+check_existing_assets() {
+    echo "=== MANDATORY ASSET DISCOVERY ==="
+    
+    # 1. Check for existing validators/specialists
+    if [ -f "meta/validators/registry.yaml" ]; then
+        echo "✅ Validator registry found - checking for existing coverage"
+        existing_coverage=$(cat meta/validators/registry.yaml)
+        echo "Existing specialists: $(echo "$existing_coverage" | grep -c "name:")"
+    else
+        echo "❌ No validator registry found - progressive loading opportunity exists"
+        echo "📋 Recommendation: Consider Progressive Loading Framework for token efficiency"
+    fi
+    
+    # 2. Check for progressive loading opportunities
+    monolithic_instruction_size=$(wc -l < "$target_instruction_file")
+    if [ "$monolithic_instruction_size" -gt 200 ]; then
+        echo "🔍 Large instruction detected ($monolithic_instruction_size lines)"
+        echo "📋 STRONG RECOMMENDATION: Assess Progressive Loading Framework FIRST"
+        echo "   → Expected 50-80% token savings for conditional execution scenarios"
+    fi
+    
+    # 3. Check for domain knowledge patterns
+    domain_count=$(count_distinct_expertise_areas "$target_instruction_file")
+    if [ "$domain_count" -gt 2 ]; then
+        echo "🎯 Multiple domain expertise detected ($domain_count domains)"
+        echo "📋 PROGRESSIVE LOADING CANDIDATE: Coordinator-specialist architecture recommended"
+    fi
+}
+```
+
+**Asset Discovery Decision Points:**
+
+1. **✅ Existing Assets Found**: 
+   - Review existing capabilities before creating new frameworks
+   - Consider extending existing assets instead of new framework application
+   - Check coverage gaps that frameworks might address
+
+2. **🔍 Progressive Loading Opportunity**:
+   - Instruction >200 lines with multiple domains
+   - Conditional execution scenarios present
+   - **FIRST assess [Progressive Loading Framework](../design-principles/progressive-loading/overview.md)**
+   - Expected 50-80% token efficiency gains
+
+3. **📋 No Existing Assets**: 
+   - Proceed with standard framework selection
+   - Document new assets for future discovery
+
 #### Step 1: Analyze the Problem Instruction (5-8 minutes realistic)
 
-**Read your instruction and answer these questions:**
+**After completing mandatory asset discovery, read your instruction and answer these questions:**
 
 1. **Vagueness Detection**:
    - [ ] Contains vague terms ("effectively", "efficiently", "appropriately", "properly")
@@ -42,14 +95,21 @@
    - [ ] Missing step-by-step procedures
    - [ ] No clear success/failure criteria
 
-5. **AI Agent Consumption Efficiency**:
+5. **Progressive Loading Assessment**:
+   - [ ] Instruction loads all knowledge regardless of execution path
+   - [ ] Multiple domain expertise areas embedded in single instruction (TypeScript, Python, etc.)
+   - [ ] Conditional scenarios use different knowledge subsets
+   - [ ] Knowledge utilization varies significantly by context (simple vs complex scenarios)
+   - [ ] Monolithic instruction with low utilization rates (<60%)
+
+6. **AI Agent Consumption Efficiency**:
    - [ ] Contains academic justification without actionable value ("Research Foundation", "validated studies")
    - [ ] Includes explanatory text that doesn't change AI agent behavior
    - [ ] Has credibility building language ("research-proven", "comprehensive analysis")
    - [ ] Features performance benchmarks without actionable thresholds
    - [ ] Uses cognitive overhead patterns (background, context, justification sections)
 
-6. **🚨 Cognitive Contamination Detection**:
+7. **🚨 Cognitive Contamination Detection**:
    - [ ] Contains fabricated statistics or performance claims without sources
    - [ ] Uses academic writing style in operational instructions
    - [ ] Includes research-style language ("studies show", "research indicates")
@@ -62,7 +122,8 @@
 
 ```yaml
 selection_logic:
-  primary_framework_selection:
+  priority_framework_selection:
+    if_progressive_loading_opportunity: "Progressive Loading Framework (ASSESS FIRST)"
     if_vagueness_detected: "Concreteness Framework"
     if_purpose_unclear: "Purpose-Driven Framework"
     if_external_dependencies: "Self-Sufficiency Framework"
@@ -71,6 +132,7 @@ selection_logic:
     if_cognitive_contamination_detected: "IMMEDIATE Cognitive Contamination Cleanup + Framework Selection"
   
   multiple_issues_detected:
+    progressive_loading_AND_any_issue: "Progressive Loading FIRST → then other frameworks"
     vague_AND_external_deps: "Self-Sufficiency → Concreteness"
     vague_AND_not_executable: "Actionable → Concreteness"
     unclear_purpose_AND_external_deps: "Self-Sufficiency → Purpose-Driven"
@@ -92,6 +154,7 @@ selection_logic:
 
 **If you checked boxes in only ONE category above:**
 
+- **Progressive Loading only** → **[Progressive Loading Framework](../design-principles/progressive-loading/overview.md)** (ASSESS FIRST - 50-80% token savings)
 - **Vagueness only** → **[Concreteness Framework](../design-principles/concreteness/overview.md)**
 - **Purpose only** → **[Purpose-Driven Framework](../design-principles/purpose-driven/overview.md)**
 - **Dependencies only** → **[Self-Sufficiency Framework](../design-principles/self-sufficiency/overview.md)**
@@ -104,6 +167,7 @@ selection_logic:
 **If you checked boxes in multiple categories:**
 
 **2 Categories Checked:**
+- **Progressive Loading + Any Other** → Start with [Progressive Loading](../design-principles/progressive-loading/overview.md), then selected framework
 - **Vagueness + Dependencies** → Start with [Self-Sufficiency](../design-principles/self-sufficiency/overview.md), then [Concreteness](../design-principles/concreteness/overview.md)
 - **Vagueness + Executability** → Start with [Actionable](../design-principles/actionable/overview.md), then [Concreteness](../design-principles/concreteness/overview.md)
 - **Purpose + Dependencies** → Start with [Self-Sufficiency](../design-principles/self-sufficiency/overview.md), then [Purpose-Driven](../design-principles/purpose-driven/overview.md)
@@ -199,6 +263,13 @@ Based on research findings, this approach achieves 85% effectiveness rates acros
 ```
 
 ### Common Problem Patterns
+
+#### Pattern 0: Large Multi-Domain Instruction (NEW - ASSESS FIRST)
+**Example**: "500-line PR validation instruction with TypeScript, Python, YAML, and security validation all embedded"
+**Analysis**: Multiple domains (4+) + conditional scenarios + low utilization for simple PRs (30%)
+**Framework Selection**: Progressive Loading Framework (ASSESS FIRST)
+**Expected Benefits**: 50-80% token savings through coordinator-specialist architecture
+**Expected Load**: 50-250 lines based on detected domains vs 500 lines always
 
 #### Pattern 1: "Coordinate agents effectively using best practices"
 **Analysis**: Vague terms ("effectively", "best practices") + unclear execution steps

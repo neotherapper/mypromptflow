@@ -328,15 +328,15 @@ time_metrics:
     automated_impact_assessment: "10-15 seconds"
     total_automated_time: "45-65 seconds"
     
-  time_reduction_achieved: "70-75% reduction in dependency assessment time"
+  systematic_implementation: "Progressive validation procedures for dependency assessment"
 ```
 
 ### Accuracy Validation
 ```yaml
 accuracy_requirements:
   dependency_detection_accuracy: ">95% compared to manual identification"
-  classification_accuracy: ">90% correct dependency type assignment"
-  self_sufficiency_assessment_accuracy: ">85% alignment with expert evaluation"
+  classification_accuracy: "Systematic dependency type assignment with timeout configurations"
+  self_sufficiency_assessment_accuracy: "Systematic alignment validation with expert evaluation"
   replacement_suggestion_relevance: ">80% actionable and appropriate suggestions"
 ```
 
@@ -362,4 +362,4 @@ error_prevention:
     validation: "Suggestions mapped to specific dependency types and contexts"
 ```
 
-This external dependency scanner automates the identification and assessment of instruction dependencies, reducing assessment time by 70-75% while maintaining rigorous accuracy standards and preventing fictional results.
+This external dependency scanner automates the identification and assessment of instruction dependencies, implementing systematic procedures while maintaining rigorous accuracy standards and preventing fictional results.

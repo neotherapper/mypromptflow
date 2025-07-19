@@ -11,13 +11,13 @@
 ```yaml
 vague: "Monitor system performance regularly"
 actionable: "Check CPU usage every 30 seconds, alert if >80% for 5 consecutive readings"
-improvement: +0.45 actionability score
+improvement: Specific parameters replace vague terms
 ```
 
 ```yaml
 vague: "Coordinate agents effectively"
 actionable: "Execute coordination sequence: 1) Spawn Queen Agent with unlimited authority, 2) Set reporting intervals: Queen=master, Architect=15min, Specialist=10min, Worker=5min, 3) Monitor 847 tasks/second target, 4) Escalate failures within 60s"
-improvement: +0.60 actionability score
+improvement: Measurable coordination sequence with defined thresholds
 ```
 
 **Application Rules**:
@@ -35,13 +35,13 @@ improvement: +0.60 actionability score
 ```yaml
 vague: "Ensure high quality output"
 actionable: "Validate output meets accuracy ≥ 0.95, completeness ≥ 0.90, consistency ≥ 0.85"
-improvement: +0.50 actionability score
+improvement: Quantifiable validation criteria with specific thresholds
 ```
 
 ```yaml
 vague: "Optimize for better performance"
 actionable: "Execute optimization sequence: 1) Measure baseline (CPU, memory, response time), 2) Apply optimizations (caching, compression, parallel processing), 3) Validate >20% improvement in response time, 4) Confirm resource usage ≤ baseline"
-improvement: +0.60 actionability score
+improvement: Measurable coordination sequence with defined thresholds
 ```
 
 **Application Rules**:
@@ -59,7 +59,7 @@ improvement: +0.60 actionability score
 ```yaml
 vague: "Improve user experience"
 actionable: "Execute UX improvement sequence: 1) Measure baseline (page load time, bounce rate, task completion rate), 2) Apply improvements (optimize images, reduce HTTP requests, streamline navigation), 3) A/B test changes with 1000 users, 4) Validate >15% improvement in task completion rate"
-improvement: +0.65 actionability score
+improvement: Step-by-step sequence with measurable validation
 ```
 
 **Application Rules**:
@@ -371,7 +371,7 @@ actionable: |
       - Generate report using knowledge/templates/competitive-analysis-template.md
 
 actionability_score: 0.94
-context_efficiency: "70% reduction compared to full embedding"
+context_efficiency: "Progressive loading based on methodology requirements"
 ```
 
 ## Integration with Knowledge Base

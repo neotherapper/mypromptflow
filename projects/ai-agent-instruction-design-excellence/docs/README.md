@@ -2,7 +2,7 @@
 
 ## Quick Start for AI Agents
 
-This documentation uses **progressive context loading** to reduce token usage by 60-70% while maintaining comprehensive coverage. Use the automated framework selector to efficiently identify and load only the context you need.
+This documentation uses **progressive context loading** for efficient context optimization while maintaining comprehensive coverage. Use the automated framework selector to efficiently identify and load only the context you need.
 
 ## Automated Framework Selection
 
@@ -12,7 +12,7 @@ This documentation uses **progressive context loading** to reduce token usage by
 **Primary Navigation Tool**: Automated framework selection based on instruction analysis
 - 30-second instruction analysis workflow
 - Intelligent decision trees for single and multiple framework selection
-- Context loading optimization with 60-75% token reduction
+- Context loading optimization through targeted module access
 - Common problem pattern recognition with example transformations
 
 ### Quick Problem Identification

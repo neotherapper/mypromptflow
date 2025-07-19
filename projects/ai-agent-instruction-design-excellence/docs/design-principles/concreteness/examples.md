@@ -17,7 +17,7 @@ This module provides comprehensive before/after examples demonstrating how to tr
 - **Concreteness score**: 0.32
 
 ### After Transformation
-**Concrete Instruction**: "Execute performance optimization using 4 specific techniques: 1) Implement response time monitoring with 2-second target threshold, 2) Optimize database queries to reduce execution time by 40%, 3) Enable content caching with 85% hit rate target, 4) Implement load balancing with maximum 75% CPU utilization per server. Monitor metrics every 5 minutes and alert when thresholds exceeded for 3 consecutive measurements."
+**Concrete Instruction**: "Execute performance optimization using 4 specific techniques: 1) Implement response time monitoring with 2-second target threshold, 2) Optimize database queries for improved execution time, 3) Enable content caching with high hit rate target, 4) Implement load balancing with defined CPU utilization thresholds per server. Monitor metrics every 5 minutes and alert when thresholds exceeded for 3 consecutive measurements."
 
 **Concreteness Assessment**:
 - **Vague patterns detected**: None
@@ -27,7 +27,7 @@ This module provides comprehensive before/after examples demonstrating how to tr
 - **Concreteness score**: 0.93
 
 **Transformation Analysis**:
-- **Improvement**: +0.61 concreteness score
+- **Improvement**: Specific techniques replace vague optimization
 - **Techniques applied**: Action Conversion, Quality Criteria, Time Constraints
 - **Key changes**: Replaced "optimize" with 4 specific techniques, "better" with measurable targets, "efficiently" with performance thresholds
 
@@ -54,7 +54,7 @@ This module provides comprehensive before/after examples demonstrating how to tr
 - **Concreteness score**: 0.93
 
 **Transformation Analysis**:
-- **Improvement**: +0.63 concreteness score
+- **Improvement**: Specific workflow replaces vague processing
 - **Techniques applied**: Process Flow, Error Handling, Time Constraints
 - **Key changes**: Replaced "appropriately" with 5-step workflow, "issues" with specific error types, "handle" with defined procedures
 
@@ -135,7 +135,7 @@ This module provides comprehensive before/after examples demonstrating how to tr
 - **Concreteness score**: 0.93
 
 **Transformation Analysis**:
-- **Improvement**: +0.63 concreteness score
+- **Improvement**: Specific workflow replaces vague processing
 - **Techniques applied**: Time Constraints, Process Flow, Conditional Logic
 - **Key changes**: Replaced "regularly" with specific schedules, "coordinate" with defined procedures, "as needed" with measurable triggers
 
@@ -189,7 +189,7 @@ This module provides comprehensive before/after examples demonstrating how to tr
 - **Concreteness score**: 0.93
 
 **Transformation Analysis**:
-- **Improvement**: +0.63 concreteness score
+- **Improvement**: Specific workflow replaces vague processing
 - **Techniques applied**: Time Constraints, Process Flow, Quality Criteria
 - **Key changes**: Replaced "handle" with 5-step protocol, "promptly" with specific response times, "appropriate" with classified solutions
 

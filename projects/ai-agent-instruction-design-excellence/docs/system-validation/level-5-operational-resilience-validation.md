@@ -2,12 +2,12 @@
 
 ## Overview
 
-Level 5 Operational Resilience Validation ensures AI agent frameworks can handle failures gracefully and maintain operation under adverse conditions. This level contributes 10% of the overall validation score and implements circuit breaker patterns that research shows achieve 85-90% success rates in preventing system failures. By validating failure patterns, recovery strategies, and resilience mechanisms, this level ensures robust operational performance.
+Level 5 Operational Resilience Validation ensures AI agent frameworks can handle failures gracefully and maintain operation under adverse conditions. This level contributes 10% of the overall validation score and implements circuit breaker patterns with systematic timeout and retry configurations. By validating failure patterns, recovery strategies, and resilience mechanisms, this level ensures robust operational performance.
 
-## Research Foundation
+## Configuration Parameters
 
-### Circuit Breaker Pattern Success
-- **85-90% success rate** in preventing system failures
+### Circuit Breaker Pattern Implementation
+- **Systematic failure prevention** through timeout and retry mechanisms
 - **Failure pattern recognition** enables proactive failure prevention
 - **Recovery strategy implementation** ensures system restoration
 - **Graceful degradation** maintains partial functionality during failures
@@ -557,4 +557,4 @@ class ComprehensiveResilienceValidator:
 
 Level 5 Operational Resilience Validation ensures AI agent frameworks can handle failures gracefully and maintain operation under adverse conditions. Through comprehensive assessment of failure patterns, recovery strategies, circuit breaker implementation, and graceful degradation, this level provides essential resilience validation that prevents system failures and maintains operational continuity.
 
-The implementation of circuit breaker patterns achieving 85-90% success rates, combined with comprehensive failure pattern analysis and recovery strategy assessment, contributes to the overall 99% accuracy target of the multi-level validation system. This level provides the final layer of validation ensuring that AI agent frameworks not only function correctly but also maintain robust operation under challenging conditions, completing the comprehensive multi-level validation framework.
+The implementation of circuit breaker patterns with systematic timeout configurations, combined with comprehensive failure pattern analysis and recovery strategy assessment, provides systematic validation procedures for multi-level validation systems. This level provides the final layer of validation ensuring that AI agent frameworks not only function correctly but also maintain robust operation under challenging conditions, completing the comprehensive multi-level validation framework.

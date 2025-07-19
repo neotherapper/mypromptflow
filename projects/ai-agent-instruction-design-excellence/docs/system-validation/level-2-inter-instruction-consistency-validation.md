@@ -2,12 +2,12 @@
 
 ## Overview
 
-Level 2 Inter-Instruction Consistency Validation addresses the critical communication and coordination challenges that research shows account for 35-40% of AI agent failures. This level contributes 25% of the overall validation score and ensures seamless interaction between instructions within the framework ecosystem. By validating consistency across instruction pairs and groups, this level prevents cascade failures and maintains system coherence.
+Level 2 Inter-Instruction Consistency Validation addresses the critical communication and coordination challenges identified in systematic AI agent failure pattern analysis. This level contributes systematic weighting to the overall validation score and ensures seamless interaction between instructions within the framework ecosystem. By validating consistency across instruction pairs and groups, this level prevents cascade failures and maintains system coherence.
 
 ## Research Foundation
 
 ### Communication Failure Prevention
-- **35-40% failure rate** attributed to communication breakdowns
+- **High failure rate** attributed to communication breakdowns in systematic analysis
 - **Inter-instruction coordination** critical for system reliability
 - **Protocol consistency** ensures predictable agent interactions
 - **Terminology alignment** prevents interpretation conflicts

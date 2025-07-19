@@ -102,23 +102,23 @@ Rate each dimension (1-10):
 ### Example 1: System Optimization
 **Before**: "Optimize the system for better performance"
 **Concreteness Score**: 0.35
-**After**: "Apply 4 specific optimization techniques: 1) Implement token compression using symbol notation (target: 60-80% reduction), 2) Add automatic context triggers at 75% usage threshold, 3) Use progressive detail levels (basic/moderate/comprehensive), 4) Implement shared context pools for 70% template reduction"
+**After**: "Apply 4 specific optimization techniques: 1) Implement symbol notation for token compression, 2) Add automatic context triggers at 75% usage threshold, 3) Use progressive detail levels (basic/moderate/comprehensive), 4) Implement shared context pools for template reuse"
 **Concreteness Score**: 0.92
-**Improvement**: +0.57
+**Improvement**: Specific techniques replace vague optimization
 
 ### Example 2: Agent Coordination
 **Before**: "Coordinate agent activities effectively"
 **Concreteness Score**: 0.25
 **After**: "Execute agent coordination using this 6-step process: 1) Assess task complexity (score 1-10 using defined criteria), 2) Determine hierarchy level (Queen/Architect/Specialist/Worker), 3) Spawn agents based on complexity score, 4) Establish communication protocols (5-min Worker, 10-min Specialist, 15-min Architect), 5) Monitor performance metrics (accuracy >95%, response time <4.2ms), 6) Apply failure recovery (timeout 60s, automatic failover)"
 **Concreteness Score**: 0.89
-**Improvement**: +0.64
+**Improvement**: Measurable coordination process with specific protocols
 
 ### Example 3: Quality Assurance
 **Before**: "Ensure high quality outputs from all agents"
 **Concreteness Score**: 0.20
 **After**: "Apply these specific quality thresholds: Accuracy rate ≥95%, Consistency score ≥90%, Completeness ≥90% objectives covered, Response time ≤4.2ms average, Error rate ≤2%. Quality validation procedures: Real-time monitoring every 5 minutes, Constitutional AI validation for all outputs, Cross-agent consistency checks, Peer review simulation for critical decisions"
 **Concreteness Score**: 0.91
-**Improvement**: +0.71
+**Improvement**: Specific quality thresholds replace subjective measures
 
 ## When to Use This Framework
 
@@ -162,8 +162,8 @@ Based on your assessment score:
 **Context Loading Optimization**:
 - **This overview**: 300 lines (framework introduction and assessment)
 - **Full framework**: 1,275 lines across 4 progressive modules
-- **Typical usage**: Load overview + 1-2 specific modules (700-1,000 lines)
-- **Efficiency gain**: 60-70% reduction in context compared to monolithic documentation
+- **Typical usage**: Progressive loading based on assessment score
+- **Loading Strategy**: Progressive context access based on assessment results
 
 **Progressive Loading Strategy**:
 1. **Start here** (overview.md) - Understand framework and assess your instruction

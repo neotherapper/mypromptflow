@@ -1,4 +1,4 @@
-# Project: AI Agent Instruction Design Excellence
+# Project: AI Agent Instruction Design Excellence for Universal AI Agents
 
 ## Project Context
 
@@ -24,7 +24,7 @@ This project creates a comprehensive framework that teaches AI agents how to wri
 - Immediate actionability for AI agents
 - Purpose-aligned instruction detail
 
-**Approach**: Multi-phase development using parallel subagents for research and framework creation
+**Approach**: Multi-phase development using parallel sub-agents for research and framework creation
 
 **Constraints**: 
 - No simulation-based testing, focus on concrete assertions
@@ -44,45 +44,45 @@ This project creates a comprehensive framework that teaches AI agents how to wri
 
 **Status**: Framework deployment ready
 
-## AI Agent Instructions
+## AI Agent Instructions for Universal AI Systems
 
-### Understanding Claude and CLAUDE.md Files
+### Understanding Universal AI Agent Context Management
 
-**What is Claude?**
-Claude is Anthropic's advanced AI assistant with sophisticated project understanding capabilities. Claude has:
+**What Universal AI Agents Need:**
+Universal AI agents require structured context management capabilities to work effectively across different platforms and systems. This framework provides:
 
-**Automatic Context Loading System:**
-- **Recursive File Discovery**: Claude automatically scans project directories for CLAUDE.md files
-- **Hierarchical Context Loading**: Processes multiple CLAUDE.md files in order of specificity
-- **Cross-Reference Resolution**: Understands @file_path references and loads referenced content automatically
-- **Project Memory Persistence**: Maintains context across sessions within the same project
+**Context Discovery System:**
+- **Progressive File Discovery**: AI agents should scan project directories for GEMINI.md files
+- **Hierarchical Context Loading**: Process multiple GEMINI.md files in order of specificity
+- **Cross-Reference Resolution**: Understand file reference patterns and load referenced content automatically
+- **Session Persistence**: Maintain context across sessions within the same project
 
-**Three-Tier Memory System:**
-1. **Project Memory** (`./CLAUDE.md`): Team-shared architecture guidelines, coding standards, project workflows
-2. **User Memory** (`~/.claude/CLAUDE.md`): Personal preferences, development patterns, preferred libraries  
+**Memory System for Universal AI Agents:**
+1. **Project Memory** (`./GEMINI.md`): Team-shared architecture guidelines, coding standards, project workflows
+2. **Agent Memory**: Personal preferences, development patterns, preferred methodologies  
 3. **Dynamic Memory Import**: Context-specific guidelines loaded based on current task requirements
 
-**Advanced Project Intelligence:**
-- **Multi-File Awareness**: Tracks relationships between files and modules across entire projects
-- **Framework Recognition**: Deep understanding of React, Vue, Angular, Next.js, and other development frameworks
-- **Cross-File Refactoring**: Can safely modify components, hooks, and utilities across related files
-- **Build System Integration**: Native support for Vite, Webpack, and modern build systems
+**Advanced Project Intelligence for Universal AI Agents:**
+- **Multi-File Awareness**: Track relationships between files and modules across entire projects
+- **Framework Recognition**: Deep understanding of development frameworks and patterns
+- **Cross-File Analysis**: Can analyze components, patterns, and utilities across related files
+- **Build System Integration**: Support for modern development and execution systems
 
-**Command System Integration:**
-- **Dual Interface**: Commands serve both human users and AI agents through unified system
-- **Automatic Execution**: Built-in command processing and workflow orchestration
+**Universal Command System Integration:**
+- **Workflow Interface**: Commands serve both human users and AI agents through unified system
+- **Automatic Execution**: Built-in workflow processing and orchestration
 - **File Navigation**: Direct file path references for workflow coordination
 - **Registry Integration**: Automatic updates to YAML configuration files
 
-**CLAUDE.md Best Practices:**
+**GEMINI.md Best Practices for Universal AI Agents:**
 - **Provide Complete Project Context**: Include goals, constraints, success criteria, and current status
 - **Define AI Agent Workflows**: Specify how agents should approach tasks and collaborate
-- **Use Cross-Reference Patterns**: Leverage @file_path references for internal project navigation
+- **Use Cross-Reference Patterns**: Leverage file reference patterns for internal project navigation
 - **Include Quality Standards**: Define concrete criteria for deliverables and validation
 - **Specify Integration Points**: Document how the project connects with other systems or frameworks
 
-**Key Integration Points:**
-- **Claude Capabilities**: Automatic context loading, multi-file awareness, cross-reference resolution
+**Key Integration Points**:
+- **Universal AI Capabilities**: Context loading, multi-file awareness, cross-reference resolution
 - **Coordination Patterns**: 4-level hierarchy, parallel execution, progressive context loading
 
 ### How to Work on This Project
@@ -157,10 +157,10 @@ Claude is Anthropic's advanced AI assistant with sophisticated project understan
 **Before (Academic Overhead)**:
 ```markdown
 ## Research Foundation
-## Configuration Requirements  
+## Configuration Requirements
 Configuration implements systematic patterns for AI agent coordination...
 
-## Performance Configuration
+## Research-Proven Performance
 Configuration demonstrates systematic operation across multiple domains...
 ```
 
@@ -175,18 +175,18 @@ Configuration demonstrates systematic operation across multiple domains...
 ### Working Patterns
 
 **Preferred Approach** (Actionable Specifications):
-- **Use Parallel Subagents**: Spawn multiple agents simultaneously to reduce total project time compared to sequential execution
+- **Use Parallel Sub-agents**: Spawn multiple agents simultaneously to reduce total project time compared to sequential execution
 - **Focus on Concrete Patterns**: Replace abstract descriptions with specific parameters, numerical thresholds, and measurable criteria (target: 0 subjective qualifiers)
 - **Implement Progressive Context Loading**: Use docs/ structure for efficient context optimization
-- **Validate for Immediate Actionability**: Ensure instructions executable by AI agents within 5-8 minutes without additional interpretation (Executability score: 4+ points required)
+- **Validate for Immediate Actionability**: Ensure instructions executable by AI agents within 5-8 minutes without additional interpretation (≥4/5 Executability score required)
 - **Optimize Internal References**: Maintain complete cross-reference accuracy with zero external dependencies (verified through Self-Sufficiency Framework assessment)
 
 **Quality Standards** (Concrete Definitions):
-- **Concrete and Specific Instructions**: Parameters defined with exact values, numerical thresholds, and measurable criteria (scoring target: 4+ points on Specificity dimension)
-- **External Dependencies Eliminated**: Zero requirements for web searches, external APIs, or uncontrolled documentation (scoring target: 4+ points on Self-Sufficiency dimension)  
+- **Concrete and Specific Instructions**: Parameters defined with exact values, numerical thresholds, and measurable criteria (scoring target: ≥4/5 on Specificity dimension)
+- **External Dependencies Eliminated**: Zero requirements for web searches, external APIs, or uncontrolled documentation (scoring target: ≥4/5 on Self-Sufficiency dimension)  
 - **Progressive Context Loading Optimized**: Internal references enable efficient context optimization
 - **Knowledge Base Accessibility Verified**: All referenced files exist and are accessible within project structure (complete cross-reference accuracy required)
-- **Immediate Actionability**: Instructions executable by AI agents within 5-8 minutes without additional interpretation (scoring target: 4+ points on Executability dimension)
+- **Immediate Actionability**: Instructions executable by AI agents within 5-8 minutes without additional interpretation (scoring target: ≥4/5 on Executability dimension)
 - **Self-Sufficiency Validation**: Complete project context embedded, no external knowledge dependencies (validation checklist must pass completely)
 
 **Things to Avoid**: 
@@ -238,6 +238,46 @@ Response: "For orchestration patterns, reference knowledge/orchestration/queen-p
 - Reference knowledge/ for comprehensive technique documentation
 - Apply progressive loading for context optimization
 
+### Sub-Agent Coordination for Universal AI Systems
+
+**Sub-Agent Spawning Instructions** (For AI systems with multi-agent capabilities):
+
+**When spawning SuperClaude Pattern Extractor:**
+```
+You are a SuperClaude Pattern Extractor specialist. Your task is to analyze the meta-frameworks research and extract specific, concrete behaviors from SuperClaude patterns.
+
+**Primary Objective**: Extract concrete patterns from SuperClaude framework analysis, focusing on:
+- Specific token optimization techniques for efficiency improvement
+- Exact command patterns and their implementation steps
+- Concrete execution procedures and decision criteria
+- Specific quality monitoring and validation methods
+
+**Research Source**: research/findings/meta-frameworks-analysis/comprehensive-analysis.md
+**Focus Sections**: SuperClaude Framework Analysis, Command System Architecture, Token Optimization Strategies
+
+**Deliverable**: Create `docs/research-synthesis/superclaude-concrete-patterns.md` with:
+- 20+ specific token optimization techniques
+- 16 command patterns with exact implementation steps
+- 9 cognitive persona integration procedures
+- Quality validation criteria and thresholds
+
+**Success Criteria**: 
+- All patterns are specific and actionable
+- No vague references or external dependencies
+- Immediate actionability for AI agents
+- Complete context embedded in each pattern
+
+Extract behaviors like:
+- Instead of "implement SuperClaude optimization" → "Use these 5 specific techniques: 1) UltraCompressed mode using symbols, 2) Automatic flag addition based on context usage patterns, 3) Progressive detail levels (basic/moderate/comprehensive), 4) Shared context pools for reusable context, 5) Dynamic compression triggers"
+
+Work autonomously and create the complete deliverable.
+```
+
+**For AI systems without native sub-agent capabilities:**
+- **Sequential Processing**: Break complex tasks into manageable sequential steps
+- **State Persistence**: Maintain progress state between task segments  
+- **Quality Checkpoints**: Validate completion at each step before proceeding
+
 ### Tools and Resources
 
 **Framework Configuration**: 
@@ -248,14 +288,14 @@ Response: "For orchestration patterns, reference knowledge/orchestration/queen-p
 
 **Dependencies**: 
 - Access to existing research findings
-- Parallel subagent execution capability
-- Task tool for spawning subagents
+- Parallel sub-agent execution capability
+- Sub-agent coordination systems for spawning specialized agents
 - File creation and management tools
 
 **Internal Resources**: 
-- `@research/findings/meta-frameworks-analysis/comprehensive-analysis.md`
-- `@research/findings/ai-agent-failure-patterns/reports/comprehensive-analysis.md`
-- `@research/findings/prompt-engineering/meta-prompting/comprehensive-meta-prompting-analysis.md`
+- `research/findings/meta-frameworks-analysis/comprehensive-analysis.md`
+- `research/findings/ai-agent-failure-patterns/reports/comprehensive-analysis.md`
+- `research/findings/prompt-engineering/meta-prompting/comprehensive-meta-prompting-analysis.md`
 - `knowledge/` - Comprehensive technique and orchestration pattern knowledge base
 
 **Progressive Documentation Structure**:
@@ -300,105 +340,6 @@ knowledge/                        # Comprehensive Knowledge Base
 └── templates/                  # Reusable templates and frameworks
 ```
 
-## Specific AI Agent Workflows
-
-### Phase 1: Knowledge Extraction (Current Phase)
-
-#### Subagent Spawning Instructions
-
-**When spawning SuperClaude Pattern Extractor:**
-```
-You are a SuperClaude Pattern Extractor specialist. Your task is to analyze the meta-frameworks research and extract specific, concrete behaviors from SuperClaude patterns.
-
-**Primary Objective**: Extract concrete patterns from SuperClaude framework analysis, focusing on:
-- Specific token optimization techniques for efficiency improvement
-- Exact command patterns and their implementation steps
-- Concrete execution procedures and decision criteria
-- Specific quality monitoring and validation methods
-
-**Research Source**: @research/findings/meta-frameworks-analysis/comprehensive-analysis.md
-**Focus Sections**: SuperClaude Framework Analysis, Command System Architecture, Token Optimization Strategies
-
-**Deliverable**: Create `docs/research-synthesis/superclaude-concrete-patterns.md` with:
-- 20+ specific token optimization techniques
-- 16 command patterns with exact implementation steps
-- 9 cognitive persona integration procedures
-- Quality validation criteria and thresholds
-
-**Success Criteria**: 
-- All patterns are specific and actionable
-- No vague references or external dependencies
-- Immediate actionability for AI agents
-- Complete context embedded in each pattern
-
-Extract behaviors like:
-- Instead of "implement SuperClaude optimization" → "Use these 5 specific techniques: 1) UltraCompressed mode using symbols, 2) Automatic flag addition based on context usage patterns, 3) Progressive detail levels (basic/moderate/comprehensive), 4) Shared context pools for reusable context, 5) Dynamic compression triggers"
-
-Work autonomously and create the complete deliverable.
-```
-
-**When spawning Claude Flow Behavior Analyst:**
-```
-You are a Claude Flow Behavior Analyst specialist. Your task is to analyze the meta-frameworks research and extract specific, concrete behaviors from Claude Flow coordination patterns.
-
-**Primary Objective**: Extract concrete behaviors from Claude Flow framework analysis, focusing on:
-- Specific hierarchical coordination steps and procedures
-- Exact agent spawning procedures and decision criteria
-- Concrete quality assurance actions and monitoring steps
-- Specific performance optimization techniques
-
-**Research Source**: @research/findings/meta-frameworks-analysis/comprehensive-analysis.md
-**Focus Sections**: Claude Flow v2.0.0 Analysis, Swarm Intelligence Architecture, SPARC Methodology
-
-**Deliverable**: Create `docs/research-synthesis/claude-flow-concrete-behaviors.md` with:
-- 4-level hierarchical coordination procedures
-- Agent spawning decision trees and criteria
-- Quality monitoring metrics and thresholds
-- Performance optimization specific techniques
-
-**Success Criteria**: 
-- All behaviors are specific and actionable
-- No vague references or external dependencies
-- Immediate actionability for AI agents
-- Complete context embedded in each behavior
-
-Extract behaviors like:
-- Instead of "implement Claude Flow coordination" → "Use this 4-level hierarchy: 1) Queen Agent (master coordinator with unlimited spawning authority), 2) Architect Agents (system design, max 5 concurrent tasks), 3) Specialist Agents (domain expertise, max 10 concurrent tasks), 4) Worker Agents (single task execution, no spawning authority). Coordinate using these specific protocols: [list exact communication patterns, decision criteria, quality thresholds]"
-
-Work autonomously and create the complete deliverable.
-```
-
-**When spawning Meta-Framework Synthesizer:**
-```
-You are a Meta-Framework Synthesizer specialist. Your task is to analyze meta-prompting research and extract concrete instruction patterns for AI agent orchestration.
-
-**Primary Objective**: Extract concrete instruction patterns from meta-prompting research, focusing on:
-- Specific context-aware selection methods and criteria
-- Exact method chaining procedures and decision points
-- Concrete quality monitoring steps and validation criteria
-- Specific orchestration patterns and coordination methods
-
-**Research Source**: @research/findings/prompt-engineering/meta-prompting/comprehensive-meta-prompting-analysis.md
-**Focus Sections**: Meta Prompt Orchestrator Architecture, Method Selection Logic, Quality Monitoring System
-
-**Deliverable**: Create `docs/research-synthesis/meta-framework-instruction-patterns.md` with:
-- 15+ specific orchestration patterns
-- Context analysis decision trees
-- Method selection criteria and thresholds
-- Quality monitoring procedures and metrics
-
-**Success Criteria**: 
-- All patterns are specific and actionable
-- No vague references or external dependencies
-- Immediate actionability for AI agents
-- Complete context embedded in each pattern
-
-Extract patterns like:
-- Instead of "use intelligent orchestration" → "Apply this context analysis: 1) Assess complexity (simple/moderate/complex using these criteria: [specific criteria]), 2) Evaluate quality requirements (basic/high/critical using these thresholds: [specific thresholds]), 3) Select methods using this decision tree: [specific decision tree], 4) Monitor quality using these metrics: [specific metrics and validation procedures]"
-
-Work autonomously and create the complete deliverable.
-```
-
 ### Progressive Documentation Usage
 
 **How to use the progressive documentation structure:**
@@ -424,7 +365,7 @@ Work autonomously and create the complete deliverable.
 **After completing any task, update these files:**
 1. **progress.md**: Add accomplishment with specific details
 2. **task-list.md**: Mark tasks as completed and add new discovered tasks
-3. **TodoWrite tool**: Update task status to "completed"
+3. **Task tracking system**: Update task status to "completed"
 
 ### Quality Validation
 
@@ -457,4 +398,4 @@ Work autonomously and create the complete deliverable.
 - Internal references are optimized for efficiency and accessibility
 - Users can find any technique or pattern through knowledge base navigation
 
-Last Updated: 2025-07-18
+Last Updated: 2025-01-19

@@ -30,7 +30,7 @@ analyze → [structured_analysis_workflow]
 
 ### Example Transformation
 **Before**: "Optimize the system performance"
-**After**: "Execute 4 specific optimization steps: 1) Reduce token usage by 60-80% using symbol notation, 2) Implement context triggers at 75% usage threshold, 3) Add progressive detail levels (basic/moderate/comprehensive), 4) Enable shared context pools for 70% reduction"
+**After**: "Execute 4 specific optimization steps: 1) Implement symbol notation for token compression, 2) Implement context triggers at 75% usage threshold, 3) Add progressive detail levels (basic/moderate/comprehensive), 4) Enable shared context pools for template reuse"
 
 ### Validation Checklist
 - [ ] All abstract actions replaced with specific steps
@@ -498,10 +498,10 @@ Based on validated research findings from AI agent failure patterns analysis:
 - [ ] All "Research Foundation" sections removed or converted to actionable thresholds
 - [ ] Academic justification language eliminated ("based on research", "proven effectiveness")
 - [ ] Performance claims converted to configuration parameters only
-- [ ] AI agent consumption efficiency ≥80% actionable content
+- [ ] AI agent consumption efficiency: High ratio of actionable content
 - [ ] Zero cognitive overhead patterns remaining
 - [ ] Immediate executability without interpretation verified
-- [ ] Token efficiency optimized (50-70% reduction typical)
+- [ ] Token efficiency optimized through progressive loading techniques
 
 ## Technique Application Summary
 
@@ -509,19 +509,19 @@ Based on validated research findings from AI agent failure patterns analysis:
 
 | Vague Pattern | Technique | Primary Focus | Expected Improvement |
 |---------------|-----------|---------------|---------------------|
-| "optimize", "improve" | Technique 1 | Action Conversion | +0.25 concreteness |
-| "when necessary" | Technique 2 | Decision Triggers | +0.20 concreteness |
-| "comprehensive" | Technique 3 | Scope Boundaries | +0.20 concreteness |
-| "sufficient" | Technique 4 | Resource Allocation | +0.15 concreteness |
-| "high quality" | Technique 5 | Quality Criteria | +0.15 concreteness |
-| "coordinate" | Technique 6 | Process Flow | +0.25 concreteness |
-| "if necessary" | Technique 7 | Conditional Logic | +0.20 concreteness |
-| "handle gracefully" | Technique 8 | Error Procedures | +0.25 concreteness |
-| "quickly" | Technique 9 | Time Constraints | +0.15 concreteness |
-| "appropriate format" | Technique 10 | Data Schemas | +0.20 concreteness |
-| "integrate properly" | Technique 11 | Interface Protocols | +0.25 concreteness |
-| "ensure quality" | Technique 12 | Validation Criteria | +0.20 concreteness |
-| "Research Foundation" | Technique 13 | Cognitive Overhead Elimination | +0.50 concreteness |
+| "optimize", "improve" | Technique 1 | Action Conversion | Specific action replacement |
+| "when necessary" | Technique 2 | Decision Triggers | Measurable criteria definition |
+| "comprehensive" | Technique 3 | Scope Boundaries | Measurable criteria definition |
+| "sufficient" | Technique 4 | Resource Allocation | Specific parameter definition |
+| "high quality" | Technique 5 | Quality Criteria | Specific parameter definition |
+| "coordinate" | Technique 6 | Process Flow | Specific action replacement |
+| "if necessary" | Technique 7 | Conditional Logic | Measurable criteria definition |
+| "handle gracefully" | Technique 8 | Error Procedures | Specific action replacement |
+| "quickly" | Technique 9 | Time Constraints | Specific parameter definition |
+| "appropriate format" | Technique 10 | Data Schemas | Measurable criteria definition |
+| "integrate properly" | Technique 11 | Interface Protocols | Specific action replacement |
+| "ensure quality" | Technique 12 | Validation Criteria | Measurable criteria definition |
+| "Research Foundation" | Technique 13 | Cognitive Overhead Elimination | Academic elimination transformation |
 
 ### Combined Technique Usage
 
@@ -540,7 +540,7 @@ Based on validated research findings from AI agent failure patterns analysis:
 - Consistent interpretation across agents
 
 **Overall transformation success:**
-- Concreteness score improvement ≥ 0.30
+- Significant concreteness improvement achieved
 - Zero subjective interpretation requirements
 - All success/failure criteria measurable
 - Complete self-sufficiency achieved

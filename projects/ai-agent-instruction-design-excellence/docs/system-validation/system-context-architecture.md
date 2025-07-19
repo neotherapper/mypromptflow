@@ -2,7 +2,7 @@
 
 ## Overview
 
-The System Context Architecture provides a comprehensive context loading and management strategy for evaluating AI agent frameworks containing 2,300-3,500 lines of instruction content. This architecture enables the Multi-Level Validation Framework to efficiently process large-scale frameworks while maintaining accuracy and coherence across all validation levels.
+The System Context Architecture provides a comprehensive context loading and management strategy for evaluating AI agent frameworks containing 2,300-3,500 lines of instruction content. This architecture enables the Multi-Level Validation Framework to efficiently process large-scale frameworks while maintaining systematic validation and coherence across all validation levels.
 
 ## Architecture Goals
 
@@ -13,7 +13,7 @@ The System Context Architecture provides a comprehensive context loading and man
 - **Scalable Processing**: Support frameworks of varying sizes and complexity
 
 ### Performance Targets
-- **99% Accuracy**: Maintain validation accuracy comparable to full-context analysis
+- **High Accuracy**: Maintain validation accuracy comparable to full-context analysis through systematic procedures
 - **Efficient Processing**: Complete validation within reasonable time constraints
 - **Resource Optimization**: Minimize computational resource requirements
 - **Context Preservation**: Preserve critical context relationships
@@ -78,27 +78,27 @@ class PriorityBasedLoader:
 #### 1. Hierarchical Context Loading
 ```
 Context Loading Hierarchy:
-├── Level 1: Core Framework Context (25% of total)
+├── Level 1: Core Framework Context (primary content)
 │   ├── Primary instruction definitions
 │   ├── Core workflow descriptions
 │   ├── Essential configuration parameters
 │   └── Critical dependency specifications
-├── Level 2: Integration Context (20% of total)
+├── Level 2: Integration Context (integration layer)
 │   ├── Inter-instruction relationships
 │   ├── System integration points
 │   ├── Data flow definitions
 │   └── Communication protocols
-├── Level 3: Validation Context (20% of total)
+├── Level 3: Validation Context (validation layer)
 │   ├── Success criteria definitions
 │   ├── Quality standards specifications
 │   ├── Validation procedures
 │   └── Acceptance criteria
-├── Level 4: Operational Context (20% of total)
+├── Level 4: Operational Context (operational layer)
 │   ├── Runtime configurations
 │   ├── Performance requirements
 │   ├── Resource specifications
 │   └── Monitoring requirements
-└── Level 5: Extension Context (15% of total)
+└── Level 5: Extension Context (extension layer)
     ├── Optional configurations
     ├── Advanced features
     ├── Customization options

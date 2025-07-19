@@ -129,8 +129,8 @@ Based on your assessment score:
 **Context Loading Optimization**:
 - **This overview**: 300 lines (framework introduction and assessment)
 - **Full framework**: 1,262 lines across 4 progressive modules
-- **Typical usage**: Load overview + 1-2 specific modules (700-1,000 lines)
-- **Efficiency gain**: 60-70% reduction in context compared to monolithic documentation
+- **Typical usage**: Progressive loading based on assessment score and specific needs
+- **Context Loading Strategy**: Progressive module access based on assessment results
 
 **Progressive Loading Strategy**:
 1. **Start here** (overview.md) - Understand framework and assess your instruction
