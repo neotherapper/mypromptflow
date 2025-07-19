@@ -1,0 +1,371 @@
+---
+# Semantic Clustering Rules - Intelligent Document Relationship Formation
+# Version: 1.0
+# Created: 2025-07-18
+# Purpose: Define rules for identifying related documents and forming semantic clusters
+
+clustering_rules:
+  content_similarity_rules:
+    keyword_matching:
+      rule_name: "keyword_similarity"
+      description: "Documents with similar keywords and terminology"
+      weight: 0.7
+      scoring_method: "jaccard_similarity"
+      parameters:
+        min_keyword_overlap: 0.3
+        keyword_categories:
+          - business_terms: ["strategy", "roadmap", "objectives", "goals", "vision"]
+          - product_terms: ["features", "requirements", "specifications", "user stories"]
+          - technical_terms: ["architecture", "api", "database", "implementation"]
+          - quality_terms: ["testing", "validation", "compliance", "security"]
+          - user_terms: ["personas", "research", "experience", "journey"]
+        
+    concept_similarity:
+      rule_name: "concept_matching"
+      description: "Documents addressing similar business concepts"
+      weight: 0.8
+      scoring_method: "semantic_distance"
+      parameters:
+        concept_categories:
+          - planning: ["strategy", "roadmap", "objectives", "planning"]
+          - definition: ["requirements", "specifications", "definition", "scope"]
+          - implementation: ["architecture", "development", "coding", "deployment"]
+          - validation: ["testing", "quality", "validation", "verification"]
+          - analysis: ["research", "analysis", "evaluation", "assessment"]
+
+    template_similarity:
+      rule_name: "template_structure"
+      description: "Documents with similar structural patterns"
+      weight: 0.6
+      scoring_method: "structural_similarity"
+      parameters:
+        structure_elements:
+          - section_headers: 0.4
+          - document_format: 0.3
+          - field_patterns: 0.3
+        min_structural_similarity: 0.5
+
+  business_logic_rules:
+    workflow_sequence:
+      rule_name: "workflow_position"
+      description: "Documents that follow natural business workflow sequences"
+      weight: 0.9
+      scoring_method: "sequence_analysis"
+      parameters:
+        workflow_stages:
+          - strategy: 1
+          - research: 2
+          - planning: 3
+          - design: 4
+          - development: 5
+          - testing: 6
+          - deployment: 7
+          - compliance: 8
+        adjacency_bonus: 0.2
+        same_stage_bonus: 0.1
+
+    dependency_analysis:
+      rule_name: "document_dependencies"
+      description: "Documents with explicit or implicit dependencies"
+      weight: 0.95
+      scoring_method: "dependency_graph"
+      parameters:
+        explicit_dependencies:
+          weight: 1.0
+          sources: ["yaml_frontmatter", "cross_references", "template_dependencies"]
+        implicit_dependencies:
+          weight: 0.7
+          indicators: ["output_input_matching", "concept_prerequisites", "workflow_logic"]
+
+    output_input_matching:
+      rule_name: "data_flow"
+      description: "Documents where outputs of one feed inputs of another"
+      weight: 0.85
+      scoring_method: "flow_analysis"
+      parameters:
+        output_types:
+          - strategic_direction: ["business_model", "objectives", "vision"]
+          - requirements: ["functional_specs", "user_stories", "acceptance_criteria"]
+          - technical_specs: ["apis", "schemas", "architecture"]
+          - validation_criteria: ["test_cases", "quality_metrics", "compliance_checks"]
+
+  ai_value_alignment_rules:
+    tier_affinity:
+      rule_name: "ai_processing_tier"
+      description: "Documents with similar AI processing values cluster together"
+      weight: 0.6
+      scoring_method: "value_distance"
+      parameters:
+        tier_ranges:
+          tier1: [90, 95]
+          tier2: [80, 89]
+          tier3: [70, 79]
+          tier4: [60, 69]
+        same_tier_bonus: 0.3
+        adjacent_tier_bonus: 0.1
+
+    processing_complexity:
+      rule_name: "complexity_similarity"
+      description: "Documents requiring similar AI processing complexity"
+      weight: 0.5
+      scoring_method: "complexity_matching"
+      parameters:
+        complexity_factors:
+          - structured_data: 0.3
+          - creative_content: 0.4
+          - technical_precision: 0.3
+        complexity_levels:
+          - high: [85, 100]
+          - medium: [70, 84]
+          - low: [50, 69]
+
+# Cluster Formation Logic
+cluster_formation:
+  clustering_algorithm: "hierarchical_agglomerative"
+  distance_metric: "weighted_semantic_distance"
+  linkage_method: "average"
+  
+  parameters:
+    max_cluster_size: 8
+    min_cluster_size: 2
+    similarity_threshold: 0.6
+    merge_threshold: 0.7
+    
+  cluster_validation:
+    coherence_check: true
+    diversity_balance: true
+    business_logic_validation: true
+
+  cluster_naming:
+    naming_rules:
+      - primary_category_focus
+      - workflow_stage_identification
+      - business_value_emphasis
+    naming_patterns:
+      - "{stage}_{focus}_cluster"
+      - "{category}_{workflow}_group"
+      - "{value_type}_definition_set"
+
+# Relationship Strength Scoring
+relationship_scoring:
+  base_scoring:
+    dependency: 1.0
+    similarity: 0.8
+    complement: 0.9
+    sequence: 0.95
+    reference: 0.7
+
+  modifiers:
+    category_alignment:
+      same_category: 0.2
+      related_category: 0.1
+      different_category: -0.1
+
+    ai_value_alignment:
+      same_tier: 0.15
+      adjacent_tier: 0.05
+      distant_tier: -0.05
+
+    workflow_position:
+      sequential: 0.3
+      parallel: 0.1
+      independent: 0.0
+
+    usage_frequency:
+      high_usage: 0.1
+      medium_usage: 0.05
+      low_usage: 0.0
+
+  normalization:
+    method: "min_max_scaling"
+    range: [0.0, 1.0]
+    minimum_threshold: 0.3
+
+# Dynamic Clustering Rules
+dynamic_rules:
+  usage_pattern_learning:
+    enabled: true
+    learning_rate: 0.1
+    pattern_detection:
+      - frequent_document_pairs
+      - navigation_sequences
+      - creation_workflows
+      - ai_agent_preferences
+    
+    adaptation_triggers:
+      - usage_frequency_change
+      - new_document_introduction
+      - relationship_strength_drift
+      - cluster_performance_degradation
+
+  temporal_clustering:
+    enabled: true
+    time_decay_factor: 0.05
+    temporal_windows:
+      - recent: 30_days
+      - medium: 90_days
+      - historical: 365_days
+    
+    temporal_weights:
+      recent: 1.0
+      medium: 0.8
+      historical: 0.5
+
+  contextual_clustering:
+    enabled: true
+    context_factors:
+      - project_phase: 0.3
+      - team_composition: 0.2
+      - business_domain: 0.3
+      - technical_stack: 0.2
+    
+    context_adaptation:
+      - cluster_priorities_shift
+      - relationship_emphasis_change
+      - similarity_criteria_adjustment
+
+# Cluster Quality Metrics
+quality_metrics:
+  intra_cluster_similarity:
+    measurement: "average_pairwise_similarity"
+    target_minimum: 0.7
+    warning_threshold: 0.5
+
+  inter_cluster_dissimilarity:
+    measurement: "minimum_cluster_distance"
+    target_minimum: 0.4
+    warning_threshold: 0.2
+
+  cluster_coherence:
+    measurement: "semantic_coherence_score"
+    components:
+      - concept_consistency: 0.4
+      - workflow_alignment: 0.3
+      - business_logic: 0.3
+    target_minimum: 0.8
+
+  cluster_utility:
+    measurement: "user_satisfaction_score"
+    metrics:
+      - recommendation_accuracy: 0.4
+      - discovery_efficiency: 0.3
+      - workflow_support: 0.3
+    target_minimum: 0.75
+
+# Update and Maintenance Rules
+update_rules:
+  automatic_updates:
+    triggers:
+      - new_document_added:
+          action: "recalculate_similarities"
+          scope: "affected_clusters"
+          threshold: 0.1
+      
+      - document_modified:
+          action: "update_relationships"
+          scope: "document_neighbors"
+          threshold: 0.05
+      
+      - usage_pattern_change:
+          action: "adjust_weights"
+          scope: "global"
+          threshold: 0.15
+
+  manual_review_triggers:
+    cluster_quality_degradation:
+      threshold: 0.6
+      review_actions:
+        - cluster_splitting
+        - relationship_revalidation
+        - rule_parameter_adjustment
+
+    relationship_inconsistency:
+      threshold: 0.3
+      review_actions:
+        - bidirectional_validation
+        - circular_dependency_resolution
+        - strength_recalibration
+
+# Cluster Validation Rules
+validation_rules:
+  business_logic_validation:
+    workflow_consistency:
+      rule: "documents_in_cluster_should_support_common_workflow"
+      validation_method: "workflow_coherence_check"
+      tolerance: 0.2
+
+    dependency_alignment:
+      rule: "cluster_dependencies_should_be_logically_consistent"
+      validation_method: "dependency_graph_validation"
+      tolerance: 0.1
+
+    category_coherence:
+      rule: "clusters_should_have_primary_category_focus"
+      validation_method: "category_distribution_analysis"
+      max_category_spread: 3
+
+  technical_validation:
+    similarity_thresholds:
+      rule: "all_cluster_members_should_meet_minimum_similarity"
+      validation_method: "pairwise_similarity_check"
+      minimum_threshold: 0.5
+
+    cluster_size_limits:
+      rule: "clusters_should_be_appropriately_sized"
+      validation_method: "size_boundary_check"
+      min_size: 2
+      max_size: 8
+      optimal_range: [3, 6]
+
+  performance_validation:
+    computational_efficiency:
+      rule: "clustering_should_complete_within_time_limits"
+      validation_method: "performance_benchmark"
+      max_computation_time: 30_seconds
+
+    memory_usage:
+      rule: "clustering_should_not_exceed_memory_limits"
+      validation_method: "memory_profiling"
+      max_memory_usage: 512_mb
+
+# Error Handling and Recovery
+error_handling:
+  clustering_failures:
+    insufficient_data:
+      fallback: "use_category_based_clustering"
+      recovery_action: "collect_more_document_metadata"
+    
+    similarity_calculation_errors:
+      fallback: "use_structural_similarity_only"
+      recovery_action: "validate_document_content"
+    
+    circular_dependencies:
+      fallback: "break_weakest_dependency_link"
+      recovery_action: "manual_dependency_review"
+
+  performance_degradation:
+    slow_clustering:
+      fallback: "use_simplified_algorithm"
+      recovery_action: "optimize_similarity_calculations"
+    
+    memory_overflow:
+      fallback: "process_documents_in_batches"
+      recovery_action: "implement_memory_efficient_algorithms"
+
+# Integration Points
+integration_points:
+  document_registry:
+    sync_frequency: "real_time"
+    update_events: ["document_added", "document_modified", "document_deleted"]
+    
+  knowledge_base:
+    export_format: "semantic_graph"
+    update_frequency: "daily"
+    
+  ai_agents:
+    query_interface: "semantic_search_api"
+    recommendation_engine: "cluster_based_suggestions"
+    
+  user_interface:
+    visualization: "cluster_network_diagram"
+    interaction_mode: "navigable_semantic_map"
