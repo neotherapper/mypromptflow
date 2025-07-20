@@ -399,43 +399,43 @@ This framework has been validated with 93% overall effectiveness, achieving 92% 
 #### Framework Coherence Analyzer
 **Purpose**: Detect structural inconsistencies and gaps in instruction frameworks
 **Accuracy**: 99% detection rate for framework coherence issues
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/framework-coherence-analyzer.md`
+**Usage**: `meta/validators/framework-coherence-analyzer.md`
 **Automation**: 75-80% time reduction in coherence validation
 
 #### Communication Pattern Validator  
 **Purpose**: Identify and prevent multi-agent communication failures
 **Impact**: 35-40% failure prevention through pattern validation
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/communication-pattern-validator.md`
+**Usage**: `meta/validators/communication-pattern-validator.md`
 **Automation**: 70-75% time reduction in communication validation
 
 #### Workflow Completeness Inspector
 **Purpose**: Ensure comprehensive workflow coverage and prevent deployment failures
 **Impact**: 85-90% deployment failure reduction through completeness validation
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/workflow-completeness-inspector.md`
+**Usage**: `meta/validators/workflow-completeness-inspector.md`
 **Automation**: 80-90% time reduction in completeness assessment
 
 #### Constitutional AI Compliance Checker
 **Purpose**: Validate ethical standards and constitutional AI principles
 **Compliance**: 95% violation prevention through systematic checking
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/constitutional-ai-compliance-checker.md`
+**Usage**: `meta/validators/constitutional-ai-checker.md`
 **Automation**: 85-95% time reduction in compliance validation
 
 #### Resilience Assessment Engine
 **Purpose**: Evaluate framework resilience against failure cascades
 **Impact**: 85-90% cascade prevention through resilience validation
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/resilience-assessment-engine.md`
+**Usage**: `meta/validators/resilience-assessment-engine.md`
 **Automation**: 75-85% time reduction in resilience assessment
 
 #### Context Optimization Tool
 **Purpose**: Optimize token usage through progressive context loading
 **Efficiency**: 70% token reduction through optimization strategies
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/context-optimization-tool.md`
+**Usage**: `meta/validators/context-optimization-tool.md`
 **Automation**: 60-70% time reduction in optimization analysis
 
 #### Multi-Agent Coordination Dashboard
 **Purpose**: Monitor and validate multi-agent coordination patterns
 **Accuracy**: 99% monitoring accuracy for coordination effectiveness
-**Usage**: `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/multi-agent-coordination-dashboard.md`
+**Usage**: `meta/validators/multi-agent-coordination-dashboard.md`
 **Automation**: 85-95% time reduction in coordination monitoring
 
 ### Progressive Context Loading Protocols
@@ -583,7 +583,7 @@ optimization_results:
 - `projects/ai-agent-instruction-design-excellence/` - Complete framework implementation
 - `projects/ai-agent-instruction-design-excellence/docs/` - Assessment tools and validation guides
 - `projects/ai-agent-instruction-design-excellence/knowledge-vault/` - Detailed pattern libraries
-- `projects/ai-agent-instruction-design-excellence/docs/assessment-tools/` - Production-ready assessment automation
+- `meta/validators/` - Production-ready assessment automation (extracted from framework)
 
 **Integration Cross-References**:
 - Research framework integration: `research/orchestrator/integration/gemini-orchestrator-integration.yaml`

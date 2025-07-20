@@ -58,13 +58,34 @@ research/findings/[topic]/
 │   ├── perspective-2-qualitative.md   # Individual outputs (multi-perspective)
 │   ├── phase-1-discovery.md          # Individual outputs (step-by-step)
 │   └── [other method-specific files]  # Based on method used
-└── meta/                        # All metadata and tracking
+└── .meta/                       # All metadata and tracking (hidden folder)
     ├── research-execution-log.yaml
     ├── research-metadata.yaml
     ├── method-compliance.yaml      # NEW: Method validation
     ├── research-plan.md
     └── research-sources.md
 ```
+
+### 🚨 CRITICAL PATH ENFORCEMENT 🚨
+
+**RESEARCH FINDINGS MUST GO IN /research/findings/ - NEVER /docs/ OR ANY OTHER LOCATION**
+
+**BEFORE CREATING ANY FILES:**
+1. **VERIFY** the path starts with `research/findings/`
+2. **DOUBLE-CHECK** you are not using `docs/`, `projects/`, `ai/`, or any other base path
+3. **CONFIRM** the folder structure follows the exact pattern: `research/findings/[topic]/research/` and `research/findings/[topic]/.meta/`
+
+**FORBIDDEN PATHS:**
+- ❌ `docs/research-findings/` 
+- ❌ `docs/`
+- ❌ `projects/*/docs/`
+- ❌ `ai/`
+- ❌ Any path other than `research/findings/`
+
+**REQUIRED PATHS:**
+- ✅ `research/findings/[topic]/research/comprehensive-analysis.md`
+- ✅ `research/findings/[topic]/.meta/research-plan.md`
+- ✅ `research/findings/[topic]/.meta/research-sources.md`
 
 ### Required Files (Non-Negotiable)
 
