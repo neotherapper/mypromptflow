@@ -4,7 +4,7 @@
 
 research_registry:
   version: "2.0.0"
-  last_updated: "2025-01-19"
+  last_updated: "2025-07-20"
   archive_location: "research/sessions/"
   
 research_sessions:
@@ -198,6 +198,22 @@ research_sessions:
     date: "2025-01-19"
     researcher: "Claude-4-Research-Agent"
     project: "AI-Powered PR Validation System Implementation"
+
+  keycloak_workos_business_case_analysis_research:
+    session_id: "business_case_analysis_20250720_0000"
+    archive_file: "research/sessions/keycloak-workos-business-case-analysis-20250720.yaml"
+    date: "2025-07-20"
+    researcher: "Claude Sonnet 4"
+    project: "B2C Authentication Solution Business Case Analysis"
+    
+    research_topics:
+      - topic_id: "keycloak-workos-business-case-analysis"
+        title: "KeyCloak vs WorkOS B2C Authentication Solutions: Comprehensive Business Case Analysis"
+        status: "completed"
+        quality_score: 96
+        location: "research/findings/keycloak-workos-business-case-analysis/"
+        key_outcomes: "WorkOS provides superior ROI (392%) and cost advantages up to 3.5M users; KeyCloak viable for enterprise scale (5M+ users) with dedicated DevOps capabilities"
+        applications: "B2C authentication platform selection decisions, enterprise software procurement strategies"
     
     research_topics:
       - topic_id: "file-pattern-recognition-systems"
