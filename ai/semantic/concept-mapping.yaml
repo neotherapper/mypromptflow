@@ -1,0 +1,504 @@
+---
+# Concept Mapping - Business Concepts to Document Relationships
+# Version: 1.0
+# Created: 2025-07-18
+# Purpose: Map key business concepts to associated documents and enable semantic search
+
+# Core Business Concepts
+business_concepts:
+  strategy:
+    definition: "High-level business direction and planning"
+    aliases: ["strategic planning", "business strategy", "vision", "objectives"]
+    associated_documents:
+      primary:
+        - strategic-roadmap: 0.95
+        - business-model-canvas: 0.9
+        - okr-documentation: 0.9
+        - north-star-metric: 0.85
+      secondary:
+        - investment-readiness-level: 0.8
+        - market-requirements-document: 0.75
+        - competitive-analysis: 0.7
+    semantic_tags:
+      - long_term_planning
+      - business_vision
+      - strategic_objectives
+      - competitive_advantage
+    search_terms: ["strategy", "roadmap", "vision", "objectives", "planning", "direction"]
+
+  product_management:
+    definition: "Product definition, requirements, and lifecycle management"
+    aliases: ["product development", "product planning", "feature management"]
+    associated_documents:
+      primary:
+        - prd: 0.95
+        - epic-documentation: 0.9
+        - user-story-backlog: 0.9
+        - mvp-specifications: 0.85
+      secondary:
+        - build-measure-learn: 0.8
+        - product-analytics-strategy: 0.8
+        - pivot-persevere-decisions: 0.75
+        - release-notes: 0.7
+    semantic_tags:
+      - product_requirements
+      - feature_definition
+      - product_lifecycle
+      - user_value
+    search_terms: ["product", "features", "requirements", "specifications", "epic", "mvp"]
+
+  user_experience:
+    definition: "User research, design, and experience optimization"
+    aliases: ["ux", "user research", "design", "usability"]
+    associated_documents:
+      primary:
+        - user-personas: 0.95
+        - user-research: 0.9
+        - design-system: 0.9
+        - user-stories: 0.85
+      secondary:
+        - wireframes: 0.8
+        - accessibility-requirements: 0.8
+        - user-journey-maps: 0.75
+        - usability-testing: 0.7
+    semantic_tags:
+      - user_research
+      - design_system
+      - user_interface
+      - usability
+    search_terms: ["user", "personas", "research", "design", "ux", "interface", "usability"]
+
+  technical_architecture:
+    definition: "Technical design, architecture, and implementation guidance"
+    aliases: ["architecture", "technical design", "system design", "engineering"]
+    associated_documents:
+      primary:
+        - system-architecture: 0.95
+        - api-documentation: 0.9
+        - database-schemas: 0.9
+        - technical-requirements: 0.85
+      secondary:
+        - api-documentation-openapi: 0.8
+        - performance-requirements: 0.8
+        - security-requirements: 0.75
+        - integration-specifications: 0.7
+    semantic_tags:
+      - system_design
+      - technical_implementation
+      - architecture_patterns
+      - integration_points
+    search_terms: ["architecture", "api", "database", "system", "technical", "implementation"]
+
+  quality_assurance:
+    definition: "Testing, validation, and quality standards"
+    aliases: ["testing", "qa", "quality", "validation"]
+    associated_documents:
+      primary:
+        - test-plans: 0.95
+        - test-cases: 0.9
+        - acceptance-criteria-specifications: 0.9
+        - quality-standards: 0.85
+      secondary:
+        - performance-requirements: 0.8
+        - security-requirements: 0.8
+        - compliance-checklist: 0.75
+        - audit-documentation: 0.7
+    semantic_tags:
+      - test_strategy
+      - quality_metrics
+      - validation_criteria
+      - acceptance_testing
+    search_terms: ["testing", "quality", "validation", "acceptance", "qa", "test cases"]
+
+  business_analysis:
+    definition: "Market analysis, competitive intelligence, and business insights"
+    aliases: ["market analysis", "competitive analysis", "business intelligence"]
+    associated_documents:
+      primary:
+        - competitive-analysis: 0.95
+        - market-analysis: 0.9
+        - business-requirements: 0.9
+        - stakeholder-analysis: 0.85
+      secondary:
+        - market-requirements-document: 0.8
+        - business-process: 0.8
+        - investment-readiness-level: 0.75
+        - business-model-canvas: 0.7
+    semantic_tags:
+      - market_intelligence
+      - competitive_landscape
+      - business_requirements
+      - stakeholder_needs
+    search_terms: ["market", "competition", "analysis", "business", "requirements", "stakeholders"]
+
+  compliance_governance:
+    definition: "Regulatory compliance, governance, and risk management"
+    aliases: ["compliance", "governance", "regulatory", "risk management"]
+    associated_documents:
+      primary:
+        - regulatory-requirements: 0.95
+        - compliance-checklist: 0.9
+        - security-policies: 0.9
+        - audit-documentation: 0.85
+      secondary:
+        - privacy-policies: 0.8
+        - risk-assessment: 0.8
+        - security-requirements: 0.75
+        - governance-framework: 0.7
+    semantic_tags:
+      - regulatory_compliance
+      - governance_framework
+      - risk_management
+      - audit_trail
+    search_terms: ["compliance", "regulatory", "governance", "security", "privacy", "audit"]
+
+# Concept Hierarchies
+concept_hierarchies:
+  business_strategy:
+    parent: null
+    children:
+      - market_strategy: 0.8
+      - product_strategy: 0.9
+      - competitive_strategy: 0.7
+      - growth_strategy: 0.8
+    related_concepts:
+      - product_management: 0.8
+      - business_analysis: 0.7
+      - user_experience: 0.6
+
+  product_development:
+    parent: "product_management"
+    children:
+      - feature_development: 0.9
+      - product_design: 0.8
+      - product_testing: 0.7
+      - product_launch: 0.6
+    related_concepts:
+      - technical_architecture: 0.8
+      - user_experience: 0.9
+      - quality_assurance: 0.7
+
+  technical_implementation:
+    parent: "technical_architecture"
+    children:
+      - system_design: 0.9
+      - api_design: 0.8
+      - database_design: 0.8
+      - security_design: 0.7
+    related_concepts:
+      - product_management: 0.7
+      - quality_assurance: 0.8
+      - compliance_governance: 0.6
+
+  user_centered_design:
+    parent: "user_experience"
+    children:
+      - user_research: 0.9
+      - interaction_design: 0.8
+      - visual_design: 0.7
+      - usability_testing: 0.8
+    related_concepts:
+      - product_management: 0.8
+      - business_analysis: 0.6
+      - quality_assurance: 0.7
+
+# Semantic Tags for Document Classification
+semantic_tags:
+  content_type:
+    definition: "Type of content and information structure"
+    values:
+      - requirements: "Formal requirements and specifications"
+      - analysis: "Research and analytical content"
+      - design: "Design specifications and guidelines"
+      - process: "Process definitions and workflows"
+      - reference: "Reference materials and documentation"
+      - validation: "Testing and validation specifications"
+
+  business_value:
+    definition: "Business impact and value proposition"
+    values:
+      - strategic: "Strategic business impact"
+      - operational: "Operational efficiency impact"
+      - customer: "Customer value and satisfaction"
+      - financial: "Financial and revenue impact"
+      - risk: "Risk mitigation and compliance"
+      - innovation: "Innovation and competitive advantage"
+
+  development_stage:
+    definition: "Stage in the development lifecycle"
+    values:
+      - planning: "Early planning and strategy"
+      - analysis: "Requirements analysis and research"
+      - design: "Design and architecture"
+      - implementation: "Development and coding"
+      - testing: "Testing and validation"
+      - deployment: "Deployment and launch"
+      - maintenance: "Ongoing maintenance and updates"
+
+  audience:
+    definition: "Primary audience and stakeholders"
+    values:
+      - executives: "C-level and senior management"
+      - product_managers: "Product management team"
+      - developers: "Engineering and development team"
+      - designers: "UX/UI design team"
+      - qa_team: "Quality assurance team"
+      - business_analysts: "Business analysis team"
+      - compliance_team: "Compliance and governance team"
+
+  complexity_level:
+    definition: "Document complexity and technical depth"
+    values:
+      - high: "Highly technical and complex"
+      - medium: "Moderate complexity and specialization"
+      - low: "Accessible to general audience"
+      - executive: "Executive summary level"
+
+# Search Optimization Mappings
+search_mappings:
+  keyword_expansion:
+    strategy:
+      primary: ["strategy", "strategic", "planning", "roadmap", "vision"]
+      secondary: ["objectives", "goals", "direction", "approach", "framework"]
+      contextual: ["business strategy", "product strategy", "competitive strategy"]
+
+    requirements:
+      primary: ["requirements", "specifications", "criteria", "needs"]
+      secondary: ["functional", "non-functional", "acceptance", "business"]
+      contextual: ["user requirements", "technical requirements", "business requirements"]
+
+    design:
+      primary: ["design", "architecture", "system", "structure"]
+      secondary: ["pattern", "blueprint", "model", "framework"]
+      contextual: ["system design", "ui design", "database design", "api design"]
+
+    testing:
+      primary: ["testing", "validation", "verification", "quality"]
+      secondary: ["test cases", "test plans", "acceptance", "qa"]
+      contextual: ["unit testing", "integration testing", "user acceptance testing"]
+
+    user:
+      primary: ["user", "customer", "persona", "experience"]
+      secondary: ["journey", "workflow", "interface", "interaction"]
+      contextual: ["user experience", "user research", "user stories", "user interface"]
+
+  intent_mapping:
+    find_requirements:
+      concepts: ["product_management", "business_analysis", "user_experience"]
+      documents: ["prd", "business-requirements", "user-stories", "acceptance-criteria-specifications"]
+      search_boost: 1.2
+
+    understand_architecture:
+      concepts: ["technical_architecture", "system_design"]
+      documents: ["system-architecture", "api-documentation", "database-schemas", "technical-requirements"]
+      search_boost: 1.1
+
+    plan_strategy:
+      concepts: ["strategy", "business_analysis", "competitive_analysis"]
+      documents: ["strategic-roadmap", "business-model-canvas", "competitive-analysis", "market-analysis"]
+      search_boost: 1.3
+
+    validate_quality:
+      concepts: ["quality_assurance", "compliance_governance"]
+      documents: ["test-plans", "quality-standards", "compliance-checklist", "audit-documentation"]
+      search_boost: 1.1
+
+    design_experience:
+      concepts: ["user_experience", "product_management"]
+      documents: ["user-personas", "design-system", "user-research", "wireframes"]
+      search_boost: 1.2
+
+# Concept-to-Document Strength Matrix
+concept_document_matrix:
+  strategy:
+    strategic-roadmap: 0.95
+    business-model-canvas: 0.9
+    okr-documentation: 0.9
+    north-star-metric: 0.85
+    investment-readiness-level: 0.8
+    market-requirements-document: 0.75
+    competitive-analysis: 0.7
+    prd: 0.6
+
+  product_management:
+    prd: 0.95
+    epic-documentation: 0.9
+    user-story-backlog: 0.9
+    mvp-specifications: 0.85
+    build-measure-learn: 0.8
+    product-analytics-strategy: 0.8
+    pivot-persevere-decisions: 0.75
+    acceptance-criteria-specifications: 0.8
+
+  user_experience:
+    user-personas: 0.95
+    user-research: 0.9
+    design-system: 0.9
+    user-stories: 0.85
+    wireframes: 0.8
+    accessibility-requirements: 0.8
+    usability-testing: 0.75
+    user-journey-maps: 0.75
+
+  technical_architecture:
+    system-architecture: 0.95
+    api-documentation: 0.9
+    database-schemas: 0.9
+    technical-requirements: 0.85
+    api-documentation-openapi: 0.8
+    performance-requirements: 0.8
+    security-requirements: 0.75
+    integration-specifications: 0.7
+
+  quality_assurance:
+    test-plans: 0.95
+    test-cases: 0.9
+    acceptance-criteria-specifications: 0.9
+    quality-standards: 0.85
+    performance-requirements: 0.8
+    security-requirements: 0.8
+    compliance-checklist: 0.75
+    audit-documentation: 0.7
+
+  business_analysis:
+    competitive-analysis: 0.95
+    market-analysis: 0.9
+    business-requirements: 0.9
+    stakeholder-analysis: 0.85
+    market-requirements-document: 0.8
+    business-process: 0.8
+    investment-readiness-level: 0.75
+    business-model-canvas: 0.7
+
+  compliance_governance:
+    regulatory-requirements: 0.95
+    compliance-checklist: 0.9
+    security-policies: 0.9
+    audit-documentation: 0.85
+    privacy-policies: 0.8
+    risk-assessment: 0.8
+    security-requirements: 0.75
+    governance-framework: 0.7
+
+# Concept Evolution and Learning
+concept_evolution:
+  learning_mechanisms:
+    usage_pattern_analysis:
+      enabled: true
+      learning_rate: 0.1
+      pattern_sources:
+        - document_access_patterns
+        - search_query_analysis
+        - ai_agent_interactions
+        - user_navigation_flows
+
+    semantic_drift_detection:
+      enabled: true
+      drift_threshold: 0.15
+      monitoring_metrics:
+        - concept_document_associations
+        - search_term_effectiveness
+        - concept_hierarchy_stability
+        - tag_classification_accuracy
+
+    concept_emergence:
+      enabled: true
+      emergence_threshold: 0.6
+      detection_methods:
+        - frequent_term_combinations
+        - new_document_type_patterns
+        - cross_concept_relationships
+        - usage_cluster_analysis
+
+  adaptation_rules:
+    concept_strength_adjustment:
+      trigger: "usage_pattern_change"
+      adjustment_rate: 0.05
+      max_adjustment: 0.2
+      stability_period: 30_days
+
+    hierarchy_restructuring:
+      trigger: "relationship_strength_change"
+      restructure_threshold: 0.3
+      validation_required: true
+      rollback_capability: true
+
+    tag_evolution:
+      trigger: "classification_accuracy_drop"
+      accuracy_threshold: 0.7
+      retraining_interval: 90_days
+      validation_method: "cross_validation"
+
+# Search Enhancement Features
+search_enhancement:
+  query_expansion:
+    enabled: true
+    expansion_methods:
+      - synonym_expansion
+      - concept_related_terms
+      - hierarchical_expansion
+      - contextual_suggestions
+
+  semantic_search:
+    enabled: true
+    search_algorithms:
+      - concept_similarity_search
+      - document_relationship_traversal
+      - multi_concept_intersection
+      - workflow_aware_search
+
+  intelligent_suggestions:
+    enabled: true
+    suggestion_types:
+      - related_documents
+      - complementary_concepts
+      - workflow_next_steps
+      - missing_documentation
+
+  personalization:
+    enabled: true
+    personalization_factors:
+      - user_role
+      - project_context
+      - search_history
+      - document_interaction_patterns
+
+# Integration Configuration
+integration_config:
+  document_registry_sync:
+    frequency: "real_time"
+    sync_events: ["document_added", "document_updated", "document_deleted"]
+    batch_processing: true
+    error_handling: "graceful_degradation"
+
+  ai_agent_integration:
+    query_interface: "concept_aware_search"
+    recommendation_engine: "multi_concept_ranking"
+    context_awareness: "project_and_role_based"
+    feedback_loop: "continuous_learning"
+
+  user_interface_hooks:
+    search_autocomplete: "concept_driven_suggestions"
+    document_discovery: "semantic_browsing"
+    workflow_guidance: "concept_based_navigation"
+    analytics_dashboard: "concept_usage_metrics"
+
+# Performance Optimization
+performance_optimization:
+  caching_strategy:
+    concept_mappings: "in_memory_cache"
+    search_results: "lru_cache"
+    document_relationships: "persistent_cache"
+    cache_invalidation: "event_driven"
+
+  indexing_optimization:
+    concept_index: "inverted_index"
+    semantic_index: "vector_space_model"
+    relationship_index: "graph_database"
+    update_frequency: "incremental"
+
+  query_optimization:
+    query_planning: "cost_based_optimization"
+    result_ranking: "multi_factor_scoring"
+    pagination: "cursor_based"
+    response_time_target: "sub_second"

@@ -1,0 +1,284 @@
+# File Type to Validator Mapping
+# Auto-generated from validator discovery - shows coverage vs gaps
+
+file_type_coverage:
+  discovery_date: "2025-01-19"
+  total_file_types_analyzed: 15
+  covered_types: 4
+  uncovered_types: 11
+  coverage_percentage: "27%"
+
+  # WELL COVERED - Production Ready Validators Available
+  covered_types:
+    ".claude/commands/*.md":
+      validator: "claude-command-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/claude-command-evaluator.md"
+      capabilities: ["command structure", "syntax", "documentation quality", "best practices"]
+      spawn_pattern: "Task tool with claude-command-evaluator agent"
+      production_ready: true
+      confidence: "high"
+      
+    "ai/agents/*.md":
+      validator: "ai-agent-instruction-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/ai-agent-instruction-evaluator.md"
+      capabilities: ["AI instruction framework compliance", "effectiveness scoring", "multi-level validation"]
+      spawn_pattern: "Task tool with ai-agent-instruction-evaluator agent"
+      production_ready: true
+      confidence: "high"
+      
+    "ai/prompts/**/*.md":
+      validator: "ai-agent-instruction-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/ai-agent-instruction-evaluator.md"
+      capabilities: ["prompt template validation", "AI instruction detection", "content-based analysis"]
+      spawn_pattern: "Task tool with ai-agent-instruction-evaluator agent"
+      production_ready: true
+      confidence: "high"
+      
+    "**/CLAUDE.md":
+      validator: "ai-agent-instruction-evaluator"
+      location: "projects/ai-pr-validation-system/ai/agents/ai-agent-instruction-evaluator.md"
+      capabilities: ["CLAUDE.md special handling", "Claude integration validation", "framework compliance"]
+      spawn_pattern: "Task tool with ai-agent-instruction-evaluator agent + improve-claude.md methodology"
+      production_ready: true
+      confidence: "high"
+
+  # MAJOR GAPS - No Production Validators Available
+  uncovered_types:
+    "*.ts":
+      description: "TypeScript source files"
+      priority: "CRITICAL"
+      justification: "Large TypeScript codebase in project"
+      estimated_files: "100+"
+      missing_capabilities:
+        - "TypeScript syntax validation"
+        - "Type checking"
+        - "Import/export validation"
+        - "React component validation"
+        - "ESLint integration"
+      recommended_validator: "typescript-frontend-validator"
+      implementation_effort: "high"
+      
+    "*.tsx":
+      description: "TypeScript React component files"
+      priority: "CRITICAL"
+      justification: "React frontend requires component validation"
+      estimated_files: "50+"
+      missing_capabilities:
+        - "React component structure"
+        - "Props validation"
+        - "Hook usage validation"
+        - "JSX syntax checking"
+        - "Component testing validation"
+      recommended_validator: "typescript-frontend-validator"
+      implementation_effort: "high"
+      
+    "*.py":
+      description: "Python source files"
+      priority: "HIGH"
+      justification: "Python backend/scripts need validation"
+      estimated_files: "20+"
+      missing_capabilities:
+        - "Python syntax validation"
+        - "PEP compliance checking"
+        - "Import validation"
+        - "Function/class structure"
+        - "Security vulnerability scanning"
+      recommended_validator: "python-backend-validator"
+      implementation_effort: "medium"
+      
+    "*.test.ts, *.spec.js":
+      description: "Test files"
+      priority: "HIGH"
+      justification: "Test quality validation needed"
+      estimated_files: "30+"
+      missing_capabilities:
+        - "Test structure validation"
+        - "Coverage requirements"
+        - "Assertion quality"
+        - "Mock usage validation"
+        - "Test naming conventions"
+      recommended_validator: "test-validator"
+      implementation_effort: "medium"
+      
+    "*.yaml, *.yml":
+      description: "YAML configuration files"
+      priority: "MEDIUM"
+      justification: "Docker, CI/CD, and config validation"
+      estimated_files: "15+"
+      missing_capabilities:
+        - "YAML syntax validation"
+        - "Schema validation"
+        - "Docker Compose validation"
+        - "CI/CD configuration validation"
+        - "Security configuration checking"
+      recommended_validator: "yaml-config-validator"
+      implementation_effort: "low"
+      
+    "*.json":
+      description: "JSON configuration files"
+      priority: "MEDIUM"
+      justification: "package.json, tsconfig.json, etc."
+      estimated_files: "10+"
+      missing_capabilities:
+        - "JSON syntax validation"
+        - "Schema validation"
+        - "Package.json dependency checking"
+        - "Configuration consistency"
+        - "Security vulnerability scanning"
+      recommended_validator: "json-schema-validator"
+      implementation_effort: "low"
+      
+    "*.js, *.jsx":
+      description: "JavaScript/React files"
+      priority: "LOW"
+      justification: "Minimal JavaScript in TypeScript project"
+      estimated_files: "5+"
+      missing_capabilities:
+        - "JavaScript syntax validation"
+        - "ESLint integration"
+        - "React component validation"
+        - "Legacy code checking"
+      recommended_validator: "javascript-validator OR extend typescript-validator"
+      implementation_effort: "low"
+      
+    "*.css, *.scss":
+      description: "Styling files"
+      priority: "LOW"
+      justification: "Style quality and consistency"
+      estimated_files: "10+"
+      missing_capabilities:
+        - "CSS syntax validation"
+        - "SCSS compilation checking"
+        - "Style consistency validation"
+        - "Responsive design validation"
+      recommended_validator: "style-validator"
+      implementation_effort: "low"
+      
+    "*.md (general)":
+      description: "General markdown files (non-AI instructions)"
+      priority: "LOW"
+      justification: "Documentation quality (separate from AI instructions)"
+      estimated_files: "50+"
+      missing_capabilities:
+        - "Markdown linting"
+        - "Link validation"
+        - "Documentation structure"
+        - "Content quality checking"
+      recommended_validator: "markdown-linter"
+      implementation_effort: "low"
+      note: "AI instruction .md files already covered by ai-agent-instruction-evaluator"
+      
+    "Dockerfile, docker-compose.yml":
+      description: "Container configuration files"
+      priority: "LOW"
+      justification: "Container security and best practices"
+      estimated_files: "3+"
+      missing_capabilities:
+        - "Dockerfile best practices"
+        - "Security vulnerability scanning"
+        - "Multi-stage build validation"
+        - "Container optimization"
+      recommended_validator: "docker-validator"
+      implementation_effort: "low"
+      
+    "API definitions":
+      description: "OpenAPI, Swagger specifications"
+      priority: "LOW"
+      justification: "API specification validation"
+      estimated_files: "2+"
+      missing_capabilities:
+        - "OpenAPI schema validation"
+        - "API consistency checking"
+        - "Documentation completeness"
+        - "Security specification validation"
+      recommended_validator: "api-definition-validator"
+      implementation_effort: "medium"
+
+  # PARTIALLY COVERED - Development Stage Validators
+  development_stage_coverage:
+    "workflow validations":
+      validators:
+        - "strategic-to-product-validator"
+        - "research-to-design-validator"
+        - "business-to-technical-validator"
+        - "requirements-to-testing-validator"
+      status: "Development stage - not production ready"
+      location: "ai/validation/chain-validators/"
+      
+    "constitutional AI compliance":
+      validators:
+        - "constitutional-ai-compliance-checker"
+      status: "Development stage - framework assessment tool"
+      location: "projects/ai-agent-instruction-design-excellence/docs/assessment-tools/"
+
+# Progressive Loading Impact Analysis
+progressive_loading_analysis:
+  current_architecture:
+    file: "validate-pr.md"
+    approach: "Monolithic - loads all detection patterns"
+    token_count: "~500 lines always loaded"
+    efficiency: "POOR - 50-80% waste for simple PRs"
+    
+  optimized_architecture:
+    file: "validate-pr.md (coordinator)"
+    approach: "Discovery-first - load only relevant validators"
+    base_token_count: "~50 lines (coordinator)"
+    variable_token_count: "50-400 lines (based on file types detected)"
+    efficiency: "EXCELLENT - 50-80% savings"
+    
+  efficiency_scenarios:
+    simple_pr_claude_commands_only:
+      files: [".claude/commands/new-command.md"]
+      current_load: "500 lines (all patterns)"
+      optimized_load: "100 lines (coordinator + claude-command-evaluator)"
+      savings: "80%"
+      validators_used: ["claude-command-evaluator"]
+      
+    medium_pr_typescript_and_commands:
+      files: [".claude/commands/fix.md", "src/components/Button.tsx"]
+      current_load: "500 lines (all patterns)"
+      optimized_load: "160 lines (coordinator + typescript + claude-command validators)"
+      savings: "68%"
+      validators_used: ["claude-command-evaluator", "typescript-frontend-validator"]
+      
+    complex_pr_multiple_types:
+      files: ["*.ts", "*.py", "*.yaml", ".claude/commands/*.md"]
+      current_load: "500 lines (all patterns)"
+      optimized_load: "250 lines (coordinator + 4 relevant validators)"
+      savings: "50%"
+      validators_used: ["typescript-frontend-validator", "python-backend-validator", "yaml-config-validator", "claude-command-evaluator"]
+
+# Implementation Recommendations
+implementation_roadmap:
+  phase_1_immediate:
+    priority: "CRITICAL"
+    timeline: "1-2 days"
+    tasks:
+      - "Refactor validate-pr.md to discovery-first architecture"
+      - "Implement progressive loading using existing validators"
+      - "Test token efficiency with existing claude-command-evaluator and ai-agent-instruction-evaluator"
+      
+  phase_2_high_priority_gaps:
+    priority: "HIGH"
+    timeline: "1 week"
+    tasks:
+      - "Create typescript-frontend-validator for .ts/.tsx files"
+      - "Create python-backend-validator for .py files"
+      - "Create test-validator for test files"
+      - "Integrate with progressive loading architecture"
+      
+  phase_3_configuration_validation:
+    priority: "MEDIUM"
+    timeline: "3-5 days"
+    tasks:
+      - "Create yaml-config-validator for YAML files"
+      - "Create json-schema-validator for JSON files"
+      - "Add to progressive loading system"
+      
+  phase_4_comprehensive_coverage:
+    priority: "LOW"
+    timeline: "1-2 weeks"
+    tasks:
+      - "Create remaining validators for complete coverage"
+      - "Optimize progressive loading system"
+      - "Add advanced validation capabilities"

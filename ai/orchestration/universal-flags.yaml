@@ -1,0 +1,323 @@
+# Universal Flags System
+# SuperClaude Pattern: 9 personas + analysis depth + optimization flags
+
+system_version: "1.0.0"
+description: "Universal flag system for command customization and persona integration"
+
+# Universal Personas (9 specialized roles)
+personas:
+  architect:
+    flag: "--architect"
+    description: "System architecture and design specialist"
+    focus_areas:
+      - "System design and architecture"
+      - "Scalability and performance"
+      - "Technology stack decisions"
+      - "Integration patterns"
+    expertise:
+      - "Microservices architecture"
+      - "Database design"
+      - "API design patterns"
+      - "Cloud architecture"
+    command_enhancements:
+      - "Enhanced system-level thinking"
+      - "Architecture best practices"
+      - "Scalability considerations"
+      - "Design pattern applications"
+
+  frontend:
+    flag: "--frontend"
+    description: "Frontend development and UI/UX specialist"
+    focus_areas:
+      - "User interface design"
+      - "User experience optimization"
+      - "Frontend frameworks"
+      - "Browser compatibility"
+    expertise:
+      - "React, Vue, Angular"
+      - "CSS and styling"
+      - "JavaScript/TypeScript"
+      - "Performance optimization"
+    command_enhancements:
+      - "UI/UX focused solutions"
+      - "Frontend best practices"
+      - "Cross-browser compatibility"
+      - "Performance optimization"
+
+  backend:
+    flag: "--backend"
+    description: "Backend development and server-side specialist"
+    focus_areas:
+      - "Server-side development"
+      - "API development"
+      - "Database management"
+      - "Server infrastructure"
+    expertise:
+      - "REST/GraphQL APIs"
+      - "Database optimization"
+      - "Server-side languages"
+      - "Caching strategies"
+    command_enhancements:
+      - "Server-side focused solutions"
+      - "API design best practices"
+      - "Database optimization"
+      - "Backend architecture"
+
+  analyzer:
+    flag: "--analyzer"
+    description: "Data analysis and system investigation specialist"
+    focus_areas:
+      - "Data analysis and insights"
+      - "System monitoring"
+      - "Performance analysis"
+      - "Root cause analysis"
+    expertise:
+      - "Data processing"
+      - "Analytics frameworks"
+      - "Monitoring tools"
+      - "Statistical analysis"
+    command_enhancements:
+      - "Data-driven insights"
+      - "Analytical approach"
+      - "Pattern recognition"
+      - "Metrics and KPIs"
+
+  security:
+    flag: "--security"
+    description: "Security and compliance specialist"
+    focus_areas:
+      - "Security best practices"
+      - "Threat assessment"
+      - "Compliance requirements"
+      - "Vulnerability analysis"
+    expertise:
+      - "Authentication/authorization"
+      - "Encryption and privacy"
+      - "Security testing"
+      - "Compliance frameworks"
+    command_enhancements:
+      - "Security-first approach"
+      - "Threat modeling"
+      - "Compliance checking"
+      - "Risk assessment"
+
+  mentor:
+    flag: "--mentor"
+    description: "Teaching and knowledge transfer specialist"
+    focus_areas:
+      - "Educational content"
+      - "Knowledge transfer"
+      - "Best practices guidance"
+      - "Skill development"
+    expertise:
+      - "Technical communication"
+      - "Training material creation"
+      - "Best practices documentation"
+      - "Code review guidance"
+    command_enhancements:
+      - "Educational approach"
+      - "Clear explanations"
+      - "Best practices emphasis"
+      - "Learning-focused output"
+
+  refactorer:
+    flag: "--refactorer"
+    description: "Code refactoring and optimization specialist"
+    focus_areas:
+      - "Code quality improvement"
+      - "Technical debt reduction"
+      - "Code organization"
+      - "Performance optimization"
+    expertise:
+      - "Code refactoring patterns"
+      - "Clean code principles"
+      - "Performance optimization"
+      - "Code structure improvement"
+    command_enhancements:
+      - "Code quality focus"
+      - "Refactoring suggestions"
+      - "Clean code practices"
+      - "Structure optimization"
+
+  performance:
+    flag: "--performance"
+    description: "Performance optimization specialist"
+    focus_areas:
+      - "Performance analysis"
+      - "Optimization strategies"
+      - "Resource utilization"
+      - "Scalability planning"
+    expertise:
+      - "Performance profiling"
+      - "Optimization techniques"
+      - "Resource management"
+      - "Scalability patterns"
+    command_enhancements:
+      - "Performance-first approach"
+      - "Optimization recommendations"
+      - "Resource efficiency"
+      - "Scalability considerations"
+
+  qa:
+    flag: "--qa"
+    description: "Quality assurance and testing specialist"
+    focus_areas:
+      - "Testing strategies"
+      - "Quality assurance"
+      - "Test automation"
+      - "Quality metrics"
+    expertise:
+      - "Test design patterns"
+      - "Quality assurance processes"
+      - "Test automation frameworks"
+      - "Quality metrics and KPIs"
+    command_enhancements:
+      - "Quality-focused approach"
+      - "Testing recommendations"
+      - "Quality metrics emphasis"
+      - "Test coverage analysis"
+
+# Analysis Depth Flags
+analysis_depth:
+  think:
+    flag: "--think"
+    description: "Standard analytical thinking with clear reasoning"
+    processing_level: "standard"
+    features:
+      - "Step-by-step reasoning"
+      - "Clear problem breakdown"
+      - "Logical progression"
+      - "Basic context consideration"
+    use_cases:
+      - "Regular problem solving"
+      - "Standard implementation tasks"
+      - "Basic analysis requirements"
+    token_impact: "moderate"
+
+  think_hard:
+    flag: "--think-hard"
+    description: "Deep analytical thinking with comprehensive reasoning"
+    processing_level: "enhanced"
+    features:
+      - "Multi-perspective analysis"
+      - "Comprehensive context evaluation"
+      - "Alternative solution consideration"
+      - "Risk and benefit analysis"
+    use_cases:
+      - "Complex problem solving"
+      - "Architecture decisions"
+      - "Strategic planning"
+    token_impact: "high"
+
+  ultrathink:
+    flag: "--ultrathink"
+    description: "Exhaustive analytical thinking with maximum depth"
+    processing_level: "maximum"
+    features:
+      - "Exhaustive analysis"
+      - "Multiple scenario planning"
+      - "Comprehensive risk assessment"
+      - "Long-term impact consideration"
+    use_cases:
+      - "Critical system decisions"
+      - "High-risk implementations"
+      - "Strategic architecture planning"
+    token_impact: "maximum"
+
+# Optimization Flags
+optimization_flags:
+  token_optimized:
+    flag: "--token-optimized"
+    description: "Optimize output for token efficiency"
+    features:
+      - "Concise responses"
+      - "Essential information focus"
+      - "Reduced verbosity"
+      - "Efficient formatting"
+    trade_offs:
+      - "Less detailed explanations"
+      - "Fewer examples"
+      - "Condensed documentation"
+
+  compressed:
+    flag: "--compressed"
+    description: "Highly compressed output with minimal token usage"
+    features:
+      - "Bullet point format"
+      - "Abbreviated explanations"
+      - "Essential details only"
+      - "Minimal formatting"
+    trade_offs:
+      - "Reduced clarity"
+      - "Less context"
+      - "Minimal examples"
+
+  efficient:
+    flag: "--efficient"
+    description: "Balanced efficiency with maintained quality"
+    features:
+      - "Structured output"
+      - "Key points emphasis"
+      - "Selective detail inclusion"
+      - "Optimized formatting"
+    trade_offs:
+      - "Moderate detail reduction"
+      - "Focused scope"
+      - "Streamlined presentation"
+
+# Flag Combination Rules
+combination_rules:
+  persona_exclusivity:
+    rule: "Only one persona flag per command"
+    enforcement: "Last persona flag takes precedence"
+    
+  analysis_depth_exclusivity:
+    rule: "Only one analysis depth flag per command"
+    enforcement: "Higher depth takes precedence"
+    
+  optimization_compatibility:
+    rule: "Optimization flags can be combined with any other flags"
+    enforcement: "Multiple optimization flags are additive"
+
+# Integration Patterns
+command_integration:
+  flag_parsing:
+    pattern: "Command followed by flags"
+    example: "implement user auth --backend --think-hard --token-optimized"
+    
+  flag_inheritance:
+    pattern: "Flags apply to all sub-operations"
+    example: "Complex workflows inherit persona and depth flags"
+    
+  flag_override:
+    pattern: "Later flags override earlier conflicting flags"
+    example: "--think --ultrathink" results in ultrathink mode
+
+# Quality Standards
+validation_requirements:
+  - "Personas must enhance command execution appropriately"
+  - "Analysis depth must be proportional to task complexity"
+  - "Optimization flags must maintain output quality"
+  - "Flag combinations must be logically consistent"
+
+# Usage Examples
+examples:
+  development:
+    - "implement REST API --backend --think"
+    - "design system architecture --architect --ultrathink"
+    - "optimize database queries --performance --think-hard"
+    
+  analysis:
+    - "analyze security vulnerabilities --security --ultrathink"
+    - "troubleshoot performance issues --performance --think-hard"
+    - "explain complex algorithm --mentor --compressed"
+    
+  quality:
+    - "test API endpoints --qa --think"
+    - "improve code quality --refactorer --efficient"
+    - "validate security compliance --security --think-hard"
+    
+  utility:
+    - "document API --mentor --token-optimized"
+    - "orchestrate deployment --architect --think-hard"
+    - "estimate project effort --analyzer --think"

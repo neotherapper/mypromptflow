@@ -1,0 +1,358 @@
+# Progressive Detail Levels - Context-Aware Token Optimization
+# Dynamic detail adjustment based on context and requirements
+
+progressive_detail:
+  version: "1.0"
+  description: "Context-aware detail levels for optimal token efficiency"
+  
+  # Detail Level Definitions
+  detail_levels:
+    minimal:
+      name: "Minimal Detail"
+      token_budget: "500-1000 tokens"
+      information_density: "Essential only"
+      use_cases:
+        - "Quick status updates"
+        - "Simple confirmations"
+        - "Basic task completions"
+        - "Routine acknowledgments"
+      
+      content_structure:
+        - "Single sentence summaries"
+        - "Bullet point lists"
+        - "Key facts only"
+        - "No explanatory text"
+      
+      formatting_rules:
+        - "No headers or sections"
+        - "Minimal punctuation"
+        - "Abbreviated terms"
+        - "Symbol notation preferred"
+      
+      quality_threshold: "90% completeness, 95% accuracy"
+    
+    basic:
+      name: "Basic Detail"
+      token_budget: "1000-2500 tokens"
+      information_density: "Core information"
+      use_cases:
+        - "Standard progress reports"
+        - "Simple documentation"
+        - "Basic workflow descriptions"
+        - "Regular status updates"
+      
+      content_structure:
+        - "Brief explanations"
+        - "Structured lists"
+        - "Key concepts with minimal context"
+        - "Essential relationships"
+      
+      formatting_rules:
+        - "Simple headers"
+        - "Compact paragraphs"
+        - "Standard abbreviations"
+        - "Basic symbol usage"
+      
+      quality_threshold: "85% completeness, 95% accuracy"
+    
+    moderate:
+      name: "Moderate Detail"
+      token_budget: "2500-5000 tokens"
+      information_density: "Comprehensive core"
+      use_cases:
+        - "Technical documentation"
+        - "Research summaries"
+        - "Complex workflow guides"
+        - "Detailed progress reports"
+      
+      content_structure:
+        - "Detailed explanations"
+        - "Contextual information"
+        - "Supporting examples"
+        - "Relationship mapping"
+      
+      formatting_rules:
+        - "Structured sections"
+        - "Detailed paragraphs"
+        - "Technical abbreviations"
+        - "Advanced symbol notation"
+      
+      quality_threshold: "80% completeness, 95% accuracy"
+    
+    comprehensive:
+      name: "Comprehensive Detail"
+      token_budget: "5000-10000 tokens"
+      information_density: "Full context"
+      use_cases:
+        - "Complex research analysis"
+        - "Detailed technical specifications"
+        - "Comprehensive documentation"
+        - "Multi-domain investigations"
+      
+      content_structure:
+        - "Complete explanations"
+        - "Full context provision"
+        - "Multiple examples"
+        - "Detailed relationships"
+      
+      formatting_rules:
+        - "Complete section structure"
+        - "Full paragraphs"
+        - "Limited abbreviations"
+        - "Selective symbol usage"
+      
+      quality_threshold: "95% completeness, 98% accuracy"
+
+  # Context-Aware Selection Rules
+  context_selection:
+    user_context_factors:
+      expertise_level:
+        novice: "moderate to comprehensive"
+        intermediate: "basic to moderate"
+        expert: "minimal to basic"
+        specialist: "minimal with technical depth"
+      
+      task_urgency:
+        immediate: "minimal"
+        urgent: "basic"
+        standard: "moderate"
+        research: "comprehensive"
+      
+      interaction_history:
+        first_time: "comprehensive"
+        returning: "moderate"
+        frequent: "basic"
+        power_user: "minimal"
+    
+    content_complexity_factors:
+      technical_depth:
+        surface: "basic"
+        moderate: "moderate"
+        deep: "comprehensive"
+        expert: "comprehensive with compression"
+      
+      domain_breadth:
+        single_domain: "basic to moderate"
+        multi_domain: "moderate to comprehensive"
+        cross_domain: "comprehensive"
+        interdisciplinary: "comprehensive"
+      
+      implementation_complexity:
+        simple: "basic"
+        moderate: "moderate"
+        complex: "comprehensive"
+        enterprise: "comprehensive"
+    
+    system_context_factors:
+      token_availability:
+        abundant: "comprehensive"
+        moderate: "moderate"
+        limited: "basic"
+        constrained: "minimal"
+      
+      performance_requirements:
+        standard: "moderate"
+        high_performance: "basic"
+        real_time: "minimal"
+        batch_processing: "comprehensive"
+      
+      integration_needs:
+        standalone: "comprehensive"
+        integrated: "moderate"
+        api_driven: "basic"
+        embedded: "minimal"
+
+  # Dynamic Detail Adjustment
+  dynamic_adjustment:
+    real_time_factors:
+      token_consumption_rate:
+        low: "Increase detail level"
+        moderate: "Maintain current level"
+        high: "Decrease detail level"
+        critical: "Switch to minimal"
+      
+      context_window_pressure:
+        low: "comprehensive available"
+        moderate: "moderate recommended"
+        high: "basic recommended"
+        critical: "minimal required"
+      
+      quality_feedback:
+        excellent: "Maintain or decrease detail"
+        good: "Maintain current level"
+        poor: "Increase detail level"
+        unacceptable: "Increase to comprehensive"
+    
+    adaptive_learning:
+      user_preference_tracking:
+        - "Preferred detail levels by context"
+        - "Quality satisfaction patterns"
+        - "Task completion effectiveness"
+        - "Feedback response analysis"
+      
+      pattern_recognition:
+        - "Successful detail level selections"
+        - "Context-detail correlations"
+        - "Quality-efficiency trade-offs"
+        - "User satisfaction optimization"
+      
+      continuous_improvement:
+        - "Threshold adjustment based on outcomes"
+        - "Context recognition refinement"
+        - "Quality metric optimization"
+        - "User experience enhancement"
+
+  # Content Type Specifications
+  content_type_detail_mapping:
+    research_documents:
+      methodology_sections:
+        minimal: "Method name + outcome"
+        basic: "Method + key steps + outcome"
+        moderate: "Method + detailed steps + rationale + outcome"
+        comprehensive: "Full methodology + alternatives + justification + outcome"
+      
+      findings_sections:
+        minimal: "Key findings only"
+        basic: "Findings + brief analysis"
+        moderate: "Findings + analysis + implications"
+        comprehensive: "Findings + analysis + implications + recommendations"
+      
+      literature_reviews:
+        minimal: "Key sources + conclusions"
+        basic: "Sources + main points + synthesis"
+        moderate: "Sources + detailed analysis + synthesis + gaps"
+        comprehensive: "Full analysis + synthesis + gaps + recommendations"
+    
+    technical_specifications:
+      requirements_sections:
+        minimal: "Core requirements list"
+        basic: "Requirements + constraints"
+        moderate: "Requirements + constraints + rationale"
+        comprehensive: "Full requirements + constraints + rationale + alternatives"
+      
+      implementation_guides:
+        minimal: "Key steps only"
+        basic: "Steps + essential details"
+        moderate: "Steps + details + examples"
+        comprehensive: "Full guide + examples + troubleshooting"
+      
+      architecture_descriptions:
+        minimal: "Core components"
+        basic: "Components + relationships"
+        moderate: "Components + relationships + rationale"
+        comprehensive: "Full architecture + rationale + alternatives"
+    
+    workflow_documentation:
+      process_descriptions:
+        minimal: "Process steps"
+        basic: "Steps + key decision points"
+        moderate: "Steps + decisions + rationale"
+        comprehensive: "Full process + decisions + alternatives + optimization"
+      
+      task_instructions:
+        minimal: "Action items"
+        basic: "Actions + essential context"
+        moderate: "Actions + context + examples"
+        comprehensive: "Full instructions + context + examples + troubleshooting"
+    
+    progress_reports:
+      status_updates:
+        minimal: "Status + next steps"
+        basic: "Status + progress + next steps"
+        moderate: "Status + progress + challenges + next steps"
+        comprehensive: "Full status + progress + challenges + solutions + next steps"
+      
+      milestone_reports:
+        minimal: "Milestone + completion status"
+        basic: "Milestone + status + key outcomes"
+        moderate: "Milestone + status + outcomes + lessons learned"
+        comprehensive: "Full milestone analysis + outcomes + lessons + recommendations"
+
+  # Quality Assurance Framework
+  quality_assurance:
+    detail_level_validation:
+      completeness_check:
+        minimal: "Essential information present"
+        basic: "Core information complete"
+        moderate: "Comprehensive core complete"
+        comprehensive: "Full context provided"
+      
+      accuracy_verification:
+        minimal: "Key facts verified"
+        basic: "Core information verified"
+        moderate: "All information verified"
+        comprehensive: "Full verification + source checking"
+      
+      usability_assessment:
+        minimal: "Actionable and clear"
+        basic: "Usable with minimal context"
+        moderate: "Usable with provided context"
+        comprehensive: "Self-contained and complete"
+    
+    optimization_metrics:
+      efficiency_measures:
+        token_utilization: "Tokens used / Information conveyed"
+        compression_ratio: "Original tokens / Compressed tokens"
+        information_density: "Key concepts / Total tokens"
+        user_satisfaction: "Quality rating / Detail level"
+      
+      quality_measures:
+        readability_score: "Flesch-Kincaid reading level"
+        completeness_score: "Information coverage percentage"
+        accuracy_score: "Factual accuracy percentage"
+        usability_score: "Task completion success rate"
+    
+    feedback_integration:
+      user_feedback_collection:
+        - "Detail level satisfaction ratings"
+        - "Task completion effectiveness"
+        - "Information sufficiency assessment"
+        - "Quality perception evaluation"
+      
+      system_feedback_analysis:
+        - "Token efficiency metrics"
+        - "Compression success rates"
+        - "Context adaptation accuracy"
+        - "Performance optimization results"
+
+  # Implementation Guidelines
+  implementation_guidelines:
+    selection_algorithm:
+      step_1: "Analyze user context and preferences"
+      step_2: "Assess content complexity and requirements"
+      step_3: "Evaluate system constraints and availability"
+      step_4: "Apply context-aware selection rules"
+      step_5: "Validate quality thresholds"
+      step_6: "Execute dynamic adjustment if needed"
+    
+    integration_patterns:
+      preprocessing: "Context analysis and detail level selection"
+      processing: "Content generation with appropriate detail"
+      postprocessing: "Quality validation and adjustment"
+      feedback: "User satisfaction and system performance tracking"
+    
+    monitoring_procedures:
+      real_time_monitoring:
+        - "Detail level appropriateness"
+        - "Quality threshold maintenance"
+        - "User satisfaction indicators"
+        - "System performance metrics"
+      
+      periodic_assessment:
+        - "Detail level effectiveness analysis"
+        - "Quality trend evaluation"
+        - "User preference pattern review"
+        - "System optimization recommendations"
+    
+    maintenance_protocols:
+      regular_updates:
+        - "Context recognition rule refinement"
+        - "Quality threshold adjustment"
+        - "User preference model updates"
+        - "Performance optimization improvements"
+      
+      system_calibration:
+        - "Detail level mapping validation"
+        - "Quality metric recalibration"
+        - "Context factor weight adjustment"
+        - "Feedback loop optimization"
