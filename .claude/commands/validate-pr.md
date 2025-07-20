@@ -1,6 +1,6 @@
 # /validate-pr Command
 
-Progressive Loading PR Validation with Discovery-First Architecture - Optimized for 50-80% token efficiency through conditional specialist spawning.
+**AI Agent Instruction**: Progressive PR validation using Claude tools with conditional specialist spawning and embedded fallbacks.
 
 ## Usage
 ```bash
@@ -9,232 +9,215 @@ Progressive Loading PR Validation with Discovery-First Architecture - Optimized 
 
 ## Command Description
 
-This command uses a progressive loading coordinator that discovers existing validators and spawns only relevant specialists based on detected file types. Achieves 50-80% token savings compared to monolithic validation while maintaining comprehensive coverage.
+**Target AI Agent**: Claude Code with Task, Bash, Read, LS, and Glob tool access  
+**Execution Type**: Multi-phase workflow with embedded context and fallback procedures  
+**Token Efficiency**: 50-80% savings through conditional loading and embedded validators  
+**Dependencies**: Self-sufficient with embedded fallbacks for all external dependencies  
+
+This instruction guides AI agents through progressive PR validation using specific Claude tools, with embedded validator specifications and comprehensive fallback procedures.
 
 ## Progressive Loading Implementation
 
 When this command is executed, perform the following progressive loading workflow:
 
 ### Phase 1: Mandatory Asset Discovery (30 seconds)
-```bash
-echo "🔍 Starting Progressive PR Validation for PR #${pr_number}..."
-echo "=== MANDATORY ASSET DISCOVERY ==="
 
-# Check for existing validator registry
-if [ -f "meta/validators/registry.yaml" ]; then
-    echo "✅ Validator registry found - loading existing validators"
-    registry_data=$(cat meta/validators/registry.yaml)
-    available_validators=$(echo "$registry_data" | grep -A 5 "name:" | grep "location:")
-    echo "📋 Available validators: $(echo "$available_validators" | wc -l)"
-else
-    echo "❌ No validator registry found - using basic validation"
-    registry_data=""
-fi
+**AI Agent Instructions**: Execute these specific Claude tool operations in sequence:
 
-# Get PR file changes (optimized detection)
-echo "📁 Detecting PR file changes..."
-CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || find . -name "*.md" -type f -newer .git/COMMIT_EDITMSG 2>/dev/null || echo "Manual file detection needed")
-echo "Changed files detected: $(echo "$CHANGED_FILES" | wc -l) files"
+**Step 1.1: Validator Registry Discovery**  
+Use Read tool to check: `meta/validators/registry.yaml`
+- **If file exists**: Parse YAML content to extract validator locations and capabilities
+- **If file missing**: Use embedded validator definitions (see Embedded Validators section)
+- **Output**: Display validator count and available capabilities
+
+**Step 1.2: PR File Change Detection**  
+Primary method: Use Bash tool to execute: `git diff --name-only HEAD~1 HEAD`
+- **Success case**: Parse returned file list for type classification
+- **Failure case**: Execute fallback file detection sequence:
+  1. Use LS tool to scan current directory recursively
+  2. Use Glob tool with pattern `**/*.{md,ts,tsx,py,yaml,yml,js,jsx}`
+  3. Filter by recent modification (if available)
+
+**Step 1.3: Discovery Summary**  
+Output structured summary:
 ```
+🔍 Progressive PR Validation Discovery Results:
+📋 Available validators: [number] ([validator-names])
+📁 Changed files detected: [number] files
+🎯 File types detected: [types-list]
+```
+
+**Context Storage**: Store validator registry data and file list in working memory for Phase 2
 
 ### Phase 2: Intelligent File Type Detection (60 seconds)
-```bash
-# Progressive file type detection - only identify, don't load validators yet
-detect_file_types() {
-    local changed_files="$1"
-    
-    # Initialize detection results
-    claude_command_files=""
-    ai_agent_files=""
-    claude_md_files=""
-    typescript_files=""
-    python_files=""
-    yaml_files=""
-    generic_md_files=""
-    
-    echo "🎯 Progressive file type detection..."
-    
-    for file in $changed_files; do
-        if [[ "$file" == *".claude/commands/"*.md ]]; then
-            claude_command_files="$claude_command_files $file"
-        elif [[ "$file" == *"CLAUDE.md" ]]; then
-            claude_md_files="$claude_md_files $file"
-        elif [[ "$file" == *"ai/agents/"*.md ]] || [[ "$file" == *"ai-agent-instruction-design-excellence/"*.md ]]; then
-            ai_agent_files="$ai_agent_files $file"
-        elif [[ "$file" == *".ts" ]] || [[ "$file" == *".tsx" ]]; then
-            typescript_files="$typescript_files $file"
-        elif [[ "$file" == *".py" ]]; then
-            python_files="$python_files $file"
-        elif [[ "$file" == *".yaml" ]] || [[ "$file" == *".yml" ]]; then
-            yaml_files="$yaml_files $file"
-        elif [[ "$file" == *".md" ]]; then
-            generic_md_files="$generic_md_files $file"
-        fi
-    done
-    
-    # Report detection results
-    echo "📊 File type detection results:"
-    [ -n "$claude_command_files" ] && echo "  🤖 Claude Commands: $(echo $claude_command_files | wc -w) files [CRITICAL]"
-    [ -n "$claude_md_files" ] && echo "  🧠 CLAUDE.md Files: $(echo $claude_md_files | wc -w) files [CRITICAL]"
-    [ -n "$ai_agent_files" ] && echo "  👑 AI Agent Instructions: $(echo $ai_agent_files | wc -w) files [HIGH]"
-    [ -n "$typescript_files" ] && echo "  📘 TypeScript Files: $(echo $typescript_files | wc -w) files [HIGH]"
-    [ -n "$python_files" ] && echo "  🐍 Python Files: $(echo $python_files | wc -w) files [HIGH]"
-    [ -n "$yaml_files" ] && echo "  ⚙️ YAML Files: $(echo $yaml_files | wc -w) files [MEDIUM]"
-    [ -n "$generic_md_files" ] && echo "  📝 Generic Markdown: $(echo $generic_md_files | wc -w) files [LOW]"
-}
 
-detect_file_types "$CHANGED_FILES"
+**AI Agent Instructions**: Process file list from Phase 1 using pattern matching logic:
+
+**Step 2.1: Initialize File Type Categories**  
+Create working variables for file classification:
+- `claude_command_files`: Files matching `.claude/commands/*.md` pattern
+- `claude_md_files`: Files named `CLAUDE.md` 
+- `ai_agent_files`: Files in `ai/agents/` or `ai-agent-instruction-design-excellence/` directories
+- `typescript_files`: Files with `.ts` or `.tsx` extensions
+- `python_files`: Files with `.py` extension
+- `yaml_files`: Files with `.yaml` or `.yml` extensions
+- `generic_md_files`: Other `.md` files
+
+**Step 2.2: Pattern Matching Classification**  
+For each file from Phase 1 file list, apply pattern matching:
+- Check file path contains `.claude/commands/` and ends with `.md` → claude_command_files
+- Check filename equals `CLAUDE.md` → claude_md_files
+- Check path contains `ai/agents/` or `ai-agent-instruction-design-excellence/` → ai_agent_files
+- Check extension `.ts` or `.tsx` → typescript_files
+- Check extension `.py` → python_files
+- Check extension `.yaml` or `.yml` → yaml_files
+- Check extension `.md` (remaining) → generic_md_files
+
+**Step 2.3: Priority Classification and Reporting**  
+Output classification results with priority levels:
+```
+🎯 File Type Detection Results:
+  🤖 Claude Commands: [count] files [CRITICAL]
+  🧠 CLAUDE.md Files: [count] files [CRITICAL]  
+  👑 AI Agent Instructions: [count] files [HIGH]
+  📘 TypeScript Files: [count] files [HIGH]
+  🐍 Python Files: [count] files [HIGH]
+  ⚙️ YAML Files: [count] files [MEDIUM]
+  📝 Generic Markdown: [count] files [LOW]
 ```
 
+**Context Storage**: Store categorized file lists for Phase 3 specialist spawning decisions
+
 ### Phase 3: Conditional Specialist Spawning (90 seconds)
-```bash
-# Conditional specialist spawning - only load validators for detected file types
-spawn_relevant_specialists() {
-    echo "🚀 Conditional specialist spawning based on detected files..."
-    
-    spawned_specialists=""
-    total_estimated_tokens=50  # Base coordinator overhead
-    
-    # Claude Command Validator (Production Ready)
-    if [ -n "$claude_command_files" ]; then
-        if check_validator_exists "claude-command-evaluator" "$registry_data"; then
-            echo "🤖 [CRITICAL] Spawning Claude Command Evaluator (50 tokens)"
-            spawn_specialist "claude-command-evaluator" "$claude_command_files" "CRITICAL" &
-            spawned_specialists="$spawned_specialists claude-command-evaluator"
-            total_estimated_tokens=$((total_estimated_tokens + 50))
-        else
-            echo "❌ Claude Command Evaluator not found in registry"
-        fi
-    fi
-    
-    # AI Agent Instruction Validator (Production Ready)
-    if [ -n "$ai_agent_files" ] || [ -n "$claude_md_files" ]; then
-        if check_validator_exists "ai-agent-instruction-evaluator" "$registry_data"; then
-            echo "👑 [HIGH] Spawning AI Agent Instruction Evaluator (80 tokens)"
-            spawn_specialist "ai-agent-instruction-evaluator" "$ai_agent_files $claude_md_files" "HIGH" &
-            spawned_specialists="$spawned_specialists ai-agent-instruction-evaluator"
-            total_estimated_tokens=$((total_estimated_tokens + 80))
-        else
-            echo "❌ AI Agent Instruction Evaluator not found in registry"
-        fi
-    fi
-    
-    # TypeScript Validator (Gap - Need to Create)
-    if [ -n "$typescript_files" ]; then
-        echo "📘 [HIGH] TypeScript files detected - Validator gap identified"
-        echo "📋 RECOMMENDATION: Create typescript-frontend-validator specialist"
-        echo "💡 Fallback: Using generic code review patterns"
-    fi
-    
-    # Python Validator (Gap - Need to Create)
-    if [ -n "$python_files" ]; then
-        echo "🐍 [HIGH] Python files detected - Validator gap identified"
-        echo "📋 RECOMMENDATION: Create python-backend-validator specialist"
-        echo "💡 Fallback: Using generic code review patterns"
-    fi
-    
-    # YAML Validator (Gap - Need to Create)
-    if [ -n "$yaml_files" ]; then
-        echo "⚙️ [MEDIUM] YAML files detected - Validator gap identified"
-        echo "📋 RECOMMENDATION: Create yaml-config-validator specialist"
-        echo "💡 Fallback: Using basic syntax validation"
-    fi
-    
-    # Generic Markdown (Low Priority)
-    if [ -n "$generic_md_files" ]; then
-        echo "📝 [LOW] Generic markdown files detected - Using lightweight validation"
-    fi
-    
-    echo "📊 Progressive loading efficiency:"
-    echo "  🎯 Specialists spawned: $(echo $spawned_specialists | wc -w)"
-    echo "  💾 Estimated tokens loaded: $total_estimated_tokens"
-    echo "  ⚡ Token efficiency: $(( (500 - total_estimated_tokens) * 100 / 500 ))% savings vs monolithic"
-}
 
-# Helper functions for progressive loading
-check_validator_exists() {
-    local validator_name="$1"
-    local registry="$2"
-    echo "$registry" | grep -q "name: \"$validator_name\""
-}
+**AI Agent Instructions**: Based on file type detection results, spawn specialists using Task tool:
 
-spawn_specialist() {
-    local specialist_name="$1"
-    local files="$2"
-    local priority="$3"
-    
-    echo "  ⚡ Spawning $specialist_name for files: $files"
-    # Use Task tool to spawn specialized agent with specific files
-    # This is where actual agent spawning would occur in Claude Code
-    echo "    📋 Specialist: $specialist_name"
-    echo "    📁 Files: $files"
-    echo "    🔥 Priority: $priority"
-    echo "    ✅ Spawned successfully"
-}
+**Step 3.1: Initialize Spawning Context**  
+Set up tracking variables:
+- `spawned_specialists`: List of successfully spawned specialists
+- `total_estimated_tokens`: Running count starting at 50 (base overhead)
+- `spawning_failures`: Track any specialist spawning failures
 
-spawn_relevant_specialists
+**Step 3.2: Critical Priority Specialist Spawning**
+
+**Claude Command Files (CRITICAL Priority)**  
+If `claude_command_files` contains files:
+1. Check if validator registry contains `claude-command-evaluator` 
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate Claude command files for AI Agent Instruction Design Excellence compliance"
+   - **prompt**: "You are a Claude Command Evaluator specialist. Analyze files: {claude_command_files}. Apply validation criteria from @projects/ai-agent-instruction-design-excellence/docs/assessment-tools/framework-coherence-analyzer.md. Focus on: concrete specificity, external dependency elimination, immediate actionability. Generate compliance report with specific recommendations for improvement."
+   - **context**: Embed file list and validation criteria
+   - **expected_tokens**: 50
+3. **If validator missing**: Use embedded Claude Command validation logic (see Embedded Validators section)
+
+**AI Agent Instruction Files (CRITICAL Priority)**  
+If `ai_agent_files` or `claude_md_files` contain files:
+1. Check if validator registry contains `ai-agent-instruction-evaluator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate AI agent instruction files using Design Excellence Framework"
+   - **prompt**: "You are an AI Agent Instruction Evaluator specialist. Analyze files: {combined_file_list}. Apply assessment tools from @projects/ai-agent-instruction-design-excellence/docs/assessment-tools/ including communication-pattern-validator.md and workflow-completeness-inspector.md. Generate detailed compliance assessment with actionable recommendations."
+   - **context**: Embed file list and framework assessment criteria
+   - **expected_tokens**: 80
+3. **If validator missing**: Use embedded AI instruction validation logic
+
+**Step 3.3: High Priority Specialist Spawning**
+
+**TypeScript Files (HIGH Priority)**  
+If `typescript_files` contains files:
+1. Check registry for `typescript-frontend-validator`
+2. **If validator missing** (expected): Output gap identification and apply embedded TypeScript validation patterns
+3. Use fallback: Generic code quality assessment focusing on type safety, component patterns, and integration quality
+
+**Python Files (HIGH Priority)**  
+If `python_files` contains files:
+1. Check registry for `python-backend-validator` 
+2. **If validator missing** (expected): Apply embedded Python validation patterns
+3. Use fallback: Code quality assessment focusing on PEP compliance, security patterns, and architecture quality
+
+**Step 3.4: Medium/Low Priority Processing**
+
+**YAML Files (MEDIUM Priority)**  
+If `yaml_files` contains files: Apply embedded YAML syntax and structure validation
+
+**Generic Markdown (LOW Priority)**  
+If `generic_md_files` contains files: Apply lightweight documentation quality assessment
+
+**Step 3.5: Spawning Efficiency Reporting**  
+Output spawning results:
+```
+🚀 Specialist Spawning Results:
+  🎯 Specialists spawned: [count]
+  💾 Estimated tokens loaded: [total] 
+  ⚡ Token efficiency: [percentage]% savings vs monolithic
+  ❌ Spawning failures: [count] (fallbacks applied)
 ```
 
 ### Phase 4: Progressive Result Aggregation (60 seconds)
-```bash
-# Progressive result aggregation - collect only from spawned specialists
-aggregate_progressive_results() {
-    echo "📊 Progressive Result Aggregation..."
-    echo "=== PROGRESSIVE PR VALIDATION RESULTS FOR PR #${pr_number} ==="
-    
-    # Wait for all spawned specialists to complete
-    echo "⏳ Waiting for specialists to complete..."
-    wait  # Wait for all background processes
-    
-    # Collect results from spawned specialists only
-    total_files_processed=0
-    total_issues_found=0
-    specialists_completed=0
-    
-    for specialist in $spawned_specialists; do
-        echo "📋 Collecting results from $specialist..."
-        specialist_files=$(get_specialist_file_count "$specialist")
-        specialist_issues=$(get_specialist_issue_count "$specialist")
-        
-        total_files_processed=$((total_files_processed + specialist_files))
-        total_issues_found=$((total_issues_found + specialist_issues))
-        specialists_completed=$((specialists_completed + 1))
-        
-        echo "  ✅ $specialist: $specialist_files files, $specialist_issues issues"
-    done
-    
-    # Calculate efficiency metrics
-    files_detected=$(echo "$CHANGED_FILES" | wc -l)
-    validation_coverage=$(( total_files_processed * 100 / files_detected ))
-    
-    echo ""
-    echo "📊 Progressive Loading Efficiency Report:"
-    echo "  📁 Total files in PR: $files_detected"
-    echo "  🎯 Files validated: $total_files_processed"
-    echo "  📈 Validation coverage: ${validation_coverage}%"
-    echo "  🚀 Specialists spawned: $specialists_completed"
-    echo "  💾 Tokens loaded: $total_estimated_tokens (vs 500 monolithic)"
-    echo "  ⚡ Token efficiency: $(( (500 - total_estimated_tokens) * 100 / 500 ))% savings"
-    echo "  🎯 Issues found: $total_issues_found"
-    echo ""
-    echo "✅ Progressive validation complete - Optimal token efficiency achieved!"
-}
 
-# Helper functions for result collection
-get_specialist_file_count() {
-    local specialist="$1"
-    # In actual implementation, this would query the specialist's results
-    echo "3"  # Mock result for demonstration
-}
+**AI Agent Instructions**: Collect and synthesize results from spawned specialists:
 
-get_specialist_issue_count() {
-    local specialist="$1"
-    # In actual implementation, this would query the specialist's results
-    echo "1"  # Mock result for demonstration
-}
+**Step 4.1: Wait for Specialist Completion**  
+Monitor Task tool executions until all spawned specialists complete:
+- Check completion status of each spawned Task
+- Apply timeout handling (maximum 300 seconds per specialist)
+- If timeout occurs: Collect partial results and note incomplete specialists
 
-aggregate_progressive_results
+**Step 4.2: Result Collection from Specialists**  
+For each completed specialist, collect structured results:
+
+**Result Collection Pattern**:
+1. **Check Output Files**: Look for specialist result files in expected locations
+2. **Parse Structured Data**: Extract key metrics from specialist outputs:
+   - Files processed count
+   - Issues found with severity levels
+   - Validation coverage percentage  
+   - Specific recommendations generated
+3. **Aggregate Metrics**: Combine individual specialist results
+
+**Step 4.3: Calculate Validation Metrics**  
+Compute validation effectiveness:
+- `total_files_processed`: Sum from all specialists
+- `total_issues_found`: Sum of all detected issues
+- `validation_coverage`: (total_files_processed / total_files_in_pr) × 100
+- `token_efficiency`: ((500 - total_estimated_tokens) / 500) × 100
+
+**Step 4.4: Generate Comprehensive Report**  
+Output final validation results:
 ```
+📊 PROGRESSIVE PR VALIDATION RESULTS FOR PR #[number]
+═══════════════════════════════════════════════════════
+
+⏳ Specialist Execution Status:
+  ✅ Completed: [count] specialists
+  ⚠️ Partial/Timeout: [count] specialists
+  ❌ Failed: [count] specialists
+
+📊 Validation Coverage Analysis:
+  📁 Total files in PR: [count]
+  🎯 Files validated: [count]
+  📈 Validation coverage: [percentage]%
+  🔍 Issues found: [count] ([severity_breakdown])
+
+⚡ Progressive Loading Efficiency:
+  🚀 Specialists spawned: [count]
+  💾 Tokens loaded: [total] (vs 500 monolithic)
+  ⚡ Token efficiency: [percentage]% savings
+  ⏱️ Total execution time: [duration]
+
+🎯 Critical Issues Requiring Attention:
+  [List of high-priority issues from specialists]
+
+📋 Recommendations Summary:
+  [Consolidated recommendations from all specialists]
+
+✅ Progressive validation complete - Review recommendations for PR approval
+```
+
+**Step 4.5: Result Persistence**  
+Store validation results for future reference:
+- Create `meta/validation/pr-[number]-results.yaml` with complete results
+- Update validation history tracking if available
+
 
 ## Progressive Loading Benefits
 
@@ -293,74 +276,10 @@ When user runs `/validate-pr 23`, execute this progressive workflow:
 5. **Result Aggregation**: Collect results from spawned specialists only
 6. **Efficiency Reporting**: Document token savings and coverage metrics
 
-## Expected Progressive Output
-
-```
-🔍 Starting Progressive PR Validation for PR #23...
-=== MANDATORY ASSET DISCOVERY ===
-✅ Validator registry found - loading existing validators
-📋 Available validators: 2
-
-📁 Detecting PR file changes...
-Changed files detected: 8 files
-
-🎯 Progressive file type detection...
-📊 File type detection results:
-  🤖 Claude Commands: 1 files [CRITICAL]
-  👑 AI Agent Instructions: 3 files [HIGH]
-  📝 Generic Markdown: 4 files [LOW]
-
-🚀 Conditional specialist spawning based on detected files...
-🤖 [CRITICAL] Spawning Claude Command Evaluator (50 tokens)
-👑 [HIGH] Spawning AI Agent Instruction Evaluator (80 tokens)
-📝 [LOW] Generic markdown files detected - Using lightweight validation
-
-📊 Progressive loading efficiency:
-  🎯 Specialists spawned: 2
-  💾 Estimated tokens loaded: 180
-  ⚡ Token efficiency: 64% savings vs monolithic
-
-📊 Progressive Result Aggregation...
-=== PROGRESSIVE PR VALIDATION RESULTS FOR PR #23 ===
-⏳ Waiting for specialists to complete...
-📋 Collecting results from claude-command-evaluator...
-  ✅ claude-command-evaluator: 3 files, 1 issues
-📋 Collecting results from ai-agent-instruction-evaluator...
-  ✅ ai-agent-instruction-evaluator: 3 files, 1 issues
-
-📊 Progressive Loading Efficiency Report:
-  📁 Total files in PR: 8
-  🎯 Files validated: 6
-  📈 Validation coverage: 75%
-  🚀 Specialists spawned: 2
-  💾 Tokens loaded: 180 (vs 500 monolithic)
-  ⚡ Token efficiency: 64% savings
-  🎯 Issues found: 2
-
-✅ Progressive validation complete - Optimal token efficiency achieved!
-```
-
 ## Implementation Notes
 
-### Progressive Loading Architecture
-
-- **Coordinator Size**: 50 lines (10% of original)
-- **Specialist Loading**: Conditional based on detected file types
-- **Token Efficiency**: 50-80% savings through selective loading
-- **Asset Discovery**: Mandatory first step prevents duplicate validator creation
-- **Scalable Design**: Adding specialists doesn't impact simple scenarios
-- **Production Integration**: Uses existing production-ready validators
-
-### Framework Compliance
-
-This progressive loading implementation follows the **AI Agent Instruction Design Excellence Framework**:
-- **Progressive Loading Principle**: Achieves 50-80% token efficiency through coordinator-specialist architecture
-- **Self-Sufficiency Principle**: All necessary context embedded in specialists
-- **Actionable Principle**: Clear execution steps with specific validation workflows
-- **Purpose-Driven Principle**: Clear coordination objectives and specialist purposes
-
-### Testing with PR #23
-
-## Testing the Progressive Loading Refactoring
-
-Now let's test the progressive loading implementation by spawning a subagent to execute validation on PR #23:
+This command implements progressive loading using the **AI Agent Instruction Design Excellence Framework**:
+- **Concrete Instructions**: Specific Claude tool usage (Task, Bash, Read, LS)
+- **Self-Sufficient**: References existing validators and assessment tools
+- **Immediately Actionable**: Clear 4-phase execution workflow  
+- **Token Efficient**: 50-80% savings through conditional specialist spawning
