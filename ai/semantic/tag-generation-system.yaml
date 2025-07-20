@@ -1,0 +1,481 @@
+# Semantic Tag Generation System
+# Comprehensive tagging system for all 67 document types in the AI Knowledge Base
+
+metadata:
+  version: "1.0.0"
+  created: "2025-07-18"
+  author: "Tag Generation Agent"
+  description: "Semantic tagging system for intelligent document classification and discovery"
+  total_document_types: 67
+  categories: 7
+
+# Tag Generation Rules - Applied hierarchically to all documents
+tag_generation_rules:
+  automatic_tags:
+    # Core classification tags added to all documents
+    category_based:
+      rule_type: "automatic"
+      description: "Tags based on document category and type"
+      application: "all_documents"
+      pattern: "{category}-{document_type}"
+      
+    tier_based:
+      rule_type: "automatic"
+      description: "AI processing tier classification"
+      application: "all_documents"
+      pattern: "tier-{tier_number}"
+      tiers:
+        tier1: "90-95 AI value - highest processing value"
+        tier2: "80-89 AI value - high processing value"
+        tier3: "70-79 AI value - medium-high processing value"
+        tier4: "60-69 AI value - medium processing value"
+        
+    workflow_stage:
+      rule_type: "automatic"
+      description: "Position in business workflow"
+      application: "all_documents"
+      stages:
+        - "planning"
+        - "analysis"
+        - "design"
+        - "implementation"
+        - "testing"
+        - "deployment"
+        - "maintenance"
+
+  content_based_tags:
+    # Tags derived from document content analysis
+    semantic_extraction:
+      rule_type: "content_analysis"
+      description: "Extract semantic concepts from document content"
+      methods:
+        - "keyword_extraction"
+        - "concept_mapping"
+        - "entity_recognition"
+        - "topic_modeling"
+        
+    dependency_mapping:
+      rule_type: "relationship_analysis"
+      description: "Tags based on document dependencies"
+      patterns:
+        - "depends_on_{document_type}"
+        - "enables_{document_type}"
+        - "relates_to_{business_domain}"
+
+# Document Type Specific Tag Rules
+document_type_tags:
+  # Strategic Foundation Documents (8 Types)
+  strategic_foundation:
+    category: "strategic"
+    base_tags: ["strategic", "planning", "foundation", "tier4"]
+    
+    business_model_canvas:
+      specific_tags: ["business-model", "value-proposition", "revenue-streams", "strategic-planning"]
+      auto_tags: ["strategic-business-model-canvas", "tier4", "planning", "foundation"]
+      content_tags: ["business-strategy", "market-analysis", "financial-planning"]
+      
+    lean_canvas:
+      specific_tags: ["lean-startup", "problem-solution-fit", "entrepreneurs"]
+      auto_tags: ["strategic-lean-canvas", "tier4", "planning", "validation"]
+      content_tags: ["startup-methodology", "hypothesis-testing", "iteration"]
+      
+    market_requirements_document:
+      specific_tags: ["market-analysis", "competitive-landscape", "opportunity-assessment"]
+      auto_tags: ["strategic-market-requirements", "tier4", "analysis", "market"]
+      content_tags: ["market-research", "competitive-analysis", "opportunity"]
+      
+    value_proposition_canvas:
+      specific_tags: ["customer-jobs", "pain-points", "gains", "value-creation"]
+      auto_tags: ["strategic-value-proposition", "tier4", "planning", "customer"]
+      content_tags: ["customer-value", "problem-solution", "benefits"]
+      
+    strategic_roadmap:
+      specific_tags: ["long-term-vision", "initiatives", "milestones", "strategic-planning"]
+      auto_tags: ["strategic-roadmap", "tier4", "planning", "timeline"]
+      content_tags: ["strategic-vision", "milestone-planning", "long-term"]
+      
+    okr_documentation:
+      specific_tags: ["objectives", "key-results", "performance-measurement", "goal-setting"]
+      auto_tags: ["strategic-okr", "tier4", "planning", "metrics"]
+      content_tags: ["goal-tracking", "performance-metrics", "measurement"]
+      
+    investment_readiness_level:
+      specific_tags: ["fundraising", "milestone-tracking", "investor-readiness"]
+      auto_tags: ["strategic-investment-readiness", "tier4", "planning", "funding"]
+      content_tags: ["investment-metrics", "funding-readiness", "milestone"]
+      
+    north_star_metric:
+      specific_tags: ["primary-metric", "success-measurement", "key-performance-indicator"]
+      auto_tags: ["strategic-north-star", "tier4", "planning", "measurement"]
+      content_tags: ["success-metrics", "kpi", "performance-tracking"]
+
+  # Product Development Documents (12 Types)
+  product_development:
+    category: "product"
+    base_tags: ["product", "development", "features", "tier2-tier3"]
+    
+    product_requirements_document:
+      specific_tags: ["requirements", "specifications", "features", "product-definition"]
+      auto_tags: ["product-prd", "tier2", "design", "requirements"]
+      content_tags: ["feature-specifications", "functional-requirements", "product-scope"]
+      
+    epic_documentation:
+      specific_tags: ["epics", "large-features", "user-stories", "development-planning"]
+      auto_tags: ["product-epic", "tier3", "planning", "features"]
+      content_tags: ["feature-grouping", "development-scope", "story-mapping"]
+      
+    user_story_backlog:
+      specific_tags: ["user-stories", "backlog", "prioritization", "development-tasks"]
+      auto_tags: ["product-user-stories", "tier3", "planning", "backlog"]
+      content_tags: ["user-needs", "feature-breakdown", "task-prioritization"]
+      
+    acceptance_criteria_specifications:
+      specific_tags: ["acceptance-criteria", "completion-conditions", "testing-requirements"]
+      auto_tags: ["product-acceptance-criteria", "tier3", "design", "testing"]
+      content_tags: ["completion-criteria", "success-conditions", "validation"]
+      
+    product_analytics_strategy:
+      specific_tags: ["analytics", "data-collection", "measurement", "insights"]
+      auto_tags: ["product-analytics", "tier3", "analysis", "metrics"]
+      content_tags: ["data-strategy", "measurement-framework", "insights"]
+      
+    mvp_specifications:
+      specific_tags: ["minimum-viable-product", "core-features", "launch-requirements"]
+      auto_tags: ["product-mvp", "tier3", "planning", "launch"]
+      content_tags: ["core-functionality", "launch-criteria", "essential-features"]
+      
+    build_measure_learn:
+      specific_tags: ["lean-startup", "iteration", "learning", "feedback-loop"]
+      auto_tags: ["product-build-measure-learn", "tier3", "analysis", "iteration"]
+      content_tags: ["learning-cycles", "feedback-integration", "iteration-planning"]
+      
+    pivot_persevere_decisions:
+      specific_tags: ["strategic-decisions", "direction-changes", "pivot-analysis"]
+      auto_tags: ["product-pivot-decisions", "tier3", "analysis", "strategy"]
+      content_tags: ["strategic-pivots", "direction-changes", "decision-rationale"]
+      
+    feature_specifications:
+      specific_tags: ["detailed-features", "individual-features", "implementation-details"]
+      auto_tags: ["product-feature-specs", "tier3", "design", "implementation"]
+      content_tags: ["feature-details", "implementation-requirements", "technical-specs"]
+      
+    release_notes:
+      specific_tags: ["releases", "change-documentation", "feature-announcements"]
+      auto_tags: ["product-release-notes", "tier3", "deployment", "communication"]
+      content_tags: ["release-communication", "feature-updates", "change-log"]
+      
+    product_backlog_management:
+      specific_tags: ["backlog", "prioritization", "feature-planning", "roadmap"]
+      auto_tags: ["product-backlog", "tier3", "planning", "prioritization"]
+      content_tags: ["feature-prioritization", "roadmap-planning", "backlog-grooming"]
+      
+    jobs_to_be_done:
+      specific_tags: ["customer-outcomes", "job-stories", "outcome-driven"]
+      auto_tags: ["product-jobs-to-be-done", "tier3", "analysis", "customer"]
+      content_tags: ["customer-jobs", "outcome-focus", "value-creation"]
+
+  # User Experience and Research Documents (15 Types)
+  user_experience:
+    category: "ux"
+    base_tags: ["ux", "user-research", "design", "user-centered", "tier4"]
+    
+    user_research_plans:
+      specific_tags: ["research-methodology", "user-insights", "research-objectives"]
+      auto_tags: ["ux-research-plans", "tier4", "planning", "research"]
+      content_tags: ["research-strategy", "user-insights", "methodology"]
+      
+    usability_testing_reports:
+      specific_tags: ["usability-testing", "user-feedback", "experience-evaluation"]
+      auto_tags: ["ux-usability-testing", "tier4", "testing", "evaluation"]
+      content_tags: ["user-feedback", "usability-insights", "experience-metrics"]
+      
+    empathy_maps:
+      specific_tags: ["user-empathy", "thoughts-feelings", "behaviors", "user-psychology"]
+      auto_tags: ["ux-empathy-maps", "tier4", "analysis", "psychology"]
+      content_tags: ["user-psychology", "emotional-insights", "behavioral-patterns"]
+      
+    user_interview_guides:
+      specific_tags: ["user-interviews", "conversation-guides", "qualitative-research"]
+      auto_tags: ["ux-interview-guides", "tier4", "research", "qualitative"]
+      content_tags: ["interview-methodology", "user-conversations", "qualitative-data"]
+      
+    information_architecture:
+      specific_tags: ["content-organization", "navigation", "structure", "findability"]
+      auto_tags: ["ux-information-architecture", "tier4", "design", "structure"]
+      content_tags: ["content-structure", "navigation-design", "information-organization"]
+      
+    wireframes_mockups:
+      specific_tags: ["interface-design", "layout", "interaction-patterns", "visual-design"]
+      auto_tags: ["ux-wireframes-mockups", "tier4", "design", "interface"]
+      content_tags: ["interface-layout", "interaction-design", "visual-hierarchy"]
+      
+    design_system_documentation:
+      specific_tags: ["design-system", "ui-components", "style-guidelines", "consistency"]
+      auto_tags: ["ux-design-system", "tier4", "design", "consistency"]
+      content_tags: ["component-library", "design-tokens", "style-guide"]
+      
+    accessibility_audit_reports:
+      specific_tags: ["accessibility", "wcag-compliance", "inclusive-design", "usability"]
+      auto_tags: ["ux-accessibility-audit", "tier4", "testing", "compliance"]
+      content_tags: ["accessibility-compliance", "inclusive-design", "usability-standards"]
+      
+    ab_testing_documentation:
+      specific_tags: ["ab-testing", "performance-analysis", "comparative-testing"]
+      auto_tags: ["ux-ab-testing", "tier4", "testing", "analysis"]
+      content_tags: ["test-variants", "performance-comparison", "statistical-analysis"]
+      
+    card_sorting_results:
+      specific_tags: ["information-architecture", "content-categorization", "mental-models"]
+      auto_tags: ["ux-card-sorting", "tier4", "research", "categorization"]
+      content_tags: ["mental-models", "content-categorization", "information-grouping"]
+      
+    prototype_documentation:
+      specific_tags: ["prototyping", "iterative-design", "solution-development"]
+      auto_tags: ["ux-prototype", "tier4", "design", "iteration"]
+      content_tags: ["prototype-evolution", "design-iterations", "solution-testing"]
+      
+    customer_journey_analytics:
+      specific_tags: ["customer-journey", "behavioral-data", "interaction-patterns"]
+      auto_tags: ["ux-journey-analytics", "tier4", "analysis", "behavior"]
+      content_tags: ["journey-mapping", "behavioral-insights", "interaction-analysis"]
+      
+    ethnographic_study_reports:
+      specific_tags: ["ethnographic-research", "contextual-behavior", "user-environment"]
+      auto_tags: ["ux-ethnographic-study", "tier4", "research", "contextual"]
+      content_tags: ["contextual-research", "environmental-factors", "behavioral-observation"]
+      
+    heuristic_evaluation_reports:
+      specific_tags: ["heuristic-evaluation", "usability-assessment", "systematic-review"]
+      auto_tags: ["ux-heuristic-evaluation", "tier4", "testing", "systematic"]
+      content_tags: ["usability-heuristics", "systematic-evaluation", "interface-assessment"]
+      
+    design_challenge_statements:
+      specific_tags: ["design-challenges", "problem-framing", "focused-problems"]
+      auto_tags: ["ux-design-challenges", "tier4", "planning", "problem-definition"]
+      content_tags: ["problem-framing", "design-constraints", "challenge-definition"]
+
+  # Technical Architecture Documents (12 Types)
+  technical_architecture:
+    category: "technical"
+    base_tags: ["technical", "architecture", "system-design", "tier1-tier2"]
+    
+    software_architecture_document:
+      specific_tags: ["system-architecture", "high-level-design", "architectural-patterns"]
+      auto_tags: ["technical-architecture", "tier2", "design", "system"]
+      content_tags: ["architectural-patterns", "system-design", "technology-decisions"]
+      
+    api_documentation:
+      specific_tags: ["api", "endpoints", "integration", "contracts"]
+      auto_tags: ["technical-api", "tier1", "implementation", "integration"]
+      content_tags: ["api-contracts", "endpoint-specifications", "integration-points"]
+      
+    database_design_document:
+      specific_tags: ["database", "data-models", "schema-design", "data-architecture"]
+      auto_tags: ["technical-database", "tier1", "design", "data"]
+      content_tags: ["data-modeling", "schema-design", "database-architecture"]
+      
+    system_context_diagram:
+      specific_tags: ["system-context", "external-interactions", "system-boundaries"]
+      auto_tags: ["technical-system-context", "tier2", "design", "boundaries"]
+      content_tags: ["system-boundaries", "external-systems", "context-mapping"]
+      
+    container_diagram:
+      specific_tags: ["deployment-units", "technology-choices", "system-containers"]
+      auto_tags: ["technical-container", "tier2", "design", "deployment"]
+      content_tags: ["deployment-architecture", "container-design", "technology-stack"]
+      
+    component_diagram:
+      specific_tags: ["internal-structure", "component-interactions", "system-components"]
+      auto_tags: ["technical-component", "tier2", "design", "components"]
+      content_tags: ["component-architecture", "internal-structure", "component-interactions"]
+      
+    technical_specifications:
+      specific_tags: ["implementation-requirements", "technical-details", "specifications"]
+      auto_tags: ["technical-specifications", "tier1", "implementation", "requirements"]
+      content_tags: ["technical-requirements", "implementation-details", "system-specifications"]
+      
+    integration_architecture:
+      specific_tags: ["integration", "external-dependencies", "api-contracts"]
+      auto_tags: ["technical-integration", "tier2", "design", "integration"]
+      content_tags: ["integration-patterns", "external-apis", "system-integration"]
+      
+    security_architecture:
+      specific_tags: ["security", "authentication", "authorization", "data-protection"]
+      auto_tags: ["technical-security", "tier2", "design", "security"]
+      content_tags: ["security-design", "authentication-systems", "data-protection"]
+      
+    performance_requirements:
+      specific_tags: ["performance", "scalability", "response-times", "capacity"]
+      auto_tags: ["technical-performance", "tier2", "requirements", "performance"]
+      content_tags: ["performance-metrics", "scalability-requirements", "capacity-planning"]
+      
+    deployment_guide:
+      specific_tags: ["deployment", "environment-setup", "release-procedures"]
+      auto_tags: ["technical-deployment", "tier2", "deployment", "operations"]
+      content_tags: ["deployment-procedures", "environment-configuration", "release-management"]
+      
+    configuration_management:
+      specific_tags: ["configuration", "environment-variables", "system-settings"]
+      auto_tags: ["technical-configuration", "tier2", "implementation", "configuration"]
+      content_tags: ["configuration-management", "environment-setup", "system-configuration"]
+
+  # Business Analysis and Process Documents (9 Types)
+  business_analysis:
+    category: "business"
+    base_tags: ["business", "analysis", "process", "stakeholder", "tier3-tier4"]
+    
+    stakeholder_analysis:
+      specific_tags: ["stakeholders", "influence-mapping", "project-impact"]
+      auto_tags: ["business-stakeholder-analysis", "tier4", "analysis", "stakeholder"]
+      content_tags: ["stakeholder-mapping", "influence-analysis", "project-stakeholders"]
+      
+    current_state_analysis:
+      specific_tags: ["current-state", "existing-processes", "as-is-analysis"]
+      auto_tags: ["business-current-state", "tier3", "analysis", "current"]
+      content_tags: ["process-analysis", "current-capabilities", "existing-systems"]
+      
+    future_state_design:
+      specific_tags: ["future-state", "improved-capabilities", "to-be-design"]
+      auto_tags: ["business-future-state", "tier3", "design", "future"]
+      content_tags: ["target-state", "improved-processes", "future-capabilities"]
+      
+    gap_analysis:
+      specific_tags: ["gap-analysis", "current-vs-desired", "improvement-areas"]
+      auto_tags: ["business-gap-analysis", "tier3", "analysis", "gaps"]
+      content_tags: ["capability-gaps", "process-improvements", "transformation-needs"]
+      
+    requirements_traceability_matrix:
+      specific_tags: ["traceability", "requirement-linking", "validation-tracking"]
+      auto_tags: ["business-traceability", "tier3", "analysis", "requirements"]
+      content_tags: ["requirement-tracking", "validation-matrix", "traceability-links"]
+      
+    change_impact_analysis:
+      specific_tags: ["change-impact", "system-effects", "modification-analysis"]
+      auto_tags: ["business-change-impact", "tier3", "analysis", "change"]
+      content_tags: ["impact-assessment", "change-effects", "system-modifications"]
+      
+    business_process_documentation:
+      specific_tags: ["business-processes", "workflow-procedures", "decision-points"]
+      auto_tags: ["business-process", "tier3", "design", "process"]
+      content_tags: ["workflow-design", "process-documentation", "business-procedures"]
+      
+    customer_segmentation:
+      specific_tags: ["customer-segments", "market-segmentation", "target-audience"]
+      auto_tags: ["business-customer-segmentation", "tier4", "analysis", "customer"]
+      content_tags: ["market-segments", "customer-profiling", "target-markets"]
+      
+    competitive_analysis:
+      specific_tags: ["competitive-landscape", "market-analysis", "competitor-research"]
+      auto_tags: ["business-competitive-analysis", "tier4", "analysis", "competition"]
+      content_tags: ["competitor-assessment", "market-positioning", "competitive-advantages"]
+
+  # Quality Assurance and Testing Documents (6 Types)
+  quality_assurance:
+    category: "quality"
+    base_tags: ["quality", "testing", "assurance", "validation", "tier2"]
+    
+    quality_assurance_plan:
+      specific_tags: ["qa-plan", "quality-standards", "testing-strategy"]
+      auto_tags: ["quality-assurance-plan", "tier2", "planning", "quality"]
+      content_tags: ["quality-standards", "testing-strategy", "qa-processes"]
+      
+    test_plans_cases:
+      specific_tags: ["test-plans", "test-cases", "testing-scenarios"]
+      auto_tags: ["quality-test-plans", "tier2", "testing", "scenarios"]
+      content_tags: ["test-scenarios", "test-coverage", "testing-procedures"]
+      
+    test_data_management:
+      specific_tags: ["test-data", "data-generation", "privacy-procedures"]
+      auto_tags: ["quality-test-data", "tier2", "testing", "data"]
+      content_tags: ["test-data-generation", "data-privacy", "test-environments"]
+      
+    performance_testing_results:
+      specific_tags: ["performance-testing", "load-testing", "capacity-planning"]
+      auto_tags: ["quality-performance-testing", "tier2", "testing", "performance"]
+      content_tags: ["load-testing", "performance-metrics", "capacity-analysis"]
+      
+    compliance_testing_documentation:
+      specific_tags: ["compliance-testing", "regulatory-validation", "standards-compliance"]
+      auto_tags: ["quality-compliance-testing", "tier2", "testing", "compliance"]
+      content_tags: ["regulatory-compliance", "standards-validation", "compliance-verification"]
+      
+    user_acceptance_testing:
+      specific_tags: ["uat", "user-acceptance", "business-validation"]
+      auto_tags: ["quality-uat", "tier2", "testing", "acceptance"]
+      content_tags: ["user-acceptance", "business-validation", "stakeholder-testing"]
+
+  # Compliance and Legal Documents (7 Types)
+  compliance_legal:
+    category: "compliance"
+    base_tags: ["compliance", "legal", "regulatory", "governance", "tier3"]
+    
+    data_privacy_impact_assessment:
+      specific_tags: ["dpia", "gdpr-compliance", "privacy-evaluation"]
+      auto_tags: ["compliance-dpia", "tier3", "analysis", "privacy"]
+      content_tags: ["privacy-compliance", "data-protection", "gdpr-requirements"]
+      
+    security_documentation:
+      specific_tags: ["security", "threat-modeling", "vulnerability-assessment"]
+      auto_tags: ["compliance-security", "tier3", "design", "security"]
+      content_tags: ["threat-assessment", "security-controls", "vulnerability-management"]
+      
+    terms_privacy_policy:
+      specific_tags: ["legal-agreements", "data-handling", "user-rights"]
+      auto_tags: ["compliance-terms-privacy", "tier3", "legal", "agreements"]
+      content_tags: ["legal-terms", "privacy-policy", "user-agreements"]
+      
+    audit_documentation:
+      specific_tags: ["audit", "compliance-evidence", "internal-controls"]
+      auto_tags: ["compliance-audit", "tier3", "analysis", "audit"]
+      content_tags: ["audit-trails", "compliance-evidence", "control-documentation"]
+      
+    regulatory_compliance:
+      specific_tags: ["regulatory", "industry-standards", "compliance-requirements"]
+      auto_tags: ["compliance-regulatory", "tier3", "analysis", "regulatory"]
+      content_tags: ["regulatory-requirements", "industry-compliance", "standards-adherence"]
+      
+    risk_register:
+      specific_tags: ["risk-management", "risk-identification", "mitigation-strategies"]
+      auto_tags: ["compliance-risk-register", "tier3", "analysis", "risk"]
+      content_tags: ["risk-assessment", "mitigation-planning", "risk-monitoring"]
+      
+    intellectual_property:
+      specific_tags: ["intellectual-property", "patent-research", "ip-protection"]
+      auto_tags: ["compliance-intellectual-property", "tier3", "legal", "ip"]
+      content_tags: ["patent-analysis", "ip-strategy", "intellectual-property-protection"]
+
+# Tag Quality Assurance
+tag_quality_rules:
+  validation_rules:
+    - "All documents must have minimum 3 tags"
+    - "All documents must have exactly 1 category tag"
+    - "All documents must have exactly 1 tier tag"
+    - "All documents must have at least 1 workflow stage tag"
+    - "Maximum 15 tags per document to avoid over-tagging"
+    
+  consistency_checks:
+    - "Category tags must match document directory structure"
+    - "Tier tags must align with AI processing value"
+    - "Workflow tags must reflect document purpose"
+    - "Content tags must be relevant to document content"
+    
+  quality_metrics:
+    accuracy_target: 85
+    relevance_score: 80
+    consistency_score: 90
+    coverage_completeness: 95
+
+# Tag Evolution and Maintenance
+tag_maintenance:
+  update_frequency: "monthly"
+  review_triggers:
+    - "New document types added"
+    - "Category restructuring"
+    - "User feedback on tag relevance"
+    - "Search performance degradation"
+    
+  optimization_criteria:
+    - "Search result relevance improvement"
+    - "User adoption of tag-based workflows"
+    - "Document discovery effectiveness"
+    - "Cross-reference accuracy"

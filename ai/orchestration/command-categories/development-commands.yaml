@@ -1,0 +1,145 @@
+# Development Commands Category
+# SuperClaude Pattern: 4 specialized development commands
+
+category: development
+description: "Commands for software development, implementation, and system building"
+commands:
+  implement:
+    name: "implement"
+    description: "Transform requirements into working code implementation"
+    purpose: "Convert specifications, designs, or requirements into functional code"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "What to implement (feature, component, function, etc.)"
+      - name: "specifications"
+        type: "string"
+        required: false
+        description: "Detailed requirements or design specifications"
+      - name: "technology"
+        type: "string"
+        required: false
+        description: "Technology stack or language constraints"
+      - name: "constraints"
+        type: "string"
+        required: false
+        description: "Technical constraints or limitations"
+    usage_examples:
+      - "implement user authentication system"
+      - "implement REST API endpoints --backend"
+      - "implement responsive navigation --frontend --think"
+    integration_points:
+      - "document-to-code transformation"
+      - "feature specification processing"
+      - "code generation workflows"
+
+  build:
+    name: "build"
+    description: "Construct complete systems from components and modules"
+    purpose: "Assemble and integrate components into working systems"
+    parameters:
+      - name: "system"
+        type: "string"
+        required: true
+        description: "System or application to build"
+      - name: "components"
+        type: "array"
+        required: false
+        description: "Components to integrate"
+      - name: "architecture"
+        type: "string"
+        required: false
+        description: "Architectural pattern or approach"
+      - name: "dependencies"
+        type: "string"
+        required: false
+        description: "External dependencies or libraries"
+    usage_examples:
+      - "build e-commerce platform"
+      - "build microservices architecture --architect"
+      - "build CI/CD pipeline --think-hard"
+    integration_points:
+      - "system architecture design"
+      - "component orchestration"
+      - "deployment automation"
+
+  design:
+    name: "design"
+    description: "Create system architecture and component designs"
+    purpose: "Plan and design system structure, interfaces, and interactions"
+    parameters:
+      - name: "system"
+        type: "string"
+        required: true
+        description: "System or component to design"
+      - name: "requirements"
+        type: "string"
+        required: false
+        description: "Functional and non-functional requirements"
+      - name: "constraints"
+        type: "string"
+        required: false
+        description: "Design constraints and limitations"
+      - name: "patterns"
+        type: "string"
+        required: false
+        description: "Design patterns or architectural styles"
+    usage_examples:
+      - "design user management system"
+      - "design database schema --architect --think"
+      - "design API architecture --backend --ultrathink"
+    integration_points:
+      - "requirements analysis"
+      - "architecture documentation"
+      - "design pattern application"
+
+  optimize:
+    name: "optimize"
+    description: "Improve performance, efficiency, and resource utilization"
+    purpose: "Enhance system performance, reduce costs, and improve efficiency"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "Code, system, or process to optimize"
+      - name: "metrics"
+        type: "string"
+        required: false
+        description: "Performance metrics or optimization goals"
+      - name: "constraints"
+        type: "string"
+        required: false
+        description: "Optimization constraints or trade-offs"
+      - name: "profiling"
+        type: "string"
+        required: false
+        description: "Performance profiling data or analysis"
+    usage_examples:
+      - "optimize database queries"
+      - "optimize React component rendering --performance"
+      - "optimize server response times --think-hard"
+    integration_points:
+      - "performance monitoring"
+      - "code quality improvement"
+      - "resource optimization"
+
+# Command Enhancement Features
+universal_flags_supported: true
+persona_integration: true
+analysis_depth_control: true
+token_optimization: true
+
+# Quality Standards
+validation_requirements:
+  - "Code must follow project standards"
+  - "Implementation must match specifications"
+  - "Performance requirements must be met"
+  - "Security considerations must be addressed"
+
+# Integration Patterns
+workflow_integration:
+  - "Document-to-code transformation"
+  - "Feature specification processing"
+  - "Iterative development cycles"
+  - "Quality assurance integration"

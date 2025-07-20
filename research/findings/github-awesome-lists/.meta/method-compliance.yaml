@@ -1,0 +1,63 @@
+# Method Compliance Validation Template
+# This template tracks whether sub-agents properly followed research method prompts
+
+method_compliance_validation:
+  session_id: "github_awesome_lists_research_20250720"
+  research_topic: "GitHub Awesome Lists Analysis: Community Curation and Information Aggregation Systems"
+  method_used: "primary_research"
+  validation_timestamp: "2025-07-20T06:00:00Z"
+  
+  # Method-Specific Validation
+  method_validation:
+    primary_research:
+      required_components: 5
+      expected_structure:
+        - "Role Definition: Community Curation Specialist Agent"
+        - "Task Decomposition: Repository analysis, quality standards, API patterns, community workflows, integration strategy"
+        - "Methodology Framework: Repository analysis, web research, GitHub API analysis, community workflow analysis"
+        - "Output Specifications: Comprehensive analysis with technical specifications and implementation guidelines"
+        - "Quality Metrics: Evidence-based analysis, current sources, practical applicability"
+      validation_criteria:
+        - "Clear expert role definition"
+        - "Logical phase breakdown"
+        - "Specific methodology described"
+        - "Output format clearly specified"
+        - "Quality validation criteria included"
+      compliance_checks:
+        role_definition_present: true  # Claude-4-Community-Curation-Agent clearly defined
+        task_decomposition_clear: true  # 5 main analysis areas clearly structured
+        methodology_specified: true  # Repository analysis, web research, API analysis, community workflow analysis
+        output_format_defined: true  # Comprehensive analysis with technical specifications
+        quality_metrics_included: true  # Evidence-based analysis with validation criteria
+  
+  # General Validation Results
+  overall_compliance:
+    method_prompt_followed: true  # Primary research method structure was followed
+    expected_outputs_generated: true  # Comprehensive analysis generated with all components
+    validation_criteria_met: 1.0  # 100% of validation criteria satisfied
+    compliance_score: 1.0  # Perfect compliance score
+    
+  # Issues and Recommendations
+  compliance_issues: []  # No compliance issues identified
+      
+  # File Tracking
+  research_files_generated:
+    - file_path: "research/findings/github-awesome-lists/research/comprehensive-analysis.md"
+      file_type: "main_analysis"
+      method_component: "complete_primary_research_output"
+      compliance_status: "compliant"
+      
+  # Quality Assessment
+  research_quality_indicators:
+    follows_method_structure: true  # Clear expert persona, task decomposition, methodology, output specs
+    contains_required_elements: true  # All required components present
+    appropriate_depth_and_detail: true  # Comprehensive 469-line analysis with technical depth
+    methodology_correctly_applied: true  # Repository analysis, API research, community workflow assessment
+    integration_quality_satisfactory: true  # Clear integration recommendations and technical specifications
+    
+  # Validation Metadata
+  validation_metadata:
+    validator_version: "1.0.0"
+    validation_completeness: 1.0
+    validation_confidence: 1.0
+    validation_notes: "Excellent compliance with primary research method. Research demonstrates clear expert role definition (Community Curation Specialist), systematic task decomposition across 5 major areas, comprehensive methodology covering repository analysis and API integration, detailed output specifications with technical implementation guidance, and robust quality metrics with evidence-based validation. Analysis includes practical applicability, technical specifications, and integration recommendations suitable for immediate implementation."

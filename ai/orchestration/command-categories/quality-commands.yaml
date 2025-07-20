@@ -1,0 +1,179 @@
+# Quality Commands Category
+# SuperClaude Pattern: 4 specialized quality commands
+
+category: quality
+description: "Commands for improving code quality, testing, and validation"
+commands:
+  improve:
+    name: "improve"
+    description: "Enhance code quality, performance, and maintainability"
+    purpose: "Systematically improve existing code and systems"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "Code, system, or process to improve"
+      - name: "aspects"
+        type: "string"
+        required: false
+        description: "Specific aspects to improve (readability, performance, security)"
+      - name: "standards"
+        type: "string"
+        required: false
+        description: "Quality standards or best practices to follow"
+      - name: "constraints"
+        type: "string"
+        required: false
+        description: "Improvement constraints or limitations"
+    usage_examples:
+      - "improve code readability"
+      - "improve API response times --performance"
+      - "improve security implementation --security --think"
+    integration_points:
+      - "code quality analysis"
+      - "refactoring workflows"
+      - "continuous improvement"
+
+  test:
+    name: "test"
+    description: "Create comprehensive testing strategies and test suites"
+    purpose: "Ensure system reliability through systematic testing"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "System, component, or feature to test"
+      - name: "test_types"
+        type: "string"
+        required: false
+        description: "Types of tests (unit, integration, e2e, performance)"
+      - name: "coverage"
+        type: "string"
+        required: false
+        description: "Test coverage requirements"
+      - name: "scenarios"
+        type: "string"
+        required: false
+        description: "Specific test scenarios or edge cases"
+    usage_examples:
+      - "test user authentication flow"
+      - "test API endpoints --backend --qa"
+      - "test performance under load --performance --think-hard"
+    integration_points:
+      - "test automation"
+      - "quality assurance workflows"
+      - "continuous integration"
+
+  cleanup:
+    name: "cleanup"
+    description: "Clean up code, remove technical debt, and optimize structure"
+    purpose: "Maintain clean, organized, and efficient codebase"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "Code, system, or area to clean up"
+      - name: "scope"
+        type: "string"
+        required: false
+        description: "Cleanup scope (dead code, dependencies, structure)"
+      - name: "standards"
+        type: "string"
+        required: false
+        description: "Coding standards or style guidelines"
+      - name: "preserve"
+        type: "string"
+        required: false
+        description: "Functionality or features to preserve"
+    usage_examples:
+      - "cleanup unused dependencies"
+      - "cleanup legacy code --refactorer"
+      - "cleanup database schema --backend --think"
+    integration_points:
+      - "refactoring workflows"
+      - "debt reduction strategies"
+      - "maintenance automation"
+
+  validate:
+    name: "validate"
+    description: "Verify system correctness, compliance, and quality standards"
+    purpose: "Ensure systems meet requirements and quality standards"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "System, code, or process to validate"
+      - name: "criteria"
+        type: "string"
+        required: false
+        description: "Validation criteria and standards"
+      - name: "requirements"
+        type: "string"
+        required: false
+        description: "Requirements to validate against"
+      - name: "compliance"
+        type: "string"
+        required: false
+        description: "Compliance standards or regulations"
+    usage_examples:
+      - "validate API contract compliance"
+      - "validate security implementation --security"
+      - "validate performance requirements --performance --ultrathink"
+    integration_points:
+      - "compliance checking"
+      - "quality assurance"
+      - "requirement validation"
+
+# Quality Assurance Features
+quality_standards:
+  code_quality:
+    metrics:
+      - "Code complexity"
+      - "Test coverage"
+      - "Documentation completeness"
+      - "Performance benchmarks"
+    thresholds:
+      - "Cyclomatic complexity < 10"
+      - "Test coverage > 80%"
+      - "Response time < 200ms"
+      - "Error rate < 0.1%"
+
+  validation_levels:
+    basic:
+      description: "Essential quality checks"
+      flags: ["--think"]
+    comprehensive:
+      description: "Thorough quality validation"
+      flags: ["--think-hard"]
+    exhaustive:
+      description: "Complete quality assessment"
+      flags: ["--ultrathink"]
+
+# Testing Strategies
+test_categories:
+  unit:
+    description: "Individual component testing"
+    tools: ["Jest", "pytest", "JUnit"]
+  integration:
+    description: "Component interaction testing"
+    tools: ["Postman", "Cypress", "TestNG"]
+  e2e:
+    description: "End-to-end workflow testing"
+    tools: ["Selenium", "Playwright", "Cypress"]
+  performance:
+    description: "Performance and load testing"
+    tools: ["JMeter", "Artillery", "k6"]
+
+# Quality Standards
+validation_requirements:
+  - "Code must pass all quality gates"
+  - "Tests must achieve minimum coverage"
+  - "Performance must meet benchmarks"
+  - "Security standards must be followed"
+
+# Integration Patterns
+workflow_integration:
+  - "Continuous integration pipelines"
+  - "Quality gate enforcement"
+  - "Automated testing workflows"
+  - "Code review processes"

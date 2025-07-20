@@ -1,0 +1,193 @@
+# Utility Commands Category
+# SuperClaude Pattern: 4 specialized utility commands
+
+category: utility
+description: "Commands for documentation, orchestration, and project management"
+commands:
+  document:
+    name: "document"
+    description: "Create comprehensive documentation for systems and processes"
+    purpose: "Generate clear, complete documentation for technical systems"
+    parameters:
+      - name: "target"
+        type: "string"
+        required: true
+        description: "System, API, or process to document"
+      - name: "type"
+        type: "string"
+        required: false
+        description: "Documentation type (API, user guide, technical spec)"
+      - name: "audience"
+        type: "string"
+        required: false
+        description: "Target audience (developers, users, stakeholders)"
+      - name: "format"
+        type: "string"
+        required: false
+        description: "Documentation format (markdown, wiki, structured)"
+    usage_examples:
+      - "document REST API endpoints"
+      - "document deployment process --mentor"
+      - "document system architecture --architect --think"
+    integration_points:
+      - "knowledge base creation"
+      - "documentation automation"
+      - "template system integration"
+
+  orchestrate:
+    name: "orchestrate"
+    description: "Coordinate complex workflows and multi-step processes"
+    purpose: "Manage and coordinate complex multi-component operations"
+    parameters:
+      - name: "workflow"
+        type: "string"
+        required: true
+        description: "Workflow or process to orchestrate"
+      - name: "components"
+        type: "array"
+        required: false
+        description: "Components or steps to coordinate"
+      - name: "dependencies"
+        type: "string"
+        required: false
+        description: "Dependencies and ordering requirements"
+      - name: "monitoring"
+        type: "string"
+        required: false
+        description: "Monitoring and error handling requirements"
+    usage_examples:
+      - "orchestrate deployment pipeline"
+      - "orchestrate data processing workflow --architect"
+      - "orchestrate testing sequence --qa --think-hard"
+    integration_points:
+      - "workflow automation"
+      - "process management"
+      - "dependency coordination"
+
+  estimate:
+    name: "estimate"
+    description: "Provide effort, time, and resource estimates for projects"
+    purpose: "Accurate estimation for planning and resource allocation"
+    parameters:
+      - name: "scope"
+        type: "string"
+        required: true
+        description: "Project, feature, or work to estimate"
+      - name: "requirements"
+        type: "string"
+        required: false
+        description: "Detailed requirements and specifications"
+      - name: "constraints"
+        type: "string"
+        required: false
+        description: "Resource or time constraints"
+      - name: "methodology"
+        type: "string"
+        required: false
+        description: "Estimation methodology (story points, hours, complexity)"
+    usage_examples:
+      - "estimate feature development time"
+      - "estimate infrastructure costs --architect"
+      - "estimate migration effort --think-hard"
+    integration_points:
+      - "project planning"
+      - "resource allocation"
+      - "risk assessment"
+
+  index:
+    name: "index"
+    description: "Create searchable indexes and knowledge organization"
+    purpose: "Organize and structure information for efficient retrieval"
+    parameters:
+      - name: "content"
+        type: "string"
+        required: true
+        description: "Content, code, or information to index"
+      - name: "structure"
+        type: "string"
+        required: false
+        description: "Index structure and organization"
+      - name: "metadata"
+        type: "string"
+        required: false
+        description: "Metadata and classification tags"
+      - name: "search"
+        type: "string"
+        required: false
+        description: "Search capabilities and filters"
+    usage_examples:
+      - "index API documentation"
+      - "index codebase for search --analyzer"
+      - "index knowledge base --think --efficient"
+    integration_points:
+      - "knowledge management"
+      - "search optimization"
+      - "content organization"
+
+# Utility Features
+documentation_templates:
+  api_documentation:
+    sections:
+      - "Overview and purpose"
+      - "Authentication"
+      - "Endpoints and methods"
+      - "Request/response examples"
+      - "Error handling"
+      - "Rate limiting"
+  technical_specification:
+    sections:
+      - "System overview"
+      - "Architecture design"
+      - "Data models"
+      - "API contracts"
+      - "Security considerations"
+      - "Performance requirements"
+  user_guide:
+    sections:
+      - "Getting started"
+      - "Core features"
+      - "Step-by-step tutorials"
+      - "Troubleshooting"
+      - "FAQ"
+      - "Support resources"
+
+# Orchestration Patterns
+workflow_types:
+  sequential:
+    description: "Linear step-by-step execution"
+    use_cases: ["Deployment", "Data migration", "Testing"]
+  parallel:
+    description: "Concurrent execution of independent tasks"
+    use_cases: ["Build processes", "Data processing", "Testing"]
+  conditional:
+    description: "Branching based on conditions"
+    use_cases: ["Feature flags", "Environment selection", "Error handling"]
+  loop:
+    description: "Repeated execution with iteration"
+    use_cases: ["Batch processing", "Monitoring", "Retry logic"]
+
+# Estimation Methodologies
+estimation_approaches:
+  story_points:
+    description: "Relative complexity estimation"
+    scale: [1, 2, 3, 5, 8, 13, 21]
+  time_based:
+    description: "Duration estimates in hours/days"
+    units: ["hours", "days", "weeks"]
+  complexity_based:
+    description: "Technical complexity assessment"
+    levels: ["simple", "moderate", "complex", "very_complex"]
+
+# Quality Standards
+validation_requirements:
+  - "Documentation must be comprehensive and accurate"
+  - "Workflows must handle error conditions"
+  - "Estimates must be realistic and justified"
+  - "Indexes must be searchable and well-organized"
+
+# Integration Patterns
+workflow_integration:
+  - "Knowledge base management"
+  - "Project planning systems"
+  - "Automation frameworks"
+  - "Search and discovery tools"

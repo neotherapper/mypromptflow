@@ -1,0 +1,406 @@
+---
+# Document Relationships - Semantic Analysis System
+# YAML-based semantic clustering for intelligent document discovery
+# Version: 1.0
+# Created: 2025-07-18
+# Purpose: Map relationships between documents based on content similarity and business logic
+
+document_categories:
+  strategic:
+    description: "High-level business strategy and planning documents"
+    ai_value_range: [60, 70]
+    documents:
+      - business-model-canvas
+      - lean-canvas
+      - strategic-roadmap
+      - okr-documentation
+      - north-star-metric
+      - investment-readiness-level
+      - market-requirements-document
+      - value-proposition-canvas
+    primary_focus: "Business vision and strategic alignment"
+    outputs: ["strategic_direction", "business_model", "success_metrics"]
+
+  product:
+    description: "Product development and management documents"
+    ai_value_range: [70, 85]
+    documents:
+      - prd
+      - epic-documentation
+      - user-story-backlog
+      - acceptance-criteria-specifications
+      - mvp-specifications
+      - build-measure-learn
+      - pivot-persevere-decisions
+      - product-analytics-strategy
+      - release-notes
+    primary_focus: "Product definition and requirements"
+    outputs: ["product_requirements", "feature_specifications", "success_metrics"]
+
+  technical:
+    description: "Technical architecture and implementation documents"
+    ai_value_range: [90, 95]
+    documents:
+      - api-documentation
+      - api-documentation-openapi
+      - database-schemas
+      - technical-requirements
+      - system-architecture
+    primary_focus: "Technical implementation and architecture"
+    outputs: ["technical_specifications", "implementation_guidance", "integration_points"]
+
+  ux:
+    description: "User experience and design documents"
+    ai_value_range: [65, 75]
+    documents:
+      - user-personas
+      - user-stories
+      - design-system
+      - wireframes
+      - user-research
+      - accessibility-requirements
+    primary_focus: "User experience and interface design"
+    outputs: ["user_insights", "design_specifications", "usability_requirements"]
+
+  business:
+    description: "Business analysis and process documentation"
+    ai_value_range: [60, 75]
+    documents:
+      - business-process
+      - competitive-analysis
+      - market-analysis
+      - business-requirements
+      - stakeholder-analysis
+    primary_focus: "Business operations and analysis"
+    outputs: ["business_insights", "process_definitions", "market_intelligence"]
+
+  quality:
+    description: "Quality assurance and testing documents"
+    ai_value_range: [75, 90]
+    documents:
+      - test-plans
+      - test-cases
+      - quality-standards
+      - performance-requirements
+      - security-requirements
+      - acceptance-testing
+    primary_focus: "Quality validation and testing"
+    outputs: ["test_specifications", "quality_metrics", "validation_criteria"]
+
+  compliance:
+    description: "Regulatory and compliance documentation"
+    ai_value_range: [70, 85]
+    documents:
+      - regulatory-requirements
+      - compliance-checklist
+      - security-policies
+      - privacy-policies
+      - audit-documentation
+    primary_focus: "Regulatory compliance and governance"
+    outputs: ["compliance_requirements", "audit_trail", "regulatory_alignment"]
+
+# Semantic Clusters - Groups of related documents
+semantic_clusters:
+  strategy_to_execution:
+    description: "Strategic planning to implementation workflow"
+    strength: 0.9
+    documents:
+      - strategic-roadmap
+      - okr-documentation
+      - prd
+      - epic-documentation
+      - api-documentation
+    relationship_type: "sequential"
+    business_logic: "Strategic goals drive product requirements which drive technical implementation"
+
+  user_research_to_design:
+    description: "User insights to design implementation"
+    strength: 0.85
+    documents:
+      - market-requirements-document
+      - user-personas
+      - user-stories
+      - acceptance-criteria-specifications
+      - design-system
+    relationship_type: "dependency"
+    business_logic: "User research informs design decisions and feature requirements"
+
+  product_definition_cluster:
+    description: "Core product definition and requirements"
+    strength: 0.8
+    documents:
+      - business-model-canvas
+      - value-proposition-canvas
+      - prd
+      - mvp-specifications
+      - user-story-backlog
+    relationship_type: "complement"
+    business_logic: "Product definition requires business model, value proposition, and detailed requirements"
+
+  technical_implementation_cluster:
+    description: "Technical architecture and implementation"
+    strength: 0.9
+    documents:
+      - system-architecture
+      - api-documentation
+      - database-schemas
+      - technical-requirements
+      - performance-requirements
+    relationship_type: "dependency"
+    business_logic: "Technical implementation requires architecture, APIs, and data models"
+
+  validation_and_testing_cluster:
+    description: "Quality assurance and validation"
+    strength: 0.85
+    documents:
+      - acceptance-criteria-specifications
+      - test-plans
+      - test-cases
+      - performance-requirements
+      - security-requirements
+    relationship_type: "complement"
+    business_logic: "Testing validates requirements and ensures quality standards"
+
+  business_analysis_cluster:
+    description: "Business intelligence and market analysis"
+    strength: 0.75
+    documents:
+      - competitive-analysis
+      - market-analysis
+      - business-requirements
+      - investment-readiness-level
+      - product-analytics-strategy
+    relationship_type: "similarity"
+    business_logic: "Business analysis provides market context and competitive intelligence"
+
+  compliance_governance_cluster:
+    description: "Regulatory compliance and governance"
+    strength: 0.8
+    documents:
+      - regulatory-requirements
+      - compliance-checklist
+      - security-policies
+      - privacy-policies
+      - audit-documentation
+    relationship_type: "complement"
+    business_logic: "Compliance requires comprehensive governance framework"
+
+# Cross-Category Relationships
+cross_category_relationships:
+  strategic_to_product:
+    from_category: "strategic"
+    to_category: "product"
+    strength: 0.9
+    relationship_type: "drives"
+    examples:
+      - strategic-roadmap → prd
+      - okr-documentation → epic-documentation
+      - business-model-canvas → value-proposition-canvas
+      - north-star-metric → product-analytics-strategy
+    business_logic: "Strategic goals drive product requirements and features"
+
+  product_to_technical:
+    from_category: "product"
+    to_category: "technical"
+    strength: 0.85
+    relationship_type: "defines"
+    examples:
+      - prd → system-architecture
+      - epic-documentation → api-documentation
+      - acceptance-criteria-specifications → technical-requirements
+      - mvp-specifications → database-schemas
+    business_logic: "Product requirements define technical implementation needs"
+
+  ux_to_product:
+    from_category: "ux"
+    to_category: "product"
+    strength: 0.8
+    relationship_type: "informs"
+    examples:
+      - user-personas → user-story-backlog
+      - user-research → prd
+      - design-system → acceptance-criteria-specifications
+      - wireframes → epic-documentation
+    business_logic: "User experience insights inform product definition"
+
+  business_to_strategic:
+    from_category: "business"
+    to_category: "strategic"
+    strength: 0.75
+    relationship_type: "supports"
+    examples:
+      - competitive-analysis → strategic-roadmap
+      - market-analysis → business-model-canvas
+      - business-requirements → okr-documentation
+      - stakeholder-analysis → investment-readiness-level
+    business_logic: "Business analysis supports strategic planning"
+
+  technical_to_quality:
+    from_category: "technical"
+    to_category: "quality"
+    strength: 0.9
+    relationship_type: "validates"
+    examples:
+      - api-documentation → test-plans
+      - database-schemas → test-cases
+      - system-architecture → performance-requirements
+      - technical-requirements → security-requirements
+    business_logic: "Technical specifications drive quality validation requirements"
+
+  quality_to_compliance:
+    from_category: "quality"
+    to_category: "compliance"
+    strength: 0.7
+    relationship_type: "ensures"
+    examples:
+      - security-requirements → security-policies
+      - performance-requirements → regulatory-requirements
+      - test-plans → compliance-checklist
+      - quality-standards → audit-documentation
+    business_logic: "Quality standards ensure compliance with regulations"
+
+  compliance_to_strategic:
+    from_category: "compliance"
+    to_category: "strategic"
+    strength: 0.6
+    relationship_type: "constrains"
+    examples:
+      - regulatory-requirements → strategic-roadmap
+      - compliance-checklist → investment-readiness-level
+      - security-policies → business-model-canvas
+      - privacy-policies → okr-documentation
+    business_logic: "Compliance requirements constrain and guide strategic decisions"
+
+# Content-Based Similarity Mappings
+content_similarity_mappings:
+  high_similarity:
+    threshold: 0.8
+    document_pairs:
+      - [business-model-canvas, lean-canvas]
+      - [user-stories, acceptance-criteria-specifications]
+      - [api-documentation, api-documentation-openapi]
+      - [test-plans, test-cases]
+      - [strategic-roadmap, okr-documentation]
+      - [user-personas, user-research]
+      - [security-requirements, security-policies]
+
+  medium_similarity:
+    threshold: 0.6
+    document_pairs:
+      - [prd, epic-documentation]
+      - [mvp-specifications, build-measure-learn]
+      - [competitive-analysis, market-analysis]
+      - [system-architecture, technical-requirements]
+      - [performance-requirements, scalability-requirements]
+      - [compliance-checklist, audit-documentation]
+      - [design-system, wireframes]
+
+  low_similarity:
+    threshold: 0.4
+    document_pairs:
+      - [business-model-canvas, api-documentation]
+      - [user-personas, database-schemas]
+      - [strategic-roadmap, test-cases]
+      - [compliance-checklist, wireframes]
+      - [north-star-metric, technical-requirements]
+
+# Dependency Chains
+dependency_chains:
+  complete_product_lifecycle:
+    chain: 
+      - strategic-roadmap
+      - business-model-canvas
+      - market-requirements-document
+      - user-personas
+      - prd
+      - epic-documentation
+      - user-story-backlog
+      - acceptance-criteria-specifications
+      - system-architecture
+      - api-documentation
+      - database-schemas
+      - test-plans
+      - compliance-checklist
+    strength: 0.9
+    description: "Complete product development lifecycle from strategy to compliance"
+
+  mvp_development_chain:
+    chain:
+      - lean-canvas
+      - value-proposition-canvas
+      - mvp-specifications
+      - user-stories
+      - api-documentation
+      - test-cases
+    strength: 0.85
+    description: "Minimum viable product development chain"
+
+  user_experience_chain:
+    chain:
+      - user-research
+      - user-personas
+      - wireframes
+      - design-system
+      - user-stories
+      - acceptance-criteria-specifications
+    strength: 0.8
+    description: "User experience design and validation chain"
+
+  technical_implementation_chain:
+    chain:
+      - system-architecture
+      - technical-requirements
+      - api-documentation
+      - database-schemas
+      - performance-requirements
+      - security-requirements
+    strength: 0.9
+    description: "Technical implementation and validation chain"
+
+# Relationship Strength Scoring
+relationship_strength_factors:
+  dependency_multiplier: 1.0
+  similarity_multiplier: 0.8
+  complement_multiplier: 0.9
+  sequence_multiplier: 0.95
+  reference_multiplier: 0.7
+
+  ai_value_alignment:
+    high_alignment: 0.9   # Similar AI processing values
+    medium_alignment: 0.7
+    low_alignment: 0.5
+
+  business_workflow_position:
+    same_stage: 0.8
+    adjacent_stage: 0.9
+    distant_stage: 0.4
+
+  content_overlap:
+    high_overlap: 0.85
+    medium_overlap: 0.6
+    low_overlap: 0.3
+
+# Update and Maintenance Configuration
+update_mechanisms:
+  automatic_updates:
+    enabled: true
+    triggers:
+      - new_document_added
+      - document_modified
+      - relationship_usage_tracked
+    frequency: "weekly"
+
+  relationship_validation:
+    enabled: true
+    validation_rules:
+      - strength_threshold: 0.3
+      - bidirectional_consistency: true
+      - circular_dependency_detection: true
+    
+  learning_system:
+    enabled: true
+    feedback_sources:
+      - user_navigation_patterns
+      - document_creation_sequences
+      - ai_agent_usage_patterns
+    adaptation_rate: 0.1
