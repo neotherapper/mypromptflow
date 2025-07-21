@@ -2,9 +2,9 @@
 # Updated: 2025-07-20 - Reorganized structure with revolutionary intent validation
 
 validator_registry:
-  discovery_date: "2025-07-20"
-  total_validators: 19
-  organization: "Consolidated under meta/validation/ with revolutionary intent-implementation validation"
+  discovery_date: "2025-07-21"
+  total_validators: 21
+  organization: "Enhanced with project documentation validators for comprehensive file type coverage"
   
   existing_validators:
     # Revolutionary Intent Validation (NEW)
@@ -121,8 +121,45 @@ validator_registry:
       parallel_safe: true
       production_ready: true
       
-    # File Type Validators (Ready for Creation)
-    # Note: These are placeholders for validators to be created
+    # Project Documentation Validators (NEW)
+    - name: "project-documentation-validator"
+      location: "meta/validation/validators/project/project-documentation-validator.md"
+      file_types: 
+        - "*/progress.md"
+        - "*/task-list.md" 
+        - "*/project-purpose.md"
+        - "*/research-integration.md"
+      capabilities:
+        - "Project tracking file validation for AI agent effectiveness"
+        - "Framework compliance validation for project documentation"
+        - "Cross-reference accuracy validation"
+        - "Task management and progress tracking assessment"
+        - "Success criteria and measurable outcomes validation"
+      spawn_pattern: "Task tool with project-documentation-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Essential for mypromptflow project framework compliance"
+      
+    - name: "ai-documentation-validator"
+      location: "meta/validation/validators/project/ai-documentation-validator.md"
+      file_types:
+        - "projects/*/docs/**/*.md"
+        - "projects/*/docs/**/*.yaml"
+      capabilities:
+        - "AI-consumable documentation effectiveness validation"
+        - "Technical documentation actionability assessment"
+        - "Implementation guidance clarity validation"
+        - "Cross-reference integration accuracy"
+        - "Code examples and configuration completeness validation"
+      spawn_pattern: "Task tool with ai-documentation-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Critical for AI-assisted development effectiveness"
+    
+    # File Type Validators (Existing and Planned)
+    # Note: Some validators still need creation
     
     # Legacy/Development Validators (Kept for Reference)
     - name: "quality-validator"
@@ -172,11 +209,13 @@ validator_registry:
       production_ready: false
 
   production_ready_validators:
-    count: 10
+    count: 12
     validators: 
       - "intent-implementation-validator"  # REVOLUTIONARY NEW VALIDATOR
       - "claude-command-evaluator"
       - "ai-agent-instruction-evaluator"
+      - "project-documentation-validator"  # NEW PROJECT VALIDATOR
+      - "ai-documentation-validator"  # NEW AI DOCS VALIDATOR
       - "vagueness-detector"
       - "anti-fiction-validator"
       - "constitutional-ai-checker"
@@ -202,12 +241,16 @@ validator_registry:
       - "ai/agents/*.md": ["ai-agent-instruction-evaluator"]
       - "ai/prompts/**/*.md": ["ai-agent-instruction-evaluator"]
       - "**/CLAUDE.md": ["ai-agent-instruction-evaluator"]
+      - "*/progress.md, */task-list.md": ["project-documentation-validator"]
+      - "projects/*/docs/**/*.md": ["ai-documentation-validator"]
       - "AI agent instructions": ["vagueness-detector", "anti-fiction-validator", "constitutional-ai-checker"]
       - "Framework specifications": ["framework-coherence-analyzer", "constitutional-ai-checker"]
       - "Multi-agent systems": ["communication-pattern-validator"]
       - "Workflow specifications": ["workflow-completeness-inspector"]
       - "System resilience patterns": ["resilience-assessment-engine"]
       - "PR Intent Validation": ["intent-implementation-validator - FIRST-EVER SYSTEM"]
+      - "Project Documentation": ["project-documentation-validator - AI AGENT EFFECTIVENESS"]
+      - "AI-Consumable Docs": ["ai-documentation-validator - TECHNICAL CLARITY"]
       
     partially_covered_types:
       - "workflow validations": ["chain validators - development stage"]
