@@ -1,6 +1,8 @@
+---
 # Knowledge Status Cache System
 # AI INSTRUCTIONS: Fast status retrieval for AI agents with automatic updates
-# FILE PURPOSE: Provide instant context about knowledge base state and completion metrics
+# FILE PURPOSE: Provide instant context about knowledge base state and
+# completion metrics
 
 metadata:
   version: "1.0.0"
@@ -236,9 +238,9 @@ semantic_clusters:
 # DEPENDENCY ANALYSIS
 dependency_analysis:
   critical_path:
-    - "statement-of-purpose" # Complete
-    - "user-research" # Complete
-    - "user-personas" # Complete
+    - "statement-of-purpose"  # Complete
+    - "user-research"  # Complete
+    - "user-personas"  # Complete
     - "prd" # In Progress
     - "system-architecture" # Blocked
     - "api-documentation" # Blocked
