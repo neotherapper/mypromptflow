@@ -6,7 +6,7 @@ features:
   planned_features: []
 
   feature_details:
-  # This will be populated as features are created
+    # This will be populated as features are created
     # Format:
     # - name: "feature-name"
     #   status: "planning|development|testing|completed"
