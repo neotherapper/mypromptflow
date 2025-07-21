@@ -1,12 +1,8 @@
-# Improve CLAUDE.md File
-
 Analyze and improve CLAUDE.md file: $ARGUMENTS
 
-## CLAUDE.md Improvement Workflow
+Execute this 7-step CLAUDE.md improvement workflow:
 
-### 1. Understanding Claude Context System
-
-**Research Claude Capabilities:**
+**Step 1: Load Claude Context System Knowledge**
 - **Reference**: `@projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
 - **Research**: `@research/findings/meta-frameworks-analysis/comprehensive-analysis.md`
 - **Key Concepts**: Automatic context loading, project memory persistence, command system integration
@@ -17,11 +13,9 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - Three-tier memory system (project, user, dynamic)
 - Automatic @file_path reference loading
 
-### 2. Apply Framework Assessment (MANDATORY: No Fictional Results)
+**Step 2: Apply Framework Assessment (MANDATORY: No Fictional Results)**
 
-**⚠️ CRITICAL**: Must use real assessment methodology from framework tools
-
-**Assessment Process:**
+Use these specific assessment tools:
 1. **Use Framework Selector**: `@projects/ai-agent-instruction-design-excellence/docs/navigation/framework-selector.md`
 2. **Apply Real Methodology**: No fictional scores - must apply actual checklists
 3. **Document Findings**: Specific file lines and text quotes required
@@ -34,9 +28,9 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - Context Optimization Tool: Progressive loading effectiveness
 - Constitutional AI Compliance Checker: Ethical standards validation
 
-### 3. Check Required CLAUDE.md Elements
+**Step 3: Validate Required CLAUDE.md Elements**
 
-**Essential Components Checklist:**
+Check these essential components:
 - [ ] **Project Context**: Clear project type, status, and priority
 - [ ] **Goals and Success Criteria**: Specific, measurable objectives
 - [ ] **AI Agent Instructions**: How agents should work on the project
@@ -53,11 +47,11 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - [ ] **Automatic Context Loading**: Leverages Claude's recursive file discovery
 - [ ] **Multi-File Awareness**: Takes advantage of Claude's cross-file understanding
 
-### 4. Apply Improvement Frameworks
+**Step 4: Apply Improvement Frameworks Based on Assessment Results**
 
-**Based on Assessment Results (Apply Actual Framework, Not Fictional):**
+Execute these framework applications:
 
-**If Vagueness Detected** → **Apply Concreteness Framework**:
+**For Vagueness Issues → Apply Concreteness Framework:**
 - Replace vague terms with specific, measurable criteria
 - Add numerical thresholds and concrete parameters
 - Define success criteria with objective measures
@@ -81,9 +75,9 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - Define decision points with clear criteria
 - Ensure immediate executability without interpretation
 
-### 5. Claude Integration Best Practices
+**Step 5: Optimize for Claude's Capabilities**
 
-**Optimize for Claude's Capabilities:**
+Apply these integration patterns:
 - **Leverage Automatic Loading**: Structure for Claude's recursive file discovery
 - **Use Cross-References**: Implement @file_path patterns for related documents
 - **Support Command Integration**: Include references to .claude/commands/ workflows
@@ -95,9 +89,9 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - **Build System Integration**: Connect with Claude's build system knowledge
 - **Cross-File Coordination**: Enable Claude's cross-file refactoring capabilities
 
-### 6. Validate Improvements
+**Step 6: Validate Improvements**
 
-**Quality Validation Process:**
+Execute this validation sequence:
 1. **Re-run Framework Assessment**: Apply same assessment tools to improved CLAUDE.md
 2. **Verify Claude Integration**: Check automatic context loading effectiveness
 3. **Test Cross-References**: Validate @file_path accuracy and accessibility
@@ -111,9 +105,9 @@ Analyze and improve CLAUDE.md file: $ARGUMENTS
 - Cross-references accurate and functional
 - Instructions immediately actionable by AI agents
 
-### 7. Documentation and Integration
+**Step 7: Complete Documentation and Integration**
 
-**Update Related Files:**
+Update these related files:
 - Update project task lists with improvement results
 - Document changes in progress tracking files
 - Update research integration with new findings

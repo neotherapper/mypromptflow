@@ -91,12 +91,12 @@ When recommending documents, mention how templates will be pre-filled:
 - **user-personas**: User types, industry context
 
 ## Success Metrics
-Ensure each bootstrap session achieves:
-- ✅ All required questions answered
-- ✅ User path correctly identified
-- ✅ Specific document sequence recommended
-- ✅ Clear next action provided (`/create-document [name]`)
-- ✅ User understands why each document is needed
+Ensure each bootstrap session achieves measurable completion criteria:
+- ✅ Question completion rate: 100% of required questions answered with valid responses
+- ✅ Path identification accuracy: ≥95% confidence score in path classification algorithm
+- ✅ Document sequence specificity: ≥3 concrete documents recommended with execution order and effort estimates
+- ✅ Action clarity: Next action provided with exact command syntax and expected execution time (≤5 minutes)
+- ✅ User comprehension validation: User confirms understanding of document purpose and creation rationale (≥80% comprehension score)
 
 ## Error Handling
 - **Unclear responses**: Ask follow-up questions for clarification

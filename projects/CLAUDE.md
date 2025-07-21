@@ -75,25 +75,25 @@ projects/[project-name]/
 
 ### Research Gaps
 
-- AI identifies areas where additional research would benefit the project
-- Research tasks are created for knowledge gaps
-- New research feeds back into the research framework
+- Execute gap analysis protocol to identify research needs (complexity scoring: 1-5 scale, benefit assessment: quantified impact estimation)
+- Generate research tasks using standardized format (scope definition, success criteria, resource requirements, timeline constraints)
+- Integrate research findings through systematic update procedures (relevance scoring, cross-reference validation, knowledge base synchronization)
 
 ## Quality Standards
 
 ### Project Documentation
 
-- Clear, concise project purpose and goals
-- Specific, actionable tasks with priorities
-- Regular progress updates with concrete outcomes
+- Project purpose and goals with measurable success criteria (completion thresholds: ≥95%, timeline adherence: ≤110% of planned duration)
+- Tasks with explicit execution steps, effort estimates (hours), and priority levels (High/Medium/Low)
+- Progress updates with completion percentages, quality scores, and milestone tracking (update frequency: ≤48h intervals)
 - Integration with relevant research findings
 
 ### AI Agent Instructions
 
-- Complete context for understanding the project
-- Clear guidance on how to approach tasks
-- Specific preferences and constraints
-- Quality criteria for deliverables
+- Complete context including project scope, dependencies, success metrics, and failure criteria
+- Step-by-step task execution guidance with decision criteria and validation checkpoints
+- Explicit preferences (tools, methodologies, formats) and hard constraints (timeframes, resource limits, quality thresholds)
+- Measurable quality criteria (accuracy: ≥95%, completeness: ≥90%, consistency: ≥88%) for all deliverables
 
 ## Integration with Existing Systems
 
@@ -118,17 +118,17 @@ projects/[project-name]/
 
 ### For Project Creation
 
-- Provide clear, specific project descriptions
-- Identify constraints and preferences upfront
-- Link to relevant existing knowledge
-- Define concrete success criteria
+- Provide project descriptions with scope boundaries, deliverable specifications, and timeline parameters
+- Document constraints (budget limits, technical requirements, resource availability) and preferences (tools, methodologies, communication patterns) using structured formats
+- Establish cross-references to @research/findings/ and @ai/knowledge/ with relevance scores and dependency mapping
+- Define success criteria using measurable metrics (completion rate: ≥95%, quality score: ≥4.0/5.0, timeline adherence: ≤110%)
 
 ### For Project Execution
 
-- Work on highest priority tasks first
-- Update progress regularly
-- Add new tasks as understanding evolves
-- Validate work against original goals
+- Execute tasks using priority ordering algorithm (High: ≤24h response, Medium: ≤72h, Low: ≤168h)
+- Update progress using standardized tracking format (completion percentage, quality score, time spent, issues encountered) within ≤48h intervals
+- Generate new tasks through systematic discovery protocol (dependency analysis, gap identification, risk assessment) with effort estimates and priority classification
+- Validate deliverables against defined success criteria using measurement protocols (accuracy verification, completeness checking, consistency validation)
 
 ### For AI Agents
 
