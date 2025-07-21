@@ -45,7 +45,7 @@ Output structured discovery results:
 
 **Step 2.1: Content-Based Validator Selection**  
 Based on target file analysis, determine applicable validators:
-- **Claude Commands**: constitutional-ai-checker, vagueness-detector, framework-coherence-analyzer
+- **Claude Commands**: command-intent-validator (FIRST), claude-command-evaluator, constitutional-ai-checker, vagueness-detector, framework-coherence-analyzer
 - **AI Agent Instructions**: All 7 meta validators (comprehensive framework validation)
 - **Framework Specifications**: framework-coherence-analyzer, constitutional-ai-checker, workflow-completeness-inspector
 - **Multi-Agent Systems**: communication-pattern-validator, resilience-assessment-engine
@@ -92,7 +92,16 @@ Set up framework validation tracking:
 - `framework_compliance`: Overall compliance tracking
 - `execution_failures`: Track validator execution issues
 
-**Step 3.2: Core Validator Execution**
+**Step 3.2: Intent Validator Execution (For Claude Commands)**
+
+**Command Intent Validation**  
+Execute command-intent-validator using Task tool (FIRST for Claude commands):
+1. **Task Description**: "Parse command intent and determine appropriate validation rules"
+2. **Task Prompt**: "You are a Command Intent specialist. Analyze target file: {target_file}. Apply intent parsing from @meta/validation/validators/ai-instruction/command-intent-validator.md. Determine command intent (display, execution, analysis, hybrid), classify audience (user-facing, AI-agent-facing), and establish validation rule overrides. Provide intent-based validation context for subsequent validators."
+3. **Expected Output**: Intent classification with validation rule customizations and conflict resolution guidance
+4. **Context Sharing**: Intent results inform all subsequent validators about appropriate content patterns
+
+**Step 3.3: Core Validator Execution**
 
 **Constitutional AI Validation**  
 Execute constitutional-ai-checker using Task tool:
@@ -106,7 +115,7 @@ Execute vagueness-detector using Task tool:
 2. **Task Prompt**: "You are a Vagueness Detection specialist. Analyze target file: {target_file}. Apply criteria from @meta/validation/validators/framework/vagueness-detector.md. Identify abstract concepts, vague references, and provide concrete alternatives. Generate specificity report with actionable improvements."
 3. **Expected Output**: Vagueness assessment with concrete improvement recommendations
 
-**Step 3.3: Content-Specific Validator Execution**
+**Step 3.4: Content-Specific Validator Execution**
 
 **Anti-Fiction Validation**  
 If evidence-based content detected:

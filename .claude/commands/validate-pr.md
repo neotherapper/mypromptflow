@@ -84,33 +84,39 @@ Output structured summary:
 
 **AI Agent Instructions**: Process file list and PR metadata from Phase 1 using enhanced pattern matching:
 
-**Step 2.1: Initialize File Type Categories**  
-Create working variables for file classification:
+**Step 2.1: Initialize Enhanced File Type Categories**  
+Create working variables for comprehensive file classification:
 - `claude_command_files`: Files matching `.claude/commands/*.md` pattern
 - `claude_md_files`: Files named `CLAUDE.md` 
 - `ai_agent_files`: Files in `ai/agents/` or `ai-agent-instruction-design-excellence/` directories
+- `project_documentation_files`: Files matching `*/progress.md`, `*/task-list.md`, `*/project-purpose.md`, `*/research-integration.md`
+- `ai_consumable_docs`: Files matching `projects/*/docs/**/*.md` pattern
 - `typescript_files`: Files with `.ts` or `.tsx` extensions
 - `python_files`: Files with `.py` extension
 - `yaml_files`: Files with `.yaml` or `.yml` extensions
 - `generic_md_files`: Other `.md` files
 
-**Step 2.2: Pattern Matching Classification**  
-For each file from Phase 1 file list, apply pattern matching:
+**Step 2.2: Enhanced Pattern Matching Classification**  
+For each file from Phase 1 file list, apply enhanced pattern matching:
 - Check file path contains `.claude/commands/` and ends with `.md` → claude_command_files
 - Check filename equals `CLAUDE.md` → claude_md_files
 - Check path contains `ai/agents/` or `ai-agent-instruction-design-excellence/` → ai_agent_files
+- Check filename matches `progress.md`, `task-list.md`, `project-purpose.md`, `research-integration.md` → project_documentation_files
+- Check path matches `projects/*/docs/**/*.md` pattern → ai_consumable_docs
 - Check extension `.ts` or `.tsx` → typescript_files
 - Check extension `.py` → python_files
 - Check extension `.yaml` or `.yml` → yaml_files
 - Check extension `.md` (remaining) → generic_md_files
 
-**Step 2.3: Priority Classification and Reporting**  
-Output classification results with priority levels:
+**Step 2.3: Enhanced Priority Classification and Reporting**  
+Output comprehensive classification results with priority levels:
 ```
-🎯 File Type Detection Results:
+🎯 Enhanced File Type Detection Results:
   🤖 Claude Commands: [count] files [CRITICAL]
   🧠 CLAUDE.md Files: [count] files [CRITICAL]  
   👑 AI Agent Instructions: [count] files [HIGH]
+  📋 Project Documentation: [count] files [HIGH - NEW CATEGORY]
+  🗂️ AI-Consumable Docs: [count] files [HIGH - NEW CATEGORY]
   📘 TypeScript Files: [count] files [HIGH]
   🐍 Python Files: [count] files [HIGH]
   ⚙️ YAML Files: [count] files [MEDIUM]
@@ -168,6 +174,26 @@ If `ai_agent_files` or `claude_md_files` contain files:
 3. **If validator missing**: Use embedded AI instruction validation logic
 
 **Step 3.3: High Priority Specialist Spawning**
+
+**Project Documentation Files (HIGH Priority)**  
+If `project_documentation_files` contains files:
+1. Check if validator registry contains `project-documentation-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate project documentation files for AI agent effectiveness"
+   - **prompt**: "You are a Project Documentation Validator specialist. Using the project-documentation-validator from meta/validation/validators/project/project-documentation-validator.md, analyze files: {project_documentation_files}. Apply validation criteria focusing on AI agent readability, framework compliance, cross-reference accuracy, and task management effectiveness. Generate detailed compliance assessment with actionable recommendations for project documentation improvement."
+   - **context**: Embed project files list and mypromptflow framework requirements
+   - **expected_tokens**: 80
+3. **If validator missing**: Use embedded project documentation validation logic
+
+**AI-Consumable Documentation Files (HIGH Priority)**  
+If `ai_consumable_docs` contains files:
+1. Check if validator registry contains `ai-documentation-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate AI-consumable documentation for effectiveness and actionability"
+   - **prompt**: "You are an AI Documentation Validator specialist. Using the ai-documentation-validator from meta/validation/validators/project/ai-documentation-validator.md, analyze AI-consumable documentation files: {ai_consumable_docs}. Focus on technical clarity, implementation guidance, and AI agent actionability. Apply validation criteria for documentation structure, cross-reference integration, and technical quality. Generate comprehensive assessment with specific improvements for AI consumption effectiveness."
+   - **context**: Project AI documentation files and technical documentation standards
+   - **expected_tokens**: 100
+3. **If validator missing**: Use embedded AI documentation validation logic
 
 **TypeScript Files (HIGH Priority)**  
 If `typescript_files` contains files:
