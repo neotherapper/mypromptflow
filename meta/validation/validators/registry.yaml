@@ -14,10 +14,10 @@ validator_registry:
       capabilities:
         - "REVOLUTIONARY: Intent vs implementation semantic alignment checking"
         - "PR description parsing and goal extraction"
-        - "Scope creep detection (≤15% unrelated changes threshold)"
+        - "Scope creep detection with unrelated changes threshold"
         - "Implementation completeness validation"
         - "Undisclosed breaking change detection"
-        - "85% semantic alignment threshold for approval"
+        - "High semantic alignment threshold for approval"
       spawn_pattern: "Task tool with intent-implementation-validator specialist"
       authority_level: "Specialist Agent (Level 3)"
       parallel_safe: true
@@ -79,7 +79,7 @@ validator_registry:
     - name: "constitutional-ai-checker"
       location: "meta/validation/validators/framework/constitutional-ai-checker.md"
       file_types: ["AI agent instructions", "framework specifications", "validation protocols"]
-      capabilities: ["5-principle constitutional validation", "Ethical compliance checking", "≥95% compliance threshold"]
+      capabilities: ["5-principle constitutional validation", "Ethical compliance checking", "High compliance threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -88,7 +88,7 @@ validator_registry:
     - name: "framework-coherence-analyzer"
       location: "meta/validation/validators/framework/framework-coherence-analyzer.md"
       file_types: ["Framework specifications", "multi-file instruction sets", "system architectures"]
-      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "≥85-point production threshold"]
+      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -97,7 +97,7 @@ validator_registry:
     - name: "communication-pattern-validator"
       location: "meta/validation/validators/framework/communication-pattern-validator.md"
       file_types: ["Multi-agent systems", "communication protocols", "coordination patterns"]
-      capabilities: ["Protocol compliance validation", "Timeout pattern analysis", "Error handling validation", "≥90-point production threshold"]
+      capabilities: ["Protocol compliance validation", "Timeout pattern analysis", "Error handling validation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -106,7 +106,7 @@ validator_registry:
     - name: "workflow-completeness-inspector"
       location: "meta/validation/validators/framework/workflow-completeness-inspector.md"
       file_types: ["Workflow specifications", "process definitions", "integration protocols"]
-      capabilities: ["Process flow coverage", "Integration point validation", "Error path coverage", "≥95-point production threshold"]
+      capabilities: ["Process flow coverage", "Integration point validation", "Error path coverage", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -115,7 +115,7 @@ validator_registry:
     - name: "resilience-assessment-engine"
       location: "meta/validation/validators/framework/resilience-assessment-engine.md"
       file_types: ["System resilience patterns", "failure recovery procedures", "degradation strategies"]
-      capabilities: ["Failure detection analysis", "Recovery strategy validation", "Circuit breaker implementation", "≥90-point production threshold"]
+      capabilities: ["Failure detection analysis", "Recovery strategy validation", "Circuit breaker implementation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -311,7 +311,7 @@ validator_registry:
     revolutionary_addition:
       - "intent-implementation-validator: BREAKTHROUGH innovation for PR semantic validation"
       - "First system to validate PRs actually do what they claim"
-      - "85% semantic alignment threshold for approval"
+      - "High semantic alignment threshold for approval"
       - "Scope creep, completeness, and consistency validation"
       
     ai_agent_instruction_design_excellence_integration:
@@ -342,13 +342,13 @@ validation_reports:
 # Measurement Standards (REAL metrics only)
 measurement_standards:
   real_thresholds:
-    constitutional_compliance: "≥95% (measured via 5-principle assessment)"
+    constitutional_compliance: "High standard (measured via 5-principle assessment)"
     quality_scores: "0.0-5.0 scale (measured via framework scoring system)"
-    execution_timeouts: "≤600s (measured execution time)"
-    semantic_alignment: "≥85% (measured via intent-implementation comparison)"
-    ai_agent_instruction_effectiveness: "≥75/100 (measured via claude-command-evaluator)"
-    human_artifact_elimination: "0 artifacts (measured via vagueness-detector)"
-    arguments_pattern_compliance: "100% for parameterized commands (measured via pattern detection)"
+    execution_timeouts: "Reasonable time limit (measured execution time)"
+    semantic_alignment: "High standard (measured via intent-implementation comparison)"
+    ai_agent_instruction_effectiveness: "Good effectiveness (measured via claude-command-evaluator)"
+    human_artifact_elimination: "Zero artifacts (measured via vagueness-detector)"
+    arguments_pattern_compliance: "Full compliance for parameterized commands (measured via pattern detection)"
     
   measurement_methods:
     constitutional_assessment: "Apply 5-principle framework assessment tools"
@@ -361,9 +361,9 @@ measurement_standards:
     
   success_criteria:
     validator_effectiveness: "Measured success rate in completing assigned validation tasks"
-    false_positive_rate: "≤10% (measured by manual verification of flagged issues)"
-    processing_efficiency: "≤600s total validation time (measured end-to-end)"
-    intent_detection_accuracy: "≥85% (measured semantic alignment success rate)"
-    claude_command_pattern_detection: "100% accuracy for $ARGUMENTS and human artifact detection"
-    ai_agent_readiness_assessment: "≥95% correlation with manual expert evaluation"
-    framework_integration_effectiveness: "100% compliance with AI Agent Instruction Design Excellence principles"
+    false_positive_rate: "Low rate (measured by manual verification of flagged issues)"
+    processing_efficiency: "Reasonable validation time (measured end-to-end)"
+    intent_detection_accuracy: "High accuracy (measured semantic alignment success rate)"
+    claude_command_pattern_detection: "High accuracy for $ARGUMENTS and human artifact detection"
+    ai_agent_readiness_assessment: "High correlation with manual expert evaluation"
+    framework_integration_effectiveness: "Full compliance with AI Agent Instruction Design Excellence principles"
