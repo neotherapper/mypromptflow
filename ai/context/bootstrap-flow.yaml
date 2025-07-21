@@ -1,6 +1,6 @@
 ---
 # Knowledge Base Bootstrap Flow Configuration
-# AI INSTRUCTIONS: This file defines the bootstrap questionnaire and response 
+# AI INSTRUCTIONS: This file defines the bootstrap questionnaire and response
 # logic. UPDATED: Now references modular workflow structure
 
 bootstrap_config:

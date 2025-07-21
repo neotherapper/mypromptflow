@@ -9,7 +9,7 @@ registry:
     tier3: []
     tier4: []
   documents: []
-  
+
 # Empty knowledge base - ready for bootstrap process
 bootstrap_status: "ready"
 bootstrap_questions_needed: true
