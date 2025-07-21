@@ -17,7 +17,7 @@ mcp-knowledge-base/
 ├── README.md                 # This overview file
 ├── mcp-servers-registry.md   # Master registry of all discovered servers
 ├── discovery-progress.md     # Track research progress and targets
-├── server-categories.md      # Organized categorization of servers
+├── mcp-categories.md        # Organized categorization of MCP servers
 └── capability-matrix.md      # Detailed capability analysis for top candidates
 ```
 
