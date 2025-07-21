@@ -1,65 +1,58 @@
-# Create Project Command
+Create a new project using interactive planning process for: $ARGUMENTS
 
-## Command Overview
+Conduct focused conversation to gather essential project information, then automatically create complete project structure with populated files.
 
-The `/create-project` command creates a new project using an interactive planning process. The AI agent conducts a focused conversation to gather essential project information, then automatically creates a complete project structure with populated files.
+**Execute interactive planning workflow:**
 
-## Command Workflow
+**Phase 1: Core Project Definition**
+Ask: "What is this project and what specific outcome are you trying to achieve?"
 
-### Phase 1: Enter Plan Mode
-When user runs `/create-project`, immediately enter plan mode and begin interactive conversation.
-
-### Phase 2: Essential Questions (2-3 questions maximum)
-
-#### Question 1: Core Project Definition
-"What is this project and what specific outcome are you trying to achieve?"
-
-**What to capture:**
+Capture:
 - Project name
 - Project type (tool, framework, research, analysis, experiment)
 - Core purpose and goals
 - Success criteria
 
-#### Question 2: Approach and Constraints  
-"What's your preferred approach and any key constraints I should know about?"
+**Phase 2: Approach and Constraints**
+Ask: "What's your preferred approach and any key constraints I should know about?"
 
-**What to capture:**
+Capture:
 - Methodology preferences
 - Technical constraints
 - Timeline considerations
 - Resource limitations
 - Dependencies
 
-#### Question 3: Knowledge Gaps (Optional - only if needed)
-"Any specific areas where you're unsure and might need research?"
+**Phase 3: Knowledge Gaps (Optional)**
+If project complexity suggests research needs, ask: "Any specific areas where you're unsure and might need research?"
 
-**What to capture:**
+Capture:
 - User-identified uncertainty
 - Knowledge gaps
 - Research priorities
 
-### Phase 3: Automatic Research Analysis
+**Phase 4: Automatic Research Analysis**
 
-After gathering user input, automatically:
+After gathering user input:
 
-#### Scan Existing Research
+**Scan Existing Research**
 - Search @research/findings/ for relevant files
 - Match project keywords to research topics
 - Identify applicable research insights
 
-#### Identify Research Gaps
+**Identify Research Gaps**
 - Based on project description, identify missing knowledge areas
 - Suggest specific research topics that would benefit the project
 - Prioritize research needs (high/medium/low)
 
-#### Present Research Integration
+**Present Research Integration**
 Show user:
 - "I found these relevant research files in our knowledge base:"
   - List specific files with brief descriptions
 - "I recommend researching these topics to improve project success:"
   - List specific research gaps and why they matter
 
-### Phase 4: Plan Presentation
+**Phase 5: Plan Presentation**
 
 Present comprehensive plan including:
 - **Project Summary**: Name, type, goals, approach, constraints
@@ -68,14 +61,14 @@ Present comprehensive plan including:
 - **Initial Tasks**: Automatically generated task list based on project type and research needs
 - **Next Steps**: Immediate actions for both implementation and research
 
-### Phase 5: Project Creation (After User Approval)
+**Phase 6: Project Creation (After User Approval)**
 
-#### Create Project Directory
+**Create Project Directory**
 ```bash
 mkdir -p projects/[project-name]/docs
 ```
 
-#### Populate Template Files
+**Populate Template Files**
 Use the _template/ files and replace placeholders with gathered information:
 
 - **CLAUDE.md**: Complete AI agent instructions with full context
@@ -85,33 +78,31 @@ Use the _template/ files and replace placeholders with gathered information:
 - **progress.md**: Initial status entry
 - **research-integration.md**: Research links and identified gaps
 
-## Task Generation Strategy
+**Task Generation Strategy**
 
-### Automatic Task Categories
-
-#### Research Tasks (Always Include)
+**Research Tasks (Always Include)**
 - "Review [existing-research-file]" for each relevant research file
 - "Research [specific-topic]" for each identified gap
 
-#### Planning Tasks (Based on Project Type)
+**Planning Tasks (Based on Project Type)**
 - "Define detailed project scope and requirements"
 - "Create project roadmap with milestones" 
 - "Analyze dependencies and constraints"
 
-#### Implementation Tasks (Project-Specific)
+**Implementation Tasks (Project-Specific)**
 - **Framework Projects**: "Design architecture", "Create core components", "Build integration layer"
 - **Tool Projects**: "Define user interface", "Implement core functionality", "Create documentation"
 - **Research Projects**: "Conduct primary research", "Synthesize findings", "Create analysis report"
 - **Analysis Projects**: "Gather data sources", "Perform analysis", "Generate insights report"
 
-#### Validation Tasks (Always Include)
+**Validation Tasks (Always Include)**
 - "Review progress against success criteria"
 - "Validate research assumptions and findings"
 - "Test deliverables against quality standards"
 
-## Template Population Rules
+**Template Population Rules**
 
-### Placeholder Replacement
+**Placeholder Replacement**
 Replace template placeholders with actual project information:
 
 - `{PROJECT_NAME}`: User-provided project name
@@ -124,19 +115,19 @@ Replace template placeholders with actual project information:
 - `{RESEARCH_CONTEXT}`: Research integration summary
 - `{IMMEDIATE_NEXT_STEPS}`: First 1-3 tasks to begin work
 
-### Dynamic Content Generation
+**Dynamic Content Generation**
 
-#### Research Integration
+**Research Integration**
 - **Existing Research**: List files with descriptions and relevance
 - **Research Gaps**: Specific topics with rationale for why research is needed
 - **Research Tasks**: Concrete, actionable research tasks
 
-#### Task List
+**Task List**
 - **High Priority**: Research review tasks and critical planning tasks
 - **Medium Priority**: Implementation tasks and detailed planning
 - **Low Priority**: Nice-to-have features and advanced validation
 
-## Example Conversation Flow
+**Example Conversation Flow**
 
 ```
 User: /create-project
@@ -164,27 +155,27 @@ I recommend researching these topics:
 Ready to create the project structure?
 ```
 
-## Quality Standards
+**Quality Standards**
 
-### Conversation Quality
+**Conversation Quality**
 - Ask focused, value-extracting questions
 - Build on user responses naturally
 - Suggest relevant research proactively
 - Confirm understanding before proceeding
 
-### Project Structure Quality
+**Project Structure Quality**
 - Complete, actionable task lists
 - Clear, specific project documentation
 - Meaningful research integration
 - AI agent instructions that enable immediate work
 
-### Information Completeness
+**Information Completeness**
 - All template placeholders populated with meaningful content
 - Research integration includes both existing and needed research
 - Tasks are specific, prioritized, and executable
 - Project context is complete enough for any AI agent to understand and continue
 
-## Success Criteria
+**Success Criteria**
 
 - User provides minimal input but gets maximum project structure
 - Generated projects have complete context for AI agent continuity
