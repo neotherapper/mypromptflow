@@ -441,6 +441,7 @@ Work autonomously and create the complete deliverable.
 - **Progress Tracking**: See progress.md for accomplishments
 - **Research Integration**: See research-integration.md for knowledge context
 - **Documentation**: See docs/ for project artifacts
+- **Validator Integration**: See docs/VALIDATOR-INTEGRATION.md for framework vs operational validator architecture
 
 ## Next Steps for AI Agents
 

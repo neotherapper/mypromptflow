@@ -178,7 +178,7 @@ Integrity Gap: Framework does not follow its own anti-fiction standards
 
 **Inconsistency Pattern 2**: Constitutional AI Claims vs. Constitutional Violations
 ```
-Stated Principle (constitutional-ai-compliance-checker.md): "95% minimum compliance across all principles" 
+Stated Principle (../../../meta/validation/validators/framework/constitutional-ai-checker.md): "95% minimum compliance across all principles" 
 Actual Practice: Framework scores 67/100 (far below own threshold)
 Integrity Gap: Framework does not meet its own constitutional compliance standards
 ```

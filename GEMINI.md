@@ -540,7 +540,7 @@ optimization_results:
 
 **REFERENCE: Detailed implementation patterns available in knowledge vault**
 
-**Knowledge Vault Location**: `projects/ai-agent-instruction-design-excellence/knowledge-vault/ai-instruction-framework/`
+**Knowledge Vault Location**: `knowledge-vault/knowledge/`
 
 **Available Pattern Libraries**:
 - `instruction-design-patterns/` - Validated instruction templates and patterns

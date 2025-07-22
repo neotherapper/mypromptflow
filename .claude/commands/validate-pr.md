@@ -113,7 +113,7 @@ Output comprehensive classification results with priority levels:
 ```
 🎯 Enhanced File Type Detection Results:
   🤖 Claude Commands: [count] files [CRITICAL]
-  🧠 CLAUDE.md Files: [count] files [CRITICAL]  
+  🧠 CLAUDE.md Files: [count] files [CRITICAL - SPECIALIZED VALIDATOR]  
   👑 AI Agent Instructions: [count] files [HIGH]
   📋 Project Documentation: [count] files [HIGH - NEW CATEGORY]
   🗂️ AI-Consumable Docs: [count] files [HIGH - NEW CATEGORY]
@@ -163,12 +163,22 @@ If `claude_command_files` contains files:
    - **expected_tokens**: 60
 3. **If validator missing**: Use embedded Claude Command validation logic (see Embedded Validators section)
 
+**CLAUDE.md Project Files (CRITICAL Priority)**  
+If `claude_md_files` contains files:
+1. Check if validator registry contains `claude-project-file-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate CLAUDE.md project files using specialized Claude integration validator"
+   - **prompt**: "You are a Claude Project File Validator specialist. Using the claude-project-file-validator from meta/validation/validators/project/claude-project-file-validator.md, analyze CLAUDE.md files: {claude_md_files}. Apply comprehensive validation focusing on: required elements (9 components), Claude integration excellence, cross-reference accuracy, and AI Agent Instruction Design Excellence compliance. Generate detailed validation report with specific improvement recommendations."
+   - **context**: CLAUDE.md files list and Claude project validation requirements
+   - **expected_tokens**: 100
+3. **If validator missing**: Use embedded CLAUDE.md validation logic based on claude-project-file-validator patterns
+
 **AI Agent Instruction Files (CRITICAL Priority)**  
-If `ai_agent_files` or `claude_md_files` contain files:
+If `ai_agent_files` contains files:
 1. Check if validator registry contains `ai-agent-instruction-evaluator`
 2. **If validator exists**: Use Task tool with parameters:
    - **description**: "Validate AI agent instruction files using Design Excellence Framework"
-   - **prompt**: "You are an AI Agent Instruction Evaluator specialist. Using the ai-agent-instruction-evaluator from meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md, analyze files: {combined_file_list}. Apply assessment tools from the AI Agent Instruction Design Excellence framework including multi-level validation and constitutional AI compliance. Generate detailed compliance assessment with actionable recommendations."
+   - **prompt**: "You are an AI Agent Instruction Evaluator specialist. Using the ai-agent-instruction-evaluator from meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md, analyze files: {ai_agent_files}. Apply assessment tools from the AI Agent Instruction Design Excellence framework including multi-level validation and constitutional AI compliance. Generate detailed compliance assessment with actionable recommendations."
    - **context**: Embed file list and framework assessment criteria
    - **expected_tokens**: 90
 3. **If validator missing**: Use embedded AI instruction validation logic
@@ -370,6 +380,7 @@ Store comprehensive validation results for future reference:
 ### Production-Ready Validators (Reorganized Locations)
 - **Claude Command Evaluator**: `meta/validation/validators/ai-instruction/claude-command-evaluator.md`
 - **AI Agent Instruction Evaluator**: `meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md`
+- **Claude Project File Validator**: `meta/validation/validators/project/claude-project-file-validator.md` (SPECIALIZED CLAUDE.md VALIDATION)
 
 ### File-Type Validator Gaps Identified (Ready for Creation)
 - **TypeScript Frontend Validator**: `meta/validation/validators/file-type/typescript-frontend-validator.md`

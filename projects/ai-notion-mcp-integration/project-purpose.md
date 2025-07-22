@@ -2,46 +2,46 @@
 
 ## Project Overview
 
-This project aims to create a Notion-inspired knowledge management system that bridges file-based knowledge organization with database-style relationship management, enabling seamless integration with Notion workspaces through MCP (Model Context Protocol) integration.
+This project creates a file-based knowledge-vault system in this repository that replicates the user's existing Notion workspace structure, with optional push capability to Notion workspaces for enhanced UX, mobile access, and stakeholder collaboration.
 
 ## Core Objectives
 
 ### Primary Goal
-Transform the existing file-based knowledge-vault system into a Notion-compatible organizational structure while maintaining the sophistication of the current research framework and AI agent orchestration capabilities.
+Create a file-based knowledge-vault that mirrors the user's current Notion database organization (languages, tools-services, platform-sites) with tag-based categorization and cross-database relationships, while maintaining the file system as the authoritative source.
 
 ### Secondary Goals
-1. **Notion Migration Capability**: Enable automated migration of knowledge-vault content to Notion workspaces
-2. **Bidirectional Sync**: Establish real-time synchronization between file-based and Notion-based knowledge systems
-3. **Enterprise Scalability**: Design patterns that work for individual developers and corporate knowledge management
-4. **AI Agent Integration**: Maintain existing AI orchestration while adding Notion-native capabilities
+1. **Structure Replication**: File-based system accurately replicates existing Notion organization patterns
+2. **Relationship Preservation**: Enable cross-database relationships (Python → related tools/sites) in file system
+3. **Optional Notion Push**: Capability to push file content to Notion workspaces when needed
+4. **Corporate Integration**: Foundation for potential enterprise workspace sharing and collaboration
 
 ## Project Scope
 
 ### In Scope
-- **Database-Style Organization**: Implement Notion-like collections, properties, and relationships in file-based system
-- **MCP Integration**: Build robust Claude-Notion integration using JSON-RPC 2.0 over SSE
-- **Migration Tools**: Create automated tools for knowledge-vault to Notion workspace migration
-- **Documentation Framework**: Comprehensive human-readable documentation for architecture and concepts
-- **Quality Assurance**: Maintain existing 95%+ validation standards while adding Notion-specific validation
+- **File-Based Knowledge Vault**: Create structured YAML/Markdown system replicating user's Notion organization
+- **Tag-Based Organization**: Enable category viewing and filtering (languages, tools, platforms)
+- **Cross-Database Relationships**: Implement bidirectional relationships between entities
+- **Notion Push Capability**: Tools to migrate file content to Notion workspaces when needed
+- **Documentation Framework**: Clear usage guides and organizational documentation
 
 ### Out of Scope
-- **Complete System Replacement**: The file-based system will remain the primary source of truth
-- **Real-time Collaboration**: Focus on AI-human collaboration rather than human-human real-time editing
-- **Custom Notion Client**: Use existing Notion interfaces, build integration layers only
+- **Real-time Sync**: Focus on push capability rather than continuous synchronization
+- **Custom Notion Client**: Use existing MCP server integration (already available)
+- **Bidirectional Sync**: File system remains authoritative, Notion is interface layer
 
 ## Success Criteria
 
 ### Technical Success Metrics
-- **Migration Accuracy**: 99%+ successful migration of knowledge-vault content to Notion
-- **Performance**: Sub-500ms response times for MCP operations
-- **Quality Maintenance**: Preserve existing 95%+ AI content validation scores
-- **Cross-Reference Integrity**: 100% accuracy in relationship mapping between systems
+- **Structure Fidelity**: File system accurately replicates Notion database organization
+- **Relationship Integrity**: Cross-database relationships function correctly in both systems
+- **Push Capability**: Successful migration of file content to Notion workspaces
+- **Tag-Based Navigation**: Category-based viewing and filtering works as expected
 
-### Business Success Metrics
-- **Productivity Improvement**: 5x task completion speed (based on existing research)
-- **Documentation Efficiency**: 60% reduction in maintenance overhead
-- **Tool Cost Optimization**: Potential $35k annual savings through integration
-- **ROI Timeline**: 3-week initial ROI, full realization in 6-8 weeks
+### Business Success Metrics (Research-Based)
+- **Productivity Improvement**: 5x task completion speed (from existing research)
+- **Documentation Efficiency**: 60% reduction in maintenance overhead (measured in implementations)
+- **Tool Cost Optimization**: $35k annual savings potential (calculated from research)
+- **Corporate Ready**: Foundation for enterprise workspace integration
 
 ## Strategic Context
 

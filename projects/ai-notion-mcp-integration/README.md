@@ -65,10 +65,10 @@ This project builds on extensive existing research:
 ## Project Links
 
 ### Internal References
-- **Knowledge Vault**: `@knowledge-vault/ai-instruction-framework/`
+- **Knowledge Vault**: `@knowledge-vault/knowledge/`
 - **Research Findings**: `@research/findings/notion-claude-productivity-integration/`
 - **MCP Analysis**: `@research/findings/mcp-registry-analysis/`
-- **Tool Documentation**: `@knowledge-vault/ai-instruction-framework/tools/notion.md`
+- **Tool Documentation**: `@knowledge-vault/knowledge/tools/notion.md`
 
 ### Related Projects
 - **AI Knowledge Base Enhancement**: `@projects/ai-knowledge-base-enhancement/`

@@ -3,7 +3,7 @@
 **Purpose**: Automated detection and validation of Claude command patterns for AI agent instruction compliance
 **Input**: Target Claude command file (`.claude/commands/*.md`)
 **Output**: Pattern compliance score with specific recommendations for AI agent optimization
-**Integration**: Works with enhanced claude-command-evaluator and vagueness-detector
+**Integration**: Works with enhanced claude-command-evaluator and meta/validation/validators/framework/vagueness-detector
 
 ## Claude Command Pattern Detection
 
@@ -193,12 +193,12 @@ claude_command_analysis:
 ```yaml
 integration_points:
   claude_command_evaluator: "Primary validator for .claude/commands/*.md files"
-  vagueness_detector: "Secondary validation for language quality"
+  vagueness_detector: "Secondary validation for language quality (meta/validation/validators/framework/vagueness-detector)"
   ai_instruction_evaluator: "Comprehensive AI instruction assessment"
   
 coordination_pattern:
   primary_validation: "claude-command-evaluator applies this pattern logic"
-  secondary_validation: "vagueness-detector checks for human artifacts"
+  secondary_validation: "meta/validation/validators/framework/vagueness-detector checks for human artifacts"
   comprehensive_assessment: "ai-instruction-evaluator provides framework compliance"
 ```
 
