@@ -1,0 +1,72 @@
+properties:
+  # Core Identification
+  id: "ts_neon_database_001"
+  name: "Neon Database"
+  
+  # Rating System (5-star scale)
+  rating: 4
+  
+  # Technology Maturity
+  maturity_level: "stable"
+  
+  # Usage Status
+  status: "adopted"
+  
+  # Usage Frequency
+  frequency: "weekly"
+  
+  # Technology Classification
+  technology_type:
+    - "database_sql"
+    - "cloud_hosting"
+    - "dev_tool"
+  
+  # Deployment Model
+  deployment_model: "cloud_hosted"
+  
+  # Integration Complexity
+  integration_complexity: "simple"
+  
+  # Vendor and Licensing
+  vendor: "Neon"
+  licensing_model: "freemium"
+  
+  # Content and Documentation
+  url: "https://neon.tech"
+  description: "Serverless PostgreSQL platform with branching, instant provisioning, and scale-to-zero capabilities. Optimal choice for MVP development with superior cost-to-performance ratio for maritime insurance applications."
+  key_features: "Database branching for development workflows, instant provisioning, scale-to-zero cost optimization, connection pooling, read replicas, point-in-time recovery, GitHub integration"
+  use_cases: "MVP development, PostgreSQL hosting, maritime insurance database infrastructure, development workflow optimization, cost-effective database hosting, production application backends"
+  pros_cons: "PROS: Excellent cost-to-performance ratio, instant provisioning, scale-to-zero saves costs, GitHub integration, simple setup. CONS: Newer platform with limited enterprise features, PostgreSQL-only, dependency on external hosting"
+  
+  # Technical Specifications
+  supported_platforms:
+    - "web"
+    - "cross_platform"
+  
+  # Evaluation and Usage
+  evaluation_notes: "Emerges as optimal choice for MVP development with superior cost-to-performance ratio. Particularly suitable for maritime insurance database platform selection decisions. Provides excellent developer experience with branching capabilities."
+  last_evaluated: "2024-07-15"
+  
+  # Timestamps
+  created_date: "2024-07-21T23:05:00Z"
+  last_modified: "2024-07-21T23:05:00Z"
+
+# Cross-Database Relationships  
+relationships:
+  knowledge_vault_relations:
+    - id: "kv_database_hosting_patterns_001"
+      context: "Reference implementation for PostgreSQL hosting evaluation frameworks"
+      
+  business_ideas_relations:
+    - id: "bi_maritime_insurance_platform_001"
+      context: "Selected database infrastructure for maritime insurance AI platform"
+      
+  platforms_sites_relations:
+    - id: "ps_neon_documentation_001"
+      context: "Official documentation and integration guides"
+
+# Cross-References
+cross_references:
+  - "@knowledge_vault/kv_database_hosting_patterns_001" 
+  - "@business_ideas/bi_maritime_insurance_platform_001"
+  - "@platforms_sites/ps_neon_documentation_001"

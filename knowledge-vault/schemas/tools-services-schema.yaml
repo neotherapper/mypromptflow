@@ -1,0 +1,492 @@
+# Tools & Services Database Schema
+# Technology stack and service evaluation database
+# Replicates Notion Tools & Services structure with full relationship support
+
+database_info:
+  name: "Tools & Services"
+  type: "specialized_database"
+  notion_id: "1846f105-cb61-4cca-8ca7-1b257008fa54"
+  description: "Technology evaluation, service assessment, and tech stack management"
+  version: "1.0.0"
+  created: "2024-07-21"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the tool/service"
+    format: "uuid_v4"
+    
+  name:
+    type: "title"
+    required: true
+    description: "Name of the tool or service"
+    max_length: 200
+    
+  # Rating System (5-star scale matching Notion)
+  rating:
+    type: "select"
+    required: false
+    description: "Overall tool/service quality rating"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "Exceptional"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "Excellent"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Good"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Fair"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Poor"
+        
+  # Technology Maturity Assessment
+  maturity_level:
+    type: "select"
+    required: false
+    description: "Technology maturity and stability assessment"
+    options:
+      - value: "experimental"
+        name: "Experimental"
+        color: "red"
+      - value: "beta"
+        name: "Beta"
+        color: "orange"
+      - value: "stable"
+        name: "Stable"
+        color: "green"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "blue"
+      - value: "legacy"
+        name: "Legacy"
+        color: "gray"
+        
+  # Usage Status
+  status:
+    type: "select"
+    required: true
+    description: "Current usage and evaluation status"
+    default: "discovered"
+    options:
+      - value: "discovered"
+        name: "Discovered"
+        color: "yellow"
+      - value: "testing"
+        name: "Testing"
+        color: "orange"
+      - value: "adopted"
+        name: "Adopted"
+        color: "green"
+      - value: "evaluating"
+        name: "Evaluating"
+        color: "blue"
+      - value: "deprecated"
+        name: "Deprecated"
+        color: "red"
+      - value: "archived"
+        name: "Archived"
+        color: "gray"
+        
+  # Usage Frequency Tracking
+  frequency:
+    type: "select"
+    required: false
+    description: "How frequently the tool/service is used"
+    options:
+      - value: "daily"
+        name: "Daily"
+        color: "red"
+      - value: "weekly"
+        name: "Weekly"
+        color: "orange"
+      - value: "monthly"
+        name: "Monthly"
+        color: "yellow"
+      - value: "occasional"
+        name: "Occasional"
+        color: "blue"
+      - value: "rarely"
+        name: "Rarely"
+        color: "gray"
+      - value: "never"
+        name: "Never Used"
+        color: "gray"
+        
+  # Technology Classification
+  technology_type:
+    type: "multi_select"
+    required: false
+    description: "Technology category and type classification"
+    options:
+      # Database Technologies
+      - value: "database_sql"
+        name: "Database - SQL"
+        color: "blue"
+      - value: "database_nosql"
+        name: "Database - NoSQL"
+        color: "green"
+      - value: "database_key_value"
+        name: "Database - Key-Value"
+        color: "orange"
+      - value: "database_document"
+        name: "Database - Document"
+        color: "purple"
+      - value: "database_graph"
+        name: "Database - Graph"
+        color: "red"
+      
+      # Development Tools
+      - value: "dev_framework"
+        name: "Development Framework"
+        color: "blue"
+      - value: "dev_library"
+        name: "Development Library"
+        color: "green"
+      - value: "dev_tool"
+        name: "Development Tool"
+        color: "orange"
+      - value: "ide_editor"
+        name: "IDE/Editor"
+        color: "purple"
+      - value: "version_control"
+        name: "Version Control"
+        color: "yellow"
+      
+      # Infrastructure
+      - value: "cloud_hosting"
+        name: "Cloud Hosting"
+        color: "blue"
+      - value: "cdn"
+        name: "CDN"
+        color: "green"
+      - value: "monitoring"
+        name: "Monitoring"
+        color: "orange"
+      - value: "ci_cd"
+        name: "CI/CD"
+        color: "purple"
+      - value: "containerization"
+        name: "Containerization"
+        color: "red"
+      
+      # Business Tools
+      - value: "analytics"
+        name: "Analytics"
+        color: "blue"
+      - value: "marketing"
+        name: "Marketing"
+        color: "green"
+      - value: "communication"
+        name: "Communication"
+        color: "orange"
+      - value: "project_management"
+        name: "Project Management"
+        color: "purple"
+      - value: "design"
+        name: "Design"
+        color: "red"
+        
+  # Deployment Model
+  deployment_model:
+    type: "select"
+    required: false
+    description: "How the tool/service is deployed and accessed"
+    options:
+      - value: "cloud_hosted"
+        name: "Cloud Hosted"
+        color: "blue"
+      - value: "self_hosted"
+        name: "Self Hosted"
+        color: "green"
+      - value: "hybrid"
+        name: "Hybrid"
+        color: "orange"
+      - value: "on_premise"
+        name: "On-Premise"
+        color: "purple"
+      - value: "desktop_app"
+        name: "Desktop App"
+        color: "yellow"
+      - value: "mobile_app"
+        name: "Mobile App"
+        color: "red"
+      - value: "browser_based"
+        name: "Browser Based"
+        color: "blue"
+        
+  # Integration Complexity
+  integration_complexity:
+    type: "select"
+    required: false
+    description: "Complexity of integration and setup"
+    options:
+      - value: "simple"
+        name: "Simple"
+        color: "green"
+      - value: "moderate"
+        name: "Moderate"
+        color: "yellow"
+      - value: "complex"
+        name: "Complex"
+        color: "orange"
+      - value: "very_complex"
+        name: "Very Complex"
+        color: "red"
+        
+  # Vendor and Licensing
+  vendor:
+    type: "rich_text"
+    required: false
+    description: "Vendor or company providing the tool/service"
+    
+  licensing_model:
+    type: "select"
+    required: false
+    description: "Licensing and pricing model"
+    options:
+      - value: "open_source"
+        name: "Open Source"
+        color: "green"
+      - value: "free"
+        name: "Free"
+        color: "blue"
+      - value: "freemium"
+        name: "Freemium"
+        color: "yellow"
+      - value: "subscription"
+        name: "Subscription"
+        color: "orange"
+      - value: "one_time"
+        name: "One-time License"
+        color: "purple"
+      - value: "enterprise"
+        name: "Enterprise Only"
+        color: "red"
+      - value: "usage_based"
+        name: "Usage-based"
+        color: "blue"
+        
+  # Content and Documentation
+  url:
+    type: "url"
+    required: false
+    description: "Primary URL for the tool/service"
+    
+  description:
+    type: "rich_text"
+    required: false
+    description: "Detailed description of capabilities and features"
+    
+  key_features:
+    type: "rich_text"
+    required: false
+    description: "Notable features and capabilities"
+    
+  use_cases:
+    type: "rich_text"
+    required: false
+    description: "Primary use cases and applications"
+    
+  pros_cons:
+    type: "rich_text"
+    required: false
+    description: "Advantages and disadvantages analysis"
+    
+  # Technical Specifications
+  supported_platforms:
+    type: "multi_select"
+    required: false
+    description: "Supported operating systems and platforms"
+    options:
+      - value: "windows"
+        name: "Windows"
+        color: "blue"
+      - value: "macos"
+        name: "macOS"
+        color: "gray"
+      - value: "linux"
+        name: "Linux"
+        color: "red"
+      - value: "web"
+        name: "Web Browser"
+        color: "green"
+      - value: "ios"
+        name: "iOS"
+        color: "blue"
+      - value: "android"
+        name: "Android"
+        color: "green"
+      - value: "cross_platform"
+        name: "Cross Platform"
+        color: "purple"
+        
+  # Evaluation and Usage
+  evaluation_notes:
+    type: "rich_text"
+    required: false
+    description: "Evaluation notes and testing results"
+    
+  last_evaluated:
+    type: "date"
+    required: false
+    description: "When the tool was last evaluated or tested"
+    
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the tool/service was added"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the tool/service info was last updated"
+    
+  # Cross-Database Relationships
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge and research items"
+    related_database: "knowledge_vault"
+    dual_property: "tools_services_relations"
+    
+  business_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related business ideas requiring this tool"
+    related_database: "business_ideas"
+    dual_property: "tools_services_relations"
+    
+  notes_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related notes and technical insights"
+    related_database: "notes_ideas"
+    dual_property: "tools_services_relations"
+    
+  # Rollup Properties for Analysis
+  business_relevance_score:
+    type: "rollup"
+    description: "Maximum business idea rating from related ideas"
+    rollup_property: "idea_rating"
+    rollup_function: "max"
+    relation_property: "business_ideas_relations"
+    
+  knowledge_priority:
+    type: "rollup"
+    description: "Priority level from related knowledge items"
+    rollup_property: "priority"
+    rollup_function: "max"
+    relation_property: "knowledge_vault_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "technology_evaluation_and_management"
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "name", "status"]
+    unique_fields: ["id"]
+    url_validation: true
+    rating_range: [1, 5]
+    date_validation: ["last_evaluated"]
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/tools_services/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "tools_services_schema.yaml"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: true
+    notion_database_id: "1846f105-cb61-4cca-8ca7-1b257008fa54"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+    
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "maturity_level"]
+    description: "Usage status and maturity filtering"
+  - fields: ["technology_type", "deployment_model"]
+    description: "Technology stack analysis"
+  - fields: ["rating", "frequency"]
+    description: "Quality and usage assessment"
+  - fields: ["licensing_model"]
+    description: "Cost and licensing analysis"
+    
+# Views Configuration (replicate Notion views)
+views:
+  active_tools:
+    name: "Active Tools"
+    filter:
+      status: ["adopted", "testing", "evaluating"]
+    sort:
+      - field: "frequency"
+        direction: "descending"
+      - field: "rating"
+        direction: "descending"
+        
+  tech_stack:
+    name: "Current Tech Stack"
+    filter:
+      status: ["adopted"]
+      frequency: ["daily", "weekly"]
+    sort:
+      - field: "frequency"
+        direction: "descending"
+        
+  by_technology_type:
+    name: "By Technology Type"
+    group_by: "technology_type"
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  evaluation_queue:
+    name: "Evaluation Queue"
+    filter:
+      status: ["discovered", "testing", "evaluating"]
+    sort:
+      - field: "business_relevance_score"
+        direction: "descending"
+      - field: "knowledge_priority"
+        direction: "descending"
+        
+  open_source:
+    name: "Open Source Tools"
+    filter:
+      licensing_model: ["open_source", "free"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  enterprise_ready:
+    name: "Enterprise Ready"
+    filter:
+      maturity_level: ["stable", "enterprise"]
+      rating: [4, 5]
+    sort:
+      - field: "rating"
+        direction: "descending"

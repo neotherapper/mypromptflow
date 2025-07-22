@@ -1,0 +1,64 @@
+properties:
+  # Core Identification
+  id: "ps_mcp_registry_platform_001"
+  name: "MCP Registry Platform"
+  
+  # Rating System (5-star scale)
+  rating: 5
+  
+  # Status Workflow
+  status: "evaluating"
+  
+  # Platform Classification
+  platform_type: "registry"
+  usage_frequency: "weekly"
+  
+  # Pricing Information
+  pricing_model: "unknown"
+  
+  # Content and Documentation
+  url: "https://github.com/modelcontextprotocol"
+  description: "Centralized registry platform for Model Context Protocol servers enabling automated tool discovery, quality validation, and integration orchestration. Critical infrastructure supporting AI knowledge intelligence orchestrator with 1,066+ catalogued servers across 25+ categories."
+  
+  key_features: "MCP server discovery, quality assessment frameworks, automated cataloging, JSON-RPC 2.0 integration, server validation, category organization, community contributions, integration documentation"
+  
+  use_cases: "MCP server discovery, quality validation automation, AI tool orchestration, integration planning, server evaluation, ecosystem mapping, automated registry updates, tool recommendation systems"
+  
+  evaluation_notes: "Essential platform for AI orchestration system implementation. Provides foundation for automated tool discovery and quality validation. Critical component for enterprise AI tool management and MCP ecosystem navigation."
+  
+  # Timestamps
+  created_date: "2024-07-22T00:55:00Z"
+  last_modified: "2024-07-22T00:55:00Z"
+
+# Cross-Database Relationships
+relationships:
+  knowledge_vault_relations:
+    - id: "kv_ai_orchestration_patterns_001"
+      context: "Registry platform demonstrating orchestration patterns for automated MCP server discovery and integration"
+      
+  tools_services_relations:
+    - id: "ts_claude_code_max_001"
+      context: "AI development platform with MCP integration capabilities leveraging registry for tool discovery"
+    - id: "ts_docker_001"
+      context: "Containerization support for MCP server deployment and registry platform infrastructure"
+      
+  business_ideas_relations:
+    - id: "bi_ai_knowledge_intelligence_orchestrator_001"
+      context: "Commercial platform leveraging MCP registry for intelligent tool discovery and orchestration services"
+      
+  training_vault_relations:
+    - id: "tv_ai_orchestration_certification_001"
+      context: "Certification program utilizing MCP registry platform for hands-on orchestration training and practice"
+      
+  notes_ideas_relations:
+    - id: "ni_registry_optimization_insights_001"
+      context: "Insights and discoveries about optimizing registry-based tool discovery and validation workflows"
+
+# Cross-References
+cross_references:
+  - "@knowledge_vault/kv_ai_orchestration_patterns_001"
+  - "@tools_services/ts_claude_code_max_001"
+  - "@tools_services/ts_docker_001"
+  - "@business_ideas/bi_ai_knowledge_intelligence_orchestrator_001"
+  - "@training_vault/tv_ai_orchestration_certification_001"
+  - "@notes_ideas/ni_registry_optimization_insights_001"

@@ -1,0 +1,88 @@
+properties:
+  # Core Identification
+  id: "ts_linear_001"
+  name: "Linear"
+  
+  # Rating System (5-star scale)
+  rating: 5
+  
+  # Technology Maturity
+  maturity_level: "stable"
+  
+  # Usage Status
+  status: "adopted"
+  
+  # Usage Frequency
+  frequency: "daily"
+  
+  # Technology Classification
+  technology_type:
+    - "project_management"
+    - "issue_tracking"
+    - "productivity"
+  
+  # Deployment Model
+  deployment_model: "cloud_hosted"
+  
+  # Integration Complexity
+  integration_complexity: "simple"
+  
+  # Vendor and Licensing
+  vendor: "Linear"
+  licensing_model: "freemium"
+  
+  # Content and Documentation
+  url: "https://linear.app"
+  description: "Modern issue tracking and project management tool designed for software teams. Focuses on speed, simplicity, and developer workflow integration with excellent GitHub integration and keyboard shortcuts for maximum productivity."
+  key_features: "Issue tracking, project management, roadmap planning, GitHub integration, keyboard shortcuts, automation workflows, team collaboration, progress tracking, sprint planning, custom workflows"
+  use_cases: "Software project management, bug tracking, feature planning, sprint management, team coordination, roadmap visualization, GitHub workflow integration, developer productivity optimization"
+  pros_cons: "PROS: Excellent performance and speed, intuitive interface, strong GitHub integration, keyboard-first design, beautiful UX. CONS: Relatively new platform, fewer integrations than competitors, limited customization options, pricing for larger teams"
+  
+  # Technical Specifications
+  supported_platforms:
+    - "web"
+    - "desktop_app"
+    - "mobile_app"
+    - "api"
+  
+  # Evaluation and Usage
+  evaluation_notes: "Primary project management tool for software development projects. Excellent developer experience with fast performance and intuitive workflows. Strong GitHub integration makes it ideal for development team coordination."
+  last_evaluated: "2024-07-21"
+  
+  # Timestamps
+  created_date: "2024-07-22T00:05:00Z"
+  last_modified: "2024-07-22T00:05:00Z"
+
+# Cross-Database Relationships
+relationships:
+  knowledge_vault_relations:
+    - id: "kv_agile_project_management_001"
+      context: "Modern agile project management methodologies and best practices"
+    - id: "kv_developer_productivity_patterns_001"
+      context: "Patterns and tools for maximizing software development team productivity"
+      
+  tools_services_relations:
+    - id: "ts_github_actions_001"
+      context: "Seamless integration for automated issue creation and status updates from CI/CD pipelines"
+    - id: "ts_slack_001"
+      context: "Communication platform integration for project updates and team notifications"
+    - id: "ts_vscode_001"
+      context: "Development environment integration through GitHub workflows and issue references"
+      
+  business_ideas_relations:
+    - id: "bi_agile_consulting_service_001"
+      context: "Consulting service leveraging Linear for agile transformation and team productivity"
+      
+  training_vault_relations:
+    - id: "tv_modern_project_management_certification_001"
+      context: "Professional certification program including Linear as modern project management solution"
+
+# Cross-References
+cross_references:
+  - "@knowledge_vault/kv_agile_project_management_001"
+  - "@knowledge_vault/kv_developer_productivity_patterns_001"
+  - "@tools_services/ts_github_actions_001"
+  - "@tools_services/ts_slack_001"
+  - "@tools_services/ts_vscode_001"
+  - "@business_ideas/bi_agile_consulting_service_001"
+  - "@training_vault/tv_modern_project_management_certification_001"

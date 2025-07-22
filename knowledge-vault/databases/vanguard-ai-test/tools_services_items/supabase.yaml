@@ -1,0 +1,90 @@
+properties:
+  # Core Identification
+  id: "ts_supabase_001"
+  name: "Supabase"
+  
+  # Rating System (5-star scale)
+  rating: 4
+  
+  # Technology Maturity
+  maturity_level: "stable"
+  
+  # Usage Status
+  status: "evaluating"
+  
+  # Usage Frequency
+  frequency: "monthly"
+  
+  # Technology Classification
+  technology_type:
+    - "backend_service"
+    - "database_postgresql"
+    - "authentication"
+  
+  # Deployment Model
+  deployment_model: "cloud_hosted"
+  
+  # Integration Complexity
+  integration_complexity: "moderate"
+  
+  # Vendor and Licensing
+  vendor: "Supabase"
+  licensing_model: "freemium"
+  
+  # Content and Documentation
+  url: "https://supabase.com"
+  description: "Open-source Firebase alternative providing PostgreSQL database, authentication, real-time subscriptions, and edge functions. Modern backend-as-a-service platform with TypeScript support and automatic API generation."
+  key_features: "PostgreSQL database, real-time subscriptions, authentication system, edge functions, automatic REST API generation, file storage, dashboard interface, row-level security, database migrations"
+  use_cases: "Full-stack web applications, real-time applications, user authentication systems, API backend development, PostgreSQL hosting, file storage solutions, database-driven applications"
+  pros_cons: "PROS: Open-source, PostgreSQL-based, generous free tier, excellent documentation, TypeScript support, real-time features. CONS: Newer platform with evolving features, potential vendor lock-in, pricing complexity at scale, limited enterprise features"
+  
+  # Technical Specifications
+  supported_platforms:
+    - "web"
+    - "mobile"
+    - "api"
+    - "edge"
+  
+  # Evaluation and Usage
+  evaluation_notes: "Strong alternative to Firebase with PostgreSQL advantages. Excellent for rapid prototyping and full-stack applications. Under evaluation for specific use cases requiring PostgreSQL compatibility and real-time features."
+  last_evaluated: "2024-07-21"
+  
+  # Timestamps
+  created_date: "2024-07-21T23:50:00Z"
+  last_modified: "2024-07-21T23:50:00Z"
+
+# Cross-Database Relationships
+relationships:
+  knowledge_vault_relations:
+    - id: "kv_backend_as_service_patterns_001"
+      context: "Modern BaaS architecture patterns and implementation strategies"
+    - id: "kv_postgresql_optimization_001"
+      context: "PostgreSQL performance optimization and best practices knowledge"
+      
+  tools_services_relations:
+    - id: "ts_neon_database_001"
+      context: "Alternative PostgreSQL hosting solution for comparison and evaluation"
+    - id: "ts_vercel_001"
+      context: "Complementary frontend hosting platform for full-stack application deployment"
+      
+  business_ideas_relations:
+    - id: "bi_rapid_prototype_development_service_001"
+      context: "Service business leveraging Supabase for rapid MVP and prototype development"
+      
+  training_vault_relations:
+    - id: "tv_full_stack_development_bootcamp_001"
+      context: "Training program including Supabase as modern backend solution"
+      
+  notes_ideas_relations:
+    - id: "ni_baas_evaluation_insights_001"
+      context: "Comparative analysis insights between different backend-as-a-service platforms"
+
+# Cross-References
+cross_references:
+  - "@knowledge_vault/kv_backend_as_service_patterns_001"
+  - "@knowledge_vault/kv_postgresql_optimization_001"
+  - "@tools_services/ts_neon_database_001"
+  - "@tools_services/ts_vercel_001"
+  - "@business_ideas/bi_rapid_prototype_development_service_001"
+  - "@training_vault/tv_full_stack_development_bootcamp_001"
+  - "@notes_ideas/ni_baas_evaluation_insights_001"

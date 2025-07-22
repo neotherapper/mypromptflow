@@ -1,0 +1,459 @@
+# Platforms/Sites Database Schema
+# Resource discovery and platform evaluation database
+# Replicates Notion Platforms/Sites structure with full relationship support
+
+database_info:
+  name: "Platforms/Sites"
+  type: "specialized_database"
+  notion_id: "cdd7f281-f1ac-4f7b-a27c-c433b7eb8f4b"
+  description: "Resource discovery, platform evaluation, and web service tracking"
+  version: "1.0.0"
+  created: "2024-07-21"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the platform/site"
+    format: "uuid_v4"
+    
+  name:
+    type: "title"
+    required: true
+    description: "Name of the platform or website"
+    max_length: 200
+    
+  # Rating System (5-star scale matching Notion)
+  rating:
+    type: "select"
+    required: false
+    description: "Overall platform quality rating"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "Exceptional"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "Excellent"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Good"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Fair"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Poor"
+        
+  # Future Value Assessment
+  future_value:
+    type: "select"
+    required: false
+    description: "Potential future value and relevance"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "High future potential"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "Good future potential"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Moderate future potential"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Limited future potential"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Low future potential"
+        
+  # Platform Status
+  status:
+    type: "select"
+    required: true
+    description: "Current usage and evaluation status"
+    default: "discovered"
+    options:
+      - value: "discovered"
+        name: "Discovered"
+        color: "yellow"
+      - value: "evaluating"
+        name: "Evaluating"
+        color: "orange"
+      - value: "active_use"
+        name: "Active Use"
+        color: "green"
+      - value: "occasional_use"
+        name: "Occasional Use"
+        color: "blue"
+      - value: "archived"
+        name: "Archived"
+        color: "gray"
+      - value: "deprecated"
+        name: "Deprecated"
+        color: "red"
+        
+  # Platform Type and Format
+  platform_type:
+    type: "multi_select"
+    required: false
+    description: "Type and format of the platform"
+    options:
+      # Application Types
+      - value: "web_app"
+        name: "Web App"
+        color: "blue"
+      - value: "mobile_app"
+        name: "Mobile App"
+        color: "green"
+      - value: "browser_extension"
+        name: "Browser Extension"
+        color: "orange"
+      - value: "desktop_software"
+        name: "Desktop Software"
+        color: "purple"
+      - value: "api_service"
+        name: "API Service"
+        color: "red"
+      
+      # Content Types
+      - value: "documentation"
+        name: "Documentation"
+        color: "yellow"
+      - value: "tutorial_site"
+        name: "Tutorial Site"
+        color: "green"
+      - value: "news_platform"
+        name: "News Platform"
+        color: "blue"
+      - value: "community"
+        name: "Community"
+        color: "purple"
+      - value: "marketplace"
+        name: "Marketplace"
+        color: "orange"
+      
+      # Service Types
+      - value: "hosting_service"
+        name: "Hosting Service"
+        color: "red"
+      - value: "development_tool"
+        name: "Development Tool"
+        color: "blue"
+      - value: "analytics_platform"
+        name: "Analytics Platform"
+        color: "green"
+      - value: "design_tool"
+        name: "Design Tool"
+        color: "purple"
+        
+  # Purpose and Use Case
+  purpose:
+    type: "multi_select"
+    required: false
+    description: "Primary purpose and use cases"
+    options:
+      # Development
+      - value: "web_development"
+        name: "Web Development"
+        color: "blue"
+      - value: "mobile_development"
+        name: "Mobile Development"
+        color: "green"
+      - value: "api_development"
+        name: "API Development"
+        color: "orange"
+      - value: "database_management"
+        name: "Database Management"
+        color: "red"
+      
+      # Business
+      - value: "project_management"
+        name: "Project Management"
+        color: "yellow"
+      - value: "team_collaboration"
+        name: "Team Collaboration"
+        color: "purple"
+      - value: "marketing"
+        name: "Marketing"
+        color: "pink"
+      - value: "customer_support"
+        name: "Customer Support"
+        color: "blue"
+      
+      # Content
+      - value: "content_creation"
+        name: "Content Creation"
+        color: "green"
+      - value: "design"
+        name: "Design"
+        color: "purple"
+      - value: "writing"
+        name: "Writing"
+        color: "orange"
+      - value: "media_editing"
+        name: "Media Editing"
+        color: "red"
+      
+      # Learning
+      - value: "education"
+        name: "Education"
+        color: "blue"
+      - value: "research"
+        name: "Research"
+        color: "yellow"
+      - value: "documentation"
+        name: "Documentation"
+        color: "green"
+        
+  # Pricing Model
+  pricing_model:
+    type: "select"
+    required: false
+    description: "Pricing structure and cost model"
+    options:
+      - value: "free"
+        name: "Free"
+        color: "green"
+      - value: "freemium"
+        name: "Freemium"
+        color: "yellow"
+      - value: "subscription"
+        name: "Subscription"
+        color: "blue"
+      - value: "one_time"
+        name: "One-time Purchase"
+        color: "orange"
+      - value: "usage_based"
+        name: "Usage-based"
+        color: "purple"
+      - value: "enterprise"
+        name: "Enterprise Only"
+        color: "red"
+      - value: "unknown"
+        name: "Unknown"
+        color: "gray"
+        
+  # Content and Metadata
+  url:
+    type: "url"
+    required: false
+    description: "Primary URL for the platform or site"
+    
+  description:
+    type: "rich_text"
+    required: false
+    description: "Detailed description of the platform and its capabilities"
+    
+  key_features:
+    type: "rich_text"
+    required: false
+    description: "Notable features and capabilities"
+    
+  pros_cons:
+    type: "rich_text"
+    required: false
+    description: "Advantages and disadvantages analysis"
+    
+  # Alternative and Integration Info
+  alternatives:
+    type: "rich_text"
+    required: false
+    description: "Similar platforms and alternatives"
+    
+  integrations:
+    type: "rich_text"
+    required: false
+    description: "Available integrations and compatibility"
+    
+  # Usage Tracking
+  frequency_used:
+    type: "select"
+    required: false
+    description: "How often the platform is used"
+    options:
+      - value: "daily"
+        name: "Daily"
+        color: "red"
+      - value: "weekly"
+        name: "Weekly"
+        color: "orange"
+      - value: "monthly"
+        name: "Monthly"
+        color: "yellow"
+      - value: "occasionally"
+        name: "Occasionally"
+        color: "blue"
+      - value: "rarely"
+        name: "Rarely"
+        color: "gray"
+      - value: "never"
+        name: "Never Used"
+        color: "gray"
+        
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the platform was added"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the platform info was last updated"
+    
+  last_used:
+    type: "date"
+    required: false
+    description: "When the platform was last used"
+    
+  # Cross-Database Relationships
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge and research items"
+    related_database: "knowledge_vault"
+    dual_property: "platforms_sites_relations"
+    
+  training_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related training and learning content"
+    related_database: "training_vault"
+    dual_property: "platforms_sites_relations"
+    
+  business_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related business ideas and opportunities"
+    related_database: "business_ideas"
+    dual_property: "platforms_sites_relations"
+    
+  notes_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related notes and ideas"
+    related_database: "notes_ideas"
+    dual_property: "platforms_sites_relations"
+    
+  # Rollup Properties for Analysis
+  related_training_count:
+    type: "rollup"
+    description: "Number of related training programs"
+    rollup_property: "id"
+    rollup_function: "count"
+    relation_property: "training_vault_relations"
+    
+  business_impact_score:
+    type: "rollup"
+    description: "Maximum business idea rating from related ideas"
+    rollup_property: "idea_rating"
+    rollup_function: "max"
+    relation_property: "business_ideas_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "resource_discovery_and_evaluation"
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "name", "status"]
+    unique_fields: ["id"]
+    url_validation: true
+    rating_range: [1, 5]
+    date_validation: ["last_used"]
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/platforms_sites/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "platforms_sites_schema.yaml"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: true
+    notion_database_id: "cdd7f281-f1ac-4f7b-a27c-c433b7eb8f4b"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+    
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "frequency_used"]
+    description: "Usage status and frequency filtering"
+  - fields: ["platform_type", "purpose"]
+    description: "Platform type and purpose searches"
+  - fields: ["rating", "future_value"]
+    description: "Quality and potential assessment"
+  - fields: ["pricing_model"]
+    description: "Cost analysis and budgeting"
+    
+# Views Configuration (replicate Notion views)
+views:
+  active_platforms:
+    name: "Active Platforms"
+    filter:
+      status: ["active_use", "occasional_use", "evaluating"]
+    sort:
+      - field: "frequency_used"
+        direction: "descending"
+      - field: "rating"
+        direction: "descending"
+        
+  high_value:
+    name: "High Value Platforms"
+    filter:
+      rating: [4, 5]
+      future_value: [4, 5]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  by_platform_type:
+    name: "By Platform Type"
+    group_by: "platform_type"
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  free_resources:
+    name: "Free Resources"
+    filter:
+      pricing_model: ["free", "freemium"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  recently_discovered:
+    name: "Recently Discovered"
+    sort:
+      - field: "created_date"
+        direction: "descending"
+    limit: 20
+    
+  needs_evaluation:
+    name: "Needs Evaluation"
+    filter:
+      status: ["discovered", "evaluating"]
+    sort:
+      - field: "future_value"
+        direction: "descending"

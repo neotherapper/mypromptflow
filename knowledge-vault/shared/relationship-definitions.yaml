@@ -1,0 +1,397 @@
+# Relationship Definitions
+# Comprehensive relationship specifications for cross-database connections
+# Defines all possible relationships in the hub-spoke knowledge vault architecture
+
+relationship_info:
+  name: "Knowledge Vault Relationship Definitions"
+  description: "Complete specification of all cross-database relationships and connection types"
+  version: "1.0.0"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+# Hub-Spoke Architecture Relationships
+hub_spoke_relationships:
+  
+  # Knowledge Vault (Central Hub) Relationships
+  knowledge_vault_hub:
+    database: "knowledge_vault"
+    role: "central_hub"
+    description: "Central coordination point for all knowledge and relationships"
+    
+    outbound_relationships:
+      to_training_vault:
+        property_name: "training_vault_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "supports_learning"
+        cardinality: "one_to_many"
+        description: "Knowledge items that support learning objectives"
+        
+        rollup_properties:
+          - source_property: "skill_level"
+            function: "max"
+            description: "Highest skill level from related training"
+          - source_property: "completion_status"
+            function: "count"
+            filter: "completed"
+            description: "Count of completed related training"
+      
+      to_business_ideas:
+        property_name: "business_ideas_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "supports_business"
+        cardinality: "one_to_many"
+        description: "Knowledge items that support business development"
+        
+        rollup_properties:
+          - source_property: "idea_rating"
+            function: "max"
+            description: "Highest rated related business idea"
+          - source_property: "status"
+            function: "count"
+            filter: "launched"
+            description: "Count of launched related business ideas"
+      
+      to_platforms_sites:
+        property_name: "platforms_sites_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "supports_platform_evaluation"
+        cardinality: "one_to_many"
+        description: "Knowledge items that support platform evaluation and usage"
+        
+        rollup_properties:
+          - source_property: "rating"
+            function: "average"
+            description: "Average rating of related platforms"
+          - source_property: "usage_frequency"
+            function: "max"
+            description: "Highest usage frequency of related platforms"
+      
+      to_tools_services:
+        property_name: "tools_services_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "supports_tool_adoption"
+        cardinality: "one_to_many"
+        description: "Knowledge items that support tool evaluation and adoption"
+        
+        rollup_properties:
+          - source_property: "rating"
+            function: "average"
+            description: "Average rating of related tools/services"
+          - source_property: "maturity_level"
+            function: "max"
+            description: "Highest maturity level of related tools"
+      
+      to_notes_ideas:
+        property_name: "notes_ideas_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "contextualizes_information"
+        cardinality: "one_to_many"
+        description: "Knowledge items that provide context for notes and ideas"
+        
+        rollup_properties:
+          - source_property: "rating"
+            function: "max"
+            description: "Highest rated related note/idea"
+          - source_property: "action_required"
+            function: "count"
+            filter: "urgent"
+            description: "Count of urgent actions from related notes"
+      
+
+# Cross-Spoke Relationships (Direct relationships between spoke databases)
+cross_spoke_relationships:
+  
+  # Training to Business Ideas
+  training_business_connection:
+    source_database: "training_vault"
+    target_database: "business_ideas"
+    property_name: "business_ideas_relations"
+    dual_property: "training_vault_relations"
+    relationship_type: "skill_enables_business"
+    cardinality: "many_to_many"
+    description: "Training that enables business idea development and execution"
+    
+    relationship_context:
+      skill_alignment: "Skills learned that directly support business idea implementation"
+      knowledge_transfer: "How training knowledge applies to business development"
+      capability_building: "Training that builds capabilities needed for business success"
+    
+    rollup_properties:
+      from_business_ideas:
+        - source_property: "idea_rating"
+          function: "max"
+          description: "Highest rated business idea enabled by this training"
+        - source_property: "market_size"
+          function: "max"
+          description: "Largest market size for enabled business ideas"
+      
+      from_training:
+        - source_property: "skill_level"
+          function: "average"
+          description: "Average skill level for supporting training"
+        - source_property: "certificate_earned"
+          function: "count"
+          filter: "true"
+          description: "Number of certificates supporting business ideas"
+  
+  # Business Ideas to Tools/Services
+  business_tools_connection:
+    source_database: "business_ideas"
+    target_database: "tools_services"
+    property_name: "tools_services_relations"
+    dual_property: "business_ideas_relations"
+    relationship_type: "business_requires_tools"
+    cardinality: "many_to_many"
+    description: "Tools and services required for business idea implementation"
+    
+    relationship_context:
+      implementation_tools: "Tools needed to build and operate the business"
+      supporting_services: "Services required for business operations"
+      technology_stack: "Technical infrastructure for the business"
+    
+    rollup_properties:
+      from_tools_services:
+        - source_property: "rating"
+          function: "average"
+          description: "Average quality of tools supporting business"
+        - source_property: "maturity_level"
+          function: "min"
+          description: "Lowest maturity level in business tech stack"
+        - source_property: "licensing_model"
+          function: "unique_count"
+          description: "Variety of licensing models in use"
+      
+      from_business_ideas:
+        - source_property: "idea_rating"
+          function: "max"
+          description: "Highest rated business idea using this tool"
+        - source_property: "status"
+          function: "count"
+          filter: "development|launch"
+          description: "Active business ideas using this tool"
+  
+  # Training to Platforms/Sites
+  training_platforms_connection:
+    source_database: "training_vault"
+    target_database: "platforms_sites"
+    property_name: "platforms_sites_relations"
+    dual_property: "training_vault_relations"
+    relationship_type: "learning_platform_usage"
+    cardinality: "many_to_many"
+    description: "Platforms and sites used for learning and skill development"
+    
+    relationship_context:
+      learning_delivery: "Platforms used to deliver training content"
+      skill_practice: "Sites used for practicing and applying skills"
+      knowledge_resources: "Resources for supplemental learning"
+    
+    rollup_properties:
+      from_platforms_sites:
+        - source_property: "rating"
+          function: "average"
+          description: "Average quality of learning platforms"
+        - source_property: "usage_frequency"
+          function: "max"
+          description: "Most frequently used learning platform"
+      
+      from_training:
+        - source_property: "progress_percentage"
+          function: "average"
+          description: "Average progress on platform-based training"
+
+# Special Relationship Types
+special_relationships:
+  
+  # Notes & Ideas Universal Connections
+  notes_universal_hub:
+    source_database: "notes_ideas"
+    description: "Notes & Ideas acts as information integration hub"
+    relationship_type: "information_capture_and_synthesis"
+    
+    universal_connections:
+      to_all_databases:
+        property_pattern: "{target_database}_relations"
+        dual_property: "notes_ideas_relations"
+        cardinality: "many_to_many"
+        
+        connection_purposes:
+          knowledge_vault: "Capture insights and observations about knowledge items"
+          training_vault: "Document learning insights and training reflections"
+          business_ideas: "Record business insights and idea development notes"
+          platforms_sites: "Evaluate and document platform experiences"
+          tools_services: "Technical notes and tool evaluation insights"
+  
+  # Self-Referencing Relationships
+  self_referencing:
+    notes_to_notes:
+      database: "notes_ideas"
+      property_name: "related_notes"
+      dual_property: "related_notes"
+      relationship_type: "idea_connection"
+      cardinality: "many_to_many"
+      description: "Ideas and notes that connect to other ideas within the same database"
+      
+      connection_types:
+        builds_upon: "This idea builds upon or extends another idea"
+        contradicts: "This idea provides alternative perspective to another idea"
+        synthesizes: "This idea combines concepts from multiple other ideas"
+        inspired_by: "This idea was inspired by another idea"
+        supports: "This idea provides evidence or support for another idea"
+
+# Relationship Constraints and Rules
+relationship_constraints:
+  
+  cardinality_constraints:
+    one_to_many:
+      description: "One item can relate to many items, but target items relate to only one source"
+      enforcement: "database_constraint"
+      
+    many_to_many:
+      description: "Items can have multiple relationships in both directions"
+      enforcement: "application_logic"
+      
+    one_to_one:
+      description: "Each item relates to at most one other item"
+      enforcement: "database_constraint"
+  
+  consistency_rules:
+    bidirectional_requirement:
+      enabled: true
+      description: "All relationships must exist in both directions"
+      validation: "on_create_and_update"
+      
+    hub_connectivity:
+      requirement: "all_spoke_items_must_connect_to_hub"
+      description: "All items in spoke databases should have relationship to knowledge vault"
+      enforcement: "warning_only"
+      
+    relationship_limits:
+      max_relationships_per_item: 100
+      recommended_relationships: 10
+      warning_threshold: 50
+  
+  data_integrity:
+    referential_integrity:
+      enabled: true
+      cascade_deletes: false
+      prevent_orphans: true
+      
+    type_validation:
+      validate_item_types: true
+      validate_property_types: true
+      validate_constraint_compliance: true
+
+# Relationship Lifecycle Management
+lifecycle_management:
+  
+  creation_workflow:
+    validation_steps:
+      - "Verify source item exists"
+      - "Verify target item exists"
+      - "Check relationship constraints"
+      - "Validate cardinality limits"
+      - "Create forward relationship"
+      - "Create reverse relationship"
+      - "Update relationship indexes"
+      - "Log relationship creation"
+    
+    rollback_conditions:
+      - "Constraint violation"
+      - "Cardinality limit exceeded"
+      - "Target item validation failure"
+      - "Dual relationship creation failure"
+  
+  modification_workflow:
+    steps:
+      - "Validate new target exists"
+      - "Remove old reverse relationship"
+      - "Create new reverse relationship"
+      - "Update forward relationship"
+      - "Refresh rollup properties"
+      - "Update indexes"
+      - "Log modification"
+  
+  deletion_workflow:
+    cascade_options:
+      no_cascade: "Remove relationship only"
+      soft_cascade: "Mark related items for review"
+      notification_cascade: "Notify owners of related items"
+    
+    cleanup_steps:
+      - "Remove forward relationship"
+      - "Remove reverse relationship"
+      - "Update rollup properties"
+      - "Refresh indexes"
+      - "Log deletion"
+
+# Relationship Analytics and Insights
+analytics:
+  
+  relationship_metrics:
+    connectivity_analysis:
+      hub_centrality: "Measure how central the knowledge vault hub is"
+      clustering_coefficient: "Measure how interconnected spoke databases are"
+      network_density: "Overall connectivity in the system"
+      
+    usage_patterns:
+      popular_relationship_types: "Most commonly used relationship types"
+      relationship_growth_trends: "How relationships grow over time"
+      cross_database_preferences: "Which databases connect most frequently"
+  
+  quality_indicators:
+    relationship_health:
+      broken_relationship_rate: "Percentage of relationships with missing targets"
+      bidirectional_consistency_rate: "Percentage of properly bidirectional relationships"
+      constraint_compliance_rate: "Percentage of relationships meeting all constraints"
+      
+    system_balance:
+      hub_spoke_ratio: "Balance between hub and spoke connections"
+      cross_spoke_ratio: "Amount of direct spoke-to-spoke connections"
+      isolation_detection: "Items with no or very few relationships"
+
+# Integration and Compatibility
+integration:
+  
+  external_system_compatibility:
+    notion_relationships:
+      mapping: "Map file-based relationships to Notion relation properties"
+      sync_direction: "bidirectional"
+      conflict_resolution: "manual_review"
+      
+    api_exposure:
+      relationship_queries: true
+      relationship_manipulation: true
+      batch_operations: true
+      real_time_notifications: true
+  
+  performance_considerations:
+    indexing_strategy:
+      relationship_indexes: "Index all relationship properties"
+      reverse_indexes: "Create reverse lookup indexes"
+      composite_indexes: "Multi-field relationship queries"
+      
+    caching_strategy:
+      relationship_cache: "Cache frequently accessed relationships"
+      rollup_cache: "Cache computed rollup values"
+      query_result_cache: "Cache complex relationship queries"
+
+# Configuration and Customization
+configuration:
+  
+  relationship_behavior:
+    strict_validation: true
+    automatic_cleanup: false
+    performance_monitoring: true
+    detailed_logging: true
+    
+  feature_toggles:
+    cross_spoke_relationships: true
+    self_referencing_relationships: true
+    rollup_properties: true
+    relationship_analytics: true
+    
+  performance_tuning:
+    max_relationship_depth: 10
+    batch_operation_size: 1000
+    cache_expiration: 1800  # 30 minutes
+    index_rebuild_frequency: "weekly"

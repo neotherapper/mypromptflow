@@ -1,0 +1,1248 @@
+# Data Transformation Engine Configuration
+# Advanced transformation rules for VanguardAI test environment migration  
+# Version: 2.0.0 - Production-Ready with Cross-Database Relationship Management
+
+transformation_engine_info:
+  name: "Knowledge Vault Data Transformation Engine"
+  description: "Advanced transformation rules for YAML to Notion database migration"
+  version: "2.0.0"
+  created: "2025-07-22"
+  last_updated: "2025-07-22"
+  vanguardai_test_optimized: true
+  relationship_management: "bidirectional"
+  validation_engine: "comprehensive"
+
+# Database-Specific Transformation Rules
+database_transformations:
+  
+  knowledge_vault_transformations:
+    database_type: "hub_database"
+    relationship_role: "central_hub"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "knowledge_vault_categories"
+        
+      type:
+        notion_property: "Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_type_options"
+        mapping_table: "knowledge_vault_types"
+        
+      status:
+        notion_property: "Status"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_status_options"
+        mapping_table: "status_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      key_insights:
+        notion_property: "Key_Insights"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      applications:
+        notion_property: "Applications"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      research_quality:
+        notion_property: "Research_Quality"
+        notion_type: "number"
+        transformation_rule: "yaml_integer_to_number"
+        validation: "range_0_to_100"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "knowledge_vault_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_tools:
+        notion_property: "Related_Tools"
+        notion_type: "relation"
+        target_database: "tools_services"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_tools"
+        relationship_type: "hub_to_spoke"
+        bidirectional: true
+        
+      related_business_ideas:
+        notion_property: "Related_Business_Ideas"
+        notion_type: "relation"
+        target_database: "business_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_business_ideas"
+        relationship_type: "hub_to_spoke"
+        bidirectional: true
+        
+      related_training:
+        notion_property: "Related_Training"
+        notion_type: "relation"
+        target_database: "training_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_training"
+        relationship_type: "hub_to_spoke"
+        bidirectional: true
+        
+      related_platforms:
+        notion_property: "Related_Platforms"
+        notion_type: "relation"
+        target_database: "platforms_sites"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_platforms"
+        relationship_type: "hub_to_spoke"
+        bidirectional: true
+        
+      related_notes:
+        notion_property: "Related_Notes"
+        notion_type: "relation"
+        target_database: "notes_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_notes"
+        relationship_type: "hub_to_universal"
+        bidirectional: true
+        
+  tools_services_transformations:
+    database_type: "spoke_database"
+    relationship_role: "technology_spoke"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "tools_services_categories"
+        
+      type:
+        notion_property: "Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_type_options"
+        mapping_table: "tools_services_types"
+        
+      status:
+        notion_property: "Status"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_status_options"
+        mapping_table: "tools_services_status_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      key_features:
+        notion_property: "Key_Features"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      use_cases:
+        notion_property: "Use_Cases"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      performance_rating:
+        notion_property: "Performance_Rating"
+        notion_type: "select"
+        transformation_rule: "yaml_integer_to_star_rating"
+        validation: "range_1_to_5"
+        mapping_table: "star_rating_mapping"
+        
+      pricing_model:
+        notion_property: "Pricing_Model"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_pricing_options"
+        mapping_table: "pricing_model_options"
+        
+      website:
+        notion_property: "Website"
+        notion_type: "url"
+        transformation_rule: "yaml_string_to_url"
+        validation: "valid_url_format"
+        
+      documentation:
+        notion_property: "Documentation"
+        notion_type: "url"
+        transformation_rule: "yaml_string_to_url"
+        validation: "valid_url_format_optional"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "tools_services_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_knowledge:
+        notion_property: "Related_Knowledge"
+        notion_type: "relation"
+        target_database: "knowledge_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_knowledge"
+        relationship_type: "spoke_to_hub"
+        bidirectional: true
+        
+      related_notes:
+        notion_property: "Related_Notes"
+        notion_type: "relation"
+        target_database: "notes_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_notes"
+        relationship_type: "spoke_to_universal"
+        bidirectional: true
+        
+  business_ideas_transformations:
+    database_type: "spoke_database"
+    relationship_role: "innovation_spoke"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "business_ideas_categories"
+        
+      market_type:
+        notion_property: "Market_Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_market_type_options"
+        mapping_table: "market_type_options"
+        
+      status:
+        notion_property: "Status"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_status_options"
+        mapping_table: "business_ideas_status_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      value_proposition:
+        notion_property: "Value_Proposition"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      target_market:
+        notion_property: "Target_Market"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      revenue_model:
+        notion_property: "Revenue_Model"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_revenue_model_options"
+        mapping_table: "revenue_model_options"
+        
+      market_opportunity:
+        notion_property: "Market_Opportunity"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      competitive_advantage:
+        notion_property: "Competitive_Advantage"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      implementation_complexity:
+        notion_property: "Implementation_Complexity"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_complexity_options"
+        mapping_table: "implementation_complexity_options"
+        
+      investment_required:
+        notion_property: "Investment_Required"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_investment_options"
+        mapping_table: "investment_required_options"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "business_ideas_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_knowledge:
+        notion_property: "Related_Knowledge"
+        notion_type: "relation"
+        target_database: "knowledge_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_knowledge"
+        relationship_type: "spoke_to_hub"
+        bidirectional: true
+        
+      related_notes:
+        notion_property: "Related_Notes"
+        notion_type: "relation"
+        target_database: "notes_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_notes"
+        relationship_type: "spoke_to_universal"
+        bidirectional: true
+        
+  training_vault_transformations:
+    database_type: "spoke_database"
+    relationship_role: "learning_spoke"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "training_vault_categories"
+        
+      type:
+        notion_property: "Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_type_options"
+        mapping_table: "training_vault_types"
+        
+      status:
+        notion_property: "Status"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_status_options"
+        mapping_table: "training_vault_status_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      learning_objectives:
+        notion_property: "Learning_Objectives"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      target_audience:
+        notion_property: "Target_Audience"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      duration:
+        notion_property: "Duration"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      difficulty_level:
+        notion_property: "Difficulty_Level"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_difficulty_options"
+        mapping_table: "difficulty_level_options"
+        
+      delivery_format:
+        notion_property: "Delivery_Format"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_delivery_options"
+        mapping_table: "delivery_format_options"
+        
+      cost:
+        notion_property: "Cost"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      roi_potential:
+        notion_property: "ROI_Potential"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_roi_options"
+        mapping_table: "roi_potential_options"
+        
+      certification_body:
+        notion_property: "Certification_Body"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "training_vault_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_knowledge:
+        notion_property: "Related_Knowledge"
+        notion_type: "relation"
+        target_database: "knowledge_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_knowledge"
+        relationship_type: "spoke_to_hub"
+        bidirectional: true
+        
+      related_notes:
+        notion_property: "Related_Notes"
+        notion_type: "relation"
+        target_database: "notes_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_notes"
+        relationship_type: "spoke_to_universal"
+        bidirectional: true
+        
+  platforms_sites_transformations:
+    database_type: "spoke_database"
+    relationship_role: "resource_spoke"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "platforms_sites_categories"
+        
+      type:
+        notion_property: "Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_type_options"
+        mapping_table: "platforms_sites_types"
+        
+      status:
+        notion_property: "Status"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_status_options"
+        mapping_table: "platforms_sites_status_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      key_resources:
+        notion_property: "Key_Resources"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      target_audience:
+        notion_property: "Target_Audience"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      url:
+        notion_property: "URL"
+        notion_type: "url"
+        transformation_rule: "yaml_string_to_url"
+        validation: "valid_url_format"
+        
+      api_available:
+        notion_property: "API_Available"
+        notion_type: "checkbox"
+        transformation_rule: "yaml_boolean_to_checkbox"
+        validation: "boolean_value"
+        
+      registration_required:
+        notion_property: "Registration_Required"
+        notion_type: "checkbox"
+        transformation_rule: "yaml_boolean_to_checkbox"
+        validation: "boolean_value"
+        
+      cost_model:
+        notion_property: "Cost_Model"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_cost_model_options"
+        mapping_table: "cost_model_options"
+        
+      quality_rating:
+        notion_property: "Quality_Rating"
+        notion_type: "select"
+        transformation_rule: "yaml_integer_to_star_rating"
+        validation: "range_1_to_5"
+        mapping_table: "star_rating_mapping"
+        
+      update_frequency:
+        notion_property: "Update_Frequency"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_frequency_options"
+        mapping_table: "update_frequency_options"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "platforms_sites_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_knowledge:
+        notion_property: "Related_Knowledge"
+        notion_type: "relation"
+        target_database: "knowledge_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_knowledge"
+        relationship_type: "spoke_to_hub"
+        bidirectional: true
+        
+      related_notes:
+        notion_property: "Related_Notes"
+        notion_type: "relation"
+        target_database: "notes_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_notes"
+        relationship_type: "spoke_to_universal"
+        bidirectional: true
+        
+  notes_ideas_transformations:
+    database_type: "universal_connector"
+    relationship_role: "universal_connector"
+    
+    property_mappings:
+      id:
+        notion_property: "ID"
+        notion_type: "title"
+        transformation_rule: "yaml_field_to_notion_title"
+        validation: "required_unique_lowercase_hyphenated"
+        
+      name:
+        notion_property: "Name"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      category:
+        notion_property: "Category"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_category_options"
+        mapping_table: "notes_ideas_categories"
+        
+      type:
+        notion_property: "Type"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_type_options"
+        mapping_table: "notes_ideas_types"
+        
+      source_context:
+        notion_property: "Source_Context"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_context_options"
+        mapping_table: "source_context_options"
+        
+      description:
+        notion_property: "Description"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "required_non_empty"
+        
+      key_points:
+        notion_property: "Key_Points"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      actionable_items:
+        notion_property: "Actionable_Items"
+        notion_type: "rich_text"
+        transformation_rule: "yaml_string_to_rich_text"
+        validation: "optional"
+        
+      impact_assessment:
+        notion_property: "Impact_Assessment"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_impact_options"
+        mapping_table: "impact_assessment_options"
+        
+      implementation_complexity:
+        notion_property: "Implementation_Complexity"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_complexity_options"
+        mapping_table: "implementation_complexity_options"
+        
+      confidence_level:
+        notion_property: "Confidence_Level"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_confidence_options"
+        mapping_table: "confidence_level_options"
+        
+      tags:
+        notion_property: "Tags"
+        notion_type: "multi_select"
+        transformation_rule: "yaml_array_to_multi_select"
+        validation: "all_options_must_exist"
+        mapping_table: "notes_ideas_tags"
+        
+      priority:
+        notion_property: "Priority"
+        notion_type: "select"
+        transformation_rule: "yaml_string_to_select_option"
+        validation: "must_exist_in_priority_options"
+        mapping_table: "priority_options"
+        
+    relationship_mappings:
+      related_knowledge:
+        notion_property: "Related_Knowledge"
+        notion_type: "relation"
+        target_database: "knowledge_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_knowledge"
+        relationship_type: "universal_to_hub"
+        bidirectional: true
+        
+      related_tools:
+        notion_property: "Related_Tools"
+        notion_type: "relation"
+        target_database: "tools_services"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_tools"
+        relationship_type: "universal_to_spoke"
+        bidirectional: true
+        
+      related_business_ideas:
+        notion_property: "Related_Business_Ideas"
+        notion_type: "relation"
+        target_database: "business_ideas"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_business_ideas"
+        relationship_type: "universal_to_spoke"
+        bidirectional: true
+        
+      related_training:
+        notion_property: "Related_Training"
+        notion_type: "relation"
+        target_database: "training_vault"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_training"
+        relationship_type: "universal_to_spoke"
+        bidirectional: true
+        
+      related_platforms:
+        notion_property: "Related_Platforms"
+        notion_type: "relation"
+        target_database: "platforms_sites"
+        transformation_rule: "cross_database_relation_mapping"
+        yaml_source: "relationships.related_platforms"
+        relationship_type: "universal_to_spoke"
+        bidirectional: true
+
+# Transformation Rule Implementations
+transformation_rules:
+  
+  yaml_field_to_notion_title:
+    description: "Convert YAML field to Notion title property"
+    input_type: "string"
+    output_type: "title"
+    implementation:
+      - "extract_yaml_field_value"
+      - "validate_not_empty"
+      - "format_as_title_object"
+    example:
+      input: "meta-prompting-frameworks"
+      output:
+        type: "title"
+        title:
+          - type: "text"
+            text:
+              content: "meta-prompting-frameworks"
+              
+  yaml_string_to_rich_text:
+    description: "Convert YAML string to Notion rich text property"
+    input_type: "string"
+    output_type: "rich_text"
+    implementation:
+      - "extract_yaml_string_value"
+      - "convert_markdown_to_rich_text"
+      - "format_as_rich_text_array"
+    example:
+      input: "Comprehensive meta-prompting research with **40-60% improvements**"
+      output:
+        type: "rich_text"
+        rich_text:
+          - type: "text"
+            text:
+              content: "Comprehensive meta-prompting research with 40-60% improvements"
+              
+  yaml_string_to_select_option:
+    description: "Convert YAML string to Notion select property"
+    input_type: "string"
+    output_type: "select"
+    implementation:
+      - "extract_yaml_string_value"
+      - "normalize_string_for_option_matching"
+      - "lookup_in_mapping_table"
+      - "format_as_select_object"
+    example:
+      input: "AI_Frameworks"
+      output:
+        type: "select"
+        select:
+          name: "AI_Frameworks"
+          color: "blue"
+          
+  yaml_array_to_multi_select:
+    description: "Convert YAML array to Notion multi-select property"
+    input_type: "array"
+    output_type: "multi_select"
+    implementation:
+      - "extract_yaml_array_values"
+      - "validate_each_option_exists"
+      - "format_as_multi_select_array"
+    example:
+      input: ["ai-orchestration", "meta-prompting", "validation-systems"]
+      output:
+        type: "multi_select"
+        multi_select:
+          - name: "ai-orchestration"
+            color: "blue"
+          - name: "meta-prompting"
+            color: "green"
+          - name: "validation-systems"
+            color: "orange"
+            
+  yaml_integer_to_star_rating:
+    description: "Convert YAML integer rating to star select property"
+    input_type: "integer"
+    output_type: "select"
+    implementation:
+      - "extract_yaml_integer_value"
+      - "validate_range_1_to_5"
+      - "map_to_star_representation"
+      - "format_as_select_object"
+    example:
+      input: 5
+      output:
+        type: "select"
+        select:
+          name: "⭐⭐⭐⭐⭐"
+          color: "green"
+          
+  yaml_string_to_url:
+    description: "Convert YAML string to Notion URL property"
+    input_type: "string"
+    output_type: "url"
+    implementation:
+      - "extract_yaml_string_value"
+      - "validate_url_format"
+      - "format_as_url_object"
+    example:
+      input: "https://claude.ai/code"
+      output:
+        type: "url"
+        url: "https://claude.ai/code"
+        
+  yaml_boolean_to_checkbox:
+    description: "Convert YAML boolean to Notion checkbox property"
+    input_type: "boolean"
+    output_type: "checkbox"
+    implementation:
+      - "extract_yaml_boolean_value"
+      - "format_as_checkbox_object"
+    example:
+      input: true
+      output:
+        type: "checkbox"
+        checkbox: true
+        
+  yaml_integer_to_number:
+    description: "Convert YAML integer to Notion number property"
+    input_type: "integer"
+    output_type: "number"
+    implementation:
+      - "extract_yaml_integer_value"
+      - "validate_numeric_range"
+      - "format_as_number_object"
+    example:
+      input: 95
+      output:
+        type: "number"
+        number: 95
+        
+  cross_database_relation_mapping:
+    description: "Map cross-database relationships using @database/item_id format"
+    input_type: "array_of_references"
+    output_type: "relation"
+    implementation:
+      - "parse_cross_reference_format"
+      - "resolve_target_database_and_item"
+      - "lookup_target_notion_page_id"
+      - "create_relation_array"
+      - "establish_bidirectional_link"
+    example:
+      input: ["@tools_services/claude-code-max", "@tools_services/github-actions"]
+      output:
+        type: "relation"
+        relation:
+          - id: "page_id_for_claude_code_max"
+          - id: "page_id_for_github_actions"
+
+# Mapping Tables for Select Options
+mapping_tables:
+  
+  knowledge_vault_categories:
+    AI_Frameworks: {name: "AI_Frameworks", color: "blue"}
+    Research_Methods: {name: "Research_Methods", color: "green"}
+    Development_Patterns: {name: "Development_Patterns", color: "purple"}
+    Quality_Systems: {name: "Quality_Systems", color: "orange"}
+    Performance_Optimization: {name: "Performance_Optimization", color: "red"}
+    Design_Systems: {name: "Design_Systems", color: "pink"}
+    
+  knowledge_vault_types:
+    Methodology: {name: "Methodology", color: "blue"}
+    Framework: {name: "Framework", color: "green"}
+    Pattern: {name: "Pattern", color: "purple"}
+    Research: {name: "Research", color: "orange"}
+    Best_Practice: {name: "Best_Practice", color: "red"}
+    
+  tools_services_categories:
+    AI_Platforms: {name: "AI_Platforms", color: "blue"}
+    Development_Tools: {name: "Development_Tools", color: "green"}
+    Cloud_Services: {name: "Cloud_Services", color: "purple"}
+    Databases: {name: "Databases", color: "orange"}
+    CI_CD: {name: "CI_CD", color: "red"}
+    Design_Tools: {name: "Design_Tools", color: "pink"}
+    Communication: {name: "Communication", color: "yellow"}
+    Project_Management: {name: "Project_Management", color: "gray"}
+    
+  tools_services_types:
+    SaaS_Platform: {name: "SaaS_Platform", color: "blue"}
+    Open_Source_Tool: {name: "Open_Source_Tool", color: "green"}
+    Cloud_Service: {name: "Cloud_Service", color: "purple"}
+    Enterprise_Solution: {name: "Enterprise_Solution", color: "orange"}
+    Development_Environment: {name: "Development_Environment", color: "red"}
+    API_Service: {name: "API_Service", color: "pink"}
+    
+  business_ideas_categories:
+    AI_Platform: {name: "AI_Platform", color: "blue"}
+    Enterprise_Software: {name: "Enterprise_Software", color: "green"}
+    Developer_Tools: {name: "Developer_Tools", color: "purple"}
+    Productivity_Tools: {name: "Productivity_Tools", color: "orange"}
+    Educational_Platform: {name: "Educational_Platform", color: "red"}
+    Consulting_Services: {name: "Consulting_Services", color: "pink"}
+    SaaS_Solution: {name: "SaaS_Solution", color: "yellow"}
+    
+  market_type_options:
+    B2B_Enterprise: {name: "B2B_Enterprise", color: "blue"}
+    B2B_SMB: {name: "B2B_SMB", color: "green"}
+    B2C_Professional: {name: "B2C_Professional", color: "purple"}
+    B2C_Consumer: {name: "B2C_Consumer", color: "orange"}
+    B2G_Government: {name: "B2G_Government", color: "red"}
+    Marketplace: {name: "Marketplace", color: "pink"}
+    
+  revenue_model_options:
+    Subscription: {name: "Subscription", color: "blue"}
+    Usage_Based: {name: "Usage_Based", color: "green"}
+    License: {name: "License", color: "purple"}
+    Consulting: {name: "Consulting", color: "orange"}
+    Marketplace_Fee: {name: "Marketplace_Fee", color: "red"}
+    Advertising: {name: "Advertising", color: "pink"}
+    Freemium: {name: "Freemium", color: "yellow"}
+    
+  training_vault_categories:
+    AI_Development: {name: "AI_Development", color: "blue"}
+    Software_Engineering: {name: "Software_Engineering", color: "green"}
+    Project_Management: {name: "Project_Management", color: "purple"}
+    Design_Systems: {name: "Design_Systems", color: "orange"}
+    DevOps_Infrastructure: {name: "DevOps_Infrastructure", color: "red"}
+    Business_Skills: {name: "Business_Skills", color: "pink"}
+    Leadership: {name: "Leadership", color: "yellow"}
+    
+  training_vault_types:
+    Certification: {name: "Certification", color: "blue"}
+    Course: {name: "Course", color: "green"}
+    Workshop: {name: "Workshop", color: "purple"}
+    Bootcamp: {name: "Bootcamp", color: "orange"}
+    Self_Paced: {name: "Self_Paced", color: "red"}
+    Mentorship: {name: "Mentorship", color: "pink"}
+    Conference: {name: "Conference", color: "yellow"}
+    
+  difficulty_level_options:
+    Beginner: {name: "Beginner", color: "green"}
+    Intermediate: {name: "Intermediate", color: "yellow"}
+    Advanced: {name: "Advanced", color: "orange"}
+    Expert: {name: "Expert", color: "red"}
+    Professional: {name: "Professional", color: "purple"}
+    
+  platforms_sites_categories:
+    Developer_Platform: {name: "Developer_Platform", color: "blue"}
+    Marketplace: {name: "Marketplace", color: "green"}
+    Documentation: {name: "Documentation", color: "purple"}
+    Community: {name: "Community", color: "orange"}
+    Learning_Platform: {name: "Learning_Platform", color: "red"}
+    Resource_Library: {name: "Resource_Library", color: "pink"}
+    Tool_Registry: {name: "Tool_Registry", color: "yellow"}
+    News_Information: {name: "News_Information", color: "gray"}
+    
+  notes_ideas_categories:
+    Implementation_Insight: {name: "Implementation_Insight", color: "blue"}
+    Performance_Discovery: {name: "Performance_Discovery", color: "green"}
+    Technical_Observation: {name: "Technical_Observation", color: "purple"}
+    Process_Improvement: {name: "Process_Improvement", color: "orange"}
+    Quality_Finding: {name: "Quality_Finding", color: "red"}
+    Strategy_Note: {name: "Strategy_Note", color: "pink"}
+    Research_Insight: {name: "Research_Insight", color: "yellow"}
+    Lesson_Learned: {name: "Lesson_Learned", color: "gray"}
+    
+  notes_ideas_types:
+    Discovery: {name: "Discovery", color: "blue"}
+    Insight: {name: "Insight", color: "green"}
+    Observation: {name: "Observation", color: "purple"}
+    Best_Practice: {name: "Best_Practice", color: "orange"}
+    Optimization: {name: "Optimization", color: "red"}
+    Pattern: {name: "Pattern", color: "pink"}
+    Recommendation: {name: "Recommendation", color: "yellow"}
+    
+  status_options:
+    Research: {name: "Research", color: "yellow"}
+    Development: {name: "Development", color: "blue"}
+    Testing: {name: "Testing", color: "orange"}
+    Production: {name: "Production", color: "green"}
+    Archived: {name: "Archived", color: "gray"}
+    
+  priority_options:
+    Critical: {name: "Critical", color: "red"}
+    High: {name: "High", color: "orange"}
+    Medium: {name: "Medium", color: "yellow"}
+    Low: {name: "Low", color: "gray"}
+    
+  star_rating_mapping:
+    5: {name: "⭐⭐⭐⭐⭐", color: "green"}
+    4: {name: "⭐⭐⭐⭐", color: "blue"}
+    3: {name: "⭐⭐⭐", color: "yellow"}
+    2: {name: "⭐⭐", color: "orange"}
+    1: {name: "⭐", color: "red"}
+
+# Cross-Database Relationship Resolution
+relationship_resolution:
+  
+  cross_reference_format:
+    pattern: "@{database_name}/{item_id}"
+    examples:
+      - "@knowledge_vault/meta-prompting-frameworks"
+      - "@tools_services/claude-code-max"
+      - "@business_ideas/ai-knowledge-intelligence-orchestrator"
+      - "@training_vault/claude-code-mastery-program"
+      - "@platforms_sites/github-marketplace"
+      - "@notes_ideas/token-reduction-discoveries"
+      
+  database_name_mappings:
+    knowledge_vault: "knowledge_vault_database"
+    tools_services: "tools_services_database"
+    business_ideas: "business_ideas_database"
+    training_vault: "training_vault_database"
+    platforms_sites: "platforms_sites_database"
+    notes_ideas: "notes_ideas_database"
+    
+  relationship_types:
+    hub_to_spoke:
+      description: "Knowledge vault (hub) to any spoke database"
+      directionality: "bidirectional"
+      hub_property_suffix: "Related_{spoke_name}"
+      spoke_property: "Related_Knowledge"
+      
+    spoke_to_hub:
+      description: "Any spoke database to knowledge vault (hub)"
+      directionality: "bidirectional"
+      spoke_property: "Related_Knowledge"
+      hub_property_suffix: "Related_{spoke_name}"
+      
+    universal_to_hub:
+      description: "Notes & ideas (universal) to knowledge vault (hub)"
+      directionality: "bidirectional"
+      universal_property: "Related_Knowledge"
+      hub_property: "Related_Notes"
+      
+    universal_to_spoke:
+      description: "Notes & ideas (universal) to any spoke database"
+      directionality: "bidirectional"
+      universal_property_suffix: "Related_{spoke_name}"
+      spoke_property: "Related_Notes"
+      
+  relationship_validation:
+    bidirectional_integrity: true
+    orphaned_references_handling: "log_and_skip"
+    missing_target_handling: "create_placeholder_or_skip"
+    duplicate_relationships_handling: "deduplicate"
+    relationship_limit_per_item: 50
+
+# Validation Engine Configuration
+validation_engine:
+  
+  property_validations:
+    required_unique_lowercase_hyphenated:
+      rules:
+        - "not_empty"
+        - "unique_within_database"
+        - "lowercase_only"
+        - "hyphens_allowed"
+        - "no_spaces"
+        - "no_special_characters"
+      error_handling: "fail_migration"
+      
+    required_non_empty:
+      rules:
+        - "not_empty"
+        - "not_whitespace_only"
+      error_handling: "fail_migration"
+      
+    valid_url_format:
+      rules:
+        - "url_regex_validation"
+        - "protocol_required"
+      error_handling: "log_warning_continue"
+      
+    range_1_to_5:
+      rules:
+        - "integer_type"
+        - "minimum_value_1"
+        - "maximum_value_5"
+      error_handling: "default_to_3"
+      
+    range_0_to_100:
+      rules:
+        - "integer_type"
+        - "minimum_value_0"
+        - "maximum_value_100"
+      error_handling: "clamp_to_range"
+      
+  relationship_validations:
+    cross_reference_format_validation:
+      pattern: "^@[a-z_]+/[a-z0-9-]+$"
+      error_handling: "log_and_skip_relationship"
+      
+    target_exists_validation:
+      check_target_database: true
+      check_target_item: true
+      error_handling: "create_placeholder_or_skip"
+      
+    bidirectional_consistency:
+      enforce_bidirectional: true
+      auto_create_reverse_link: true
+      error_handling: "fix_automatically"
+      
+  data_integrity_checks:
+    duplicate_detection:
+      check_duplicate_ids: true
+      check_duplicate_names: false
+      error_handling: "fail_migration"
+      
+    schema_compliance:
+      validate_required_properties: true
+      validate_property_types: true
+      validate_select_options: true
+      error_handling: "fail_migration"
+      
+    relationship_integrity:
+      validate_relationship_targets: true
+      validate_bidirectional_consistency: true
+      validate_relationship_limits: true
+      error_handling: "log_and_continue"
+
+# Performance Optimization
+performance_optimization:
+  
+  batch_processing:
+    enable_batching: true
+    default_batch_size: 5
+    max_batch_size: 10
+    adaptive_batch_sizing: true
+    
+  caching:
+    enable_item_caching: true
+    enable_relationship_caching: true
+    cache_duration: 300  # 5 minutes
+    max_cache_size: "100MB"
+    
+  parallel_processing:
+    enable_parallel_property_transformation: true
+    enable_parallel_relationship_resolution: false  # Sequential for data integrity
+    max_parallel_workers: 3
+    
+  memory_management:
+    enable_memory_monitoring: true
+    max_memory_per_batch: "50MB"
+    garbage_collection_frequency: "after_each_batch"
+    
+# Error Handling and Recovery
+error_handling:
+  
+  transformation_errors:
+    property_transformation_failure:
+      action: "log_error_skip_property"
+      escalation: "continue_with_remaining_properties"
+      
+    relationship_resolution_failure:
+      action: "log_error_skip_relationship"
+      escalation: "continue_with_item_creation"
+      
+    validation_failure:
+      action: "log_error_fail_item"
+      escalation: "continue_with_next_item"
+      
+  recovery_procedures:
+    item_creation_failure:
+      retry_attempts: 3
+      retry_delay: 2000  # 2 seconds
+      fallback_action: "create_minimal_item"
+      
+    relationship_creation_failure:
+      retry_attempts: 2
+      retry_delay: 1000  # 1 second
+      fallback_action: "skip_relationship_continue"
+      
+    batch_processing_failure:
+      retry_attempts: 1
+      retry_delay: 5000  # 5 seconds
+      fallback_action: "process_items_individually"
+      
+  logging:
+    log_level: "INFO"
+    detailed_error_logging: true
+    error_categorization: true
+    performance_metrics_logging: true
+    
+    log_destinations:
+      - "operations/logs/transformation-engine.log"
+      - "operations/logs/error-details.json"
+      - "console_output"

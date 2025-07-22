@@ -1,0 +1,88 @@
+properties:
+  # Core Identification
+  id: "ts_vscode_001"
+  name: "Visual Studio Code"
+  
+  # Rating System (5-star scale)
+  rating: 5
+  
+  # Technology Maturity
+  maturity_level: "enterprise"
+  
+  # Usage Status
+  status: "adopted"
+  
+  # Usage Frequency
+  frequency: "daily"
+  
+  # Technology Classification
+  technology_type:
+    - "ide"
+    - "dev_tool"
+    - "editor"
+  
+  # Deployment Model
+  deployment_model: "desktop_app"
+  
+  # Integration Complexity
+  integration_complexity: "simple"
+  
+  # Vendor and Licensing
+  vendor: "Microsoft"
+  licensing_model: "free"
+  
+  # Content and Documentation
+  url: "https://code.visualstudio.com"
+  description: "Leading free code editor with extensive extension ecosystem, integrated terminal, debugging capabilities, and Git integration. Essential development environment supporting all major programming languages and frameworks with AI-powered coding assistance."
+  key_features: "IntelliSense code completion, integrated debugging, Git integration, extensive extension marketplace, integrated terminal, multi-language support, workspace configuration, remote development, live collaboration, AI code assistance"
+  use_cases: "Software development, web development, data science, DevOps scripting, documentation writing, remote development, code collaboration, multi-language projects, extension development"
+  pros_cons: "PROS: Free and open-source, extensive extension ecosystem, excellent performance, cross-platform, strong community support, regular updates. CONS: Can be resource-intensive, extension dependency, Microsoft ecosystem bias, configuration complexity for advanced setups"
+  
+  # Technical Specifications
+  supported_platforms:
+    - "windows"
+    - "macos"
+    - "linux"
+    - "web_browser"
+  
+  # Evaluation and Usage
+  evaluation_notes: "Primary development environment for all coding projects. Excellent integration with Claude Code and AI-powered development workflows. Essential tool for modern software development with unmatched extension ecosystem."
+  last_evaluated: "2024-07-21"
+  
+  # Timestamps
+  created_date: "2024-07-21T23:55:00Z"
+  last_modified: "2024-07-21T23:55:00Z"
+
+# Cross-Database Relationships
+relationships:
+  knowledge_vault_relations:
+    - id: "kv_development_environment_optimization_001"
+      context: "Best practices for configuring and optimizing development environments"
+    - id: "kv_ai_assisted_coding_patterns_001"
+      context: "Patterns and techniques for leveraging AI assistance within development environments"
+      
+  tools_services_relations:
+    - id: "ts_claude_code_max_001"
+      context: "AI-powered development platform with VS Code integration capabilities"
+    - id: "ts_github_actions_001"
+      context: "CI/CD integration through VS Code Git workflows and action triggers"
+    - id: "ts_docker_001"
+      context: "Container development support through VS Code remote development features"
+      
+  business_ideas_relations:
+    - id: "bi_development_productivity_consulting_001"
+      context: "Consulting service leveraging VS Code optimization for developer productivity"
+      
+  training_vault_relations:
+    - id: "tv_vs_code_mastery_program_001"
+      context: "Advanced training program for maximizing VS Code productivity and extension usage"
+
+# Cross-References
+cross_references:
+  - "@knowledge_vault/kv_development_environment_optimization_001"
+  - "@knowledge_vault/kv_ai_assisted_coding_patterns_001"
+  - "@tools_services/ts_claude_code_max_001"
+  - "@tools_services/ts_github_actions_001"
+  - "@tools_services/ts_docker_001"
+  - "@business_ideas/bi_development_productivity_consulting_001"
+  - "@training_vault/tv_vs_code_mastery_program_001"

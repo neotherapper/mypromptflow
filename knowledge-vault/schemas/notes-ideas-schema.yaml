@@ -1,0 +1,460 @@
+# Notes & Ideas Database Schema
+# Information capture and idea management database
+# Replicates Notion Notes & Ideas structure with full relationship support
+
+database_info:
+  name: "Notes & Ideas"
+  type: "specialized_database"
+  notion_id: "38d0b64b-2e45-47ca-837b-042567bde2e7"
+  description: "Information capture, thought processing, and idea development"
+  version: "1.0.0"
+  created: "2024-07-21"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the note/idea"
+    format: "uuid_v4"
+    
+  name:
+    type: "title"
+    required: true
+    description: "Title or headline of the note/idea"
+    max_length: 200
+    
+  # Rating System (5-star scale matching Notion)
+  rating:
+    type: "select"
+    required: false
+    description: "Importance or value rating"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "Critical/High Impact"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "Important"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Useful"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Interesting"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Reference Only"
+        
+  # Note Processing Status
+  status:
+    type: "select"
+    required: true
+    description: "Current processing and development status"
+    default: "captured"
+    options:
+      - value: "captured"
+        name: "Captured"
+        color: "yellow"
+      - value: "processing"
+        name: "Processing"
+        color: "orange"
+      - value: "developed"
+        name: "Developed"
+        color: "green"
+      - value: "implemented"
+        name: "Implemented"
+        color: "blue"
+      - value: "archived"
+        name: "Archived"
+        color: "gray"
+      - value: "discarded"
+        name: "Discarded"
+        color: "red"
+        
+  # Content Classification
+  category:
+    type: "multi_select"
+    required: false
+    description: "Content category and type classification"
+    options:
+      # Content Types
+      - value: "insight"
+        name: "Insight"
+        color: "purple"
+      - value: "observation"
+        name: "Observation"
+        color: "blue"
+      - value: "hypothesis"
+        name: "Hypothesis"
+        color: "orange"
+      - value: "question"
+        name: "Question"
+        color: "yellow"
+      - value: "solution"
+        name: "Solution"
+        color: "green"
+      - value: "feedback"
+        name: "Feedback"
+        color: "red"
+      
+      # Information Sources
+      - value: "research_note"
+        name: "Research Note"
+        color: "blue"
+      - value: "meeting_note"
+        name: "Meeting Note"
+        color: "orange"
+      - value: "article_summary"
+        name: "Article Summary"
+        color: "green"
+      - value: "book_note"
+        name: "Book Note"
+        color: "purple"
+      - value: "conversation"
+        name: "Conversation"
+        color: "yellow"
+      
+      # Development Areas
+      - value: "product_idea"
+        name: "Product Idea"
+        color: "red"
+      - value: "feature_request"
+        name: "Feature Request"
+        color: "blue"
+      - value: "improvement"
+        name: "Improvement"
+        color: "green"
+      - value: "workflow"
+        name: "Workflow"
+        color: "orange"
+      - value: "strategy"
+        name: "Strategy"
+        color: "purple"
+      
+      # Technical Categories
+      - value: "technical_note"
+        name: "Technical Note"
+        color: "blue"
+      - value: "code_snippet"
+        name: "Code Snippet"
+        color: "green"
+      - value: "troubleshooting"
+        name: "Troubleshooting"
+        color: "red"
+      - value: "configuration"
+        name: "Configuration"
+        color: "orange"
+        
+  # Content Priority and Action
+  action_required:
+    type: "select"
+    required: false
+    description: "Whether and what type of action is needed"
+    options:
+      - value: "none"
+        name: "None"
+        color: "gray"
+      - value: "review"
+        name: "Review"
+        color: "yellow"
+      - value: "research"
+        name: "Research Further"
+        color: "orange"
+      - value: "implement"
+        name: "Implement"
+        color: "green"
+      - value: "discuss"
+        name: "Discuss"
+        color: "blue"
+      - value: "validate"
+        name: "Validate"
+        color: "purple"
+      - value: "urgent"
+        name: "Urgent Action"
+        color: "red"
+        
+  # Content and Context
+  content:
+    type: "rich_text"
+    required: false
+    description: "Main content of the note or idea"
+    
+  context:
+    type: "rich_text"
+    required: false
+    description: "Context and background information"
+    
+  source:
+    type: "rich_text"
+    required: false
+    description: "Source of the information or idea"
+    
+  # Development and Follow-up
+  follow_up_actions:
+    type: "rich_text"
+    required: false
+    description: "Specific follow-up actions and next steps"
+    
+  related_thoughts:
+    type: "rich_text"
+    required: false
+    description: "Related thoughts, connections, and implications"
+    
+  implementation_notes:
+    type: "rich_text"
+    required: false
+    description: "Notes on implementation or application"
+    
+  # Tagging for Cross-Domain Organization
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Flexible tagging system for organization"
+    options:
+      # Domain Tags
+      - value: "business"
+        name: "Business"
+        color: "blue"
+      - value: "technical"
+        name: "Technical"
+        color: "green"
+      - value: "personal"
+        name: "Personal"
+        color: "yellow"
+      - value: "creative"
+        name: "Creative"
+        color: "purple"
+      - value: "strategic"
+        name: "Strategic"
+        color: "red"
+      
+      # Project Tags
+      - value: "knowledge_vault"
+        name: "Knowledge Vault"
+        color: "blue"
+      - value: "training"
+        name: "Training"
+        color: "green"
+      - value: "business_dev"
+        name: "Business Development"
+        color: "orange"
+      - value: "platform_research"
+        name: "Platform Research"
+        color: "purple"
+      - value: "tool_evaluation"
+        name: "Tool Evaluation"
+        color: "red"
+      
+      # Priority Tags
+      - value: "high_priority"
+        name: "High Priority"
+        color: "red"
+      - value: "quick_win"
+        name: "Quick Win"
+        color: "green"
+      - value: "long_term"
+        name: "Long Term"
+        color: "blue"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+        
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the note/idea was captured"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the note/idea was last updated"
+    
+  action_due_date:
+    type: "date"
+    required: false
+    description: "Due date for required actions"
+    
+  # Cross-Database Relationships (Hub for connecting disparate information)
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "notes_ideas_relations"
+    
+  training_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related training and learning content"
+    related_database: "training_vault"
+    dual_property: "notes_ideas_relations"
+    
+  business_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related business ideas and opportunities"
+    related_database: "business_ideas"
+    dual_property: "notes_ideas_relations"
+    
+  platforms_sites_relations:
+    type: "relation"
+    required: false
+    description: "Related platforms and resources"
+    related_database: "platforms_sites"
+    dual_property: "notes_ideas_relations"
+    
+  tools_services_relations:
+    type: "relation"
+    required: false
+    description: "Related tools and services"
+    related_database: "tools_services"
+    dual_property: "notes_ideas_relations"
+    
+  # Self-referencing for idea connections
+  related_notes:
+    type: "relation"
+    required: false
+    description: "Related notes and ideas within this database"
+    related_database: "notes_ideas"
+    dual_property: "related_notes"
+    
+  # Rollup Properties for Context and Priority
+  max_related_priority:
+    type: "rollup"
+    description: "Highest priority from related items across all databases"
+    rollup_property: "priority"
+    rollup_function: "max"
+    relation_property: "knowledge_vault_relations"
+    
+  total_connections:
+    type: "rollup"
+    description: "Total number of connections across all databases"
+    rollup_property: "id"
+    rollup_function: "count"
+    relation_property: ["knowledge_vault_relations", "training_vault_relations", "business_ideas_relations", "platforms_sites_relations", "tools_services_relations", "related_notes"]
+    
+  business_impact_potential:
+    type: "rollup"
+    description: "Maximum business idea rating from connected ideas"
+    rollup_property: "idea_rating"
+    rollup_function: "max"
+    relation_property: "business_ideas_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "information_capture_and_idea_development"
+  integration_hub: true  # Acts as integration hub for disparate information
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    self_referencing_allowed: true
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "name", "status"]
+    unique_fields: ["id"]
+    date_validation: ["action_due_date"]
+    text_length_validation: true
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/notes_ideas/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "notes_ideas_schema.yaml"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: true
+    notion_database_id: "38d0b64b-2e45-47ca-837b-042567bde2e7"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+    
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "action_required"]
+    description: "Processing status and action filtering"
+  - fields: ["category", "tags"]
+    description: "Content categorization and tagging"
+  - fields: ["rating", "max_related_priority"]
+    description: "Priority and importance assessment"
+  - fields: ["action_due_date"]
+    description: "Due date tracking for actions"
+    
+# Views Configuration (replicate Notion views)
+views:
+  action_required:
+    name: "Action Required"
+    filter:
+      action_required: ["review", "research", "implement", "discuss", "validate", "urgent"]
+      status: ["captured", "processing", "developed"]
+    sort:
+      - field: "action_due_date"
+        direction: "ascending"
+      - field: "rating"
+        direction: "descending"
+        
+  high_value_notes:
+    name: "High Value Notes"
+    filter:
+      rating: [4, 5]
+      status: ["captured", "processing", "developed"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "last_modified"
+        direction: "descending"
+        
+  by_category:
+    name: "By Category"
+    group_by: "category"
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  recent_captures:
+    name: "Recent Captures"
+    sort:
+      - field: "created_date"
+        direction: "descending"
+    limit: 30
+    
+  needs_processing:
+    name: "Needs Processing"
+    filter:
+      status: ["captured"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "created_date"
+        direction: "ascending"
+        
+  connected_ideas:
+    name: "Highly Connected"
+    sort:
+      - field: "total_connections"
+        direction: "descending"
+      - field: "rating"
+        direction: "descending"
+        
+  business_potential:
+    name: "Business Potential"
+    filter:
+      business_impact_potential: [4, 5]
+    sort:
+      - field: "business_impact_potential"
+        direction: "descending"
+      - field: "rating"
+        direction: "descending"

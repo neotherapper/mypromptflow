@@ -1,0 +1,124 @@
+# Example Knowledge Vault Item
+# This is a template showing the structure of knowledge vault items
+
+item_info:
+  id: "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+  database: "knowledge_vault"
+  schema_version: "1.0.0"
+  created: "2024-07-21T10:00:00Z"
+  last_modified: "2024-07-21T10:00:00Z"
+
+# Core Properties (from schema)
+properties:
+  name: "AI-Powered Knowledge Management Systems"
+  
+  knowledge_type: ["framework", "best_practice"]
+  
+  priority: 4
+  
+  status: "active_use"
+  
+  complexity_level: "moderate"
+  
+  source_type: "research_analysis"
+  
+  tags: ["ai", "knowledge-management", "automation", "productivity", "business-strategy"]
+  
+  description: |
+    Comprehensive analysis of AI-powered knowledge management systems, including
+    implementation patterns, best practices, and strategic considerations for
+    organizational adoption.
+  
+  content: |
+    ## Overview
+    AI-powered knowledge management systems represent a paradigm shift in how
+    organizations capture, organize, and utilize institutional knowledge.
+    
+    ## Key Components
+    - Automated content classification and tagging
+    - Semantic search and discovery capabilities
+    - Intelligent content recommendations
+    - Natural language query processing
+    
+    ## Implementation Considerations
+    - Data quality and preparation requirements
+    - Integration with existing systems
+    - User adoption and change management
+    - Privacy and security implications
+    
+    ## Success Metrics
+    - Knowledge discovery efficiency improvements
+    - User engagement and adoption rates
+    - Content quality and freshness scores
+    - Return on investment measurements
+  
+  key_insights: |
+    - AI significantly improves knowledge discoverability through semantic search
+    - Automated tagging reduces manual categorization effort by 70-80%
+    - User adoption is critical and requires comprehensive change management
+    - Integration capabilities are essential for organizational success
+  
+  implementation_difficulty: "moderate"
+  
+  actionable_steps: |
+    1. Assess current knowledge management maturity
+    2. Define use cases and success criteria
+    3. Evaluate AI knowledge management platforms
+    4. Pilot with high-value knowledge domain
+    5. Plan phased rollout with change management support
+  
+  source_url: "https://example.com/ai-knowledge-management-analysis"
+  
+  created_date: "2024-07-21T10:00:00Z"
+  last_modified: "2024-07-21T10:00:00Z"
+
+# Cross-Database Relationships
+relationships:
+  training_vault_relations:
+    - id: "b2c3d4e5-f6g7-8901-bcde-f23456789012"
+      context: "AI/ML fundamentals training"
+      
+    - id: "c3d4e5f6-g7h8-9012-cdef-345678901234"
+      context: "Knowledge management certification"
+  
+  business_ideas_relations:
+    - id: "d4e5f6g7-h8i9-0123-defg-456789012345"
+      context: "AI consulting service opportunity"
+  
+  tools_services_relations:
+    - id: "e5f6g7h8-i9j0-1234-efgh-567890123456"
+      context: "Notion AI integration"
+      
+    - id: "f6g7h8i9-j0k1-2345-fghi-678901234567"
+      context: "Elasticsearch for semantic search"
+  
+  notes_ideas_relations:
+    - id: "g7h8i9j0-k1l2-3456-ghij-789012345678"
+      context: "Implementation strategy notes"
+
+# Rollup Properties (computed from relationships)
+rollup_properties:
+  related_training_count: 2
+  related_business_ideas_count: 1
+  related_tools_count: 2
+  related_notes_count: 1
+  
+  max_business_idea_rating: 4
+  max_training_skill_level: "advanced"
+  average_tool_rating: 4.5
+
+# Metadata
+metadata:
+  access_count: 15
+  last_accessed: "2024-07-21T09:30:00Z"
+  access_pattern: "regular"
+  quality_score: 0.92
+  completeness_score: 0.88
+  freshness_score: 0.95
+  
+# Validation Status
+validation:
+  schema_valid: true
+  relationships_valid: true
+  required_fields_complete: true
+  last_validated: "2024-07-21T10:00:00Z"
