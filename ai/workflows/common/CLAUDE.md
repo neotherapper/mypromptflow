@@ -90,11 +90,11 @@ function calculateCompletionRate(completed, total):
 ```
 function mapHealthStatus(completionRate):
   if completionRate >= 80:
-    return "healthy"
+    return "healthy" (green status indicator, optimal performance range)
   elif completionRate >= 40:
-    return "needs_attention"
+    return "needs_attention" (yellow status indicator, improvement required within 72h)
   else:
-    return "critical"
+    return "critical" (red status indicator, immediate action required within 24h)
 ```
 
 ## Standard Response Templates
@@ -146,9 +146,9 @@ Based on your current state, try:
 - Reload only when explicitly requested
 
 ### Response Speed
-- Provide immediate feedback for user actions
-- Use progressive disclosure for complex data
-- Prioritize most important information first
+- Execute immediate feedback protocol (user acknowledgment: ≤2 seconds, status updates: ≤5 seconds)
+- Apply progressive disclosure using structured information hierarchy (priority 1: critical data ≤3 seconds, priority 2: supporting data ≤8 seconds, priority 3: detailed context ≤15 seconds)
+- Implement information prioritization algorithm (critical workflow data: immediate display, supplementary context: on-demand loading, detailed metrics: progressive expansion)
 
 ## Validation Rules
 

@@ -181,22 +181,22 @@ multiple_issues_detected:
 **Automated Assessment Workflow**:
 
 **Framework Coherence Analysis**:
-- Reference: `assessment-tools/framework-coherence-analyzer.md`
+- Reference: `../../meta/validation/validators/framework/framework-coherence-analyzer.md`
 - Process: Automated structural inconsistency detection
 - Output: Coherence score and specific improvement recommendations
 
 **Communication Pattern Validation**:
-- Reference: `assessment-tools/communication-pattern-validator.md`
+- Reference: `../../meta/validation/validators/framework/communication-pattern-validator.md`
 - Process: Multi-agent communication failure pattern identification
 - Output: Communication quality score and pattern optimization suggestions
 
 **Workflow Completeness Inspection**:
-- Reference: `assessment-tools/workflow-completeness-inspector.md`
+- Reference: `../../meta/validation/validators/framework/workflow-completeness-inspector.md`
 - Process: Comprehensive workflow coverage analysis
 - Output: Completeness assessment and missing element identification
 
 **Constitutional AI Compliance Checking**:
-- Reference: `assessment-tools/constitutional-ai-compliance-checker.md`
+- Reference: `../../meta/validation/validators/framework/constitutional-ai-checker.md`
 - Process: Ethical standards and constitutional AI principle validation
 - Output: Compliance score and ethical enhancement recommendations
 

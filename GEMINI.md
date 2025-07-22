@@ -5,19 +5,19 @@
 **Project Type**: AI Knowledge Base Development
 **Current Status**: Research Framework Operational
 **Priority Level**: Critical Infrastructure (Tier 1)
-**Success Threshold**: ≥95% research quality score, ≤4.2ms response time, 0 external dependencies
+**Success Threshold**: High research quality, fast response time, zero external dependencies
 
-This project creates a self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→Architect→Specialist→Worker) with research capabilities and progressive context loading (60-70% token reduction).
+This project creates a self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→Architect→Specialist→Worker) with research capabilities and progressive context loading.
 
-**Enhanced with AI Agent Instruction Design Excellence Framework**: Production-ready instruction design patterns achieving 93% framework validation score, 92% assessment automation, and 99% constitutional AI compliance. Framework eliminates vague references and external dependencies through validated design principles.
+**Enhanced with AI Agent Instruction Design Excellence Framework**: Production-ready instruction design patterns providing comprehensive validation, assessment automation, and constitutional AI compliance. Framework eliminates vague references and external dependencies through validated design principles.
 
 ## AI Research System
 
-**Available to all AI agents:** This project includes a research framework at `research/` that any AI agent can use autonomously. Framework provides: 6-step orchestrator workflow, automated execution logging, metadata compliance, and constitutional AI validation (≥95% accuracy).
+**Available to all AI agents:** This project includes a research framework at `research/` that any AI agent can use autonomously. Framework provides: 6-step orchestrator workflow, automated execution logging, metadata compliance, and constitutional AI validation.
 
 ### Research Intention Detection
 
-**Automatic Research Framework Activation:** AI agents MUST automatically detect research intentions and activate the research orchestrator (≤30 seconds) when users:
+**Automatic Research Framework Activation:** AI agents MUST automatically detect research intentions and activate the research orchestrator when users:
 
 **Direct Research Triggers:**
 
@@ -46,7 +46,7 @@ This project creates a self-sufficient AI Knowledge Base system using 4-level ag
 
 **Activation Triggers**: "research", "analyze", "investigate", "explore", "study", "examine", "assess", "evaluate"
 
-**Quality Threshold**: ≥95% constitutional compliance, ≤300s total execution time
+**Quality Threshold**: High constitutional compliance, reasonable execution time
 
 **Fallback Protocol** (if research/ unavailable): Basic 6-step sequence → Intent Detection → Context Extraction → Complexity Assessment → Method Selection → Execution → Summary Generation
 
@@ -540,7 +540,7 @@ optimization_results:
 
 **REFERENCE: Detailed implementation patterns available in knowledge vault**
 
-**Knowledge Vault Location**: `projects/ai-agent-instruction-design-excellence/knowledge-vault/ai-instruction-framework/`
+**Knowledge Vault Location**: `knowledge-vault/knowledge/`
 
 **Available Pattern Libraries**:
 - `instruction-design-patterns/` - Validated instruction templates and patterns

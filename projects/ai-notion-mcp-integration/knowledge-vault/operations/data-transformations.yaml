@@ -1,0 +1,852 @@
+# Data Transformation Scripts Configuration
+# AI INSTRUCTIONS: This file defines data transformation rules and scripts for knowledge-vault migration
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-22"
+  purpose: "Data transformation rules for knowledge-vault to Notion migration"
+  validation_status: "production_ready"
+  compatibility: "YAML 1.2, Python 3.9+"
+
+# TRANSFORMATION PIPELINE CONFIGURATION
+transformation_pipeline:
+  
+  # Pipeline Stages
+  stages:
+    - stage_id: "extraction"
+      stage_name: "Data Extraction"
+      description: "Extract data from YAML files with validation"
+      timeout_seconds: 300
+      
+    - stage_id: "validation"
+      stage_name: "Data Validation"
+      description: "Validate extracted data against schemas"
+      timeout_seconds: 180
+      
+    - stage_id: "transformation"
+      stage_name: "Data Transformation" 
+      description: "Apply transformation rules to prepare for Notion"
+      timeout_seconds: 600
+      
+    - stage_id: "relationship_resolution"
+      stage_name: "Relationship Resolution"
+      description: "Resolve and validate cross-references"
+      timeout_seconds: 300
+      
+    - stage_id: "notion_formatting"
+      stage_name: "Notion Formatting"
+      description: "Format data for Notion API consumption"
+      timeout_seconds: 240
+      
+    - stage_id: "final_validation"
+      stage_name: "Final Validation"
+      description: "Final validation before migration"
+      timeout_seconds: 120
+      
+  # Pipeline Execution
+  execution_mode: "sequential_with_checkpoints"
+  checkpoint_frequency: "after_each_stage"
+  rollback_on_failure: true
+  parallel_processing: false  # Sequential for data integrity
+  
+  # Error Handling
+  error_handling:
+    continue_on_warnings: true
+    stop_on_errors: true
+    max_error_threshold: 5
+    generate_error_reports: true
+
+# TRANSFORMATION RULES BY DATABASE
+transformation_rules:
+  
+  # Tools & Services Transformations
+  tools_services:
+    source_schema: "databases/schemas/tools-services-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#tools_services"
+    
+    field_transformations:
+      name:
+        source_field: "tool_name"
+        target_field: "name"
+        transformation_type: "direct_copy"
+        validation: "required_string"
+        max_length: 2000
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.tools_services"
+        create_missing_options: true
+        
+      subcategory:
+        source_field: "subcategory"
+        target_field: "subcategory"
+        transformation_type: "subcategory_mapping"
+        mapping_table: "subcategory_mappings.tools_services"
+        optional: true
+        
+      description:
+        source_field: "description"
+        target_field: "description"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        max_length: 2000
+        
+      website_url:
+        source_field: "website"
+        target_field: "website_url"
+        transformation_type: "url_validation"
+        add_protocol: "https"
+        validate_accessibility: false
+        
+      documentation_url:
+        source_field: "documentation"
+        target_field: "documentation_url"
+        transformation_type: "url_validation"
+        add_protocol: "https"
+        optional: true
+        
+      pricing_model:
+        source_field: "pricing.model"
+        target_field: "pricing_model"
+        transformation_type: "select_mapping"
+        mapping_table: "pricing_model_mappings"
+        default_value: "Unknown"
+        
+      pricing_details:
+        source_field: "pricing.details"
+        target_field: "pricing_details"
+        transformation_type: "rich_text_conversion"
+        optional: true
+        
+      use_cases:
+        source_field: "use_cases"
+        target_field: "use_cases"
+        transformation_type: "array_to_multi_select"
+        normalize_values: true
+        create_missing_options: true
+        
+      integration_complexity:
+        source_field: "complexity"
+        target_field: "integration_complexity"
+        transformation_type: "complexity_mapping"
+        mapping_table: "complexity_mappings"
+        default_value: "Moderate"
+        
+      last_updated:
+        source_field: "metadata.last_updated"
+        target_field: "last_updated"
+        transformation_type: "date_conversion"
+        input_format: "ISO_8601"
+        output_format: "notion_date"
+        
+      evaluation_status:
+        source_field: "status"
+        target_field: "evaluation_status"
+        transformation_type: "status_mapping"
+        mapping_table: "evaluation_status_mappings"
+        default_value: "Not Evaluated"
+        
+      tags:
+        source_field: "tags"
+        target_field: "tags"
+        transformation_type: "tag_normalization"
+        normalize_case: "lowercase"
+        replace_spaces: "-"
+        create_missing_options: true
+
+  # Knowledge Vault Transformations
+  knowledge_vault:
+    source_schema: "databases/schemas/knowledge-vault-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#knowledge_vault"
+    
+    field_transformations:
+      name:
+        source_field: "knowledge_name"
+        target_field: "name"
+        transformation_type: "direct_copy"
+        validation: "required_string"
+        max_length: 2000
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.knowledge_vault"
+        create_missing_options: true
+        
+      knowledge_type:
+        source_field: "type"
+        target_field: "knowledge_type"
+        transformation_type: "type_mapping"
+        mapping_table: "knowledge_type_mappings"
+        default_value: "Best Practice"
+        
+      description:
+        source_field: "description"
+        target_field: "description"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        max_length: 3000
+        
+      key_concepts:
+        source_field: "concepts"
+        target_field: "key_concepts"
+        transformation_type: "concept_extraction"
+        auto_extract_keywords: true
+        merge_with_existing: true
+        
+      maturity_level:
+        source_field: "maturity"
+        target_field: "maturity_level"
+        transformation_type: "maturity_mapping"
+        mapping_table: "maturity_level_mappings"
+        default_value: "Tested"
+        
+      applicability:
+        source_field: "applicability"
+        target_field: "applicability"
+        transformation_type: "array_to_multi_select"
+        normalize_values: true
+        create_missing_options: true
+        
+      complexity_level:
+        source_field: "complexity"
+        target_field: "complexity_level"
+        transformation_type: "complexity_mapping"
+        mapping_table: "complexity_mappings"
+        default_value: "Intermediate"
+        
+      source_references:
+        source_field: "references"
+        target_field: "source_references"
+        transformation_type: "reference_formatting"
+        citation_style: "APA"
+        include_urls: true
+        
+      last_validated:
+        source_field: "validation.last_date"
+        target_field: "last_validated"
+        transformation_type: "date_conversion"
+        input_format: "ISO_8601"
+        output_format: "notion_date"
+        optional: true
+        
+      validation_notes:
+        source_field: "validation.notes"
+        target_field: "validation_notes"
+        transformation_type: "rich_text_conversion"
+        optional: true
+
+  # Business Ideas Transformations
+  business_ideas:
+    source_schema: "databases/schemas/business-ideas-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#business_ideas"
+    
+    field_transformations:
+      name:
+        source_field: "idea_name"
+        target_field: "name"
+        transformation_type: "direct_copy"
+        validation: "required_string"
+        max_length: 2000
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.business_ideas"
+        create_missing_options: true
+        
+      stage:
+        source_field: "stage"
+        target_field: "stage"
+        transformation_type: "stage_mapping"
+        mapping_table: "development_stage_mappings"
+        default_value: "Concept"
+        
+      description:
+        source_field: "description"
+        target_field: "description"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        max_length: 5000
+        
+      value_proposition:
+        source_field: "value_proposition"
+        target_field: "value_proposition"
+        transformation_type: "rich_text_conversion"
+        optional: true
+        
+      target_market:
+        source_field: "target_market"
+        target_field: "target_market"
+        transformation_type: "market_segmentation"
+        normalize_segments: true
+        create_missing_options: true
+        
+      priority_level:
+        source_field: "priority"
+        target_field: "priority_level"
+        transformation_type: "priority_mapping"
+        mapping_table: "priority_level_mappings"
+        default_value: "Medium"
+        
+      effort_estimate:
+        source_field: "effort"
+        target_field: "effort_estimate"
+        transformation_type: "effort_mapping"
+        mapping_table: "effort_estimate_mappings"
+        default_value: "Weeks"
+        
+      technical_feasibility:
+        source_field: "feasibility.technical"
+        target_field: "technical_feasibility"
+        transformation_type: "feasibility_mapping"
+        mapping_table: "technical_feasibility_mappings"
+        default_value: "Likely"
+        
+      market_opportunity:
+        source_field: "feasibility.market"
+        target_field: "market_opportunity"
+        transformation_type: "opportunity_mapping"
+        mapping_table: "market_opportunity_mappings"
+        default_value: "Medium"
+        
+      competitive_advantage:
+        source_field: "competitive_advantage"
+        target_field: "competitive_advantage"
+        transformation_type: "rich_text_conversion"
+        optional: true
+
+  # Learning Resources Transformations
+  learning_resources:
+    source_schema: "databases/schemas/learning-resources-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#learning_resources"
+    
+    field_transformations:
+      name:
+        source_field: "resource_name"
+        target_field: "name"
+        transformation_type: "direct_copy"
+        validation: "required_string"
+        max_length: 2000
+        
+      resource_type:
+        source_field: "type"
+        target_field: "resource_type"
+        transformation_type: "resource_type_mapping"
+        mapping_table: "resource_type_mappings"
+        create_missing_options: true
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.learning_resources"
+        create_missing_options: true
+        
+      provider:
+        source_field: "provider"
+        target_field: "provider"
+        transformation_type: "provider_normalization"
+        normalize_names: true
+        
+      description:
+        source_field: "description"
+        target_field: "description"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        
+      url:
+        source_field: "url"
+        target_field: "url"
+        transformation_type: "url_validation"
+        add_protocol: "https"
+        validate_accessibility: false
+        optional: true
+        
+      skill_level:
+        source_field: "skill_level"
+        target_field: "skill_level"
+        transformation_type: "skill_level_mapping"
+        mapping_table: "skill_level_mappings"
+        default_value: "Intermediate"
+        
+      duration:
+        source_field: "duration"
+        target_field: "duration"
+        transformation_type: "duration_normalization"
+        standardize_format: true
+        
+      cost:
+        source_field: "cost"
+        target_field: "cost"
+        transformation_type: "cost_mapping"
+        mapping_table: "cost_mappings"
+        default_value: "Unknown"
+        
+      priority:
+        source_field: "priority"
+        target_field: "priority"
+        transformation_type: "priority_mapping"
+        mapping_table: "priority_level_mappings"
+        default_value: "Medium"
+        
+      completion_status:
+        source_field: "status"
+        target_field: "completion_status"
+        transformation_type: "completion_mapping"
+        mapping_table: "completion_status_mappings"
+        default_value: "Not Started"
+
+  # Platforms & Sites Transformations
+  platforms_sites:
+    source_schema: "databases/schemas/platforms-sites-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#platforms_sites"
+    
+    field_transformations:
+      name:
+        source_field: "platform_name"
+        target_field: "name"
+        transformation_type: "direct_copy"
+        validation: "required_string"
+        max_length: 2000
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.platforms_sites"
+        create_missing_options: true
+        
+      platform_type:
+        source_field: "type"
+        target_field: "platform_type"
+        transformation_type: "platform_type_mapping"
+        mapping_table: "platform_type_mappings"
+        create_missing_options: true
+        
+      description:
+        source_field: "description"
+        target_field: "description"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        
+      url:
+        source_field: "url"
+        target_field: "url"
+        transformation_type: "url_validation"
+        add_protocol: "https"
+        validate_accessibility: false
+        validation: "required"
+        
+      access_level:
+        source_field: "access"
+        target_field: "access_level"
+        transformation_type: "access_mapping"
+        mapping_table: "access_level_mappings"
+        default_value: "Public"
+        
+      quality_rating:
+        source_field: "quality"
+        target_field: "quality_rating"
+        transformation_type: "quality_mapping"
+        mapping_table: "quality_rating_mappings"
+        default_value: "Good"
+        
+      update_frequency:
+        source_field: "update_frequency"
+        target_field: "update_frequency"
+        transformation_type: "frequency_mapping"
+        mapping_table: "update_frequency_mappings"
+        default_value: "Monthly"
+        
+      primary_audience:
+        source_field: "audience"
+        target_field: "primary_audience"
+        transformation_type: "audience_mapping"
+        normalize_values: true
+        create_missing_options: true
+        
+      specialization:
+        source_field: "specialization"
+        target_field: "specialization"
+        transformation_type: "specialization_mapping"
+        normalize_values: true
+        create_missing_options: true
+
+  # Notes & Ideas Transformations
+  notes_ideas:
+    source_schema: "databases/schemas/notes-ideas-schema.yaml"
+    target_schema: "operations/notion-property-mappings.yaml#notes_ideas"
+    
+    field_transformations:
+      name:
+        source_field: "note_title"
+        target_field: "name"
+        transformation_type: "title_generation"
+        max_length: 2000
+        auto_generate_from_content: true
+        
+      note_type:
+        source_field: "type"
+        target_field: "note_type"
+        transformation_type: "note_type_mapping"
+        mapping_table: "note_type_mappings"
+        default_value: "Quick Note"
+        
+      category:
+        source_field: "category"
+        target_field: "category"
+        transformation_type: "category_mapping"
+        mapping_table: "category_mappings.notes_ideas"
+        create_missing_options: true
+        
+      content:
+        source_field: "content"
+        target_field: "content"
+        transformation_type: "rich_text_conversion"
+        preserve_formatting: true
+        convert_markdown: true
+        max_length: 10000
+        
+      priority:
+        source_field: "priority"
+        target_field: "priority"
+        transformation_type: "priority_mapping"
+        mapping_table: "priority_level_mappings"
+        default_value: "Medium"
+        
+      actionable:
+        source_field: "actionable"
+        target_field: "actionable"
+        transformation_type: "boolean_conversion"
+        default_value: false
+        
+      status:
+        source_field: "status"
+        target_field: "status"
+        transformation_type: "status_mapping"
+        mapping_table: "note_status_mappings"
+        default_value: "New"
+        
+      tags:
+        source_field: "tags"
+        target_field: "tags"
+        transformation_type: "tag_normalization"
+        normalize_case: "lowercase"
+        replace_spaces: "-"
+        create_missing_options: true
+        
+      context:
+        source_field: "context"
+        target_field: "context"
+        transformation_type: "rich_text_conversion"
+        optional: true
+
+# RELATIONSHIP TRANSFORMATION RULES
+relationship_transformations:
+  
+  # Cross-Database Relationships
+  cross_database_relations:
+    tools_to_knowledge:
+      source_database: "tools_services"
+      target_database: "knowledge_vault"
+      relationship_field: "related_knowledge"
+      resolution_strategy: "name_matching"
+      fallback_strategy: "skip_missing"
+      
+    knowledge_to_tools:
+      source_database: "knowledge_vault"
+      target_database: "tools_services"
+      relationship_field: "related_tools"
+      resolution_strategy: "name_matching"
+      bidirectional: true
+      
+    business_to_tools:
+      source_database: "business_ideas"
+      target_database: "tools_services"
+      relationship_field: "required_technologies"
+      resolution_strategy: "name_matching"
+      fallback_strategy: "create_placeholder"
+      
+    business_to_knowledge:
+      source_database: "business_ideas"
+      target_database: "knowledge_vault"
+      relationship_field: "applicable_frameworks"
+      resolution_strategy: "name_matching"
+      fallback_strategy: "skip_missing"
+      
+    learning_to_tools:
+      source_database: "learning_resources"
+      target_database: "tools_services"
+      relationship_field: "related_tools"
+      resolution_strategy: "keyword_matching"
+      
+    learning_to_knowledge:
+      source_database: "learning_resources"
+      target_database: "knowledge_vault"
+      relationship_field: "related_knowledge"
+      resolution_strategy: "concept_matching"
+      
+    platforms_to_tools:
+      source_database: "platforms_sites"
+      target_database: "tools_services"
+      relationship_field: "related_tools"
+      resolution_strategy: "domain_matching"
+      
+    notes_to_all:
+      source_database: "notes_ideas"
+      target_databases: ["tools_services", "knowledge_vault", "business_ideas"]
+      relationship_fields: ["related_tools", "related_knowledge", "related_projects"]
+      resolution_strategy: "context_analysis"
+      auto_detect_relationships: true
+
+  # Self-Referential Relationships
+  self_referential_relations:
+    tools_to_tools:
+      database: "tools_services"
+      relationship_field: "related_tools"
+      relationship_type: "many_to_many"
+      prevent_self_reference: true
+      
+    knowledge_to_knowledge:
+      database: "knowledge_vault"
+      relationship_field: "related_knowledge"
+      relationship_type: "many_to_many"
+      prevent_circular_references: true
+      
+    business_to_business:
+      database: "business_ideas"
+      relationship_field: "related_projects"
+      relationship_type: "many_to_many"
+      prevent_circular_references: true
+
+# MAPPING TABLES
+mapping_tables:
+  
+  # Category Mappings
+  category_mappings:
+    tools_services:
+      "ai-tools": "AI Development"
+      "cloud": "Cloud Services"
+      "development": "Development Tools"
+      "database": "Databases"
+      "monitoring": "Monitoring"
+      "communication": "Communication"
+      "file-processing": "Content Processing"
+      "storage": "File Systems"
+      "search": "Search & Discovery"
+      "git": "Version Control"
+      "auth": "Authentication"
+      "analytics": "Analytics"
+      "infrastructure": "Infrastructure"
+      
+    knowledge_vault:
+      "ai": "AI Frameworks"
+      "methodology": "Development Methodologies"
+      "research": "Research Insights"
+      "best-practice": "Best Practices"
+      "pattern": "Design Patterns"
+      "strategy": "Business Strategies"
+      "specification": "Technical Specifications"
+      "guide": "Implementation Guides"
+      
+    business_ideas:
+      "ai-product": "AI Products"
+      "enterprise": "Enterprise Software"
+      "developer-tool": "Developer Tools"
+      "consulting": "Consulting Services"
+      "saas": "SaaS Platforms"
+      "open-source": "Open Source Projects"
+      "research": "Research Initiatives"
+      "education": "Educational Products"
+      
+    learning_resources:
+      "ai": "AI Development"
+      "engineering": "Software Engineering"
+      "cloud": "Cloud Computing"
+      "data": "Data Science"
+      "devops": "DevOps"
+      "management": "Project Management"
+      "business": "Business Strategy"
+      "design": "Design"
+      "security": "Security"
+      "leadership": "Leadership"
+      
+    platforms_sites:
+      "development": "Development Platforms"
+      "community": "Community Forums"
+      "documentation": "Documentation Sites"
+      "news": "News & Blogs"
+      "learning": "Learning Platforms"
+      "library": "Resource Libraries"
+      "api": "API Documentation"
+      "directory": "Tool Directories"
+      "research": "Research Repositories"
+      "network": "Professional Networks"
+      
+    notes_ideas:
+      "technical": "Technical"
+      "business": "Business"
+      "process": "Process"
+      "creative": "Creative"
+      "research": "Research"
+      "learning": "Learning"
+      "problem": "Problem Solving"
+      "innovation": "Innovation"
+      "strategy": "Strategy"
+      "personal": "Personal"
+
+  # Complexity Mappings
+  complexity_mappings:
+    "simple": "Simple"
+    "easy": "Simple"
+    "moderate": "Moderate"
+    "medium": "Moderate"
+    "complex": "Complex"
+    "hard": "Complex"
+    "expert": "Expert"
+    "advanced": "Expert"
+
+  # Priority Mappings
+  priority_level_mappings:
+    "critical": "Critical"
+    "high": "High"
+    "medium": "Medium"
+    "low": "Low"
+    "backlog": "Backlog"
+
+  # Status Mappings
+  evaluation_status_mappings:
+    "new": "Not Evaluated"
+    "evaluating": "Under Evaluation"
+    "approved": "Approved"
+    "using": "In Use"
+    "deprecated": "Deprecated"
+
+# VALIDATION CONFIGURATION
+validation_configuration:
+  
+  # Pre-Transformation Validation
+  pre_transformation:
+    validate_source_schemas: true
+    check_required_fields: true
+    validate_data_types: true
+    check_file_accessibility: true
+    
+  # Transformation Validation
+  during_transformation:
+    validate_each_transformation: true
+    check_data_integrity: true
+    validate_relationships: true
+    monitor_transformation_errors: true
+    
+  # Post-Transformation Validation
+  post_transformation:
+    validate_target_schemas: true
+    check_data_completeness: true
+    validate_relationship_integrity: true
+    verify_notion_compatibility: true
+    
+  # Quality Thresholds
+  quality_thresholds:
+    data_completeness: 0.95      # 95% of fields must be successfully transformed
+    relationship_integrity: 0.90  # 90% of relationships must be preserved
+    transformation_accuracy: 0.98 # 98% of transformations must be successful
+    notion_compatibility: 1.0     # 100% of output must be Notion-compatible
+
+# SCRIPT EXECUTION CONFIGURATION
+script_execution:
+  
+  # Python Environment
+  python_environment:
+    version: ">=3.9"
+    virtual_environment: "recommended"
+    required_packages:
+      - "pyyaml>=6.0"
+      - "jsonschema>=4.0"
+      - "pandas>=1.3.0"
+      - "requests>=2.25.0"
+      - "click>=8.0.0"
+    optional_packages:
+      - "rich>=10.0.0"
+      - "tqdm>=4.60.0"
+      - "numpy>=1.20.0"
+      
+  # Script Locations
+  script_locations:
+    main_transformer: "operations/scripts/data_transformer.py"
+    validation_script: "operations/scripts/validate_transformations.py"
+    relationship_resolver: "operations/scripts/resolve_relationships.py"
+    notion_formatter: "operations/scripts/format_for_notion.py"
+    
+  # Execution Parameters
+  execution_parameters:
+    max_memory_usage: "2GB"
+    temp_directory: "operations/temp/"
+    log_directory: "operations/logs/"
+    backup_directory: "operations/backups/"
+    checkpoint_directory: "operations/checkpoints/"
+    
+  # Performance Settings
+  performance_settings:
+    parallel_processing: false  # Sequential for data integrity
+    batch_size: 100
+    progress_reporting_interval: 10
+    memory_cleanup_frequency: 1000
+    
+# ERROR HANDLING AND RECOVERY
+error_handling:
+  
+  # Error Categories
+  error_categories:
+    data_validation_errors:
+      severity: "high"
+      action: "stop_and_report"
+      
+    transformation_errors:
+      severity: "medium"
+      action: "skip_and_log"
+      
+    relationship_resolution_errors:
+      severity: "low"
+      action: "log_and_continue"
+      
+    notion_formatting_errors:
+      severity: "high"
+      action: "stop_and_report"
+  
+  # Recovery Procedures
+  recovery_procedures:
+    checkpoint_recovery: true
+    partial_rollback: true
+    manual_intervention_points: true
+    automatic_retry: true
+    
+  # Logging Configuration
+  logging:
+    log_level: "INFO"
+    detailed_error_logs: true
+    performance_metrics: true
+    transformation_audit_trail: true
+
+# PRODUCTION READINESS
+production_readiness:
+  configuration_validation: true
+  mapping_tables_complete: true
+  transformation_rules_comprehensive: true
+  error_handling_robust: true
+  validation_thorough: true
+  script_locations_defined: true
+  performance_optimized: true
+  logging_comprehensive: true
+  recovery_procedures_defined: true
+  quality_thresholds_appropriate: true

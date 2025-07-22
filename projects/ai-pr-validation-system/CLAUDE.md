@@ -261,7 +261,7 @@ conditional_context:
 - **Self-Correction**: 3-iteration maximum with escalation for non-compliance
 
 **Framework Effectiveness Assessment:**
-Based on validated assessment tools in `@projects/ai-agent-instruction-design-excellence/docs/assessment-tools/`:
+Based on validated assessment tools in `@meta/validators/` (extracted from framework):
 
 **5-Level Validation System:**
 1. **Level 1**: Individual agent instruction assessment (target: >90% effectiveness)
