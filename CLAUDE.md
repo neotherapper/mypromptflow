@@ -35,17 +35,38 @@ This project creates a self-sufficient AI Knowledge Base system using 4-level ag
 
 **CRITICAL: All AI agents MUST follow these rules when conducting research:**
 
-### 1. Complete 6-Step Orchestrator Workflow
+### 0. MANDATORY Registry Analysis (NEW REQUIREMENT)
 
-When research intent is detected, you MUST follow ALL 6 steps using embedded orchestrator workflow (no external dependencies):
+**BEFORE starting ANY research, you MUST execute registry similarity analysis:**
+
+1. **Execute Step 2.5**: Use registry analysis from @research/orchestrator/integration/claude-orchestrator-integration.yaml
+2. **Load Registry**: Read research/findings/research-registry.yaml and research/findings/research-browser.yaml
+3. **Calculate Similarity**: Compare proposed research topic against all existing research
+4. **Apply Decision Framework**:
+   - **≥80% Similar**: Recommend referencing existing research, avoid duplication
+   - **40-79% Similar**: Recommend extending existing research with new perspectives  
+   - **≤39% Similar**: Proceed with comprehensive new research
+5. **Present to User**: Show similarity analysis and recommendations before proceeding
+6. **Document Decision**: Include registry analysis results in research planning
+
+**Files to Access**: research/findings/research-registry.yaml, research/findings/research-browser.yaml, individual summary.yaml files
+
+**Integration**: This analysis is automatically executed when using [R] option in ai-help.md or [0] option for quick analysis
+
+### 1. Complete Enhanced 8-Step Orchestrator Workflow
+
+When research intent is detected, you MUST follow ALL 8 steps using embedded orchestrator workflow (no external dependencies):
 
 **Research Orchestrator Steps** (Full details: @research/orchestrator/integration/claude-orchestrator-integration.yaml):
 1. **Intent Detection**: Pattern matching with high confidence threshold
 2. **Context Extraction**: Parse scope, domain, quality requirements
+2.5. **Registry Analysis**: Compare against existing research, provide similarity recommendations
 3. **Complexity Assessment**: Scoring system for research complexity determination
 4. **Method Selection**: Choose from validated methods based on complexity
 5. **Execution**: Constitutional AI validation for accuracy and completeness
-6. **Summary Generation**: YAML frontmatter + findings + recommendations
+6. **Orchestrator Summary**: YAML frontmatter + findings + recommendations
+7. **Create Research Files**: Generate research-plan.md, research-sources.md, execution log
+8. **Generate Human Summary**: Create summary.yaml and update research-browser.yaml for ai-help.md
 
 **When conducting research, apply validated instruction design principles from @projects/ai-agent-instruction-design-excellence/**:
 - Use concrete, specific steps instead of vague references
@@ -66,6 +87,8 @@ After completing research, execute documentation protocol:
 - Structured findings in `research/findings/{topic}/`
 - Registry entry with cross-references
 - Validation of all files and metadata
+- **Human-friendly summary** in `research/findings/{topic}/summary.yaml` using @research/templates/research-summary-template.yaml
+- **Updated research browser** in `research/findings/research-browser.yaml` for ai-help.md integration
 
 ### 3. Research Metadata Schema Compliance
 
@@ -116,6 +139,12 @@ All research MUST include validation (≤90s total):
 **Full Validation Procedures**: @research/orchestrator/integration/claude-orchestrator-integration.yaml
 
 **ENFORCEMENT PROTOCOL:** Failure to follow research framework rules triggers escalation: quality penalty, research invalidation, agent review. ≥95% compliance required.
+
+**ENHANCED COMPLIANCE REQUIREMENTS (NEW):**
+- **Registry Analysis**: Research conducted without registry analysis is non-compliant and must be restarted
+- **Summary Generation**: Research without human-friendly summaries is incomplete and not discoverable via ai-help.md
+- **File Validation**: All 8 required files (including summary.yaml and updated research-browser.yaml) must exist
+- **Integration Testing**: Summaries must be readable by ai-help.md options [9] and [0]
 
 These rules are MANDATORY for all AI agents working on this project.
 
