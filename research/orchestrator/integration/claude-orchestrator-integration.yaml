@@ -144,6 +144,60 @@ claude_orchestrator_workflow:
           stakeholder_level: "expert"
           output_format: "academic analysis"
   
+  step_2_5_registry_analysis:
+    action: "Analyze existing research registry for similar topics before proceeding"
+    reference_files:
+      - "research/findings/research-registry.yaml"
+      - "research/findings/research-browser.yaml"
+    
+    process:
+      registry_loading:
+        - load_master_registry: "Read research/findings/research-registry.yaml"
+        - extract_research_topics: "Get all topic_ids, titles, key_outcomes, and applications"
+        - load_similarity_data: "Access pre-computed similarity scores if available"
+      
+      similarity_analysis:
+        - semantic_comparison: "Compare extracted research_topic against existing titles and outcomes"
+        - keyword_matching: "Match domain keywords and technical terms"
+        - application_overlap: "Compare intended applications and use cases"
+        - calculate_similarity_scores: "Generate numerical similarity scores (0.0-1.0)"
+      
+      recommendation_logic:
+        high_similarity_threshold: 0.80
+        moderate_similarity_threshold: 0.40
+        
+        high_similarity_action: "≥80% similar - Recommend referencing existing research"
+        moderate_similarity_action: "40-79% similar - Recommend extending existing research"
+        low_similarity_action: "≤39% similar - Proceed with new research"
+    
+    output_format:
+      registry_analysis_results:
+        total_existing_research: 0
+        similar_research_found: []  # Array of matching research with similarity scores
+        highest_similarity_score: 0.0
+        highest_similarity_topic: "topic_id"
+        recommendation: "reference_existing|extend_existing|proceed_new"
+        recommendation_rationale: "explanation of similarity analysis and recommendation"
+        existing_research_to_reference: []  # List of research to cite/build upon
+    
+    decision_framework:
+      high_similarity:
+        condition: "similarity_score >= 0.80"
+        action: "Display existing research summary and ask user if they want to proceed"
+        message: "🔍 Found highly similar research: [title] (similarity: XX%). Consider referencing instead of duplicating."
+        user_options: ["Reference existing", "Build upon existing", "Proceed with new research anyway"]
+      
+      moderate_similarity:
+        condition: "0.40 <= similarity_score < 0.80"
+        action: "Recommend extending existing research"
+        message: "🔄 Found related research: [title] (similarity: XX%). Consider extending this work."
+        integration_suggestion: "Build upon existing findings, cite previous work, add new perspectives"
+      
+      low_similarity:
+        condition: "similarity_score < 0.40"
+        action: "Proceed with comprehensive new research"
+        message: "✅ No highly similar research found. Proceeding with comprehensive analysis."
+        citation_note: "Will reference any moderately related research where appropriate"
   
   step_3_run_context_analysis:
     reference_file: "research/orchestrator/engines/context-analyzer.yaml"
@@ -293,6 +347,77 @@ claude_orchestrator_workflow:
       - "Do not end research session without both files"
       - "DOUBLE-CHECK: All research content must be in research/findings/[topic]/reports/"
       - "DOUBLE-CHECK: All metadata must be in research/findings/[topic]/.meta/"
+
+  step_8_generate_human_summary:
+    CRITICAL_REQUIREMENT: "MANDATORY HUMAN-FRIENDLY SUMMARY GENERATION"
+    enforcement_level: "REQUIRED_FOR_REGISTRY_BROWSER"
+    
+    purpose: "Generate human-readable summaries for research-browser.yaml and ai-help.md display"
+    template_source: "research/templates/research-summary-template.yaml"
+    
+    required_actions:
+      individual_summary_creation:
+        status: "MANDATORY - MUST CREATE"
+        file_location: "research/findings/[topic]/summary.yaml"
+        template: "research/templates/research-summary-template.yaml"
+        data_sources:
+          - execution_log: "research/findings/[topic]/.meta/research-execution-log.yaml"
+          - comprehensive_analysis: "research/findings/[topic]/research/comprehensive-analysis.md"
+          - research_registry: "research/findings/research-registry.yaml"
+        
+        extraction_requirements:
+          - quality_metrics: "Extract quality scores, compliance percentages, execution time"
+          - executive_summary: "Generate one-line outcome and key discoveries from comprehensive analysis"
+          - categorization: "Auto-categorize by domain using keyword analysis"
+          - applications: "Extract practical applications and use cases"
+          - relationships: "Identify similar research and dependencies from registry"
+      
+      registry_browser_update:
+        status: "MANDATORY - MUST UPDATE"
+        file_location: "research/findings/research-browser.yaml"
+        template: "research/templates/research-browser-template.yaml"
+        
+        update_requirements:
+          - add_research_item: "Add new research to appropriate category"
+          - update_statistics: "Recalculate total sessions, average quality, recent activity"
+          - update_similarity_data: "Add similarity scores to existing research"
+          - update_dashboard: "Refresh quality dashboard and recent research lists"
+          - validate_categories: "Ensure all research is properly categorized"
+        
+        categorization_logic:
+          ai_keywords: ["ai", "agent", "validation", "orchestration", "performance", "ml", "claude"]
+          auth_keywords: ["auth", "keycloak", "workos", "security", "compliance", "identity"]
+          infrastructure_keywords: ["database", "hosting", "deployment", "ci", "cd", "development"]
+          enterprise_keywords: ["enterprise", "governance", "information", "quality", "assessment"]
+          tools_keywords: ["mcp", "server", "integration", "tool", "registry", "discovery"]
+    
+    quality_requirements:
+      summary_completeness: "All required fields populated from template"
+      categorization_accuracy: "Correct domain classification based on keywords"
+      cross_reference_validation: "All file paths and topic references valid"
+      human_readability: "Summary suitable for ai-help.md display"
+      data_integrity: "Quality scores and metrics accurately extracted"
+    
+    validation_steps:
+      - verify_summary_file_created: "research/findings/[topic]/summary.yaml exists"
+      - verify_browser_updated: "research/findings/research-browser.yaml contains new research"
+      - verify_categorization: "Research placed in correct category"
+      - verify_quality_data: "Quality metrics accurately transferred"
+      - verify_relationships: "Similarity analysis and cross-references populated"
+    
+    COMPLETION_GATE: "Research session NOT COMPLETE until human-friendly summaries generated"
+    FAILURE_CONSEQUENCE: "Missing summaries = research not discoverable via ai-help.md"
+    SUCCESS_CRITERIA: "Both individual summary.yaml and updated research-browser.yaml exist and valid"
+    
+    ai_agent_enforcement:
+      - "CRITICAL: Create summary.yaml in research/findings/[topic]/ using research-summary-template.yaml"
+      - "CRITICAL: Update research-browser.yaml with new research entry and updated statistics"
+      - "Extract quality metrics from research-execution-log.yaml accurately"
+      - "Generate human-readable executive summary from comprehensive-analysis.md"
+      - "Apply keyword-based categorization logic consistently"
+      - "Calculate similarity scores against existing research"
+      - "Validate all file paths and cross-references before completion"
+      - "Do not mark research complete without both summary files"
 
 # CLAUDE DECISION TREES
 claude_decision_trees:

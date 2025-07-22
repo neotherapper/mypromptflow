@@ -46,6 +46,26 @@ This Claude-specific integration file contains complete instructions for using t
 
 **ALL AI AGENTS MUST FOLLOW ENHANCED FILE STRUCTURE AND VALIDATION:**
 
+### 🔍 MANDATORY PRE-RESEARCH REGISTRY ANALYSIS (NEW)
+
+**CRITICAL: Before starting ANY research, AI agents MUST execute registry similarity analysis:**
+
+1. **Registry Analysis Requirement**: Execute Step 2.5 from @research/orchestrator/integration/claude-orchestrator-integration.yaml
+2. **Similarity Assessment**: Compare proposed research against existing research in research/findings/research-registry.yaml
+3. **Decision Framework**: 
+   - **High Similarity (≥80%)**: Recommend referencing existing research instead of duplicating
+   - **Moderate Similarity (40-79%)**: Recommend extending existing research with new perspectives
+   - **Low Similarity (≤39%)**: Proceed with comprehensive new research
+4. **User Interaction**: Present similarity findings and recommendations before proceeding
+5. **Documentation**: Include registry analysis results in research-plan.md and execution-log.yaml
+
+**Registry Analysis Files to Access**:
+- `research/findings/research-registry.yaml` - Master research registry
+- `research/findings/research-browser.yaml` - Human-friendly research browser (if available)
+- Individual `research/findings/[topic]/summary.yaml` files for detailed comparison
+
+**Enforcement**: Research conducted WITHOUT registry analysis is considered non-compliant and must be restarted.
+
 ### Enhanced File Structure (Required)
 
 All research must use the enhanced folder structure:
@@ -94,7 +114,15 @@ research/findings/[topic]/
 1. **comprehensive-analysis.md** - Main research output
 2. **Individual method outputs** - All sub-agent research (perspectives, phases, modules)
 
-**Meta Documentation Files:** 3. **research-plan.md** - Research approach and method selection 4. **research-sources.md** - Complete source tracking with timestamps 5. **method-compliance.yaml** - Method validation and compliance tracking 6. **research-execution-log.yaml** - Complete execution tracking
+**Meta Documentation Files:** 
+3. **research-plan.md** - Research approach and method selection 
+4. **research-sources.md** - Complete source tracking with timestamps 
+5. **method-compliance.yaml** - Method validation and compliance tracking 
+6. **research-execution-log.yaml** - Complete execution tracking
+
+**Human-Friendly Summary Files (NEW - MANDATORY):**
+7. **summary.yaml** - Human-readable research summary using research-summary-template.yaml
+8. **research-browser.yaml** (updated) - Master research browser file for ai-help.md integration
 
 ### Method Compliance Validation (NEW)
 
@@ -121,6 +149,42 @@ research/findings/[topic]/
 - Track ALL sources: WebFetch, WebSearch, Read, file access
 - Include timestamps and relevance for each source
 - **No research is considered complete without method compliance validation**
+
+### 📝 MANDATORY POST-RESEARCH SUMMARY GENERATION (NEW)
+
+**CRITICAL: After completing research, AI agents MUST generate human-friendly summaries:**
+
+1. **Individual Summary Creation**: 
+   - Create `research/findings/[topic]/summary.yaml` using @research/templates/research-summary-template.yaml
+   - Extract quality metrics from research-execution-log.yaml
+   - Generate executive summary from comprehensive-analysis.md
+   - Apply automatic categorization based on domain keywords
+   - Calculate similarity scores against existing research
+
+2. **Research Browser Update**:
+   - Update `research/findings/research-browser.yaml` using @research/templates/research-browser-template.yaml  
+   - Add new research to appropriate category
+   - Update statistics (total sessions, average quality, recent activity)
+   - Refresh dashboard metrics and recent research lists
+   - Validate category assignment and cross-references
+
+3. **Integration Requirements**:
+   - Summaries must be readable by ai-help.md option [9] for research browsing
+   - Support similarity analysis for ai-help.md option [0] 
+   - Enable registry analysis for future research sessions
+   - Maintain consistency with research-registry.yaml
+
+**Template Files to Use**:
+- `research/templates/research-summary-template.yaml` - Individual research summaries
+- `research/templates/research-browser-template.yaml` - Master browser file structure
+
+**Validation Requirements**:
+- summary.yaml contains all required fields from template
+- research-browser.yaml successfully updated with new research
+- Category assignment based on keyword analysis is accurate
+- All file paths and cross-references are valid and accessible
+
+**Enforcement**: Research is NOT COMPLETE until both summary files are created and validated. Missing summaries = research not discoverable via ai-help.md interface.
 
 ## 🔍 How to Use Method Compliance Validation
 
