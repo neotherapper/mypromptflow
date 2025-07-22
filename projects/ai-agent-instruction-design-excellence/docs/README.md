@@ -35,6 +35,7 @@ This documentation uses **progressive context loading** for efficient context op
 - **[Quality Gates](validation/quality-gates.md)** - Quality validation checkpoints
 - **[Testing Procedures](validation/testing-procedures.md)** - Instruction testing procedures
 - **[Success Metrics](validation/success-metrics.md)** - Success measurement tools
+- **[Validator Integration](VALIDATOR-INTEGRATION.md)** - Framework vs operational validator architecture
 
 ## Integration with Knowledge Base
 

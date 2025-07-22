@@ -1,3 +1,4 @@
+---
 # Document dependency configuration
 document_dependencies:
   # Strategic Foundation Documents (Tier 4: 60-69/100 AI Value)
@@ -1060,7 +1061,7 @@ ai_processing_tiers:
 
   tier_3:
     range: "70-79"
-    description: "Medium-High AI Value - Useful for UI/UX and workflow automation"
+    description: "Medium-High AI Value - Useful for UI/UX and automation"
     documents:
       - user-stories
       - user-story-backlog
@@ -1093,7 +1094,7 @@ ai_processing_tiers:
 
   tier_4:
     range: "60-69"
-    description: "Medium AI Value - Important for business context and decisions"
+    description: "Medium AI Value - Important for business context"
     documents:
       - user-personas
       - competition-analysis

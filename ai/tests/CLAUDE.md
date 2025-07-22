@@ -2,7 +2,7 @@
 
 ## Testing Philosophy
 
-**CRITICAL:** Testing in this AI Knowledge Base system is **NOT simulation** - it is **actual execution validation**. This means:
+**CRITICAL:** Testing in this AI Knowledge Base system executes real validation protocols with measurable success criteria (accuracy: ≥95%, completeness: ≥90%, execution time: ≤300s per test suite). This means:
 
 - ✅ **Real File Creation**: Tests verify that actual files are created at expected paths
 - ✅ **Real Agent Parameter Passing**: Tests validate that AI agents receive correct context and instructions
@@ -101,12 +101,12 @@ Execute the full test suite:
 ./ai/tests/run-tests.sh
 ```
 
-The test runner:
-1. **Creates Backup**: Backs up current state before testing
-2. **Executes Tests**: Runs all test categories in sequence
-3. **Validates Results**: Checks actual file creation and content
-4. **Generates Report**: Creates detailed test report
-5. **Offers Restore**: Option to restore from backup after testing
+The test runner executes systematic validation protocol:
+1. **Creates Backup**: Execute state preservation protocol (backup creation: ≤30s, verification: 100% completeness)
+2. **Executes Tests**: Run test categories using sequential execution algorithm (category completion: ≤60s each, failure threshold: ≤5% per category)
+3. **Validates Results**: Apply validation criteria (file existence: 100%, content structure: ≥95% compliance, YAML validity: 100%)
+4. **Generates Report**: Create comprehensive test report (generation time: ≤15s, coverage metrics: accuracy, completeness, consistency scores)
+5. **Offers Restore**: Execute restoration protocol (restoration time: ≤45s, integrity verification: 100%)
 
 ### Test Environment
 

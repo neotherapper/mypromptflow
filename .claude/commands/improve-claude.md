@@ -1,143 +1,111 @@
-# Improve CLAUDE.md File
+# Claude Project File Improvement
 
 Analyze and improve CLAUDE.md file: $ARGUMENTS
 
-## CLAUDE.md Improvement Workflow
+Execute this validate-first CLAUDE.md improvement workflow:
 
-### 1. Understanding Claude Context System
+**Step 1: Execute Specialized CLAUDE.md Validation**
 
-**Research Claude Capabilities:**
-- **Reference**: `@projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
-- **Research**: `@research/findings/meta-frameworks-analysis/comprehensive-analysis.md`
-- **Key Concepts**: Automatic context loading, project memory persistence, command system integration
+**Primary Validation Method**:
+Use the specialized CLAUDE.md validator through validation framework:
+1. **Spawn CLAUDE.md Specialist**: Use Task tool with parameters:
+   - **description**: "Validate CLAUDE.md file using specialized Claude project validator"
+   - **prompt**: "You are a Claude Project File Validator specialist. Using the claude-project-file-validator from meta/validation/validators/project/claude-project-file-validator.md, analyze the CLAUDE.md file: $ARGUMENTS. Apply comprehensive validation focusing on: required elements (9 components), Claude integration excellence, cross-reference accuracy, and AI Agent Instruction Design Excellence compliance. Generate detailed validation report with specific improvement recommendations and real scoring metrics."
+   - **context**: CLAUDE.md file path and validation framework requirements
+   - **expected_tokens**: 120
 
-**Claude's CLAUDE.md Processing:**
-- Recursive file discovery across project directories
-- Hierarchical context loading with cross-reference resolution
-- Three-tier memory system (project, user, dynamic)
-- Automatic @file_path reference loading
+2. **Alternative Validation Method** (if validator registry unavailable):
+   - Use direct validation based on claude-project-file-validator.md patterns
+   - Apply 9 required elements checklist validation
+   - Assess Claude integration optimization patterns
+   - Validate cross-reference accuracy (@file_path verification)
 
-### 2. Apply Framework Assessment (MANDATORY: No Fictional Results)
+**Step 2: Apply Context-Driven Improvements Based on Validation Results**
 
-**⚠️ CRITICAL**: Must use real assessment methodology from framework tools
+Based on validation findings, apply targeted improvement frameworks:
 
-**Assessment Process:**
-1. **Use Framework Selector**: `@projects/ai-agent-instruction-design-excellence/docs/navigation/framework-selector.md`
-2. **Apply Real Methodology**: No fictional scores - must apply actual checklists
-3. **Document Findings**: Specific file lines and text quotes required
-4. **Calculate Scores**: Use documented formulas (0-5 scale + weightings)
-5. **Realistic Time**: Allow 5-8 minutes for thorough assessment
+**For Missing Required Elements**:
+- **Project Context**: Add clear project type, status, and priority sections
+- **AI Agent Instructions**: Define specific instructions for AI agents working on project
+- **Cross-Reference Patterns**: Implement proper @file_path usage for navigation
+- **Quality Standards**: Add concrete criteria with measurable thresholds
+- **Workflow Specifications**: Create step-by-step processes for common tasks
 
-**Assessment Tools Available:**
-- Framework Coherence Analyzer: Cross-document consistency validation
-- Communication Pattern Validator: Multi-agent coordination assessment  
-- Context Optimization Tool: Progressive loading effectiveness
-- Constitutional AI Compliance Checker: Ethical standards validation
-
-### 3. Check Required CLAUDE.md Elements
-
-**Essential Components Checklist:**
-- [ ] **Project Context**: Clear project type, status, and priority
-- [ ] **Goals and Success Criteria**: Specific, measurable objectives
-- [ ] **AI Agent Instructions**: How agents should work on the project
-- [ ] **Claude Understanding Section**: What Claude is and how CLAUDE.md works
-- [ ] **Cross-Reference Patterns**: Proper @file_path usage for internal navigation
-- [ ] **Quality Standards**: Concrete criteria for deliverables and validation
-- [ ] **Workflow Specifications**: Step-by-step processes for common tasks
-- [ ] **Integration Points**: Connections with other systems or frameworks
-- [ ] **Constraints and Requirements**: Specific limitations and dependencies
-
-**Claude-Specific Elements:**
-- [ ] **Command System Integration**: References to .claude/commands/ if applicable
-- [ ] **Memory System Usage**: Project memory vs user memory vs dynamic loading
-- [ ] **Automatic Context Loading**: Leverages Claude's recursive file discovery
-- [ ] **Multi-File Awareness**: Takes advantage of Claude's cross-file understanding
-
-### 4. Apply Improvement Frameworks
-
-**Based on Assessment Results (Apply Actual Framework, Not Fictional):**
-
-**If Vagueness Detected** → **Apply Concreteness Framework**:
-- Replace vague terms with specific, measurable criteria
-- Add numerical thresholds and concrete parameters
-- Define success criteria with objective measures
-- Remove subjective qualifiers and abstract concepts
-
-**If External Dependencies Found** → **Apply Self-Sufficiency Framework**:
-- Embed external framework knowledge directly in CLAUDE.md
-- Replace external references with specific behavior descriptions
-- Ensure all necessary context is internal to project
-- Remove requirements for external research or documentation
-
-**If Purpose Unclear** → **Apply Purpose-Driven Framework**:
-- Define clear AI agent hierarchy and coordination structure
-- Specify roles and responsibilities for different agent types
-- Create coordination protocols with specific time intervals
-- Align instruction detail with agent capabilities
-
-**If Execution Issues** → **Apply Actionable Framework**:
-- Create step-by-step procedures for all workflows
-- Add specific validation procedures and success criteria
-- Define decision points with clear criteria
-- Ensure immediate executability without interpretation
-
-### 5. Claude Integration Best Practices
-
-**Optimize for Claude's Capabilities:**
-- **Leverage Automatic Loading**: Structure for Claude's recursive file discovery
-- **Use Cross-References**: Implement @file_path patterns for related documents
-- **Support Command Integration**: Include references to .claude/commands/ workflows
-- **Enable Memory Persistence**: Structure for Claude's project memory system
-
-**Project Intelligence Integration:**
+**For Claude Integration Gaps**:
+- **Automatic Context Loading**: Structure for Claude's recursive file discovery protocol
+- **Memory System Usage**: Optimize for Claude's three-tier memory system (project/user/dynamic)
+- **Command Integration**: Add references to .claude/commands/ workflows where applicable
 - **Multi-File Awareness**: Reference related files that Claude should understand
-- **Framework Recognition**: Leverage Claude's deep framework understanding
+
+**For AI Agent Instruction Design Excellence Issues**:
+- **Concrete Specificity**: Replace vague terms with measurable criteria and thresholds
+- **External Dependency Elimination**: Embed necessary framework knowledge directly
+- **Immediate Actionability**: Convert descriptions to executable step-by-step instructions
+- **Purpose-Driven Detail**: Align instruction detail with AI agent capabilities
+
+**Step 3: Optimize for Claude's Advanced Capabilities**
+
+Apply these Claude-specific optimization patterns:
+
+**Project Intelligence Integration**:
+```yaml
+claude_optimization_patterns:
+  automatic_loading: "Structure content for Claude's recursive file discovery"
+  cross_references: "Use @file_path patterns for seamless navigation"
+  command_integration: "Reference .claude/commands/ workflows for consistency"
+  memory_persistence: "Organize for Claude's project memory system"
+```
+
+**Multi-File Coordination**:
+- **Framework Recognition**: Leverage Claude's deep understanding of development frameworks
 - **Build System Integration**: Connect with Claude's build system knowledge
-- **Cross-File Coordination**: Enable Claude's cross-file refactoring capabilities
+- **Cross-File Refactoring**: Enable Claude's cross-file modification capabilities
+- **Dependency Understanding**: Help Claude track relationships between files
 
-### 6. Validate Improvements
+**Step 4: Validate Improvements Using Same Validator**
 
-**Quality Validation Process:**
-1. **Re-run Framework Assessment**: Apply same assessment tools to improved CLAUDE.md
-2. **Verify Claude Integration**: Check automatic context loading effectiveness
-3. **Test Cross-References**: Validate @file_path accuracy and accessibility
-4. **Confirm Actionability**: Ensure instructions are immediately executable
-5. **Check Self-Sufficiency**: Verify no external dependencies remain
+Execute validation verification workflow:
+1. **Re-run CLAUDE.md Validator**: Apply same claude-project-file-validator to improved file
+2. **Compare Scores**: Document before/after validation scores using real metrics
+3. **Verify Cross-References**: Test @file_path accuracy and accessibility
+4. **Confirm Requirements**: Ensure all 9 required elements are present and complete
 
-**Success Criteria:**
-- Framework assessment score improvement (target: +1.0 points minimum)
-- All required CLAUDE.md elements present and complete
-- Claude integration patterns properly implemented
-- Cross-references accurate and functional
-- Instructions immediately actionable by AI agents
+**Success Criteria** (Real Measurable Thresholds):
+- **Overall Validation Score**: Target ≥85/100 (using claude-project-file-validator scoring)
+- **Required Elements**: All 9 components present and complete
+- **Cross-Reference Accuracy**: 100% of @file_path references accessible
+- **Claude Integration**: ≥80% optimization pattern implementation
+- **Design Excellence**: ≥90% compliance with AI Agent Instruction Design Excellence
 
-### 7. Documentation and Integration
+**Step 5: Update Related Project Documentation**
 
-**Update Related Files:**
-- Update project task lists with improvement results
-- Document changes in progress tracking files
-- Update research integration with new findings
-- Reference improved CLAUDE.md in related project documentation
-
-**Command System Integration:**
-- Ensure CLAUDE.md references this improvement command
-- Update .claude/commands/ directory with any new workflows
-- Maintain consistency with other project commands
-- Document command usage patterns for future reference
+Complete integration workflow:
+- **Project Task Lists**: Update relevant projects/*/docs/task-list.md with improvement results
+- **Progress Documentation**: Record changes in projects/*/docs/progress.md files
+- **Research Integration**: Update research-integration.md with improvement insights
+- **Cross-Reference Updates**: Ensure related files reference improved CLAUDE.md appropriately
 
 ## Expected Outcomes
 
-**Improved CLAUDE.md Should Achieve:**
-- **Higher Framework Assessment Score**: Minimum +1.0 point improvement
-- **Claude Integration Excellence**: Full leverage of Claude's capabilities
-- **Complete Self-Sufficiency**: No external dependencies for AI agents
-- **Immediate Actionability**: Clear, executable instructions throughout
-- **Project Intelligence**: Optimal integration with Claude's project understanding
+**Improved CLAUDE.md Should Achieve**:
+- **Specialized Validation Compliance**: ≥85/100 score using claude-project-file-validator
+- **Complete Required Elements**: All 9 essential components present and high-quality
+- **Claude Integration Excellence**: Full optimization for Claude's capabilities and workflows
+- **Cross-Reference Integrity**: 100% working @file_path references with proper navigation
+- **AI Agent Effectiveness**: Clear, actionable instructions for AI agents across all roles
 
-**Validation Metrics:**
-- Assessment score improvement documented with before/after comparison
-- Claude integration patterns verified and functional
-- Cross-reference accuracy confirmed at 100%
-- AI agent workflow clarity validated through execution testing
+**Validation-Based Improvement Benefits**:
+- **Real Assessment**: Uses production validator with actual scoring system
+- **Systematic Coverage**: Addresses all validation dimensions comprehensively
+- **Evidence-Based**: Improvements based on specific validation findings
+- **Quality Assurance**: Verification through re-validation with same criteria
 
-This command ensures systematic improvement of CLAUDE.md files using research-validated methodology while preventing fictional assessments and leveraging Claude's advanced project understanding capabilities.
+## Claude Integration Reference
+
+**Key Integration Points**:
+- **Automatic Context Loading**: `@projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
+- **Command System Integration**: `.claude/commands/` workflow coordination
+- **Validation Framework**: `@meta/validation/validators/project/claude-project-file-validator.md`
+- **Research Framework**: `@research/orchestrator/integration/claude-orchestrator-integration.yaml`
+
+This validate-first approach ensures systematic CLAUDE.md improvement using specialized validation tools while leveraging Claude's advanced project understanding capabilities for optimal integration.

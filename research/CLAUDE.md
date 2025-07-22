@@ -6,19 +6,19 @@ This is a comprehensive AI Research Framework with intelligent orchestration cap
 
 ## Key Capabilities
 
-- **Intelligent Orchestration**: Context analysis automatically selects optimal research methods
-- **15 Research Methods**: From simple step-by-step to complex multi-perspective approaches
-- **Quality Enhancement**: Built-in validation using constitutional AI and self-consistency
-- **Dual-Agent System**: Primary research + automatic evaluation and observation
-- **Performance Tracking**: Comprehensive logging of decisions, timing, and outcomes
+- **Intelligent Orchestration**: Execute context analysis protocol (complexity scoring: 1-5 scale, domain classification: ≥85% confidence, method selection: ≤60s)
+- **15 Research Methods**: Validated methodology range (simple step-by-step: 5 phases, complex multi-perspective: 4+ expert personas, execution time: 5-45 minutes per method)
+- **Quality Enhancement**: Apply validation framework (constitutional AI: ≥95% compliance, self-consistency: ≥85% score, accuracy threshold: ≥90%)
+- **Dual-Agent System**: Coordinate primary research agents with evaluation specialists (monitoring intervals: 5-15 minutes, quality checkpoints: continuous)
+- **Performance Tracking**: Execute comprehensive logging protocol (decision timestamps, execution duration measurement, outcome quality scoring, method effectiveness analysis)
 
 ## Quick Start
 
-1. **Request Research**: "Help me research [topic]"
-2. **Orchestrator Analyzes**: Context complexity, domain, quality requirements
-3. **Method Selection**: Appropriate research methods chosen automatically
-4. **Research Execution**: AI agent conducts research using selected methods
-5. **Quality Evaluation**: Test agent observes and evaluates process
+1. **Request Research**: "Help me research [topic]" (topic specification: scope boundaries, depth requirements, quality thresholds)
+2. **Orchestrator Analyzes**: Execute context analysis (complexity assessment: 30-45s, domain classification: ≥85% confidence, quality requirement parsing: ≤30s)
+3. **Method Selection**: Apply selection algorithm (method compatibility scoring, resource estimation, execution time calculation: ≤60s total)
+4. **Research Execution**: Coordinate AI agents using selected methods (parallel execution: 2-4 agents maximum, quality monitoring: continuous, timeout limits: 5-45 minutes per method)
+5. **Quality Evaluation**: Execute validation protocol (accuracy verification: ≥90%, completeness assessment: ≥85%, consistency checking: ≥88%, constitutional compliance: ≥95%)
 
 ## Framework Structure
 

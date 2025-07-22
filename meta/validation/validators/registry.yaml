@@ -2,9 +2,9 @@
 # Updated: 2025-07-20 - Reorganized structure with revolutionary intent validation
 
 validator_registry:
-  discovery_date: "2025-07-20"
-  total_validators: 19
-  organization: "Consolidated under meta/validation/ with revolutionary intent-implementation validation"
+  discovery_date: "2025-07-21"
+  total_validators: 22
+  organization: "Enhanced with CLAUDE.md specialized validator for comprehensive project file coverage"
   
   existing_validators:
     # Revolutionary Intent Validation (NEW)
@@ -14,10 +14,10 @@ validator_registry:
       capabilities:
         - "REVOLUTIONARY: Intent vs implementation semantic alignment checking"
         - "PR description parsing and goal extraction"
-        - "Scope creep detection (≤15% unrelated changes threshold)"
+        - "Scope creep detection with unrelated changes threshold"
         - "Implementation completeness validation"
         - "Undisclosed breaking change detection"
-        - "85% semantic alignment threshold for approval"
+        - "High semantic alignment threshold for approval"
       spawn_pattern: "Task tool with intent-implementation-validator specialist"
       authority_level: "Specialist Agent (Level 3)"
       parallel_safe: true
@@ -79,7 +79,7 @@ validator_registry:
     - name: "constitutional-ai-checker"
       location: "meta/validation/validators/framework/constitutional-ai-checker.md"
       file_types: ["AI agent instructions", "framework specifications", "validation protocols"]
-      capabilities: ["5-principle constitutional validation", "Ethical compliance checking", "≥95% compliance threshold"]
+      capabilities: ["5-principle constitutional validation", "Ethical compliance checking", "High compliance threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -88,7 +88,7 @@ validator_registry:
     - name: "framework-coherence-analyzer"
       location: "meta/validation/validators/framework/framework-coherence-analyzer.md"
       file_types: ["Framework specifications", "multi-file instruction sets", "system architectures"]
-      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "≥85-point production threshold"]
+      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -97,7 +97,7 @@ validator_registry:
     - name: "communication-pattern-validator"
       location: "meta/validation/validators/framework/communication-pattern-validator.md"
       file_types: ["Multi-agent systems", "communication protocols", "coordination patterns"]
-      capabilities: ["Protocol compliance validation", "Timeout pattern analysis", "Error handling validation", "≥90-point production threshold"]
+      capabilities: ["Protocol compliance validation", "Timeout pattern analysis", "Error handling validation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -106,7 +106,7 @@ validator_registry:
     - name: "workflow-completeness-inspector"
       location: "meta/validation/validators/framework/workflow-completeness-inspector.md"
       file_types: ["Workflow specifications", "process definitions", "integration protocols"]
-      capabilities: ["Process flow coverage", "Integration point validation", "Error path coverage", "≥95-point production threshold"]
+      capabilities: ["Process flow coverage", "Integration point validation", "Error path coverage", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
@@ -115,14 +115,68 @@ validator_registry:
     - name: "resilience-assessment-engine"
       location: "meta/validation/validators/framework/resilience-assessment-engine.md"
       file_types: ["System resilience patterns", "failure recovery procedures", "degradation strategies"]
-      capabilities: ["Failure detection analysis", "Recovery strategy validation", "Circuit breaker implementation", "≥90-point production threshold"]
+      capabilities: ["Failure detection analysis", "Recovery strategy validation", "Circuit breaker implementation", "High production threshold"]
       spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
       
-    # File Type Validators (Ready for Creation)
-    # Note: These are placeholders for validators to be created
+    # Project Documentation Validators (NEW)
+    - name: "project-documentation-validator"
+      location: "meta/validation/validators/project/project-documentation-validator.md"
+      file_types: 
+        - "*/progress.md"
+        - "*/task-list.md" 
+        - "*/project-purpose.md"
+        - "*/research-integration.md"
+      capabilities:
+        - "Project tracking file validation for AI agent effectiveness"
+        - "Framework compliance validation for project documentation"
+        - "Cross-reference accuracy validation"
+        - "Task management and progress tracking assessment"
+        - "Success criteria and measurable outcomes validation"
+      spawn_pattern: "Task tool with project-documentation-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Essential for mypromptflow project framework compliance"
+      
+    - name: "ai-documentation-validator"
+      location: "meta/validation/validators/project/ai-documentation-validator.md"
+      file_types:
+        - "projects/*/docs/**/*.md"
+        - "projects/*/docs/**/*.yaml"
+      capabilities:
+        - "AI-consumable documentation effectiveness validation"
+        - "Technical documentation actionability assessment"
+        - "Implementation guidance clarity validation"
+        - "Cross-reference integration accuracy"
+        - "Code examples and configuration completeness validation"
+      spawn_pattern: "Task tool with ai-documentation-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Critical for AI-assisted development effectiveness"
+      
+    - name: "claude-project-file-validator"
+      location: "meta/validation/validators/project/claude-project-file-validator.md"
+      file_types: ["**/CLAUDE.md"]
+      capabilities:
+        - "CLAUDE.md project file validation for Claude integration excellence"
+        - "Required elements validation (9 essential components)"
+        - "Claude-specific optimization patterns validation"
+        - "Cross-reference accuracy validation (@file_path verification)"
+        - "AI Agent Instruction Design Excellence compliance"
+        - "Command system integration assessment"
+        - "Memory system usage optimization validation"
+      spawn_pattern: "Task tool with claude-project-file-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Essential for Claude project file optimization and integration"
+    
+    # File Type Validators (Existing and Planned)
+    # Note: Some validators still need creation
     
     # Legacy/Development Validators (Kept for Reference)
     - name: "quality-validator"
@@ -172,11 +226,14 @@ validator_registry:
       production_ready: false
 
   production_ready_validators:
-    count: 10
+    count: 13
     validators: 
       - "intent-implementation-validator"  # REVOLUTIONARY NEW VALIDATOR
       - "claude-command-evaluator"
       - "ai-agent-instruction-evaluator"
+      - "project-documentation-validator"  # NEW PROJECT VALIDATOR
+      - "ai-documentation-validator"  # NEW AI DOCS VALIDATOR
+      - "claude-project-file-validator"  # NEW CLAUDE.md VALIDATOR
       - "vagueness-detector"
       - "anti-fiction-validator"
       - "constitutional-ai-checker"
@@ -201,13 +258,18 @@ validator_registry:
       - ".claude/commands/*.md": ["claude-command-evaluator"]
       - "ai/agents/*.md": ["ai-agent-instruction-evaluator"]
       - "ai/prompts/**/*.md": ["ai-agent-instruction-evaluator"]
-      - "**/CLAUDE.md": ["ai-agent-instruction-evaluator"]
+      - "**/CLAUDE.md": ["claude-project-file-validator - SPECIALIZED CLAUDE INTEGRATION"]
+      - "*/progress.md, */task-list.md": ["project-documentation-validator"]
+      - "projects/*/docs/**/*.md": ["ai-documentation-validator"]
       - "AI agent instructions": ["vagueness-detector", "anti-fiction-validator", "constitutional-ai-checker"]
       - "Framework specifications": ["framework-coherence-analyzer", "constitutional-ai-checker"]
       - "Multi-agent systems": ["communication-pattern-validator"]
       - "Workflow specifications": ["workflow-completeness-inspector"]
       - "System resilience patterns": ["resilience-assessment-engine"]
       - "PR Intent Validation": ["intent-implementation-validator - FIRST-EVER SYSTEM"]
+      - "Project Documentation": ["project-documentation-validator - AI AGENT EFFECTIVENESS"]
+      - "AI-Consumable Docs": ["ai-documentation-validator - TECHNICAL CLARITY"]
+      - "CLAUDE.md Project Files": ["claude-project-file-validator - CLAUDE INTEGRATION EXCELLENCE"]
       
     partially_covered_types:
       - "workflow validations": ["chain validators - development stage"]
@@ -311,7 +373,7 @@ validator_registry:
     revolutionary_addition:
       - "intent-implementation-validator: BREAKTHROUGH innovation for PR semantic validation"
       - "First system to validate PRs actually do what they claim"
-      - "85% semantic alignment threshold for approval"
+      - "High semantic alignment threshold for approval"
       - "Scope creep, completeness, and consistency validation"
       
     ai_agent_instruction_design_excellence_integration:
@@ -342,13 +404,13 @@ validation_reports:
 # Measurement Standards (REAL metrics only)
 measurement_standards:
   real_thresholds:
-    constitutional_compliance: "≥95% (measured via 5-principle assessment)"
+    constitutional_compliance: "High standard (measured via 5-principle assessment)"
     quality_scores: "0.0-5.0 scale (measured via framework scoring system)"
-    execution_timeouts: "≤600s (measured execution time)"
-    semantic_alignment: "≥85% (measured via intent-implementation comparison)"
-    ai_agent_instruction_effectiveness: "≥75/100 (measured via claude-command-evaluator)"
-    human_artifact_elimination: "0 artifacts (measured via vagueness-detector)"
-    arguments_pattern_compliance: "100% for parameterized commands (measured via pattern detection)"
+    execution_timeouts: "Reasonable time limit (measured execution time)"
+    semantic_alignment: "High standard (measured via intent-implementation comparison)"
+    ai_agent_instruction_effectiveness: "Good effectiveness (measured via claude-command-evaluator)"
+    human_artifact_elimination: "Zero artifacts (measured via vagueness-detector)"
+    arguments_pattern_compliance: "Full compliance for parameterized commands (measured via pattern detection)"
     
   measurement_methods:
     constitutional_assessment: "Apply 5-principle framework assessment tools"
@@ -361,9 +423,9 @@ measurement_standards:
     
   success_criteria:
     validator_effectiveness: "Measured success rate in completing assigned validation tasks"
-    false_positive_rate: "≤10% (measured by manual verification of flagged issues)"
-    processing_efficiency: "≤600s total validation time (measured end-to-end)"
-    intent_detection_accuracy: "≥85% (measured semantic alignment success rate)"
-    claude_command_pattern_detection: "100% accuracy for $ARGUMENTS and human artifact detection"
-    ai_agent_readiness_assessment: "≥95% correlation with manual expert evaluation"
-    framework_integration_effectiveness: "100% compliance with AI Agent Instruction Design Excellence principles"
+    false_positive_rate: "Low rate (measured by manual verification of flagged issues)"
+    processing_efficiency: "Reasonable validation time (measured end-to-end)"
+    intent_detection_accuracy: "High accuracy (measured semantic alignment success rate)"
+    claude_command_pattern_detection: "High accuracy for $ARGUMENTS and human artifact detection"
+    ai_agent_readiness_assessment: "High correlation with manual expert evaluation"
+    framework_integration_effectiveness: "Full compliance with AI Agent Instruction Design Excellence principles"

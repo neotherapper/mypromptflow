@@ -5,7 +5,7 @@
 
 ## Tools
 
-1. **[Vagueness Detection](vagueness-detector.md)** - Regex pattern detection and scoring
+1. **[Vagueness Detection](../../../meta/validation/validators/framework/vagueness-detector.md)** - Regex pattern detection and scoring
 2. **[Dependency Scanner](dependency-scanner.md)** - External dependency identification  
 3. **[Assessment Calculator](assessment-calculator.md)** - 5-dimensional scoring with weighted formulas
 4. **[Checklist Automator](checklist-automator.md)** - Framework checklist validation

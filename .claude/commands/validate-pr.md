@@ -84,33 +84,39 @@ Output structured summary:
 
 **AI Agent Instructions**: Process file list and PR metadata from Phase 1 using enhanced pattern matching:
 
-**Step 2.1: Initialize File Type Categories**  
-Create working variables for file classification:
+**Step 2.1: Initialize Enhanced File Type Categories**  
+Create working variables for comprehensive file classification:
 - `claude_command_files`: Files matching `.claude/commands/*.md` pattern
 - `claude_md_files`: Files named `CLAUDE.md` 
 - `ai_agent_files`: Files in `ai/agents/` or `ai-agent-instruction-design-excellence/` directories
+- `project_documentation_files`: Files matching `*/progress.md`, `*/task-list.md`, `*/project-purpose.md`, `*/research-integration.md`
+- `ai_consumable_docs`: Files matching `projects/*/docs/**/*.md` pattern
 - `typescript_files`: Files with `.ts` or `.tsx` extensions
 - `python_files`: Files with `.py` extension
 - `yaml_files`: Files with `.yaml` or `.yml` extensions
 - `generic_md_files`: Other `.md` files
 
-**Step 2.2: Pattern Matching Classification**  
-For each file from Phase 1 file list, apply pattern matching:
+**Step 2.2: Enhanced Pattern Matching Classification**  
+For each file from Phase 1 file list, apply enhanced pattern matching:
 - Check file path contains `.claude/commands/` and ends with `.md` → claude_command_files
 - Check filename equals `CLAUDE.md` → claude_md_files
 - Check path contains `ai/agents/` or `ai-agent-instruction-design-excellence/` → ai_agent_files
+- Check filename matches `progress.md`, `task-list.md`, `project-purpose.md`, `research-integration.md` → project_documentation_files
+- Check path matches `projects/*/docs/**/*.md` pattern → ai_consumable_docs
 - Check extension `.ts` or `.tsx` → typescript_files
 - Check extension `.py` → python_files
 - Check extension `.yaml` or `.yml` → yaml_files
 - Check extension `.md` (remaining) → generic_md_files
 
-**Step 2.3: Priority Classification and Reporting**  
-Output classification results with priority levels:
+**Step 2.3: Enhanced Priority Classification and Reporting**  
+Output comprehensive classification results with priority levels:
 ```
-🎯 File Type Detection Results:
+🎯 Enhanced File Type Detection Results:
   🤖 Claude Commands: [count] files [CRITICAL]
-  🧠 CLAUDE.md Files: [count] files [CRITICAL]  
+  🧠 CLAUDE.md Files: [count] files [CRITICAL - SPECIALIZED VALIDATOR]  
   👑 AI Agent Instructions: [count] files [HIGH]
+  📋 Project Documentation: [count] files [HIGH - NEW CATEGORY]
+  🗂️ AI-Consumable Docs: [count] files [HIGH - NEW CATEGORY]
   📘 TypeScript Files: [count] files [HIGH]
   🐍 Python Files: [count] files [HIGH]
   ⚙️ YAML Files: [count] files [MEDIUM]
@@ -157,17 +163,47 @@ If `claude_command_files` contains files:
    - **expected_tokens**: 60
 3. **If validator missing**: Use embedded Claude Command validation logic (see Embedded Validators section)
 
+**CLAUDE.md Project Files (CRITICAL Priority)**  
+If `claude_md_files` contains files:
+1. Check if validator registry contains `claude-project-file-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate CLAUDE.md project files using specialized Claude integration validator"
+   - **prompt**: "You are a Claude Project File Validator specialist. Using the claude-project-file-validator from meta/validation/validators/project/claude-project-file-validator.md, analyze CLAUDE.md files: {claude_md_files}. Apply comprehensive validation focusing on: required elements (9 components), Claude integration excellence, cross-reference accuracy, and AI Agent Instruction Design Excellence compliance. Generate detailed validation report with specific improvement recommendations."
+   - **context**: CLAUDE.md files list and Claude project validation requirements
+   - **expected_tokens**: 100
+3. **If validator missing**: Use embedded CLAUDE.md validation logic based on claude-project-file-validator patterns
+
 **AI Agent Instruction Files (CRITICAL Priority)**  
-If `ai_agent_files` or `claude_md_files` contain files:
+If `ai_agent_files` contains files:
 1. Check if validator registry contains `ai-agent-instruction-evaluator`
 2. **If validator exists**: Use Task tool with parameters:
    - **description**: "Validate AI agent instruction files using Design Excellence Framework"
-   - **prompt**: "You are an AI Agent Instruction Evaluator specialist. Using the ai-agent-instruction-evaluator from meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md, analyze files: {combined_file_list}. Apply assessment tools from the AI Agent Instruction Design Excellence framework including multi-level validation and constitutional AI compliance. Generate detailed compliance assessment with actionable recommendations."
+   - **prompt**: "You are an AI Agent Instruction Evaluator specialist. Using the ai-agent-instruction-evaluator from meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md, analyze files: {ai_agent_files}. Apply assessment tools from the AI Agent Instruction Design Excellence framework including multi-level validation and constitutional AI compliance. Generate detailed compliance assessment with actionable recommendations."
    - **context**: Embed file list and framework assessment criteria
    - **expected_tokens**: 90
 3. **If validator missing**: Use embedded AI instruction validation logic
 
 **Step 3.3: High Priority Specialist Spawning**
+
+**Project Documentation Files (HIGH Priority)**  
+If `project_documentation_files` contains files:
+1. Check if validator registry contains `project-documentation-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate project documentation files for AI agent effectiveness"
+   - **prompt**: "You are a Project Documentation Validator specialist. Using the project-documentation-validator from meta/validation/validators/project/project-documentation-validator.md, analyze files: {project_documentation_files}. Apply validation criteria focusing on AI agent readability, framework compliance, cross-reference accuracy, and task management effectiveness. Generate detailed compliance assessment with actionable recommendations for project documentation improvement."
+   - **context**: Embed project files list and mypromptflow framework requirements
+   - **expected_tokens**: 80
+3. **If validator missing**: Use embedded project documentation validation logic
+
+**AI-Consumable Documentation Files (HIGH Priority)**  
+If `ai_consumable_docs` contains files:
+1. Check if validator registry contains `ai-documentation-validator`
+2. **If validator exists**: Use Task tool with parameters:
+   - **description**: "Validate AI-consumable documentation for effectiveness and actionability"
+   - **prompt**: "You are an AI Documentation Validator specialist. Using the ai-documentation-validator from meta/validation/validators/project/ai-documentation-validator.md, analyze AI-consumable documentation files: {ai_consumable_docs}. Focus on technical clarity, implementation guidance, and AI agent actionability. Apply validation criteria for documentation structure, cross-reference integration, and technical quality. Generate comprehensive assessment with specific improvements for AI consumption effectiveness."
+   - **context**: Project AI documentation files and technical documentation standards
+   - **expected_tokens**: 100
+3. **If validator missing**: Use embedded AI documentation validation logic
 
 **TypeScript Files (HIGH Priority)**  
 If `typescript_files` contains files:
@@ -344,6 +380,7 @@ Store comprehensive validation results for future reference:
 ### Production-Ready Validators (Reorganized Locations)
 - **Claude Command Evaluator**: `meta/validation/validators/ai-instruction/claude-command-evaluator.md`
 - **AI Agent Instruction Evaluator**: `meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md`
+- **Claude Project File Validator**: `meta/validation/validators/project/claude-project-file-validator.md` (SPECIALIZED CLAUDE.md VALIDATION)
 
 ### File-Type Validator Gaps Identified (Ready for Creation)
 - **TypeScript Frontend Validator**: `meta/validation/validators/file-type/typescript-frontend-validator.md`

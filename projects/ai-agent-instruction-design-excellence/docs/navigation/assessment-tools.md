@@ -5,11 +5,11 @@
 ### Comprehensive Multi-Level Validation System
 
 **Available Assessment Tools**: 
-- **[Framework Coherence Analyzer](../assessment-tools/framework-coherence-analyzer.md)** - 99% accuracy in coherence validation
-- **[Communication Pattern Validator](../assessment-tools/communication-pattern-validator.md)** - Prevents 35-40% of communication failures
-- **[Workflow Completeness Inspector](../assessment-tools/workflow-completeness-inspector.md)** - 85-90% reduction in deployment failures
-- **[Constitutional AI Compliance Checker](../assessment-tools/constitutional-ai-compliance-checker.md)** - 99% accuracy in ethical compliance
-- **[Resilience Assessment Engine](../assessment-tools/resilience-assessment-engine.md)** - 85-90% success in cascade prevention
+- **[Framework Coherence Analyzer](../../../meta/validation/validators/framework/framework-coherence-analyzer.md)** - 99% accuracy in coherence validation
+- **[Communication Pattern Validator](../../../meta/validation/validators/framework/communication-pattern-validator.md)** - Prevents 35-40% of communication failures
+- **[Workflow Completeness Inspector](../../../meta/validation/validators/framework/workflow-completeness-inspector.md)** - 85-90% reduction in deployment failures
+- **[Constitutional AI Compliance Checker](../../../meta/validation/validators/framework/constitutional-ai-checker.md)** - 99% accuracy in ethical compliance
+- **[Resilience Assessment Engine](../../../meta/validation/validators/framework/resilience-assessment-engine.md)** - 85-90% success in cascade prevention
 - **[Context Optimization Tool](../assessment-tools/context-optimization-tool.md)** - 70% token reduction with 95% functionality preservation
 - **[Multi-Agent Coordination Dashboard](../assessment-tools/multi-agent-coordination-dashboard.md)** - 99% accuracy in coordination monitoring
 

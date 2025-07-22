@@ -1,20 +1,21 @@
+---
 # Knowledge Base Bootstrap Flow Configuration
-# AI INSTRUCTIONS: This file defines the bootstrap questionnaire and response logic
-# UPDATED: Now references modular workflow structure
+# AI INSTRUCTIONS: This file defines the bootstrap questionnaire and response
+# logic. UPDATED: Now references modular workflow structure
 
 bootstrap_config:
   version: "2.0"
   trigger_condition: "total_documents == 0"
   questionnaire_enabled: true
-  
+
   # Workflow Integration
   workflow_location: "ai/workflows/bootstrap/"
   ai_instructions: "ai/workflows/bootstrap/CLAUDE.md"
   questionnaire_config: "ai/workflows/bootstrap/questionnaire.yaml"
   response_logic: "ai/workflows/bootstrap/response-logic.yaml"
-  
+
 # DEPRECATED: Questionnaire and logic moved to modular workflow structure
-# AI INSTRUCTIONS: Use ai/workflows/bootstrap/ files instead of this configuration
+# AI INSTRUCTIONS: Use ai/workflows/bootstrap/ files instead of config
 
 # Legacy Reference (for backward compatibility)
 legacy_note: |
@@ -22,8 +23,9 @@ legacy_note: |
   - Questionnaire: ai/workflows/bootstrap/questionnaire.yaml
   - Response Logic: ai/workflows/bootstrap/response-logic.yaml
   - AI Instructions: ai/workflows/bootstrap/CLAUDE.md
-  
-  This file may be removed in future versions once all references are updated.
+
+  This file may be removed in future versions once all references
+  are updated.
 
 # Migration Information
 migration_info:
@@ -31,11 +33,11 @@ migration_info:
   date: "2025-07-16"
   old_structure: "monolithic bootstrap-flow.yaml"
   new_structure: "modular ai/workflows/bootstrap/"
-  
+
   moved_components:
     questionnaire: "ai/workflows/bootstrap/questionnaire.yaml"
     response_logic: "ai/workflows/bootstrap/response-logic.yaml"
     ai_instructions: "ai/workflows/bootstrap/CLAUDE.md"
-    
-  command_routing: "Updated /knowledge-status command routes to workflow files"
+
+  command_routing: "Updated /knowledge-status command routes to files"
   cache_integration: "Updated knowledge-status-cache.yaml references"
