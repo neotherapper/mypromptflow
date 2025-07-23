@@ -59,7 +59,7 @@
 ## 🗂️ Complete Directory Structure
 
 ```
-docs/mcp-server-registry/
+mcp-registry/
 ├── README.md                           # This comprehensive navigation file
 ├── ai-agent-entry-point.md            # AI-optimized programmatic navigation
 ├── master-server-database.yaml         # Authoritative server registry (302+ servers)

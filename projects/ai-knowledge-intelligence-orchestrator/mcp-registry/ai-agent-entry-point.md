@@ -92,9 +92,9 @@ master-server-database.yaml:
 
 ### File System Navigation
 ```
-docs/mcp-server-registry/
+mcp-registry/
 ├── master-server-database.yaml          # Primary data source
-├── mcp-registry/                         # Implementation resources
+├── detailed-profiles/                   # Implementation resources
 │   ├── detailed-profiles/               # Tier-organized server analysis
 │   ├── implementation/                  # Deployment guides
 │   └── templates/                       # Implementation templates
