@@ -261,6 +261,120 @@ properties:
     required: false
     description: "Major milestones and checkpoints"
     
+  # Unified Tagging System (Business Ideas Focus)
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Unified business idea categorization tags"
+    options:
+      # Business Categories (Primary for Business Ideas)
+      - value: "business-strategy"
+        name: "Business Strategy"
+        color: "red"
+      - value: "maritime-insurance"
+        name: "Maritime Insurance"
+        color: "blue"
+      - value: "entrepreneurship"
+        name: "Entrepreneurship"
+        color: "red"
+      - value: "cost-optimization"
+        name: "Cost Optimization"
+        color: "yellow"
+      - value: "customer-experience"
+        name: "Customer Experience"
+        color: "green"
+      - value: "digital-marketing"
+        name: "Digital Marketing"
+        color: "orange"
+      - value: "finance"
+        name: "Finance"
+        color: "green"
+      - value: "growth-hacking"
+        name: "Growth Hacking"
+        color: "orange"
+      - value: "sales"
+        name: "Sales"
+        color: "blue"
+      
+      # Industry Verticals (Primary for Business Ideas)
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      - value: "edtech"
+        name: "EdTech"
+        color: "blue"
+      - value: "healthtech"
+        name: "HealthTech"
+        color: "red"
+      - value: "proptech"
+        name: "PropTech"
+        color: "orange"
+      - value: "legaltech"
+        name: "LegalTech"
+        color: "purple"
+      
+      # Business Models (Primary for Business Ideas)
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "marketplace"
+        name: "MarketPlace"
+        color: "green"
+      - value: "e-commerce"
+        name: "E-Commerce"
+        color: "orange"
+      - value: "subscription"
+        name: "Subscription"
+        color: "purple"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "purple"
+      
+      # Technology Categories (Supporting)
+      - value: "ai"
+        name: "AI"
+        color: "red"
+      - value: "automation"
+        name: "Automation"
+        color: "blue"
+      - value: "no-code"
+        name: "No-Code"
+        color: "orange"
+      - value: "integration"
+        name: "Integration"
+        color: "green"
+      
+      # Productivity Categories (Supporting)
+      - value: "innovation"
+        name: "Innovation"
+        color: "red"
+      - value: "productivity"
+        name: "Productivity"
+        color: "blue"
+      - value: "design"
+        name: "Design"
+        color: "purple"
+      
+      # Organization Tags
+      - value: "high-priority"
+        name: "High Priority"
+        color: "red"
+      - value: "quick-win"
+        name: "Quick Win"
+        color: "green"
+      - value: "long-term"
+        name: "Long Term"
+        color: "blue"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+    
   # Timestamps
   created_date:
     type: "created_time"
@@ -359,6 +473,10 @@ indexes:
     description: "Quality and complexity assessment"
   - fields: ["last_modified"]
     description: "Recently updated ideas"
+  - fields: ["tags"]
+    description: "Unified tagging system searches and filtering"
+  - fields: ["tags", "idea_rating"]
+    description: "Tag-based quality assessment for business ideas"
     
 # Views Configuration (replicate Notion views)
 views:
@@ -403,3 +521,51 @@ views:
         direction: "descending"
       - field: "complexity"
         direction: "ascending"
+        
+  # Tag-Based Views for Enhanced Organization
+  maritime_insurance_ideas:
+    name: "Maritime Insurance Ideas"
+    filter:
+      tags: ["maritime-insurance", "insurtech"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "validation_status"
+        direction: "descending"
+        
+  by_business_model:
+    name: "By Business Model"
+    group_by: "tags"
+    filter:
+      tags: ["saas", "marketplace", "e-commerce", "subscription", "platform"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+        
+  high_priority_ideas:
+    name: "High Priority Business Ideas"
+    filter:
+      tags: ["high-priority"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "status"
+        direction: "ascending"
+        
+  quick_wins:
+    name: "Quick Win Opportunities"
+    filter:
+      tags: ["quick-win"]
+      complexity: ["low", "medium"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "investment_required"
+        direction: "ascending"
+        
+  by_tags:
+    name: "By Tags"
+    group_by: "tags"
+    sort:
+      - field: "idea_rating"
+        direction: "descending"

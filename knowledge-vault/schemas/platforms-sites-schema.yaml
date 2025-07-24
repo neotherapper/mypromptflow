@@ -302,6 +302,124 @@ properties:
         name: "Never Used"
         color: "gray"
         
+  # Unified Tagging System (Platform Focus)
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Unified platform categorization tags"
+    options:
+      # Technology Categories (Primary for Platforms)
+      - value: "software-development"
+        name: "Software Development"
+        color: "blue"
+      - value: "developer-tools"
+        name: "Developer Tools"
+        color: "purple"
+      - value: "ai"
+        name: "AI"
+        color: "red"
+      - value: "automation"
+        name: "Automation"
+        color: "blue"
+      - value: "integration"
+        name: "Integration"
+        color: "green"
+      - value: "no-code"
+        name: "No-Code"
+        color: "orange"
+      - value: "database"
+        name: "Database"
+        color: "green"
+      - value: "cloud-hosting"
+        name: "Cloud Hosting"
+        color: "blue"
+      - value: "api-service"
+        name: "API Service"
+        color: "red"
+      
+      # Business Categories
+      - value: "analytics"
+        name: "Analytics"
+        color: "blue"
+      - value: "project-management"
+        name: "Project Management"
+        color: "orange"
+      - value: "communication"
+        name: "Communication"
+        color: "blue"
+      - value: "digital-marketing"
+        name: "Digital Marketing"
+        color: "orange"
+      - value: "customer-experience"
+        name: "Customer Experience"
+        color: "green"
+      - value: "business-strategy"
+        name: "Business Strategy"
+        color: "red"
+      
+      # Productivity Categories (Primary for Platforms)
+      - value: "productivity"
+        name: "Productivity"
+        color: "blue"
+      - value: "design"
+        name: "Design"
+        color: "purple"
+      - value: "efficiency"
+        name: "Efficiency"
+        color: "green"
+      
+      # Content Categories
+      - value: "documentation"
+        name: "Documentation"
+        color: "yellow"
+      - value: "tutorial"
+        name: "Tutorial"
+        color: "green"
+      - value: "research"
+        name: "Research"
+        color: "yellow"
+      
+      # Learning Categories
+      - value: "web-development"
+        name: "Web Development"
+        color: "green"
+      - value: "programming"
+        name: "Programming"
+        color: "blue"
+      
+      # Industry Verticals
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      - value: "maritime-insurance"
+        name: "Maritime Insurance"
+        color: "blue"
+      
+      # Business Models
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      - value: "marketplace"
+        name: "MarketPlace"
+        color: "green"
+      
+      # Organization Tags
+      - value: "high-priority"
+        name: "High Priority"
+        color: "red"
+      - value: "platform-research"
+        name: "Platform Research"
+        color: "purple"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+        
   # Timestamps
   created_date:
     type: "created_time"
@@ -406,6 +524,10 @@ indexes:
     description: "Quality and potential assessment"
   - fields: ["pricing_model"]
     description: "Cost analysis and budgeting"
+  - fields: ["tags"]
+    description: "Unified tagging system searches and filtering"
+  - fields: ["tags", "rating"]
+    description: "Tag-based quality assessment for platforms"
     
 # Views Configuration (replicate Notion views)
 views:
@@ -456,4 +578,48 @@ views:
       status: ["discovered", "evaluating"]
     sort:
       - field: "future_value"
+        direction: "descending"
+        
+  # Tag-Based Views for Enhanced Organization
+  development_platforms:
+    name: "Development Platforms"
+    filter:
+      tags: ["software-development", "developer-tools", "programming"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "frequency_used"
+        direction: "descending"
+        
+  design_platforms:
+    name: "Design & Productivity"
+    filter:
+      tags: ["design", "productivity", "efficiency"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  maritime_platforms:
+    name: "Maritime Insurance Platforms"
+    filter:
+      tags: ["maritime-insurance", "insurtech", "fintech"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "business_impact_score"
+        direction: "descending"
+        
+  research_platforms:
+    name: "Research & Documentation"
+    filter:
+      tags: ["research", "documentation", "tutorial"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  by_tags:
+    name: "By Tags"
+    group_by: "tags"
+    sort:
+      - field: "rating"
         direction: "descending"

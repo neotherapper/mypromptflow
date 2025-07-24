@@ -278,6 +278,117 @@ properties:
         name: "Usage-based"
         color: "blue"
         
+  # Unified Tagging System (Critical for MCP Server Integration)
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Unified tagging system with MCP server support"
+    options:
+      # Technology Categories
+      - value: "ai"
+        name: "AI"
+        color: "red"
+      - value: "automation"
+        name: "Automation"
+        color: "blue"
+      - value: "developer-tools"
+        name: "Developer Tools"
+        color: "purple"
+      - value: "integration"
+        name: "Integration"
+        color: "green"
+      - value: "no-code"
+        name: "No-Code"
+        color: "orange"
+      - value: "software-development"
+        name: "Software Development"
+        color: "blue"
+      - value: "tech-stack"
+        name: "Tech Stack"
+        color: "purple"
+      - value: "database"
+        name: "Database"
+        color: "green"
+      - value: "cloud-hosting"
+        name: "Cloud Hosting"
+        color: "blue"
+      - value: "api-service"
+        name: "API Service"
+        color: "red"
+      
+      # Business Categories
+      - value: "business-strategy"
+        name: "Business Strategy"
+        color: "red"
+      - value: "maritime-insurance"
+        name: "Maritime Insurance"
+        color: "blue"
+      - value: "analytics"
+        name: "Analytics"
+        color: "blue"
+      - value: "productivity"
+        name: "Productivity"
+        color: "blue"
+      - value: "project-management"
+        name: "Project Management"
+        color: "orange"
+      - value: "communication"
+        name: "Communication"
+        color: "blue"
+      
+      # Industry Verticals
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "purple"
+      
+      # Business Models
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      
+      # Organization Tags
+      - value: "high-priority"
+        name: "High Priority"
+        color: "red"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+      
+      # MCP Server Classification (CRITICAL for MCP Integration)
+      - value: "mcp-server"
+        name: "MCP Server"
+        color: "purple"
+      - value: "tier-1"
+        name: "Tier 1"
+        color: "red"
+      - value: "tier-2"
+        name: "Tier 2"  
+        color: "orange"
+      - value: "tier-3"
+        name: "Tier 3"
+        color: "yellow"
+      - value: "information-retrieval"
+        name: "Information Retrieval"
+        color: "blue"
+      - value: "development-tools"
+        name: "Development Tools"
+        color: "green"
+      - value: "monitoring"
+        name: "Monitoring"
+        color: "red"
+      - value: "maritime-specific"
+        name: "Maritime Specific"
+        color: "blue"
+        
   # Content and Documentation
   url:
     type: "url"
@@ -435,6 +546,10 @@ indexes:
     description: "Quality and usage assessment"
   - fields: ["licensing_model"]
     description: "Cost and licensing analysis"
+  - fields: ["tags"]
+    description: "Unified tagging system searches and filtering"
+  - fields: ["tags", "rating"]
+    description: "Tag-based quality assessment (MCP servers by tier)"
     
 # Views Configuration (replicate Notion views)
 views:
@@ -487,6 +602,60 @@ views:
     filter:
       maturity_level: ["stable", "enterprise"]
       rating: [4, 5]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  # MCP Server Management Views (CRITICAL for MCP Integration)
+  mcp_servers_all:
+    name: "All MCP Servers"
+    filter:
+      tags: ["mcp-server"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "business_relevance_score"
+        direction: "descending"
+        
+  mcp_tier_1:
+    name: "MCP Tier 1 Servers"
+    filter:
+      tags: ["mcp-server", "tier-1"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "business_relevance_score"
+        direction: "descending"
+        
+  mcp_tier_2:
+    name: "MCP Tier 2 Servers"
+    filter:
+      tags: ["mcp-server", "tier-2"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+      - field: "business_relevance_score"
+        direction: "descending"
+        
+  mcp_maritime_specific:
+    name: "Maritime MCP Servers"
+    filter:
+      tags: ["mcp-server", "maritime-specific"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  mcp_information_retrieval:
+    name: "MCP Information Retrieval"
+    filter:
+      tags: ["mcp-server", "information-retrieval"]
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  by_tags:
+    name: "By Tags"
+    group_by: "tags"
     sort:
       - field: "rating"
         direction: "descending"
