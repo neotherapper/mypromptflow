@@ -963,4 +963,27 @@ The AI Knowledge Intelligence Orchestrator has achieved comprehensive research a
 
 **Next Strategic Priority**: Continue high-priority server profiling from Docker discovery to advance toward 35% completion target
 
+## Error Learning Documentation: Session 2025-07-24
+
+### Error Encountered During Git Operations
+**Error**: `fatal: pathspec 'mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md' did not match any files`
+
+**Context**: When attempting to stage files for commit, I used incorrect file paths assuming the server profiles were in the `mcp-registry/` directory at the project root.
+
+**Root Cause**: File location mismatch - the server profiles were actually created in `docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/` instead of the expected `mcp-registry/detailed-profiles/tier-1/` location.
+
+**Resolution**: 
+1. Used `find` command to locate actual file paths: `find . -name "*mcp-server-profile.md" -type f`
+2. Discovered files were in `docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/` structure
+3. Updated git add command to use correct paths: `git add progress.md docs/mcp-server-registry/ ../../research/findings/docker-mcp-servers-analysis/`
+
+**Learning**: Always verify file locations with `find` or `ls` commands before attempting git operations, especially when working with complex directory structures. The Task tool may create files in different locations than expected based on the file organization logic.
+
+**Prevention**: Use `git status` to see actual modified file paths before staging, and use shell commands to verify file existence and location before git operations.
+
+### Process Improvement Applied
+- Added systematic file verification step before git operations
+- Used `find` command for comprehensive file location discovery
+- Improved error recovery through iterative path correction
+
 Last Updated: 2025-07-24
