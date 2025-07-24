@@ -221,6 +221,42 @@ Each detailed profile includes:
 - **Adaptive Learning** - Dynamic scheduling based on content change patterns
 - **Markdown/YAML Storage** - File-based information organization and metadata management
 
+### CRITICAL: Industry-Neutral Terminology Requirements
+
+**MANDATORY FOR ALL AI AGENTS**: This project requires industry-neutral language in all server descriptions, profiles, and documentation.
+
+#### Prohibited Terminology
+**NEVER USE** industry-specific language when describing MCP servers or their applications:
+- ❌ "maritime", "shipping", "vessel", "underwriting", "maritime insurance"
+- ❌ Domain-specific jargon or sector-specific terminology
+- ❌ Single-industry focused use cases or applications
+- ❌ Specialized industry terminology unless technically required
+
+#### Required Terminology Standards
+**ALWAYS USE** generic business language that applies across industries:
+- ✅ "business_applications" instead of industry-specific application sections
+- ✅ "enterprise_use_cases" for general business scenarios
+- ✅ "industry_applications" when using generic examples
+- ✅ Multiple industry examples: "financial services, healthcare, manufacturing, logistics"
+- ✅ Technical capability descriptions over domain-specific benefits
+- ✅ Generic business terms: "operations", "workflow automation", "data integration", "compliance"
+
+#### Server Profile Requirements
+When creating or updating MCP server profiles:
+1. **Use "business_applications" sections** instead of domain-specific application sections
+2. **Include multiple industry examples** rather than focusing on a single sector
+3. **Emphasize technical value propositions** over domain-specific benefits
+4. **Focus on general business capabilities**: scalability, security, operational efficiency
+5. **Use generic business scenarios** that apply across multiple industries
+
+#### Business Value Language
+- ✅ "enterprise efficiency", "operational optimization", "cost reduction"
+- ✅ "workflow automation", "data integration", "compliance management" 
+- ✅ "scalable infrastructure", "secure operations", "business intelligence"
+- ❌ Sector-specific ROI calculations or domain-specific value propositions
+
+**ENFORCEMENT**: All server documentation must pass industry-neutrality review before publication. Profiles with domain-specific language will be rejected and require revision.
+
 ### How to Work on This Project (Implementation Phase)
 
 1. **Read Context First**: Review project-purpose.md for detailed goals and scope

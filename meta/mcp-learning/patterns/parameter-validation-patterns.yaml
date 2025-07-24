@@ -1,0 +1,313 @@
+# MCP Server Parameter Validation Patterns
+# This file defines validation rules for MCP server parameters
+# Used for pre-flight parameter validation to prevent common errors
+
+version: "1.0.0"
+last_updated: "2025-01-24"
+validation_rules_count: 0  # To be incremented as rules are established
+effectiveness_rate: null   # To be measured as system matures
+
+# Server-Specific Parameter Validation Rules
+
+mcp_docker_server:
+  description: "Parameter validation for comprehensive Docker MCP tools"
+  
+  notion_api_tools:
+    database_operations:
+      database_id:
+        type: "string"
+        format: "uuid"
+        required: true
+        pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        validation_error: "Database ID must be a valid UUID format"
+        example: "12345678-1234-1234-1234-123456789abc"
+      
+      page_id:
+        type: "string"
+        format: "notion_page_id"
+        required: false
+        pattern: "^[0-9a-f]{32}$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        validation_error: "Page ID must be valid Notion page identifier"
+        example: "12345678123412341234123456789abc"
+      
+      rich_text:
+        type: "array"
+        format: "notion_rich_text"
+        required: false
+        structure:
+          - type: "text"
+            text:
+              content: "string"
+              link: "object|null"
+        validation_error: "Rich text must follow Notion rich text object structure"
+    
+    page_operations:
+      parent:
+        type: "object"
+        required: true
+        properties:
+          page_id:
+            type: "string"
+            format: "uuid"
+            required: true
+        validation_error: "Parent must contain valid page_id UUID"
+      
+      properties:
+        type: "object"
+        required: true
+        format: "notion_properties"
+        validation_error: "Properties must match database schema requirements"
+  
+  jira_tools:
+    issue_operations:
+      issue_key:
+        type: "string"
+        format: "jira_issue_key"
+        required: true
+        pattern: "^[A-Z]+-[0-9]+$"
+        validation_error: "Issue key must follow PROJECT-NUMBER format (e.g., SCRUM-123)"
+        example: "SCRUM-123"
+      
+      project_key:
+        type: "string"
+        format: "jira_project_key"
+        required: true
+        pattern: "^[A-Z][A-Z0-9]*$"
+        validation_error: "Project key must be uppercase letters/numbers starting with letter"
+        example: "SCRUM"
+      
+      jql_query:
+        type: "string"
+        format: "jql"
+        required: false
+        validation_rules:
+          - no_sql_injection_patterns
+          - valid_jql_syntax
+          - proper_field_references
+        validation_error: "JQL query must use valid JIRA Query Language syntax"
+        example: "project = SCRUM AND status = 'In Progress'"
+      
+      fields:
+        type: "string"
+        format: "comma_separated_fields"
+        required: false
+        default: "summary,status,assignee,priority"
+        validation_error: "Fields must be comma-separated valid JIRA field names"
+        example: "summary,status,assignee,priority,labels"
+    
+    search_operations:
+      limit:
+        type: "integer"
+        required: false
+        minimum: 1
+        maximum: 50
+        default: 10
+        validation_error: "Limit must be between 1 and 50"
+      
+      start_at:
+        type: "integer"
+        required: false
+        minimum: 0
+        default: 0
+        validation_error: "Start_at must be non-negative integer"
+  
+  browser_automation_tools:
+    navigation:
+      url:
+        type: "string"
+        format: "url"
+        required: true
+        pattern: "^https?://[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#]*[\\w\\-\\@?^=%&/~\\+#])?$"
+        validation_error: "URL must be valid HTTP/HTTPS URL"
+        example: "https://example.com"
+    
+    element_interaction:
+      element:
+        type: "string"
+        required: true
+        min_length: 1
+        validation_error: "Element description must be non-empty string"
+        example: "Submit button"
+      
+      ref:
+        type: "string"
+        required: true
+        format: "element_reference"
+        validation_error: "Element reference must be valid ID from page snapshot"
+        example: "element-123-abc"
+    
+    file_operations:
+      paths:
+        type: "array"
+        required: true
+        items:
+          type: "string"
+          format: "absolute_path"
+        validation_error: "Paths must be array of absolute file paths"
+        example: ["/absolute/path/to/file.txt"]
+
+# Cross-Server Common Patterns
+
+common_validations:
+  identifiers:
+    uuid_validation:
+      pattern: "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      case_sensitive: false
+      error_message: "Must be valid UUID format"
+    
+    alphanumeric_id:
+      pattern: "^[A-Za-z0-9_-]+$"
+      min_length: 1
+      max_length: 100
+      error_message: "Must be alphanumeric with underscores/hyphens only"
+  
+  text_fields:
+    non_empty_string:
+      type: "string"
+      min_length: 1
+      trim: true
+      error_message: "Must be non-empty string"
+    
+    limited_text:
+      type: "string"
+      max_length: 1000
+      trim: true
+      error_message: "Text must be under 1000 characters"
+  
+  numerical_limits:
+    positive_integer:
+      type: "integer"
+      minimum: 1
+      error_message: "Must be positive integer"
+    
+    pagination_limit:
+      type: "integer"
+      minimum: 1
+      maximum: 100
+      default: 10
+      error_message: "Limit must be between 1 and 100"
+
+# Pre-Flight Validation Procedures
+
+validation_procedures:
+  authentication_check:
+    description: "Verify authentication credentials before API calls"
+    steps:
+      - check_credential_existence
+      - validate_credential_format
+      - verify_credential_freshness
+      - test_authentication_scope
+  
+  parameter_format_validation:
+    description: "Validate parameter formats before submission"
+    steps:
+      - check_required_parameters_present
+      - validate_parameter_data_types
+      - verify_parameter_format_patterns
+      - check_parameter_value_ranges
+  
+  service_availability_check:
+    description: "Verify external service availability"
+    steps:
+      - ping_service_endpoint
+      - check_service_status_page
+      - verify_network_connectivity
+      - validate_ssl_certificates
+
+# Error Prevention Rules
+
+prevention_rules:
+  parameter_preprocessing:
+    trim_whitespace:
+      description: "Remove leading/trailing whitespace from string parameters"
+      applies_to: ["string"]
+      action: "trim"
+    
+    normalize_case:
+      description: "Normalize case for case-insensitive identifiers"
+      applies_to: ["uuid", "url"]
+      action: "lowercase"
+    
+    validate_required:
+      description: "Check all required parameters are present"
+      applies_to: ["all"]
+      action: "presence_check"
+  
+  format_standardization:
+    uuid_normalization:
+      description: "Ensure UUIDs are properly formatted"
+      pattern: "add_hyphens_if_missing"
+      validation: "uuid_format_check"
+    
+    url_normalization:
+      description: "Ensure URLs are properly formatted"
+      actions:
+        - "add_protocol_if_missing"
+        - "validate_domain_format"
+        - "check_url_accessibility"
+
+# Validation Effectiveness Tracking
+
+effectiveness_metrics:
+  validation_success_rate: null      # Percentage of validations that pass
+  error_prevention_rate: null       # Percentage of errors prevented by validation
+  false_positive_rate: null         # Percentage of valid inputs rejected
+  validation_performance_ms: null   # Average validation time
+  
+  by_server:
+    mcp_docker: {}
+    notion_api: {}
+    jira: {}
+    browser_automation: {}
+
+# Validation Rule Updates
+
+rule_management:
+  auto_update_triggers:
+    - new_error_pattern_detected
+    - validation_rule_effectiveness_below_threshold
+    - parameter_format_changes_in_apis
+  
+  manual_review_required:
+    - new_server_integration
+    - api_version_updates
+    - validation_performance_issues
+  
+  quality_gates:
+    - validation_accuracy_above_95_percent
+    - false_positive_rate_below_5_percent
+    - validation_time_under_100ms
+
+# Integration Points
+
+integration:
+  error_logging: "@meta/mcp-learning/error-logs/"
+  common_patterns: "@meta/mcp-learning/patterns/common-error-patterns.yaml"
+  usage_guides: "@meta/mcp-learning/usage-guides/"
+  main_protocol: "@CLAUDE.md#MCP Error Learning Protocol"
+
+# Usage Instructions
+
+usage_instructions:
+  pre_validation:
+    description: "Run before every MCP tool usage"
+    implementation: "Check parameter formats against these rules"
+    failure_action: "Fix parameters or abort operation"
+  
+  post_error_analysis:
+    description: "Update rules when new error patterns emerge"
+    implementation: "Add validation rules for newly discovered failure patterns"
+    success_measurement: "Track error reduction after rule implementation"
+  
+  periodic_review:
+    description: "Regular review and optimization of validation rules"
+    frequency: "Weekly"
+    focus_areas: ["effectiveness", "performance", "coverage"]
+
+---
+# Development Notes
+# 1. This file starts with anticipated validation rules based on MCP server documentation
+# 2. Rules will be refined and expanded based on actual error patterns encountered
+# 3. Validation effectiveness will be measured and rules optimized accordingly
+# 4. Integration with pre-flight checks in usage guides ensures proactive error prevention
+# 5. Regular updates ensure rules stay current with API changes and usage patterns

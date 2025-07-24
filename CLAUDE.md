@@ -195,3 +195,108 @@ Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→
 **For Implementation Planning**: Reference existing detailed profiles before creating new server documentation to leverage comprehensive business analysis and technical specifications.
 
 **Quality Standards**: All MCP server research must achieve ≥95% constitutional AI compliance and include maritime insurance business applications where relevant.
+
+## MCP Error Learning Protocol
+
+**Essential Requirement**: All AI agents MUST systematically learn from MCP server errors to prevent repetition and build accumulated knowledge.
+
+**Core Problem**: MCP server errors repeat because there's no systematic capture and learning mechanism. Each session starts fresh without accumulated error knowledge.
+
+**Solution Architecture**: Implement comprehensive error learning system at @meta/mcp-learning/ with automatic error capture, pattern analysis, and proactive usage guidance.
+
+### Mandatory Error Learning Procedures
+
+**BEFORE using ANY MCP server tool:**
+
+1. **Pre-Usage Guide Check**: ALWAYS check @meta/mcp-learning/usage-guides/[server-name]-guide.md for:
+   - Parameter validation requirements
+   - Common pitfall warnings  
+   - Working parameter patterns
+   - Authentication requirements
+
+2. **Recent Error Review**: Check @meta/mcp-learning/error-logs/[server-name]-errors.md for:
+   - Recent failure patterns
+   - Parameter format issues
+   - Known problematic configurations
+   - Resolution strategies
+
+**WHEN MCP tool fails:**
+
+1. **Immediate Error Logging**: AUTOMATICALLY log the error using @meta/mcp-learning/templates/error-log-template.md including:
+   - Full context and intent
+   - Exact parameters used
+   - Complete error message
+   - Timestamp and frequency tracking
+
+2. **Root Cause Analysis**: Determine:
+   - Authentication issues (tokens, permissions)
+   - Parameter problems (format, missing, invalid)
+   - API issues (rate limits, service unavailable)
+   - Network problems (connectivity, timeouts)
+
+3. **Resolution Documentation**: Record all resolution attempts and outcomes
+
+**AFTER successful MCP operations:**
+
+1. **Success Pattern Documentation**: Update usage guides with:
+   - Working parameter combinations
+   - Successful authentication patterns
+   - Reliable execution approaches
+   - Prevention strategies discovered
+
+2. **Pattern Analysis**: Identify what makes operations succeed vs fail
+
+### Error Learning System Structure
+
+**System Location**: @meta/mcp-learning/ with comprehensive structure:
+
+- **error-logs/**: Server-specific error capture and analysis
+- **usage-guides/**: Generated knowledge for error prevention  
+- **patterns/**: Common error patterns and validation rules
+- **templates/**: Standardized logging and guide formats
+
+**Active MCP Servers Tracked**:
+- mcp-docker (comprehensive Docker MCP tools)
+- notion-api (Notion database operations)
+- jira (JIRA issue management)
+- browser (browser automation tools)
+
+### Continuous Learning Integration
+
+**Error Pattern Recognition**: 
+- Group similar errors by root cause
+- Track parameter validation failures
+- Identify authentication pattern issues
+- Monitor API usage problems
+
+**Knowledge Accumulation**:
+- Build server-specific troubleshooting guides
+- Create parameter validation checklists
+- Develop pre-flight verification procedures
+- Establish working configuration libraries
+
+**Prevention Automation**:
+- Pre-validate parameters against known failure patterns
+- Check authentication status before operations
+- Apply rate limiting awareness
+- Use verified working configurations
+
+### Quality Metrics and Enforcement
+
+**Success Targets**:
+- 90% reduction in repeated MCP errors
+- <15 minutes average resolution time for known patterns
+- 100% error capture rate with full context
+- 95% prevention rate for previously encountered errors
+
+**Enforcement Protocols**:
+- MCP tool usage WITHOUT pre-usage guide check = protocol violation
+- Error occurrence WITHOUT immediate logging = system compliance failure
+- Success WITHOUT pattern documentation = learning opportunity missed
+
+**Integration Points**:
+- @meta/mcp-learning/patterns/common-error-patterns.yaml for cross-server analysis
+- @meta/mcp-learning/patterns/parameter-validation-patterns.yaml for input validation
+- @meta/validation/protocols/self-healing-error-detection-patterns.md for advanced error handling
+
+**Quality Assurance**: Error learning protocol compliance is mandatory. Violations trigger automatic escalation and enhanced error monitoring.
