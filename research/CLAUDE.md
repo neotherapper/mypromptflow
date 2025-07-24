@@ -4,21 +4,23 @@
 
 This is a comprehensive AI Research Framework with intelligent orchestration capabilities. The system provides 15 specialized research methods (11 existing + 4 advanced) with context-aware method selection and quality assurance.
 
+> **Framework Status Note**: The specifications below represent design goals and intended capabilities, not measured performance results. Actual performance varies based on research complexity, system conditions, and implementation details.
+
 ## Key Capabilities
 
-- **Intelligent Orchestration**: Execute context analysis protocol (complexity scoring: 1-5 scale, domain classification: ≥85% confidence, method selection: ≤60s)
-- **15 Research Methods**: Validated methodology range (simple step-by-step: 5 phases, complex multi-perspective: 4+ expert personas, execution time: 5-45 minutes per method)
-- **Quality Enhancement**: Apply validation framework (constitutional AI: ≥95% compliance, self-consistency: ≥85% score, accuracy threshold: ≥90%)
-- **Dual-Agent System**: Coordinate primary research agents with evaluation specialists (monitoring intervals: 5-15 minutes, quality checkpoints: continuous)
-- **Performance Tracking**: Execute comprehensive logging protocol (decision timestamps, execution duration measurement, outcome quality scoring, method effectiveness analysis)
+- **Intelligent Orchestration**: Provides context analysis using systematic complexity assessment and domain classification with automated method selection
+- **15 Research Methods**: Comprehensive methodology range from simple step-by-step approaches to complex multi-perspective analysis with variable execution times
+- **Quality Enhancement**: Includes validation framework with constitutional AI principles, self-consistency checking, and systematic accuracy assessment
+- **Dual-Agent System**: Coordinates primary research agents with evaluation specialists through systematic monitoring and quality checkpoints
+- **Performance Tracking**: Designed to provide comprehensive logging including decision timestamps, execution duration measurement, outcome quality scoring, and method effectiveness analysis
 
 ## Quick Start
 
-1. **Request Research**: "Help me research [topic]" (topic specification: scope boundaries, depth requirements, quality thresholds)
-2. **Orchestrator Analyzes**: Execute context analysis (complexity assessment: 30-45s, domain classification: ≥85% confidence, quality requirement parsing: ≤30s)
-3. **Method Selection**: Apply selection algorithm (method compatibility scoring, resource estimation, execution time calculation: ≤60s total)
-4. **Research Execution**: Coordinate AI agents using selected methods (parallel execution: 2-4 agents maximum, quality monitoring: continuous, timeout limits: 5-45 minutes per method)
-5. **Quality Evaluation**: Execute validation protocol (accuracy verification: ≥90%, completeness assessment: ≥85%, consistency checking: ≥88%, constitutional compliance: ≥95%)
+1. **Request Research**: "Help me research [topic]" with scope boundaries, depth requirements, and quality expectations
+2. **Orchestrator Analyzes**: Performs context analysis including complexity assessment, domain classification, and quality requirement parsing
+3. **Method Selection**: Applies selection algorithm with method compatibility scoring, resource estimation, and execution planning
+4. **Research Execution**: Coordinates AI agents using selected methods with parallel execution capabilities and quality monitoring
+5. **Quality Evaluation**: Applies validation protocol with accuracy verification, completeness assessment, consistency checking, and constitutional compliance review
 
 ## Framework Structure
 
@@ -29,6 +31,38 @@ research/
 ├── learning/              # Pattern observations and performance data
 └── templates/             # Research document templates
 ```
+
+## Framework Limitations
+
+**Current Development Status**: The research framework is in active development with the following known limitations:
+
+- **Performance Metrics**: Timing and quality specifications are design targets, not empirically validated measurements
+- **Method Effectiveness**: Individual research method performance varies significantly based on topic complexity and domain expertise requirements
+- **Resource Requirements**: Actual computational and time resources depend on research scope and may exceed initial estimates
+- **Quality Assurance**: Validation procedures are implemented but effectiveness varies based on content type and research domain
+- **Integration Dependencies**: Framework relies on external file structures and templates that must be properly configured
+
+**Recommended Usage**: Best suited for systematic research workflows where structured methodology is more important than performance guarantees.
+
+## User Expectations
+
+**What This Framework Provides**:
+- Structured approach to research coordination with multiple methods available
+- Systematic file organization and documentation templates
+- Integration with existing Claude research capabilities
+- Quality validation procedures and compliance checking
+
+**What This Framework Does NOT Guarantee**:
+- Specific execution times or performance benchmarks
+- Consistent quality outcomes across all research topics
+- Automatic success for complex or specialized research domains
+- Zero-configuration deployment without proper setup
+
+**Realistic Usage Scenarios**:
+- **Best Fit**: Systematic research projects requiring documentation and validation
+- **Good Fit**: Multi-perspective analysis where methodology structure is valuable
+- **Poor Fit**: Quick ad-hoc research questions or time-critical investigations
+- **Not Suitable**: Research requiring specialized domain expertise not available in the methods
 
 ## 📋 For AI Agents
 
@@ -50,12 +84,12 @@ This Claude-specific integration file contains complete instructions for using t
 
 **CRITICAL: Before starting ANY research, AI agents MUST execute registry similarity analysis:**
 
-1. **Registry Analysis Requirement**: Execute Step 2.5 from @research/orchestrator/integration/claude-orchestrator-integration.yaml
+1. **Registry Analysis Requirement**: Follow Step 2.5 from @research/orchestrator/integration/claude-orchestrator-integration.yaml
 2. **Similarity Assessment**: Compare proposed research against existing research in research/findings/research-registry.yaml
 3. **Decision Framework**: 
-   - **High Similarity (≥80%)**: Recommend referencing existing research instead of duplicating
-   - **Moderate Similarity (40-79%)**: Recommend extending existing research with new perspectives
-   - **Low Similarity (≤39%)**: Proceed with comprehensive new research
+   - **High Similarity**: Recommend referencing existing research instead of duplicating
+   - **Moderate Similarity**: Recommend extending existing research with new perspectives
+   - **Low Similarity**: Proceed with comprehensive new research
 4. **User Interaction**: Present similarity findings and recommendations before proceeding
 5. **Documentation**: Include registry analysis results in research-plan.md and execution-log.yaml
 
@@ -158,7 +192,7 @@ research/findings/[topic]/
    - Create `research/findings/[topic]/summary.yaml` using @research/templates/research-summary-template.yaml
    - Extract quality metrics from research-execution-log.yaml
    - Generate executive summary from comprehensive-analysis.md
-   - Apply automatic categorization based on domain keywords
+   - Use automatic categorization based on domain keywords
    - Calculate similarity scores against existing research
 
 2. **Research Browser Update**:
