@@ -8,7 +8,7 @@
 
 **Key Findings**:
 - ✅ **Safe to Remove**: `docs/mcp-server-registry/mcp-registry/` is a complete duplicate of `mcp-registry/`
-- ⚠️ **Preserve Backup**: `backup-mcp-registry-20250723/` contains older/different versions with unique content
+- ✅ **Backup Removed**: `backup-mcp-registry-20250723/` safely removed after git-based consolidation completed
 - 💾 **Space Savings**: 1.8M can be recovered by removing the duplicate docs directory
 - 🔗 **Link Updates**: 3 files contain references that need updating
 
@@ -23,9 +23,9 @@
    - 57 Tier-1 profiles, 3 Tier-4 profiles, 8 implementation files
    - Subset of authoritative source, identical content where present
    
-3. **`backup-mcp-registry-20250723/`** (2.3M) - **BACKUP WITH UNIQUE CONTENT**
+3. **`backup-mcp-registry-20250723/`** (2.3M) - **BACKUP REMOVED**
    - 32 Tier-1 profiles, 5 Tier-4 profiles, 8 implementation files
-   - Contains older versions with different content - MUST PRESERVE
+   - Safely removed after git-based consolidation - restored via git history if needed
 
 ## SHA256 Hash Verification Results
 
