@@ -3,8 +3,8 @@
 # Detailed session data is archived in research/sessions/
 
 research_registry:
-  version: "2.1.0"
-  last_updated: "2025-07-23"
+  version: "2.2.0"
+  last_updated: "2025-07-24"
   archive_location: "research/sessions/"
   
 research_sessions:
@@ -504,8 +504,8 @@ research_effectiveness:
 
 # Research Archive and Consolidation
 research_archive:
-  version: "1.0.0"
-  last_updated: "2025-07-20"
+  version: "2.0.0"
+  last_updated: "2025-07-24"
   archive_location: "research/findings/archive/"
   
   consolidations:
@@ -538,3 +538,56 @@ research_archive:
         enabled: true
         forwarding_files: ["MOVED.md", "README.md"]
         cross_reference_updates: true
+    
+    domain_consolidation_2025_07_24:
+      consolidation_date: "2025-07-24"
+      consolidation_type: "domain_consolidation"
+      consolidator: "Claude Sonnet 4"
+      purpose: "Streamline research findings by consolidating related domains into comprehensive archives"
+      
+      consolidated_archives:
+        mcp_servers_ecosystem:
+          target_archive: "research/findings/mcp-servers-2025/"
+          consolidated_folders:
+            - "ai-testing-monitoring-mcp-integration"
+            - "appcypher-awesome-mcp-servers-analysis"
+            - "docker-mcp-servers-analysis"
+            - "figma-mcp-integration"
+            - "mcp-capability-assessment-matrix"
+            - "mcp-comprehensive-landscape-analysis"
+            - "mcp-ecosystem-comprehensive-analysis"
+            - "mcp-registry-analysis"
+            - "mcp-servers-comprehensive-catalog"
+            - "official-mcp-servers-analysis"
+            - "remaining-mcp-repositories-analysis"
+            - "tensorblock-mcp-servers-analysis"
+          folders_removed: 12
+          reason: "Unified MCP ecosystem analysis with comprehensive 2,200+ server coverage"
+        
+        authentication_solutions:
+          target_archive: "research/findings/keycloak-workos-comprehensive-analysis/"
+          consolidated_folders:
+            - "keycloak-workos-business-case-analysis"
+            - "keycloak-workos-security-analysis"
+            - "keycloak-workos-technical-implementation"
+          folders_removed: 3
+          reason: "Comprehensive authentication platform comparison with 392% WorkOS ROI analysis"
+        
+        notion_productivity:
+          target_archive: "research/findings/notion-comprehensive-analysis/"
+          consolidated_folders:
+            - "notion-architecture-analysis"
+            - "notion-claude-productivity-integration"
+            - "notion-knowledge-vault-structure-analysis"
+            - "notion-vs-confluence-comparison"
+          folders_removed: 4
+          reason: "Unified Notion productivity analysis with 5x improvement metrics"
+      
+      consolidation_benefits:
+        - streamlined_navigation: "Reduced research folder count by 19 folders"
+        - unified_knowledge_base: "Consolidated domain expertise into comprehensive archives"
+        - improved_discoverability: "Domain-based organization for faster research access"
+        - preserved_history: "All original research preserved in consolidated archives"
+        - maintained_cross_references: "Registry updated to reflect new structure"
+      
+      preservation_note: "All important standalone research preserved (ui-ux documentation, vector database analysis, cloud development, etc.)"
