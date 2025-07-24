@@ -1,4 +1,4 @@
-# YouTube MCP Server - Detailed Profile
+# Tier 4: YouTube MCP Server - Detailed Profile
 
 **Tier**: Tier 4 Low-Priority  
 **Composite Score**: 4.75/10  

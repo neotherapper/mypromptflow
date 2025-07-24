@@ -1,4 +1,4 @@
-# AWS Comprehensive MCP Server - Tier 1 Enterprise Profile
+# Tier 1: AWS Comprehensive MCP Server - Enterprise Profile
 
 **Classification:** Tier 1 Premium Enterprise Platform  
 **Composite Score:** 9.75/10 (HIGHEST SCORING)  

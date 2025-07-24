@@ -1,4 +1,4 @@
-# Spotify MCP Server - Detailed Profile
+# Tier 4: Spotify MCP Server - Detailed Profile
 
 **Tier**: Tier 4 Low-Priority  
 **Composite Score**: 4.25/10  

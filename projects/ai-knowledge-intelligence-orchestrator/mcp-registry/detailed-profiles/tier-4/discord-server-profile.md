@@ -1,4 +1,4 @@
-# Discord MCP Server - Detailed Profile
+# Tier 4: Discord MCP Server - Detailed Profile
 
 **Tier**: Tier 4 Low-Priority  
 **Composite Score**: 4.35/10  
@@ -6,15 +6,15 @@
 **Category**: Social Media & Gaming Communication  
 **Provider**: Community  
 
-**🚨 DEMOTED FROM TIER 2**: Originally scored 7.4/10 but downgraded to **Tier 4 Low-Priority (4.35/10)** due to minimal business development and maritime insurance value alignment.
+**🚨 DEMOTED FROM TIER 2**: Originally scored 7.4/10 but downgraded to **Tier 4 Low-Priority (4.35/10)** due to minimal business development value alignment.
 
 ---
 
 ## Executive Summary
 
-Discord MCP Server provides gaming and community communication capabilities primarily focused on social interaction and entertainment. **DEMOTED TO TIER 4** due to limited business value for development workflows and maritime insurance operations, despite strong technical capabilities.
+Discord MCP Server provides gaming and community communication capabilities primarily focused on social interaction and entertainment. **DEMOTED TO TIER 4** due to limited business value for development workflows, despite strong technical capabilities.
 
-**BUSINESS ALIGNMENT ISSUE**: While Discord has excellent technical features for community management, it does not align with core business priorities for development infrastructure or maritime insurance business operations.
+**BUSINESS ALIGNMENT ISSUE**: While Discord has excellent technical features for community management, it does not align with core business priorities for development infrastructure or business operations.
 
 ---
 
@@ -31,7 +31,7 @@ Discord MCP Server provides gaming and community communication capabilities prim
 
 **Total Composite Score**: 4.35/10 (**DOWN from 7.4/10**)  
 **Tier Classification**: Tier 4 Low-Priority (**DEMOTED from Tier 2**)  
-**Business Rationale**: Gaming/social communication not aligned with development or maritime insurance business focus  
+**Business Rationale**: Gaming/social communication not aligned with development or business focus  
 
 ---
 
@@ -42,7 +42,7 @@ Discord MCP Server provides gaming and community communication capabilities prim
 **PRIMARY REASON**: **Gaming/Entertainment Platform Classification**
 - **Business Domain Relevance Score**: Only 3/10 points due to consumer entertainment focus
 - **Development Value Gap**: Limited business development workflow applications
-- **Maritime Insurance Irrelevance**: No direct application to insurance business operations
+- **Business Application Gap**: No direct application to business development operations
 - **Resource Allocation**: Entertainment platforms receive lowest business priority
 
 ### Business-Aligned Scoring Impact

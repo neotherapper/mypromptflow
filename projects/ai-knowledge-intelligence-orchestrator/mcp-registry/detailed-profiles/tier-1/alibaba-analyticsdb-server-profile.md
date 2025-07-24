@@ -1,4 +1,4 @@
-# Alibaba AnalyticsDB MCP Server - Tier 1 Enterprise Profile
+# Tier 1: Alibaba AnalyticsDB MCP Server - Enterprise Profile
 
 **Tier**: Tier 1 Strategic Enterprise Platform  
 **Composite Score**: 9.25/10  

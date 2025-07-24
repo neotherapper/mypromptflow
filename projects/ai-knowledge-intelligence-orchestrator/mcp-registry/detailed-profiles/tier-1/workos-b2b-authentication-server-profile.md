@@ -2,17 +2,17 @@
 
 ## Executive Summary
 
-The WorkOS B2B Authentication Server represents a comprehensive enterprise user management and SSO integration solution designed for maritime insurance B2B workflows requiring sophisticated multi-organization access control and partner platform integration. This enterprise-grade MCP server provides unified authentication across broker portals, client platforms, and corporate SSO systems, enabling maritime insurers to streamline enterprise client access while maintaining rigorous security compliance.
+The WorkOS B2B Authentication Server represents a comprehensive enterprise user management and SSO integration solution designed for business-to-business workflows requiring sophisticated multi-organization access control and partner platform integration. This enterprise-grade MCP server provides unified authentication across client portals, partner platforms, and corporate SSO systems, enabling organizations to streamline enterprise client access while maintaining rigorous security compliance.
 
-**Strategic Value**: Primary enabler for maritime insurance B2B platform consolidation, supporting enterprise client access, broker integration, and multi-tenant authentication across diverse organizational structures.
+**Strategic Value**: Primary enabler for B2B platform integration, supporting enterprise client access, partner integration, and multi-tenant authentication across diverse organizational structures.
 
 ## Quality & Scoring Metrics
 
-### Business-Aligned Scoring (Maritime Insurance Focus)
+### Business-Aligned Scoring (B2B Authentication Focus)
 - **Overall Quality Score**: 92/100
-- **Maritime Insurance Relevance**: 89/100
-- **B2B Integration Capability**: 94/100
-- **Enterprise Authentication Security**: 96/100
+- **B2B Integration Relevance**: 89/100
+- **Authentication Platform Capability**: 94/100
+- **Enterprise Security**: 96/100
 - **SSO Implementation Complexity**: 88/100
 - **Multi-Tenant Scalability**: 93/100
 
@@ -54,8 +54,8 @@ supported_protocols:
 ```
 
 ### Multi-Organization Architecture
-- **Tenant Isolation**: Complete data separation between maritime insurance organizations
-- **Role-Based Access Control**: Granular permissions for brokers, underwriters, clients
+- **Tenant Isolation**: Complete data separation between business organizations
+- **Role-Based Access Control**: Granular permissions for users, administrators, partners
 - **Cross-Organization Workflows**: Secure data sharing between authorized entities
 - **Enterprise Integration**: Native support for existing corporate identity systems
 
@@ -87,22 +87,22 @@ supported_protocols:
 # 1. Install WorkOS B2B Authentication Server
 npm install -g @workos/mcp-b2b-auth-server
 
-# 2. Initialize maritime insurance configuration
-workos-auth init --template maritime-insurance
+# 2. Initialize enterprise B2B configuration
+workos-auth init --template enterprise-b2b
 
 # 3. Configure primary enterprise SSO provider
 workos-auth config add-sso \
   --provider azure-ad \
-  --organization maritime-underwriters-llc \
-  --domain maritime-underwriters.com \
+  --organization enterprise-company-llc \
+  --domain enterprise-company.com \
   --client-id "azure-client-id" \
   --client-secret "azure-client-secret"
 
-# 4. Setup broker portal SSO
+# 4. Setup partner portal SSO
 workos-auth config add-sso \
   --provider okta \
-  --organization maritime-brokers-network \
-  --domain brokers.maritime.com \
+  --organization partner-network \
+  --domain partners.enterprise.com \
   --saml-endpoint "https://brokers.okta.com/app/saml" \
   --certificate-path "/path/to/okta-cert.pem"
 
@@ -976,12 +976,12 @@ class RegulatoryComplianceAuth {
 
 ## Conclusion
 
-The WorkOS B2B Authentication Server serves as a critical enabler for maritime insurance B2B platform consolidation, providing comprehensive enterprise user management and SSO integration across broker networks, corporate clients, and regulatory systems. With its advanced multi-organization support, security compliance, and maritime-specific workflow integration, this platform delivers substantial ROI while enhancing the B2B user experience.
+The WorkOS B2B Authentication Server serves as a critical enabler for enterprise B2B platform consolidation, providing comprehensive enterprise user management and SSO integration across partner networks, corporate clients, and business systems. With its advanced multi-organization support, security compliance, and enterprise workflow integration, this platform delivers substantial ROI while enhancing the B2B user experience.
 
 **Key Success Factors:**
 - **Proven B2B Authentication**: Successfully manages multi-tenant authentication for complex organizational structures
-- **Maritime Industry Integration**: Native support for broker networks, corporate clients, and regulatory compliance
-- **Enterprise Security**: Meets SOC 2, SAML 2.0, and maritime regulatory security requirements
+- **Enterprise Integration**: Native support for partner networks, corporate clients, and regulatory compliance
+- **Enterprise Security**: Meets SOC 2, SAML 2.0, and regulatory security requirements
 - **Scalable Multi-Tenancy**: Supports unlimited organizational growth with complete tenant isolation
 
-**Implementation Recommendation**: Priority deployment for maritime insurers seeking to consolidate B2B authentication across broker networks and corporate client portals. The 1.9-month payback period and 547% annual ROI make this a compelling strategic investment for B2B platform modernization.
+**Implementation Recommendation**: Priority deployment for enterprises seeking to consolidate B2B authentication across partner networks and corporate client portals. The comprehensive SSO capabilities and enterprise security features make this a compelling strategic investment for B2B platform modernization.

@@ -1,4 +1,4 @@
-# Aider MCP Enhancement Server - Tier 1 Detailed Profile
+# Tier 1: Aider MCP Enhancement Server - Detailed Profile
 
 ## Executive Summary
 
