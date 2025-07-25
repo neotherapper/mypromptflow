@@ -1,0 +1,13 @@
+id: ''
+event_title: React 18.2.0 Released
+technology_name: React
+technology_category: frontend_framework
+change_type: new_feature
+change_classification: medium
+detection_source: github_releases
+detection_method: automated_monitoring
+change_description: React 18.2.0 includes new features and bug fixes
+processing_status: detected
+previous_version: 18.1.0
+new_version: 18.2.0
+detected_date: '2025-07-25T00:34:24.101591'

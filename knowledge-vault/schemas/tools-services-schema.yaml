@@ -320,9 +320,6 @@ properties:
       - value: "business-strategy"
         name: "Business Strategy"
         color: "red"
-      - value: "maritime-insurance"
-        name: "Maritime Insurance"
-        color: "blue"
       - value: "analytics"
         name: "Analytics"
         color: "blue"
@@ -335,6 +332,24 @@ properties:
       - value: "communication"
         name: "Communication"
         color: "blue"
+      - value: "collaboration"
+        name: "Collaboration"
+        color: "green"
+      - value: "documentation"
+        name: "Documentation"
+        color: "purple"
+      - value: "security"
+        name: "Security"
+        color: "red"
+      - value: "monitoring"
+        name: "Monitoring"
+        color: "orange"
+      - value: "testing"
+        name: "Testing"
+        color: "blue"
+      - value: "deployment"
+        name: "Deployment"
+        color: "green"
       
       # Industry Verticals
       - value: "fintech"
@@ -346,6 +361,24 @@ properties:
       - value: "enterprise"
         name: "Enterprise"
         color: "purple"
+      - value: "legaltech"
+        name: "LegalTech"
+        color: "red"
+      - value: "healthtech"
+        name: "HealthTech"
+        color: "blue"
+      - value: "edtech"
+        name: "EdTech"
+        color: "orange"
+      - value: "proptech"
+        name: "PropTech"
+        color: "green"
+      - value: "retailtech"
+        name: "RetailTech"
+        color: "purple"
+      - value: "traveltech"
+        name: "TravelTech"
+        color: "blue"
       
       # Business Models
       - value: "saas"
@@ -385,9 +418,47 @@ properties:
       - value: "monitoring"
         name: "Monitoring"
         color: "red"
-      - value: "maritime-specific"
-        name: "Maritime Specific"
+      
+      # Company/Vendor Tags (for MCP server relationships)
+      - value: "microsoft"
+        name: "Microsoft"
         color: "blue"
+      - value: "google"
+        name: "Google"
+        color: "red"
+      - value: "amazon"
+        name: "Amazon"
+        color: "orange"
+      - value: "atlassian"
+        name: "Atlassian"
+        color: "blue"
+      - value: "docker"
+        name: "Docker"
+        color: "blue"
+      - value: "github"
+        name: "GitHub"
+        color: "purple"
+      - value: "slack"
+        name: "Slack"
+        color: "purple"
+      - value: "notion"
+        name: "Notion"
+        color: "purple"
+      - value: "linear"
+        name: "Linear"
+        color: "blue"
+      - value: "stripe"
+        name: "Stripe"
+        color: "purple"
+      - value: "auth0"
+        name: "Auth0"
+        color: "orange"
+      - value: "openai"
+        name: "OpenAI"
+        color: "green"
+      - value: "anthropic"
+        name: "Anthropic"
+        color: "red"
         
   # Content and Documentation
   url:
@@ -480,12 +551,28 @@ properties:
     related_database: "business_ideas"
     dual_property: "tools_services_relations"
     
+  maritime_intelligence_relations:
+    type: "relation"
+    required: false
+    description: "Related maritime intelligence applications"
+    related_database: "maritime_intelligence"
+    dual_property: "tools_services_relations"
+    
   notes_ideas_relations:
     type: "relation"
     required: false
     description: "Related notes and technical insights"
     related_database: "notes_ideas"
     dual_property: "tools_services_relations"
+    
+  # MCP Server Profile Cross-References (New for intelligent tagging)
+  mcp_server_profiles:
+    type: "rich_text"
+    required: false
+    description: "Cross-references to related MCP server profiles using @mcp_profile/{server-name} format"
+    validation_pattern: "@mcp_profile/[a-zA-Z0-9-_]+"
+    cross_reference_type: "mcp_profiles"
+    bidirectional: true
     
   # Rollup Properties for Analysis
   business_relevance_score:
@@ -635,14 +722,6 @@ views:
       - field: "rating"
         direction: "descending"
       - field: "business_relevance_score"
-        direction: "descending"
-        
-  mcp_maritime_specific:
-    name: "Maritime MCP Servers"
-    filter:
-      tags: ["mcp-server", "maritime-specific"]
-    sort:
-      - field: "rating"
         direction: "descending"
         
   mcp_information_retrieval:

@@ -684,30 +684,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-# Orchestrator schema validation
-ORCHESTRATOR_SCHEMAS = [
-    'knowledge-vault/schemas/technology-tracking-schema.yaml',
-    'knowledge-vault/schemas/dependency-mapping-schema.yaml',
-    'knowledge-vault/schemas/knowledge-update-schema.yaml',
-    'knowledge-vault/schemas/change-event-schema.yaml'
-]
-
-
-def validate_orchestrator_schemas():
-    """Validate all orchestrator-related schemas"""
-    print("Validating orchestrator schemas...")
-    for schema_path in ORCHESTRATOR_SCHEMAS:
-        if os.path.exists(schema_path):
-            print(f"✓ Found schema: {schema_path}")
-            # Additional validation logic would go here
-        else:
-            print(f"✗ Missing schema: {schema_path}")
-            return False
-    print("All orchestrator schemas validated successfully")
-    return True
-
-
-if __name__ == "__main__":
-    # Add orchestrator validation to main execution
-    validate_orchestrator_schemas()

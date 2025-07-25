@@ -1,340 +1,463 @@
-# Knowledge Vault Database Schema
-# Central hub database for the file-based knowledge management system
-# Replicates Notion Knowledge Vault structure with full relationship support
-
 database_info:
-  name: "Knowledge Vault"
-  type: "central_hub"
-  notion_id: "3773b9d6-2c31-42e3-b79d-17b7a5fe1174"
-  description: "Central knowledge repository with cross-database relationships"
-  version: "1.0.0"
-  created: "2024-07-21"
-
+  name: Knowledge Vault
+  type: central_hub
+  notion_id: 3773b9d6-2c31-42e3-b79d-17b7a5fe1174
+  description: Central knowledge repository with comprehensive cross-database relationships and advanced tagging
+  version: 2.0.0
+  created: '2024-07-21'
+  updated: '2025-01-24'
+  blueprint_source: 'knowledge-item-blueprint.yaml'
 properties:
-  # Core Identification
   id:
-    type: "uuid"
+    type: uuid
     required: true
-    description: "Unique identifier for the knowledge item"
-    format: "uuid_v4"
-    
+    description: Unique identifier for the knowledge item
+    format: uuid_v4
   name:
-    type: "title"
+    type: title
     required: true
-    description: "Title/name of the knowledge item"
+    description: Title/name of the knowledge item
     max_length: 200
-    
-  # Rating System (5-star scale matching Notion)
   rating:
-    type: "select"
+    type: select
     required: false
-    description: "5-star rating system with color classification"
+    description: 5-star rating system with color classification
     options:
-      - value: 5
-        name: "⭐⭐⭐⭐⭐"
-        color: "red"
-        description: "Exceptional"
-      - value: 4
-        name: "⭐⭐⭐⭐"
-        color: "green" 
-        description: "Excellent"
-      - value: 3
-        name: "⭐⭐⭐"
-        color: "yellow"
-        description: "Good"
-      - value: 2
-        name: "⭐⭐"
-        color: "blue"
-        description: "Fair"
-      - value: 1
-        name: "⭐"
-        color: "gray"
-        description: "Poor"
-        
-  # Status Workflow
+    - value: 5
+      name: "\u2B50\u2B50\u2B50\u2B50\u2B50"
+      color: red
+      description: Exceptional
+    - value: 4
+      name: "\u2B50\u2B50\u2B50\u2B50"
+      color: green
+      description: Excellent
+    - value: 3
+      name: "\u2B50\u2B50\u2B50"
+      color: yellow
+      description: Good
+    - value: 2
+      name: "\u2B50\u2B50"
+      color: blue
+      description: Fair
+    - value: 1
+      name: "\u2B50"
+      color: gray
+      description: Poor
   status:
-    type: "select"
+    type: select
     required: true
-    description: "Current status in knowledge lifecycle"
-    default: "to_explore"
+    description: Current status in knowledge lifecycle
+    default: active
+    notion_mapping: Status
     options:
-      - value: "to_explore"
-        name: "To Explore"
-        color: "default"
-      - value: "in_review"
-        name: "In Review"
-        color: "yellow"
-      - value: "active_use"
-        name: "Active Use"
-        color: "green"
-      - value: "archived"
-        name: "Archived"
-        color: "gray"
-        
-  # Advanced Tagging System (25+ categories from Notion analysis)
+    - value: active
+      name: Active
+      color: green
+      description: Currently relevant and in use
+    - value: archived
+      name: Archived
+      color: red
+      description: No longer active but preserved for reference
   tags:
-    type: "multi_select"
+    type: multi_select
     required: false
-    description: "Comprehensive categorization system"
-    options:
-      # Technology Categories
-      - value: "ai"
-        name: "AI"
-        color: "red"
-      - value: "automation"
-        name: "Automation"
-        color: "blue"
-      - value: "developer-tools"
-        name: "Developer Tools"
-        color: "purple"
-      - value: "integration"
-        name: "Integration"
-        color: "green"
-      - value: "no-code"
-        name: "No-Code"
-        color: "orange"
-      - value: "software-development"
-        name: "Software Development"
-        color: "blue"
-      - value: "tech-stack"
-        name: "Tech Stack"
-        color: "purple"
-      
-      # Business Categories
-      - value: "business-strategy"
-        name: "Business Strategy"
-        color: "red"
-      - value: "cost-optimization"
-        name: "Cost Optimization"
-        color: "yellow"
-      - value: "customer-experience"
-        name: "Customer Experience"
-        color: "green"
-      - value: "digital-marketing"
-        name: "Digital Marketing"
-        color: "orange"
-      - value: "entrepreneurship"
-        name: "Entrepreneurship"
-        color: "red"
-      - value: "finance"
-        name: "Finance"
-        color: "green"
-      - value: "growth-hacking"
-        name: "Growth Hacking"
-        color: "orange"
-      - value: "sales"
-        name: "Sales"
-        color: "blue"
-      
-      # Productivity Categories
-      - value: "design"
-        name: "Design"
-        color: "purple"
-      - value: "efficiency"
-        name: "Efficiency"
-        color: "green"
-      - value: "innovation"
-        name: "Innovation"
-        color: "red"
-      - value: "productivity"
-        name: "Productivity"
-        color: "blue"
-      - value: "project-management"
-        name: "Project Management"
-        color: "orange"
-        
-  # Priority System (5-tier matching Notion)
+    description: Comprehensive tagging for categorization and discovery
+    notion_mapping: Tags
+    max_selections: 10
+    categories:
+      technology_tags:
+        - value: language
+          name: Language
+          color: blue
+        - value: fe-framework
+          name: FE Framework
+          color: green
+        - value: be-framework
+          name: BE Framework
+          color: purple
+        - value: database
+          name: Database
+          color: orange
+        - value: tool
+          name: Tool
+          color: gray
+        - value: ai-tool
+          name: AI Tool
+          color: red
+        - value: business-tool
+          name: Business Tool
+          color: yellow
+      concept_tags:
+        - value: concept
+          name: Concept
+          color: blue
+        - value: web-concepts
+          name: Web Concepts
+          color: green
+        - value: technology-concepts
+          name: Technology Concepts
+          color: purple
+        - value: business-concepts
+          name: Business Concepts
+          color: orange
+        - value: programming-concepts
+          name: Programming Concepts
+          color: pink
+        - value: frontend-concepts
+          name: Frontend Concepts
+          color: red
+        - value: backend-concepts
+          name: Backend Concepts
+          color: brown
+      business_tags:
+        - value: companies
+          name: Companies
+          color: blue
+        - value: business-areas
+          name: Business Areas
+          color: green
+        - value: ai
+          name: AI
+          color: red
+      specialized_tags:
+        - value: design-system
+          name: Design System
+          color: purple
+        - value: mobile
+          name: Mobile
+          color: green
+        - value: gaming
+          name: Gaming
+          color: red
+        - value: data
+          name: Data
+          color: blue
   priority:
-    type: "select"
+    type: select
     required: false
-    description: "Priority level for knowledge item"
+    description: Priority level for attention and focus
+    notion_mapping: Priority
+    default: 3rd_priority
     options:
-      - value: "critical"
-        name: "Critical"
-        color: "red"
-      - value: "high"
-        name: "High"
-        color: "orange"
-      - value: "medium"
-        name: "Medium"
-        color: "yellow"
-      - value: "low"
-        name: "Low"
-        color: "blue"
-      - value: "reference"
-        name: "Reference"
-        color: "gray"
-        
-  # Content and Metadata
+    - value: 1st_priority
+      name: 1st Priority
+      color: pink
+      description: Highest priority, immediate attention
+    - value: 2nd_priority
+      name: 2nd Priority
+      color: orange
+      description: High priority, near-term focus
+    - value: 3rd_priority
+      name: 3rd Priority
+      color: yellow
+      description: Medium priority, planned attention
+    - value: 4th_priority
+      name: 4th Priority
+      color: blue
+      description: Lower priority, eventual consideration
+    - value: 5th_priority
+      name: 5th Priority
+      color: gray
+      description: Lowest priority, background awareness
   url:
-    type: "url"
+    type: url
     required: false
-    description: "Web URL for the knowledge resource"
-    
+    description: Primary URL reference for the knowledge item
+    notion_mapping: URL
+    validation_regex: '^https?://.*'
   description:
-    type: "rich_text"
+    type: rich_text
     required: false
-    description: "Detailed description of the knowledge item"
-    
-  category:
-    type: "select"
+    description: Comprehensive description of the knowledge item
+    notion_mapping: Description
+    max_length: 2000
+  date:
+    type: date
     required: false
-    description: "Primary category classification"
-    options:
-      - value: "resource"
-        name: "Resource"
-        color: "blue"
-      - value: "tool"
-        name: "Tool"
-        color: "green"
-      - value: "concept"
-        name: "Concept"
-        color: "purple"
-      - value: "methodology"
-        name: "Methodology"
-        color: "orange"
-      - value: "reference"
-        name: "Reference"
-        color: "gray"
-        
-  # Timestamps
+    description: Relevant date for the knowledge item
+    notion_mapping: Date
+    format: YYYY-MM-DD
   created_date:
-    type: "created_time"
+    type: created_time
     required: true
-    description: "When the knowledge item was created"
-    
+    description: When the knowledge item was created
   last_modified:
-    type: "last_edited_time"
+    type: last_edited_time
     required: true
-    description: "When the knowledge item was last updated"
-    
-  # Cross-Database Relationships (Hub connections to all spoke databases)
+    description: When the knowledge item was last updated
+  # Self-referencing relationships (Knowledge Vault to Knowledge Vault)
+  knowledge_vault_relations:
+    type: relation
+    required: false
+    description: Direct relationships to other knowledge vault items
+    notion_mapping: Knowledge Vault
+    related_database: knowledge_vault
+    relationship_type: bidirectional
+    context_required: true
+  
+  # Hub-spoke relationships to other databases
   training_vault_relations:
-    type: "relation"
+    type: relation
     required: false
-    description: "Related learning programs and courses"
-    related_database: "training_vault"
-    dual_property: "knowledge_vault_relations"
-    
+    description: Related training and learning resources
+    notion_mapping: Training Vault
+    related_database: training_vault
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
   business_ideas_relations:
-    type: "relation"
+    type: relation
     required: false
-    description: "Related innovation ideas and opportunities"
-    related_database: "business_ideas"
-    dual_property: "knowledge_vault_relations"
-    
-  platforms_sites_relations:
-    type: "relation"
-    required: false
-    description: "Related platforms and resource sites"
-    related_database: "platforms_sites"
-    dual_property: "knowledge_vault_relations"
-    
+    description: Related business ideas and opportunities
+    notion_mapping: Business Ideas
+    related_database: business_ideas
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
   tools_services_relations:
-    type: "relation"
+    type: relation
     required: false
-    description: "Related tools and services"
-    related_database: "tools_services" 
-    dual_property: "knowledge_vault_relations"
-    
+    description: Related tools and services
+    notion_mapping: Tools - Services
+    related_database: tools_services
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  platforms_sites_relations:
+    type: relation
+    required: false
+    description: Related platforms and websites
+    notion_mapping: Platforms / Sites
+    related_database: platforms_sites
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  projects_relations:
+    type: relation
+    required: false
+    description: Related projects and initiatives
+    notion_mapping: Projects
+    related_database: projects
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  habits_routines_relations:
+    type: relation
+    required: false
+    description: Related habits and routines
+    notion_mapping: Habits & Routines
+    related_database: habits_routines
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
   notes_ideas_relations:
-    type: "relation"
+    type: relation
     required: false
-    description: "Related notes and captured ideas"
-    related_database: "notes_ideas"
-    dual_property: "knowledge_vault_relations"
-    
-    
-  # Rollup Properties for Data Aggregation
+    description: Related notes and ideas
+    notion_mapping: Notes & Ideas
+    related_database: notes_ideas
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  media_vault_relations:
+    type: relation
+    required: false
+    description: Related media and resources
+    notion_mapping: Media Vault
+    related_database: media_vault
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  pillars_relations:
+    type: relation
+    required: false
+    description: Related foundational pillars
+    notion_mapping: Pillars
+    related_database: pillars
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
+  
+  startups_relations:
+    type: relation
+    required: false
+    description: Related startups and companies
+    notion_mapping: Startups
+    related_database: startups
+    dual_property: knowledge_vault_relations
+    relationship_type: bidirectional
   total_related_items:
-    type: "rollup"
-    description: "Total count of all related items across databases"
-    rollup_property: "id"
-    rollup_function: "count"
-    relation_property: ["training_vault_relations", "business_ideas_relations", "platforms_sites_relations", "tools_services_relations", "notes_ideas_relations"]
-    
+    type: rollup
+    description: Total count of all related items across databases
+    rollup_property: id
+    rollup_function: count
+    relation_property:
+    - training_vault_relations
+    - business_ideas_relations
+    - platforms_sites_relations
+    - tools_services_relations
+    - notes_ideas_relations
   average_related_rating:
-    type: "rollup"
-    description: "Average rating of all related items"
-    rollup_property: "rating"
-    rollup_function: "average"
-    relation_property: ["training_vault_relations", "business_ideas_relations", "platforms_sites_relations", "tools_services_relations"]
-
-# Database Configuration
+    type: rollup
+    description: Average rating of all related items
+    rollup_property: rating
+    rollup_function: average
+    relation_property:
+    - training_vault_relations
+    - business_ideas_relations
+    - platforms_sites_relations
+    - tools_services_relations
+  technology_tracking_relations:
+    type: relation
+    required: false
+    description: Related technology tracking entries
+    related_database: technology_tracking
+    dual_property: knowledge_vault_relations
+  dependency_mapping_relations:
+    type: relation
+    required: false
+    description: Related dependency mappings
+    related_database: dependency_mapping
+    dual_property: knowledge_vault_relations
+  knowledge_updates_relations:
+    type: relation
+    required: false
+    description: Related knowledge updates
+    related_database: knowledge_updates
+    dual_property: knowledge_vault_relations
+  change_events_relations:
+    type: relation
+    required: false
+    description: Related change events
+    related_database: change_events
+    dual_property: knowledge_vault_relations
 configuration:
-  # Hub Role Configuration
   hub_database: true
   central_coordinator: true
-  
-  # Relationship Rules
   relationship_rules:
     bidirectional_required: true
     consistency_validation: true
     orphan_prevention: true
-    
-  # Validation Rules
+    max_relationships: 100
+    max_knowledge_vault_relations: 50
+    max_other_database_relations: 20
   validation:
-    required_fields: ["id", "name", "status"]
-    unique_fields: ["id"]
-    url_validation: true
-    rating_range: [1, 5]
-    
-  # File Organization
+    required_fields:
+    - id
+    - name
+    - status
+    unique_fields:
+    - id
+    name_validation:
+      min_length: 1
+      max_length: 200
+      validation_regex: '^.{1,200}$'
+    description_validation:
+      min_length: 10
+      max_length: 2000
+    url_validation:
+      enabled: true
+      validation_regex: '^https?://.*'
+      required: false
+    tag_validation:
+      max_tags: 10
+      enforce_vocabulary: true
+    priority_validation:
+      allow_duplicates: true
+      enforce_distribution: false
+    status_workflow:
+      allowed_transitions:
+        active_to_archived: true
+        archived_to_active: true
+  transformation_rules:
+    notion_to_file:
+      rich_text_to_markdown:
+        source_format: notion_rich_text
+        target_format: markdown
+        preserve_formatting: true
+      relation_id_mapping:
+        source_format: notion_relation_ids
+        target_format: uuid_references
+        maintain_bidirectional: true
+      multi_select_normalization:
+        source_format: notion_multi_select
+        target_format: tag_array
+        validate_vocabulary: true
+      icon_handling:
+        external_urls: preserve_as_metadata
+        emoji_icons: convert_to_unicode
+        file_icons: download_and_reference
   file_structure:
-    base_path: "knowledge-vault/databases/knowledge_vault/"
-    item_path: "items/"
-    relation_path: "relations/"
-    schema_path: "knowledge_vault_schema.yaml"
-    
-  # Synchronization Settings
+    base_path: knowledge-vault/databases/knowledge_vault/
+    item_path: items/
+    relation_path: relations/
+    schema_path: knowledge_vault_schema.yaml
   notion_sync:
     enabled: true
-    notion_database_id: "3773b9d6-2c31-42e3-b79d-17b7a5fe1174"
-    sync_direction: "bidirectional"
-    conflict_resolution: "manual_review"
-    
-# Index Configuration for Performance
+    notion_database_id: 3773b9d6-2c31-42e3-b79d-17b7a5fe1174
+    sync_direction: bidirectional
+    conflict_resolution: timestamp_winner
+    batch_size: 50
+    performance_target: '>3 items per minute'
 indexes:
-  - fields: ["status", "priority"]
-    description: "Quick filtering by status and priority"
-  - fields: ["tags"]
-    description: "Tag-based searches and filtering"
-  - fields: ["rating"]
-    description: "Rating-based sorting and filtering"
-  - fields: ["last_modified"]
-    description: "Recently updated items"
-    
-# Views Configuration (replicate Notion views)
+- fields:
+  - status
+  - priority
+  description: Quick filtering by status and priority
+- fields:
+  - tags
+  description: Tag-based searches and filtering
+- fields:
+  - rating
+  description: Rating-based sorting and filtering
+- fields:
+  - last_modified
+  description: Recently updated items
 views:
   active_items:
-    name: "Active Items"
+    name: Active Items
+    description: All active knowledge items
     filter:
-      status: ["to_explore", "in_review", "active_use"]
+      status:
+      - active
     sort:
-      - field: "priority"
-        direction: "descending"
-      - field: "rating"
-        direction: "descending"
-        
+    - field: priority
+      direction: ascending  # 1st priority comes first
+    - field: rating
+      direction: descending
   high_priority:
-    name: "High Priority"
+    name: High Priority Items
+    description: Top priority knowledge items requiring immediate attention
     filter:
-      priority: ["critical", "high"]
-      status: ["to_explore", "in_review", "active_use"]
+      priority:
+      - 1st_priority
+      - 2nd_priority
+      status:
+      - active
     sort:
-      - field: "priority"
-        direction: "descending"
-        
-  by_category:
-    name: "By Category"
-    group_by: "category"
+    - field: priority
+      direction: ascending
+    - field: last_modified
+      direction: descending
+  by_tags:
+    name: By Tags
+    description: Knowledge items grouped by tag categories
+    group_by: tags
     sort:
-      - field: "rating"
-        direction: "descending"
-        
+    - field: rating
+      direction: descending
+    - field: last_modified
+      direction: descending
   recent_updates:
-    name: "Recent Updates"
+    name: Recent Updates
+    description: Recently modified knowledge items
     sort:
-      - field: "last_modified"
-        direction: "descending"
+    - field: last_modified
+      direction: descending
     limit: 50
+  highly_connected:
+    name: Highly Connected Items
+    description: Items with many relationships across databases
+    sort:
+    - field: total_related_items
+      direction: descending
+    limit: 25

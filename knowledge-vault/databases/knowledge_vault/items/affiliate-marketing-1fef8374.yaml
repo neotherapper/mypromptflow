@@ -1,0 +1,74 @@
+# Knowledge Vault Item: Affiliate Marketing
+# Generated from Notion database migration
+# Created: 2025-01-24
+
+metadata:
+  item_type: knowledge_item
+  source: notion_migration
+  notion_id: 1fef8374-7088-80b0-a9b8-cf6636c1fa54
+  created_date: "2025-05-25T23:03:00.000Z"
+  last_modified: "2025-05-27T20:58:00.000Z"
+  migration_date: "2025-01-24"
+
+## 📝 Core Information
+
+name: "Affiliate Marketing"
+description: null
+url: null
+
+## 🏷️ Classification & Status
+
+status: "active"
+priority: "2nd_priority"
+tags: ["Business Concepts"]
+
+## 🔗 Relationship Management
+
+# Self-referencing relationships (Knowledge Vault to Knowledge Vault)
+knowledge_vault_relations:
+  - id: "a3f8d430-f35c-427f-b4ca-5a41c0ff2272"
+    context: "Related knowledge vault item"
+
+# Hub-spoke relationships to other databases
+pillars_relations:
+  - id: "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f"
+    context: "Related foundational pillar"
+
+tools_services_relations:
+  - id: "1fef8374-7088-8157-8054-fda0d862db16"
+    context: "Related tool/service"
+  - id: "205f8374-7088-81b6-abd4-faaa21b78aec"
+    context: "Related tool/service"
+  - id: "208f8374-7088-8182-890d-e79efd139a9c"
+    context: "Related tool/service"
+  - id: "208f8374-7088-81e2-8858-ea461a908f21"
+    context: "Related tool/service"
+
+business_ideas_relations:
+  - id: "208f8374-7088-8062-8d99-ee9021ba084e"
+    context: "Related business idea"
+
+media_vault_relations:
+  - id: "212f8374-7088-8136-82bf-e55fc10b2b51"
+    context: "Related media vault item"
+
+training_vault_relations: []
+platforms_sites_relations: []
+projects_relations: []
+habits_routines_relations: []
+notes_ideas_relations: []
+startups_relations: []
+
+## 📊 Metadata & Timestamps
+
+date: null
+created_date: "2025-05-25T23:03:00.000Z"
+last_modified: "2025-05-27T20:58:00.000Z"
+source_database: "knowledge_vault"
+uuid: "1fef8374-7088-80b0-a9b8-cf6636c1fa54"
+
+## 🌐 External References
+
+icon_url: "data:image/png;base64,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"
+notion_url: "https://www.notion.so/Affiliate-Marketing-1fef8374708880b0a9b8cf6636c1fa54"
+public_url: "https://neotherapper.notion.site/Affiliate-Marketing-1fef8374708880b0a9b8cf6636c1fa54"

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Knowledge Vault Batch Migration System
+Knowledge Vault Batch Migration System with Database ID Registry Integration
 Production-ready migration script for VanguardAI test environment
-Supports complete 30-item migration with comprehensive error handling
+Supports complete 30-item migration with comprehensive error handling and intelligent caching
 """
 
 import os
@@ -23,6 +23,9 @@ import re
 # Add the project root to Python path for imports
 PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+
+# Import Database ID Registry Manager
+from database_id_registry_manager import DatabaseIDRegistryManager
 
 # Configuration
 NOTION_API_VERSION = "2022-06-28"
@@ -300,15 +303,36 @@ class DataTransformer:
             return False
 
 class RelationshipManager:
-    """Manage cross-database relationships"""
+    """Manage cross-database relationships with Database ID Registry integration"""
     
-    def __init__(self, notion_client: NotionAPIClient):
+    def __init__(self, notion_client: NotionAPIClient, registry_manager: DatabaseIDRegistryManager = None):
         self.notion_client = notion_client
-        self.item_id_to_page_id = {}  # Cache for item ID to Notion page ID mapping
+        self.item_id_to_page_id = {}  # Legacy cache for compatibility
+        self.registry_manager = registry_manager or DatabaseIDRegistryManager()
+        logger.info("RelationshipManager initialized with Database ID Registry integration")
         
-    def add_item_mapping(self, item_id: str, notion_page_id: str, database_type: str):
-        """Add item ID to Notion page ID mapping"""
+    def add_item_mapping(self, item_id: str, notion_page_id: str, database_type: str, 
+                         database_notion_id: str = "", title: str = "", content: str = ""):
+        """Add item ID to Notion page ID mapping with Database ID Registry integration"""
+        # Legacy cache for compatibility
         self.item_id_to_page_id[f"{database_type}/{item_id}"] = notion_page_id
+        
+        # Add to Database ID Registry for performance optimization
+        try:
+            success = self.registry_manager.add_registry_entry(
+                item_uuid=item_id,
+                notion_page_id=notion_page_id,
+                database_id=database_type,
+                database_notion_id=database_notion_id,
+                title=title,
+                content=content
+            )
+            if success:
+                logger.debug(f"Added registry entry for {item_id} -> {notion_page_id}")
+            else:
+                logger.warning(f"Failed to add registry entry for {item_id}")
+        except Exception as e:
+            logger.error(f"Error adding registry entry for {item_id}: {e}")
         
     def resolve_relationships(self, relationships: List[Dict], database_mappings: Dict) -> int:
         """Resolve and create relationship links"""
@@ -326,13 +350,22 @@ class RelationshipManager:
                 target_db, target_item_id = match.groups()
                 target_key = f"{target_db}/{target_item_id}"
                 
-                # Find target page ID
-                if target_key not in self.item_id_to_page_id:
-                    logger.warning(f"Target item not found: {target_ref}")
-                    continue
-                    
-                target_page_id = self.item_id_to_page_id[target_key]
-                source_page_id = self.item_id_to_page_id.get(f"{rel.get('source_database', '')}/{rel['source_item']}")
+                # Find target page ID using registry-first approach
+                target_page_id = self.registry_manager.get_notion_page_id(target_item_id, target_db)
+                if not target_page_id:
+                    # Fallback to legacy cache
+                    target_page_id = self.item_id_to_page_id.get(target_key)
+                    if not target_page_id:
+                        logger.warning(f"Target item not found: {target_ref}")
+                        continue
+                
+                # Find source page ID using registry-first approach
+                source_item_id = rel['source_item']
+                source_db = rel.get('source_database', '')
+                source_page_id = self.registry_manager.get_notion_page_id(source_item_id, source_db)
+                if not source_page_id:
+                    # Fallback to legacy cache
+                    source_page_id = self.item_id_to_page_id.get(f"{source_db}/{source_item_id}")
                 
                 if not source_page_id:
                     logger.warning(f"Source page not found for item: {rel['source_item']}")
@@ -412,14 +445,17 @@ class RelationshipManager:
         return reverse_mappings.get((target_db, source_db))
 
 class BatchMigrationOrchestrator:
-    """Main orchestrator for batch migration process"""
+    """Main orchestrator for batch migration process with Database ID Registry integration"""
     
     def __init__(self, config: MigrationConfig):
         self.config = config
         self.notion_client = NotionAPIClient(config.notion_token)
         self.created_databases = {}
         self.migration_results = []
-        self.relationship_manager = RelationshipManager(self.notion_client)
+        
+        # Initialize Database ID Registry Manager
+        self.registry_manager = DatabaseIDRegistryManager()
+        self.relationship_manager = RelationshipManager(self.notion_client, self.registry_manager)
         
         # Load configuration files
         self.transformation_config = self._load_yaml(config.transformation_config_path)
@@ -428,6 +464,8 @@ class BatchMigrationOrchestrator:
         
         # Create logs directory
         (Path(__file__).parent.parent / 'logs').mkdir(exist_ok=True)
+        
+        logger.info("BatchMigrationOrchestrator initialized with Database ID Registry integration")
         
     def _load_yaml(self, path: Path) -> Dict:
         """Load YAML configuration file"""
@@ -460,7 +498,11 @@ class BatchMigrationOrchestrator:
             logger.info("Creating cross-database relationships...")
             self._create_relationships()
             
-            # Step 5: Generate report
+            # Step 5: Save Database ID Registry
+            logger.info("Saving Database ID Registry...")
+            self.registry_manager.save_registry()
+            
+            # Step 6: Generate report
             duration = time.time() - start_time
             report = self._generate_migration_report(duration)
             
@@ -663,9 +705,20 @@ class BatchMigrationOrchestrator:
                             properties=notion_properties
                         )
                         
-                        # Cache item mapping for relationships
+                        # Cache item mapping for relationships with registry integration
                         page_id = page_response['id']
-                        self.relationship_manager.add_item_mapping(item_id, page_id, database_type)
+                        database_id = self.created_databases[database_key].notion_id
+                        item_title = item_data.get('name', item_data.get('title', item_id))
+                        item_description = item_data.get('description', '')
+                        
+                        self.relationship_manager.add_item_mapping(
+                            item_id=item_id,
+                            notion_page_id=page_id,
+                            database_type=database_type,
+                            database_notion_id=database_id,
+                            title=item_title,
+                            content=item_description
+                        )
                         
                         processing_time = time.time() - start_time
                         return MigrationResult(
@@ -798,7 +851,8 @@ class BatchMigrationOrchestrator:
                 'total_retries': sum(r.retry_count for r in self.migration_results),
                 'avg_processing_time': sum(r.processing_time for r in successful_migrations) / len(successful_migrations) if successful_migrations else 0,
                 'relationships_processed': len(getattr(self, 'collected_relationships', [])),
-            }
+            },
+            'database_id_registry_stats': self.registry_manager.get_registry_statistics()
         }
         
         # Save report to file

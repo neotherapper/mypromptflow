@@ -1,0 +1,581 @@
+# Change Event Schema
+# Knowledge Vault Integration - AI Knowledge Lifecycle Orchestrator
+# Stores detected technology changes, classifications, and impact assessments
+
+database_info:
+  name: "Change Events"
+  type: "event_tracking"
+  description: "Technology change detection and classification system"
+  version: "1.0.0"
+  created: "2025-01-24"
+  integration_purpose: "Track and classify technology changes for AI instruction impact analysis"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the change event"
+    format: "uuid_v4"
+    
+  event_title:
+    type: "title"
+    required: true
+    description: "Descriptive title for this change event"
+    max_length: 200
+    
+  # Change Source Information
+  technology_name:
+    type: "rich_text"
+    required: true
+    description: "Name of the technology that changed"
+    
+  technology_category:
+    type: "select"
+    required: true
+    description: "Category of the technology"
+    options:
+      - value: "frontend_framework"
+        name: "Frontend Framework"
+        color: "purple"
+      - value: "backend_framework"
+        name: "Backend Framework"
+        color: "blue"
+      - value: "database"
+        name: "Database"
+        color: "green"
+      - value: "ci_cd"
+        name: "CI/CD"
+        color: "orange"
+      - value: "cloud_platform"
+        name: "Cloud Platform"
+        color: "gray"
+      - value: "dev_tool"
+        name: "Development Tool"
+        color: "yellow"
+      - value: "ai_ml"
+        name: "AI/ML"
+        color: "red"
+      - value: "security"
+        name: "Security"
+        color: "brown"
+      - value: "infrastructure"
+        name: "Infrastructure"
+        color: "default"
+      - value: "other"
+        name: "Other"
+        color: "pink"
+        
+  # Version Information
+  previous_version:
+    type: "rich_text"
+    required: false
+    description: "Previous version before the change"
+    
+  new_version:
+    type: "rich_text"
+    required: false
+    description: "New version after the change"
+    
+  version_change_type:
+    type: "select"
+    required: false
+    description: "Type of version change"
+    options:
+      - value: "major"
+        name: "Major Version"
+        color: "red"
+      - value: "minor"
+        name: "Minor Version"
+        color: "orange"
+      - value: "patch"
+        name: "Patch Version"
+        color: "green"
+      - value: "prerelease"
+        name: "Pre-release"
+        color: "yellow"
+      - value: "other"
+        name: "Other"
+        color: "gray"
+        
+  # Change Classification
+  change_type:
+    type: "select"
+    required: true
+    description: "Type of change detected"
+    options:
+      - value: "breaking_change"
+        name: "Breaking Change"
+        color: "red"
+      - value: "deprecation"
+        name: "Deprecation"
+        color: "orange"
+      - value: "security_update"
+        name: "Security Update"
+        color: "purple"
+      - value: "new_feature"
+        name: "New Feature"
+        color: "green"
+      - value: "bug_fix"
+        name: "Bug Fix"
+        color: "blue"
+      - value: "performance"
+        name: "Performance"
+        color: "yellow"
+      - value: "documentation"
+        name: "Documentation"
+        color: "pink"
+      - value: "other"
+        name: "Other"
+        color: "gray"
+        
+  change_classification:
+    type: "select"
+    required: true
+    description: "Impact classification of the change"
+    options:
+      - value: "critical"
+        name: "Critical Impact"
+        color: "red"
+      - value: "high"
+        name: "High Impact"
+        color: "orange"
+      - value: "medium"
+        name: "Medium Impact"
+        color: "yellow"
+      - value: "low"
+        name: "Low Impact"
+        color: "blue"
+      - value: "informational"
+        name: "Informational"
+        color: "green"
+        
+  # Detection Information
+  detection_source:
+    type: "select"
+    required: true
+    description: "Source where change was detected"
+    options:
+      - value: "github_releases"
+        name: "GitHub Releases"
+        color: "blue"
+      - value: "npm_registry"
+        name: "NPM Registry"
+        color: "red"
+      - value: "official_changelog"
+        name: "Official Changelog"
+        color: "green"
+      - value: "documentation"
+        name: "Documentation"
+        color: "purple"
+      - value: "blog_post"
+        name: "Blog Post"
+        color: "orange"
+      - value: "rss_feed"
+        name: "RSS Feed"
+        color: "yellow"
+      - value: "manual_entry"
+        name: "Manual Entry"
+        color: "gray"
+      - value: "other"
+        name: "Other"
+        color: "pink"
+        
+  detection_method:
+    type: "select"
+    required: true
+    description: "Method used to detect the change"
+    options:
+      - value: "automated_monitoring"
+        name: "Automated Monitoring"
+        color: "green"
+      - value: "mcp_server_scan"
+        name: "MCP Server Scan"
+        color: "blue"
+      - value: "periodic_check"
+        name: "Periodic Check"
+        color: "orange"
+      - value: "manual_discovery"
+        name: "Manual Discovery"
+        color: "gray"
+      - value: "external_notification"
+        name: "External Notification"
+        color: "purple"
+        
+  detection_confidence:
+    type: "number"
+    required: false
+    description: "Confidence score of change detection (0.0-1.0)"
+    format: "float"
+    
+  # Change Details
+  change_description:
+    type: "rich_text"
+    required: true
+    description: "Detailed description of the change"
+    
+  change_summary:
+    type: "rich_text"
+    required: false
+    description: "Brief summary of key changes"
+    
+  breaking_changes:
+    type: "rich_text"
+    required: false
+    description: "Specific breaking changes identified"
+    
+  migration_notes:
+    type: "rich_text"
+    required: false
+    description: "Migration or update guidance provided"
+    
+  # Source Links and Evidence
+  source_url:
+    type: "url"
+    required: false
+    description: "URL where change was announced or documented"
+    
+  changelog_url:
+    type: "url"
+    required: false
+    description: "URL to official changelog or release notes"
+    
+  documentation_url:
+    type: "url"
+    required: false
+    description: "URL to updated documentation"
+    
+  raw_data:
+    type: "rich_text"
+    required: false
+    description: "Raw data captured during detection (JSON format)"
+    
+  # Impact Assessment
+  affected_files_count:
+    type: "number"
+    required: false
+    description: "Number of AI instruction files potentially affected"
+    format: "integer"
+    
+  impact_assessment:
+    type: "rich_text"
+    required: false
+    description: "Detailed impact assessment results"
+    
+  risk_level:
+    type: "select"
+    required: false
+    description: "Risk level for AI instruction files"
+    options:
+      - value: "critical"
+        name: "Critical Risk"
+        color: "red"
+      - value: "high"
+        name: "High Risk"
+        color: "orange"
+      - value: "medium"
+        name: "Medium Risk"
+        color: "yellow"
+      - value: "low"
+        name: "Low Risk"
+        color: "blue"
+      - value: "minimal"
+        name: "Minimal Risk"
+        color: "green"
+        
+  # Processing Status
+  processing_status:
+    type: "select"
+    required: true
+    description: "Current processing status of this change event"
+    default: "detected"
+    options:
+      - value: "detected"
+        name: "Detected"
+        color: "default"
+      - value: "analyzing"
+        name: "Analyzing"
+        color: "yellow"
+      - value: "classified"
+        name: "Classified"
+        color: "blue"
+      - value: "impact_assessed"
+        name: "Impact Assessed"
+        color: "orange"
+      - value: "notifications_sent"
+        name: "Notifications Sent"
+        color: "green"
+      - value: "updates_triggered"
+        name: "Updates Triggered"
+        color: "purple"
+      - value: "completed"
+        name: "Completed"
+        color: "green"
+      - value: "ignored"
+        name: "Ignored"
+        color: "gray"
+      - value: "error"
+        name: "Processing Error"
+        color: "red"
+        
+  # Notification Status
+  notifications_sent:
+    type: "checkbox"
+    required: false
+    description: "Whether notifications have been sent for this change"
+    
+  notification_channels:
+    type: "multi_select"
+    required: false
+    description: "Channels where notifications were sent"
+    options:
+      - value: "system_log"
+        name: "System Log"
+        color: "blue"
+      - value: "email"
+        name: "Email"
+        color: "green"
+      - value: "file_marker"
+        name: "File Marker"
+        color: "orange"
+      - value: "database_entry"
+        name: "Database Entry"
+        color: "purple"
+      - value: "webhook"
+        name: "Webhook"
+        color: "red"
+      - value: "dashboard"
+        name: "Dashboard"
+        color: "yellow"
+        
+  # Timestamps
+  detected_date:
+    type: "created_time"
+    required: true
+    description: "When this change was first detected"
+    
+  published_date:
+    type: "date"
+    required: false
+    description: "When the change was officially published/released"
+    
+  processed_date:
+    type: "date"
+    required: false
+    description: "When processing of this change was completed"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When this change event record was last modified"
+    
+  # Validation and Quality
+  validation_status:
+    type: "select"
+    required: false
+    description: "Validation status of the change detection"
+    options:
+      - value: "validated"
+        name: "Validated"
+        color: "green"
+      - value: "pending"
+        name: "Pending Validation"
+        color: "yellow"
+      - value: "disputed"
+        name: "Disputed"
+        color: "orange"
+      - value: "false_positive"
+        name: "False Positive"
+        color: "red"
+      - value: "unvalidated"
+        name: "Unvalidated"
+        color: "gray"
+        
+  validation_notes:
+    type: "rich_text"
+    required: false
+    description: "Notes from validation process"
+    
+  # Relationships
+  technology_tracking_relations:
+    type: "relation"
+    required: false
+    description: "Related technology tracking entries"
+    related_database: "technology_tracking"
+    dual_property: "change_events"
+    
+  dependency_mapping_relations:
+    type: "relation"
+    required: false
+    description: "Related dependency mappings"
+    related_database: "dependency_mapping"
+    dual_property: "change_events_relations"
+    
+  knowledge_updates_relations:
+    type: "relation"
+    required: false
+    description: "Knowledge updates triggered by this change"
+    related_database: "knowledge_updates"
+    dual_property: "change_events_relations"
+    
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "change_events_relations"
+
+# Database Configuration
+configuration:
+  # Change event configuration
+  change_tracking: true
+  impact_analysis: true
+  notification_system: true
+  validation_process: true
+  
+  # Validation Rules
+  validation:
+    required_fields: ["id", "event_title", "technology_name", "technology_category", "change_type", "change_classification", "detection_source", "detection_method", "change_description", "processing_status"]
+    unique_fields: ["id"]
+    url_validation: true
+    confidence_score_range: [0.0, 1.0]
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/change_events/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "change_event_schema.yaml"
+    
+  # Integration Settings
+  orchestrator_integration:
+    enabled: true
+    automated_detection: true
+    impact_analysis: true
+    notification_automation: true
+    
+# Index Configuration
+indexes:
+  - fields: ["technology_name", "change_type"]
+    description: "Technology and change type lookups"
+  - fields: ["change_classification", "risk_level"]
+    description: "Impact and risk analysis"
+  - fields: ["processing_status", "detected_date"]
+    description: "Processing workflow tracking"
+  - fields: ["detection_source", "detection_method"]
+    description: "Detection source analysis"
+  - fields: ["validation_status", "notifications_sent"]
+    description: "Quality and notification tracking"
+    
+# Views Configuration
+views:
+  critical_changes:
+    name: "Critical Changes"
+    filter:
+      change_classification: ["critical", "high"]
+      processing_status: ["detected", "analyzing", "classified", "impact_assessed"]
+    sort:
+      - field: "detected_date"
+        direction: "descending"
+        
+  breaking_changes:
+    name: "Breaking Changes"
+    filter:
+      change_type: ["breaking_change"]
+    sort:
+      - field: "risk_level"
+        direction: "descending"
+      - field: "detected_date"
+        direction: "descending"
+        
+  pending_processing:
+    name: "Pending Processing"
+    filter:
+      processing_status: ["detected", "analyzing", "classified", "impact_assessed"]
+    sort:
+      - field: "change_classification"
+        direction: "descending"
+      - field: "detected_date"
+        direction: "ascending"
+        
+  recent_changes:
+    name: "Recent Changes"
+    sort:
+      - field: "detected_date"
+        direction: "descending"
+    limit: 50
+    
+  by_technology:
+    name: "By Technology"
+    group_by: "technology_name"
+    sort:
+      - field: "change_classification"
+        direction: "descending"
+        
+  validation_needed:
+    name: "Validation Needed"
+    filter:
+      validation_status: ["pending", "disputed", "unvalidated"]
+    sort:
+      - field: "change_classification"
+        direction: "descending"
+        
+  security_updates:
+    name: "Security Updates"
+    filter:
+      change_type: ["security_update"]
+    sort:
+      - field: "detected_date"
+        direction: "descending"
+
+# Integration Points
+integration_points:
+  change_detection_system:
+    data_flow: "inbound"
+    real_time_creation: true
+    automated_classification: true
+    
+  technology_tracking:
+    data_flow: "bidirectional"
+    version_synchronization: true
+    monitoring_feedback: true
+    
+  dependency_mapping:
+    data_flow: "outbound"
+    impact_analysis_trigger: true
+    affected_files_identification: true
+    
+  knowledge_updates:
+    data_flow: "outbound"
+    update_trigger: true
+    workflow_initiation: true
+    
+  notification_system:
+    data_flow: "outbound"
+    multi_channel_alerts: true
+    priority_based_routing: true
+
+# Automation Rules
+automation_rules:
+  detection_automation:
+    enabled: true
+    real_time_processing: true
+    confidence_threshold: 0.7
+    auto_classification: true
+    
+  impact_analysis_automation:
+    enabled: true
+    dependency_scan: true
+    risk_assessment: true
+    affected_files_identification: true
+    
+  notification_automation:
+    enabled: true
+    priority_based_routing: true
+    channel_selection: "impact_based"
+    throttling: "duplicate_detection"
+    
+  validation_automation:
+    enabled: false  # Manual validation recommended
+    auto_validate_threshold: 0.95
+    false_positive_learning: true

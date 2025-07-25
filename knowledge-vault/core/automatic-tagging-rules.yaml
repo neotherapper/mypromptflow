@@ -1,0 +1,391 @@
+# Automatic Tagging Rules for MCP Server Intelligence
+# Implementation logic for intelligent tagging system connecting MCP servers to knowledge-vault
+
+metadata:
+  version: "1.0.0"
+  created: "2025-01-24"
+  purpose: "Automated tagging logic for MCP server profiles based on name, description, and context analysis"
+  dependencies:
+    - "knowledge-vault/core/mcp-relationship-mappings.yaml"
+    - "knowledge-vault/schemas/tools-services-schema.yaml"
+    - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+
+# Core Tagging Algorithm
+tagging_algorithm:
+  
+  # Step 1: Pattern Recognition
+  pattern_recognition:
+    name_analysis:
+      method: "regex_pattern_matching"
+      case_sensitivity: false
+      confidence_scoring: true
+      patterns: "From mcp-relationship-mappings.yaml name_pattern_rules"
+      
+    description_analysis:
+      method: "contextual_keyword_extraction"
+      natural_language_processing: true
+      semantic_matching: true
+      patterns: "From mcp-relationship-mappings.yaml description_pattern_rules"
+      
+    metadata_analysis:
+      method: "structured_data_parsing"
+      business_score_integration: true
+      tier_classification_integration: true
+      
+  # Step 2: Tag Classification
+  tag_classification:
+    primary_tags:
+      source: "Core technology/business function identification"
+      examples: ["ai", "database", "communication", "developer-tools"]
+      confidence_threshold: 0.8
+      
+    company_tags:
+      source: "Vendor/provider identification"
+      examples: ["microsoft", "google", "docker", "stripe"]
+      confidence_threshold: 0.9
+      
+    industry_tags:
+      source: "Business domain/vertical identification"
+      examples: ["fintech", "healthtech", "legaltech", "insurtech"]
+      confidence_threshold: 0.7
+      
+    mcp_classification_tags:
+      source: "MCP registry tier and category data"
+      examples: ["tier-1", "mcp-server", "information-retrieval"]
+      confidence_threshold: 1.0  # Direct from registry data
+      
+  # Step 3: Knowledge-Vault Linking
+  knowledge_vault_linking:
+    similarity_matching:
+      method: "semantic_similarity_analysis"
+      knowledge_base_search: "Full-text search across knowledge items"
+      confidence_threshold: 0.75
+      
+    category_mapping:
+      method: "predefined_category_relationships"
+      mapping_source: "mcp-relationship-mappings.yaml category_mappings"
+      inheritance_rules: "Apply tag inheritance from linked categories"
+      
+    cross_reference_generation:
+      format: "@knowledge_vault/{item_uuid}"
+      validation: "Ensure target knowledge item exists"
+      bidirectional: true
+
+# Detailed Pattern Matching Rules
+pattern_matching_rules:
+  
+  # High-confidence name patterns (90%+ accuracy)
+  high_confidence_name_patterns:
+    - regex: "(?i)\\bdocker\\b"
+      tags: ["docker", "developer-tools", "deployment"]
+      company_tags: ["docker"]
+      knowledge_links: ["container-technology", "deployment-automation"]
+      confidence: 0.95
+      
+    - regex: "(?i)\\bgithub\\b"
+      tags: ["developer-tools", "collaboration", "software-development"]
+      company_tags: ["github"]
+      knowledge_links: ["version-control-systems", "development-workflow"]
+      confidence: 0.95
+      
+    - regex: "(?i)microsoft|\\bteams\\b"
+      tags: ["communication", "collaboration", "enterprise"]
+      company_tags: ["microsoft"]
+      knowledge_links: ["team-communication", "microsoft-ecosystem"]
+      confidence: 0.92
+      
+    - regex: "(?i)\\bslack\\b"
+      tags: ["communication", "collaboration", "productivity"]
+      company_tags: ["slack"]
+      knowledge_links: ["team-communication", "business-collaboration"]
+      confidence: 0.95
+      
+    - regex: "(?i)\\bnotion\\b"
+      tags: ["documentation", "productivity", "collaboration"]
+      company_tags: ["notion"]
+      knowledge_links: ["knowledge-management", "documentation-platforms"]
+      confidence: 0.95
+      
+    - regex: "(?i)\\bstripe\\b"
+      tags: ["fintech", "api-service", "saas"]
+      company_tags: ["stripe"]
+      industry_tags: ["fintech"]
+      knowledge_links: ["payment-processing", "fintech-platforms"]
+      confidence: 0.95
+      
+    - regex: "(?i)postgresql|\\bpostgres\\b"
+      tags: ["database", "developer-tools", "api-service"]
+      knowledge_links: ["database-systems", "data-storage"]
+      confidence: 0.95
+      
+    - regex: "(?i)\\bmongodb\\b|\\bmongo\\b"
+      tags: ["database", "developer-tools", "no-code"]
+      knowledge_links: ["database-systems", "nosql-databases"]
+      confidence: 0.95
+      
+    - regex: "(?i)\\bredis\\b"
+      tags: ["database", "developer-tools", "api-service"]
+      knowledge_links: ["caching-systems", "in-memory-databases"]
+      confidence: 0.95
+      
+    - regex: "(?i)openai|\\bgpt\\b"
+      tags: ["ai", "api-service", "developer-tools"]
+      company_tags: ["openai"]
+      knowledge_links: ["artificial-intelligence", "ai-apis"]
+      confidence: 0.95
+      
+    - regex: "(?i)anthropic|\\bclaude\\b"
+      tags: ["ai", "api-service", "developer-tools"]
+      company_tags: ["anthropic"]
+      knowledge_links: ["artificial-intelligence", "ai-apis"]
+      confidence: 0.95
+  
+  # Medium-confidence description patterns (75%+ accuracy)
+  medium_confidence_description_patterns:
+    - regex: "(?i)container|containerization|orchestration"
+      tags: ["deployment", "developer-tools", "cloud-hosting"]
+      knowledge_links: ["container-technology", "cloud-infrastructure"]
+      confidence: 0.80
+      
+    - regex: "(?i)monitoring|observability|logging|metrics"
+      tags: ["monitoring", "analytics", "developer-tools"]
+      knowledge_links: ["application-monitoring", "system-observability"]
+      confidence: 0.85
+      
+    - regex: "(?i)authentication|\\bauth\\b|identity|\\bsso\\b"
+      tags: ["security", "enterprise", "api-service"]
+      knowledge_links: ["authentication-systems", "identity-management"]
+      confidence: 0.85
+      
+    - regex: "(?i)payment|billing|financial|accounting|invoice"
+      tags: ["fintech", "api-service", "saas"]
+      industry_tags: ["fintech"]
+      knowledge_links: ["payment-processing", "financial-services"]
+      confidence: 0.80
+      
+    - regex: "(?i)legal|compliance|regulatory|law|attorney"
+      tags: ["legaltech", "enterprise", "security"]
+      industry_tags: ["legaltech"]
+      knowledge_links: ["legal-research", "compliance-management"]
+      confidence: 0.75
+      
+    - regex: "(?i)health|medical|healthcare|\\bfhir\\b|patient"
+      tags: ["healthtech", "enterprise", "security"]
+      industry_tags: ["healthtech"]
+      knowledge_links: ["healthcare-systems", "medical-records"]
+      confidence: 0.80
+      
+    - regex: "(?i)education|learning|academic|student|course"
+      tags: ["edtech", "saas", "collaboration"]
+      industry_tags: ["edtech"]
+      knowledge_links: ["education-platforms", "learning-management"]
+      confidence: 0.75
+      
+    - regex: "(?i)insurance|claims|underwriting|risk|maritime.insurance"
+      tags: ["insurtech", "enterprise", "maritime-insurance"]
+      industry_tags: ["insurtech"]
+      knowledge_links: ["insurance-platforms", "claims-processing"]
+      confidence: 0.80
+
+# Context-Aware Tagging Enhancement
+context_aware_enhancement:
+  
+  # Business score integration
+  business_score_integration:
+    tier_1_servers: # Score 8.0+
+      additional_tags: ["high-priority", "enterprise"]
+      knowledge_priority: "high"
+      relationship_strength: "strong"
+      
+    tier_2_servers: # Score 6.5-7.9
+      additional_tags: ["production", "saas"]
+      knowledge_priority: "medium"
+      relationship_strength: "medium"
+      
+    tier_3_servers: # Score 4.5-6.4
+      additional_tags: ["experimental", "platform"]
+      knowledge_priority: "low"
+      relationship_strength: "weak"
+  
+  # Community adoption integration
+  community_adoption_signals:
+    high_adoption: # 9-10 community score
+      additional_tags: ["popular", "ecosystem"]
+      knowledge_links_multiplier: 1.5
+      
+    moderate_adoption: # 6-8 community score
+      additional_tags: ["established"]
+      knowledge_links_multiplier: 1.2
+      
+    emerging_adoption: # 4-5 community score
+      additional_tags: ["emerging"]
+      knowledge_links_multiplier: 1.0
+  
+  # Information retrieval relevance
+  information_retrieval_integration:
+    high_ir_relevance: # 8-10 IR score
+      additional_tags: ["information-retrieval", "search"]
+      knowledge_categories: ["search-systems", "data-discovery"]
+      
+    medium_ir_relevance: # 5-7 IR score
+      additional_tags: ["data-access"]
+      knowledge_categories: ["data-platforms"]
+
+# Automated Cross-Reference Generation
+cross_reference_automation:
+  
+  # Knowledge item discovery
+  knowledge_item_discovery:
+    search_method: "multi_criteria_matching"
+    criteria:
+      - "Primary tag overlap with knowledge item tags"
+      - "Semantic similarity in descriptions"
+      - "Category mapping from relationship patterns"
+      - "Industry vertical alignment"
+      
+    confidence_scoring:
+      exact_match: 1.0  # Direct tag/category match
+      semantic_match: 0.8  # Similar concepts and descriptions
+      category_match: 0.7  # Mapped category relationships
+      industry_match: 0.6  # Industry vertical alignment
+      
+    minimum_threshold: 0.65  # Minimum confidence for auto-linking
+  
+  # Cross-reference format generation
+  cross_reference_formatting:
+    knowledge_vault_format: "@knowledge_vault/{item_uuid}"
+    mcp_profile_format: "@mcp_profile/{server-name}"
+    validation_required: true
+    bidirectional_creation: true
+  
+  # Relationship strength classification
+  relationship_strength:
+    strong: # Confidence > 0.85
+      relationship_type: "implements"
+      priority: "primary"
+      
+    medium: # Confidence 0.70-0.85
+      relationship_type: "supports"
+      priority: "secondary"
+      
+    weak: # Confidence 0.65-0.70
+      relationship_type: "relates_to"
+      priority: "tertiary"
+
+# Quality Assurance and Validation
+quality_assurance:
+  
+  # Tagging accuracy validation
+  accuracy_validation:
+    confidence_thresholds:
+      company_tags: 0.90  # High confidence required for company attribution
+      industry_tags: 0.75  # Medium confidence for industry classification
+      technology_tags: 0.80  # High confidence for technology classification
+      
+    validation_methods:
+      - "Pattern match confidence scoring"
+      - "Multiple pattern confirmation"
+      - "Context consistency checking"
+      - "Business domain alignment verification"
+  
+  # Cross-reference validation
+  cross_reference_validation:
+    existence_check: "Verify all referenced items exist"
+    bidirectional_consistency: "Ensure reverse references are created"
+    relationship_logic: "Validate relationship types make semantic sense"
+    duplicate_prevention: "Prevent duplicate cross-references"
+  
+  # Continuous improvement
+  continuous_improvement:
+    feedback_integration: "Track tagging accuracy and user corrections"
+    pattern_refinement: "Improve regex patterns based on false positives/negatives"
+    confidence_calibration: "Adjust confidence thresholds based on performance"
+    knowledge_base_expansion: "Add new knowledge categories based on common patterns"
+
+# Implementation Workflow
+implementation_workflow:
+  
+  # Step 1: MCP Profile Analysis
+  profile_analysis:
+    inputs:
+      - "MCP server name"
+      - "MCP server description"
+      - "Business scoring data"
+      - "Tier classification"
+      - "Community adoption metrics"
+    
+    processing:
+      - "Apply pattern matching rules"
+      - "Calculate confidence scores"
+      - "Generate tag recommendations"
+      - "Identify knowledge vault candidates"
+    
+    outputs:
+      - "Recommended tag set"
+      - "Confidence-scored knowledge links"
+      - "Cross-reference suggestions"
+  
+  # Step 2: Knowledge Vault Integration
+  knowledge_integration:
+    search_execution:
+      - "Query knowledge vault for semantic matches"
+      - "Apply category mapping rules"
+      - "Score relationship strength"
+      - "Generate cross-reference candidates"
+    
+    validation:
+      - "Verify knowledge item existence"
+      - "Check relationship logic consistency"
+      - "Validate bidirectional requirements"
+      - "Prevent duplicate relationships"
+    
+    creation:
+      - "Create forward cross-references (MCP → Knowledge)"
+      - "Create reverse cross-references (Knowledge → MCP)"
+      - "Update relationship metadata"
+      - "Log creation activity"
+  
+  # Step 3: Quality Control
+  quality_control:
+    review_process:
+      - "Automated validation checks"
+      - "Confidence threshold enforcement"
+      - "Relationship consistency verification"
+      - "Cross-reference accessibility testing"
+    
+    correction_workflow:
+      - "Flag low-confidence relationships for review"
+      - "Enable manual correction interface"
+      - "Track correction patterns for algorithm improvement"
+      - "Update confidence models based on feedback"
+
+# Performance Optimization
+performance_optimization:
+  
+  # Caching strategies
+  caching:
+    pattern_compilation: "Pre-compile regex patterns for reuse"
+    knowledge_index: "Maintain searchable index of knowledge items"
+    tag_lookup: "Cache tag definitions and relationships"
+    confidence_models: "Cache confidence calculation models"
+  
+  # Batch processing
+  batch_processing:
+    bulk_analysis: "Process multiple MCP profiles in batches"
+    relationship_creation: "Batch create cross-references for efficiency"
+    validation_passes: "Batch validate relationships for consistency"
+    
+  # Incremental updates
+  incremental_updates:
+    delta_processing: "Only process changed MCP profiles"
+    relationship_maintenance: "Update relationships when knowledge items change"
+    pattern_updates: "Incrementally improve patterns without full reprocessing"
+
+---
+# Usage Instructions:
+# 1. This system automatically analyzes MCP server profiles for intelligent tagging
+# 2. Pattern matching identifies technology, company, and industry associations
+# 3. Knowledge vault integration creates meaningful cross-references
+# 4. Quality validation ensures accuracy and consistency
+# 5. Continuous improvement refines patterns based on usage feedback
+# 6. The system integrates seamlessly with existing knowledge-vault infrastructure

@@ -1,0 +1,482 @@
+# Dependency Mapping Schema
+# Knowledge Vault Integration - AI Knowledge Lifecycle Orchestrator
+# Maps AI file → technology dependency relationships and impact analysis
+
+database_info:
+  name: "Dependency Mapping"
+  type: "relationship_mapping"
+  description: "AI file to technology dependency relationships and impact analysis"
+  version: "1.0.0"
+  created: "2025-01-24"
+  integration_purpose: "Enable dependency tracking and impact analysis for AI instruction updates"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the dependency mapping"
+    format: "uuid_v4"
+    
+  mapping_name:
+    type: "title"
+    required: true
+    description: "Descriptive name for this dependency mapping"
+    max_length: 200
+    
+  # File Information
+  ai_file_path:
+    type: "rich_text"
+    required: true
+    description: "Absolute path to the AI instruction file"
+    
+  ai_file_type:
+    type: "select"
+    required: true
+    description: "Type of AI instruction file"
+    options:
+      - value: "claude_md"
+        name: "CLAUDE.md"
+        color: "purple"
+      - value: "command_md"
+        name: "Command (.md)"
+        color: "blue"
+      - value: "workflow_yaml"
+        name: "Workflow YAML"
+        color: "green"
+      - value: "config_yaml"
+        name: "Configuration YAML"
+        color: "orange"
+      - value: "instruction_md"
+        name: "Instruction Markdown"
+        color: "yellow"
+      - value: "template_md"
+        name: "Template Markdown"
+        color: "pink"
+      - value: "other"
+        name: "Other"
+        color: "gray"
+        
+  ai_file_hash:
+    type: "rich_text"
+    required: false
+    description: "File content hash for change detection"
+    
+  # Technology Dependency
+  technology_name:
+    type: "rich_text"
+    required: true
+    description: "Name of the technology this file depends on"
+    
+  technology_category:
+    type: "select"
+    required: true
+    description: "Category of the dependent technology"
+    options:
+      - value: "frontend_framework"
+        name: "Frontend Framework"
+        color: "purple"
+      - value: "backend_framework"
+        name: "Backend Framework"
+        color: "blue"
+      - value: "database"
+        name: "Database"
+        color: "green"
+      - value: "ci_cd"
+        name: "CI/CD"
+        color: "orange"
+      - value: "cloud_platform"
+        name: "Cloud Platform"
+        color: "gray"
+      - value: "dev_tool"
+        name: "Development Tool"
+        color: "yellow"
+      - value: "ai_ml"
+        name: "AI/ML"
+        color: "red"
+      - value: "security"
+        name: "Security"
+        color: "brown"
+      - value: "infrastructure"
+        name: "Infrastructure"
+        color: "default"
+      - value: "other"
+        name: "Other"
+        color: "pink"
+        
+  # Dependency Details
+  dependency_type:
+    type: "select"
+    required: true
+    description: "Type of dependency relationship"
+    options:
+      - value: "direct_usage"
+        name: "Direct Usage"
+        color: "red"
+      - value: "configuration"
+        name: "Configuration"
+        color: "orange"
+      - value: "integration"
+        name: "Integration"
+        color: "yellow"
+      - value: "reference"
+        name: "Reference"
+        color: "blue"
+      - value: "example"
+        name: "Example"
+        color: "green"
+      - value: "documentation"
+        name: "Documentation"
+        color: "purple"
+      - value: "indirect"
+        name: "Indirect"
+        color: "gray"
+        
+  usage_context:
+    type: "multi_select"
+    required: false
+    description: "Context where technology is used in the file"
+    options:
+      - value: "installation"
+        name: "Installation"
+        color: "blue"
+      - value: "configuration"
+        name: "Configuration"
+        color: "green"
+      - value: "deployment"
+        name: "Deployment"
+        color: "orange"
+      - value: "testing"
+        name: "Testing"
+        color: "purple"
+      - value: "development"
+        name: "Development"
+        color: "yellow"
+      - value: "production"
+        name: "Production"
+        color: "red"
+      - value: "integration"
+        name: "Integration"
+        color: "pink"
+      - value: "monitoring"
+        name: "Monitoring"
+        color: "gray"
+        
+  # Version Constraints
+  version_constraint:
+    type: "rich_text"
+    required: false
+    description: "Version constraint specified in the file (e.g., >=18.0.0, ^3.1.0)"
+    
+  version_constraint_type:
+    type: "select"
+    required: false
+    description: "Type of version constraint"
+    options:
+      - value: "exact"
+        name: "Exact Version"
+        color: "red"
+      - value: "minimum"
+        name: "Minimum Version"
+        color: "orange"
+      - value: "range"
+        name: "Version Range"
+        color: "yellow"
+      - value: "latest"
+        name: "Latest"
+        color: "green"
+      - value: "none"
+        name: "No Constraint"
+        color: "gray"
+        
+  # Criticality Assessment
+  dependency_criticality:
+    type: "select"
+    required: true
+    description: "Criticality of this dependency for file functionality"
+    options:
+      - value: "essential"
+        name: "Essential"
+        color: "red"
+      - value: "important"
+        name: "Important"
+        color: "orange"
+      - value: "useful"
+        name: "Useful"
+        color: "yellow"
+      - value: "optional"
+        name: "Optional"
+        color: "blue"
+      - value: "deprecated"
+        name: "Deprecated"
+        color: "gray"
+        
+  update_priority:
+    type: "select"
+    required: true
+    description: "Priority for updating when technology changes"
+    options:
+      - value: "immediate"
+        name: "Immediate"
+        color: "red"
+      - value: "high"
+        name: "High"
+        color: "orange"
+      - value: "medium"
+        name: "Medium"
+        color: "yellow"
+      - value: "low"
+        name: "Low"
+        color: "blue"
+      - value: "none"
+        name: "No Update Needed"
+        color: "gray"
+        
+  # Impact Analysis
+  breaking_change_impact:
+    type: "select"
+    required: false
+    description: "Potential impact of breaking changes in this technology"
+    options:
+      - value: "file_broken"
+        name: "File Completely Broken"
+        color: "red"
+      - value: "major_changes"
+        name: "Major Changes Required"
+        color: "orange"
+      - value: "minor_changes"
+        name: "Minor Changes Required"
+        color: "yellow"
+      - value: "documentation_only"
+        name: "Documentation Only"
+        color: "blue"
+      - value: "no_impact"
+        name: "No Impact"
+        color: "green"
+        
+  automated_update_possible:
+    type: "select"
+    required: false
+    description: "Whether automated updates are possible for this dependency"
+    options:
+      - value: "full_automation"
+        name: "Full Automation"
+        color: "green"
+      - value: "partial_automation"
+        name: "Partial Automation"
+        color: "yellow"
+      - value: "manual_only"
+        name: "Manual Only"
+        color: "red"
+      - value: "no_update_needed"
+        name: "No Update Needed"
+        color: "blue"
+        
+  # Context Information
+  reference_locations:
+    type: "rich_text"
+    required: false
+    description: "Specific locations in file where technology is referenced (JSON array of line numbers/sections)"
+    
+  usage_description:
+    type: "rich_text"
+    required: false
+    description: "Description of how the technology is used in this file"
+    
+  notes:
+    type: "rich_text"
+    required: false
+    description: "Additional notes about this dependency"
+    
+  # Tracking Information
+  discovered_date:
+    type: "created_time"
+    required: true
+    description: "When this dependency was first discovered"
+    
+  last_validated:
+    type: "date"
+    required: false
+    description: "When this dependency was last validated"
+    
+  last_updated:
+    type: "last_edited_time"
+    required: true
+    description: "When this mapping was last updated"
+    
+  # Status Tracking
+  validation_status:
+    type: "select"
+    required: true
+    description: "Current validation status of this dependency"
+    default: "pending"
+    options:
+      - value: "validated"
+        name: "Validated"
+        color: "green"
+      - value: "pending"
+        name: "Pending Validation"
+        color: "yellow"
+      - value: "outdated"
+        name: "Outdated"
+        color: "orange"
+      - value: "error"
+        name: "Validation Error"
+        color: "red"
+      - value: "ignored"
+        name: "Ignored"
+        color: "gray"
+        
+  # Relationships
+  technology_tracking_relations:
+    type: "relation"
+    required: false
+    description: "Related technology tracking entries"
+    related_database: "technology_tracking"
+    dual_property: "dependency_mappings"
+    
+  knowledge_updates:
+    type: "relation"
+    required: false
+    description: "Related knowledge update entries"
+    related_database: "knowledge_updates"
+    dual_property: "dependency_mapping_relations"
+    
+  change_events_relations:
+    type: "relation"
+    required: false
+    description: "Related change events"
+    related_database: "change_events"
+    dual_property: "dependency_mapping_relations"
+    
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "dependency_mapping_relations"
+
+# Database Configuration
+configuration:
+  # Dependency-specific configuration
+  dependency_focus: true
+  impact_analysis: true
+  automated_discovery: true
+  
+  # Validation Rules
+  validation:
+    required_fields: ["id", "mapping_name", "ai_file_path", "ai_file_type", "technology_name", "technology_category", "dependency_type", "dependency_criticality", "update_priority", "validation_status"]
+    unique_fields: ["id"]
+    path_validation: true
+    technology_name_validation: true
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/dependency_mapping/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "dependency_mapping_schema.yaml"
+    
+  # Integration Settings
+  orchestrator_integration:
+    enabled: true
+    auto_discovery: true
+    impact_analysis: true
+    update_prioritization: true
+    
+# Index Configuration
+indexes:
+  - fields: ["ai_file_path", "technology_name"]
+    description: "File-technology dependency lookup"
+  - fields: ["dependency_criticality", "update_priority"]
+    description: "Priority-based filtering"
+  - fields: ["technology_category", "dependency_type"]
+    description: "Category and type analysis"
+  - fields: ["validation_status", "last_validated"]
+    description: "Validation status tracking"
+  - fields: ["breaking_change_impact"]
+    description: "Impact analysis queries"
+    
+# Views Configuration
+views:
+  critical_dependencies:
+    name: "Critical Dependencies"
+    filter:
+      dependency_criticality: ["essential", "important"]
+      validation_status: ["validated", "pending"]
+    sort:
+      - field: "update_priority"
+        direction: "descending"
+        
+  high_impact_changes:
+    name: "High Impact Changes"
+    filter:
+      breaking_change_impact: ["file_broken", "major_changes"]
+    sort:
+      - field: "dependency_criticality"
+        direction: "descending"
+        
+  automated_update_candidates:
+    name: "Automation Candidates"
+    filter:
+      automated_update_possible: ["full_automation", "partial_automation"]
+      validation_status: ["validated"]
+    sort:
+      - field: "update_priority"
+        direction: "descending"
+        
+  by_technology:
+    name: "By Technology"
+    group_by: "technology_name"
+    sort:
+      - field: "dependency_criticality"
+        direction: "descending"
+        
+  validation_needed:
+    name: "Validation Needed"
+    filter:
+      validation_status: ["pending", "outdated", "error"]
+    sort:
+      - field: "last_validated"
+        direction: "ascending"
+
+# Integration Points
+integration_points:
+  dependency_registry:
+    data_flow: "bidirectional"
+    sync_fields: ["ai_file_path", "technology_name", "version_constraint", "dependency_criticality"]
+    consistency_requirements: "strong_consistency"
+    
+  technology_tracking:
+    data_flow: "inbound"
+    trigger_updates: true
+    impact_analysis: true
+    
+  change_detection_system:
+    data_flow: "inbound"
+    alert_triggers: ["breaking_change_impact", "update_priority"]
+    automation_hints: ["automated_update_possible"]
+    
+  knowledge_vault:
+    relationship_type: "spoke_integration"
+    cross_references: true
+    shared_categorization: true
+
+# Automation Rules
+automation_rules:
+  discovery_automation:
+    enabled: true
+    scan_frequency: "daily"
+    file_types: ["claude_md", "command_md", "workflow_yaml"]
+    technology_detection: "pattern_based"
+    
+  validation_automation:
+    enabled: true
+    validation_frequency: "weekly"
+    auto_update_low_risk: true
+    manual_review_required: ["essential", "important"]
+    
+  impact_analysis_automation:
+    enabled: true
+    analysis_triggers: ["technology_version_change", "breaking_change_detected"]
+    notification_thresholds: ["file_broken", "major_changes"]

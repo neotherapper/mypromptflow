@@ -1,0 +1,704 @@
+# Change Classification Rules
+# AI Knowledge Lifecycle Orchestrator - Rules for classifying and prioritizing detected changes
+# Defines intelligent classification logic and impact assessment algorithms
+
+version: "1.0.0"
+created: "2025-01-24"
+purpose: "Production-ready change classification and impact assessment system"
+author: "Change Detection System Architecture Specialist"
+
+# =============================================================================
+# CLASSIFICATION FRAMEWORK OVERVIEW
+# =============================================================================
+
+classification_framework:
+  description: "Multi-dimensional classification system for technology changes"
+  classification_dimensions:
+    change_type: "Technical nature of the change (breaking, feature, fix, etc.)"
+    impact_level: "Severity and scope of impact on dependent systems"
+    urgency: "Time sensitivity and required response timeline"
+    confidence: "System confidence in change classification accuracy"
+    
+  processing_pipeline:
+    detection: "Raw change data extraction from technology sources"
+    analysis: "Multi-pattern analysis using classification rules"
+    scoring: "Quantitative impact and confidence scoring"
+    validation: "Cross-validation using multiple classification methods"
+    notification: "Intelligent routing based on classification results"
+
+# =============================================================================
+# CHANGE TYPE CLASSIFICATION RULES
+# =============================================================================
+
+change_type_classification:
+  
+  # Breaking Changes - Highest Priority
+  breaking_change:
+    description: "Changes that break backward compatibility and require immediate action"
+    detection_patterns:
+      version_indicators:
+        - pattern: "major_version_bump"
+          weight: 0.9
+          description: "Version X.0.0 increment (e.g., 1.x.x → 2.0.0)"
+          
+        - pattern: "pre_1_0_minor_bump"
+          weight: 0.8
+          description: "Minor version bump before 1.0 (e.g., 0.5.x → 0.6.0)"
+          
+      content_keywords:
+        high_confidence:
+          - "BREAKING CHANGE"
+          - "breaking change"
+          - "backwards incompatible"
+          - "migration required"
+          - "API removed"
+          weight: 0.95
+          
+        medium_confidence:
+          - "deprecation removed"
+          - "no longer supported"
+          - "behavior changed"
+          - "default changed"
+          weight: 0.7
+          
+        contextual_indicators:
+          - "migrate from"
+          - "upgrade guide"
+          - "breaking changes"
+          - "incompatible with"
+          weight: 0.6
+          
+    impact_calculation:
+      base_impact: 10.0  # Maximum impact score
+      dependency_multiplier: 1.5  # Multiply by number of dependent AI files
+      criticality_boost: 2.0  # Additional boost for critical technologies
+      
+    notification_rules:
+      immediate_alert: true
+      approval_required: true
+      manual_review: true
+      escalation_level: "critical"
+      
+  # Security Updates - Critical Priority
+  security_update:
+    description: "Security fixes requiring urgent attention and deployment"
+    detection_patterns:
+      version_indicators:
+        - pattern: "patch_version_with_security"
+          weight: 0.9
+          description: "Patch version (X.Y.Z) with security content"
+          
+      content_keywords:
+        high_confidence:
+          - "security fix"
+          - "security update"
+          - "vulnerability"
+          - "CVE-"
+          - "security advisory"
+          weight: 0.95
+          
+        medium_confidence:
+          - "security"
+          - "exploit"
+          - "malicious"
+          - "unsafe"
+          weight: 0.8
+          
+      source_indicators:
+        - "security advisory published"
+        - "security release"
+        - "emergency release"
+        weight: 0.9
+        
+    impact_calculation:
+      base_impact: 9.5
+      exposure_multiplier: 2.0  # Based on public exposure of affected systems
+      severity_multiplier: 1.8  # Based on CVSS score if available
+      
+    notification_rules:
+      immediate_alert: true
+      approval_required: false  # Auto-approve security updates
+      manual_review: true
+      escalation_level: "critical"
+      sla_hours: 24
+      
+  # Deprecation Warnings - Strategic Priority
+  deprecation_warning:
+    description: "Features marked for future removal requiring planning"
+    detection_patterns:
+      content_keywords:
+        high_confidence:
+          - "deprecated"
+          - "will be removed"
+          - "end of life"
+          - "sunset"
+          weight: 0.9
+          
+        medium_confidence:
+          - "legacy"
+          - "discouraged"
+          - "migrate to"
+          - "replaced by"
+          weight: 0.7
+          
+      timeline_indicators:
+        - pattern: "removal_timeline"
+          keywords: ["removed in", "end of support", "EOL"]
+          weight: 0.8
+          
+    impact_calculation:
+      base_impact: 7.0
+      timeline_multiplier: 1.5  # Shorter timeline = higher impact
+      usage_prevalence: 1.3  # Based on usage in AI files
+      
+    notification_rules:
+      immediate_alert: false
+      approval_required: false
+      manual_review: true
+      escalation_level: "high"
+      planning_horizon: "weeks_to_months"
+      
+  # Feature Additions - Enhancement Priority
+  feature_addition:
+    description: "New features that may enhance existing AI instructions"
+    detection_patterns:
+      version_indicators:
+        - pattern: "minor_version_bump"
+          weight: 0.7
+          description: "Version X.Y.0 increment with new features"
+          
+      content_keywords:
+        high_confidence:
+          - "new feature"
+          - "added"
+          - "introduced"
+          - "now supports"
+          weight: 0.8
+          
+        medium_confidence:
+          - "enhancement"
+          - "improvement"
+          - "extended"
+          - "expanded"
+          weight: 0.6
+          
+    impact_calculation:
+      base_impact: 5.0
+      enhancement_potential: 1.2  # Based on relevance to AI instructions
+      adoption_ease: 0.8  # Easier adoption = higher score
+      
+    notification_rules:
+      immediate_alert: false
+      approval_required: false
+      manual_review: false
+      escalation_level: "medium"
+      enhancement_opportunity: true
+      
+  # Bug Fixes - Maintenance Priority
+  bug_fix:
+    description: "Bug fixes that may affect AI instruction examples"
+    detection_patterns:
+      version_indicators:
+        - pattern: "patch_version_bump"
+          weight: 0.6
+          description: "Version X.Y.Z increment (patch level)"
+          
+      content_keywords:
+        high_confidence:
+          - "fixed"
+          - "bug fix"
+          - "resolved"
+          - "corrected"
+          weight: 0.8
+          
+        medium_confidence:
+          - "improved"
+          - "updated"
+          - "adjusted"
+          - "refined"
+          weight: 0.5
+          
+    impact_calculation:
+      base_impact: 3.0
+      example_relevance: 1.5  # Higher if affects code examples in AI files
+      user_facing_impact: 1.2  # Higher for user-visible fixes
+      
+    notification_rules:
+      immediate_alert: false
+      approval_required: false
+      manual_review: false
+      escalation_level: "low"
+      batch_notification: true
+      
+  # Configuration Changes - Technical Priority
+  configuration_change:
+    description: "Changes to default configurations or setup procedures"
+    detection_patterns:
+      content_keywords:
+        high_confidence:
+          - "default changed"
+          - "configuration"
+          - "config update"
+          - "setup change"
+          weight: 0.8
+          
+        medium_confidence:
+          - "installation"
+          - "getting started"
+          - "quickstart"
+          - "setup"
+          weight: 0.6
+          
+    impact_calculation:
+      base_impact: 4.0
+      setup_complexity: 1.3  # Higher for complex setup changes
+      documentation_impact: 1.4  # Higher if affects AI instruction setup guides
+      
+    notification_rules:
+      immediate_alert: false
+      approval_required: false
+      manual_review: true
+      escalation_level: "medium"
+      documentation_update: true
+
+# =============================================================================
+# IMPACT LEVEL ASSESSMENT ALGORITHMS
+# =============================================================================
+
+impact_assessment:
+  
+  # Dependency Impact Analysis
+  dependency_impact:
+    calculation_method: "Traverse dependency graph to identify affected AI files"
+    
+    impact_factors:
+      direct_dependencies:
+        description: "AI files directly referencing the changed technology"
+        weight: 1.0
+        calculation: "count(files_with_direct_reference)"
+        
+      indirect_dependencies:
+        description: "AI files importing or building upon dependent files"
+        weight: 0.7
+        calculation: "count(files_with_indirect_reference) * 0.7"
+        
+      cascade_dependencies:
+        description: "Files affected through multiple dependency levels"
+        weight: 0.4
+        calculation: "count(cascade_affected_files) * 0.4"
+        
+    dependency_scoring:
+      low_impact: "< 5 total affected files"
+      medium_impact: "5-20 total affected files"
+      high_impact: "21-50 total affected files"
+      critical_impact: "> 50 total affected files"
+      
+  # Technology Criticality Weighting
+  criticality_weighting:
+    technology_criticality_multipliers:
+      critical_technologies:
+        technologies: ["React", "TypeScript", "Next.js", "Node.js"]
+        multiplier: 2.0
+        rationale: "Core technologies affecting multiple projects"
+        
+      important_technologies:
+        technologies: ["Jest", "ESLint", "Docker", "GitHub Actions", "Tailwind CSS"]
+        multiplier: 1.5
+        rationale: "Widely used technologies with significant impact"
+        
+      supplemental_technologies:
+        technologies: ["Prettier", "Radix UI", "Framer Motion"]
+        multiplier: 1.0
+        rationale: "Standard weighting for specialized technologies"
+        
+  # Business Impact Calculation
+  business_impact:
+    factors:
+      development_velocity_impact:
+        description: "Impact on development speed and efficiency"
+        calculation_method: "affected_files * development_frequency * change_complexity"
+        weight: 0.4
+        
+      maintenance_burden_impact:
+        description: "Ongoing maintenance and update requirements"
+        calculation_method: "breaking_changes * maintenance_complexity * team_size_factor"
+        weight: 0.3
+        
+      risk_exposure_impact:
+        description: "Risk of outdated information in AI responses"
+        calculation_method: "public_visibility * accuracy_importance * user_impact"
+        weight: 0.3
+        
+    impact_scoring:
+      minimal: "0-2 points (cosmetic changes)"
+      low: "2-4 points (minor adjustments needed)"
+      medium: "4-7 points (moderate update effort required)"
+      high: "7-9 points (significant update effort required)"
+      critical: "9-10 points (major overhaul required)"
+
+# =============================================================================
+# URGENCY CLASSIFICATION SYSTEM
+# =============================================================================
+
+urgency_classification:
+  
+  # Urgency Factors
+  urgency_factors:
+    change_type_urgency:
+      breaking_change: 10.0  # Immediate action required
+      security_update: 9.5   # Critical security timeline
+      deprecation_warning: 6.0  # Planning timeline dependent
+      feature_addition: 3.0  # Enhancement opportunity
+      bug_fix: 4.0          # Quality improvement
+      configuration_change: 5.0  # Documentation update needed
+      
+    timeline_urgency:
+      immediate_breaking: 10.0  # Already affecting systems
+      security_exploit: 9.5     # Active security threat
+      deprecation_timeline:
+        long_term: 3.0          # > 12 months
+        medium_term: 6.0        # 6-12 months  
+        short_term: 8.0         # < 6 months
+        imminent: 9.0           # < 1 month
+        
+    adoption_pressure:
+      community_momentum: 1.5   # High community adoption
+      ecosystem_dependency: 2.0 # Other tools depending on update
+      performance_improvement: 1.3  # Significant performance gains
+      security_improvement: 2.5 # Security-related improvements
+      
+  # Urgency Scoring Algorithm
+  urgency_calculation:
+    formula: "change_type_urgency + timeline_urgency + adoption_pressure"
+    normalization: "Scale to 0-10 range with ceiling at 10.0"
+    
+    urgency_levels:
+      immediate:
+        score_range: "9.0-10.0"
+        response_time: "< 1 hour"
+        notification: "immediate_alert"
+        approval: "auto_approve_if_security"
+        
+      urgent:
+        score_range: "7.0-8.9"
+        response_time: "< 4 hours"
+        notification: "expedited_alert"
+        approval: "fast_track_approval"
+        
+      high:
+        score_range: "5.0-6.9"
+        response_time: "< 24 hours"
+        notification: "priority_alert"
+        approval: "standard_approval"
+        
+      medium:
+        score_range: "3.0-4.9"
+        response_time: "< 72 hours"
+        notification: "standard_alert"
+        approval: "batch_approval"
+        
+      low:
+        score_range: "0.0-2.9"
+        response_time: "< 1 week"
+        notification: "batch_notification"
+        approval: "low_priority_review"
+
+# =============================================================================
+# CONFIDENCE SCORING SYSTEM
+# =============================================================================
+
+confidence_scoring:
+  
+  # Confidence Factors
+  confidence_factors:
+    source_reliability:
+      official_source: 1.0      # Official documentation/blog
+      github_release: 0.9       # Official GitHub releases
+      community_source: 0.7     # Community-maintained sources
+      secondary_source: 0.5     # Third-party reporting
+      
+    pattern_matching:
+      exact_keyword_match: 1.0  # Exact keyword matches
+      semantic_match: 0.8       # Contextual semantic matches
+      fuzzy_match: 0.6          # Fuzzy/partial matches
+      inferred_match: 0.4       # Inferred from context
+      
+    cross_validation:
+      multiple_sources_confirm: 1.2  # Multiple sources confirm change
+      single_source_only: 1.0    # Only one source detected change
+      conflicting_sources: 0.6   # Sources provide conflicting information
+      
+    historical_accuracy:
+      high_accuracy_source: 1.1  # Source has >95% historical accuracy
+      medium_accuracy_source: 1.0 # Source has 85-95% historical accuracy
+      low_accuracy_source: 0.8   # Source has <85% historical accuracy
+      
+  # Confidence Calculation
+  confidence_calculation:
+    formula: "source_reliability * pattern_matching * cross_validation * historical_accuracy"
+    normalization: "Scale to 0.0-1.0 range with maximum 1.0"
+    
+    confidence_levels:
+      very_high:
+        score_range: "0.85-1.0"
+        action: "automatic_processing"
+        human_review: false
+        
+      high:
+        score_range: "0.70-0.84"
+        action: "expedited_processing"
+        human_review: false
+        
+      medium:
+        score_range: "0.50-0.69"
+        action: "standard_processing"
+        human_review: true
+        
+      low:
+        score_range: "0.30-0.49"
+        action: "manual_verification_required"
+        human_review: true
+        
+      very_low:
+        score_range: "0.0-0.29"
+        action: "reject_or_manual_investigation"
+        human_review: true
+
+# =============================================================================
+# INTELLIGENT ROUTING AND NOTIFICATION RULES
+# =============================================================================
+
+notification_routing:
+  
+  # Routing Decision Matrix
+  routing_matrix:
+    critical_immediate:
+      conditions:
+        - "urgency >= 9.0"
+        - "impact_level == 'critical'"
+        - "confidence >= 0.7"
+      actions:
+        - "immediate_system_alert"
+        - "escalate_to_administrators"
+        - "create_high_priority_task"
+        - "notify_affected_file_owners"
+        
+    high_priority:
+      conditions:
+        - "urgency >= 7.0"
+        - "impact_level in ['high', 'critical']"
+        - "confidence >= 0.6"
+      actions:
+        - "expedited_notification"
+        - "create_priority_task"
+        - "schedule_review_meeting"
+        
+    standard_processing:
+      conditions:
+        - "urgency >= 3.0"
+        - "impact_level in ['medium', 'high']"
+        - "confidence >= 0.5"
+      actions:
+        - "standard_notification"
+        - "add_to_review_queue"
+        - "schedule_batch_processing"
+        
+    low_priority_batch:
+      conditions:
+        - "urgency < 3.0"
+        - "impact_level in ['minimal', 'low', 'medium']"
+        - "confidence >= 0.4"
+      actions:
+        - "batch_notification"
+        - "weekly_review_inclusion"
+        - "low_priority_queue"
+        
+    manual_review_required:
+      conditions:
+        - "confidence < 0.4"
+        - "conflicting_classification_results"
+        - "unusual_change_pattern"
+      actions:
+        - "flag_for_manual_review"
+        - "request_human_validation"
+        - "hold_automatic_processing"
+        
+  # Notification Channel Selection
+  notification_channels:
+    immediate_channels:
+      system_log:
+        format: "structured_json"
+        retention: "90 days"
+        indexing: "full_text_search"
+        
+      file_markers:
+        location: "affected_file_directories"
+        format: ".ai-update-required"
+        content: "change_summary_json"
+        
+    batch_channels:
+      daily_summary:
+        format: "markdown_report"
+        delivery_time: "09:00 UTC"
+        aggregation: "by_technology_and_impact"
+        
+      weekly_digest:
+        format: "executive_summary"
+        delivery_time: "Monday 09:00 UTC"
+        content: "trends_and_recommendations"
+        
+  # De-duplication and Throttling
+  throttling_rules:
+    duplicate_detection:
+      same_change_window: "6 hours"
+      similarity_threshold: 0.9
+      action: "merge_notifications"
+      
+    notification_limits:
+      critical_alerts: "no_limit"
+      high_priority: "max 10 per hour"
+      standard: "max 5 per hour"
+      low_priority: "max 1 per hour"
+      
+    escalation_rules:
+      repeated_critical: "escalate after 3 identical critical alerts"
+      system_overload: "throttle non-critical when >50 alerts/hour"
+      human_review_backlog: "escalate when >20 items in manual review queue"
+
+# =============================================================================
+# VALIDATION AND QUALITY ASSURANCE
+# =============================================================================
+
+quality_assurance:
+  
+  # Classification Validation
+  classification_validation:
+    cross_validation_rules:
+      multiple_classifier_agreement:
+        description: "Require agreement between multiple classification methods"
+        threshold: ">=2 classifiers must agree for high-confidence classification"
+        
+      historical_pattern_consistency:
+        description: "Validate against historical classification patterns"
+        method: "Compare against previous classifications for same technology"
+        
+      semantic_consistency:
+        description: "Ensure semantic consistency in classification logic"
+        validation: "Check for logical contradictions in classification rules"
+        
+    validation_checkpoints:
+      pre_notification:
+        checks:
+          - "classification_confidence_threshold_check"
+          - "impact_calculation_validation"
+          - "urgency_scoring_verification"
+          - "dependency_graph_consistency"
+          
+      post_notification:
+        checks:
+          - "notification_delivery_confirmation"
+          - "recipient_acknowledgment_tracking"
+          - "action_item_creation_verification"
+          
+  # Performance Monitoring
+  performance_monitoring:
+    classification_accuracy:
+      measurement: "Human feedback on classification correctness"
+      target: ">90% accuracy for high-confidence classifications"
+      review_frequency: "weekly"
+      
+    false_positive_rate:
+      measurement: "Percentage of classifications later deemed incorrect"
+      target: "<5% false positive rate overall"
+      critical_threshold: "<1% for security updates"
+      
+    notification_effectiveness:
+      measurement: "Percentage of notifications leading to appropriate action"
+      target: ">85% effectiveness rate"
+      tracking: "Action taken within SLA timeframes"
+      
+  # Continuous Improvement
+  continuous_improvement:
+    feedback_integration:
+      human_corrections: "Incorporate human feedback to refine rules"
+      classification_updates: "Regular updates to classification patterns"
+      threshold_optimization: "Optimize thresholds based on performance data"
+      
+    rule_evolution:
+      new_pattern_detection: "Identify emerging patterns requiring new rules"
+      obsolete_rule_removal: "Remove rules that are no longer relevant"
+      performance_based_weighting: "Adjust rule weights based on accuracy"
+      
+    system_optimization:
+      response_time_optimization: "Optimize for faster classification processing"
+      resource_usage_optimization: "Balance accuracy with computational efficiency"
+      scalability_improvements: "Enhance system to handle increased load"
+
+# =============================================================================
+# INTEGRATION WITH DEPENDENCY REGISTRY
+# =============================================================================
+
+dependency_integration:
+  
+  # File Impact Analysis
+  file_impact_analysis:
+    dependency_lookup:
+      method: "Query dependency registry for files using changed technology"
+      scope: "Include direct and indirect dependencies"
+      confidence_scoring: "Weight by dependency strength and usage frequency"
+      
+    impact_propagation:
+      direct_impact: "Files explicitly using changed technology"
+      indirect_impact: "Files importing or building upon affected files"
+      cascade_analysis: "Multi-level dependency traversal with impact decay"
+      
+    prioritization_factors:
+      file_criticality: "Based on file type and project importance"
+      usage_frequency: "How often the technology is referenced in file"
+      update_complexity: "Estimated effort required to update file"
+      
+  # Update Recommendation Generation
+  update_recommendations:
+    recommendation_engine:
+      change_type_mapping:
+        breaking_change: "immediate_update_required"
+        security_update: "urgent_security_patch"
+        deprecation_warning: "plan_migration_timeline"
+        feature_addition: "consider_enhancement_opportunity"
+        
+      effort_estimation:
+        factors: ["change_complexity", "file_size", "dependency_depth"]
+        estimation_model: "historical_update_time_analysis"
+        confidence_intervals: "provide_min_max_estimates"
+        
+    recommendation_output:
+      format: "structured_json_with_human_readable_summary"
+      content:
+        - "affected_files_list"
+        - "recommended_actions"
+        - "estimated_effort"
+        - "timeline_recommendations"
+        - "risk_assessment"
+        
+  # Approval Gate Integration
+  approval_gate_rules:
+    automatic_approval:
+      conditions:
+        - "change_type == 'bug_fix'"
+        - "impact_level == 'minimal'"
+        - "confidence >= 0.8"
+      exceptions: "security_updates_always_auto_approved"
+      
+    manual_approval_required:
+      conditions:
+        - "change_type == 'breaking_change'"
+        - "impact_level in ['high', 'critical']"
+        - "affected_files > 10"
+      approval_workflow: "escalate_to_technical_lead"
+      
+    enhanced_review_required:
+      conditions:
+        - "confidence < 0.6"
+        - "unusual_change_pattern"
+        - "cross_technology_dependencies"
+      review_process: "multi_stakeholder_review"

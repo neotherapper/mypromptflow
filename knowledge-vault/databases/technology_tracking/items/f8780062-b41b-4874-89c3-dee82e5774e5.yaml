@@ -1,0 +1,11 @@
+id: f8780062-b41b-4874-89c3-dee82e5774e5
+technology_name: React
+category: frontend_framework
+current_version: 18.2.0
+version_pattern: semantic
+monitoring_priority: high
+description: JavaScript library for building user interfaces
+release_frequency: quarterly
+change_volatility: moderate
+first_tracked: '2025-07-25T10:25:26.813059'
+last_updated: '2025-07-25T10:25:26.813070'
