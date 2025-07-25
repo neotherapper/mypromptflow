@@ -98,7 +98,7 @@ knowledge-vault/
 │   └── relationship-definitions.yaml
 ├── databases/                     # Database implementations (6 directories)
 │   └── {database_name}/
-│       ├── items/                # Individual items (YAML files)
+│       ├── items/                # Individual items (Markdown files)
 │       ├── relations/            # Relationship mappings
 │       ├── indexes/              # Performance indexes  
 │       ├── views/                # Predefined views/filters

@@ -6,7 +6,7 @@ database_info:
   version: 2.0.0
   created: '2024-07-21'
   updated: '2025-01-24'
-  blueprint_source: 'knowledge-item-blueprint.yaml'
+  blueprint_source: 'knowledge-item-blueprint.md'
 properties:
   id:
     type: uuid
@@ -390,7 +390,7 @@ configuration:
     base_path: knowledge-vault/databases/knowledge_vault/
     item_path: items/
     relation_path: relations/
-    schema_path: knowledge_vault_schema.yaml
+    schema_path: knowledge_vault_schema.md
   notion_sync:
     enabled: true
     notion_database_id: 3773b9d6-2c31-42e3-b79d-17b7a5fe1174

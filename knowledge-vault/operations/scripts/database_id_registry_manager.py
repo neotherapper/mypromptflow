@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import yaml
+import frontmatter
 import time
 import hashlib
 from datetime import datetime, timedelta
@@ -58,17 +59,17 @@ class DatabaseIDRegistryManager:
     def __init__(self, registry_path: str = None):
         """Initialize the registry manager"""
         self.base_path = Path(__file__).parent.parent.parent.parent
-        self.registry_path = registry_path or self.base_path / "knowledge-vault/operations/cache/database-id-registry.yaml"
+        self.registry_path = registry_path or self.base_path / "knowledge-vault/operations/cache/database-id-registry.md"
         self.registry_data = {}
         self.performance_metrics = PerformanceMetrics()
         self.load_registry()
     
     def load_registry(self) -> None:
-        """Load registry from YAML file"""
+        """Load registry from Markdown file"""
         try:
             if self.registry_path.exists():
                 with open(self.registry_path, 'r', encoding='utf-8') as f:
-                    self.registry_data = yaml.safe_load(f)
+                    self.registry_data = frontmatter.load(f)
                 logger.info(f"Registry loaded from {self.registry_path}")
                 self._load_performance_metrics()
             else:
@@ -79,7 +80,7 @@ class DatabaseIDRegistryManager:
             self._create_default_registry()
     
     def save_registry(self) -> None:
-        """Save registry to YAML file"""
+        """Save registry to Markdown file"""
         try:
             # Update performance metrics before saving
             self._update_performance_metrics()

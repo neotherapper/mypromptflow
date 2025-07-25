@@ -1,0 +1,283 @@
+# Maritime Intelligence Domain Index
+# Optimized searching and filtering for maritime intelligence records
+
+index_info:
+  name: "Maritime Domain Index"
+  description: "High-performance index for maritime intelligence domain-based queries"
+  version: "1.0.0"
+  created: "2025-01-24"
+  index_type: "multi_dimensional"
+
+# Primary Domain Index
+domain_index:
+  
+  claims_processing:
+    description: "Maritime insurance claims processing applications"
+    record_count: 3
+    priority: "critical"
+    
+    records:
+      - id: "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+        title: "GitHub MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+        
+      - id: "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+        title: "PostgreSQL MCP Server - Maritime Insurance Database Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+        
+      - id: "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+        title: "GitLab MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+    
+    related_stakeholders: ["claims-adjusters", "underwriters", "legal-teams"]
+    related_frameworks: ["pi-club", "flag-state"]
+    
+  regulatory_compliance:
+    description: "Maritime regulatory compliance and reporting applications"
+    record_count: 3
+    priority: "high"
+    
+    records:
+      - id: "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+        title: "GitHub MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+        
+      - id: "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+        title: "PostgreSQL MCP Server - Maritime Insurance Database Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+        
+      - id: "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+        title: "GitLab MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+    
+    related_stakeholders: ["compliance-officers", "legal-teams"]
+    related_frameworks: ["imo", "solas", "marpol", "flag-state"]
+    
+  risk_assessment:
+    description: "Maritime risk assessment and scoring applications"
+    record_count: 1
+    priority: "high"
+    
+    records:
+      - id: "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+        title: "PostgreSQL MCP Server - Maritime Insurance Database Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+    
+    related_stakeholders: ["underwriters", "surveyors", "operations-teams"]
+    related_frameworks: ["class-society", "pi-club"]
+    
+  analytics:
+    description: "Maritime data analytics and business intelligence applications"
+    record_count: 1
+    priority: "medium"
+    
+    records:
+      - id: "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+        title: "PostgreSQL MCP Server - Maritime Insurance Database Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+    
+    related_stakeholders: ["underwriters", "operations-teams"]
+    related_frameworks: ["pi-club"]
+    
+  documentation:
+    description: "Maritime documentation and record management applications"
+    record_count: 2
+    priority: "medium"
+    
+    records:
+      - id: "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+        title: "GitHub MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+        
+      - id: "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+        title: "GitLab MCP Server - Maritime Claims Processing Intelligence"
+        business_impact: "critical"
+        priority: "immediate"
+    
+    related_stakeholders: ["legal-teams", "compliance-officers", "surveyors"]
+    related_frameworks: ["imo", "flag-state", "class-society"]
+
+# Stakeholder Index
+stakeholder_index:
+  
+  claims_adjusters:
+    description: "Maritime insurance claims adjusters and investigators"
+    relevant_records: 2
+    primary_domains: ["claims-processing"]
+    secondary_domains: ["documentation", "regulatory-compliance"]
+    
+  underwriters:
+    description: "Maritime insurance underwriters and risk assessors"
+    relevant_records: 2
+    primary_domains: ["risk-assessment", "claims-processing"]
+    secondary_domains: ["analytics", "regulatory-compliance"]
+    
+  legal_teams:
+    description: "Maritime legal professionals and compliance specialists"
+    relevant_records: 2
+    primary_domains: ["regulatory-compliance", "documentation"]
+    secondary_domains: ["claims-processing"]
+    
+  compliance_officers:
+    description: "Maritime regulatory compliance officers"
+    relevant_records: 2
+    primary_domains: ["regulatory-compliance"]
+    secondary_domains: ["documentation", "analytics"]
+    
+  surveyors:
+    description: "Marine surveyors and technical assessors"
+    relevant_records: 1
+    primary_domains: ["risk-assessment"]
+    secondary_domains: ["documentation", "regulatory-compliance"]
+    
+  operations_teams:
+    description: "Maritime operations and fleet management teams"
+    relevant_records: 1
+    primary_domains: ["analytics", "risk-assessment"]
+    secondary_domains: ["regulatory-compliance"]
+
+# Business Impact Index
+business_impact_index:
+  
+  critical:
+    description: "Essential for maritime business operations"
+    record_count: 3
+    records:
+      - "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+      - "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+      - "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+    
+    impact_areas:
+      - "Claims processing automation"
+      - "Risk assessment accuracy"
+      - "Regulatory compliance efficiency"
+      - "Data analytics capabilities"
+  
+  high:
+    description: "Significant operational improvement"
+    record_count: 0
+    records: []
+    
+  medium:
+    description: "Moderate efficiency gains" 
+    record_count: 0
+    records: []
+
+# Priority Index
+priority_index:
+  
+  immediate:
+    description: "Immediate implementation priority"
+    record_count: 3
+    records:
+      - "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+      - "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+      - "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+  
+  short_term:
+    description: "Short term implementation (1-3 months)"
+    record_count: 0
+    records: []
+    
+  medium_term:
+    description: "Medium term implementation (3-6 months)"
+    record_count: 0
+    records: []
+
+# Regulatory Framework Index
+regulatory_framework_index:
+  
+  imo:
+    description: "International Maritime Organization regulations"
+    relevant_records: 1
+    records: ["b41495c1-70ee-4dab-b7d0-d68216348b0b"]
+    
+  flag_state:
+    description: "Flag state regulatory requirements"
+    relevant_records: 3
+    records: 
+      - "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+      - "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+      - "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+    
+  pi_club:
+    description: "Protection and Indemnity Club requirements"
+    relevant_records: 3
+    records:
+      - "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+      - "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+      - "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+    
+  class_society:
+    description: "Classification society standards"
+    relevant_records: 3
+    records:
+      - "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+      - "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+      - "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+    
+  solas:
+    description: "Safety of Life at Sea convention"
+    relevant_records: 1
+    records: ["b41495c1-70ee-4dab-b7d0-d68216348b0b"]
+    
+  marpol:
+    description: "International Convention for the Prevention of Pollution from Ships"
+    relevant_records: 1
+    records: ["b41495c1-70ee-4dab-b7d0-d68216348b0b"]
+
+# Cross-Reference Index
+cross_reference_index:
+  
+  generic_tools_referenced:
+    github_mcp_server:
+      maritime_applications: 1
+      primary_domains: ["claims-processing", "documentation"]
+      
+    postgresql_mcp_server:
+      maritime_applications: 1
+      primary_domains: ["claims-processing", "risk-assessment", "analytics"]
+  
+  knowledge_vault_integration:
+    hub_connections: 2
+    spoke_relationships: 0
+    cross_spoke_relationships: 2  # To tools_services database
+
+# Query Optimization Hints
+query_optimization:
+  
+  # Common Query Patterns
+  common_queries:
+    by_domain: "SELECT * FROM maritime_intelligence WHERE maritime_domain @> ARRAY['claims-processing']"
+    by_stakeholder: "SELECT * FROM maritime_intelligence WHERE stakeholders @> ARRAY['underwriters']"
+    by_priority: "SELECT * FROM maritime_intelligence WHERE priority = 'immediate' ORDER BY business_impact DESC"
+    by_framework: "SELECT * FROM maritime_intelligence WHERE regulatory_frameworks @> ARRAY['pi-club']"
+  
+  # Recommended Indexes
+  recommended_indexes:
+    - "CREATE INDEX idx_maritime_domain ON maritime_intelligence USING GIN (maritime_domain)"
+    - "CREATE INDEX idx_stakeholders ON maritime_intelligence USING GIN (stakeholders)"
+    - "CREATE INDEX idx_regulatory_frameworks ON maritime_intelligence USING GIN (regulatory_frameworks)"
+    - "CREATE INDEX idx_priority_impact ON maritime_intelligence (priority, business_impact)"
+    - "CREATE INDEX idx_cross_reference ON maritime_intelligence USING btree (generic_tool_reference)"
+
+# Index Maintenance
+maintenance:
+  update_frequency: "real_time"
+  rebuild_schedule: "weekly"
+  validation_schedule: "daily"
+  
+  maintenance_tasks:
+    - "Refresh record counts in domain indexes"
+    - "Validate cross-reference integrity"
+    - "Update stakeholder and framework mappings"
+    - "Optimize query performance statistics"

@@ -375,7 +375,7 @@ configuration:
     base_path: "knowledge-vault/databases/dependency_mapping/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "dependency_mapping_schema.yaml"
+    schema_path: "dependency_mapping_schema.md"
     
   # Integration Settings
   orchestrator_integration:

@@ -10,6 +10,7 @@ for the AI Knowledge Lifecycle Orchestrator integration.
 import os
 import sys
 import yaml
+import frontmatter
 import json
 import shutil
 from datetime import datetime
@@ -28,22 +29,22 @@ class KnowledgeVaultOperationsUpdater:
         # New databases for orchestrator
         self.new_databases = {
             'technology_tracking': {
-                'schema_file': 'technology-tracking-schema.yaml',
+                'schema_file': 'technology-tracking-schema.md',
                 'description': 'Technology version and change pattern tracking',
                 'notion_integration': False
             },
             'dependency_mapping': {
-                'schema_file': 'dependency-mapping-schema.yaml',
+                'schema_file': 'dependency-mapping-schema.md',
                 'description': 'AI file to technology dependency relationships',
                 'notion_integration': False
             },
             'knowledge_updates': {
-                'schema_file': 'knowledge-update-schema.yaml',
+                'schema_file': 'knowledge-update-schema.md',
                 'description': 'Update workflow and quality tracking',
                 'notion_integration': False
             },
             'change_events': {
-                'schema_file': 'change-event-schema.yaml',
+                'schema_file': 'change-event-schema.md',
                 'description': 'Technology change detection and classification',
                 'notion_integration': False
             }
@@ -125,7 +126,7 @@ class KnowledgeVaultOperationsUpdater:
 {self.new_databases[db_name]['description']}
 
 ## Directory Structure
-- `items/` - Individual database items (YAML files)
+- `items/` - Individual database items (Markdown files)
 - `relations/` - Relationship mappings between items
 - `metadata/` - Database metadata and configuration
 - `indexes/` - Index files for performance optimization
@@ -154,11 +155,11 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         """Update main knowledge vault schema with new relationships"""
         self.log("Updating main knowledge vault schema...")
         
-        schema_file = self.knowledge_vault_path / "schemas" / "knowledge-vault-schema.yaml"
+        schema_file = self.knowledge_vault_path / "schemas" / "knowledge-vault-schema.md"
         
         try:
             with open(schema_file, 'r') as f:
-                schema_data = yaml.safe_load(f)
+                schema_data = frontmatter.load(f)
             
             # Add new relationship properties
             new_relations = {
@@ -217,7 +218,7 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
                     }
             
             # Backup original schema
-            backup_file = schema_file.with_suffix('.yaml.backup')
+            backup_file = schema_file.with_suffix('.md.backup')
             shutil.copy2(schema_file, backup_file)
             self.log(f"Created backup: {backup_file}")
             
@@ -249,10 +250,10 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     def update_relationship_definitions(self, shared_path: Path) -> bool:
         """Update relationship definitions file"""
         try:
-            relations_file = shared_path / "relationship-definitions.yaml"
+            relations_file = shared_path / "relationship-definitions.md"
             
             with open(relations_file, 'r') as f:
-                relations_data = yaml.safe_load(f)
+                relations_data = frontmatter.load(f)
             
             # Add orchestrator relationship definitions
             orchestrator_relations = {
@@ -318,10 +319,10 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     def update_tags_vocabulary(self, shared_path: Path) -> bool:
         """Update tags vocabulary file"""
         try:
-            tags_file = shared_path / "unified-tags-vocabulary.yaml"
+            tags_file = shared_path / "unified-tags-vocabulary.md"
             
             with open(tags_file, 'r') as f:
-                tags_data = yaml.safe_load(f)
+                tags_data = frontmatter.load(f)
             
             # Add orchestrator-specific tags
             orchestrator_tags = [
@@ -366,10 +367,10 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
     def update_status_workflows(self, shared_path: Path) -> bool:
         """Update status workflows file"""
         try:
-            workflows_file = shared_path / "status-workflows.yaml"
+            workflows_file = shared_path / "status-workflows.md"
             
             with open(workflows_file, 'r') as f:
-                workflows_data = yaml.safe_load(f)
+                workflows_data = frontmatter.load(f)
             
             # Add orchestrator workflows
             orchestrator_workflows = {
@@ -447,7 +448,7 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         }
         
         # Write orchestrator configuration
-        config_file = scripts_path / "orchestrator-config.yaml"
+        config_file = scripts_path / "orchestrator-config.md"
         with open(config_file, 'w') as f:
             yaml.dump(orchestrator_config, f, default_flow_style=False, sort_keys=False)
         
@@ -481,28 +482,28 @@ Created: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 # AI Knowledge Lifecycle Orchestrator Integration
 ORCHESTRATOR_DATABASES = {
     'technology_tracking': {
-        'schema_path': 'knowledge-vault/schemas/technology-tracking-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/technology-tracking-schema.md',
         'base_path': 'knowledge-vault/databases/technology_tracking/',
         'notion_integration': False,
         'local_only': True,
         'description': 'Technology version and change pattern tracking'
     },
     'dependency_mapping': {
-        'schema_path': 'knowledge-vault/schemas/dependency-mapping-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/dependency-mapping-schema.md',
         'base_path': 'knowledge-vault/databases/dependency_mapping/',
         'notion_integration': False,
         'local_only': True,
         'description': 'AI file to technology dependency relationships'
     },
     'knowledge_updates': {
-        'schema_path': 'knowledge-vault/schemas/knowledge-update-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/knowledge-update-schema.md',
         'base_path': 'knowledge-vault/databases/knowledge_updates/',
         'notion_integration': False,
         'local_only': True,
         'description': 'Update workflow and quality tracking'
     },
     'change_events': {
-        'schema_path': 'knowledge-vault/schemas/change-event-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/change-event-schema.md',
         'base_path': 'knowledge-vault/databases/change_events/',
         'notion_integration': False,
         'local_only': True,
@@ -574,10 +575,10 @@ def query_orchestrator_database(database_name, filters=None):
         validation_code = '''
 # Orchestrator schema validation
 ORCHESTRATOR_SCHEMAS = [
-    'knowledge-vault/schemas/technology-tracking-schema.yaml',
-    'knowledge-vault/schemas/dependency-mapping-schema.yaml',
-    'knowledge-vault/schemas/knowledge-update-schema.yaml',
-    'knowledge-vault/schemas/change-event-schema.yaml'
+    'knowledge-vault/schemas/technology-tracking-schema.md',
+    'knowledge-vault/schemas/dependency-mapping-schema.md',
+    'knowledge-vault/schemas/knowledge-update-schema.md',
+    'knowledge-vault/schemas/change-event-schema.md'
 ]
 
 
@@ -605,7 +606,8 @@ if __name__ == "__main__":
             with open(validation_file, 'r') as f:
                 existing_content = f.read()
         else:
-            existing_content = "#!/usr/bin/env python3\nimport os\nimport yaml\n"
+            existing_content = "#!/usr/bin/env python3\nimport os\nimport yaml
+import frontmatter\n"
         
         # Add orchestrator validation if not present
         if 'ORCHESTRATOR_SCHEMAS' not in existing_content:
@@ -634,6 +636,7 @@ Tests the integration between Knowledge Vault and Orchestrator schemas
 import os
 import sys
 import yaml
+import frontmatter
 import json
 from datetime import datetime
 from pathlib import Path
@@ -644,10 +647,10 @@ def test_schema_files():
     print("Testing schema files...")
     
     schemas = [
-        'knowledge-vault/schemas/technology-tracking-schema.yaml',
-        'knowledge-vault/schemas/dependency-mapping-schema.yaml',
-        'knowledge-vault/schemas/knowledge-update-schema.yaml',
-        'knowledge-vault/schemas/change-event-schema.yaml'
+        'knowledge-vault/schemas/technology-tracking-schema.md',
+        'knowledge-vault/schemas/dependency-mapping-schema.md',
+        'knowledge-vault/schemas/knowledge-update-schema.md',
+        'knowledge-vault/schemas/change-event-schema.md'
     ]
     
     for schema_path in schemas:
@@ -657,7 +660,7 @@ def test_schema_files():
         
         try:
             with open(schema_path, 'r') as f:
-                schema_data = yaml.safe_load(f)
+                schema_data = frontmatter.load(f)
             print(f"✓ Valid schema: {schema_path}")
         except Exception as e:
             print(f"✗ Invalid schema {schema_path}: {str(e)}")
@@ -707,10 +710,10 @@ def test_configuration_updates():
     print("Testing configuration updates...")
     
     # Test main schema updates
-    main_schema_path = "knowledge-vault/schemas/knowledge-vault-schema.yaml"
+    main_schema_path = "knowledge-vault/schemas/knowledge-vault-schema.md"
     if os.path.exists(main_schema_path):
         with open(main_schema_path, 'r') as f:
-            schema_data = yaml.safe_load(f)
+            schema_data = frontmatter.load(f)
         
         properties = schema_data.get('properties', {})
         required_relations = [

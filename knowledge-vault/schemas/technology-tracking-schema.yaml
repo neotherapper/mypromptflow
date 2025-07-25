@@ -338,7 +338,7 @@ configuration:
     base_path: "knowledge-vault/databases/technology_tracking/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "technology_tracking_schema.yaml"
+    schema_path: "technology_tracking_schema.md"
     
   # Integration Settings
   orchestrator_integration:

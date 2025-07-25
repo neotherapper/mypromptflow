@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import yaml
+import frontmatter
 import time
 import logging
 import hashlib
@@ -512,28 +513,28 @@ if __name__ == "__main__":
 # AI Knowledge Lifecycle Orchestrator Integration
 ORCHESTRATOR_DATABASES = {
     'technology_tracking': {
-        'schema_path': 'knowledge-vault/schemas/technology-tracking-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/technology-tracking-schema.md',
         'base_path': 'knowledge-vault/databases/technology_tracking/',
         'notion_integration': False,
         'local_only': True,
         'description': 'Technology version and change pattern tracking'
     },
     'dependency_mapping': {
-        'schema_path': 'knowledge-vault/schemas/dependency-mapping-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/dependency-mapping-schema.md',
         'base_path': 'knowledge-vault/databases/dependency_mapping/',
         'notion_integration': False,
         'local_only': True,
         'description': 'AI file to technology dependency relationships'
     },
     'knowledge_updates': {
-        'schema_path': 'knowledge-vault/schemas/knowledge-update-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/knowledge-update-schema.md',
         'base_path': 'knowledge-vault/databases/knowledge_updates/',
         'notion_integration': False,
         'local_only': True,
         'description': 'Update workflow and quality tracking'
     },
     'change_events': {
-        'schema_path': 'knowledge-vault/schemas/change-event-schema.yaml',
+        'schema_path': 'knowledge-vault/schemas/change-event-schema.md',
         'base_path': 'knowledge-vault/databases/change_events/',
         'notion_integration': False,
         'local_only': True,

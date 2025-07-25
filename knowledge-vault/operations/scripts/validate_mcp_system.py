@@ -18,9 +18,9 @@ def check_file_structure() -> Dict[str, bool]:
     
     # Required files
     required_files = {
-        'sync_operations': 'knowledge-vault/operations/sync-operations-executable.yaml',
-        'property_mappings': 'knowledge-vault/operations/notion-property-mappings.yaml',
-        'data_transformations': 'knowledge-vault/operations/data-transformations.yaml',
+        'sync_operations': 'knowledge-vault/operations/sync-operations-executable.md',
+        'property_mappings': 'knowledge-vault/operations/notion-property-mappings.md',
+        'data_transformations': 'knowledge-vault/operations/data-transformations.md',
         'batch_migration': 'knowledge-vault/operations/scripts/batch_migration.py',
         'validate_schemas': 'knowledge-vault/operations/scripts/validate_schemas.py',
         'test_data_generator': 'knowledge-vault/operations/scripts/create_vanguardai_test_data.py',
@@ -57,9 +57,9 @@ def validate_yaml_syntax() -> Dict[str, bool]:
     base_path = Path(__file__).parent.parent.parent.parent
     
     yaml_files = [
-        'knowledge-vault/operations/sync-operations-executable.yaml',
-        'knowledge-vault/operations/notion-property-mappings.yaml',
-        'knowledge-vault/operations/data-transformations.yaml'
+        'knowledge-vault/operations/sync-operations-executable.md',
+        'knowledge-vault/operations/notion-property-mappings.md',
+        'knowledge-vault/operations/data-transformations.md'
     ]
     
     for yaml_file in yaml_files:
@@ -151,7 +151,7 @@ def check_configuration_completeness() -> Dict[str, Any]:
     base_path = Path(__file__).parent.parent.parent.parent
     
     # Check sync operations
-    sync_ops_path = base_path / 'knowledge-vault/operations/sync-operations-executable.yaml'
+    sync_ops_path = base_path / 'knowledge-vault/operations/sync-operations-executable.md'
     if sync_ops_path.exists():
         with open(sync_ops_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -162,7 +162,7 @@ def check_configuration_completeness() -> Dict[str, Any]:
         results['has_migration_commands'] = 'migrate' in content.lower()
     
     # Check property mappings
-    prop_map_path = base_path / 'knowledge-vault/operations/notion-property-mappings.yaml'
+    prop_map_path = base_path / 'knowledge-vault/operations/notion-property-mappings.md'
     if prop_map_path.exists():
         with open(prop_map_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -172,7 +172,7 @@ def check_configuration_completeness() -> Dict[str, Any]:
         results['property_mappings_size'] = len(content)
     
     # Check data transformations
-    data_trans_path = base_path / 'knowledge-vault/operations/data-transformations.yaml'
+    data_trans_path = base_path / 'knowledge-vault/operations/data-transformations.md'
     if data_trans_path.exists():
         with open(data_trans_path, 'r', encoding='utf-8') as f:
             content = f.read()

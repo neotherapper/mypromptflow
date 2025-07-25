@@ -444,7 +444,7 @@ configuration:
     base_path: "knowledge-vault/databases/knowledge_updates/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "knowledge_update_schema.yaml"
+    schema_path: "knowledge_update_schema.md"
     
   # Integration Settings
   orchestrator_integration:

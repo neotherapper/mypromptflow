@@ -11,7 +11,7 @@ engine_info:
 
 # Tag System Architecture
 tag_architecture:
-  vocabulary_source: "../shared/tags-vocabulary.yaml"
+  vocabulary_source: "../shared/tags-vocabulary.md"
   
   tag_structure:
     flat_hierarchy: true

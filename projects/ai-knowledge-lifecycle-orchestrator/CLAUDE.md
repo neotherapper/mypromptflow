@@ -16,6 +16,7 @@ Create an intelligent system that automatically detects changes in technology so
 - Implement automated change detection for critical technologies
 - Build update pipeline that revalidates and updates dependent AI instructions
 - Enhance PR validation with context-aware current knowledge
+- **NEW**: Implement role-aware knowledge management for specialized AI agents
 
 **Success Criteria**: 
 - Zero outdated technology examples in AI agent responses
@@ -23,6 +24,7 @@ Create an intelligent system that automatically detects changes in technology so
 - Change detection for top 50 critical technologies with 95% accuracy
 - Automated update pipeline with <24h propagation time for critical changes
 - Enhanced PR validation using current technology versions and best practices
+- **NEW**: Role-specific knowledge delivery with 95%+ context relevance for specialized AI agents
 
 **Approach**: Four-phase implementation starting with dependency mapping, then building change detection, update pipeline, and PR enhancement systems
 
@@ -31,6 +33,29 @@ Create an intelligent system that automatically detects changes in technology so
 - Cannot break existing AI agent functionality during updates
 - Must maintain quality standards equivalent to existing validation frameworks
 - Updates require approval gates for critical changes
+
+## Quality Standards
+
+**System Reliability Requirements**:
+- Dependency mapping accuracy: ≥95% correct identification of technology dependencies in AI files
+- Change detection reliability: ≥98% accuracy in identifying meaningful technology changes
+- Update pipeline success: ≥90% automated update success rate with ≤5% false positives
+- Validation framework integration: 100% compatibility with existing quality standards
+- Response time requirement: ≤24h from change detection to updated AI instructions for critical changes
+
+**Integration Quality Metrics**:
+- Knowledge Vault compatibility: 100% schema integration without data corruption
+- AI instruction preservation: Zero functional regression during automated updates
+- MCP server reliability: ≥95% successful information retrieval from monitored sources
+- Cross-reference accuracy: 100% maintained link integrity after updates
+- Quality framework compliance: All updated instructions pass existing validation standards
+
+**Operational Excellence Standards**:
+- Technology monitoring coverage: 100% of top 50 critical technologies tracked
+- False positive rate: ≤5% for change detection and impact analysis
+- Human approval efficiency: ≤2h review time for critical change approvals
+- System availability: ≥99.5% uptime for dependency monitoring and update pipeline
+- Documentation currency: 100% alignment between AI instructions and actual technology versions
 
 ## Current Status: Phase 1 Active Development
 
@@ -123,6 +148,56 @@ pr_validation_rules:
   security_compliance: "Check against latest security recommendations"
 ```
 
+#### 6. Role-Aware Knowledge Management System
+```yaml
+# NEW: Specialized knowledge delivery for different AI agent roles
+role_aware_architecture:
+  knowledge_organization:
+    structure: "Hybrid approach with role-specific files"
+    format: "technologies/{technology}/{technology}-{role}.md"
+    example_files:
+      - "technologies/react/react-architect.md"      # Architecture patterns, design decisions
+      - "technologies/react/react-frontend-dev.md"   # Implementation patterns, hooks usage
+      - "technologies/react/react-performance.md"    # Optimization techniques, profiling
+      - "technologies/react/react-accessibility.md"  # A11y patterns, compliance
+      - "technologies/react/react-testing.md"        # Testing strategies, patterns
+      - "technologies/react/react-security.md"       # Security best practices
+
+  agent_role_taxonomy:
+    core_development: ["architect", "frontend-dev", "backend-dev", "fullstack-dev", "devops", "tester", "designer", "product-manager"]
+    specialized_roles:
+      performance_specialists: ["performance-architect", "frontend-performance", "backend-performance", "database-performance"]
+      security_specialists: ["security-architect", "frontend-security", "backend-security", "infrastructure-security"]
+      testing_specialists: ["test-architect", "unit-test-specialist", "integration-test-specialist", "e2e-test-specialist"]
+      domain_specialists: ["accessibility-specialist", "mobile-specialist", "api-specialist", "database-specialist"]
+
+  intelligent_context_delivery:
+    agent_self_discovery:
+      process: "Agents analyze files and request relevant contexts"
+      context_request_syntax: "REQUEST_CONTEXT(path)"
+      no_token_limits: "Leverage full 200K Claude Code Max context window"
+      comprehensive_loading: "Load all relevant contexts without artificial constraints"
+    
+    context_selection_strategy:
+      primary_context: "Role-specific file for detected technology and agent type"
+      cross_reference_loading: "Related technologies and dependency patterns"
+      semantic_relevance: "Content relevance scoring over arbitrary token budgets"
+      fallback_hierarchy: "Generic → Role-specific → Domain-specific contexts"
+
+  multi_target_update_pipeline:
+    change_propagation:
+      single_technology_change: "Updates multiple role-specific files simultaneously"
+      example_react_update:
+        trigger: "React 19.0.0 released with new features"
+        affected_files:
+          - "technologies/react/react-architect.md"     # New architecture patterns
+          - "technologies/react/react-frontend-dev.md"  # New hooks and component patterns
+          - "technologies/react/react-performance.md"   # Performance improvements
+          - "technologies/react/react-testing.md"       # Testing library compatibility
+        parallel_updates: "All role-specific files updated simultaneously"
+        consistency_validation: "Cross-reference accuracy maintained"
+```
+
 ## AI Agent Instructions
 
 ### Understanding This Project
@@ -193,6 +268,25 @@ new_schemas:
     database: "knowledge_vault" 
     purpose: "Store AI file → technology dependency relationships"
     schema_file: "schemas/dependency-mapping-schema.yaml"
+  
+  # NEW: Role-aware knowledge schemas
+  role_specific_knowledge:
+    database: "knowledge_vault"
+    purpose: "Store role-specific technology knowledge and context files"
+    schema_file: "schemas/role-specific-knowledge-schema.yaml"
+    structure:
+      item_format: "technologies/{technology}/{technology}-{role}.md"
+      metadata_tracking: "Usage patterns, effectiveness scores, update history"
+      cross_references: "Links between related role contexts and technologies"
+      
+  agent_context_registry:
+    database: "knowledge_vault"
+    purpose: "Track agent-to-context mappings and effectiveness metrics"
+    schema_file: "schemas/agent-context-registry-schema.yaml"
+    capabilities:
+      agent_binding: "Explicit mapping of agents to their knowledge requirements"
+      context_effectiveness: "Track which contexts improve agent performance"
+      usage_analytics: "Monitor context request patterns and relevance"
 ```
 
 #### AI Agent Instruction Design Excellence Integration
@@ -222,26 +316,35 @@ utilized_servers:
 2. **Dependency Validation**: Verify AI files are using current technology versions
 3. **Quality Monitoring**: Track system health and update success rates
 4. **Issue Resolution**: Address failed updates or validation errors
+5. **NEW: Role-Context Effectiveness**: Monitor agent context request patterns and relevance
 
 #### Weekly Operations
 1. **Technology Source Review**: Add new technologies to monitoring list
 2. **Dependency Graph Analysis**: Identify heavily interdependent files for priority updates
 3. **Performance Optimization**: Improve scanner accuracy and update pipeline efficiency
 4. **Integration Testing**: Validate connections with Knowledge Vault and validation frameworks
+5. **NEW: Context Analytics**: Analyze role-specific knowledge usage patterns
 
 #### Monthly Operations
 1. **System Health Assessment**: Comprehensive analysis of update effectiveness
 2. **Technology Landscape Review**: Evaluate emerging technologies for inclusion
 3. **Process Optimization**: Improve workflows based on usage patterns and feedback
 4. **Quality Metrics Analysis**: Measure impact on AI agent response accuracy
+5. **NEW: Role Taxonomy Review**: Evaluate new agent specializations and context needs
 
-### Quality Standards
+### Performance Metrics
 
-**Dependency Mapping Accuracy**: 95% correct identification of technology dependencies in AI files
-**Change Detection Reliability**: 98% accuracy in identifying meaningful technology changes
-**Update Pipeline Success**: 90% automated update success rate with <5% false positives  
-**Validation Framework Integration**: 100% compatibility with existing quality standards
-**Response Time**: <24h from change detection to updated AI instructions for critical changes
+**Current Phase Targets**: 
+- Dependency mapping accuracy: ≥95% correct identification
+- Change detection reliability: ≥98% meaningful change accuracy
+- Update pipeline success: ≥90% automated success rate with ≤5% false positives
+- Response time: ≤24h critical change propagation
+
+**NEW: Role-Aware System Targets**:
+- Context relevance accuracy: ≥95% for agent self-discovery requests
+- Role-specific knowledge coverage: 100% for top 20 critical technologies
+- Multi-role update consistency: 100% cross-reference accuracy after parallel updates
+- Agent context effectiveness: ≥90% improvement in validation quality with role-specific contexts
 
 ### Tools and Resources
 
@@ -265,11 +368,19 @@ utilized_servers:
 
 ## Next Steps for AI Agents
 
+### Phase 1: Core System (Existing)
 1. **Implement Dependency Registry**: Create schema and begin scanning existing AI files
 2. **Build Change Detection**: Set up monitoring for top 10 critical technologies
 3. **Test Integration Points**: Validate connections with Knowledge Vault and validation frameworks
 4. **Prototype Update Pipeline**: Build initial automated update workflow with approval gates
 5. **Enhance PR Validation**: Integrate current technology context into PR review process
+
+### Phase 2: Role-Aware Knowledge Management (NEW)
+6. **Create Role-Specific Knowledge Schemas**: Design Knowledge Vault schemas for role-based contexts
+7. **Build Technology Context Library**: Create role-specific files for React, TypeScript, Testing, and Performance
+8. **Implement Agent Self-Discovery**: Add context request capabilities to specialized AI agents
+9. **Develop Multi-Target Update Pipeline**: Enable parallel updates across multiple role-specific files
+10. **Integrate with PR Validation System**: Connect role-aware contexts with intelligent agent spawning
 
 **Critical Success Factors**: 
 - Comprehensive dependency mapping covering all AI instruction files
@@ -277,5 +388,8 @@ utilized_servers:
 - Seamless integration with existing validation frameworks and quality standards
 - Automated pipeline that maintains human oversight for critical changes
 - Measurable improvement in AI agent response currency and accuracy
+- **NEW**: Effective role-aware knowledge delivery with 95%+ context relevance
+- **NEW**: Intelligent agent self-discovery without artificial token constraints
+- **NEW**: Multi-role update consistency maintaining cross-reference accuracy
 
-Last Updated: 2025-01-24
+Last Updated: 2025-07-25

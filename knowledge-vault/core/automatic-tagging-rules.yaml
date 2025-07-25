@@ -6,8 +6,8 @@ metadata:
   created: "2025-01-24"
   purpose: "Automated tagging logic for MCP server profiles based on name, description, and context analysis"
   dependencies:
-    - "knowledge-vault/core/mcp-relationship-mappings.yaml"
-    - "knowledge-vault/schemas/tools-services-schema.yaml"
+    - "knowledge-vault/core/mcp-relationship-mappings.md"
+    - "knowledge-vault/schemas/tools-services-schema.md"
     - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
 
 # Core Tagging Algorithm
@@ -19,13 +19,13 @@ tagging_algorithm:
       method: "regex_pattern_matching"
       case_sensitivity: false
       confidence_scoring: true
-      patterns: "From mcp-relationship-mappings.yaml name_pattern_rules"
+      patterns: "From mcp-relationship-mappings.md name_pattern_rules"
       
     description_analysis:
       method: "contextual_keyword_extraction"
       natural_language_processing: true
       semantic_matching: true
-      patterns: "From mcp-relationship-mappings.yaml description_pattern_rules"
+      patterns: "From mcp-relationship-mappings.md description_pattern_rules"
       
     metadata_analysis:
       method: "structured_data_parsing"
@@ -63,7 +63,7 @@ tagging_algorithm:
       
     category_mapping:
       method: "predefined_category_relationships"
-      mapping_source: "mcp-relationship-mappings.yaml category_mappings"
+      mapping_source: "mcp-relationship-mappings.md category_mappings"
       inheritance_rules: "Apply tag inheritance from linked categories"
       
     cross_reference_generation:

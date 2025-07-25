@@ -352,12 +352,12 @@ integration_points:
   file_system_integration:
     relationship_files:
       location: "databases/{database}/relations/"
-      naming: "{source_db}_to_{target_db}_{property}.yaml"
+      naming: "{source_db}_to_{target_db}_{property}.md"
       format: "yaml"
       
     index_files:
       location: "databases/{database}/indexes/"
-      naming: "{database}_relationships_index.yaml"
+      naming: "{database}_relationships_index.md"
       update_frequency: "on_change"
   
   validation_integration:

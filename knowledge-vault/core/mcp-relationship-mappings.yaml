@@ -7,7 +7,7 @@ metadata:
   purpose: "Intelligent tagging system linking MCP servers to knowledge-vault database items"
   description: "Defines relationship patterns, automatic tagging rules, and cross-reference generation for MCP server profiles"
   integration_points:
-    - "knowledge-vault/schemas/tools-services-schema.yaml"
+    - "knowledge-vault/schemas/tools-services-schema.md"
     - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
     - "knowledge-vault/databases/tools_services/"
 
@@ -312,7 +312,7 @@ implementation_guidelines:
   
   # Phase 1: Schema Enhancement (Completed)
   phase_1:
-    - "✓ Updated tools-services-schema.yaml with new tags"
+    - "✓ Updated tools-services-schema.md with new tags"
     - "✓ Added company/vendor tags"
     - "✓ Enhanced industry vertical tags"
     - "✓ Added MCP server profile cross-reference field"

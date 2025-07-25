@@ -36,7 +36,7 @@
   - **Status**: Deferred - BDD patterns more applicable to document-to-code
   - **Files Created**: research/findings/ai-workflow-reproducibility/comprehensive-analysis.md
 
-## Next Priority Tasks (Document-to-Code Implementation)
+## Current Priority Tasks (Core Framework Enhancement)
 
 - [x] **Fix knowledge status system** (Completed: 2025-07-16)
   - **FIXED**: Removed incorrect hook references from cache file
@@ -44,30 +44,53 @@
   - **RESULT**: ai/context/knowledge-status-cache.yaml now accurately reflects manual update system
   - **NEXT**: Could implement proper Claude Code hooks later if needed
 
-- [ ] **Create Figma MCP integration protocol** (Priority: Low)
-  - **NOTE**: Deferred due to complexity - can be simplified later
-  - Document official Dev Mode MCP Server setup at `localhost:3845/sse`
-  - Establish component naming convention: `{feature}__{component}__{state}`
-  - Create CLAUDE.md templates for feature-specific design mapping
-  - Design fallback strategies for missing design specifications
+- [x] **Create JIRA Story for AI Knowledge Base Enhancement** (Completed: 2025-07-24)
+  - **COMPLETED**: Created SCRUM-57 linked to Epic SCRUM-41
+  - **LINKED**: Previous framework tickets (SCRUM-43, SCRUM-44) now linked to Epic SCRUM-41
+  - **STATUS**: Project tracking and coordination established in JIRA
 
-- [ ] **Simple search improvements** (Priority: Medium)
-  - **NOTE**: Vector databases not needed for core functionality
-  - Improve existing YAML-based search in knowledge base
-  - Add basic semantic clustering in existing cache system
-  - Optional: Consider simple text search if needed later
+- [ ] **Core Framework Enhancement** (Priority: High)
+  - **FOCUS**: Build on existing AI knowledge base capabilities at `@ai/`
+  - Improve existing system reliability and coordination
+  - Enhance AI agent coordination patterns
+  - Build foundation for future advanced capabilities
 
-- [ ] **Implement meta-framework orchestration patterns** (Priority: Medium)
-  - Apply SuperClaude modular command structure with specialized categories
-  - Integrate Claude Flow swarm intelligence patterns for complex workflows
-  - Design SQLite-based persistent memory system for agent coordination
-  - Implement SPARC methodology: Specification→Pseudocode→Architecture→Refinement→Completion
+- [ ] **Research Integration Bridge** (Priority: High)
+  - Connect with existing research orchestrator for automatic gap detection
+  - Implement internal commands that trigger research when knowledge gaps detected
+  - Maintain framework independence while enabling intelligent coordination
+  - Design bridge mechanism maintaining clean separation between frameworks
 
-- [ ] **Create BDD acceptance criteria to test code generation** (Priority: Medium)
-  - Design Given-When-Then patterns for acceptance criteria transformation
-  - Create automatic test scaffolding generation from specifications
-  - Build code generation pipeline from comprehensive documentation
-  - Implement end-to-end document-to-code validation
+- [ ] **Command System Improvements** (Priority: Medium)
+  - Enhance existing slash command infrastructure
+  - Improve command documentation and AI agent coordination
+  - Build better integration with existing command structure
+  - Maintain Claude Code compatibility with terminal-based workflows
+
+- [ ] **Error Learning Integration** (Priority: Low)
+  - **NOTE**: Follow existing procedures at `@meta/mcp-learning/` - no integration work needed
+  - Apply existing error learning patterns and procedures
+  - Document any errors encountered using established templates
+  - Reference existing error logging system for troubleshooting
+
+## Deferred Tasks (Future Development - Documented Only)
+
+- [ ] **Vector Database Integration** (Priority: Deferred - Much Later Stage)
+  - **STATUS**: Not needed for core functionality at this time
+  - **RESEARCH COMPLETED**: Chroma→Qdrant progression documented for future
+  - **DOCUMENTATION**: Keep architecture plans in project docs for later implementation
+  - **TIMELINE**: Will be addressed in future development cycles when needed
+
+- [ ] **Figma MCP Integration** (Priority: Deferred - Not Ready Yet)
+  - **STATUS**: Figma MCP not ready for integration yet
+  - **RESEARCH COMPLETED**: Official Dev Mode MCP Server patterns documented
+  - **DOCUMENTATION**: Component naming conventions and integration guides preserved
+  - **TIMELINE**: Will be implemented when Figma MCP Server is production-ready
+
+- [ ] **Complex Framework Testing** (Priority: Suspended - Too Early)
+  - **STATUS**: Too difficult/early for validation at current development stage
+  - **RATIONALE**: Framework needs more development before comprehensive testing
+  - **TIMELINE**: Will be addressed when framework development is more mature
 
 ## Phase 1: Knowledge Status Cache & Bridge (Week 1)
 

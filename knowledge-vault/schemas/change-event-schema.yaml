@@ -445,7 +445,7 @@ configuration:
     base_path: "knowledge-vault/databases/change_events/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "change_event_schema.yaml"
+    schema_path: "change_event_schema.md"
     
   # Integration Settings
   orchestrator_integration:

@@ -1,49 +1,298 @@
-# AI Knowledge Base Project Instructions
+# AI Knowledge Base System Instructions
 
-## Project Explanation
+## Core Requirements
 
-**Project Type**: AI Knowledge Base Development
-**Current Status**: Research Framework Operational
-**Priority Level**: Critical Infrastructure (Tier 1)
+**ALL AI Agents MUST**:
+
+- Follow task completion protocol when completing tasks: `ai/workflows/task-management/CLAUDE.md`
+- Apply development protocols when doing development work: `development/CLAUDE.md`
+- Validate using meta framework when validating instructions: `meta/validation/validators/ai-instruction/`
+
+## Essential Constraints
+
+**Never**:
+
+- Commit to master branch (use feature branches)
+- Create files without registry similarity analysis for research
+
+**Always**:
+
+- Use MCP JIRA tools (mcp__MCP_DOCKER__jira\_\*)
+- Execute parallel tool operations for efficiency
+- Mark TodoWrite complete with timestamps
+- Validate @file_path cross-references
+
+## Project Architecture
+
+**Project Type**: AI Knowledge Base Development  
+**Current Status**: Research Framework Operational  
+**Priority Level**: Critical Infrastructure (Tier 1)  
 **Success Threshold**: High research quality, fast response time, zero external dependencies
 
 Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→Architect→Specialist→Worker) with research capabilities and progressive context loading.
 
-**AI Agent Instruction Design Excellence Framework**: Production-ready patterns with comprehensive validation and constitutional AI compliance.
+### Three-Layer System Architecture
+
+**Layer 1: AI Orchestration** (`ai/`)
+- Multi-agent coordination with feature orchestrators
+- 67+ document types with template-based generation
+- Hub-spoke database architecture with 6 specialized databases
+- Interactive Claude Code integration with slash commands
+
+**Layer 2: Knowledge Vault** (`knowledge-vault/`)
+- Structured YAML databases for different domains
+- Change detection system with automatic updates
+- Cross-domain knowledge mapping and relationships
+- Structured metadata with hierarchical organization
+
+**Layer 3: Research & Projects** (`research/`, `projects/`)
+- Advanced research orchestrator with 15+ methodologies
+- Project-specific workspaces with comprehensive documentation
+- Research findings integration with knowledge base updates
+- Meta-framework patterns for complex coordination
 
 ## AI Research System
 
-**Available to all AI agents:** Research framework at `research/` provides 6-step orchestrator workflow, automated execution logging, metadata compliance, and constitutional AI validation.
+**Auto-Integration**: Research intentions trigger the research orchestrator automatically. Use `research/orchestrator/integration/claude-orchestrator-integration.yaml` when conducting research tasks.
 
-### Research Intention Detection
-
-**Automatic Research Framework Activation:** Execute universal intention detection using @meta/shared/intention-detection-framework.md
-
-**Framework Integration:**
-
-- Apply `research_intention_triggers` and `complexity_indicators` for activation decisions
-- High constitutional compliance (≥95%), execution time ≤300 seconds
-
-**Research Orchestrator Integration:** Execute @research/orchestrator/integration/claude-orchestrator-integration.yaml
-
-**Fallback Protocol** (if @research/ unavailable): Basic 6-step sequence → Intent Detection → Context Extraction → Complexity Assessment → Method Selection → Execution → Summary Generation
-
-**Meta Framework Validation**: All intention detection must pass @meta/validation/validators/ai-instruction/command-intent-validator.md with ≥90% accuracy
-
-## AI Research Framework
-
-**Essential Requirement**: All research tasks MUST use the comprehensive AI research orchestrator framework.
-
-**Research Framework Access**: Use @research/CLAUDE.md for complete research methodology, including:
+**Research Framework Access**: Use `research/CLAUDE.md` when conducting comprehensive research, including:
 
 - MANDATORY registry similarity analysis before starting any research (≥95% compliance required)
 - 8-step orchestrator workflow with constitutional AI validation (≥95% accuracy threshold)
 - Enhanced file structure requirements (research/findings/[topic]/ with .meta/ folder)
 - Quality validation protocols and task completion procedures
 
-**Quick Access**: Research orchestrator integration at @research/orchestrator/integration/claude-orchestrator-integration.yaml
+**Automatic Research Framework Activation**: Execute universal intention detection using `meta/shared/intention-detection-framework.md` when analyzing user requests:
 
-**Enforcement**: Research conducted without framework compliance triggers quality penalty and agent review.
+- Apply `research_intention_triggers` and `complexity_indicators` for activation decisions
+- High constitutional compliance (≥95%), execution time ≤300 seconds
+- **Fallback Protocol** (if research/ unavailable): Basic 6-step sequence → Intent Detection → Context Extraction → Complexity Assessment → Method Selection → Execution → Summary Generation
+
+**Meta Framework Validation**: All intention detection must pass `meta/validation/validators/ai-instruction/command-intent-validator.md` with ≥90% accuracy
+
+## Development Commands
+
+### Setup and Initialization
+```bash
+# Initial setup
+./setup.sh
+
+# Validate knowledge base structure
+./scripts/validate-knowledge-base.sh
+
+# Create new feature workspace
+./scripts/create-feature.sh [feature-name]
+```
+
+### Python Environment Management
+```bash
+# Knowledge Vault operations (Python-based)
+cd knowledge-vault
+python -m pip install -r requirements.txt
+
+# Project-specific Python environments
+cd projects/ai-knowledge-lifecycle-orchestrator
+source venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+### Validation and Testing
+```bash
+# Validate knowledge base health
+./scripts/validate-knowledge-base.sh
+
+# Test AI system workflows
+cd ai/tests && ./run-tests.sh
+
+# Validate schemas (Knowledge Vault)
+cd knowledge-vault/operations/scripts
+python validate_schemas.py
+```
+
+## Quality Standards
+
+**Validation Requirements**:
+
+- AI instruction files: ≥75/100 validation score
+- Task completion: 6-step protocol within ≤180 seconds
+- Cross-reference accuracy: 100% file path accessibility
+- Anti-fiction compliance: Use `meta/validation/anti-fiction-safeguards.md` when preventing fabricated claims
+
+**Design Excellence**: Use `projects/ai-agent-instruction-design-excellence/CLAUDE.md` when creating AI instructions
+
+- Concrete specificity (≥95% accuracy thresholds)
+- External dependency elimination
+- Immediate actionability standards
+- Progressive context loading (68% token reduction)
+
+## Context Loading Strategy
+
+**Immediate Loading** (@ prefix): Essential context needed for all operations
+
+- Core requirements and constraints (this file)
+- Quality standards and anti-fiction safeguards
+- Essential cross-references for project coordination
+
+**Conditional Loading** (bare paths): Load specific contexts when needed
+
+- `development/CLAUDE.md` - When doing development work
+- `ai/workflows/task-management/CLAUDE.md` - When managing tasks
+- `research/orchestrator/integration/claude-orchestrator-integration.yaml` - When conducting research
+- `meta/validation/validators/ai-instruction/` - When validation issues arise
+
+**Usage Pattern**: Reference files using conditional format: "Use `file/path.md` when [specific condition]" rather than immediate @ loading to optimize context efficiency.
+
+## Development Workflows
+
+### Creating New Documents
+```bash
+# Interactive document creation
+/create-document [type]
+
+# Multi-agent orchestrated creation
+/orchestrate-agents [document-type]
+
+# Feature workspace creation (complete documentation set)
+/create-feature [feature-name]
+```
+
+### Knowledge Vault Operations
+```bash
+# Create database items (requires Python environment)
+cd knowledge-vault/operations/scripts
+python mcp_operations_enhanced.py
+
+# Sync with Notion (requires MCP Docker setup)
+python update_notion_sync.py
+
+# Validate system integrity
+python validate_mcp_system.py
+```
+
+### Research Workflows
+```bash
+# Access research templates
+ls research/templates/
+
+# Review research findings
+ls research/findings/
+
+# Check orchestrator configuration
+cat research/orchestrator/config/method-registry.yaml
+```
+
+## Key Configuration Files
+
+### AI System Configuration
+- `ai/context/dependencies.yaml` - Document dependency relationships
+- `ai/context/document-registry.yaml` - Registry of all generated documents
+- `ai/context/feature-registry.yaml` - Feature workspace tracking
+- `ai/context/tier-configuration.yaml` - Document tier organization
+
+### Knowledge Vault Configuration  
+- `knowledge-vault/schemas/` - Database schema definitions (6 schemas)
+- `knowledge-vault/shared/tags-vocabulary.yaml` - Standardized tag taxonomy
+- `knowledge-vault/shared/status-workflows.yaml` - Status transition rules
+- `knowledge-vault/operations/notion-integration.yaml` - MCP sync configuration
+
+### Project Configuration
+- `projects/*/CLAUDE.md` - Project-specific AI instructions
+- `projects/*/task-list.md` - Project task management
+- `projects/*/progress.md` - Project progress tracking
+
+## Key Cross-References
+
+**Framework Access** (Load when needed):
+
+- Tasks: `ai/workflows/task-management/CLAUDE.md`
+- Development: `development/CLAUDE.md`
+- Validation: `meta/validation/validators/ai-instruction/`
+- Commands: `.claude/commands/*` - Use for standardized execution workflows
+
+**Project Resources** (Load when working on specific projects):
+
+- Design Excellence: `projects/ai-agent-instruction-design-excellence/CLAUDE.md`
+- Claude Capabilities: `projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
+- MCP Registry: `projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/`
+- Task Lists: `projects/*/task-list.md`
+- Progress: `projects/*/progress.md`
+
+**Quality Assurance** (Load when quality issues arise):
+
+- Anti-Fiction: `meta/validation/anti-fiction-safeguards.md`
+- Command Guidelines: `meta/docs/claude-command-creation-guidelines.md`
+- Intent Detection: `meta/shared/intention-detection-framework.md`
+- MCP Learning: `meta/mcp-learning/` (error-logs/, usage-guides/, patterns/, templates/)
+
+## Critical File Locations
+
+### AI Templates and Prompts
+- `ai/prompts/document-templates/` - 67+ document generation templates
+- `ai/prompts/meta-prompts/` - AI agent coordination prompts
+- `ai/orchestration/` - Agent hierarchy and coordination rules
+
+### Knowledge Vault Data
+- `knowledge-vault/databases/*/items/` - Database item storage (Markdown files)
+- `knowledge-vault/core/` - System configuration and engines
+- `knowledge-vault/operations/scripts/` - Automation and sync scripts
+
+### Research and Analysis
+- `research/findings/` - Comprehensive research results by topic
+- `research/orchestrator/` - Research methodology configuration
+- `research/sessions/` - Research session logs and metadata
+
+## Integration Patterns
+
+### MCP (Model Context Protocol) Integration
+The system heavily utilizes MCP for:
+- **Notion API integration** via `mcp__MCP_DOCKER__*` tools
+- **Database operations** with automatic synchronization
+- **External service integration** across projects
+
+### Claude Code Command Integration
+Commands serve dual purposes:
+- **User interface**: Interactive document and feature creation
+- **AI agent interface**: Programmatic workflow execution
+
+### Cross-Component Data Flow
+1. **Research** findings inform **Project** implementations
+2. **Knowledge Vault** provides structured storage for **AI** system outputs
+3. **AI** orchestration manages **Project** documentation lifecycles
+4. **Projects** contribute patterns back to **AI** templates and **Research** methodologies
+
+## Quality Assurance
+
+### Validation Layers
+1. **Schema Validation**: All data structures validated against YAML schemas
+2. **Relationship Integrity**: Bidirectional consistency checks
+3. **Business Logic**: Workflow and status transition validation
+4. **Quality Metrics**: Completeness, consistency, and freshness scoring
+
+### Performance Targets
+- **Search Response**: <2 seconds for tag-based queries
+- **Sync Performance**: >3 items per minute for Notion integration
+- **System Health**: >90% overall health score
+- **Validation Success**: >95% automatic validation with <2% false positives
+
+## Development Guidelines
+
+### When Working with AI Components
+- Always check `ai/context/dependencies.yaml` before creating new documents
+- Use existing templates from `ai/prompts/document-templates/`
+- Update registries automatically via command workflows
+- Follow agent hierarchy patterns for complex workflows
+
+### When Working with Knowledge Vault
+- Use standardized tags from `knowledge-vault/shared/tags-vocabulary.yaml`
+- Maintain bidirectional relationships for all cross-references
+- Follow database-specific workflows in `knowledge-vault/shared/status-workflows.yaml`
+- Validate changes using scripts in `knowledge-vault/operations/scripts/`
+
+### When Working with Projects
+- Each project has its own `CLAUDE.md` with specific instructions
+- Track progress in project-specific `progress.md` files
+- Integrate research findings from `research/findings/`
+- Use established patterns from successful project implementations
 
 ## Task Management Protocol
 
@@ -58,23 +307,9 @@ Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→
 5. Validate @file_path cross-references
 6. Verify completion criteria
 
-**Specialized Task Management**: Use @ai/workflows/task-management/CLAUDE.md for comprehensive procedures, templates, and enforcement protocols.
+**Specialized Task Management**: Use `ai/workflows/task-management/CLAUDE.md` for comprehensive procedures, templates, and enforcement protocols.
 
 **Enforcement**: Task completion protocol violations trigger automatic escalation and performance penalties.
-
-## Development Protocols
-
-**Essential Requirements**: All development work MUST follow established Git, JIRA, and efficiency protocols.
-
-**Core Constraints**:
-
-- Never commit to master (use feature branches)
-- Use MCP JIRA tools (mcp**MCP_DOCKER**jira\_\*) for issues
-- Execute parallel tool operations for 60-70% efficiency gains
-
-**Claude Integration**: Apply automatic context loading, @file_path cross-references, and .claude/commands/ system integration.
-
-**Comprehensive Protocols**: Use @development/CLAUDE.md for detailed Git workflows, JIRA procedures, and Claude optimization patterns.
 
 ## AI Agent Instruction Standards
 
@@ -87,34 +322,9 @@ Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→
 - Achieve ≥75/100 validation score using meta validation tools
 - Ensure 100% @file_path cross-reference accessibility
 
-**Comprehensive Guidelines**: Use @meta/docs/claude-command-creation-guidelines.md and validation tools at @meta/validation/validators/ai-instruction/
+**Comprehensive Guidelines**: Use `meta/docs/claude-command-creation-guidelines.md` and validation tools at `meta/validation/validators/ai-instruction/`
 
 **Enforcement**: Invalid AI instruction files must be rewritten with compliant patterns before deployment.
-
-## Claude Integration Optimization
-
-**Claude's Capabilities**: Automatic context loading, three-tier memory (project/user/dynamic), multi-file awareness, cross-reference resolution
-
-**Key Cross-References**:
-
-```
-@research/orchestrator/integration/claude-orchestrator-integration.yaml
-@research/metadata-schema.yaml
-@research/templates/research-execution-log-template.yaml
-@projects/*/docs/task-list.md
-@projects/*/docs/progress.md
-@projects/ai-agent-instruction-design-excellence/ (Production-ready instruction design framework)
-@.claude/commands/* (Command system with standardized execution protocol)
-@meta/shared/intention-detection-framework.md (Universal intention detection and routing)
-@meta/docs/claude-command-creation-guidelines.md (Command creation and validation standards)
-@meta/validation/validators/ai-instruction/command-intent-validator.md (Command intent validation)
-```
-
-**Progressive Context Loading**: Hierarchical access protocol achieving 68% token optimization through validated AI Agent Instruction Design Excellence Framework
-
-**Memory System**: Leverage Claude's session persistence and automatic discovery patterns (Integrated with validated coordination protocols achieving 99% accuracy)
-
-**Full Integration Details**: @projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md
 
 ## Anti-Fiction and Quality Assurance
 
@@ -127,7 +337,7 @@ Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→
 - Maintain cognitive separation between academic analysis and operational execution
 - Restrict knowledge-vault access to explicitly authorized research tasks
 
-**Comprehensive Anti-Fiction Framework**: Use @meta/validation/anti-fiction-safeguards.md for complete protocols, including:
+**Comprehensive Anti-Fiction Framework**: Use `meta/validation/anti-fiction-safeguards.md` for complete protocols, including:
 
 - Real-time fact validation checkpoints
 - Evidence citation requirements
@@ -136,167 +346,21 @@ Self-sufficient AI Knowledge Base system using 4-level agent hierarchy (Queen→
 
 **Enforcement**: Anti-fiction violations trigger immediate task invalidation and protocol restart.
 
-## AI Agent Instruction Design Excellence
-
-**Essential Requirement**: All AI agent instructions MUST follow validated design excellence principles.
-
-**Complete Framework Reference**: Use @projects/ai-agent-instruction-design-excellence/CLAUDE.md for comprehensive guidance on:
-
-- Concrete specificity over vague references (≥95% accuracy thresholds)
-- External dependency elimination with self-sufficient instructions
-- Immediate actionability standards matching agent capabilities
-- Progressive context loading achieving 68% token reduction
-
-**Validation Tools**: Apply @meta/validation/validators/ai-instruction/ tools for instruction quality assessment.
-
-**Enforcement**: Instruction design excellence compliance is mandatory for all project AI agent files.
-
-## AI Knowledge Intelligence Orchestrator - MCP Server Registry
-
-**Essential Resource**: Comprehensive MCP (Model Context Protocol) server registry providing enterprise-grade AI tool ecosystem intelligence.
-
-**Current Status**: Complete ecosystem discovery with 2,200+ servers analyzed across 5 major repositories, 155+ detailed profiles created, and enterprise implementation roadmaps available.
-
-### Quick Access for AI Agents
-
-**Primary Registry Navigation**: Use @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/ for complete MCP server ecosystem access:
-
-- **Master Database**: @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/databases/mcp-servers-master-database.md (302 core servers with business scores)
-- **Tier 1 Profiles**: @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/ (155+ enterprise profiles)
-- **Business Algorithm**: @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/schemas/business-aligned-scoring-algorithm.yaml
-
-### Discovery Research Integration
-
-**Complete Ecosystem Research**: Access research findings at @research/findings/ with comprehensive analyses:
-
-- **TensorBlock Discovery**: @research/findings/tensorblock-mcp-servers-analysis/ (28 Tier 1 servers profiled)
-- **Docker Repository**: @research/findings/docker-mcp-servers-analysis/ (127 new discoveries)
-- **Ecosystem Analysis**: @research/findings/remaining-mcp-repositories-analysis/ (Final ecosystem completion)
-- **Official MCP**: @research/findings/official-mcp-servers-analysis/ (Anthropic reference servers)
-
-### Enterprise Implementation Guidance
-
-**Business Value Framework**: All MCP servers evaluated using 6-dimension scoring system:
-
-- Business Domain Relevance (30% weight - prioritizes development tools and maritime insurance applications)
-- Technical Development Value (25% weight)
-- Production Readiness, Integration Complexity, Maintenance Requirements, Security Considerations
-
-**ROI Analysis**: Documented returns ranging from 300-800% ROI with 3-8 month payback periods for Tier 1 server implementations.
-
-### AI Agent Integration Instructions
-
-**For Research Tasks**: When conducting MCP server research, follow mandatory registry analysis protocol:
-
-1. Execute Step 2.5 from @research/orchestrator/integration/claude-orchestrator-integration.yaml
-2. Compare against existing research in @research/findings/research-registry.yaml
-3. Document similarity analysis and avoid duplication
-
-**For Implementation Planning**: Reference existing detailed profiles before creating new server documentation to leverage comprehensive business analysis and technical specifications.
-
-**Quality Standards**: All MCP server research must achieve ≥95% constitutional AI compliance and include maritime insurance business applications where relevant.
-
 ## MCP Error Learning Protocol
 
-**Essential Requirement**: All AI agents MUST systematically learn from MCP server errors to prevent repetition and build accumulated knowledge.
+**Essential Requirement**: All AI agents MUST systematically learn from MCP server errors to prevent repetition.
 
-**Core Problem**: MCP server errors repeat because there's no systematic capture and learning mechanism. Each session starts fresh without accumulated error knowledge.
+**Core Protocol**:
+1. **BEFORE MCP usage**: Check `meta/mcp-learning/usage-guides/[server-name]-guide.md` for known issues
+2. **WHEN errors occur**: Log immediately using `meta/mcp-learning/templates/error-log-template.md`
+3. **AFTER success**: Update usage guides with working patterns
 
-**Solution Architecture**: Implement comprehensive error learning system at @meta/mcp-learning/ with automatic error capture, pattern analysis, and proactive usage guidance.
+**System Location**: `meta/mcp-learning/` (error-logs/, usage-guides/, patterns/, templates/)
+**Enforcement**: Violations trigger automatic escalation and enhanced error monitoring
 
-### Mandatory Error Learning Procedures
-
-**BEFORE using ANY MCP server tool:**
-
-1. **Pre-Usage Guide Check**: ALWAYS check @meta/mcp-learning/usage-guides/[server-name]-guide.md for:
-   - Parameter validation requirements
-   - Common pitfall warnings  
-   - Working parameter patterns
-   - Authentication requirements
-
-2. **Recent Error Review**: Check @meta/mcp-learning/error-logs/[server-name]-errors.md for:
-   - Recent failure patterns
-   - Parameter format issues
-   - Known problematic configurations
-   - Resolution strategies
-
-**WHEN MCP tool fails:**
-
-1. **Immediate Error Logging**: AUTOMATICALLY log the error using @meta/mcp-learning/templates/error-log-template.md including:
-   - Full context and intent
-   - Exact parameters used
-   - Complete error message
-   - Timestamp and frequency tracking
-
-2. **Root Cause Analysis**: Determine:
-   - Authentication issues (tokens, permissions)
-   - Parameter problems (format, missing, invalid)
-   - API issues (rate limits, service unavailable)
-   - Network problems (connectivity, timeouts)
-
-3. **Resolution Documentation**: Record all resolution attempts and outcomes
-
-**AFTER successful MCP operations:**
-
-1. **Success Pattern Documentation**: Update usage guides with:
-   - Working parameter combinations
-   - Successful authentication patterns
-   - Reliable execution approaches
-   - Prevention strategies discovered
-
-2. **Pattern Analysis**: Identify what makes operations succeed vs fail
-
-### Error Learning System Structure
-
-**System Location**: @meta/mcp-learning/ with comprehensive structure:
-
-- **error-logs/**: Server-specific error capture and analysis
-- **usage-guides/**: Generated knowledge for error prevention  
-- **patterns/**: Common error patterns and validation rules
-- **templates/**: Standardized logging and guide formats
-
-**Active MCP Servers Tracked**:
-- mcp-docker (comprehensive Docker MCP tools)
-- notion-api (Notion database operations)
-- jira (JIRA issue management)
-- browser (browser automation tools)
-
-### Continuous Learning Integration
-
-**Error Pattern Recognition**: 
-- Group similar errors by root cause
-- Track parameter validation failures
-- Identify authentication pattern issues
-- Monitor API usage problems
-
-**Knowledge Accumulation**:
-- Build server-specific troubleshooting guides
-- Create parameter validation checklists
-- Develop pre-flight verification procedures
-- Establish working configuration libraries
-
-**Prevention Automation**:
-- Pre-validate parameters against known failure patterns
-- Check authentication status before operations
-- Apply rate limiting awareness
-- Use verified working configurations
-
-### Quality Metrics and Enforcement
-
-**Success Targets**:
-- 90% reduction in repeated MCP errors
-- <15 minutes average resolution time for known patterns
-- 100% error capture rate with full context
-- 95% prevention rate for previously encountered errors
-
-**Enforcement Protocols**:
-- MCP tool usage WITHOUT pre-usage guide check = protocol violation
-- Error occurrence WITHOUT immediate logging = system compliance failure
-- Success WITHOUT pattern documentation = learning opportunity missed
-
-**Integration Points**:
-- @meta/mcp-learning/patterns/common-error-patterns.yaml for cross-server analysis
-- @meta/mcp-learning/patterns/parameter-validation-patterns.yaml for input validation
-- @meta/validation/protocols/self-healing-error-detection-patterns.md for advanced error handling
-
-**Quality Assurance**: Error learning protocol compliance is mandatory. Violations trigger automatic escalation and enhanced error monitoring.
+## Cursor Rules Integration
+The repository includes Cursor-specific rules in `.cursor/rules/` that enforce:
+- Consistent file structure and naming conventions
+- AI agent instruction patterns
+- Development workflow standards
+- Code quality and documentation requirements

@@ -494,29 +494,29 @@ try {
 ```typescript
 // Create table with constraints
 await mcpClient.callTool('postgresql_create_table', {
-  name: 'maritime_vessels',
+  name: 'business_assets',
   columns: [
     { name: 'id', type: 'SERIAL', primaryKey: true },
-    { name: 'imo_number', type: 'VARCHAR(10)', unique: true, notNull: true },
-    { name: 'vessel_name', type: 'VARCHAR(255)', notNull: true },
-    { name: 'vessel_type', type: 'VARCHAR(50)', notNull: true },
-    { name: 'flag_state', type: 'VARCHAR(3)', notNull: true },
-    { name: 'gross_tonnage', type: 'INTEGER', check: 'gross_tonnage > 0' },
-    { name: 'year_built', type: 'INTEGER', check: 'year_built BETWEEN 1800 AND EXTRACT(YEAR FROM NOW())' },
-    { name: 'owner_id', type: 'INTEGER', references: 'vessel_owners(id)' },
+    { name: 'asset_number', type: 'VARCHAR(10)', unique: true, notNull: true },
+    { name: 'asset_name', type: 'VARCHAR(255)', notNull: true },
+    { name: 'asset_type', type: 'VARCHAR(50)', notNull: true },
+    { name: 'jurisdiction', type: 'VARCHAR(3)', notNull: true },
+    { name: 'asset_value', type: 'INTEGER', check: 'asset_value > 0' },
+    { name: 'year_acquired', type: 'INTEGER', check: 'year_acquired BETWEEN 1800 AND EXTRACT(YEAR FROM NOW())' },
+    { name: 'owner_id', type: 'INTEGER', references: 'asset_owners(id)' },
     { name: 'insurance_data', type: 'JSONB' },
     { name: 'created_at', type: 'TIMESTAMPTZ', default: 'NOW()' },
     { name: 'updated_at', type: 'TIMESTAMPTZ', default: 'NOW()' }
   ],
   indexes: [
-    { name: 'idx_vessel_imo', columns: ['imo_number'] },
-    { name: 'idx_vessel_type', columns: ['vessel_type'] },
-    { name: 'idx_vessel_owner', columns: ['owner_id'] },
-    { name: 'idx_vessel_insurance', columns: ['insurance_data'], type: 'GIN' }
+    { name: 'idx_asset_number', columns: ['asset_number'] },
+    { name: 'idx_asset_type', columns: ['asset_type'] },
+    { name: 'idx_asset_owner', columns: ['owner_id'] },
+    { name: 'idx_asset_insurance', columns: ['insurance_data'], type: 'GIN' }
   ],
   triggers: [
     {
-      name: 'update_vessel_timestamp',
+      name: 'update_asset_timestamp',
       timing: 'BEFORE UPDATE',
       events: ['UPDATE'],
       function: 'update_timestamp_function()'
@@ -526,11 +526,11 @@ await mcpClient.callTool('postgresql_create_table', {
 
 // Alter table structure
 await mcpClient.callTool('postgresql_alter_table', {
-  table: 'maritime_vessels',
+  table: 'business_assets',
   operations: [
-    { action: 'ADD COLUMN', column: 'classification_society', type: 'VARCHAR(10)' },
-    { action: 'ADD CONSTRAINT', name: 'chk_classification', constraint: 'classification_society IN (\'ABS\', \'DNV\', \'LR\', \'BV\')' },
-    { action: 'CREATE INDEX', name: 'idx_classification', columns: ['classification_society'] }
+    { action: 'ADD COLUMN', column: 'certification_body', type: 'VARCHAR(10)' },
+    { action: 'ADD CONSTRAINT', name: 'chk_certification', constraint: 'certification_body IN (\'ISO\', \'ANSI\', \'BSI\', \'TUV\')' },
+    { action: 'CREATE INDEX', name: 'idx_certification', columns: ['certification_body'] }
   ]
 });
 ```
@@ -539,24 +539,24 @@ await mcpClient.callTool('postgresql_alter_table', {
 ```typescript
 // Create specialized indexes for performance
 await mcpClient.callTool('postgresql_create_index', {
-  name: 'idx_claims_composite',
-  table: 'insurance_claims',
-  columns: ['policy_id', 'claim_date', 'status'],
+  name: 'idx_orders_composite',
+  table: 'customer_orders',
+  columns: ['customer_id', 'order_date', 'status'],
   type: 'BTREE',
-  where: 'status IN (\'open\', \'investigating\')',
+  where: 'status IN (\'processing\', \'pending\')',
   options: {
     concurrent: true,
     unique: false
   }
 });
 
-// Create partial index for active policies
+// Create partial index for active subscriptions
 await mcpClient.callTool('postgresql_create_index', {
-  name: 'idx_active_policies',
-  table: 'insurance_policies',
-  columns: ['vessel_id', 'effective_date'],
+  name: 'idx_active_subscriptions',
+  table: 'user_subscriptions',
+  columns: ['user_id', 'start_date'],
   type: 'BTREE',
-  where: 'status = \'active\' AND expiry_date > NOW()',
+  where: 'status = \'active\' AND end_date > NOW()',
   options: {
     concurrent: true
   }
@@ -564,9 +564,9 @@ await mcpClient.callTool('postgresql_create_index', {
 
 // Create GIN index for JSONB data
 await mcpClient.callTool('postgresql_create_index', {
-  name: 'idx_claim_details_gin',
-  table: 'insurance_claims',
-  columns: ['claim_details'],
+  name: 'idx_order_details_gin',
+  table: 'customer_orders',
+  columns: ['order_details'],
   type: 'GIN',
   options: {
     concurrent: true
@@ -581,17 +581,17 @@ await mcpClient.callTool('postgresql_create_index', {
 // Create full-text search configuration
 await mcpClient.callTool('postgresql_query', {
   query: `
-    ALTER TABLE maritime_incidents 
+    ALTER TABLE business_incidents 
     ADD COLUMN search_vector tsvector;
     
-    UPDATE maritime_incidents 
+    UPDATE business_incidents 
     SET search_vector = to_tsvector('english', 
       COALESCE(incident_description, '') || ' ' ||
-      COALESCE(vessel_name, '') || ' ' ||
+      COALESCE(asset_name, '') || ' ' ||
       COALESCE(location, '')
     );
     
-    CREATE INDEX idx_incident_search ON maritime_incidents USING GIN(search_vector);
+    CREATE INDEX idx_incident_search ON business_incidents USING GIN(search_vector);
   `
 });
 
@@ -600,33 +600,33 @@ const searchResults = await mcpClient.callTool('postgresql_query', {
   query: `
     SELECT 
       incident_id,
-      vessel_name,
+      asset_name,
       incident_date,
       ts_headline('english', incident_description, plainto_tsquery($1)) as highlighted_description,
       ts_rank(search_vector, plainto_tsquery($1)) as relevance_score
-    FROM maritime_incidents
+    FROM business_incidents
     WHERE search_vector @@ plainto_tsquery($1)
     ORDER BY relevance_score DESC
     LIMIT 20
   `,
-  params: ['collision damage insurance claim']
+  params: ['operational damage insurance claim']
 });
 ```
 
 #### JSON/JSONB Operations
 ```typescript
 // Query JSON data with path operations
-const vesselInsurance = await mcpClient.callTool('postgresql_query', {
+const assetInsurance = await mcpClient.callTool('postgresql_query', {
   query: `
     SELECT 
-      vessel_name,
+      asset_name,
       insurance_data->>'policy_number' as policy_number,
-      insurance_data->'coverage'->>'hull' as hull_coverage,
-      insurance_data->'coverage'->>'machinery' as machinery_coverage,
+      insurance_data->'coverage'->>'property' as property_coverage,
+      insurance_data->'coverage'->>'equipment' as equipment_coverage,
       (insurance_data->>'premium')::numeric as annual_premium
-    FROM maritime_vessels
+    FROM business_assets
     WHERE insurance_data ? 'policy_number'
-      AND insurance_data->'coverage'->>'hull' IS NOT NULL
+      AND insurance_data->'coverage'->>'property' IS NOT NULL
       AND (insurance_data->>'premium')::numeric > $1
   `,
   params: [50000]
@@ -635,15 +635,15 @@ const vesselInsurance = await mcpClient.callTool('postgresql_query', {
 // Update JSON data with path operations
 await mcpClient.callTool('postgresql_query', {
   query: `
-    UPDATE maritime_vessels 
+    UPDATE business_assets 
     SET insurance_data = jsonb_set(
       insurance_data,
-      '{coverage,hull}',
+      '{coverage,property}',
       to_jsonb($1::text)
     )
-    WHERE imo_number = $2
+    WHERE asset_number = $2
   `,
-  params: ['15000000', 'IMO9876543']
+  params: ['15000000', 'ASSET12345']
 });
 ```
 
@@ -651,13 +651,13 @@ await mcpClient.callTool('postgresql_query', {
 
 #### Create Custom Functions
 ```typescript
-// Create function for maritime calculations
+// Create function for business risk calculations
 await mcpClient.callTool('postgresql_query', {
   query: `
-    CREATE OR REPLACE FUNCTION calculate_vessel_risk_score(
-      vessel_age INTEGER,
-      vessel_type VARCHAR,
-      flag_state VARCHAR,
+    CREATE OR REPLACE FUNCTION calculate_asset_risk_score(
+      asset_age INTEGER,
+      asset_type VARCHAR,
+      jurisdiction VARCHAR,
       claim_history INTEGER
     ) RETURNS NUMERIC AS $$
     DECLARE
@@ -668,22 +668,22 @@ await mcpClient.callTool('postgresql_query', {
       claim_penalty NUMERIC;
     BEGIN
       -- Age penalty calculation
-      age_penalty := GREATEST(0, (vessel_age - 10) * 2);
+      age_penalty := GREATEST(0, (asset_age - 10) * 2);
       
-      -- Vessel type risk modifier
-      type_modifier := CASE vessel_type
-        WHEN 'Tanker' THEN 20
-        WHEN 'Bulk Carrier' THEN 15
-        WHEN 'Container Ship' THEN 10
-        WHEN 'Cruise Ship' THEN 25
+      -- Asset type risk modifier
+      type_modifier := CASE asset_type
+        WHEN 'Heavy Machinery' THEN 20
+        WHEN 'Manufacturing Equipment' THEN 15
+        WHEN 'Technology Infrastructure' THEN 10
+        WHEN 'Commercial Property' THEN 25
         ELSE 5
       END;
       
-      -- Flag state modifier
-      flag_modifier := CASE flag_state
+      -- Jurisdiction modifier
+      jurisdiction_modifier := CASE jurisdiction
         WHEN 'US' THEN 0
         WHEN 'UK' THEN 0
-        WHEN 'NO' THEN 0
+        WHEN 'CA' THEN 0
         WHEN 'DE' THEN 0
         ELSE 10
       END;
@@ -691,7 +691,7 @@ await mcpClient.callTool('postgresql_query', {
       -- Claims history penalty
       claim_penalty := claim_history * 15;
       
-      RETURN base_score + age_penalty + type_modifier + flag_modifier + claim_penalty;
+      RETURN base_score + age_penalty + type_modifier + jurisdiction_modifier + claim_penalty;
     END;
     $$ LANGUAGE plpgsql;
   `
@@ -701,15 +701,15 @@ await mcpClient.callTool('postgresql_query', {
 const riskAssessment = await mcpClient.callTool('postgresql_query', {
   query: `
     SELECT 
-      vessel_name,
-      imo_number,
-      calculate_vessel_risk_score(
-        EXTRACT(YEAR FROM NOW()) - year_built,
-        vessel_type,
-        flag_state,
-        (SELECT COUNT(*) FROM insurance_claims WHERE vessel_id = v.id)
+      asset_name,
+      asset_number,
+      calculate_asset_risk_score(
+        EXTRACT(YEAR FROM NOW()) - year_acquired,
+        asset_type,
+        jurisdiction,
+        (SELECT COUNT(*) FROM insurance_claims WHERE asset_id = a.id)
       ) as risk_score
-    FROM maritime_vessels v
+    FROM business_assets a
     ORDER BY risk_score DESC
   `
 });
@@ -721,31 +721,31 @@ const riskAssessment = await mcpClient.callTool('postgresql_query', {
 
 #### ORM Integration Pattern
 ```typescript
-class MaritimeDatabase {
+class BusinessDatabase {
   constructor(private mcpClient: MCPClient) {}
 
-  async getVesselInsuranceDetails(imoNumber: string) {
+  async getAssetInsuranceDetails(assetNumber: string) {
     return await this.mcpClient.callTool('postgresql_query', {
       query: `
         SELECT 
-          v.vessel_name,
-          v.imo_number,
-          v.vessel_type,
-          v.gross_tonnage,
+          a.asset_name,
+          a.asset_number,
+          a.asset_type,
+          a.asset_value,
           p.policy_number,
           p.coverage_amount,
           p.premium_amount,
           p.effective_date,
           p.expiry_date,
-          vo.company_name as owner_company
-        FROM maritime_vessels v
-        JOIN insurance_policies p ON v.id = p.vessel_id
-        JOIN vessel_owners vo ON v.owner_id = vo.id
-        WHERE v.imo_number = $1
+          ao.company_name as owner_company
+        FROM business_assets a
+        JOIN insurance_policies p ON a.id = p.asset_id
+        JOIN asset_owners ao ON a.owner_id = ao.id
+        WHERE a.asset_number = $1
           AND p.status = 'active'
           AND p.expiry_date > NOW()
       `,
-      params: [imoNumber]
+      params: [assetNumber]
     });
   }
 
@@ -760,7 +760,7 @@ class MaritimeDatabase {
         table: 'insurance_claims',
         data: {
           policy_id: claimData.policyId,
-          vessel_id: claimData.vesselId,
+          asset_id: claimData.assetId,
           claim_type: claimData.type,
           incident_date: claimData.incidentDate,
           reported_date: new Date(),
@@ -815,43 +815,43 @@ class MaritimeDatabase {
 
 #### Data Analytics Integration
 ```typescript
-class MaritimeAnalytics {
-  async generateClaimsAnalytics(dateRange: { start: Date; end: Date }) {
+class BusinessAnalytics {
+  async generateBusinessAnalytics(dateRange: { start: Date; end: Date }) {
     return await this.mcpClient.callTool('postgresql_query', {
       query: `
         WITH claim_stats AS (
           SELECT 
             DATE_TRUNC('month', incident_date) as month,
-            vessel_type,
-            claim_type,
-            COUNT(*) as claim_count,
-            SUM(claim_amount) as total_amount,
-            AVG(claim_amount) as avg_amount,
-            PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY claim_amount) as median_amount
-          FROM insurance_claims c
-          JOIN maritime_vessels v ON c.vessel_id = v.id
-          WHERE incident_date BETWEEN $1 AND $2
-            AND status IN ('approved', 'paid')
-          GROUP BY DATE_TRUNC('month', incident_date), vessel_type, claim_type
+            asset_type,
+            transaction_type,
+            COUNT(*) as transaction_count,
+            SUM(transaction_amount) as total_amount,
+            AVG(transaction_amount) as avg_amount,
+            PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY transaction_amount) as median_amount
+          FROM business_transactions c
+          JOIN business_assets v ON c.asset_id = v.id
+          WHERE transaction_date BETWEEN $1 AND $2
+            AND status IN ('completed', 'processed')
+          GROUP BY DATE_TRUNC('month', transaction_date), asset_type, transaction_type
         ),
         trend_analysis AS (
           SELECT 
-            vessel_type,
-            claim_type,
-            REGR_SLOPE(claim_count, EXTRACT(EPOCH FROM month)) * 30 as monthly_trend
+            asset_type,
+            transaction_type,
+            REGR_SLOPE(transaction_count, EXTRACT(EPOCH FROM month)) * 30 as monthly_trend
           FROM claim_stats
-          GROUP BY vessel_type, claim_type
+          GROUP BY asset_type, transaction_type
         )
         SELECT 
           cs.*,
           ta.monthly_trend,
-          LAG(cs.claim_count) OVER (
-            PARTITION BY cs.vessel_type, cs.claim_type 
+          LAG(cs.transaction_count) OVER (
+            PARTITION BY cs.asset_type, cs.transaction_type 
             ORDER BY cs.month
           ) as prev_month_count
         FROM claim_stats cs
-        LEFT JOIN trend_analysis ta ON cs.vessel_type = ta.vessel_type 
-          AND cs.claim_type = ta.claim_type
+        LEFT JOIN trend_analysis ta ON cs.asset_type = ta.asset_type 
+          AND cs.transaction_type = ta.transaction_type
         ORDER BY cs.month DESC, cs.total_amount DESC
       `,
       params: [dateRange.start, dateRange.end]
@@ -862,24 +862,24 @@ class MaritimeAnalytics {
     return await this.mcpClient.callTool('postgresql_query', {
       query: `
         SELECT 
-          vessel_type,
-          flag_state,
-          COUNT(*) as vessel_count,
-          AVG(EXTRACT(YEAR FROM NOW()) - year_built) as avg_age,
+          asset_type,
+          jurisdiction,
+          COUNT(*) as asset_count,
+          AVG(EXTRACT(YEAR FROM NOW()) - year_acquired) as avg_age,
           SUM(CASE WHEN EXISTS(
-            SELECT 1 FROM insurance_claims 
-            WHERE vessel_id = v.id 
-              AND incident_date > NOW() - INTERVAL '12 months'
-          ) THEN 1 ELSE 0 END) as vessels_with_recent_claims,
-          AVG(calculate_vessel_risk_score(
-            EXTRACT(YEAR FROM NOW()) - year_built,
-            vessel_type,
-            flag_state,
-            (SELECT COUNT(*) FROM insurance_claims WHERE vessel_id = v.id)
+            SELECT 1 FROM business_transactions 
+            WHERE asset_id = v.id 
+              AND transaction_date > NOW() - INTERVAL '12 months'
+          ) THEN 1 ELSE 0 END) as assets_with_recent_transactions,
+          AVG(calculate_asset_risk_score(
+            EXTRACT(YEAR FROM NOW()) - year_acquired,
+            asset_type,
+            jurisdiction,
+            (SELECT COUNT(*) FROM business_transactions WHERE asset_id = v.id)
           )) as avg_risk_score
-        FROM maritime_vessels v
-        WHERE EXISTS(SELECT 1 FROM insurance_policies WHERE vessel_id = v.id AND status = 'active')
-        GROUP BY vessel_type, flag_state
+        FROM business_assets v
+        WHERE EXISTS(SELECT 1 FROM business_contracts WHERE asset_id = v.id AND status = 'active')
+        GROUP BY asset_type, jurisdiction
         HAVING COUNT(*) >= 5
         ORDER BY avg_risk_score DESC
       `
@@ -1256,28 +1256,28 @@ class DatabaseSecurity {
     await this.mcpClient.callTool('postgresql_query', {
       query: `
         -- Read-only analyst role
-        CREATE ROLE maritime_analyst;
-        GRANT CONNECT ON DATABASE maritime_db TO maritime_analyst;
-        GRANT USAGE ON SCHEMA public TO maritime_analyst;
-        GRANT SELECT ON ALL TABLES IN SCHEMA public TO maritime_analyst;
+        CREATE ROLE business_analyst;
+        GRANT CONNECT ON DATABASE business_db TO business_analyst;
+        GRANT USAGE ON SCHEMA public TO business_analyst;
+        GRANT SELECT ON ALL TABLES IN SCHEMA public TO business_analyst;
         
-        -- Claims processor role
-        CREATE ROLE claims_processor;
-        GRANT CONNECT ON DATABASE maritime_db TO claims_processor;
-        GRANT USAGE ON SCHEMA public TO claims_processor;
-        GRANT SELECT, INSERT, UPDATE ON insurance_claims TO claims_processor;
-        GRANT SELECT ON maritime_vessels, insurance_policies TO claims_processor;
+        -- Data processor role
+        CREATE ROLE data_processor;
+        GRANT CONNECT ON DATABASE business_db TO data_processor;
+        GRANT USAGE ON SCHEMA public TO data_processor;
+        GRANT SELECT, INSERT, UPDATE ON business_transactions TO data_processor;
+        GRANT SELECT ON business_assets, business_contracts TO data_processor;
         
         -- Underwriter role
         CREATE ROLE underwriter;
-        GRANT CONNECT ON DATABASE maritime_db TO underwriter;
+        GRANT CONNECT ON DATABASE business_db TO underwriter;
         GRANT USAGE ON SCHEMA public TO underwriter;
         GRANT SELECT, INSERT, UPDATE ON insurance_policies TO underwriter;
         GRANT SELECT ON ALL TABLES IN SCHEMA public TO underwriter;
         
         -- Admin role
-        CREATE ROLE maritime_admin;
-        GRANT ALL PRIVILEGES ON DATABASE maritime_db TO maritime_admin;
+        CREATE ROLE business_admin;
+        GRANT ALL PRIVILEGES ON DATABASE business_db TO business_admin;
       `
     });
   }
@@ -1411,7 +1411,7 @@ class GDPRCompliance {
         ('vessel_owners', 'owner_name', 'personal', '7 years', 'pseudonymization', 'Contract'),
         ('vessel_owners', 'contact_email', 'personal', '7 years', 'deletion', 'Contract'),
         ('insurance_claims', 'claimant_name', 'personal', '10 years', 'pseudonymization', 'Legal obligation'),
-        ('maritime_incidents', 'crew_details', 'sensitive', '7 years', 'encryption', 'Vital interests');
+        ('business_incidents', 'employee_details', 'sensitive', '7 years', 'encryption', 'Vital interests');
       `
     });
   }
@@ -1711,7 +1711,7 @@ ROI = ($2,075,000 - $97,000) / $97,000 × 100 = 2,039%
 Payback Period: 2.8 months
 ```
 
-### Maritime Insurance Specific Applications
+### Business Insurance Specific Applications
 
 #### Claims Data Management
 ```typescript
@@ -1720,10 +1720,10 @@ class ClaimsDataManager {
     // Implement efficient claims data structure
     await this.mcpClient.callTool('postgresql_query', {
       query: `
-        CREATE TABLE IF NOT EXISTS maritime_claims_optimized (
+        CREATE TABLE IF NOT EXISTS business_claims_optimized (
           claim_id SERIAL PRIMARY KEY,
           policy_id INTEGER REFERENCES insurance_policies(id),
-          vessel_imo VARCHAR(10) NOT NULL,
+          asset_number VARCHAR(10) NOT NULL,
           incident_date DATE NOT NULL,
           claim_type claim_type_enum NOT NULL,
           estimated_amount DECIMAL(15,2),
@@ -1737,15 +1737,15 @@ class ClaimsDataManager {
           updated_at TIMESTAMPTZ DEFAULT NOW()
         );
         
-        -- Indexes for maritime insurance queries
-        CREATE INDEX IF NOT EXISTS idx_claims_vessel_date 
-        ON maritime_claims_optimized(vessel_imo, incident_date);
+        -- Indexes for business insurance queries
+        CREATE INDEX IF NOT EXISTS idx_claims_asset_date 
+        ON business_claims_optimized(asset_number, incident_date);
         
         CREATE INDEX IF NOT EXISTS idx_claims_type_status 
-        ON maritime_claims_optimized(claim_type, claim_status);
+        ON business_claims_optimized(claim_type, claim_status);
         
         CREATE INDEX IF NOT EXISTS idx_claims_amount_range 
-        ON maritime_claims_optimized(estimated_amount) 
+        ON business_claims_optimized(estimated_amount) 
         WHERE claim_status IN ('approved', 'paid');
       `
     });
@@ -1765,7 +1765,7 @@ class ClaimsDataManager {
               (processing_timeline->>'settlement_date')::timestamptz - 
               (processing_timeline->>'submission_date')::timestamptz
             )) as avg_processing_days
-          FROM maritime_claims_optimized
+          FROM business_claims_optimized
           WHERE claim_status = 'paid'
           GROUP BY EXTRACT(YEAR FROM incident_date), claim_type
         )
@@ -1793,12 +1793,12 @@ class ClaimsDataManager {
 ```
 
 #### Regulatory Compliance Tracking
-- **IMO Compliance**: Automated tracking of vessel compliance status
+- **Regulatory Compliance**: Automated tracking of asset compliance status
 - **Flag State Requirements**: Database-driven compliance monitoring
 - **P&I Club Reporting**: Standardized reporting queries for club requirements
 - **Survey Schedules**: Automated survey tracking and notification system
 
-#### Business Value for Maritime Insurance
+#### Business Value for Enterprise Applications
 - **Claims Processing Speed**: 65% faster claim resolution with automated workflows
 - **Data Accuracy**: 99.5% accuracy in claims data with database constraints
 - **Regulatory Reporting**: 90% automated compliance report generation
@@ -1865,10 +1865,10 @@ Day 13-14: Testing and Validation
 - Caching layer implementation
 - Monitoring and alerting setup
 
-### Phase 3: Maritime Insurance Integration (Weeks 5-6)
+### Phase 3: Business Application Integration (Weeks 5-6)
 
 #### Domain-Specific Implementation
-- Maritime insurance schema development
+- Business application schema development
 - Claims processing workflow automation
 - Regulatory compliance tracking system
 - Risk assessment and analytics implementation
@@ -1935,13 +1935,13 @@ Day 13-14: Testing and Validation
 #### Unique Advantages
 1. **MCP Protocol Standardization**: Consistent interface across database systems
 2. **Enterprise Security**: Built-in role-based access, audit logging, compliance features
-3. **Maritime Industry Focus**: Specialized features for maritime insurance applications
+3. **Multi-Industry Focus**: Specialized features for enterprise business applications
 4. **Performance Optimization**: Intelligent connection pooling and query optimization
 5. **Developer Experience**: Simplified integration with powerful capabilities
 
 #### Market Positioning
 - **Primary Market**: Enterprise development teams using PostgreSQL
-- **Secondary Market**: Maritime insurance companies requiring database automation
+- **Secondary Market**: Financial services, healthcare, manufacturing companies requiring database automation
 - **Competitive Advantage**: Simplified enterprise database integration
 - **Market Opportunity**: $4.2B PostgreSQL services market growing at 12% annually
 
@@ -1956,7 +1956,7 @@ The PostgreSQL MCP Server represents essential database infrastructure with exce
 1. **Start with Core Database Operations**: Focus on basic CRUD operations and connection management
 2. **Implement Security First**: Deploy enterprise security features from the beginning
 3. **Optimize for Performance**: Implement connection pooling and query optimization early
-4. **Add Maritime Customizations**: Develop maritime insurance specific features as needed
+4. **Add Industry Customizations**: Develop industry-specific features as needed
 
 ### Success Metrics
 
@@ -1990,7 +1990,7 @@ The PostgreSQL MCP Server represents essential database infrastructure with exce
 
 The PostgreSQL MCP Server serves as the foundation for advanced database-driven applications, enabling:
 - Comprehensive data-driven business intelligence
-- Advanced maritime insurance analytics and risk modeling
+- Advanced business intelligence analytics and risk modeling
 - Automated compliance and regulatory reporting
 - Integration with broader enterprise data ecosystems
 

@@ -148,14 +148,14 @@ spawning_conditions:
     file_pattern: ".claude/commands/*.md"
     content_validation: "Command structure verification"
     agent: "claude-command-evaluator"
-    instructions: "@ai/agents/claude-command-evaluator.md"
+    instructions: "@meta/validation/validators/ai-instruction/claude-command-evaluator.md"
     parallel_safe: true
     
   typescript_frontend:
     file_pattern: "src/**/*.{ts,tsx}"
     context_check: "React/frontend dependencies in package.json"
     agent: "typescript-frontend-validator"  
-    instructions: "@ai/agents/typescript-frontend-validator.md"
+    instructions: "@meta/validation/validators/file-type/typescript-frontend-validator.md"
     parallel_safe: true
     depends_on: ["security-validator"]
     
@@ -163,14 +163,14 @@ spawning_conditions:
     file_pattern: "**/*.py"
     context_check: "API/backend patterns in imports"
     agent: "python-backend-validator"
-    instructions: "@ai/agents/python-backend-validator.md" 
+    instructions: "@meta/validation/validators/file-type/python-backend-validator.md" 
     parallel_safe: true
     depends_on: ["security-validator"]
     
   test_files:
     file_pattern: "**/*.{test,spec}.{js,ts,py}"
     agent: "test-validator"
-    instructions: "@ai/agents/test-validator.md"
+    instructions: "@meta/validation/validators/file-type/test-validator.md"
     parallel_safe: false
     depends_on: ["typescript-frontend-validator", "python-backend-validator"]
 ```
@@ -186,20 +186,20 @@ spawning_conditions:
 ### Self-Updating Agent Instruction System
 
 **Master Instruction Updater Framework:**
-Create `@ai/agents/master-instruction-updater.md` with:
+Create `@meta/validation/validators/project/master-instruction-updater.md` with:
 
 **Registry Management:**
 ```yaml
 agent_instruction_registry:
   claude-command-evaluator:
-    path: "@ai/agents/claude-command-evaluator.md"
+    path: "@meta/validation/validators/ai-instruction/claude-command-evaluator.md"
     purpose: "Evaluate Claude command files for structure and quality"
     framework_version: "1.0"
     last_updated: "2025-07-19"
     effectiveness_score: "pending"
     
   typescript-frontend-validator:
-    path: "@ai/agents/typescript-frontend-validator.md" 
+    path: "@meta/validation/validators/file-type/typescript-frontend-validator.md" 
     purpose: "Frontend-specific TypeScript validation"
     framework_version: "1.0"
     last_updated: "2025-07-19"
@@ -346,12 +346,25 @@ Based on validated assessment tools in `@meta/validators/` (extracted from frame
 7. Validate entire system using multi-level assessment achieving research-established targets
 ```
 
-### Progress Tracking and Quality Assurance
+## Task Management
 
-**After completing any task, update these files:**
-1. **progress.md**: Add accomplishment with specific details, research applications, and quality metrics
-2. **task-list.md**: Mark tasks as completed and add new discovered tasks with dependencies
-3. **TodoWrite tool**: Update task status to "completed" immediately upon finishing
+**Current Tasks**: Reference `task-list.md` for implementation priorities, dependencies, and success metrics
+**Progress Tracking**: Update `progress.md` with specific accomplishments, research applications, and quality metrics
+**Research Integration**: See `research-integration.md` for leveraged research findings and application strategies
+
+**Task Completion Protocol**:
+1. **Mark Completed Tasks**: Update task status in `task-list.md` with completion timestamp and quality scores
+2. **Document Progress**: Add detailed progress entries to `progress.md` with research applications and effectiveness metrics
+3. **Update Framework Registry**: Track agent instruction effectiveness scores and framework compliance
+4. **Validate Quality Standards**: Ensure all deliverables meet >90% effectiveness and Constitutional AI compliance
+5. **Cross-Reference Updates**: Verify all file references remain accessible and current
+
+**Phase-Based Task Priorities**:
+- **Phase 2 (Current)**: Framework application tasks focus on conditional detection and agent instruction creation
+- **Phase 3 (Next)**: System integration tasks require orchestration logic and validation pipeline development
+- **Phase 4 (Future)**: Quality optimization tasks emphasize performance tuning and effectiveness validation
+
+### Progress Tracking and Quality Assurance
 
 **Quality Validation Checklist:**
 - [ ] **Framework Compliance**: All agent instructions achieve >90% effectiveness using assessment tools

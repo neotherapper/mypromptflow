@@ -370,8 +370,8 @@ gitlab:
 ```typescript
 // Create new project with full configuration
 const project = await mcpClient.callTool('gitlab_create_project', {
-  name: 'maritime-insurance-platform',
-  description: 'Comprehensive maritime insurance management platform',
+  name: 'business-management-platform',
+  description: 'Comprehensive business management platform',
   visibility: 'private',
   namespaceId: 123,
   initializeWithReadme: true,
@@ -382,7 +382,7 @@ const project = await mcpClient.callTool('gitlab_create_project', {
   containerRegistryEnabled: true,
   cicdEnabled: true,
   defaultBranch: 'main',
-  topics: ['maritime', 'insurance', 'nodejs', 'enterprise'],
+  topics: ['business', 'management', 'nodejs', 'enterprise'],
   avatar: './project-logo.png'
 });
 
@@ -408,12 +408,12 @@ await mcpClient.callTool('gitlab_update_project', {
 ```typescript
 // Create project from template
 const templateProject = await mcpClient.callTool('gitlab_create_project_from_template', {
-  name: 'vessel-tracking-service',
+  name: 'asset-tracking-service',
   template: 'nodejs_express',
   groupId: 456,
   customization: {
-    projectName: 'Vessel Tracking Service',
-    description: 'Real-time vessel tracking and monitoring service',
+    projectName: 'Asset Tracking Service',
+    description: 'Real-time asset tracking and monitoring service',
     includeTests: true,
     includeDocker: true,
     includeCICD: true,
@@ -422,10 +422,10 @@ const templateProject = await mcpClient.callTool('gitlab_create_project_from_tem
   }
 });
 
-// Apply project blueprint for maritime insurance
+// Apply project blueprint for business management
 await mcpClient.callTool('gitlab_apply_project_blueprint', {
   projectId: templateProject.id,
-  blueprint: 'maritime-insurance-service',
+  blueprint: 'business-management-service',
   configuration: {
     database: 'postgresql',
     caching: 'redis',
@@ -444,7 +444,7 @@ await mcpClient.callTool('gitlab_apply_project_blueprint', {
 // Create feature branch with protection rules
 const branch = await mcpClient.callTool('gitlab_create_branch', {
   projectId: 123,
-  branchName: 'feature/claims-processing-automation',
+  branchName: 'feature/order-processing-automation',
   ref: 'develop'
 });
 
@@ -464,18 +464,18 @@ const tag = await mcpClient.callTool('gitlab_create_tag', {
   projectId: 123,
   tagName: 'v1.2.0',
   ref: 'main',
-  message: 'Release version 1.2.0 with enhanced claims processing',
+  message: 'Release version 1.2.0 with enhanced order processing',
   releaseDescription: `## New Features
-  - Automated claims validation
-  - Enhanced risk assessment algorithms
-  - Real-time vessel tracking integration
+  - Automated order validation
+  - Enhanced inventory management algorithms
+  - Real-time shipping tracking integration
   
   ## Bug Fixes
-  - Fixed duplicate claim detection
+  - Fixed duplicate order detection
   - Improved database connection handling
   
   ## Performance Improvements
-  - 40% faster claims processing
+  - 40% faster order processing
   - Optimized database queries`
 });
 ```
@@ -485,58 +485,58 @@ const tag = await mcpClient.callTool('gitlab_create_tag', {
 // Create or update files with templates
 await mcpClient.callTool('gitlab_create_file', {
   projectId: 123,
-  filePath: 'src/controllers/claimsController.js',
-  content: `const ClaimsService = require('../services/claimsService');
+  filePath: 'src/controllers/ordersController.js',
+  content: `const OrdersService = require('../services/ordersService');
 
-class ClaimsController {
-  async createClaim(req, res) {
+class OrdersController {
+  async createOrder(req, res) {
     try {
-      const claimData = req.body;
-      const claim = await ClaimsService.createClaim(claimData);
-      res.status(201).json({ success: true, claim });
+      const orderData = req.body;
+      const order = await OrdersService.createOrder(orderData);
+      res.status(201).json({ success: true, order });
     } catch (error) {
       res.status(400).json({ success: false, error: error.message });
     }
   }
 
-  async getClaimsByVessel(req, res) {
+  async getOrdersByCustomer(req, res) {
     try {
-      const { vesselId } = req.params;
-      const claims = await ClaimsService.getClaimsByVessel(vesselId);
-      res.json({ success: true, claims });
+      const { customerId } = req.params;
+      const orders = await OrdersService.getOrdersByCustomer(customerId);
+      res.json({ success: true, orders });
     } catch (error) {
       res.status(500).json({ success: false, error: error.message });
     }
   }
 }
 
-module.exports = ClaimsController;`,
-  branch: 'feature/claims-processing-automation',
-  commitMessage: 'Add claims controller with vessel-specific claim retrieval',
-  authorEmail: 'developer@maritime-insurance.com',
-  authorName: 'Maritime Dev Team'
+module.exports = OrdersController;`,
+  branch: 'feature/order-processing-automation',
+  commitMessage: 'Add orders controller with customer-specific order retrieval',
+  authorEmail: 'developer@business-management.com',
+  authorName: 'Business Dev Team'
 });
 
 // Batch file operations
 await mcpClient.callTool('gitlab_batch_file_operations', {
   projectId: 123,
-  branch: 'feature/claims-processing-automation',
-  commitMessage: 'Set up maritime insurance service structure',
+  branch: 'feature/order-processing-automation',
+  commitMessage: 'Set up business management service structure',
   operations: [
     {
       action: 'create',
-      filePath: 'src/models/Vessel.js',
-      content: '// Vessel model definition...'
+      filePath: 'src/models/Product.js',
+      content: '// Product model definition...'
     },
     {
       action: 'create', 
-      filePath: 'src/models/InsurancePolicy.js',
-      content: '// Insurance policy model...'
+      filePath: 'src/models/Customer.js',
+      content: '// Customer model...'
     },
     {
       action: 'update',
       filePath: 'package.json',
-      content: '// Updated package.json with maritime dependencies...'
+      content: '// Updated package.json with business dependencies...'
     }
   ]
 });
@@ -549,29 +549,29 @@ await mcpClient.callTool('gitlab_batch_file_operations', {
 // Create issue with full metadata and templates
 const issue = await mcpClient.callTool('gitlab_create_issue', {
   projectId: 123,
-  title: 'Implement automated risk assessment for vessel insurance',
+  title: 'Implement automated inventory assessment for product management',
   description: `## Problem Statement
-  Current manual risk assessment process takes 2-3 days per vessel, creating bottlenecks in the underwriting process.
+  Current manual inventory assessment process takes 2-3 days per product, creating bottlenecks in the evaluation process.
   
   ## Proposed Solution
-  Implement automated risk assessment using:
-  - Historical claims data analysis
-  - Vessel specifications and age factors
-  - Route risk assessment
-  - Flag state compliance ratings
+  Implement automated inventory assessment using:
+  - Historical sales data analysis
+  - Product specifications and demand factors
+  - Supply chain risk assessment
+  - Market compliance ratings
   
   ## Acceptance Criteria
-  - [ ] Risk assessment completes within 5 minutes
+  - [ ] Inventory assessment completes within 5 minutes
   - [ ] Accuracy rate >= 85% compared to manual assessment
-  - [ ] Integration with existing underwriting workflow
+  - [ ] Integration with existing sales workflow
   - [ ] Audit trail for compliance requirements
   
   ## Technical Requirements
-  - [ ] API endpoint for risk calculation
-  - [ ] Database schema for risk factors
-  - [ ] Integration with vessel tracking system
+  - [ ] API endpoint for inventory calculation
+  - [ ] Database schema for demand factors
+  - [ ] Integration with product tracking system
   - [ ] Compliance reporting capabilities`,
-  labels: ['feature', 'automation', 'risk-assessment', 'high-priority'],
+  labels: ['feature', 'automation', 'inventory-assessment', 'high-priority'],
   assigneeIds: [456, 789],
   milestoneId: 12,
   epicId: 34,
@@ -618,30 +618,30 @@ Add any other context about the problem here.`
 // Create epic for major feature development
 const epic = await mcpClient.callTool('gitlab_create_epic', {
   groupId: 789,
-  title: 'Maritime Insurance Claims Processing System',
-  description: `Comprehensive claims processing system for maritime insurance operations including:
+  title: 'Business Order Processing System',
+  description: `Comprehensive order processing system for business operations including:
   
   ## Phase 1: Foundation
-  - Claims data model and database schema
-  - Basic CRUD operations for claims
+  - Order data model and database schema
+  - Basic CRUD operations for orders
   - User authentication and authorization
   
   ## Phase 2: Automation
-  - Automated claim validation
+  - Automated order validation
   - Document processing and OCR
-  - Risk assessment integration
+  - Inventory assessment integration
   
   ## Phase 3: Advanced Features
-  - Machine learning for fraud detection
-  - Real-time claim status tracking
-  - Integration with surveyor systems
+  - Machine learning for demand prediction
+  - Real-time order status tracking
+  - Integration with supplier systems
   
   ## Success Metrics
-  - 60% reduction in claims processing time
+  - 60% reduction in order processing time
   - 95% accuracy in automated validation
   - 99.9% system uptime
   - Full regulatory compliance`,
-  labels: ['epic', 'claims-processing', 'automation'],
+  labels: ['epic', 'order-processing', 'automation'],
   startDate: '2024-01-15',
   dueDate: '2024-06-30'
 });
@@ -663,21 +663,21 @@ const milestone = await mcpClient.callTool('gitlab_create_milestone', {
 // Create merge request with comprehensive configuration
 const mergeRequest = await mcpClient.callTool('gitlab_create_merge_request', {
   projectId: 123,
-  title: 'Implement automated vessel risk assessment algorithm',
+  title: 'Implement automated asset risk assessment algorithm',
   sourceBranch: 'feature/risk-assessment-automation',
   targetBranch: 'develop',
   description: `## Overview
-  This MR implements the automated vessel risk assessment algorithm for the maritime insurance platform.
+  This MR implements the automated asset risk assessment algorithm for the business management platform.
   
   ## Changes Made
   - Added RiskAssessmentService with comprehensive scoring algorithm
-  - Implemented vessel data integration with Lloyd's List Intelligence
+  - Implemented asset data integration with industry intelligence systems
   - Added automated flag state compliance checking
   - Created audit trail for risk assessment decisions
   
   ## Testing
   - [x] Unit tests for risk assessment logic (95% coverage)
-  - [x] Integration tests with vessel data service
+  - [x] Integration tests with asset data service
   - [x] Performance tests (assessment completes in <5 seconds)
   - [x] Security review completed
   - [x] Manual testing with historical data validation
@@ -743,10 +743,10 @@ class MergeRequestAutomation {
     await mcpClient.callTool('gitlab_create_file', {
       projectId,
       filePath: 'CODEOWNERS',
-      content: `# Maritime Insurance Platform Code Owners
+      content: `# Business Management Platform Code Owners
 
 # Global owners
-* @maritime-dev-team
+* @business-dev-team
 
 # Frontend components
 /src/frontend/ @frontend-team @ui-ux-team
@@ -805,7 +805,7 @@ class MergeRequestAutomation {
 await mcpClient.callTool('gitlab_create_file', {
   projectId: 123,
   filePath: '.gitlab-ci.yml',
-  content: `# Maritime Insurance Platform CI/CD Pipeline
+  content: `# Business Management Platform CI/CD Pipeline
 
 stages:
   - validate
@@ -817,7 +817,7 @@ stages:
 variables:
   NODE_VERSION: "18"
   DOCKER_DRIVER: overlay2
-  POSTGRES_DB: maritime_test
+  POSTGRES_DB: business_test
   POSTGRES_USER: test_user
   POSTGRES_PASSWORD: test_password
 
@@ -913,13 +913,13 @@ deploy:staging:
   stage: deploy
   image: alpine/helm:latest
   script:
-    - helm upgrade --install maritime-insurance-staging ./helm-chart
+    - helm upgrade --install business-management-staging ./helm-chart
       --set image.tag=$CI_COMMIT_SHA
       --set environment=staging
-      --namespace maritime-staging
+      --namespace business-staging
   environment:
     name: staging
-    url: https://staging.maritime-insurance.company.com
+    url: https://staging.business-management.company.com
   rules:
     - if: $CI_COMMIT_BRANCH == "develop"
 
@@ -928,13 +928,13 @@ deploy:production:
   stage: deploy
   image: alpine/helm:latest
   script:
-    - helm upgrade --install maritime-insurance-prod ./helm-chart
+    - helm upgrade --install business-management-prod ./helm-chart
       --set image.tag=$CI_COMMIT_SHA
       --set environment=production
-      --namespace maritime-production
+      --namespace business-production
   environment:
     name: production
-    url: https://maritime-insurance.company.com
+    url: https://business-management.company.com
   when: manual
   rules:
     - if: $CI_COMMIT_BRANCH == "main"`,
@@ -1055,7 +1055,7 @@ class GitOpsWorkflow {
           content: `# Staging environment configuration
 replicaCount: 2
 image:
-  repository: registry.gitlab.com/company/maritime-insurance
+  repository: registry.gitlab.com/company/business-management
   tag: develop
   pullPolicy: Always
 
@@ -1065,12 +1065,12 @@ service:
 
 ingress:
   enabled: true
-  host: staging.maritime-insurance.company.com
+  host: staging.business-management.company.com
   tls: true
 
 database:
   host: postgres-staging.company.com
-  name: maritime_staging
+  name: business_staging
   
 monitoring:
   enabled: true
@@ -1083,7 +1083,7 @@ monitoring:
           content: `# Production environment configuration
 replicaCount: 5
 image:
-  repository: registry.gitlab.com/company/maritime-insurance
+  repository: registry.gitlab.com/company/business-management
   tag: main
   pullPolicy: IfNotPresent
 
@@ -1093,12 +1093,12 @@ service:
 
 ingress:
   enabled: true
-  host: maritime-insurance.company.com
+  host: business-management.company.com
   tls: true
 
 database:
   host: postgres-prod.company.com
-  name: maritime_production
+  name: business_production
   
 monitoring:
   enabled: true
@@ -1556,7 +1556,7 @@ class GitLabSecurity {
         projectCreationLevel: 'maintainer',
         subgroupCreationLevel: 'owner',
         sharedRunnersEnabled: false,
-        allowedEmailDomains: ['company.com', 'maritime-insurance.com']
+        allowedEmailDomains: ['company.com', 'business-management.com']
       }
     });
   }
@@ -1564,7 +1564,7 @@ class GitLabSecurity {
   async implementRoleBasedAccess(projectId: number) {
     const roles = [
       {
-        name: 'Maritime Analyst',
+        name: 'Business Analyst',
         accessLevel: 20, // Reporter
         permissions: ['read_repository', 'read_issues', 'create_issues']
       },
@@ -1949,7 +1949,7 @@ ROI = ($2,225,000 - $135,000) / $135,000 × 100 = 1,548%
 Payback Period: 3.6 months
 ```
 
-### Maritime Insurance Specific Applications
+### Business Application Examples
 
 #### Claims Management Integration
 ```typescript
@@ -1957,8 +1957,8 @@ class MaritimeClaimsGitLabIntegration {
   async setupClaimsProcessingWorkflow() {
     // Create project template for claims processing
     const claimsProject = await mcpClient.callTool('gitlab_create_project_from_template', {
-      name: 'maritime-claims-processing',
-      template: 'maritime-insurance-claims',
+      name: 'business-claims-processing',
+      template: 'business-claims-processing',
       customization: {
         includeSurveyorIntegration: true,
         includeLegalWorkflows: true,
@@ -1978,9 +1978,9 @@ class MaritimeClaimsGitLabIntegration {
 
   private async setupClaimTypeWorkflows(projectId: number) {
     const claimTypes = [
-      'hull-machinery',
-      'cargo-loss',
-      'collision-liability',
+      'property-damage',
+      'asset-loss',
+      'liability-claims',
       'environmental-damage'
     ];
 
@@ -2002,7 +2002,7 @@ class MaritimeClaimsGitLabIntegration {
 - **P&I Club Reporting**: Standardized reporting templates and automation
 - **Survey Management**: Automated survey scheduling and tracking
 
-#### Business Value for Maritime Insurance
+#### Business Value for Enterprise Applications
 - **Claims Processing Speed**: 70% faster claim resolution with automated workflows
 - **Regulatory Compliance**: 95% automated compliance tracking and reporting
 - **Documentation Management**: 99% improvement in version control and audit trails
@@ -2076,12 +2076,12 @@ Day 20-21: Testing and Validation
   - User acceptance testing
 ```
 
-### Phase 2: Maritime Insurance Customization (Weeks 4-5)
+### Phase 2: Business Application Customization (Weeks 4-5)
 
-#### Maritime-Specific Features
+#### Business-Specific Features
 - Claims processing workflow automation
 - Regulatory compliance tracking systems
-- Vessel and policy management integration
+- Asset and policy management integration
 - Surveyor and legal team collaboration tools
 
 #### Business Process Integration
@@ -2153,11 +2153,11 @@ Day 20-21: Testing and Validation
 2. **MCP Protocol Standardization**: Consistent interface with other tools
 3. **Built-in Security**: Integrated security scanning and compliance features
 4. **Flexible Deployment**: Cloud, self-managed, or hybrid options
-5. **Maritime Industry Focus**: Specialized workflows for maritime insurance
+5. **Multi-Industry Focus**: Specialized workflows for financial services, healthcare, manufacturing, and logistics
 
 #### Market Positioning
 - **Primary Market**: Enterprise development teams requiring integrated DevOps
-- **Secondary Market**: Maritime insurance companies needing development automation
+- **Secondary Market**: Enterprise companies needing development automation
 - **Competitive Advantage**: Complete integrated platform with simplified integration
 - **Market Opportunity**: $7.8B DevOps platform market growing at 19% annually
 
@@ -2172,7 +2172,7 @@ The GitLab MCP Server represents a comprehensive DevOps platform integration wit
 1. **Start with Core DevOps Features**: Focus on repository management and CI/CD automation
 2. **Implement Security Early**: Deploy integrated security scanning and compliance features
 3. **Gradual Feature Expansion**: Add advanced project management and collaboration features
-4. **Maritime Customization**: Develop maritime insurance specific workflows as needed
+4. **Industry Customization**: Develop industry-specific workflows as needed
 
 ### Success Metrics
 
@@ -2207,7 +2207,7 @@ The GitLab MCP Server represents a comprehensive DevOps platform integration wit
 The GitLab MCP Server serves as the foundation for comprehensive DevOps transformation, enabling:
 - Complete development lifecycle automation
 - Advanced security and compliance management
-- Maritime insurance industry-specific customizations
+- Industry-specific business application customizations
 - Integration with broader enterprise technology ecosystem
 
 **Final Recommendation**: Immediate implementation with comprehensive rollout strategy to establish integrated DevOps capabilities and capture maximum business value from unified development, security, and operations platform.

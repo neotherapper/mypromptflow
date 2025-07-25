@@ -382,7 +382,7 @@ configuration:
     base_path: "knowledge-vault/databases/training_vault/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "training_vault_schema.yaml"
+    schema_path: "training_vault_schema.md"
     
   # Synchronization Settings
   notion_sync:

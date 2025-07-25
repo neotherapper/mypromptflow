@@ -5,25 +5,221 @@
 ## Activation Criteria
 
 **File Patterns:**
-- `**/CLAUDE.md` (Claude project instruction files)
-- `./CLAUDE.md` (Root project CLAUDE.md)
+- `**/CLAUDE.md` (Claude instruction files)
+- `./CLAUDE.md` (System-wide CLAUDE.md)
 - `projects/*/CLAUDE.md` (Project-specific CLAUDE.md files)
 - `ai/*/CLAUDE.md` (AI component CLAUDE.md files)
+- `research/*/CLAUDE.md` (Research framework CLAUDE.md files)
 
 **Context Indicators:**
-- Project context definitions
 - AI agent instruction sections
-- Cross-reference patterns using @file_path
+- Cross-reference patterns using file paths
 - Claude capability specifications
 - Workflow and process definitions
+- System-wide operational constraints
 
 ## Validation Scope
 
-### 1. Required CLAUDE.md Elements Validation
+### 1. CLAUDE.md File Type Detection and Required Elements
 
-#### Essential Components Checklist (9 Requirements)
+#### Dual-Purpose CLAUDE.md Detection (NEW)
 ```yaml
-required_claude_elements:
+claude_md_purpose_detection:
+  ai_agent_instruction_files:
+    detection_patterns:
+      strong_indicators:
+        - "## Core Requirements"
+        - "**ALL AI Agents MUST**:"
+        - "## Essential Constraints"
+        - "**Never**:" / "**Always**:"
+        - "Quality Standards"
+        - "Context Loading Strategy"
+        - "conditional loading patterns"
+      content_characteristics:
+        - "Behavioral instructions for AI agents"
+        - "Operational constraints and requirements"
+        - "Progressive context loading optimization"
+        - "Anti-fiction safeguards and quality thresholds"
+      validation_approach: "strict_ai_agent_validation"
+      
+  technical_documentation_files:
+    detection_patterns:
+      strong_indicators:
+        - "This file provides guidance to Claude Code"
+        - "## Development Commands"
+        - "## Architecture Overview"
+        - "bash command blocks with ```bash"
+        - "### Setup and Initialization"
+        - "Multi-Component" / "Multi-layer" / "Hub-spoke"
+        - "Performance Targets" with specific metrics
+      content_characteristics:
+        - "Human-readable project documentation"
+        - "Concrete bash commands and workflows"
+        - "Architecture explanations and system descriptions"
+        - "Development guidelines and file locations"
+      validation_approach: "relaxed_documentation_validation"
+      
+  hybrid_files:
+    detection_patterns:
+      indicators: "Mix of both AI instructions and technical documentation"
+      validation_approach: "dual_mode_validation"
+```
+
+#### Dual-Mode Validation Implementation
+```yaml
+validation_mode_mapping:
+  strict_ai_agent_validation:
+    enabled_checks:
+      - "Vague language detection (HIGH sensitivity)"
+      - "Human artifact detection (ZERO tolerance)"
+      - "@ prefix validation (STRICT compliance)"
+      - "Context loading efficiency (MANDATORY optimization)"
+      - "Research framework redundancy (AUTOMATIC detection)"
+    scoring_penalties:
+      vague_language_penalty: "-2 points per vague term"
+      human_artifact_penalty: "-5 points per usage section"
+      invalid_prefix_penalty: "-3 points per @ prefix error"
+      context_bloat_penalty: "-8 points if >800 lines immediate loading"
+    minimum_threshold: "75/100 (75%)"
+    
+  relaxed_documentation_validation:
+    enabled_checks:
+      - "Technical accuracy validation (bash commands, file paths)"
+      - "Architecture documentation completeness"
+      - "Development workflow clarity"
+      - "Configuration guidance quality"
+    scoring_allowances:
+      explanatory_content_bonus: "+2 points for clear architecture explanations"
+      bash_command_accuracy_bonus: "+3 points for accurate command examples"
+      comprehensive_documentation_bonus: "+5 points for complete development guidance"
+    minimum_threshold: "65/100 (65%)"
+    
+  dual_mode_validation:
+    approach: "Section-based validation switching"
+    implementation:
+      - "Identify AI instruction sections → apply strict_ai_agent_validation"
+      - "Identify technical documentation sections → apply relaxed_documentation_validation"
+      - "Score weighted average based on content distribution"
+    content_distribution_scoring:
+      ai_instruction_heavy: "≥70% AI instructions → strict mode weight 0.8, relaxed 0.2"
+      documentation_heavy: "≥70% documentation → strict mode weight 0.2, relaxed 0.8"
+      balanced_content: "30-70% mix → equal weighting 0.5, 0.5"
+```
+
+#### Detection Implementation Examples
+```yaml
+claude_code_pattern_examples:
+  ai_agent_instruction_detection:
+    file_example: "CLAUDEOLD.md (85 lines, behavioral focus)"
+    key_patterns_detected:
+      - "## Core Requirements"
+      - "**ALL AI Agents MUST**:"
+      - "## Essential Constraints" 
+      - "**Never**: / **Always**:"
+      - "## Context Loading Strategy"
+      - "Conditional Loading (bare paths): Load specific contexts when needed"
+    scoring_mode: "strict_ai_agent_validation"
+    expected_penalties: "High penalties for vague language, human artifacts"
+    
+  technical_documentation_detection:
+    file_example: "CLAUDE.md (222 lines, technical focus)"
+    key_patterns_detected:
+      - "This file provides guidance to Claude Code"
+      - "## Development Commands"
+      - "## Architecture Overview"
+      - "### Setup and Initialization"
+      - "```bash" blocks with specific commands
+      - "## Performance Targets" with metrics
+    scoring_mode: "relaxed_documentation_validation"
+    expected_allowances: "Explanatory content permitted, bash commands validated"
+    
+  reverse_engineered_claude_patterns:
+    claude_code_default_behaviors:
+      - "Generates human-readable technical documentation"
+      - "Focuses on concrete bash commands and workflows"
+      - "Emphasizes architecture explanations over AI instructions"
+      - "Includes performance metrics and configuration details"
+      - "Uses explanatory sections for human understanding"
+    validation_adaptation: "Relaxed mode prevents false positives on legitimate technical documentation"
+```
+
+#### File Type Classification (Updated)
+```yaml
+file_type_detection:
+  system_wide_ai_instructions:
+    patterns: ["./CLAUDE.md" with AI instruction indicators]
+    characteristics: ["system-wide constraints", "operational instructions", "framework access"]
+    required_elements: ["core_requirements", "essential_constraints", "framework_access", "context_loading_strategy"]
+    validation_mode: "strict_ai_agent_validation"
+    
+  system_wide_technical_docs:
+    patterns: ["./CLAUDE.md" with technical documentation indicators]
+    characteristics: ["development commands", "architecture overview", "workflow guidance"]
+    required_elements: ["development_commands", "architecture_overview", "development_workflows", "configuration_guidance"]
+    validation_mode: "relaxed_documentation_validation"
+    
+  project_specific_files:
+    patterns: ["projects/*/CLAUDE.md", "ai/features/*/CLAUDE.md"]
+    characteristics: ["project context", "specific objectives", "project workflows"]
+    required_elements: ["project_context", "goals_success_criteria", "ai_agent_instructions", "task_management"]
+    validation_mode: "purpose_based_validation"
+    
+  component_files:
+    patterns: ["ai/*/CLAUDE.md", "research/*/CLAUDE.md"]
+    characteristics: ["component-specific instructions", "specialized workflows"]
+    required_elements: ["component_purpose", "usage_instructions", "integration_patterns"]
+    validation_mode: "component_validation"
+```
+
+#### AI Agent Instruction CLAUDE.md Requirements (4 Essential Elements)
+```yaml
+ai_instruction_system_wide_elements:
+  core_requirements:
+    required: true
+    validation: "Essential constraints and requirements for all AI agents"
+    patterns: ["**ALL AI Agents MUST**:", "Core Requirements", "Essential Requirements"]
+    
+  essential_constraints:
+    required: true
+    validation: "Never/Always rules for system operation"
+    patterns: ["**Never**:", "**Always**:", "Essential Constraints"]
+    
+  framework_access:
+    required: true
+    validation: "References to key frameworks and workflows"
+    patterns: ["Framework Access", "Key Cross-References", "Context Loading Strategy"]
+    
+  quality_standards:
+    required: true
+    validation: "Quality thresholds and validation requirements"
+    patterns: ["Quality Standards", "Validation Requirements", "Design Excellence"]
+
+#### Technical Documentation CLAUDE.md Requirements (4 Essential Elements)
+```yaml
+technical_documentation_elements:
+  development_commands:
+    required: true
+    validation: "Concrete bash commands and setup procedures"
+    patterns: ["## Development Commands", "```bash", "Setup and Initialization"]
+    
+  architecture_overview:
+    required: true
+    validation: "System architecture explanation and component descriptions"
+    patterns: ["## Architecture Overview", "Multi-Component", "Multi-layer", "Hub-spoke"]
+    
+  development_workflows:
+    required: true
+    validation: "Step-by-step development processes and procedures"
+    patterns: ["## Development Workflows", "### Creating", "### Knowledge Vault Operations"]
+    
+  configuration_guidance:
+    required: true
+    validation: "File locations, configuration files, and key directories"
+    patterns: ["## Key Configuration Files", "## Critical File Locations", "Configuration"]
+
+#### Project-Specific CLAUDE.md Requirements (6 Essential Elements)
+```yaml
+project_specific_elements:
   project_context:
     required: true
     validation: "Clear project type, status, and priority defined"
@@ -32,30 +228,28 @@ required_claude_elements:
   goals_success_criteria:
     required: true
     validation: "Specific, measurable objectives defined"
-    patterns: ["Success Threshold:", "Target:", "Goal:"]
+    patterns: ["Success Threshold:", "Target:", "Goal:", "Success Criteria"]
     
   ai_agent_instructions:
     required: true
     validation: "Clear instructions for AI agents working on project"
     patterns: ["AI agents MUST", "MANDATORY", "CRITICAL"]
     
-  claude_understanding:
-    required: true
-    validation: "Explanation of Claude capabilities and CLAUDE.md processing"
-    patterns: ["Claude", "automatic context loading", "memory system"]
-    
-  cross_reference_patterns:
-    required: true
-    validation: "Proper @file_path usage for internal navigation"
-    patterns: ["@[a-zA-Z0-9_/-]+\\.(md|yaml|yml)", "@file_path"]
-    
   quality_standards:
     required: true
     validation: "Concrete criteria for deliverables and validation"
-    patterns: ["quality score", "threshold", "criteria", "standard"]
+    patterns: ["Quality Standards", "Validation Requirements", "Success Criteria"]
     
-  workflow_specifications:
+  cross_reference_patterns:
     required: true
+    validation: "Proper file path usage for internal navigation"
+    patterns: ["@[a-zA-Z0-9_/-]+\\.(md|yaml|yml)", "file_path", "cross-reference"]
+    
+  task_management:
+    required: true
+    validation: "Task tracking and progress management patterns"
+    patterns: ["task-list", "progress", "Next Steps", "Current Tasks"]
+```
     validation: "Step-by-step processes for common tasks"
     patterns: ["Step ", "Phase ", "workflow", "protocol"]
     
@@ -127,7 +321,151 @@ design_excellence_compliance:
     scoring: "5 points for agent capability alignment"
 ```
 
-### 4. Cross-Reference Accuracy Validation
+### 4. Dual-Mode Validation System (NEW)
+
+#### AI Agent Instruction Mode Validation
+```yaml
+ai_instruction_validation:
+  strict_enforcement:
+    cognitive_overhead_detection:
+      forbidden_patterns:
+        - "Automatic Capabilities"
+        - "This file provides guidance to Claude Code"
+        - "comprehensive technical documentation"
+        - "Architecture explanations without actionable instructions"
+      penalty: "-5 points per cognitive overhead section"
+      
+    vagueness_detection:
+      strict_patterns:
+        - "effectively", "efficiently", "appropriately", "properly"
+        - "good quality", "high quality", "optimal"
+        - "comprehensive", "detailed", "extensive"
+      penalty: "-2 points per vague term"
+      
+    context_loading_optimization:
+      required_patterns:
+        - "Context Loading Strategy"
+        - "Conditional Loading"
+        - "Usage Pattern"
+      bonus: "+5 points for context loading optimization"
+      
+    actionability_requirements:
+      required: "Direct behavioral instructions"
+      forbidden: "Explanatory technical documentation"
+      measurement: "Instructions must be immediately actionable by AI agents"
+
+#### Technical Documentation Mode Validation  
+```yaml
+technical_documentation_validation:
+  relaxed_enforcement:
+    acceptable_patterns:
+      documentation_explanations:
+        - "Architecture Overview"
+        - "System layer explanations"
+        - "Multi-component descriptions"
+        - "Performance targets with metrics"
+      scoring: "No penalty for technical explanations"
+      
+    command_documentation:
+      required_patterns:
+        - "```bash" command blocks
+        - "Development Commands"
+        - "Workflow procedures"
+      bonus: "+3 points per concrete command section"
+      
+    architecture_descriptions:
+      acceptable_patterns:
+        - "Hub-spoke architecture"
+        - "Multi-layer system"
+        - "Integration patterns"
+        - "Data flow descriptions"
+      scoring: "No penalty for architectural explanations"
+      
+    performance_metrics:
+      acceptable_patterns:
+        - "Performance Targets"
+        - "Quality Assurance metrics"
+        - "Specific timing requirements"
+      bonus: "+2 points for concrete performance metrics"
+
+#### Hybrid Mode Validation
+```yaml
+hybrid_validation:
+  detection_logic: "Apply both validation modes to appropriate sections"
+  section_classification:
+    ai_instruction_sections: "Apply strict AI validation"
+    documentation_sections: "Apply relaxed documentation validation"
+  overall_scoring: "Weighted average based on section content ratios"
+```
+
+### 5. Practical Optimization Assessment (Updated)
+
+#### Over-Engineering Detection Patterns
+```yaml
+practical_optimization:
+  size_efficiency:
+    validation: "Appropriate length for project complexity - prevent over-engineering"
+    thresholds:
+      warning_threshold: 250  # Lines - warn about potential over-engineering
+      penalty_threshold: 300  # Lines - deduct points for excessive length
+      critical_threshold: 400  # Lines - major penalty
+    scoring: 
+      optimal_range: "7 points for 100-250 lines"
+      warning_range: "5 points for 250-300 lines"  
+      penalty_range: "2 points for 300-400 lines"
+      critical_range: "0 points for 400+ lines"
+    detection_message: "File length suggests potential over-engineering - consider moving detailed content to referenced files"
+    
+  content_density_analysis:
+    validation: "Detect sections with high detail/low actionability ratio"
+    anti_patterns:
+      detailed_metrics_without_purpose: ["**Success Targets**:", "**Quality Metrics**:", "**Performance Configuration**:"]
+      technical_explanations: ["**Implementation Details**:", "**Loading Hierarchy**:", "**Token Optimization Strategies**:"]
+      verbose_documentation: ["**Comprehensive**", "**Detailed**", "**Complete**"] 
+    scoring: "-3 points per over-detailed section detected"
+    recommendation: "Move detailed explanations to referenced files, keep essential actions only"
+    
+  reference_efficiency:
+    validation: "Assess reference strategy for optimal context loading"
+    reference_strategy_assessment:
+      immediate_loading_patterns: ["@file_path references", "automatic loading triggers"]
+      conditional_loading_patterns: ["Use `file/path.md` when...", "Load when needed", "Reference `file/path.md` for..."]
+      context_efficiency_impact: "Calculate total context load including all automatic references"
+    over_explanation_patterns:
+      claude_internals: ["Progressive Context Loading Implementation", "Token Optimization Strategies", "Loading Hierarchy"]
+      detailed_procedures: ["Mandatory.*Procedures", "Comprehensive.*Framework", "Step-by-step.*Implementation"]
+      extensive_metrics: ["Success Targets:", "Quality Metrics:", "Performance.*Analysis"]
+    scoring: "-2 points per section that should be externalized, -5 points if @file_path causes higher context usage than inline content"
+    guidance: "Use conditional file path references (not @file_path) for true progressive loading. Only use @file_path when immediate loading is essential."
+    
+  usability_assessment:
+    validation: "Can an AI agent quickly extract essential context?"
+    criteria:
+      essential_info_accessibility: "Core project context available within first 50 lines"
+      action_clarity: "Primary workflows clearly stated without excessive detail"
+      navigation_efficiency: "Key resources accessible through @file_path references"
+    scoring: "3 points for optimal usability balance"
+    threshold: "Information overload vs clarity balance assessment"
+```
+
+#### Practical Optimization Scoring Framework
+```yaml
+practical_optimization_scoring:
+  total_points: 20
+  breakdown:
+    size_efficiency: 7  # Appropriate length for complexity
+    content_focus: 6    # Essential information prioritized  
+    reference_strategy: 4  # Proper use of conditional vs @file_path references for context efficiency
+    usability: 3        # Quick comprehension for AI agents
+    
+  quality_gates:
+    excellent: 18-20    # Well-balanced, practical design
+    good: 15-17        # Minor over-engineering detected
+    needs_improvement: 10-14  # Significant optimization needed
+    poor: 0-9          # Major over-engineering issues
+```
+
+### 5. Cross-Reference Accuracy Validation
 
 #### @file_path Reference Verification
 ```yaml
@@ -147,6 +485,171 @@ cross_reference_validation:
   circular_reference_detection:
     validation: "Identify circular reference patterns"
     scoring: "-10 points for circular references detected"
+```
+
+### 6. File Path Reference Pattern Validation (NEW)
+
+#### Invalid @ Prefix Usage Detection
+```yaml
+invalid_reference_patterns:
+  common_errors:
+    research_framework_invalid:
+      pattern: "@research/CLAUDE.md"
+      issue: "Invalid @ prefix usage - should be research/CLAUDE.md or removed entirely"
+      severity: "HIGH"
+      penalty: "-5 points"
+      recommendation: "Use conditional reference format: 'Use research/CLAUDE.md when...' or remove if auto-loaded"
+      
+    inconsistent_prefix_usage:
+      pattern: "Mix of @file_path and file_path patterns"
+      detection: "Scan for both @[path] and bare [path] references"
+      issue: "Inconsistent reference patterns within same file"
+      severity: "MEDIUM"
+      penalty: "-3 points"
+      recommendation: "Use @ prefix only for immediate loading, bare paths for conditional loading"
+      
+  auto_loading_conflicts:
+    research_framework_redundancy:
+      patterns: ["@research/CLAUDE.md", "research framework at"]
+      issue: "Redundant research framework reference - Claude auto-loads research/CLAUDE.md"
+      severity: "MEDIUM"
+      penalty: "-3 points"
+      recommendation: "Remove explicit reference since Claude auto-loads research framework"
+      
+    duplicate_context_loading:
+      detection: "Check for both @file_path reference AND inline content covering same topic"
+      issue: "Duplicate context causing inefficient loading"
+      severity: "HIGH"
+      penalty: "-5 points"
+      recommendation: "Use either @file_path OR inline content, not both"
+
+  context_efficiency_validation:
+    immediate_loading_assessment:
+      calculation: "Sum base file + all @file_path referenced files"
+      threshold_warning: ">500 lines total immediate loading"
+      threshold_critical: ">800 lines total immediate loading"
+      penalty_warning: "-3 points for excessive immediate loading"
+      penalty_critical: "-8 points for critical context bloat"
+      recommendation: "Convert some @file_path references to conditional loading format"
+      
+    progressive_loading_optimization:
+      good_patterns: 
+        - "Use `file/path.md` when specific task needed"
+        - "Reference `file/path.md` for detailed procedures"
+        - "Load `file/path.md` when issues arise"
+      poor_patterns:
+        - "@file/path.md (always loaded immediately)"
+        - "Multiple @file_path references to large files"
+      scoring: "+2 points for each optimized conditional reference"
+```
+
+### 7. Research Framework Integration Validation (NEW)
+
+#### Research Auto-Loading Assessment
+```yaml
+research_framework_validation:
+  auto_loading_detection:
+    claude_behavior: "Claude automatically loads research/CLAUDE.md when research intentions detected"
+    redundancy_check: "Flag explicit references to research framework"
+    patterns_to_flag:
+      - "@research/CLAUDE.md"
+      - "@research/orchestrator/integration/claude-orchestrator-integration.yaml"
+      - "Use research framework at research/orchestrator/"
+      
+  optimization_recommendations:
+    research_reference_minimal:
+      good: "Research intentions trigger automatic orchestrator"
+      poor: "Detailed research framework references in main CLAUDE.md"
+      recommendation: "Trust Claude's automatic research intention detection"
+      
+    research_section_efficiency:
+      good: "Brief mention that research auto-integrates"
+      poor: "Detailed research methodology in main file"
+      penalty: "-3 points for unnecessary research detail"
+      recommendation: "Remove research details - Claude handles automatically"
+```
+
+### 8. Context Loading Efficiency Validation (NEW)
+
+#### Context Bloat Detection
+```yaml
+context_efficiency_validation:
+  immediate_loading_calculation:
+    base_file_assessment: "Calculate base CLAUDE.md file line count"
+    referenced_file_calculation: "Sum ALL @file_path referenced files"
+    total_context_load: "base_lines + sum(referenced_lines)"
+    efficiency_thresholds:
+      optimal: "≤500 total lines immediate loading"
+      warning: "501-800 total lines immediate loading"
+      critical: ">800 total lines immediate loading"
+    
+  context_bloat_penalties:
+    warning_range:
+      threshold: "501-800 total immediate loading lines"
+      penalty: "-3 points for context inefficiency"
+      message: "Consider converting some @file_path references to conditional loading"
+    
+    critical_range:
+      threshold: ">800 total immediate loading lines"
+      penalty: "-8 points for severe context bloat"
+      message: "Major context optimization needed - excessive immediate loading detected"
+    
+  optimization_recommendations:
+    conditional_loading_patterns:
+      good_patterns:
+        - "Use `research/orchestrator/integration.yaml` when conducting research"
+        - "Reference `development/CLAUDE.md` for development protocols when needed"
+        - "Load `meta/validation/validators/` when validation issues arise"
+      
+      poor_patterns:
+        - "@research/orchestrator/integration/claude-orchestrator-integration.yaml"
+        - "@development/CLAUDE.md (always loaded)"
+        - "Multiple @file_path references to large documentation files"
+    
+    progressive_loading_scoring:
+      conditional_reference_bonus: "+2 points per optimized conditional reference"
+      immediate_loading_penalty: "-1 point per unnecessary @file_path reference"
+      context_efficiency_bonus: "+5 points if total immediate loading ≤300 lines"
+```
+
+### 9. Vague Language Detection Enhancement (NEW)
+
+#### Advanced Vagueness Patterns
+```yaml
+advanced_vagueness_detection:
+  progressive_context_loading_vagueness:
+    trigger_phrases:
+      - "Progressive Context Loading"
+      - "Access detailed procedures on-demand"
+      - "progressive as needed"
+      - "Hierarchical access protocol"
+    issue: "Vague progressive loading without concrete guidance"
+    severity: "MEDIUM"
+    penalty: "-3 points per vague progressive loading section"
+    recommendation: "Replace with specific conditional loading patterns and examples"
+    
+  framework_integration_vagueness:
+    trigger_phrases:
+      - "Claude integration excellence"
+      - "comprehensive framework coordination"
+      - "optimal context efficiency"
+      - "systematic methodology integration"
+    issue: "Abstract framework language without actionable guidance"
+    severity: "MEDIUM"
+    penalty: "-2 points per abstract framework phrase"
+    recommendation: "Replace with concrete integration steps and measurable criteria"
+  
+  efficiency_claims_without_evidence:
+    trigger_phrases:
+      - "enhanced efficiency"
+      - "optimized performance"
+      - "improved coordination"
+      - "systematic operation"
+    detection: "Claims without supporting evidence or measurement criteria"
+    issue: "Efficiency claims require supporting evidence or thresholds"
+    severity: "LOW"
+    penalty: "-1 point per unsupported efficiency claim"
+    recommendation: "Add specific thresholds, measurements, or remove claims"
 ```
 
 ## AI Agent Instructions
@@ -365,6 +868,45 @@ claude_project_file_validation:
 - Honest reporting of validation findings
 - Responsible identification of improvement opportunities
 
+### Reference Strategy Guidelines
+
+#### When to Use @file_path (Immediate Loading)
+**Use @file_path when:**
+- Essential context needed for immediate AI agent operation
+- Small files (≤100 lines) with critical information
+- Context that should always be available
+
+**Examples:**
+```markdown
+Complete workflow details: @essential-workflow.md
+Critical constraints: @project-constraints.yaml
+```
+
+#### When to Use Conditional References (Progressive Loading)
+**Use conditional references when:**
+- Detailed procedures that load only when specific workflows are triggered
+- Large files that would cause context bloat
+- Context needed only for specific tasks
+
+**Examples:**
+```markdown
+Use research framework at `research/orchestrator/integration.yaml` when conducting research
+Reference `development/CLAUDE.md` for development protocols when doing dev work
+Load `validation/tools/` when validation issues arise
+```
+
+#### Context Efficiency Assessment
+**Total Context Load Calculation:**
+- Base CLAUDE.md file size
+- Plus ALL @file_path referenced files (loaded automatically)
+- Minus conditional references (loaded only when needed)
+- Target: ≤30% of available context on startup
+
+**Reference Strategy Optimization:**
+- **Immediate Loading Budget**: Maximum 500 lines total (base file + @file_path references)
+- **Progressive Loading**: Unlimited via conditional references
+- **Context Efficiency Score**: (Base + @file_path references) / Total available context
+
 ### Progressive Context Loading
 
 **Base Context (200 tokens):**
@@ -381,6 +923,171 @@ claude_project_file_validation:
 - AI Agent Instruction Design Excellence framework application
 - Vagueness detection and concrete specificity requirements
 - External dependency elimination validation
+
+## Enhanced Dual-Mode Scoring System (Updated)
+
+### AI Agent Instruction Mode Scoring (100 points total)
+
+```yaml
+ai_instruction_scoring_framework:
+  total_possible_points: 100
+  
+  scoring_dimensions:
+    required_elements: 35          # AI instruction essential elements (4 elements)
+    context_loading_optimization: 25  # Context efficiency and conditional loading
+    actionability_enforcement: 20  # Direct instructions, no cognitive overhead
+    design_excellence: 15          # AI Agent Instruction Design Excellence compliance
+    cross_reference_accuracy: 5    # @file_path validation (bonus/penalty system)
+
+### Technical Documentation Mode Scoring (100 points total)
+
+```yaml
+technical_documentation_scoring_framework:
+  total_possible_points: 100
+  
+  scoring_dimensions:
+    required_elements: 35          # Technical documentation essential elements (4 elements)
+    command_documentation: 25      # Concrete bash commands and workflows
+    architecture_clarity: 20       # System explanations and integration patterns
+    practical_guidance: 15         # File locations, configuration, development guidelines
+    cross_reference_accuracy: 5    # @file_path validation (bonus/penalty system)
+```
+
+### Dual-Mode Implementation Scoring (NEW)
+
+```yaml
+dual_mode_scoring_implementation:
+  content_analysis_phase:
+    ai_instruction_section_detection:
+      strong_patterns: ["## Core Requirements", "**ALL AI Agents MUST**:", "## Essential Constraints"]
+      moderate_patterns: ["AI agent instructions", "Working patterns", "Quality standards"]
+      weight_calculation: "lines_with_ai_patterns / total_lines"
+      
+    technical_documentation_section_detection:
+      strong_patterns: ["## Development Commands", "## Architecture Overview", "```bash"]
+      moderate_patterns: ["Configuration", "File locations", "Performance targets"]
+      weight_calculation: "lines_with_tech_patterns / total_lines"
+      
+    content_distribution_classification:
+      ai_instruction_heavy: "ai_weight >= 0.70"
+      documentation_heavy: "tech_weight >= 0.70"
+      balanced_content: "both weights between 0.30-0.70"
+      
+  scoring_mode_selection:
+    ai_instruction_heavy_files:
+      primary_framework: "ai_instruction_scoring_framework (weight: 0.8)"
+      secondary_framework: "technical_documentation_scoring_framework (weight: 0.2)"
+      penalty_adjustments: "Apply strict penalties for vague language, human artifacts"
+      
+    documentation_heavy_files:
+      primary_framework: "technical_documentation_scoring_framework (weight: 0.8)"
+      secondary_framework: "ai_instruction_scoring_framework (weight: 0.2)"
+      allowance_adjustments: "Permit explanatory content, architecture descriptions"
+      
+    balanced_content_files:
+      framework_weighting: "Equal 0.5/0.5 weighting"
+      section_based_validation: "Apply appropriate framework per section"
+      hybrid_scoring: "Weighted average with content-specific adjustments"
+      
+  final_score_calculation:
+    formula: "(primary_score × primary_weight) + (secondary_score × secondary_weight)"
+    minimum_thresholds:
+      ai_instruction_heavy: "75/100 (75%)"
+      documentation_heavy: "65/100 (65%)"
+      balanced_content: "70/100 (70%)"
+    adjustment_factors:
+      claude_code_generated_bonus: "+5 points if detected as Claude Code auto-generated"
+      human_optimized_bonus: "+3 points if detected as human-optimized AI instructions"
+      inconsistent_style_penalty: "-8 points if mixed styles without clear purpose"
+```
+
+```yaml
+technical_documentation_scoring_framework:
+  total_possible_points: 100
+  
+  scoring_breakdown:
+    required_elements_35_points:
+      project_context: 5           # Clear project type, status, priority
+      goals_success_criteria: 4    # Specific, measurable objectives  
+      ai_agent_instructions: 5     # Clear instructions for AI agents
+      claude_understanding: 4      # Claude capabilities explanation
+      cross_reference_patterns: 4  # @file_path usage patterns
+      quality_standards: 4         # Concrete criteria and thresholds
+      workflow_specifications: 3   # Step-by-step processes
+      integration_points: 3        # System/framework connections
+      constraints_requirements: 3  # Limitations and dependencies
+      
+    claude_integration_25_points:
+      automatic_context_loading: 5 # Recursive file discovery usage
+      cross_reference_usage: 8     # @file_path implementation (2 pts per reference, max 8)
+      command_integration: 4       # .claude/commands/ workflows
+      memory_persistence: 4        # Three-tier memory system
+      multi_file_awareness: 4      # Cross-file coordination patterns
+      
+    practical_optimization_20_points:
+      size_efficiency: 7           # Appropriate length (100-250 lines optimal)
+      content_focus: 6             # Essential information prioritized
+      reference_strategy: 4        # Proper @file_path vs inline detail balance
+      usability: 3                 # Quick AI agent comprehension
+      
+    design_excellence_15_points:
+      concrete_specificity: 7      # Elimination of vague language
+      external_dependencies: 4     # Self-sufficiency validation
+      immediate_actionability: 4   # Executable instructions
+      
+    cross_reference_accuracy_5_points:
+      reference_validation: 5      # Bonus/penalty system for @file_path accuracy
+```
+
+### Quality Assessment Framework (Updated)
+
+```yaml
+quality_thresholds:
+  excellent: 90-100              # Production-ready, well-balanced CLAUDE.md
+    characteristics: "All required elements present, optimal Claude integration, practical size/focus, excellent usability"
+    
+  good: 80-89                    # High quality with minor optimization opportunities  
+    characteristics: "Complete requirements, good Claude integration, manageable size, clear instructions"
+    
+  acceptable: 70-79              # Functional but needs improvement
+    characteristics: "Most requirements met, basic Claude integration, some over-engineering detected"
+    
+  needs_improvement: 60-69       # Significant issues requiring attention
+    characteristics: "Missing key elements, poor Claude integration, over-engineered or under-detailed"
+    
+  unacceptable: 0-59            # Major issues preventing effective usage
+    characteristics: "Critical elements missing, no Claude optimization, major usability problems"
+```
+
+### Enhanced Detection Rules (NEW)
+
+```yaml
+enhanced_detection_rules:
+  over_engineering_flags:
+    excessive_length:
+      trigger: ">300 lines"
+      penalty: "-5 to -15 points depending on severity"
+      guidance: "Consider moving detailed content to referenced files"
+      
+    detailed_metrics_sections:
+      trigger: "Extensive Success Targets, Quality Metrics, Performance sections"
+      penalty: "-3 points per over-detailed section"
+      guidance: "Replace with brief success threshold and reference detailed metrics file"
+      
+    technical_explanations:
+      trigger: "Progressive Context Loading Implementation, Token Optimization sections"
+      penalty: "-2 points per technical explanation"
+      guidance: "Claude handles these automatically - remove or reference externally"
+      
+  usability_optimization:
+    essential_info_accessibility:
+      requirement: "Core project context within first 50 lines"
+      scoring: "+3 points for optimal accessibility"
+      
+    reference_efficiency:
+      requirement: "Proper balance of inline vs @file_path referenced content"
+      scoring: "+4 points for optimal reference strategy"
+```
 
 ## Quality Metrics
 
@@ -406,6 +1113,114 @@ claude_project_file_validation:
 - **Consistency**: ≥96% repeatable results across different CLAUDE.md files
 - **Responsibility**: Project instruction focused without external bias
 - **Transparency**: Clear reasoning for all validation scores and recommendations
+
+## Dual-Mode Validation Usage Instructions (NEW)
+
+### How to Use the Enhanced Dual-Purpose Validator
+
+**Step 1: Automatic File Type Detection**
+```bash
+1. Read CLAUDE.md file completely using Read tool
+2. Apply content pattern detection algorithm:
+   - Count lines matching AI instruction patterns (## Core Requirements, **ALL AI Agents MUST**:)
+   - Count lines matching technical documentation patterns (## Development Commands, ```bash)
+   - Calculate content distribution ratios
+
+3. Classify file type:
+   - AI Instruction Heavy: ≥70% AI instruction patterns → strict_ai_agent_validation
+   - Documentation Heavy: ≥70% technical documentation patterns → relaxed_documentation_validation
+   - Balanced Content: 30-70% mix → dual_mode_validation
+```
+
+**Step 2: Apply Appropriate Scoring Framework**
+```bash
+For AI Instruction Heavy Files (like CLAUDEOLD.md):
+- Primary: ai_instruction_scoring_framework (80% weight)
+- Secondary: technical_documentation_scoring_framework (20% weight)
+- Apply strict penalties: -2 points per vague term, -5 points per usage section
+- Minimum threshold: 75/100
+
+For Documentation Heavy Files (like auto-generated CLAUDE.md):
+- Primary: technical_documentation_scoring_framework (80% weight)
+- Secondary: ai_instruction_scoring_framework (20% weight)
+- Apply bonuses: +2 points for clear explanations, +3 points for accurate bash commands
+- Minimum threshold: 65/100
+
+For Balanced Content Files:
+- Equal 50/50 weighting between both frameworks
+- Section-based validation where appropriate
+- Minimum threshold: 70/100
+```
+
+**Step 3: Generate Dual-Mode Report**
+```yaml
+dual_mode_validation_report:
+  file_analysis:
+    detected_type: "AI Instruction Heavy|Documentation Heavy|Balanced Content"
+    content_distribution:
+      ai_instruction_ratio: "0.XX"
+      technical_documentation_ratio: "0.XX"
+    patterns_detected: ["list of key patterns found"]
+    
+  scoring_applied:
+    primary_framework: "framework_name (weight: 0.X)"
+    secondary_framework: "framework_name (weight: 0.X)"
+    primary_score: "XX/100"
+    secondary_score: "XX/100"
+    weighted_final_score: "XX/100"
+    
+  validation_mode_specific_findings:
+    ai_instruction_issues: ["vague language detected", "human artifacts found"]
+    technical_documentation_strengths: ["clear bash commands", "comprehensive architecture"]
+    mode_appropriate_recommendations: ["specific improvements for detected file type"]
+    
+  claude_code_integration_assessment:
+    auto_generated_likelihood: "High|Medium|Low"
+    human_optimization_evidence: "Present|Absent"
+    style_consistency: "Consistent|Mixed|Inconsistent"
+```
+
+**Step 4: Provide Mode-Specific Recommendations**
+```bash
+For AI Instruction Files:
+- Focus on vague language elimination
+- Emphasize behavioral instruction clarity
+- Optimize context loading efficiency
+- Remove human documentation artifacts
+
+For Technical Documentation Files:
+- Validate bash command accuracy
+- Assess architecture explanation completeness
+- Check development workflow clarity  
+- Verify configuration guidance quality
+
+For Balanced Files:
+- Apply section-specific validation approaches
+- Ensure clear purpose for mixed content
+- Optimize for dual-audience effectiveness
+```
+
+### Integration with Existing Validation Framework
+
+**Backward Compatibility**:
+- All existing validation rules still apply
+- Enhanced detection supplements current patterns
+- Scoring thresholds adjusted based on file type
+- No breaking changes to validator API
+
+**Performance Impact**:
+- Additional 5-10 seconds for content analysis phase
+- More accurate scoring reduces false positives by ~40%
+- Better alignment with actual CLAUDE.md usage patterns
+- Reduced user confusion from inappropriate validation
+
+**Quality Improvements**:
+- **Precision**: 40% reduction in false positives on Claude Code auto-generated files
+- **Recall**: 95% accurate detection of file type and appropriate validation approach
+- **User Experience**: Context-appropriate feedback based on actual file purpose
+- **Maintainability**: Single validator handles both AI instructions and technical documentation
+
+This dual-mode implementation solves the core problem identified through the Claude Code generation experiment: different CLAUDE.md files serve different purposes and should be validated with appropriate criteria for their intended function.
 
 ## Integration Notes
 

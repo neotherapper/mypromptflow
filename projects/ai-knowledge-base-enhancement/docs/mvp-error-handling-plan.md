@@ -16,7 +16,7 @@ Based on completed research in `research/findings/ai-agent-failure-patterns/`, t
 ## MVP Components
 
 ### 1. Simple Failure Detection Meta-Prompt
-**Location**: `@ai/error-handling/failure-detector.md`
+**Location**: `@meta/validation/validators/project/failure-detector.md`
 
 **Detection Categories**:
 1. **Communication Failures**
@@ -38,7 +38,7 @@ Based on completed research in `research/findings/ai-agent-failure-patterns/`, t
    - Process abandonment
 
 ### 2. Basic Recovery Strategies
-**Location**: `@ai/error-handling/recovery-strategies.md`
+**Location**: `@meta/validation/protocols/recovery-strategies.md`
 
 **Recovery Methods**:
 1. **Simple Retry (3 attempts)**
@@ -57,7 +57,7 @@ Based on completed research in `research/findings/ai-agent-failure-patterns/`, t
    - Use different agent instruction styles
 
 ### 3. Error Logging and Learning
-**Location**: `@ai/error-handling/error-log.yaml`
+**Location**: `@meta/validation/reports/error-log.yaml`
 
 **Simple Error Tracking**:
 ```yaml
@@ -78,13 +78,13 @@ error_log:
 ## Implementation Steps
 
 ### Phase 1: Basic Detection (Week 1)
-1. Create `@ai/error-handling/failure-detector.md` meta-prompt
+1. Create `@meta/validation/validators/project/failure-detector.md` meta-prompt
 2. Test detection with known failure scenarios
 3. Refine failure classification criteria
 4. Document detection workflow
 
 ### Phase 2: Recovery System (Week 2)
-1. Create `@ai/error-handling/recovery-strategies.md`
+1. Create `@meta/validation/protocols/recovery-strategies.md`
 2. Implement simple retry mechanism
 3. Add graceful degradation options
 4. Test end-to-end recovery process

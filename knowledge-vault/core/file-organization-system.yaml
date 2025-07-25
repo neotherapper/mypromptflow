@@ -18,34 +18,34 @@ directory_structure:
     path: "core/"
     description: "System configuration and management files"
     contents:
-      - "file-organization-system.yaml"  # This file
-      - "cross-reference-manager.yaml"
-      - "tag-categorization-engine.yaml"
-      - "relationship-coordinator.yaml"
-      - "validation-engine.yaml"
+      - "file-organization-system.md"  # This file
+      - "cross-reference-manager.md"
+      - "tag-categorization-engine.md"
+      - "relationship-coordinator.md"
+      - "validation-engine.md"
   
   # Database Schema Definitions
   schemas:
     path: "schemas/"
     description: "Database schema definitions and configurations"
     contents:
-      - "knowledge-vault-schema.yaml"    # Central hub database
-      - "training-vault-schema.yaml"     # Learning progression
-      - "business-ideas-schema.yaml"     # Innovation pipeline
-      - "platforms-sites-schema.yaml"    # Resource evaluation
-      - "tools-services-schema.yaml"     # Technology adoption
-      - "notes-ideas-schema.yaml"        # Idea development
-      - "job-sites-schema.yaml"          # Career resources
+      - "knowledge-vault-schema.md"    # Central hub database
+      - "training-vault-schema.md"     # Learning progression
+      - "business-ideas-schema.md"     # Innovation pipeline
+      - "platforms-sites-schema.md"    # Resource evaluation
+      - "tools-services-schema.md"     # Technology adoption
+      - "notes-ideas-schema.md"        # Idea development
+      - "job-sites-schema.md"          # Career resources
   
   # Shared System Resources
   shared:
     path: "shared/"
     description: "Shared vocabularies, workflows, and configurations"
     contents:
-      - "tags-vocabulary.yaml"           # Standardized tagging system
-      - "status-workflows.yaml"          # Workflow rules and transitions
-      - "relationship-definitions.yaml"  # Cross-database relationship specs
-      - "validation-rules.yaml"          # Data integrity validation rules
+      - "tags-vocabulary.md"           # Standardized tagging system
+      - "status-workflows.md"          # Workflow rules and transitions
+      - "relationship-definitions.md"  # Cross-database relationship specs
+      - "validation-rules.md"          # Data integrity validation rules
   
   # Database Instances (File-based storage)
   databases:
@@ -54,7 +54,7 @@ directory_structure:
     structure:
       knowledge_vault:
         path: "knowledge_vault/"
-        schema_reference: "../schemas/knowledge-vault-schema.yaml"
+        schema_reference: "../schemas/knowledge-vault-schema.md"
         contents:
           items: "items/"              # Individual knowledge items
           relations: "relations/"      # Cross-database relationships
@@ -64,7 +64,7 @@ directory_structure:
       
       training_vault:
         path: "training_vault/"
-        schema_reference: "../schemas/training-vault-schema.yaml"
+        schema_reference: "../schemas/training-vault-schema.md"
         contents:
           items: "items/"
           relations: "relations/"
@@ -74,7 +74,7 @@ directory_structure:
       
       business_ideas:
         path: "business_ideas/"
-        schema_reference: "../schemas/business-ideas-schema.yaml"
+        schema_reference: "../schemas/business-ideas-schema.md"
         contents:
           items: "items/"
           relations: "relations/"
@@ -84,7 +84,7 @@ directory_structure:
       
       platforms_sites:
         path: "platforms_sites/"
-        schema_reference: "../schemas/platforms-sites-schema.yaml"
+        schema_reference: "../schemas/platforms-sites-schema.md"
         contents:
           items: "items/"
           relations: "relations/"
@@ -94,7 +94,7 @@ directory_structure:
       
       tools_services:
         path: "tools_services/"
-        schema_reference: "../schemas/tools-services-schema.yaml"
+        schema_reference: "../schemas/tools-services-schema.md"
         contents:
           items: "items/"
           relations: "relations/"
@@ -104,7 +104,7 @@ directory_structure:
       
       notes_ideas:
         path: "notes_ideas/"
-        schema_reference: "../schemas/notes-ideas-schema.yaml"
+        schema_reference: "../schemas/notes-ideas-schema.md"
         contents:
           items: "items/"
           relations: "relations/"
@@ -118,36 +118,36 @@ directory_structure:
     path: "operations/"
     description: "System operations, scripts, and utilities"
     contents:
-      - "backup-restore.yaml"
-      - "sync-operations.yaml"
-      - "maintenance-scripts.yaml"
-      - "import-export.yaml"
+      - "backup-restore.md"
+      - "sync-operations.md"
+      - "maintenance-scripts.md"
+      - "import-export.md"
 
 # File Naming Conventions
 naming_conventions:
   item_files:
-    pattern: "{database}_{item_id}.yaml"
-    example: "knowledge_vault_a1b2c3d4-e5f6-7890-abcd-ef1234567890.yaml"
+    pattern: "{database}_{item_id}.md"
+    example: "knowledge_vault_a1b2c3d4-e5f6-7890-abcd-ef1234567890.md"
     description: "Individual database items with UUID identifiers"
   
   relation_files:
-    pattern: "{source_db}_to_{target_db}_{relation_type}.yaml"
-    example: "knowledge_vault_to_training_vault_related_training.yaml"
+    pattern: "{source_db}_to_{target_db}_{relation_type}.md"
+    example: "knowledge_vault_to_training_vault_related_training.md"
     description: "Cross-database relationship mappings"
   
   index_files:
-    pattern: "{database}_{index_type}_index.yaml"
-    example: "knowledge_vault_tags_priority_index.yaml"
+    pattern: "{database}_{index_type}_index.md"
+    example: "knowledge_vault_tags_priority_index.md"
     description: "Performance indexes for efficient querying"
   
   view_files:
-    pattern: "{database}_{view_name}_view.yaml"
-    example: "knowledge_vault_high_priority_view.yaml"
+    pattern: "{database}_{view_name}_view.md"
+    example: "knowledge_vault_high_priority_view.md"
     description: "Predefined views and filter configurations"
   
   metadata_files:
-    pattern: "{database}_metadata_{timestamp}.yaml"
-    example: "knowledge_vault_metadata_20240721.yaml"
+    pattern: "{database}_metadata_{timestamp}.md"
+    example: "knowledge_vault_metadata_20240721.md"
     description: "Database metadata and usage statistics"
 
 # Cross-Reference Management System
@@ -178,7 +178,7 @@ cross_reference_system:
 
 # Tag-Based Categorization System
 tag_categorization:
-  vocabulary_source: "shared/tags-vocabulary.yaml"
+  vocabulary_source: "shared/tags-vocabulary.md"
   
   tag_assignment:
     automatic_tagging:
@@ -357,7 +357,7 @@ integration:
     enabled: true
     sync_direction: "bidirectional"
     conflict_resolution: "manual_review"
-    mapping_files: "operations/notion-mapping.yaml"
+    mapping_files: "operations/notion-mapping.md"
   
   search_integration:
     full_text_search: true

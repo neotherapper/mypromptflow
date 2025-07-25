@@ -614,7 +614,7 @@ configuration:
     base_path: "knowledge-vault/databases/tools_services/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "tools_services_schema.yaml"
+    schema_path: "tools_services_schema.md"
     
   # Synchronization Settings
   notion_sync:

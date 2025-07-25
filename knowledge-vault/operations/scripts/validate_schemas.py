@@ -8,6 +8,7 @@ Production-ready validation for migration integrity
 import os
 import sys
 import yaml
+import frontmatter
 import json
 import re
 import logging
@@ -68,7 +69,7 @@ class SchemaValidator:
         self._load_validation_rules()
         
     def _load_database_schemas(self):
-        """Load database schemas from YAML files"""
+        """Load database schemas from Markdown files"""
         schema_files = {
             'knowledge_vault': 'knowledge-vault-schema.yaml',
             'tools_services': 'tools-services-schema.yaml',
@@ -383,12 +384,20 @@ class SchemaValidator:
             logger.warning(f"Directory does not exist: {directory_path}")
             return results
         
-        yaml_files = list(directory_path.glob('*.yaml')) + list(directory_path.glob('*.yml'))
+        # Support both YAML and Markdown files with frontmatter
+        data_files = list(directory_path.glob('*.yaml')) + list(directory_path.glob('*.yml')) + list(directory_path.glob('*.md')) + list(directory_path.glob('*.yaml')) + list(directory_path.glob('*.yml')) + list(directory_path.glob('*.md')) + list(directory_path.glob('*.yaml')) + list(directory_path.glob('*.yml')) + list(directory_path.glob('*.md'))
         
-        for file_path in yaml_files:
+        for file_path in data_files:
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    item_data = yaml.safe_load(f)
+                if file_path.suffix.lower() == '.md':
+                    # Read Markdown file with YAML frontmatter
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        post = frontmatter.load(f)
+                        item_data = post.metadata
+                else:
+                    # Read traditional YAML file
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        item_data = yaml.safe_load(f)
                 
                 if item_data:
                     result = self.validate_item(item_data, database_type, str(file_path))

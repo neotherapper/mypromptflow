@@ -9,6 +9,7 @@ import os
 import sys
 import json
 import yaml
+import frontmatter
 import time
 import logging
 import argparse
@@ -471,7 +472,7 @@ class BatchMigrationOrchestrator:
         """Load YAML configuration file"""
         try:
             with open(path, 'r', encoding='utf-8') as f:
-                return yaml.safe_load(f)
+                return frontmatter.load(f)
         except Exception as e:
             logger.error(f"Error loading {path}: {e}")
             raise
@@ -636,10 +637,10 @@ class BatchMigrationOrchestrator:
                 logger.warning(f"Directory not found: {item_dir}")
                 continue
                 
-            for item_file in item_dir.glob('*.yaml'):
+            for item_file in item_dir.glob('*.md'):
                 try:
                     with open(item_file, 'r', encoding='utf-8') as f:
-                        item_data = yaml.safe_load(f)
+                        item_data = frontmatter.load(f)
                     items.append((item_data, db_type))
                     logger.debug(f"Loaded item: {item_data.get('id', 'unknown')} ({db_type})")
                 except Exception as e:
@@ -883,8 +884,8 @@ def main():
         notion_token=args.notion_token,
         workspace_id=args.workspace_id,
         source_path=Path(args.source_path),
-        transformation_config_path=Path(__file__).parent.parent / 'data-transformations.yaml',
-        property_mappings_path=Path(__file__).parent.parent / 'notion-property-mappings.yaml',
+        transformation_config_path=Path(__file__).parent.parent / 'data-transformations.md',
+        property_mappings_path=Path(__file__).parent.parent / 'notion-property-mappings.md',
         batch_size=args.batch_size,
         dry_run=args.dry_run
     )

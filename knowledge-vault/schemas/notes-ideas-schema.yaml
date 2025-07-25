@@ -482,7 +482,7 @@ configuration:
     base_path: "knowledge-vault/databases/notes_ideas/"
     item_path: "items/"
     relation_path: "relations/"
-    schema_path: "notes_ideas_schema.yaml"
+    schema_path: "notes_ideas_schema.md"
     
   # Synchronization Settings
   notion_sync:
