@@ -141,7 +141,7 @@ detection_layers:
     confidence_boost: 0.1
 ```
 
-**Conditional Agent Spawning Logic:**
+**Role-Aware Agent Spawning Logic:**
 ```yaml
 spawning_conditions:
   claude_commands:
@@ -151,107 +151,183 @@ spawning_conditions:
     instructions: "@meta/validation/validators/ai-instruction/claude-command-evaluator.md"
     parallel_safe: true
     
-  typescript_frontend:
+  react_frontend:
+    file_pattern: "src/**/*.{ts,tsx,js,jsx}"
+    context_check: "React dependencies in package.json"
+    agent_role: "frontend-dev"
+    agent: "react-frontend-validator"
+    context_loading: "REQUEST_CONTEXT(react-frontend-dev)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+    parallel_safe: true
+    depends_on: ["security-validator"]
+    
+  typescript_architecture:
     file_pattern: "src/**/*.{ts,tsx}"
-    context_check: "React/frontend dependencies in package.json"
-    agent: "typescript-frontend-validator"  
-    instructions: "@meta/validation/validators/file-type/typescript-frontend-validator.md"
+    context_check: "TypeScript config and architecture files"
+    agent_role: "architect"
+    agent: "typescript-architect-validator"
+    context_loading: "REQUEST_CONTEXT(typescript-architect)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
     parallel_safe: true
     depends_on: ["security-validator"]
     
-  python_backend:
-    file_pattern: "**/*.py"
-    context_check: "API/backend patterns in imports"
-    agent: "python-backend-validator"
-    instructions: "@meta/validation/validators/file-type/python-backend-validator.md" 
+  performance_assessment:
+    file_pattern: "src/**/*.{ts,tsx,js,jsx}"
+    context_check: "Performance-critical components or large bundles"
+    agent_role: "performance-specialist"
+    agent: "performance-validator"
+    context_loading: "REQUEST_CONTEXT(react-performance, typescript-performance)"
+    knowledge_sources:
+      - "@knowledge-vault/knowledge/technologies/react/react-performance.md"
+      - "@knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"
     parallel_safe: true
-    depends_on: ["security-validator"]
+    depends_on: ["react-frontend-validator"]
     
-  test_files:
+  security_analysis:
+    file_pattern: "**/*.{ts,tsx,js,jsx,py,md,yaml,json}"
+    agent_role: "security-specialist"
+    agent: "security-validator"
+    context_loading: "REQUEST_CONTEXT(testing-security)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/testing/testing-security.md"
+    parallel_safe: true
+    always_required: true
+    
+  test_validation:
     file_pattern: "**/*.{test,spec}.{js,ts,py}"
+    agent_role: "frontend-dev"
     agent: "test-validator"
-    instructions: "@meta/validation/validators/file-type/test-validator.md"
+    context_loading: "REQUEST_CONTEXT(testing-frontend-dev)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/testing/testing-frontend-dev.md"
     parallel_safe: false
-    depends_on: ["typescript-frontend-validator", "python-backend-validator"]
+    depends_on: ["react-frontend-validator", "typescript-architect-validator"]
 ```
 
-**Agent Spawning Decision Tree:**
+**Role-Aware Agent Spawning Decision Tree:**
 1. **Parse PR File List**: Use GitHub API to get complete file change list
 2. **Apply Pattern Recognition**: Use multi-layered detection for file classification
-3. **Determine Dependencies**: Analyze validation dependencies for sequential vs parallel execution
-4. **Spawn Parallel Agents**: Launch independent validations simultaneously for efficiency
-5. **Coordinate Sequential Validations**: Execute dependent validations in proper order
-6. **Aggregate Results**: Combine all validation outputs into comprehensive report
+3. **Determine Agent Roles**: Match file patterns and complexity to specialist roles
+4. **Load Role-Specific Context**: Use REQUEST_CONTEXT() for appropriate knowledge
+5. **Spawn Role-Based Agents**: Launch specialists with full context access
+6. **Coordinate Multi-Role Validation**: Execute role-specific validations with dependencies
+7. **Aggregate Multi-Perspective Results**: Combine architect, frontend-dev, performance, and security insights
 
 ### Self-Updating Agent Instruction System
 
 **Master Instruction Updater Framework:**
 Create `@meta/validation/validators/project/master-instruction-updater.md` with:
 
-**Registry Management:**
+**Role-Aware Registry Management:**
 ```yaml
 agent_instruction_registry:
   claude-command-evaluator:
     path: "@meta/validation/validators/ai-instruction/claude-command-evaluator.md"
     purpose: "Evaluate Claude command files for structure and quality"
-    framework_version: "1.0"
-    last_updated: "2025-07-19"
+    framework_version: "2.0"
+    last_updated: "2025-07-25"
+    effectiveness_score: "95%"
+    
+  react-frontend-validator:
+    path: "@meta/validation/validators/file-type/react-frontend-validator.md"
+    purpose: "React frontend validation with comprehensive implementation knowledge"
+    agent_role: "frontend-dev"
+    context_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+    framework_version: "2.0"
+    last_updated: "2025-07-25"
     effectiveness_score: "pending"
     
-  typescript-frontend-validator:
-    path: "@meta/validation/validators/file-type/typescript-frontend-validator.md" 
-    purpose: "Frontend-specific TypeScript validation"
-    framework_version: "1.0"
-    last_updated: "2025-07-19"
+  typescript-architect-validator:
+    path: "@meta/validation/validators/file-type/typescript-architect-validator.md"
+    purpose: "TypeScript architectural validation with design patterns"
+    agent_role: "architect"
+    context_source: "@knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
+    framework_version: "2.0"
+    last_updated: "2025-07-25"
+    effectiveness_score: "pending"
+    
+  performance-validator:
+    path: "@meta/validation/validators/file-type/performance-validator.md"
+    purpose: "Multi-technology performance validation"
+    agent_role: "performance-specialist"
+    context_sources:
+      - "@knowledge-vault/knowledge/technologies/react/react-performance.md"
+      - "@knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"
+      - "@knowledge-vault/knowledge/technologies/testing/testing-performance.md"
+    framework_version: "2.0"
+    last_updated: "2025-07-25"
+    effectiveness_score: "pending"
+    
+  security-validator:
+    path: "@meta/validation/validators/file-type/security-validator.md"
+    purpose: "Comprehensive security validation with OWASP compliance"
+    agent_role: "security-specialist"
+    context_source: "@knowledge-vault/knowledge/technologies/testing/testing-security.md"
+    framework_version: "2.0"
+    last_updated: "2025-07-25"
     effectiveness_score: "pending"
 ```
 
-**Update Procedures:**
-1. **Research Integration**: Monitor research registry for new relevant findings
-2. **Framework Evolution**: Track AI agent instruction framework improvements
-3. **Performance Assessment**: Regular effectiveness scoring using validated assessment tools
-4. **Instruction Updates**: Apply new research findings to improve agent instructions
-5. **Quality Validation**: Ensure all updates maintain >90% effectiveness scores
+**Role-Aware Update Procedures:**
+1. **Knowledge Vault Integration**: Monitor knowledge vault for technology updates and new role-specific contexts
+2. **Framework Evolution**: Track AI agent instruction framework improvements and role specialization
+3. **Performance Assessment**: Regular effectiveness scoring using validated assessment tools across all roles
+4. **Context Updates**: Apply latest technology knowledge to role-specific contexts without token constraints
+5. **Multi-Role Validation**: Ensure all updates maintain >90% effectiveness across architect, frontend-dev, performance, and security roles
+6. **Agent Self-Discovery Enhancement**: Continuously improve REQUEST_CONTEXT() patterns based on validation outcomes
 
-### Progressive Context Loading Implementation
+### Comprehensive Context Loading (Claude Code Max Integration)
 
-**Context Optimization Strategy** (60-70% Token Reduction):
-Based on validated framework research in `@projects/ai-agent-instruction-design-excellence/`:
+**Revolutionary Enhancement**: This system implements comprehensive context loading that eliminates token constraints and provides unlimited access to role-specific knowledge contexts.
 
-**Base Context Loading (400 lines):**
+**Claude Code Max Context Strategy** (No Token Limits):
+Based on role-aware knowledge management from `@knowledge-vault/knowledge/technologies/`:
+
+**Always-Available Context (Full Access):**
 ```yaml
 base_context:
   - project_purpose: "Core goals and success criteria"
   - validation_framework: "Multi-dimensional validation approach"
   - quality_standards: "Constitutional AI compliance and effectiveness targets"
   - performance_targets: "Sub-5-minute validation with accuracy requirements"
+  - role_aware_knowledge: "Full access to technology-specific contexts"
 ```
 
-**Conditional Context Loading (200-600 lines per agent):**
+**Role-Aware Context Loading (Full Technology Coverage):**
 ```yaml
-conditional_context:
-  typescript_frontend:
-    load_if: "TypeScript files detected"
-    context_files: ["frontend-validation-patterns.md", "react-specific-checks.md"]
-    token_count: 450
+role_aware_contexts:
+  react_validation:
+    agent_role: "frontend-dev"
+    context: "REQUEST_CONTEXT(react-frontend-dev)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+    coverage: "Full React implementation patterns, hooks, performance"
     
-  python_backend:
-    load_if: "Python files detected"  
-    context_files: ["backend-validation-patterns.md", "api-security-checks.md"]
-    token_count: 520
+  typescript_validation:
+    agent_role: "architect" 
+    context: "REQUEST_CONTEXT(typescript-architect)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
+    coverage: "Type system design, architecture patterns, project structure"
     
-  claude_commands:
-    load_if: ".claude/commands/*.md files detected"
-    context_files: ["command-structure-validation.md", "claude-specific-patterns.md"] 
-    token_count: 380
+  security_assessment:
+    agent_role: "security-specialist"
+    context: "REQUEST_CONTEXT(testing-security)"
+    knowledge_source: "@knowledge-vault/knowledge/technologies/testing/testing-security.md"
+    coverage: "OWASP Top 10, vulnerability scanning, security frameworks"
+    
+  performance_analysis:
+    agent_role: "performance-specialist"
+    context: "REQUEST_CONTEXT(react-performance, typescript-performance, testing-performance)"
+    knowledge_sources: 
+      - "@knowledge-vault/knowledge/technologies/react/react-performance.md"
+      - "@knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"
+      - "@knowledge-vault/knowledge/technologies/testing/testing-performance.md"
+    coverage: "Bundle optimization, runtime performance, testing performance"
 ```
 
-**Progressive Loading Implementation:**
-1. **Load Base Context**: Always load core validation framework (400 lines)
-2. **Detect File Types**: Use conditional detection to identify required contexts
-3. **Load Specific Contexts**: Load only relevant validation contexts based on PR files
-4. **Optimize Shared Context**: Use context pools for related validations to avoid duplication
-5. **Monitor Token Usage**: Track and optimize for 60-70% reduction targets
+**Agent Self-Discovery Implementation:**
+1. **Analyze PR Files**: Detect technologies and complexity requirements
+2. **Determine Agent Roles**: Match file patterns to appropriate specialist roles
+3. **Request Relevant Context**: Use REQUEST_CONTEXT() to load role-specific knowledge
+4. **Load Multiple Contexts**: Access comprehensive knowledge without token constraints
+5. **Apply Current Knowledge**: Use latest technology patterns and best practices
 
 ### Quality Validation and Framework Compliance
 
@@ -270,11 +346,14 @@ Based on validated assessment tools in `@meta/validators/` (extracted from frame
 4. **Level 4**: Framework goal achievement (PR validation success criteria)
 5. **Level 5**: Operational resilience (error handling and recovery patterns)
 
-**Quality Monitoring Metrics:**
-- **Agent Effectiveness**: >90% scores using validated framework assessment tools
-- **Validation Accuracy**: >95% accuracy with <10% false positive rates
-- **Performance Optimization**: 60-70% token reduction while maintaining comprehensive coverage
-- **Constitutional Compliance**: 99% compliance across all automated operations
+**Role-Aware Quality Monitoring Metrics:**
+- **Agent Effectiveness**: >90% scores using validated framework assessment tools across all specialist roles
+- **Validation Accuracy**: >95% accuracy with <10% false positive rates for multi-role validation
+- **Context Optimization**: Full knowledge access without token constraints, leveraging comprehensive role-specific contexts
+- **Comprehensive Context Loading**: Unlimited access to role-aware knowledge management with REQUEST_CONTEXT() patterns
+- **Constitutional Compliance**: 99% compliance across all automated operations and role-based validations
+- **Role Coverage**: Comprehensive validation across architect, frontend-dev, performance, and security specialist perspectives
+- **Knowledge Currency**: Real-time access to latest technology patterns and best practices through knowledge vault integration
 
 ### Implementation Workflow for Current Phase
 
