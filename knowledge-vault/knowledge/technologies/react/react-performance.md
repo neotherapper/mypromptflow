@@ -1,9 +1,5 @@
 # React Performance Context - For AI Agent Performance Specialists
 
-## Overview
-
-This context provides performance optimization guidance for AI agents working in performance specialist roles on React applications. Focus on performance analysis, optimization techniques, profiling methods, and performance monitoring patterns.
-
 ## Current React Version Performance Context
 
 **React 19.0.0** (Latest as of 2025-07-25)
@@ -18,7 +14,7 @@ This context provides performance optimization guidance for AI agents working in
 ```typescript
 import { Profiler, ProfilerOnRenderCallback } from 'react';
 
-// Performance measurement wrapper
+// Performance assessment wrapper
 function PerformanceProfiler({ 
   id, 
   children, 
@@ -136,7 +132,7 @@ function useMemoryUsage() {
     jsHeapSizeLimit: number;
   } | null>(null);
   
-  const measureMemory = useCallback(() => {
+  const assessMemory = useCallback(() => {
     if ('memory' in performance) {
       const memory = (performance as any).memory;
       setMemoryInfo({
@@ -148,13 +144,13 @@ function useMemoryUsage() {
   }, []);
   
   useEffect(() => {
-    measureMemory();
-    const interval = setInterval(measureMemory, 5000); // Measure every 5 seconds
+    assessMemory();
+    const interval = setInterval(assessMemory, 5000); // Assess every 5 seconds
     
     return () => clearInterval(interval);
-  }, [measureMemory]);
+  }, [assessMemory]);
   
-  return { memoryInfo, measureMemory };
+  return { memoryInfo, assessMemory };
 }
 
 // Usage example
@@ -267,7 +263,7 @@ function ProductCard({ product }: { product: Product }) {
   );
 }
 
-// Hybrid approach for optimal performance
+// Hybrid approach combining SSR and client-side rendering for sub-100ms initial load
 async function OptimizedProductPage({ productId }: { productId: string }) {
   // Server-side data fetching and processing
   const [product, reviews, relatedProducts] = await Promise.all([
@@ -659,8 +655,8 @@ function VirtualizedList({
 
 ### 1. Real User Monitoring (RUM)
 ```typescript
-// Core Web Vitals measurement
-function measureWebVitals() {
+// Core Web Vitals assessment
+function assessWebVitals() {
   // Largest Contentful Paint
   new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
@@ -761,14 +757,14 @@ const PERFORMANCE_BUDGETS = {
 class PerformanceBudgetMonitor {
   private violations: Array<{ metric: string; value: number; budget: number; timestamp: number }> = [];
   
-  checkBundleSize(bundleName: string, size: number) {
+  assessBundleSize(bundleName: string, size: number) {
     const budget = PERFORMANCE_BUDGETS[`${bundleName.toUpperCase()}_BUNDLE_SIZE`];
     if (budget && size > budget) {
       this.reportViolation('bundle_size', size, budget);
     }
   }
   
-  checkRuntimeMetric(metric: string, value: number) {
+  assessRuntimeMetric(metric: string, value: number) {
     const budget = PERFORMANCE_BUDGETS[metric.toUpperCase()];
     if (budget && value > budget) {
       this.reportViolation(metric, value, budget);
@@ -809,16 +805,16 @@ class PerformanceBudgetMonitor {
 const performanceMonitor = new PerformanceBudgetMonitor();
 
 // Monitor bundle sizes (in build process)
-performanceMonitor.checkBundleSize('main', mainBundleSize);
-performanceMonitor.checkBundleSize('vendor', vendorBundleSize);
+performanceMonitor.assessBundleSize('main', mainBundleSize);
+performanceMonitor.assessBundleSize('vendor', vendorBundleSize);
 
 // Monitor runtime metrics
 window.addEventListener('load', () => {
-  // Measure and check performance metrics
+  // Measure and assess performance metrics
   const navigationTiming = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   
-  performanceMonitor.checkRuntimeMetric('time_to_interactive', navigationTiming.loadEventEnd);
-  performanceMonitor.checkRuntimeMetric('first_contentful_paint', navigationTiming.responseStart);
+  performanceMonitor.assessRuntimeMetric('time_to_interactive', navigationTiming.loadEventEnd);
+  performanceMonitor.assessRuntimeMetric('first_contentful_paint', navigationTiming.responseStart);
 });
 ```
 
@@ -827,7 +823,7 @@ window.addEventListener('load', () => {
 ### 1. Automated Performance Testing
 ```typescript
 // Performance test utilities
-function measureComponentRenderTime(Component: React.ComponentType, props: any) {
+function assessComponentRenderTime(Component: React.ComponentType, props: any) {
   const startTime = performance.now();
   
   const { unmount } = render(<Component {...props} />);
@@ -844,7 +840,7 @@ function simulateHighLoad(Component: React.ComponentType, iterations: number = 1
   const renderTimes: number[] = [];
   
   for (let i = 0; i < iterations; i++) {
-    const renderTime = measureComponentRenderTime(Component, {
+    const renderTime = assessComponentRenderTime(Component, {
       data: generateMockData(1000) // Large dataset
     });
     renderTimes.push(renderTime);
@@ -859,7 +855,7 @@ function simulateHighLoad(Component: React.ComponentType, iterations: number = 1
 }
 
 // Memory leak detection
-function checkForMemoryLeaks(Component: React.ComponentType) {
+function assessMemoryLeaks(Component: React.ComponentType) {
   const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
   // Mount and unmount component multiple times

@@ -50,7 +50,10 @@
 - **Storage**: Cloud-based with optional local caching for performance optimization
 - **Platform**: Cross-platform support (web, desktop, mobile) with real-time synchronization
 
-## Setup & Configuration
+## ⚙️ Setup & Configuration
+
+### Setup Complexity
+**Standard Complexity (3/10)** - Estimated setup time: 15-20 minutes
 
 ### Prerequisites
 1. **Notion Workspace**: Workspace setup with appropriate subscription and admin access
@@ -58,18 +61,133 @@
 3. **Team Structure**: User roles, permissions, and collaboration workflow definition
 4. **Content Strategy**: Page hierarchy, database schemas, and template planning
 
-### Installation Process
+### Installation Methods (Priority Order)
+
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant Notion MCP server deployment with pre-configured environment, eliminating complex setup and dependency management. Perfect for team collaboration and rapid prototyping.
+
 ```bash
-# Install Notion MCP server
-npm install @modelcontextprotocol/notion-server
+# Docker MCP setup for Notion integration
+docker run -d --name notion-mcp \
+  -e NOTION_API_KEY="your_notion_integration_token" \
+  -e NOTION_VERSION="2022-06-28" \
+  -e NOTION_WORKSPACE_ID="your_workspace_id" \
+  -p 3000:3000 \
+  modelcontextprotocol/server-notion
+
+# Test MCP connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+
+# Validate Notion API access
+curl -H "Authorization: Bearer your_notion_integration_token" \
+     -H "Notion-Version: 2022-06-28" \
+     https://api.notion.com/v1/users/me
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full control over configuration and customization options for enterprise workflows.
+
+```bash
+# Install Notion MCP server via npm
+npm install -g @modelcontextprotocol/server-notion
 
 # Configure environment variables
 export NOTION_API_KEY="your_notion_integration_token"
 export NOTION_VERSION="2022-06-28"
 export NOTION_WORKSPACE_ID="your_workspace_id"
 
-# Initialize server
-npx notion-mcp-server --port 3000
+# Initialize server with configuration
+notion-mcp-server --port 3000 --config notion-config.json
+
+# Test connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "notion/list-databases", "id": 1}'
+```
+
+#### Method 3: 🔗 Direct API Integration
+**Business Value**: Direct Notion API integration for custom applications with full control over data flow and enterprise security requirements.
+
+```bash
+# Install Notion SDK for direct integration
+npm install @notionhq/client
+
+# Test direct API access
+curl -H "Authorization: Bearer your_notion_integration_token" \
+     -H "Notion-Version: 2022-06-28" \
+     -H "Content-Type: application/json" \
+     https://api.notion.com/v1/search
+
+# Create MCP configuration for direct API
+cat > notion-direct-config.json << EOF
+{
+  "notion": {
+    "apiKey": "your_notion_integration_token",
+    "version": "2022-06-28",
+    "baseUrl": "https://api.notion.com/v1",
+    "timeout": 30000,
+    "retries": 3
+  }
+}
+EOF
+
+# Initialize custom MCP bridge
+node -e "
+const { Client } = require('@notionhq/client');
+const notion = new Client({ auth: process.env.NOTION_API_KEY });
+console.log('Notion API connection established');
+"
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, workflow automation, or integration requirements.
+
+```bash
+# Clone Notion MCP server source for customization
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/notion
+npm install
+
+# Install additional dependencies for custom features
+npm install notion-to-md @notionhq/client winston rate-limiter
+
+# Create custom enterprise configuration
+cat > enterprise-notion-config.json << EOF
+{
+  "notion": {
+    "apiKey": "your_notion_integration_token",
+    "version": "2022-06-28",
+    "workspaceId": "your_workspace_id",
+    "enterprise": {
+      "sso": true,
+      "auditLogging": true,
+      "dataRetention": "7_years",
+      "encryption": "aes_256",
+      "compliance": ["SOC2", "GDPR", "HIPAA"]
+    },
+    "customFields": {
+      "maritimeInsurance": {
+        "policyFields": ["vessel_type", "coverage_amount", "risk_level"],
+        "claimFields": ["incident_type", "severity", "status"],
+        "auditFields": ["created_by", "modified_by", "approval_chain"]
+      }
+    },
+    "workflows": {
+      "autoApproval": true,
+      "escalationRules": true,
+      "complianceChecks": true
+    }
+  }
+}
+EOF
+
+# Build custom MCP server
+npm run build
+
+# Deploy with enterprise configuration
+node dist/index.js --config enterprise-notion-config.json --port 3000
 ```
 
 ### Configuration Parameters

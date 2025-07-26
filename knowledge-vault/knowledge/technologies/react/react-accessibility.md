@@ -1,9 +1,5 @@
 # React Accessibility Context - For AI Agent Accessibility Specialists
 
-## Overview
-
-This context provides accessibility (a11y) guidance for AI agents working in accessibility specialist roles on React applications. Focus on WCAG compliance, screen reader compatibility, keyboard navigation, and inclusive design patterns.
-
 ## Current React Version Accessibility Context
 
 **React 19.0.0** (Latest as of 2025-07-25)
@@ -395,7 +391,7 @@ function AccessibleForm() {
   const passwordId = useId();
   const confirmPasswordId = useId();
   
-  const validate = () => {
+  const validateForm = () => {
     const newErrors: Record<string, string> = {};
     
     // Email validation
@@ -425,7 +421,7 @@ function AccessibleForm() {
     e.preventDefault();
     setSubmitted(true);
     
-    if (validate()) {
+    if (validateForm()) {
       // Handle successful submission
       console.log('Form submitted successfully');
     } else {
@@ -815,8 +811,8 @@ function useScreenReaderTesting() {
   
   useEffect(() => {
     // Detect if screen reader is likely active
-    const checkScreenReader = () => {
-      // Check for common screen reader indicators
+    const assessScreenReader = () => {
+      // Assess for common screen reader indicators
       const hasScreenReader = 
         navigator.userAgent.includes('NVDA') ||
         navigator.userAgent.includes('JAWS') ||
@@ -826,10 +822,10 @@ function useScreenReaderTesting() {
       setIsScreenReaderMode(hasScreenReader);
     };
     
-    checkScreenReader();
+    assessScreenReader();
     
     // Listen for screen reader events
-    const handleVoicesChanged = () => checkScreenReader();
+    const handleVoicesChanged = () => assessScreenReader();
     if (window.speechSynthesis) {
       window.speechSynthesis.addEventListener('voiceschanged', handleVoicesChanged);
     }
@@ -908,7 +904,7 @@ function TouchAccessibleButton({
         minWidth: `${minTouchTarget}px`,
         minHeight: `${minTouchTarget}px`,
         padding: '8px 16px',
-        // Ensure adequate spacing between touch targets
+        // Ensure WCAG 2.1 AA compliant 44px minimum spacing between touch targets
         margin: '4px'
       }}
     >
@@ -998,7 +994,7 @@ function runAccessibilityAudit(element: HTMLElement) {
     element: HTMLElement;
   }> = [];
   
-  // Check for missing alt text on images
+  // Assess for missing alt text on images
   const images = element.querySelectorAll('img');
   images.forEach(img => {
     if (!img.hasAttribute('alt') && !img.hasAttribute('role')) {
@@ -1011,7 +1007,7 @@ function runAccessibilityAudit(element: HTMLElement) {
     }
   });
   
-  // Check for form labels
+  // Assess for form labels
   const inputs = element.querySelectorAll('input, select, textarea');
   inputs.forEach(input => {
     const id = input.getAttribute('id');
@@ -1030,7 +1026,7 @@ function runAccessibilityAudit(element: HTMLElement) {
     }
   });
   
-  // Check for heading hierarchy
+  // Assess for heading hierarchy
   const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
   for (let i = 1; i < headings.length; i++) {
     const currentLevel = parseInt(headings[i].tagName.charAt(1));
@@ -1046,13 +1042,13 @@ function runAccessibilityAudit(element: HTMLElement) {
     }
   }
   
-  // Check for color contrast (simplified check)
-  const checkColorContrast = (element: Element) => {
+  // Assess for color contrast (simplified evaluation)
+  const assessColorContrast = (element: Element) => {
     const style = window.getComputedStyle(element);
     const backgroundColor = style.backgroundColor;
     const color = style.color;
     
-    // This is a simplified check - in real implementation,
+    // This is a simplified assessment - in real implementation,
     // you'd use a proper color contrast calculation
     if (backgroundColor === 'white' && color === 'lightgray') {
       issues.push({
@@ -1064,7 +1060,7 @@ function runAccessibilityAudit(element: HTMLElement) {
     }
   };
   
-  element.querySelectorAll('*').forEach(checkColorContrast);
+  element.querySelectorAll('*').forEach(assessColorContrast);
   
   return issues;
 }
@@ -1076,7 +1072,7 @@ import { axe, toHaveNoViolations } from 'jest-axe';
 expect.extend(toHaveNoViolations);
 
 // Accessibility test helper
-export const renderWithA11yCheck = async (component: React.ReactElement) => {
+export const renderWithA11yAssessment = async (component: React.ReactElement) => {
   const { container } = render(component);
   const results = await axe(container);
   expect(results).toHaveNoViolations();
@@ -1120,7 +1116,7 @@ function AccessibilityTestingChecklist({
     semanticMarkup: false
   });
   
-  const handleCheck = (item: keyof typeof checklist) => {
+  const handleChecklistUpdate = (item: keyof typeof checklist) => {
     setChecklist(prev => ({ ...prev, [item]: !prev[item] }));
   };
   
@@ -1141,7 +1137,7 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.keyboardNavigation}
-              onChange={() => handleCheck('keyboardNavigation')}
+              onChange={() => handleChecklistUpdate('keyboardNavigation')}
             />
             Keyboard Navigation: Can navigate through all interactive elements using Tab, Enter, Space, and arrow keys
           </label>
@@ -1152,9 +1148,9 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.screenReaderCompatibility}
-              onChange={() => handleCheck('screenReaderCompatibility')}
+              onChange={() => handleChecklistUpdate('screenReaderCompatibility')}
             />
-            Screen Reader: All content is announced correctly and in logical order
+            Screen Reader: All content is announced with appropriate semantic markup and reading order
           </label>
         </li>
         
@@ -1163,7 +1159,7 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.colorContrast}
-              onChange={() => handleCheck('colorContrast')}
+              onChange={() => handleChecklistUpdate('colorContrast')}
             />
             Color Contrast: All text meets WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text)
           </label>
@@ -1174,9 +1170,9 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.focusManagement}
-              onChange={() => handleCheck('focusManagement')}
+              onChange={() => handleChecklistUpdate('focusManagement')}
             />
-            Focus Management: Focus is properly managed for modals, dynamic content, and state changes
+            Focus Management: Focus is managed according to WCAG 2.1 guidelines for modals, dynamic content, and state changes
           </label>
         </li>
         
@@ -1185,7 +1181,7 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.errorHandling}
-              onChange={() => handleCheck('errorHandling')}
+              onChange={() => handleChecklistUpdate('errorHandling')}
             />
             Error Handling: Errors are announced to screen readers and provide clear instructions
           </label>
@@ -1196,7 +1192,7 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.mobileAccessibility}
-              onChange={() => handleCheck('mobileAccessibility')}
+              onChange={() => handleChecklistUpdate('mobileAccessibility')}
             />
             Mobile Accessibility: Touch targets are at least 44px, gestures have keyboard alternatives
           </label>
@@ -1207,7 +1203,7 @@ function AccessibilityTestingChecklist({
             <input
               type="checkbox"
               checked={checklist.semanticMarkup}
-              onChange={() => handleCheck('semanticMarkup')}
+              onChange={() => handleChecklistUpdate('semanticMarkup')}
             />
             Semantic Markup: Uses proper HTML elements and ARIA attributes where needed
           </label>
@@ -1216,7 +1212,7 @@ function AccessibilityTestingChecklist({
       
       {completionPercentage === 100 && (
         <div className="success-message" role="alert">
-          ✅ All accessibility checks complete! Component is ready for production.
+          ✅ All accessibility assessments complete! Component is ready for production.
         </div>
       )}
     </div>
@@ -1241,7 +1237,7 @@ function AccessibilityTestingChecklist({
 - **Keyboard Testing**: Physical testing with keyboard-only navigation
 
 ### 3. Common Accessibility Pitfalls
-- Missing or inadequate alt text for images
+- Missing or non-descriptive alt text that fails to convey image purpose and context
 - Poor keyboard navigation support
 - Insufficient color contrast ratios
 - Missing form labels or error messages

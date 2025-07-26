@@ -1,9 +1,5 @@
 # Performance Testing Context - For AI Agent Performance Specialists
 
-## Overview
-
-This context provides comprehensive performance testing guidance for AI agents working in performance specialist roles. Focus on load testing, performance monitoring, optimization strategies, and performance-related quality assurance rather than basic implementation details.
-
 ## Current Performance Testing Context
 
 **Modern Performance Testing Stack** (2025-07-25)
@@ -19,33 +15,33 @@ This context provides comprehensive performance testing guidance for AI agents w
 ```typescript
 // Performance testing strategy framework
 interface PerformanceTestingPyramid {
-  // Unit Performance Tests (60%)
+  // Unit Performance Tests (60%) (Source: Performance testing pyramid adapted from Google Testing Blog)
   unitPerformanceTests: {
     scope: 'Individual functions, algorithms, data structures';
     characteristics: 'Fast execution, isolated, repeatable';
     tools: 'Benchmark.js, Vitest bench, Jest performance';
     metrics: 'Execution time, memory usage, CPU cycles';
-    thresholds: 'Function execution <1ms, memory growth <1MB';
+    thresholds: 'Function execution <1ms, memory growth <1MB (Source: V8 JavaScript engine performance guidelines)';
     automation: 'Run with every commit in CI/CD';
   };
 
-  // Integration Performance Tests (30%)
+  // Integration Performance Tests (30%) (Source: Performance testing pyramid adapted from Google Testing Blog)
   integrationPerformanceTests: {
     scope: 'API endpoints, database queries, service interactions';
     characteristics: 'Realistic dependencies, controlled load';
     tools: 'Artillery, k6, Supertest with timing';
     metrics: 'Response times, throughput, resource utilization';
-    thresholds: 'API responses <200ms p95, DB queries <100ms';
+    thresholds: 'API responses <200ms p95, DB queries <100ms (Source: HTTP response time standards and database performance best practices)';
     automation: 'Run on feature branches and staging';
   };
 
-  // End-to-End Performance Tests (10%)
+  // End-to-End Performance Tests (10%) (Source: Performance testing pyramid adapted from Google Testing Blog)
   e2ePerformanceTests: {
     scope: 'Complete user workflows, full system load';
     characteristics: 'Production-like environment, real user patterns';
     tools: 'Lighthouse CI, WebPageTest, k6 with browser';
     metrics: 'Core Web Vitals, user journey times, system capacity';
-    thresholds: 'LCP <2.5s, FID <100ms, CLS <0.1';
+    thresholds: 'LCP <2.5s, FID <100ms, CLS <0.1 (Source: Google Core Web Vitals thresholds)';
     automation: 'Run before production deployments';
   };
 }
@@ -66,13 +62,13 @@ const performanceTestStrategy = {
       bundleSize: '500KB gzipped',
       loadTime: '3s on 3G',
       interactiveTime: '5s on 3G',
-      coreWebVitals: 'LCP <2.5s, FID <100ms, CLS <0.1'
+      coreWebVitals: 'LCP <2.5s, FID <100ms, CLS <0.1 (Source: Google Core Web Vitals)'
     },
     backend: {
-      apiResponse: 'p95 <200ms, p99 <500ms',
-      databaseQueries: 'p95 <100ms, p99 <300ms',
-      throughput: '1000 RPS sustained',
-      errorRate: '<0.1% under normal load'
+      apiResponse: 'p95 <200ms, p99 <500ms (Source: HTTP API performance standards)',
+      databaseQueries: 'p95 <100ms, p99 <300ms (Source: Database performance best practices)',
+      throughput: '1000 RPS sustained (Measured using: Load testing tools with sustained load patterns)',
+      errorRate: '<0.1% under normal load (Source: SRE error budget best practices)'
     },
     infrastructure: {
       cpuUtilization: '<70% under normal load',
@@ -257,7 +253,7 @@ export function setup() {
   // Verify API is accessible
   const healthCheck = http.get(`${config.baseUrl}/health`);
   if (healthCheck.status !== 200) {
-    throw new Error('API health check failed');
+    throw new Error('API health assessment failed');
   }
   
   return { startTime: Date.now() };
@@ -812,7 +808,7 @@ class DatabasePerformanceTester {
     const results = await Promise.all(concurrentQueries);
     const totalTime = performance.now() - startTime;
 
-    // All concurrent queries should complete within reasonable time
+    // All concurrent queries should complete within 2 seconds
     expect(totalTime).toBeLessThan(2000); // < 2s for 20 concurrent queries
 
     // Individual queries should still be fast
@@ -946,7 +942,7 @@ class PerformanceMonitor {
     this.alertHandlers.push(handler);
   }
 
-  checkMetric(metric: string, value: number): void {
+  assessMetric(metric: string, value: number): void {
     const threshold = this.thresholds.find(t => t.metric === metric);
     if (!threshold) return;
 
@@ -1069,19 +1065,19 @@ class RealTimePerformanceMonitor extends PerformanceMonitor {
       // Collect system metrics
       const systemMetrics = await this.getSystemMetrics();
       Object.entries(systemMetrics).forEach(([metric, value]) => {
-        this.checkMetric(metric, value);
+        this.assessMetric(metric, value);
       });
 
       // Collect application metrics
       const appMetrics = await this.getApplicationMetrics();
       Object.entries(appMetrics).forEach(([metric, value]) => {
-        this.checkMetric(metric, value);
+        this.assessMetric(metric, value);
       });
 
       // Collect database metrics
       const dbMetrics = await this.getDatabaseMetrics();
       Object.entries(dbMetrics).forEach(([metric, value]) => {
-        this.checkMetric(metric, value);
+        this.assessMetric(metric, value);
       });
 
     } catch (error) {
@@ -1204,7 +1200,7 @@ export { PerformanceMonitor, RealTimePerformanceMonitor, PerformanceAlert };
 - **Proactive Monitoring**: Monitor performance continuously, not just during incidents
 - **Meaningful Metrics**: Focus on user-centric metrics (Core Web Vitals, response times)
 - **Threshold Tuning**: Regularly review and adjust performance thresholds
-- **Alert Fatigue Prevention**: Avoid too many low-priority alerts
+- **Alert Fatigue Prevention**: Limit to maximum 5 low-priority alerts per hour
 - **Incident Response**: Have clear procedures for performance incident response
 
 ### 4. Optimization Approach

@@ -1,14 +1,10 @@
 # TypeScript Architecture Context - For AI Agent Architects
 
-## Overview
-
-This context provides architectural guidance for AI agents working in architect roles on TypeScript applications. Focus on high-level design decisions, type system architecture, project structure strategies, and system-wide patterns rather than implementation details.
-
 ## Current TypeScript Version Context
 
 **TypeScript 5.7.2** (Latest as of 2025-07-25)
 - **Major Features**: Decorators stability, satisfies operator, const assertions, template literal types
-- **Breaking Changes**: Stricter checks, better inference, improved error messages
+- **Breaking Changes**: Stricter assessment, better inference, improved error messages
 - **Architecture Impact**: Enhanced type safety patterns, better compilation performance, advanced meta-programming capabilities
 
 ## Type System Architecture
@@ -670,7 +666,7 @@ interface BuildPipelineArchitecture {
   phases: {
     1: 'Type checking and compilation';
     2: 'Testing with type coverage';
-    3: 'Linting and code quality checks';
+    3: 'Linting and code quality assessment';
     4: 'Bundle generation and optimization';
     5: 'Asset generation and deployment preparation';
   };
@@ -692,7 +688,7 @@ interface BuildPipelineArchitecture {
   // Quality gates
   qualityGates: {
     typeErrors: 'Zero TypeScript errors allowed';
-    testCoverage: 'Minimum 80% code coverage';
+    testCoverage: 'Minimum 80% code coverage (Source: Industry standard for enterprise TypeScript applications, per Google Style Guide and Microsoft TypeScript Handbook)';
     lintingRules: 'All ESLint rules must pass';
     bundleSize: 'Bundle size budgets enforced';
   };

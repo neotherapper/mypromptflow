@@ -1,9 +1,5 @@
 # Testing Security Context - For AI Agent Security Specialists
 
-## Overview
-
-This context provides comprehensive security testing guidance for AI agents working in security specialist roles. Focus on security vulnerability detection, penetration testing automation, secure testing practices, and security-focused quality assurance rather than general testing approaches.
-
 ## Current Security Testing Landscape (2025-07-25)
 
 **Modern Security Testing Stack**
@@ -38,7 +34,7 @@ security_testing_pyramid:
     
   penetration_testing:
     percentage: 10%
-    characteristics: "Manual security validation"
+    characteristics: "Manual security assessment"
     scope: "Complete security assessment"
     execution_time: "Hours to days"
     tools: ["Burp Suite Professional", "Metasploit", "Nmap"]

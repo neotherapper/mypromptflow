@@ -1,9 +1,5 @@
 # React Security Context - For AI Agent Security Specialists
 
-## Overview
-
-This context provides React-specific security guidance for AI agents working in security specialist roles. Focus on React security vulnerabilities, secure coding practices, authentication patterns, and security testing rather than general web security.
-
 ## Current React Security Landscape (2025-07-25)
 
 **React Security Stack**
@@ -189,7 +185,7 @@ react_auth_patterns:
       }
       
   permission_based_rendering:
-    pattern: "Component-level permission checks"
+    pattern: "Component-level permission verification"
     implementation: |
       function usePermission(requiredPermission) {
         const { user } = useAuth();
@@ -372,7 +368,7 @@ security_integration_testing:
 - **Input Validation**: Always validate and sanitize user inputs at component boundaries
 - **XSS Prevention**: Use React's built-in XSS protection; avoid dangerouslySetInnerHTML without sanitization
 - **Authentication State**: Implement proper loading states and error handling for auth flows
-- **Permission Checks**: Perform authorization checks at both route and component levels
+- **Permission Verification**: Perform authorization verification at both route and component levels
 - **Sensitive Data**: Never store sensitive data in component state or localStorage
 - **HTTPS Enforcement**: Ensure all authentication and sensitive operations use HTTPS
 
@@ -388,7 +384,7 @@ security_integration_testing:
 ### 3. Deployment Security
 
 - **Build Security**: Secure CI/CD pipelines and build environments
-- **Asset Security**: Implement proper CSP headers and resource integrity checks
+- **Asset Security**: Implement proper CSP headers and resource integrity verification
 - **Environment Variables**: Secure handling of environment variables and secrets
 - **Error Handling**: Prevent information disclosure through error messages
 - **Monitoring**: Implement security monitoring and incident response

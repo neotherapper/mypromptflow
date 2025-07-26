@@ -112,6 +112,169 @@ MySQL MCP Server delivers the world's most popular open-source relational databa
 
 ---
 
+## ⚙️ Setup & Configuration
+
+### Setup Complexity
+**Moderate Complexity (4/10)** - Estimated setup time: 15-30 minutes
+
+### Installation Methods (Priority Order)
+
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant MySQL deployment with pre-configured MCP server, eliminating complex database installation and configuration. Perfect for development and testing environments.
+
+```bash
+# Docker MCP setup with MySQL database
+docker run -d --name mysql-mcp \
+  -e MYSQL_ROOT_PASSWORD="secure_root_password" \
+  -e MYSQL_DATABASE="maritime_insurance" \
+  -e MYSQL_USER="app_user" \
+  -e MYSQL_PASSWORD="secure_password" \
+  -p 3306:3306 \
+  -p 3004:3004 \
+  mysql:8.0 \
+  --character-set-server=utf8mb4 \
+  --collation-server=utf8mb4_unicode_ci
+
+# Run MCP server for MySQL
+docker run -d --name mysql-mcp-server \
+  --link mysql-mcp:mysql \
+  -e MYSQL_HOST="mysql" \
+  -e MYSQL_PORT="3306" \
+  -e MYSQL_DATABASE="maritime_insurance" \
+  -e MYSQL_USER="app_user" \
+  -e MYSQL_PASSWORD="secure_password" \
+  -p 3004:3004 \
+  modelcontextprotocol/server-mysql
+
+# Test MCP connection
+curl -X POST http://localhost:3004/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+
+# Test database connection
+docker exec mysql-mcp mysql -u app_user -psecure_password -e "SELECT version();"
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full MySQL features and enterprise-grade performance optimization capabilities.
+
+```bash
+# Install MySQL MCP server via npm
+npm install -g @modelcontextprotocol/server-mysql
+
+# Install MySQL Server (Ubuntu/Debian)
+sudo apt update
+sudo apt install mysql-server mysql-client
+
+# Secure MySQL installation
+sudo mysql_secure_installation
+
+# Configure environment variables
+export MYSQL_HOST="localhost"
+export MYSQL_PORT="3306"
+export MYSQL_DATABASE="maritime_insurance" 
+export MYSQL_USER="app_user"
+export MYSQL_PASSWORD="secure_password"
+
+# Create database and user
+sudo mysql -u root -p << EOF
+CREATE DATABASE maritime_insurance CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'app_user'@'localhost' IDENTIFIED BY 'secure_password';
+GRANT ALL PRIVILEGES ON maritime_insurance.* TO 'app_user'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+
+# Test connection and start MCP server
+mysql -u app_user -psecure_password -e "SELECT version();"
+mysql-mcp-server --port 3004
+```
+
+#### Method 3: 🔗 Direct API/SDK Integration
+**Business Value**: Direct MySQL integration for custom applications with full control over database configuration and optimization.
+
+```bash
+# Install MySQL client tools
+sudo apt-get install mysql-client
+
+# Alternative: Install via official MySQL repository
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+sudo apt update
+sudo apt install mysql-server
+
+# Configure connection string
+export DATABASE_URL="mysql://app_user:secure_password@localhost:3306/maritime_insurance"
+
+# Test direct connection
+mysql -h localhost -P 3306 -u app_user -psecure_password maritime_insurance -e "SHOW TABLES;"
+
+# Create MCP configuration
+cat > mysql-mcp-config.json << EOF
+{
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "maritime_insurance",
+    "user": "app_user",
+    "password": "secure_password",
+    "charset": "utf8mb4",
+    "timezone": "UTC"
+  }
+}
+EOF
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, clustering, or performance requirements.
+
+```bash
+# Download and compile MySQL from source (advanced users)
+wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.35.tar.gz
+tar -xzf mysql-8.0.35.tar.gz
+cd mysql-8.0.35
+
+# Install build dependencies
+sudo apt-get install cmake make gcc g++ bison libssl-dev libncurses5-dev
+
+# Configure build with custom options
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+        -DMYSQL_DATADIR=/usr/local/mysql/data \
+        -DWITH_SSL=system \
+        -DWITH_ZLIB=system \
+        -DDEFAULT_CHARSET=utf8mb4 \
+        -DDEFAULT_COLLATION=utf8mb4_unicode_ci \
+        -DENABLED_LOCAL_INFILE=1
+
+# Build and install (takes 1-2 hours)
+make -j$(nproc)
+sudo make install
+
+# Initialize database
+sudo /usr/local/mysql/bin/mysqld --initialize --user=mysql
+
+# Configure custom MCP server
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/mysql
+npm install
+npm run build
+
+# Custom configuration for enterprise requirements
+cat > custom-mysql-mcp.conf << EOF
+[mysql]
+host = localhost
+port = 3306
+database = maritime_insurance
+user = app_user
+password = secure_password
+pool_size = 100
+timeout = 30000
+ssl_mode = REQUIRED
+charset = utf8mb4
+EOF
+```
+
+---
+
 ## Implementation Readiness Assessment
 
 ### Setup Requirements

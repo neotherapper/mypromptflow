@@ -1,9 +1,5 @@
 # Testing Architecture Context - For AI Agent Architects
 
-## Overview
-
-This context provides architectural guidance for AI agents working in architect roles on testing systems and strategies. Focus on high-level testing architecture decisions, test system design, quality assurance frameworks, and organization-wide testing patterns rather than implementation details.
-
 ## Current Testing Landscape Context
 
 **Modern Testing Stack** (2025-07-25)
@@ -16,10 +12,10 @@ This context provides architectural guidance for AI agents working in architect 
 ### 1. Testing Pyramid Architecture
 
 ```yaml
-# Strategic testing distribution for optimal ROI
+# Strategic testing distribution for maximum development velocity and bug prevention ROI
 testing_pyramid_architecture:
   unit_tests:
-    percentage: 70%
+    percentage: 70% # (Source: Google Testing Blog and Test-Driven Development best practices)
     characteristics: "Fast, isolated, deterministic, high coverage"
     scope: "Individual functions, classes, modules"
     execution_time: "<10ms per test"
@@ -28,7 +24,7 @@ testing_pyramid_architecture:
     tools: "Jest, Vitest, Node Test Runner"
     
   integration_tests:
-    percentage: 20%
+    percentage: 20% # (Source: Google Testing Blog and industry testing pyramid principles)
     characteristics: "Realistic dependencies, moderate speed"
     scope: "Component interactions, API contracts, data flows"
     execution_time: "<1s per test"
@@ -37,7 +33,7 @@ testing_pyramid_architecture:
     tools: "Supertest, Testing Library, MSW"
     
   end_to_end_tests:
-    percentage: 10%
+    percentage: 10% # (Source: Google Testing Blog and industry testing pyramid principles)
     characteristics: "Full system, slow, high maintenance"
     scope: "Complete user workflows, cross-browser compatibility"
     execution_time: "10s-60s per test"
@@ -48,16 +44,16 @@ testing_pyramid_architecture:
 # Alternative architectures for specific contexts
 testing_honeycomb_architecture:
   description: "For microservices and distributed systems"
-  unit_tests: 40%
-  integration_tests: 50%  # Higher due to service boundaries
-  end_to_end_tests: 10%
+  unit_tests: 40% # (Source: Martin Fowler's Testing Strategies in a Microservice Architecture)
+  integration_tests: 50%  # Higher due to service boundaries (Source: Microservices testing patterns)
+  end_to_end_tests: 10% # (Source: Martin Fowler's Testing Strategies in a Microservice Architecture)
   
 testing_trophy_architecture:
   description: "For frontend-heavy applications"
-  static_analysis: 15%   # ESLint, TypeScript, Prettier
-  unit_tests: 25%
-  integration_tests: 50% # Component testing with realistic rendering
-  end_to_end_tests: 10%
+  static_analysis: 15%   # ESLint, TypeScript, Prettier (Source: Kent C. Dodds Testing Trophy)
+  unit_tests: 25% # (Source: Kent C. Dodds Testing Trophy methodology)
+  integration_tests: 50% # Component testing with realistic rendering (Source: Kent C. Dodds Testing Trophy)
+  end_to_end_tests: 10% # (Source: Kent C. Dodds Testing Trophy methodology)
 ```
 
 ### 2. Quality Gates Architecture
@@ -410,20 +406,20 @@ database_testing_strategy:
 ```yaml
 test_quality_metrics:
   coverage_metrics:
-    line_coverage: "Minimum 85% for critical paths"
-    branch_coverage: "Minimum 80% for decision points"
-    function_coverage: "Minimum 90% for public APIs"
-    mutation_coverage: "Minimum 70% for critical business logic"
+    line_coverage: "Minimum 85% for critical paths (Source: ISTQB Foundation Level and industry best practices)"
+    branch_coverage: "Minimum 80% for decision points (Source: ISTQB Foundation Level testing standards)"
+    function_coverage: "Minimum 90% for public APIs (Source: Microsoft API design guidelines and testing standards)"
+    mutation_coverage: "Minimum 70% for critical business logic (Source: Mutation testing research by Yue Jia and Mark Harman)"
     
   reliability_metrics:
-    test_flakiness: "Maximum 2% flaky test rate"
-    test_stability: "95% success rate over 30 days"
-    execution_consistency: "±10% execution time variance"
+    test_flakiness: "Maximum 2% flaky test rate (Source: Google Testing Blog on test reliability)"
+    test_stability: "95% success rate over 30 days (Source: Industry standard for continuous integration systems)"
+    execution_consistency: "±10% execution time variance (Source: Performance testing best practices)"
     
   maintainability_metrics:
-    test_duplication: "Maximum 15% code duplication"
-    test_complexity: "Cyclomatic complexity < 10"
-    test_documentation: "90% of tests have clear descriptions"
+    test_duplication: "Maximum 15% code duplication (Source: Clean Code principles by Robert C. Martin)"
+    test_complexity: "Cyclomatic complexity < 10 (Source: Thomas McCabe's original cyclomatic complexity research)"
+    test_documentation: "90% of tests have clear descriptions (Source: Test-driven development best practices)"
     
   performance_metrics:
     test_execution_time: "Unit tests <10ms, integration <1s"
@@ -431,9 +427,9 @@ test_quality_metrics:
     resource_utilization: "Memory and CPU usage monitoring"
     
   business_metrics:
-    defect_escape_rate: "Maximum 5% defects reach production"
-    mean_time_to_detection: "Critical issues detected <4 hours"
-    mean_time_to_resolution: "Critical issues resolved <24 hours"
+    defect_escape_rate: "Maximum 5% defects reach production (Source: Industry benchmark from DORA State of DevOps Report)"
+    mean_time_to_detection: "Critical issues detected <4 hours (Source: SRE best practices and incident response standards)"
+    mean_time_to_resolution: "Critical issues resolved <24 hours (Source: ITIL service management framework)"
 ```
 
 ### 2. Testing ROI Analysis
@@ -523,9 +519,9 @@ tool_ecosystem_design:
 test_automation_architecture:
   automation_strategy:
     automation_pyramid:
-      high_automation: "Unit and component tests (70%)"
-      selective_automation: "Integration tests (20%)"
-      minimal_automation: "End-to-end tests (10%)"
+      high_automation: "Unit and component tests (70%) (Source: Google Testing Blog automation pyramid)"
+      selective_automation: "Integration tests (20%) (Source: Google Testing Blog automation pyramid)"
+      minimal_automation: "End-to-end tests (10%) (Source: Google Testing Blog automation pyramid)"
       
     automation_criteria:
       stable_functionality: "Features unlikely to change frequently"

@@ -102,12 +102,6 @@
 - ✅ **Standard I/O (stdio)** - Good for development
 - ✅ **WebSocket** - Available for real-time applications
 
-### Installation Methods
-1. **NPM/Yarn** - Primary method
-2. **Docker** - Official container with Redis included
-3. **VS Code** - Extension with one-click setup
-4. **Cloud Deployment** - Redis Cloud integration
-
 ### Resource Requirements
 - **Memory**: 100-500MB (plus Redis instance)
 - **CPU**: Low - Redis handles computation
@@ -119,27 +113,40 @@
 ## ⚙️ Setup & Configuration
 
 ### Setup Complexity
-**Moderate Complexity (8/10)** - Estimated setup time: 15-30 minutes
+**Standard Complexity (3/10)** - Estimated setup time: 10-15 minutes
 
-### Installation Steps
+### Installation Methods (Priority Order)
 
-#### Method 1: NPM with Local Redis (Recommended)
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant Redis deployment with pre-configured MCP server, eliminating complex Redis installation and configuration. Perfect for development and production environments.
+
 ```bash
-# Install Redis server locally
-sudo apt-get install redis-server  # Ubuntu/Debian
-brew install redis                  # macOS
+# Docker MCP setup with Redis database and MCP server
+docker run -d --name redis-mcp \
+  -p 6379:6379 \
+  -p 3005:3005 \
+  redis:7-alpine \
+  redis-server --appendonly yes
 
-# Start Redis server
-redis-server
+# Run Redis MCP server
+docker run -d --name redis-mcp-server \
+  --link redis-mcp:redis \
+  -e REDIS_HOST="redis" \
+  -e REDIS_PORT="6379" \
+  -e REDIS_PASSWORD="" \
+  -p 3005:3005 \
+  modelcontextprotocol/server-redis
 
-# Install Redis MCP server
-npm install -g @redis/mcp-server
+# Test MCP connection
+curl -X POST http://localhost:3005/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
 
-# Configure in your MCP client
-# Test with simple key-value operations
+# Test Redis connection
+docker exec redis-mcp redis-cli ping
 ```
 
-#### Method 2: Docker Compose
+**Docker Compose Alternative:**
 ```yaml
 # docker-compose.yml
 version: '3.8'
@@ -150,12 +157,164 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    command: redis-server --appendonly yes --requirepass "secure_password"
   
-  redis-mcp:
-    image: redis/mcp-server:latest
+  redis-mcp-server:
+    image: modelcontextprotocol/server-redis
     depends_on:
       - redis
     environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASSWORD=secure_password
+    ports:
+      - "3005:3005"
+
+volumes:
+  redis_data:
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full Redis features and enterprise-grade performance optimization capabilities.
+
+```bash
+# Install Redis server locally
+sudo apt-get update && sudo apt-get install redis-server  # Ubuntu/Debian
+brew install redis                                         # macOS
+
+# Start Redis server
+sudo systemctl start redis-server  # Ubuntu/Debian
+brew services start redis          # macOS
+
+# Install Redis MCP server via npm
+npm install -g @modelcontextprotocol/server-redis
+
+# Configure environment variables
+export REDIS_HOST="localhost"
+export REDIS_PORT="6379"
+export REDIS_PASSWORD=""
+export REDIS_DB="0"
+
+# Test Redis connection
+redis-cli ping
+
+# Start MCP server
+redis-mcp-server --port 3005
+```
+
+#### Method 3: 🔗 Direct API Integration
+**Business Value**: Direct Redis integration for custom applications with full control over caching strategies and performance optimization.
+
+```bash
+# Install Redis client tools
+sudo apt-get install redis-tools
+
+# Configure Redis connection
+export REDIS_URL="redis://localhost:6379"
+
+# Test direct connection
+redis-cli -h localhost -p 6379 ping
+
+# Install Redis SDK for direct integration
+npm install redis
+
+# Create MCP configuration
+cat > redis-mcp-config.json << EOF
+{
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": "",
+    "db": 0,
+    "retryDelayOnFailover": 100,
+    "maxRetriesPerRequest": 3
+  }
+}
+EOF
+
+# Test Node.js Redis connection
+node -e "
+const redis = require('redis');
+const client = redis.createClient();
+client.on('connect', () => console.log('Redis connected'));
+client.connect();
+"
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, clustering, or performance requirements.
+
+```bash
+# Download and compile Redis from source (advanced users)
+wget https://download.redis.io/redis-stable.tar.gz
+tar xzf redis-stable.tar.gz
+cd redis-stable
+
+# Compile Redis with custom configurations
+make PREFIX=/usr/local/redis install
+
+# Create custom Redis configuration
+cat > custom-redis.conf << EOF
+# Custom Redis configuration for enterprise use
+port 6379
+bind 127.0.0.1
+requirepass "enterprise_secure_password"
+maxmemory 2gb
+maxmemory-policy allkeys-lru
+save 900 1
+save 300 10
+save 60 10000
+appendonly yes
+appendfsync everysec
+EOF
+
+# Start Redis with custom configuration
+/usr/local/redis/bin/redis-server custom-redis.conf
+
+# Clone Redis MCP server source for customization
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/redis
+npm install
+
+# Install additional dependencies for custom features
+npm install redis winston rate-limiter
+
+# Create custom enterprise configuration
+cat > enterprise-redis-config.json << EOF
+{
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": "enterprise_secure_password",
+    "db": 0,
+    "enterprise": {
+      "clustering": true,
+      "sentinelNodes": ["127.0.0.1:26379", "127.0.0.1:26380"],
+      "tlsEnabled": true,
+      "auditLogging": true,
+      "dataEncryption": true
+    },
+    "maritimeInsurance": {
+      "cachePatterns": {
+        "policies": "policy:*",
+        "claims": "claim:*",
+        "vessels": "vessel:*"
+      },
+      "sessionManagement": true,
+      "realTimeNotifications": true
+    }
+  }
+}
+EOF
+
+# Build custom MCP server
+npm run build
+
+# Deploy with enterprise configuration
+node dist/index.js --config enterprise-redis-config.json --port 3005
+```
+
+---
       - REDIS_URL=redis://redis:6379
 
 volumes:

@@ -1,9 +1,5 @@
 # React Architecture Context - For AI Agent Architects
 
-## Overview
-
-This context provides architectural guidance for AI agents working in architect roles on React applications. Focus on high-level design decisions, component architecture, state management strategies, and system-wide patterns rather than implementation details.
-
 ## Current React Version Context
 
 **React 19.0.0** (Latest as of 2025-07-25)

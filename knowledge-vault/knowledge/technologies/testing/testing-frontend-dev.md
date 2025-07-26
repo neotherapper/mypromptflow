@@ -1,9 +1,5 @@
 # Frontend Testing Context - For AI Agent Frontend Developers
 
-## Overview
-
-This context provides practical testing guidance for AI agents working in frontend developer roles. Focus on component testing, user interaction testing, UI/UX validation, and browser-specific testing patterns rather than high-level architecture decisions.
-
 ## Current Frontend Testing Context
 
 **Modern Frontend Testing Stack** (2025-07-25)
@@ -80,7 +76,7 @@ describe('Button Component', () => {
     expect(button).toHaveClass('bg-blue-600', 'text-white');
   });
 
-  it('handles different sizes correctly', () => {
+  it('handles different sizes according to design specifications', () => {
     const { rerender } = render(<Button variant="primary" size="sm">Small</Button>);
     expect(screen.getByRole('button')).toHaveClass('px-3', 'py-1', 'text-sm');
 
@@ -111,7 +107,7 @@ describe('Button Component', () => {
     expect(handleClick).not.toHaveBeenCalled();
   });
 
-  it('shows loading state correctly', () => {
+  it('shows loading state with appropriate visual indicators', () => {
     render(<Button variant="primary" loading>Loading</Button>);
     
     const button = screen.getByRole('button', { name: /loading/i });
@@ -302,7 +298,7 @@ describe('ContactForm', () => {
     mockOnSubmit.mockClear();
   });
 
-  it('renders all form fields correctly', () => {
+  it('renders all form fields with proper labels and validation', () => {
     render(<ContactForm onSubmit={mockOnSubmit} />);
     
     expect(screen.getByLabelText(/name/i)).toBeInTheDocument();
@@ -1241,7 +1237,7 @@ describe('Card Visual Tests', () => {
     )
   };
 
-  it('renders default variant correctly', () => {
+  it('renders default variant with expected styles', () => {
     const { container } = render(<Card {...defaultProps} />);
     
     // Visual snapshot test
@@ -1253,21 +1249,21 @@ describe('Card Visual Tests', () => {
     expect(screen.getByText(/sample card description/i)).toBeInTheDocument();
   });
 
-  it('renders highlighted variant correctly', () => {
+  it('renders highlighted variant with blue background', () => {
     const { container } = render(<Card {...defaultProps} variant="highlighted" />);
     
     expect(container.firstChild).toMatchSnapshot('card-highlighted');
     expect(screen.getByRole('article')).toHaveClass('bg-blue-50', 'border-blue-200');
   });
 
-  it('renders muted variant correctly', () => {
+  it('renders muted variant with reduced opacity', () => {
     const { container } = render(<Card {...defaultProps} variant="muted" />);
     
     expect(container.firstChild).toMatchSnapshot('card-muted');
     expect(screen.getByRole('article')).toHaveClass('bg-gray-50', 'border-gray-300');
   });
 
-  it('renders with image correctly', () => {
+  it('renders with image using proper aspect ratio', () => {
     const { container } = render(
       <Card {...defaultProps} imageUrl="https://example.com/image.jpg" />
     );
@@ -1390,7 +1386,7 @@ describe('Card Accessibility Tests', () => {
   });
 
   it('should have proper color contrast', async () => {
-    // This would typically be tested with specialized tools
+    // This would be tested with tools like axe-core or Lighthouse accessibility audits
     // For demonstration, we'll check that proper CSS classes are applied
     render(<Card {...defaultProps} variant="highlighted" />);
     
@@ -1419,7 +1415,7 @@ describe('Card Accessibility Tests', () => {
     expect(article).toContainElement(heading);
     expect(article).toContainElement(description);
     
-    // Tags should be properly grouped
+    // Tags should be grouped within the same container element
     const tags = screen.getAllByText(/accessibility|wcag|testing/i);
     expect(tags).toHaveLength(3);
   });
@@ -1429,7 +1425,7 @@ describe('Card Accessibility Tests', () => {
 describe('Card Performance Tests', () => {
   const generateLargeProps = (count: number) => ({
     title: `Card with ${count} tags`,
-    description: 'Performance test card with many elements',
+    description: 'Performance test card with 100+ elements',
     tags: Array.from({ length: count }, (_, i) => `Tag ${i + 1}`),
     actions: (
       <>
@@ -1440,14 +1436,14 @@ describe('Card Performance Tests', () => {
     )
   });
 
-  it('should render quickly with many elements', () => {
+  it('should render quickly with 100+ elements', () => {
     const startTime = performance.now();
     
     render(<Card {...generateLargeProps(100)} />);
     
     const renderTime = performance.now() - startTime;
     
-    // Should render in less than 100ms even with many elements
+    // Should render in less than 100ms even with 100+ elements
     expect(renderTime).toBeLessThan(100);
     
     // Verify all elements are rendered
@@ -1455,7 +1451,7 @@ describe('Card Performance Tests', () => {
     expect(screen.getAllByText(/Action \d+/)).toHaveLength(10);
   });
 
-  it('should handle re-renders efficiently', () => {
+  it('should handle re-renders within 50ms', () => {
     const { rerender } = render(<Card {...generateLargeProps(50)} />);
     
     const startTime = performance.now();

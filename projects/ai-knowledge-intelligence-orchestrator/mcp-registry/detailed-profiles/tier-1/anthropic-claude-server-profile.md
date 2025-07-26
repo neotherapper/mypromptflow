@@ -50,7 +50,10 @@
 - **Memory Management**: Efficient conversation context management for extended interactions
 - **Error Handling**: Robust retry logic and graceful degradation for service reliability
 
-## Setup & Configuration
+## ⚙️ Setup & Configuration
+
+### Setup Complexity
+**Low Complexity (2/10)** - Estimated setup time: 10-15 minutes
 
 ### Prerequisites
 1. **Anthropic Account**: API access with appropriate usage tier and billing configuration
@@ -58,18 +61,156 @@
 3. **Usage Planning**: Request estimation and cost modeling for conversation workloads
 4. **Context Strategy**: Conversation management and memory optimization planning
 
-### Installation Process
+### Installation Methods (Priority Order)
+
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant Claude AI deployment with pre-configured environment, eliminating complex setup and dependency management. Perfect for enterprise AI applications and rapid prototyping.
+
 ```bash
-# Install Anthropic Claude MCP server
-npm install @modelcontextprotocol/anthropic-claude-server
+# Docker MCP setup for Anthropic Claude
+docker run -d --name claude-mcp \
+  -e ANTHROPIC_API_KEY="sk-ant-api03-your-api-key-here" \
+  -e ANTHROPIC_MODEL="claude-3-5-sonnet-20241022" \
+  -e ANTHROPIC_MAX_TOKENS="4096" \
+  -e ANTHROPIC_TEMPERATURE="0.7" \
+  -p 3000:3000 \
+  modelcontextprotocol/server-anthropic-claude
+
+# Test MCP connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+
+# Test Claude API access
+curl -X POST https://api.anthropic.com/v1/messages \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: sk-ant-api03-your-api-key-here" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{"model": "claude-3-5-sonnet-20241022", "max_tokens": 100, "messages": [{"role": "user", "content": "Hello Claude!"}]}'
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full control over configuration and enterprise integration capabilities.
+
+```bash
+# Install Anthropic Claude MCP server via npm
+npm install -g @modelcontextprotocol/server-anthropic-claude
 
 # Configure environment variables
 export ANTHROPIC_API_KEY="sk-ant-api03-your-api-key-here"
 export ANTHROPIC_MODEL="claude-3-5-sonnet-20241022"
 export ANTHROPIC_MAX_TOKENS="4096"
+export ANTHROPIC_TEMPERATURE="0.7"
 
-# Initialize server
-npx claude-mcp-server --port 3000
+# Initialize server with configuration
+claude-mcp-server --port 3000 --config claude-config.json
+
+# Test connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "claude/chat", "params": {"message": "Hello Claude!"}, "id": 1}'
+```
+
+#### Method 3: 🔗 Direct API Integration
+**Business Value**: Direct Anthropic API integration for custom applications with full control over conversation flow and enterprise security requirements.
+
+```bash
+# Install Anthropic SDK for direct integration
+npm install @anthropic-ai/sdk
+
+# Test direct API access
+curl -X POST https://api.anthropic.com/v1/messages \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: sk-ant-api03-your-api-key-here" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{
+    "model": "claude-3-5-sonnet-20241022",
+    "max_tokens": 1000,
+    "messages": [{"role": "user", "content": "Test connection"}]
+  }'
+
+# Create MCP configuration for direct API
+cat > claude-direct-config.json << EOF
+{
+  "anthropic": {
+    "apiKey": "sk-ant-api03-your-api-key-here",
+    "baseUrl": "https://api.anthropic.com/v1",
+    "defaultModel": "claude-3-5-sonnet-20241022",
+    "timeout": 120000,
+    "retries": 3
+  }
+}
+EOF
+
+# Initialize custom MCP bridge
+node -e "
+const Anthropic = require('@anthropic-ai/sdk');
+const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+console.log('Anthropic Claude API connection established');
+"
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, compliance, or workflow automation requirements.
+
+```bash
+# Clone Anthropic MCP server source for customization
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/anthropic-claude
+npm install
+
+# Install additional dependencies for custom features
+npm install @anthropic-ai/sdk winston rate-limiter express helmet
+
+# Create custom enterprise configuration
+cat > enterprise-claude-config.json << EOF
+{
+  "anthropic": {
+    "apiKey": "sk-ant-api03-your-api-key-here",
+    "models": {
+      "claude_3_5_sonnet": {
+        "model": "claude-3-5-sonnet-20241022",
+        "maxTokens": 8192,
+        "temperature": 0.7,
+        "contextWindow": 200000
+      },
+      "claude_3_haiku": {
+        "model": "claude-3-haiku-20240307",
+        "maxTokens": 4096,
+        "temperature": 0.3,
+        "contextWindow": 200000
+      }
+    },
+    "enterprise": {
+      "auditLogging": true,
+      "dataRetention": "7_years",
+      "encryption": "aes_256",
+      "compliance": ["SOC2", "GDPR", "HIPAA"],
+      "accessControl": "rbac",
+      "contentFiltering": true
+    },
+    "maritimeInsurance": {
+      "specializedPrompts": {
+        "policyAnalysis": "maritime_policy_template",
+        "claimProcessing": "maritime_claim_template",
+        "riskAssessment": "maritime_risk_template"
+      },
+      "customTools": ["vessel_lookup", "weather_integration", "regulatory_check"],
+      "workflows": {
+        "claimAutomation": true,
+        "complianceValidation": true,
+        "documentGeneration": true
+      }
+    }
+  }
+}
+EOF
+
+# Build custom MCP server with enterprise features
+npm run build
+
+# Deploy with enterprise configuration and monitoring
+node dist/index.js --config enterprise-claude-config.json --port 3000 --enable-monitoring
 ```
 
 ### Configuration Parameters

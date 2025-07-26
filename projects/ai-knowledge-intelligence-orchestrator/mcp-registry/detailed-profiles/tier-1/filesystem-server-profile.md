@@ -113,40 +113,98 @@ interface FileSystemMCPCapabilities {
 - **Code**: All text-based programming languages
 - **Binary**: Executable files, libraries, databases
 
-## Setup & Configuration
+## ⚙️ Setup & Configuration
 
-### Installation Methods
+### Setup Complexity
+**Low Complexity (2/10)** - Estimated setup time: 5-10 minutes
 
-#### Method 1: NPM Package Installation
+### Installation Methods (Priority Order)
+
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant filesystem server deployment with pre-configured security and access controls, eliminating complex file system permission setup and configuration.
+
 ```bash
-# Install Filesystem MCP server globally
-npm install -g @modelcontextprotocol/server-filesystem
+# Docker MCP setup for filesystem server
+docker run -d --name filesystem-mcp \
+  -e FS_ROOT_PATH="/app/data" \
+  -e FS_MAX_FILE_SIZE="100MB" \
+  -e FS_ALLOWED_EXTENSIONS="txt,md,json,csv,xml,pdf" \
+  -e FS_ENABLE_ENCRYPTION="true" \
+  -p 3000:3000 \
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/config:/app/config \
+  --user 1000:1000 \
+  modelcontextprotocol/server-filesystem
 
-# Or install locally in project
-npm install @modelcontextprotocol/server-filesystem
+# Test MCP connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+
+# Test filesystem operations
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "fs/list_directory", "params": {"path": "/app/data"}, "id": 2}'
 ```
 
-#### Method 2: Docker Container Deployment
+**Docker Compose Alternative:**
 ```yaml
 # docker-compose.yml
 version: '3.8'
 services:
   filesystem-mcp:
-    image: mcp/server-filesystem:latest
+    image: modelcontextprotocol/server-filesystem:latest
     environment:
-      - FS_ROOT_PATH=${FS_ROOT_PATH}
-      - FS_MAX_FILE_SIZE=${FS_MAX_FILE_SIZE}
-      - FS_ALLOWED_EXTENSIONS=${FS_ALLOWED_EXTENSIONS}
-      - FS_ENABLE_ENCRYPTION=${FS_ENABLE_ENCRYPTION}
+      - FS_ROOT_PATH=/app/data
+      - FS_MAX_FILE_SIZE=100MB
+      - FS_ALLOWED_EXTENSIONS=txt,md,json,csv,xml,pdf,docx,xlsx
+      - FS_ENABLE_ENCRYPTION=true
+      - FS_ENABLE_AUDIT=true
       - MCP_SERVER_PORT=3000
     ports:
       - "3000:3000"
     volumes:
-      - /host/data:/app/data
-      - /host/config:/app/config
-      - /host/logs:/app/logs
+      - ./data:/app/data
+      - ./config:/app/config
+      - ./logs:/app/logs
     restart: unless-stopped
     user: "1000:1000"  # Non-root user for security
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - DAC_OVERRIDE  # Required for file operations
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full filesystem features and enterprise-grade performance optimization capabilities.
+
+```bash
+# Install Filesystem MCP server via npm
+npm install -g @modelcontextprotocol/server-filesystem
+
+# Configure environment variables
+export FS_ROOT_PATH="/var/lib/filesystem-mcp/data"
+export FS_MAX_FILE_SIZE="100MB"
+export FS_ALLOWED_EXTENSIONS="txt,md,json,csv,xml,pdf,docx,xlsx"
+export FS_ENABLE_ENCRYPTION="true"
+export FS_ENABLE_AUDIT="true"
+
+# Create required directories
+sudo mkdir -p /var/lib/filesystem-mcp/{data,config,logs}
+sudo chown $(whoami):$(whoami) /var/lib/filesystem-mcp/{data,config,logs}
+
+# Start MCP server
+filesystem-mcp-server --port 3000 --config filesystem-config.json
+
+# Test connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "fs/get_info", "params": {"path": "/var/lib/filesystem-mcp/data"}, "id": 1}'
 ```
 
 #### Method 3: Kubernetes Deployment
