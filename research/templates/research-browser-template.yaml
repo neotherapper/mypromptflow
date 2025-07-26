@@ -1,0 +1,197 @@
+# Research Browser Master Template
+# AI INSTRUCTIONS: This template creates the master research-browser.yaml file
+# File location: research/findings/research-browser.yaml (auto-generated)
+# Usage: ai-help.md option [9] dynamically loads and displays this content
+
+research_browser:
+  # Master Registry Information
+  registry_info:
+    version: "1.0.0"
+    last_updated: "YYYY-MM-DD HH:MM:SS"
+    total_research_sessions: 0
+    total_research_topics: 0
+    average_quality_score: 0.0
+    quality_threshold_met: 0      # Count of research with quality ≥95%
+    research_coverage_domains: [] # List of domains covered
+    
+  # Quality Statistics for Executive Dashboard
+  quality_dashboard:
+    excellent_research_count: 0   # Quality ≥95%
+    good_research_count: 0        # Quality 80-94%
+    acceptable_research_count: 0  # Quality 60-79%
+    needs_improvement_count: 0    # Quality <60%
+    recent_research_count: 0      # Last 30 days
+    total_research_hours: 0       # Sum of all research execution time
+  
+  # Research Categories (Auto-generated from summaries)
+  research_categories:
+    
+    ai_machine_learning:
+      category_name: "AI/Machine Learning Research"
+      category_emoji: "🤖"
+      description: "AI validation, agent orchestration, performance measurement, and ML frameworks"
+      research_count: 0
+      average_quality: 0.0
+      recent_activity: "YYYY-MM-DD"
+      
+      research_items: []  # Array of research summaries in this category
+        # Example structure for each item:
+        # - topic_id: "ai-validation-frameworks"
+        #   title: "AI Validation Frameworks and Quality Metrics"
+        #   quality_percentage: 95
+        #   quality_badge: "🟢 High"
+        #   completion_date: "2024-07-05"
+        #   one_line_outcome: "Multi-agent validation systems achieve 99% accuracy"
+        #   primary_application: "AI knowledge base validation systems"
+        #   location: "research/findings/ai-validation-frameworks/"
+    
+    authentication_security:
+      category_name: "Authentication & Security"
+      category_emoji: "🔐"
+      description: "Authentication systems, security frameworks, and compliance analysis"
+      research_count: 0
+      average_quality: 0.0
+      recent_activity: "YYYY-MM-DD"
+      research_items: []
+    
+    infrastructure_development:
+      category_name: "Infrastructure & Development"
+      category_emoji: "🏗️"
+      description: "Database hosting, development environments, CI/CD integration, and deployment strategies"
+      research_count: 0
+      average_quality: 0.0
+      recent_activity: "YYYY-MM-DD"
+      research_items: []
+    
+    enterprise_governance:
+      category_name: "Enterprise & Governance"
+      category_emoji: "🏢"
+      description: "Enterprise frameworks, information governance, quality assessment, and compliance"
+      research_count: 0
+      average_quality: 0.0
+      recent_activity: "YYYY-MM-DD"
+      research_items: []
+    
+    tool_integration:
+      category_name: "Tool Integration & Registry"
+      category_emoji: "🔧"
+      description: "MCP servers, tool discovery, integration patterns, and registry systems"
+      research_count: 0
+      average_quality: 0.0
+      recent_activity: "YYYY-MM-DD"
+      research_items: []
+  
+  # Recent Research Activity (Last 10 completed)
+  recent_research:
+    - topic_id: "example"
+      title: "Example Research Title"
+      completion_date: "YYYY-MM-DD"
+      quality_percentage: 95
+      category: "ai_machine_learning"
+      one_line_outcome: "Key finding summary"
+  
+  # High-Quality Research Spotlight (Quality ≥95%)
+  spotlight_research:
+    - topic_id: "example"
+      title: "Spotlight Research Example"
+      quality_percentage: 96
+      category: "ai_machine_learning" 
+      key_innovation: "Revolutionary finding or methodology"
+      broad_impact: "How this affects multiple domains"
+  
+  # Cross-Reference Network (Research that builds on other research)
+  research_network:
+    highly_connected: []  # Research topics that many others reference
+    foundational: []      # Research that enables many others
+    emerging_clusters: [] # Related research forming new areas
+  
+  # Research Gap Analysis
+  gap_analysis:
+    underexplored_domains: []     # Domains with <3 research sessions
+    emerging_opportunities: []    # Topics mentioned but not researched
+    quality_improvement_needed: [] # Research with quality <80%
+    outdated_research: []         # Research >12 months old needing updates
+  
+  # Similarity Analysis Pre-computed
+  similarity_clusters:
+    # Pre-computed similarity scores for faster lookup during registry analysis
+    # Format: topic_id_1: {topic_id_2: similarity_score, ...}
+    example_topic: {}
+  
+  # Usage Statistics and Trends
+  usage_analytics:
+    most_referenced_research: []   # Research most often built upon
+    trending_domains: []           # Domains with increasing research activity
+    research_velocity: {}          # Research completion rate by time period
+    quality_trends: {}             # Quality score trends over time
+    
+  # AI Agent Instructions for Browser Generation
+  browser_generation_instructions:
+    data_sources:
+      - "research/findings/research-registry.yaml (master registry)"
+      - "research/findings/[topic]/summary.yaml (individual summaries)"
+      - "research/findings/[topic]/.meta/research-execution-log.yaml (quality data)"
+    
+    categorization_logic:
+      ai_keywords: ["ai", "agent", "validation", "orchestration", "performance", "ml", "claude"]
+      auth_keywords: ["auth", "keycloak", "workos", "security", "compliance", "identity"]
+      infrastructure_keywords: ["database", "hosting", "deployment", "ci", "cd", "development"]
+      enterprise_keywords: ["enterprise", "governance", "information", "quality", "assessment"]
+      tools_keywords: ["mcp", "server", "integration", "tool", "registry", "discovery"]
+    
+    quality_badge_logic:
+      excellent: "🟢 High (≥95%)"
+      good: "🟡 Good (80-94%)"
+      acceptable: "🟠 Fair (60-79%)"
+      needs_work: "🔴 Low (<60%)"
+    
+    similarity_calculation:
+      method: "semantic_similarity_on_titles_and_outcomes"
+      threshold_high: 0.80    # ≥80% = high similarity
+      threshold_moderate: 0.40 # 40-79% = moderate similarity
+      threshold_low: 0.39     # ≤39% = low similarity
+    
+    update_frequency: "after_each_research_completion"
+    validation_required: true
+    cross_reference_validation: true
+  
+  # Human Display Templates
+  display_templates:
+    
+    category_header: |
+      **{category_emoji} {category_name}** ({research_count} sessions):
+      {description}
+      Average Quality: {average_quality}% | Recent: {recent_activity}
+    
+    research_item: |
+      - **{title}** ({quality_badge}) - {completion_date}
+        Key Outcome: {one_line_outcome}
+        Applications: {primary_application}
+        Location: {location}
+    
+    dashboard_summary: |
+      📊 **Research Dashboard**: {total_research_sessions}+ sessions, avg quality {average_quality_score}%
+      🎯 **Quality Breakdown**: {excellent_research_count} excellent, {good_research_count} good
+      📅 **Recent Activity**: {recent_research_count} sessions in last 30 days
+    
+    gap_analysis_display: |
+      💡 **Research Opportunities**:
+      - Under-explored: {underexplored_domains}
+      - Quality improvements needed: {quality_improvement_needed}
+      - Emerging topics: {emerging_opportunities}
+  
+  # Validation and Maintenance
+  browser_validation:
+    all_summaries_included: false      # All research has summaries
+    categories_populated: false        # All categories have research
+    quality_scores_accurate: false     # Quality data matches execution logs
+    cross_references_valid: false      # All file paths accessible
+    similarity_scores_current: false   # Similarity analysis up to date
+    display_templates_working: false   # Template rendering functional
+    
+  # Integration Points
+  integration:
+    ai_help_command: ".claude/commands/ai-help.md option [9]"
+    registry_analysis: "Used by [0] option for similarity analysis"
+    research_orchestrator: "Referenced in step 2.5 registry analysis"
+    update_triggers: ["research_completion", "registry_update", "manual_refresh"]

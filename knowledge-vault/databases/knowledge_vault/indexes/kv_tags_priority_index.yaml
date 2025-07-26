@@ -1,0 +1,51 @@
+# Knowledge Vault Tags and Priority Index
+# Composite index for efficient tag-based filtering combined with priority sorting
+
+index_info:
+  name: "Tags Priority Index"
+  database: "knowledge_vault"
+  type: "composite"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+index_specification:
+  fields:
+    - field: "tags"
+      type: "multi_value"
+      order: "ascending"
+      
+    - field: "priority"
+      type: "integer"
+      order: "descending"
+      
+    - field: "status"
+      type: "categorical"
+      order: "ascending"
+
+index_configuration:
+  unique: false
+  sparse: false
+  partial_filter: null
+  include_null: false
+  
+performance_characteristics:
+  supports_queries:
+    - "Items with specific tags ordered by priority"
+    - "High priority items within tag categories"
+    - "Active items by tag and priority"
+    - "Tag-based filtering with status constraints"
+  
+  query_examples:
+    - "tag:ai AND priority >= 4"
+    - "tag:business AND status:active ORDER BY priority DESC"
+    - "(tag:automation OR tag:productivity) AND priority >= 3"
+
+maintenance:
+  update_trigger: "on_item_change"
+  rebuild_frequency: "weekly"
+  statistics_update: "daily"
+  
+usage_metrics:
+  query_frequency: "high"
+  performance_impact: "low"
+  maintenance_overhead: "minimal"

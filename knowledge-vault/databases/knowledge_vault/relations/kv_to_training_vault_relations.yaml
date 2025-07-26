@@ -1,0 +1,74 @@
+# Knowledge Vault to Training Vault Relationships
+# Hub-to-spoke relationships supporting learning and skill development
+
+relationship_info:
+  name: "Knowledge Vault to Training Vault Relations"
+  source_database: "knowledge_vault"
+  target_database: "training_vault"
+  relationship_type: "supports_learning"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+relationship_specification:
+  property_name: "training_vault_relations"
+  dual_property: "knowledge_vault_relations"
+  cardinality: "one_to_many"
+  bidirectional: true
+
+relationship_mappings:
+  # Example relationships - in production these would be populated dynamically
+  example_mappings:
+    - source_item: "knowledge_vault_a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      target_items:
+        - "training_vault_b2c3d4e5-f6g7-8901-bcde-f23456789012"
+        - "training_vault_c3d4e5f6-g7h8-9012-cdef-345678901234"
+      relationship_context:
+        connection_type: "prerequisite_knowledge"
+        description: "Knowledge required before starting related training"
+        
+    - source_item: "knowledge_vault_d4e5f6g7-h8i9-0123-defg-456789012345"
+      target_items:
+        - "training_vault_e5f6g7h8-i9j0-1234-efgh-567890123456"
+      relationship_context:
+        connection_type: "supplemental_knowledge"
+        description: "Additional knowledge that enhances training outcomes"
+
+rollup_configurations:
+  from_training_vault:
+    skill_level_max:
+      source_property: "skill_level"
+      function: "max"
+      description: "Highest skill level from related training programs"
+      
+    completion_count:
+      source_property: "status"
+      function: "count"
+      filter: "completed"
+      description: "Number of completed training programs"
+      
+    average_progress:
+      source_property: "progress_percentage"
+      function: "average"
+      description: "Average progress across related training"
+
+validation_rules:
+  relationship_constraints:
+    - "Source item must exist in knowledge_vault"
+    - "Target items must exist in training_vault"
+    - "Relationship must be bidirectional"
+    - "Maximum 50 training relationships per knowledge item"
+  
+  data_integrity:
+    - "No orphaned relationships allowed"
+    - "Dual properties must be consistent"
+    - "Rollup values must be recalculated on changes"
+
+maintenance:
+  update_frequency: "on_change"
+  validation_frequency: "daily"
+  cleanup_frequency: "weekly"
+  
+performance:
+  indexing: "both_directions"
+  caching: "enabled"
+  lazy_loading: "enabled"

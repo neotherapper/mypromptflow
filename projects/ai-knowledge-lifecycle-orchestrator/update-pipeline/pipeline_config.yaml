@@ -1,0 +1,560 @@
+# AI Knowledge Lifecycle Orchestrator - Pipeline Configuration
+# Production-ready configuration for automated knowledge update pipeline
+
+version: "1.0.0"
+last_updated: "2025-01-24"
+description: "Complete pipeline configuration for automated AI knowledge updates"
+
+# =============================================================================
+# Pipeline Core Configuration
+# =============================================================================
+
+pipeline:
+  # Execution limits and timeouts
+  max_concurrent_executions: 5
+  execution_timeout: 3600  # 1 hour in seconds
+  retry_attempts: 3
+  retry_delay: 30  # seconds between retries
+  
+  # Performance optimization
+  enable_parallel_analysis: true
+  cache_analysis_results: true
+  cache_expiry_hours: 24
+  
+  # Quality assurance
+  min_confidence_threshold: 0.7
+  quality_score_threshold: 0.8
+  validation_required: true
+
+# =============================================================================
+# Impact Analysis Configuration
+# =============================================================================
+
+impact_analysis:
+  # Analysis depth and scope
+  analysis_depth: "comprehensive"  # basic, moderate, comprehensive
+  dependency_traversal_depth: 3
+  confidence_threshold: 0.7
+  parallel_analysis: true
+  
+  # File analysis patterns
+  file_scanning:
+    max_files_to_scan: 1000
+    exclude_patterns:
+      - "node_modules/**"
+      - ".git/**"
+      - "*.log"
+      - "*.tmp"
+      - ".DS_Store"
+    
+    include_patterns:
+      - "**/*.md"
+      - "**/*.yaml"
+      - "**/*.yml"
+      - "**/*.json"
+      - "**/CLAUDE.md"
+      - ".claude/commands/**/*.md"
+  
+  # Technology-specific rules
+  technology_rules:
+    React:
+      high_impact_threshold: 0.8
+      pattern_sensitivity: "high"
+      cascade_analysis: true
+    
+    TypeScript:
+      high_impact_threshold: 0.9
+      pattern_sensitivity: "high"
+      cascade_analysis: true
+    
+    "Next.js":
+      high_impact_threshold: 0.95
+      pattern_sensitivity: "critical"
+      cascade_analysis: true
+    
+    "Node.js":
+      high_impact_threshold: 0.8
+      pattern_sensitivity: "medium"
+      cascade_analysis: true
+    
+    Jest:
+      high_impact_threshold: 0.6
+      pattern_sensitivity: "medium"
+      cascade_analysis: false
+    
+    Docker:
+      high_impact_threshold: 0.85
+      pattern_sensitivity: "high"
+      cascade_analysis: true
+
+# =============================================================================
+# Approval Engine Configuration
+# =============================================================================
+
+approval:
+  # Global approval settings
+  auto_approve_low_impact: true
+  require_approval_threshold: "medium"  # minimal, low, medium, high, critical
+  approval_timeout: 86400  # 24 hours in seconds
+  emergency_bypass_enabled: true
+  simulate_approvals: true  # Set to false in production
+  
+  # Approval rules (priority order - first match wins)
+  approval_rules:
+    # Emergency security updates - immediate auto-approval
+    - rule_id: "security_emergency"
+      name: "Emergency Security Updates"
+      description: "Auto-approve critical security updates immediately"
+      priority: 1
+      conditions:
+        change_types: ["security_update"]
+        urgency_levels: ["immediate", "urgent"]
+        min_confidence: 0.8
+      action: "auto_approve"
+      approval_tier: "automatic"
+      timeout_hours: 1
+    
+    # Breaking changes in critical technologies - senior leadership
+    - rule_id: "critical_breaking_changes"
+      name: "Critical Technology Breaking Changes"
+      description: "Require senior leadership approval for breaking changes in critical technologies"
+      priority: 2
+      conditions:
+        change_types: ["breaking_change"]
+        technologies: ["React", "TypeScript", "Next.js", "Node.js"]
+        impact_levels: ["high", "critical"]
+        min_confidence: 0.7
+      action: "require_approval"
+      approval_tier: "senior_leadership"
+      timeout_hours: 48
+    
+    # Low impact changes - auto-approve
+    - rule_id: "low_impact_auto"
+      name: "Low Impact Auto Approval"
+      description: "Auto-approve low impact non-breaking changes"
+      priority: 3
+      conditions:
+        impact_levels: ["minimal", "low"]
+        change_types: ["bug_fix", "feature_addition", "configuration_change"]
+        max_affected_files: 5
+        min_confidence: 0.7
+      action: "auto_approve"
+      approval_tier: "automatic"
+      timeout_hours: 0
+    
+    # High volume changes - engineering manager
+    - rule_id: "high_volume_changes"
+      name: "High Volume Changes"
+      description: "Require engineering manager approval for changes affecting many files"
+      priority: 4
+      conditions:
+        min_affected_files: 20
+        impact_levels: ["medium", "high"]
+      action: "require_approval"
+      approval_tier: "engineering_manager"
+      timeout_hours: 24
+    
+    # Critical technologies - technical lead
+    - rule_id: "critical_tech_changes"
+      name: "Critical Technology Changes"
+      description: "Require technical lead approval for critical technology changes"
+      priority: 5
+      conditions:
+        technologies: ["React", "TypeScript", "Next.js", "Node.js", "Docker"]
+        impact_levels: ["medium", "high", "critical"]
+        change_types: ["breaking_change", "deprecation_warning", "feature_addition"]
+      action: "require_approval"
+      approval_tier: "technical_lead"
+      timeout_hours: 24
+    
+    # Deprecation warnings - technical lead
+    - rule_id: "deprecation_warnings"
+      name: "Deprecation Warnings"
+      description: "Require technical lead approval for deprecation warnings"
+      priority: 6
+      conditions:
+        change_types: ["deprecation_warning"]
+        impact_levels: ["medium", "high", "critical"]
+      action: "require_approval"
+      approval_tier: "technical_lead"
+      timeout_hours: 48
+    
+    # Medium impact changes - technical lead
+    - rule_id: "medium_impact_changes"
+      name: "Medium Impact Changes"
+      description: "Require technical lead approval for medium impact changes"
+      priority: 7
+      conditions:
+        impact_levels: ["medium"]
+        min_confidence: 0.6
+      action: "require_approval"
+      approval_tier: "technical_lead"
+      timeout_hours: 24
+    
+    # Configuration changes - technical lead
+    - rule_id: "config_changes"
+      name: "Configuration Changes"
+      description: "Require technical lead approval for configuration changes"
+      priority: 8
+      conditions:
+        change_types: ["configuration_change"]
+        impact_levels: ["medium", "high"]
+      action: "require_approval"
+      approval_tier: "technical_lead"
+      timeout_hours: 12
+    
+    # Low confidence changes - engineering manager
+    - rule_id: "low_confidence_changes"
+      name: "Low Confidence Changes"
+      description: "Require engineering manager review for low confidence changes"
+      priority: 9
+      conditions:
+        max_confidence: 0.6
+        impact_levels: ["medium", "high", "critical"]
+      action: "require_approval"
+      approval_tier: "engineering_manager"
+      timeout_hours: 24
+    
+    # Default rule - technical lead approval
+    - rule_id: "default_approval"
+      name: "Default Technical Approval"
+      description: "Default rule requiring technical lead approval for all other changes"
+      priority: 10
+      conditions: {}  # Matches everything not caught by above rules
+      action: "require_approval"
+      approval_tier: "technical_lead"
+      timeout_hours: 24
+  
+  # Approval tier definitions
+  approval_tiers:
+    automatic:
+      description: "Automatic system approval"
+      escalation_tier: "technical_lead"
+      bypass_allowed: false
+    
+    technical_lead:
+      description: "Technical lead approval required"
+      escalation_tier: "engineering_manager"
+      bypass_allowed: true
+      bypass_requires: "emergency_override"
+    
+    engineering_manager:
+      description: "Engineering manager approval required"
+      escalation_tier: "senior_leadership"
+      bypass_allowed: true
+      bypass_requires: "senior_leadership_override"
+    
+    senior_leadership:
+      description: "Senior leadership approval required"
+      escalation_tier: null
+      bypass_allowed: true
+      bypass_requires: "executive_override"
+
+# =============================================================================
+# Update Execution Configuration
+# =============================================================================
+
+update_execution:
+  # Batch processing
+  batch_size: 10
+  max_parallel_batches: 2
+  batch_timeout: 1800  # 30 minutes
+  
+  # Validation and quality
+  validation_enabled: true
+  min_quality_score: 0.8
+  rollback_on_failure: true
+  rollback_threshold: 0.5  # Rollback if >50% of batch fails
+  
+  # Backup management
+  backup_enabled: true
+  backup_directory: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/.backups"
+  backup_retention_days: 30
+  backup_compression: false
+  
+  # Update strategies
+  strategies:
+    claude_md:
+      enabled: true
+      validation_strict: true
+      preserve_formatting: true
+      add_change_notifications: true
+    
+    command_files:
+      enabled: true
+      validation_strict: false
+      update_cli_versions: true
+      preserve_functionality: true
+    
+    documentation:
+      enabled: true
+      validation_strict: false
+      update_links: true
+      preserve_structure: true
+    
+    configuration:
+      enabled: false  # Disabled by default for safety
+      validation_strict: true
+      backup_required: true
+  
+  # File type priorities
+  file_priorities:
+    claude_md: "critical"
+    command_file: "high"
+    documentation: "medium"
+    configuration: "high"
+    unknown: "low"
+  
+  # Update patterns and rules
+  update_patterns:
+    version_references:
+      enabled: true
+      patterns:
+        - 'version\s*[:\-]\s*["\']?(\d+\.\d+\.\d+)'
+        - '([a-zA-Z0-9\-_]+)@(\d+\.\d+\.\d+)'
+        - 'FROM\s+([^\s:]+):([^\s]+)'
+    
+    technology_mentions:
+      enabled: true
+      case_sensitive: false
+      whole_words_only: true
+    
+    cli_commands:
+      enabled: true
+      preserve_flags: true
+      update_package_versions: true
+
+# =============================================================================
+# Monitoring and Alerting Configuration
+# =============================================================================
+
+monitoring:
+  # Health check settings
+  metrics_enabled: true
+  health_check_interval: 300  # 5 minutes
+  performance_tracking: true
+  
+  # Alert thresholds
+  alert_thresholds:
+    failure_rate: 0.2  # 20% failure rate triggers alert
+    processing_time: 1800  # 30 minutes processing time triggers alert
+    queue_backlog: 50  # 50+ pending items triggers alert
+    circuit_breaker_open: true  # Any open circuit breaker triggers alert
+  
+  # Performance targets
+  performance_targets:
+    pipeline_completion_time: 600  # 10 minutes target
+    impact_analysis_time: 120  # 2 minutes target
+    approval_processing_time: 60  # 1 minute target
+    update_execution_time: 300  # 5 minutes target
+    batch_processing_rate: 10  # 10 files per minute target
+  
+  # Logging configuration
+  logging:
+    level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+    structured_logging: true
+    include_performance_metrics: true
+    retention_days: 30
+    
+    log_categories:
+      pipeline_orchestration: true
+      impact_analysis: true
+      approval_processing: true
+      update_execution: true
+      error_handling: true
+      performance_metrics: true
+
+# =============================================================================
+# Error Handling and Recovery Configuration
+# =============================================================================
+
+error_handling:
+  # Circuit breaker settings
+  circuit_breaker:
+    failure_threshold: 5
+    timeout_seconds: 60
+    half_open_max_calls: 3
+  
+  # Retry configuration
+  retry_policy:
+    max_attempts: 3
+    base_delay: 5  # seconds
+    exponential_backoff: true
+    max_delay: 60  # seconds
+    jitter: true
+  
+  # Error escalation
+  escalation:
+    auto_escalate_after_failures: 3
+    escalation_timeout: 1800  # 30 minutes
+    notify_on_escalation: true
+  
+  # Recovery procedures
+  recovery:
+    auto_recovery_enabled: true
+    recovery_check_interval: 300  # 5 minutes
+    max_recovery_attempts: 5
+    
+    recovery_strategies:
+      - "restart_failed_components"
+      - "clear_error_state"
+      - "rollback_partial_changes"
+      - "notify_administrators"
+
+# =============================================================================
+# Security and Compliance Configuration
+# =============================================================================
+
+security:
+  # Access control
+  require_authentication: false  # Disabled for local development
+  api_key_required: false
+  rate_limiting: false
+  
+  # File system security
+  restrict_file_access: true
+  allowed_directories:
+    - "/Users/georgiospilitsoglou/Developer/projects/mypromptflow"
+  forbidden_directories:
+    - "/System"
+    - "/usr"
+    - "/bin"
+    - "/sbin"
+  
+  # Audit logging
+  audit_logging:
+    enabled: true
+    log_all_file_changes: true
+    log_approval_decisions: true
+    retention_days: 90
+
+# =============================================================================
+# Integration Configuration
+# =============================================================================
+
+integrations:
+  # Knowledge Vault integration
+  knowledge_vault:
+    enabled: true
+    auto_sync: true
+    sync_interval: 300  # 5 minutes
+    
+  # MCP server integration
+  mcp_servers:
+    enabled: true
+    timeout: 30  # seconds
+    retry_failed_calls: true
+    
+  # Notification systems (disabled for local development)
+  notifications:
+    enabled: false
+    email_notifications: false
+    slack_notifications: false
+    webhook_notifications: false
+
+# =============================================================================
+# Development and Testing Configuration
+# =============================================================================
+
+development:
+  # Development mode settings
+  debug_mode: true
+  verbose_logging: true
+  mock_external_services: true
+  
+  # Testing configuration
+  test_mode: false
+  dry_run_mode: false  # Set to true to simulate without making changes
+  
+  # Development overrides
+  overrides:
+    skip_approval_for_testing: false
+    accelerated_timeouts: false
+    disable_backups: false
+    force_auto_approve: false
+
+# =============================================================================
+# Advanced Configuration
+# =============================================================================
+
+advanced:
+  # Memory and resource management
+  max_memory_usage: "2GB"
+  cleanup_interval: 3600  # 1 hour
+  
+  # Concurrency settings
+  max_worker_threads: 10
+  async_task_limit: 50
+  
+  # Caching strategy
+  cache_strategy: "memory"  # memory, disk, hybrid
+  cache_size_limit: "500MB"
+  
+  # Optimization features
+  optimizations:
+    enable_result_caching: true
+    enable_request_deduplication: true
+    enable_batch_optimization: true
+    enable_smart_scheduling: true
+
+# =============================================================================
+# Environment-Specific Overrides
+# =============================================================================
+
+environments:
+  development:
+    pipeline:
+      max_concurrent_executions: 3
+    approval:
+      simulate_approvals: true
+      approval_timeout: 3600  # 1 hour for dev
+    monitoring:
+      alert_thresholds:
+        failure_rate: 0.5  # More lenient in dev
+    
+  staging:
+    pipeline:
+      max_concurrent_executions: 5
+    approval:
+      simulate_approvals: false
+      approval_timeout: 7200  # 2 hours for staging
+    
+  production:
+    pipeline:
+      max_concurrent_executions: 10
+    approval:
+      simulate_approvals: false
+      approval_timeout: 86400  # 24 hours for production
+    security:
+      require_authentication: true
+      audit_logging:
+        enabled: true
+    monitoring:
+      alert_thresholds:
+        failure_rate: 0.1  # Strict in production
+
+# =============================================================================
+# Documentation and Metadata
+# =============================================================================
+
+metadata:
+  configuration_version: "1.0.0"
+  created_date: "2025-01-24"
+  last_modified: "2025-01-24"
+  created_by: "AI Knowledge Lifecycle Orchestrator"
+  
+  description: |
+    Complete production-ready configuration for the AI Knowledge Lifecycle Orchestrator
+    automated update pipeline. This configuration defines approval workflows, impact
+    analysis parameters, update execution settings, and monitoring thresholds.
+  
+  documentation_links:
+    - "project-docs/pipeline-architecture.md"
+    - "project-docs/approval-workflows.md"
+    - "project-docs/configuration-guide.md"
+  
+  change_log:
+    - version: "1.0.0"
+      date: "2025-01-24"
+      changes: "Initial production configuration"
+      author: "AI Assistant"

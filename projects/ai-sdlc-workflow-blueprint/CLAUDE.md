@@ -110,6 +110,24 @@ Create a comprehensive, practical blueprint for implementing AI-assisted SDLC wo
 - ✅ Knowledge work can proceed independently
 - ✅ Gap analysis helps inform better decisions
 
+## Task Management
+
+**Current Tasks**: Reference `task-list.md` for phase-specific implementation priorities and dependencies
+**Progress Tracking**: Update `progress.md` with phase completion status and deliverable results
+**Research Integration**: See `research-integration.md` for knowledge base applications and decision support
+
+**Task Completion Protocol**:
+1. **Mark Completed Tasks**: Update task status in `task-list.md` with completion timestamp and outcomes
+2. **Document Progress**: Add detailed entries to `progress.md` with specific achievements and quality metrics
+3. **Update Decision Status**: Track decision progress and user confirmations in decision audit trail
+4. **Validate Dependencies**: Ensure prerequisites complete before advancing to next phase
+5. **Cross-Reference Updates**: Verify all file references remain accessible and current
+
+**Phase-Based Task Priorities**:
+- **Phase 3 (Current)**: Decision-making tasks require user input and explicit confirmation
+- **Phase 4 (Next)**: Blueprint creation tasks depend on completed decision documentation
+- **Phase 5 (Future)**: Validation and enhancement tasks focus on deliverable quality
+
 ## Quick Navigation
 
 - **Project Purpose**: See project-purpose.md for detailed goals

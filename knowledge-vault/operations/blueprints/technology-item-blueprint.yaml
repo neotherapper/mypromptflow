@@ -1,0 +1,478 @@
+# Technology Item Blueprint Template - Dual Layer Architecture
+# Human-readable knowledge vault items for technology, frameworks, languages, and tools
+# Separates AI agent metadata (frontmatter) from human-readable content (markdown body)
+
+metadata:
+  template_version: "2.0.0"
+  created: "2025-01-26"
+  purpose: "Dual-layer technology knowledge items with human-readable content and AI metadata"
+  blueprint_type: "technology_item"
+  target_integration: "knowledge-vault/databases/knowledge_vault/"
+  parent_blueprint: "knowledge-item-blueprint.yaml"
+
+# ============================================================================
+# DUAL-LAYER STRUCTURE DEFINITION
+# ============================================================================
+
+dual_layer_architecture:
+  layer_1_frontmatter:
+    description: "YAML frontmatter containing technical metadata for AI agents"
+    visibility: "AI agents only - hidden from human markdown preview"
+    content:
+      - "UUID references and relationships"
+      - "Notion sync metadata"
+      - "Validation scores and technical properties"
+      - "Schema compliance data"
+  
+  layer_2_markdown:
+    description: "Rich markdown content for human knowledge consumption"
+    visibility: "Human-readable with meaningful names and context"
+    content:
+      - "Professional technology documentation"
+      - "Human-readable cross-references with actual names"
+      - "Rich contextual information and insights"
+      - "Visual hierarchy and structured presentation"
+
+# ============================================================================
+# FRONTMATTER STRUCTURE (AI AGENT LAYER)
+# ============================================================================
+
+frontmatter_template:
+  yaml_structure: |
+    ---
+    # Technical metadata for AI agents
+    uuid: "{{technology_name_lowercase}}-{{category}}-uuid"
+    database: "knowledge_vault"
+    item_type: "technology"
+    
+    # Core properties
+    name: "{{TECHNOLOGY_NAME}}"
+    status: "{{STATUS}}"  # active, archived
+    priority: "{{PRIORITY}}"  # 1st_priority through 5th_priority
+    tags: [{{TAG_ARRAY}}]
+    
+    # Technology-specific metadata
+    technology_category: "{{CATEGORY}}"  # language, framework, database, tool, platform
+    maturity_level: "{{MATURITY}}"  # experimental, stable, mature, legacy
+    learning_curve: "{{LEARNING_CURVE}}"  # easy, moderate, complex, expert
+    market_position: "{{MARKET_POSITION}}"  # emerging, established, dominant, declining
+    
+    # Timestamps
+    created_date: "{{CREATED_DATE}}"
+    last_modified: "{{LAST_MODIFIED_DATE}}"
+    last_reviewed: "{{LAST_REVIEWED_DATE}}"
+    
+    # Raw UUID relationships for AI processing
+    relationships:
+      knowledge_vault_relations: [{{KV_UUID_ARRAY}}]
+      training_vault_relations: [{{TV_UUID_ARRAY}}]
+      tools_services_relations: [{{TS_UUID_ARRAY}}]
+      platforms_sites_relations: [{{PS_UUID_ARRAY}}]
+      business_ideas_relations: [{{BI_UUID_ARRAY}}]
+      notes_ideas_relations: [{{NI_UUID_ARRAY}}]
+    
+    # AI processing metadata
+    notion_sync:
+      page_id: "{{NOTION_PAGE_ID}}"
+      last_sync: "{{LAST_SYNC_DATE}}"
+      sync_status: "{{SYNC_STATUS}}"
+    
+    validation:
+      completeness_score: {{COMPLETENESS_SCORE}}
+      quality_score: {{QUALITY_SCORE}}
+      relationship_integrity: {{RELATIONSHIP_INTEGRITY}}
+      last_validated: "{{LAST_VALIDATED_DATE}}"
+    
+    # Search and discovery metadata
+    search_keywords: [{{SEARCH_KEYWORDS}}]
+    aliases: [{{ALIASES}}]
+    related_concepts: [{{RELATED_CONCEPTS}}]
+    ---
+
+# ============================================================================
+# MARKDOWN BODY TEMPLATE (HUMAN LAYER)
+# ============================================================================
+
+markdown_body_template:
+  structure_overview: |
+    # {Technology Name}
+    
+    > {Brief description with key value proposition and primary use cases}
+    
+    ## 🔗 Technology Ecosystem
+    ## 📚 Learning Resources  
+    ## 🛠️ Development Tools
+    ## 💼 Business Applications
+    ## 🏷️ Classifications
+    ## 📝 Technical Details
+    ## 🚀 Implementation Examples
+    ## 🔄 Recent Updates
+
+  detailed_template: |
+    # {{TECHNOLOGY_NAME}}
+    
+    > {{TECHNOLOGY_DESCRIPTION}} - {{KEY_VALUE_PROPOSITION}}
+    
+    ## 🔗 Technology Ecosystem
+    
+    ### Core Dependencies
+    {{#if related_languages}}
+    - **Languages**: {{#each related_languages}}[{{name}}]({{slug}}.md){{#unless @last}}, {{/unless}}{{/each}}
+    {{/if}}
+    {{#if related_frameworks}}
+    - **Built With**: {{#each related_frameworks}}[{{name}}]({{slug}}.md) - {{context}}{{#unless @last}}, {{/unless}}{{/each}}
+    {{/if}}
+    
+    ### Ecosystem Connections
+    {{#if complementary_technologies}}
+    - **Works With**: {{#each complementary_technologies}}[{{name}}]({{slug}}.md){{#unless @last}}, {{/unless}}{{/each}}
+    {{/if}}
+    {{#if alternative_technologies}}
+    - **Alternatives**: {{#each alternative_technologies}}[{{name}}]({{slug}}.md){{#unless @last}}, {{/unless}}{{/each}}
+    {{/if}}
+    
+    ## 📚 Learning Resources
+    
+    {{#if learning_resources}}
+    {{#each learning_resources}}
+    ### {{category}}
+    {{#each items}}
+    - [{{title}}]({{slug}}.md) - {{description}}
+    {{/each}}
+    {{/each}}
+    {{else}}
+    *No learning resources currently cataloged for this technology.*
+    {{/if}}
+    
+    ## 🛠️ Development Tools
+    
+    {{#if development_tools}}
+    {{#each development_tools}}
+    - **{{category}}**: [{{name}}]({{slug}}.md) - {{description}}
+    {{/each}}
+    {{else}}
+    *Standard development tools apply. See related ecosystem for specific tooling.*
+    {{/if}}
+    
+    ## 💼 Business Applications
+    
+    ### Primary Use Cases
+    {{#each primary_use_cases}}
+    - **{{name}}**: {{description}}
+    {{/each}}
+    
+    ### Industry Applications
+    {{#if industry_applications}}
+    {{#each industry_applications}}
+    - **{{industry}}**: {{application_description}}
+    {{/each}}
+    {{/if}}
+    
+    ### Business Value
+    - **{{business_value_1}}**
+    - **{{business_value_2}}**
+    - **{{business_value_3}}**
+    
+    ## 🏷️ Classifications
+    
+    **Category**: {{technology_category}} | **Maturity**: {{maturity_level}} | **Learning Curve**: {{learning_curve}}  
+    **Priority**: {{priority_display}} | **Status**: {{status_display}} | **Market Position**: {{market_position}}
+    
+    **Tags**: {{#each tags}}{{.}}{{#unless @last}}, {{/unless}}{{/each}}
+    
+    ## 📝 Technical Details
+    
+    ### Architecture & Design
+    {{#if architecture_notes}}
+    {{architecture_notes}}
+    {{else}}
+    *Technical architecture details to be documented.*
+    {{/if}}
+    
+    ### Key Features
+    {{#each key_features}}
+    - **{{feature}}**: {{description}}
+    {{/each}}
+    
+    ### Performance Characteristics
+    {{#if performance_notes}}
+    {{performance_notes}}
+    {{else}}
+    *Performance characteristics to be documented based on implementation experience.*
+    {{/if}}
+    
+    ## 🚀 Implementation Examples
+    
+    {{#if implementation_examples}}
+    {{#each implementation_examples}}
+    ### {{title}}
+    ```{{language}}
+    {{code}}
+    ```
+    {{description}}
+    {{/each}}
+    {{else}}
+    *Implementation examples to be added based on project usage.*
+    {{/if}}
+    
+    ## 🔄 Recent Updates
+    
+    {{#if recent_updates}}
+    {{#each recent_updates}}
+    **{{date}}**: {{update_description}}
+    {{/each}}
+    {{else}}
+    *Last updated: {{last_modified}}*
+    {{/if}}
+    
+    ---
+    *This knowledge item is part of the [Knowledge Vault](../README.md) | Last reviewed: {{last_reviewed}}*
+
+# ============================================================================
+# SAMPLE POPULATED TEMPLATE (BASED ON USER'S NEON ITEM)
+# ============================================================================
+
+sample_populated_template:
+  frontmatter_example: |
+    ---
+    # Technical metadata for AI agents
+    uuid: "neon-database-postgres-uuid"
+    database: "knowledge_vault"
+    item_type: "technology"
+    
+    # Core properties
+    name: "Neon"
+    status: "active"
+    priority: "4th_priority"
+    tags: ["Database", "Technology Concepts", "Programming Concepts"]
+    
+    # Technology-specific metadata
+    technology_category: "database"
+    maturity_level: "stable"
+    learning_curve: "moderate"
+    market_position: "emerging"
+    
+    # Timestamps
+    created_date: "2025-01-26T10:30:00Z"
+    last_modified: "2025-01-26T10:30:00Z"
+    last_reviewed: "2025-01-26T10:30:00Z"
+    
+    # Raw UUID relationships for AI processing
+    relationships:
+      knowledge_vault_relations: ["c0ef6b7f-a608-4508-afbb-261e529c5898", "125d988c-8c17-46b5-8c18-03a3a3118829"]
+      training_vault_relations: []
+      tools_services_relations: []
+      platforms_sites_relations: []
+      business_ideas_relations: []
+      notes_ideas_relations: []
+    
+    # AI processing metadata
+    notion_sync:
+      page_id: "20af8374-7088-818a-aea8-ec2d0f9ca797"
+      last_sync: "2025-01-26T10:30:00Z"
+      sync_status: "synced"
+    
+    validation:
+      completeness_score: 0.85
+      quality_score: 0.90
+      relationship_integrity: 0.95
+      last_validated: "2025-01-26T10:30:00Z"
+    
+    # Search and discovery metadata
+    search_keywords: ["serverless", "postgres", "database", "cloud", "developer tools"]
+    aliases: ["Neon Database", "Neon Postgres"]
+    related_concepts: ["serverless architecture", "database-as-a-service"]
+    ---
+
+  markdown_example: |
+    # Neon
+    
+    > Serverless Postgres database platform that helps developers ship faster with branching, instant provisioning, and scale-to-zero capabilities.
+    
+    ## 🔗 Technology Ecosystem
+    
+    ### Core Dependencies
+    - **Database Engine**: PostgreSQL - Industry-standard relational database
+    - **Cloud Platform**: Built on modern serverless infrastructure
+    
+    ### Ecosystem Connections
+    - **Works With**: Modern web frameworks, ORMs, and development tools
+    - **Integrates With**: [Vercel](vercel.md), [Netlify](netlify.md), CI/CD platforms
+    - **Alternatives**: [PlanetScale](planetscale.md), [Supabase](supabase.md), [Railway](railway.md)
+    
+    ## 📚 Learning Resources
+    
+    ### Documentation
+    - [Official Neon Documentation](neon-docs.md) - Comprehensive setup and usage guide
+    - [Postgres Fundamentals](postgres-fundamentals.md) - Core database concepts
+    
+    ### Tutorials
+    - [Getting Started with Neon](neon-quickstart.md) - Basic setup and first project
+    - [Database Branching Guide](neon-branching.md) - Advanced branching workflows
+    
+    ## 🛠️ Development Tools
+    
+    - **CLI**: Neon CLI - Command-line management and deployment
+    - **Web Console**: Dashboard for database management and monitoring  
+    - **API**: REST API for programmatic database operations
+    - **SDK**: JavaScript/TypeScript SDK for application integration
+    
+    ## 💼 Business Applications
+    
+    ### Primary Use Cases
+    - **Web Applications**: Modern web apps requiring scalable Postgres backend
+    - **API Development**: RESTful and GraphQL APIs with relational data needs
+    - **Development Workflows**: Feature branching with isolated database environments
+    - **Prototype Development**: Rapid MVP development with zero infrastructure setup
+    
+    ### Industry Applications
+    - **SaaS Platforms**: Multi-tenant applications with database isolation
+    - **E-commerce**: Product catalogs, inventory, and transaction processing
+    - **Content Management**: CMS backends requiring relational data structures
+    
+    ### Business Value
+    - **Faster Development**: Instant database provisioning eliminates setup time
+    - **Cost Efficiency**: Scale-to-zero pricing reduces operational costs
+    - **Developer Experience**: Git-like branching for database schema changes
+    
+    ## 🏷️ Classifications
+    
+    **Category**: Database | **Maturity**: Stable | **Learning Curve**: Moderate  
+    **Priority**: 4th Priority | **Status**: Active | **Market Position**: Emerging
+    
+    **Tags**: Database, Technology Concepts, Programming Concepts
+    
+    ## 📝 Technical Details
+    
+    ### Architecture & Design
+    - **Serverless**: Automatic scaling with scale-to-zero capabilities
+    - **Branching**: Git-like database branching for development workflows
+    - **Postgres Compatible**: Full PostgreSQL compatibility with extensions
+    - **Global Edge**: Multi-region deployment with edge computing support
+    
+    ### Key Features
+    - **Instant Provisioning**: Create databases in seconds, not minutes
+    - **Database Branching**: Create isolated database branches for features
+    - **Scale-to-Zero**: Automatic pausing during inactive periods
+    - **Connection Pooling**: Built-in connection pooling for optimal performance
+    
+    ### Performance Characteristics
+    - **Cold Start**: Sub-second cold start times for serverless scaling
+    - **Read Replicas**: Automatic read replica management for query distribution
+    - **Backup & Recovery**: Continuous backup with point-in-time recovery
+    
+    ## 🚀 Implementation Examples
+    
+    ### Basic Connection Setup
+    ```javascript
+    import { Client } from 'pg';
+    
+    const client = new Client({
+      connectionString: process.env.DATABASE_URL,
+      ssl: true
+    });
+    
+    await client.connect();
+    const result = await client.query('SELECT NOW()');
+    console.log(result.rows[0]);
+    ```
+    Simple connection setup using the pg library with Neon connection string.
+    
+    ### Database Branching Workflow
+    ```bash
+    # Create a new branch for feature development
+    neon branches create --name feature/user-auth
+    
+    # Get connection string for the new branch
+    neon connection-string feature/user-auth
+    
+    # Run migrations on the branch
+    npm run migrate:up
+    ```
+    Example of using Neon's branching feature for isolated development environments.
+    
+    ## 🔄 Recent Updates
+    
+    **2025-01-26**: Added to knowledge vault with comprehensive documentation
+    **2024-Q4**: Expanded enterprise features and enhanced branching capabilities
+    **2024-Q3**: Improved cold start performance and added new regions
+    
+    ---
+    *This knowledge item is part of the [Knowledge Vault](../README.md) | Last reviewed: January 26, 2025*
+
+# ============================================================================
+# NAME RESOLUTION INTEGRATION
+# ============================================================================
+
+name_resolution_mappings:
+  purpose: "Convert UUID relationships to human-readable names in markdown"
+  
+  resolution_process:
+    step_1: "Extract UUIDs from frontmatter relationships"
+    step_2: "Lookup names from name-resolution-index.yaml"
+    step_3: "Generate markdown links with actual names"
+    step_4: "Maintain bidirectional UUID tracking for AI agents"
+  
+  example_conversion:
+    uuid_format: "relationships.knowledge_vault_relations: ['c0ef6b7f-a608-4508-afbb-261e529c5898']"
+    human_format: "- **Related Technologies**: [PostgreSQL](postgresql.md), [Serverless Architecture](serverless-architecture.md)"
+    
+  fallback_strategy:
+    missing_name: "Display UUID with warning comment for manual resolution"
+    broken_link: "Mark as [Missing Item](missing-uuid) for cleanup"
+
+# ============================================================================
+# CONTENT GENERATION AUTOMATION
+# ============================================================================
+
+automation_scripts:
+  template_application:
+    script_name: "apply_technology_template.py"
+    purpose: "Generate technology items from Notion data using this template"
+    
+  content_enrichment:
+    script_name: "enrich_technology_content.py"  
+    purpose: "Add missing context and descriptions based on technology category"
+    
+  relationship_mapping:
+    script_name: "map_technology_relationships.py"
+    purpose: "Build human-readable relationship networks"
+
+# ============================================================================
+# VALIDATION RULES
+# ============================================================================
+
+validation_requirements:
+  frontmatter_validation:
+    required_fields: ["uuid", "name", "status", "priority", "tags", "technology_category"]
+    uuid_format: "technology-name-category-uuid pattern"
+    relationship_integrity: "All UUID references must exist in system"
+    
+  markdown_validation:
+    required_sections: ["Technology Ecosystem", "Business Applications", "Classifications"]
+    link_validation: "All cross-references must resolve to actual items"
+    content_quality: "Minimum 200 words in main sections"
+    
+  dual_layer_consistency:
+    name_consistency: "Frontmatter name must match markdown H1"
+    relationship_sync: "UUID relationships must match markdown links"
+    metadata_accuracy: "Technical metadata must reflect markdown content"
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+
+usage_instructions:
+  creating_new_technology_items:
+    step_1: "Use this template for languages, frameworks, databases, tools, platforms"
+    step_2: "Populate frontmatter with technical metadata for AI agents"
+    step_3: "Generate rich markdown content for human consumption"
+    step_4: "Apply name resolution for human-readable relationships"
+    step_5: "Validate both layers for consistency and completeness"
+    
+  maintenance_procedures:
+    relationship_updates: "Update both UUID (frontmatter) and names (markdown) simultaneously"
+    content_reviews: "Regular review of technical details and business applications"
+    link_validation: "Automated checking of cross-references and relationship integrity"
+
+This blueprint provides the foundation for creating human-readable technology knowledge items while maintaining full AI agent compatibility through the dual-layer architecture.

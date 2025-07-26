@@ -1,0 +1,373 @@
+# AI Knowledge Lifecycle Orchestrator - Dependency Registry Schema
+# This schema defines the structure for mapping AI instruction files to their technology dependencies
+
+version: "1.0.0"
+created: "2025-01-24"
+purpose: "Map AI instruction files to technology dependencies for automated knowledge lifecycle management"
+
+# Core schema for dependency registry entries
+dependency_registry_schema:
+  
+  # Unique identifier for each AI file tracked in the system
+  file_entry:
+    type: "object"
+    required: ["file_path", "file_type", "technologies", "last_scanned", "scan_confidence"]
+    properties:
+      
+      # File identification and metadata
+      file_path:
+        type: "string"
+        description: "Absolute path to the AI instruction file"
+        format: "file_path"
+        examples:
+          - "/projects/ai-sdlc-workflow-blueprint/tools/react-testing-library.md"
+          - "/.claude/commands/create-feature.md"
+          - "/projects/ai-pr-validation-system/CLAUDE.md"
+          - "/knowledge-vault/knowledge/tools/github.md"
+      
+      file_type:
+        type: "string" 
+        enum: ["claude_md", "command_file", "tool_documentation", "project_documentation", "template", "instruction"]
+        description: "Classification of AI instruction file type"
+        examples:
+          - "claude_md" # CLAUDE.md files providing project context
+          - "command_file" # .claude/commands/*.md files
+          - "tool_documentation" # Tool-specific documentation files
+          - "project_documentation" # Project documentation with AI instructions
+      
+      file_hash:
+        type: "string"
+        description: "SHA-256 hash of file content for change detection"
+        format: "sha256"
+        
+      last_modified:
+        type: "string"
+        format: "iso_datetime"
+        description: "Last modification timestamp of the source file"
+        
+      last_scanned:
+        type: "string"
+        format: "iso_datetime"
+        description: "Timestamp when dependency analysis was last performed"
+        
+      scan_confidence:
+        type: "number"
+        minimum: 0.0
+        maximum: 1.0
+        description: "Confidence score for dependency detection accuracy (0.0-1.0)"
+        
+      # Technology dependency mapping
+      technologies:
+        type: "array"
+        description: "List of technologies this AI file depends on or references"
+        minItems: 0
+        items:
+          type: "object"
+          required: ["name", "category", "confidence", "references"]
+          properties:
+            
+            name:
+              type: "string"
+              description: "Standardized technology name"
+              examples: ["React", "TypeScript", "Next.js", "Jest", "ESLint", "Docker", "GitHub Actions"]
+              
+            category:
+              type: "string"
+              enum: ["framework", "library", "language", "runtime", "build_tool", "testing", "deployment", "ci_cd", "database", "cloud_service"]
+              description: "Technology category classification"
+              
+            version_constraint:
+              type: "string"
+              description: "Version requirement or constraint if specified"
+              examples: ["19.x", ">=18.0.0", "^5.0.0", "latest", "~4.2.0"]
+              
+            current_version:
+              type: "string"
+              description: "Current version referenced in the file (if detected)"
+              examples: ["19.0.0", "5.7.2", "15.1.0"]
+              
+            confidence:
+              type: "number"
+              minimum: 0.0
+              maximum: 1.0
+              description: "Confidence that this technology is actually used (0.0-1.0)"
+              
+            criticality:
+              type: "string"
+              enum: ["critical", "high", "medium", "low"]
+              description: "Impact level if this technology changes"
+              definitions:
+                critical: "Breaking changes require immediate file updates"
+                high: "Major features or deprecations need prompt attention"
+                medium: "Minor updates may need eventual incorporation"
+                low: "Changes rarely impact instruction accuracy"
+                
+            usage_context:
+              type: "array"
+              description: "How this technology is used in the context of this file"
+              items:
+                type: "string"
+                enum: ["installation", "configuration", "code_examples", "best_practices", "troubleshooting", "integration", "testing", "deployment"]
+                
+            references:
+              type: "array"
+              description: "Locations where technology is mentioned in the file"
+              items:
+                type: "object"
+                properties:
+                  line_number:
+                    type: "integer"
+                    minimum: 1
+                    description: "Line number where technology is referenced"
+                  context:
+                    type: "string"
+                    description: "Text context around the reference"
+                    maxLength: 200
+                  reference_type:
+                    type: "string"
+                    enum: ["explicit_mention", "code_example", "configuration", "version_reference", "url_link", "import_statement"]
+                    
+      # Dependency relationships and impact analysis
+      dependency_relationships:
+        type: "object"
+        description: "Relationships between this file and other AI files"
+        properties:
+          
+          depends_on:
+            type: "array"
+            description: "Other AI files this file depends on or references"
+            items:
+              type: "object"
+              properties:
+                file_path:
+                  type: "string"
+                  description: "Path to the dependency file"
+                relationship_type:
+                  type: "string"
+                  enum: ["cross_reference", "template_usage", "shared_technology", "workflow_dependency"]
+                confidence:
+                  type: "number"
+                  minimum: 0.0
+                  maximum: 1.0
+                  
+          depended_on_by:
+            type: "array" 
+            description: "Other AI files that depend on this file"
+            items:
+              type: "object"
+              properties:
+                file_path:
+                  type: "string"
+                relationship_type:
+                  type: "string"
+                  enum: ["cross_reference", "template_usage", "shared_technology", "workflow_dependency"]
+                  
+      # Update tracking and history
+      update_tracking:
+        type: "object"
+        description: "Track updates and changes over time"
+        properties:
+          
+          needs_update:
+            type: "boolean"
+            description: "Whether this file needs updating based on technology changes"
+            default: false
+            
+          update_priority:
+            type: "string"
+            enum: ["immediate", "high", "medium", "low", "none"]
+            description: "Priority level for updating this file"
+            
+          pending_updates:
+            type: "array"
+            description: "Technology changes requiring attention"
+            items:
+              type: "object"
+              properties:
+                technology:
+                  type: "string"
+                  description: "Technology that changed"
+                change_type:
+                  type: "string"
+                  enum: ["breaking_change", "major_release", "feature_addition", "deprecation", "security_fix"]
+                detected_date:
+                  type: "string"
+                  format: "iso_datetime"
+                change_description:
+                  type: "string"
+                  description: "Summary of the change"
+                impact_assessment:
+                  type: "string"
+                  enum: ["high", "medium", "low", "none"]
+                  
+          last_updated:
+            type: "string"
+            format: "iso_datetime"
+            description: "When this file was last updated due to technology changes"
+            
+          update_history:
+            type: "array"
+            description: "History of updates applied to this file"
+            items:
+              type: "object"
+              properties:
+                update_date:
+                  type: "string"
+                  format: "iso_datetime"
+                technology:
+                  type: "string"
+                  description: "Technology that triggered the update"
+                change_type:
+                  type: "string"
+                  enum: ["breaking_change", "major_release", "feature_addition", "deprecation", "security_fix"]
+                update_method:
+                  type: "string"
+                  enum: ["automated", "manual", "hybrid"]
+                quality_score_before:
+                  type: "number"
+                  minimum: 0.0
+                  maximum: 100.0
+                quality_score_after:
+                  type: "number"
+                  minimum: 0.0
+                  maximum: 100.0
+                success:
+                  type: "boolean"
+                  description: "Whether the update was successful"
+
+# Technology definitions and standardization
+technology_definitions:
+  
+  # Standardized technology names and metadata
+  standardized_technologies:
+    React:
+      category: "framework"
+      official_source: "https://react.dev/blog"
+      github_repo: "facebook/react"
+      current_stable: "19.0.0"
+      monitoring_frequency: "daily"
+      criticality_default: "critical"
+      
+    TypeScript:
+      category: "language"
+      official_source: "https://devblogs.microsoft.com/typescript/"
+      github_repo: "microsoft/TypeScript"
+      current_stable: "5.7.2"
+      monitoring_frequency: "weekly"
+      criticality_default: "high"
+      
+    "Next.js":
+      category: "framework"
+      official_source: "https://nextjs.org/blog"
+      github_repo: "vercel/next.js"
+      current_stable: "15.1.0"
+      monitoring_frequency: "weekly"
+      criticality_default: "high"
+      
+    Jest:
+      category: "testing"
+      official_source: "https://jestjs.io/blog"
+      github_repo: "jestjs/jest"
+      current_stable: "29.7.0"
+      monitoring_frequency: "monthly"
+      criticality_default: "medium"
+      
+    ESLint:
+      category: "build_tool"
+      official_source: "https://eslint.org/blog"
+      github_repo: "eslint/eslint"
+      current_stable: "9.16.0"
+      monitoring_frequency: "monthly"
+      criticality_default: "medium"
+      
+    Docker:
+      category: "deployment"
+      official_source: "https://www.docker.com/blog/"
+      github_repo: "docker/docker-ce"
+      current_stable: "27.4.1"
+      monitoring_frequency: "monthly"
+      criticality_default: "medium"
+      
+    "GitHub Actions":
+      category: "ci_cd"
+      official_source: "https://github.blog/category/actions/"
+      github_repo: "actions/runner"
+      monitoring_frequency: "monthly"
+      criticality_default: "medium"
+      
+    "Node.js":
+      category: "runtime"
+      official_source: "https://nodejs.org/en/blog"
+      github_repo: "nodejs/node"
+      current_stable: "22.12.0"
+      monitoring_frequency: "monthly"
+      criticality_default: "high"
+      
+    "Tailwind CSS":
+      category: "framework"
+      official_source: "https://tailwindcss.com/blog"
+      github_repo: "tailwindlabs/tailwindcss"
+      current_stable: "3.4.17"
+      monitoring_frequency: "monthly"
+      criticality_default: "medium"
+      
+    Vercel:
+      category: "cloud_service"
+      official_source: "https://vercel.com/changelog"
+      monitoring_frequency: "monthly"
+      criticality_default: "low"
+
+# Validation rules and constraints
+validation_rules:
+  
+  # File path validation
+  file_path_rules:
+    must_exist: true
+    must_be_readable: true
+    allowed_extensions: [".md", ".yaml", ".yml", ".txt"]
+    forbidden_paths: ["/node_modules/", "/.git/", "/build/", "/dist/"]
+    
+  # Technology detection rules
+  technology_detection_rules:
+    minimum_confidence: 0.7  # Don't include technologies below 70% confidence
+    maximum_technologies_per_file: 20  # Reasonable upper limit
+    require_evidence: true  # Must have specific line references
+    deduplicate_similar: true  # Combine "React" and "ReactJS" references
+    
+  # Dependency relationship rules
+  relationship_validation:
+    prevent_circular_dependencies: true
+    maximum_dependency_depth: 5  # Prevent infinite relationship chains
+    require_bidirectional_consistency: true  # If A depends on B, B should show depended_on_by A
+    
+  # Update priority rules
+  update_priority_logic:
+    breaking_change: "immediate"
+    security_fix: "immediate"
+    major_release: "high"
+    deprecation: "medium"
+    feature_addition: "low"
+    
+# Schema metadata and versioning
+schema_metadata:
+  version: "1.0.0"
+  compatibility:
+    knowledge_vault_integration: "required"
+    ai_agent_instruction_design_excellence: "required"
+    mcp_server_registry: "optional_but_recommended"
+    
+  file_locations:
+    registry_storage: "dependency-registry/registry.yaml"
+    schema_validation: "dependency-registry/schema-validator.py"
+    scanner_configuration: "dependency-registry/scanner-config.yaml"
+    
+  performance_targets:
+    scan_speed: "100+ files per minute"
+    accuracy_threshold: "95% correct technology identification"
+    false_positive_rate: "<2% incorrect dependencies"
+    update_detection_latency: "<24 hours for critical changes"
+    
+  integration_requirements:
+    knowledge_vault_schemas: ["technology-tracking-schema.yaml", "dependency-mapping-schema.yaml"]
+    mcp_servers_utilized: ["fetch", "github", "web-scraping"]
+    validation_framework: "ai-agent-instruction-design-excellence"

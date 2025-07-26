@@ -1,0 +1,355 @@
+# Resource Monitoring Thresholds Configuration
+# Defines thresholds and limits for system resource monitoring and adaptive scaling
+
+resource_thresholds:
+  # CPU utilization thresholds
+  cpu:
+    # Basic thresholds (percentage)
+    normal: 50.0
+    warning: 70.0
+    critical: 85.0
+    emergency: 95.0
+    
+    # Load average thresholds (for Unix/Linux systems)
+    load_average:
+      warning: 2.0
+      critical: 4.0
+      emergency: 8.0
+    
+    # Per-core thresholds
+    per_core:
+      enabled: true
+      warning: 80.0
+      critical: 90.0
+    
+    # Time-based thresholds
+    sustained_high_threshold: 80.0
+    sustained_duration_seconds: 300  # 5 minutes
+
+  # Memory utilization thresholds  
+  memory:
+    # RAM usage thresholds (percentage)
+    normal: 60.0
+    warning: 75.0
+    critical: 90.0
+    emergency: 97.0
+    
+    # Available memory thresholds (MB)
+    min_available_mb: 512
+    critical_available_mb: 256
+    emergency_available_mb: 128
+    
+    # Swap usage thresholds (percentage)
+    swap:
+      warning: 25.0
+      critical: 50.0
+      emergency: 80.0
+    
+    # Memory leak detection
+    leak_detection:
+      enabled: true
+      growth_rate_mb_per_hour: 100
+      monitoring_window_hours: 2
+
+  # Disk utilization thresholds
+  disk:
+    # Disk space thresholds (percentage)
+    normal: 70.0
+    warning: 80.0
+    critical: 95.0
+    emergency: 98.0
+    
+    # Free space thresholds (GB)
+    min_free_gb: 5.0
+    critical_free_gb: 1.0
+    emergency_free_gb: 0.5
+    
+    # I/O performance thresholds
+    io:
+      # Queue depth thresholds
+      avg_queue_depth_warning: 10
+      avg_queue_depth_critical: 20
+      
+      # Wait time thresholds (milliseconds)
+      avg_wait_time_warning: 20
+      avg_wait_time_critical: 50
+      
+      # IOPS thresholds
+      max_iops: 10000
+      warning_iops: 8000
+
+  # Network utilization thresholds
+  network:
+    # Bandwidth thresholds (Mbps)
+    warning_mbps: 100.0
+    critical_mbps: 500.0
+    emergency_mbps: 800.0
+    
+    # Connection thresholds
+    connections:
+      max_established: 1000
+      warning_established: 800
+      max_time_wait: 500
+      warning_time_wait: 300
+    
+    # Latency thresholds (milliseconds)
+    latency:
+      normal: 10.0
+      warning: 50.0
+      critical: 100.0
+      emergency: 500.0
+    
+    # Packet loss thresholds (percentage)
+    packet_loss:
+      warning: 0.1
+      critical: 1.0
+      emergency: 5.0
+    
+    # Network errors
+    errors:
+      max_error_rate: 0.01  # 1%
+      warning_error_rate: 0.005  # 0.5%
+
+  # Application-specific thresholds
+  application:
+    # Request handling thresholds
+    requests:
+      max_active: 100
+      warning_active: 80
+      max_queue_size: 1000
+      warning_queue_size: 500
+      
+      # Response time thresholds (milliseconds)
+      response_time:
+        target: 200
+        warning: 500
+        critical: 1000
+        timeout: 5000
+    
+    # Error rate thresholds
+    errors:
+      warning_rate: 0.01  # 1%
+      critical_rate: 0.05  # 5%
+      emergency_rate: 0.10  # 10%
+    
+    # Throughput thresholds (requests per second)
+    throughput:
+      min_expected: 10
+      target: 50
+      max_capacity: 200
+    
+    # Database connection thresholds
+    database:
+      max_connections: 100
+      warning_connections: 80
+      connection_timeout_ms: 5000
+      query_timeout_ms: 30000
+    
+    # Cache performance thresholds
+    cache:
+      min_hit_rate: 0.80  # 80%
+      warning_hit_rate: 0.70  # 70%
+      max_miss_rate: 0.30  # 30%
+
+# Scaling decision thresholds
+scaling:
+  # Scale up triggers
+  scale_up:
+    cpu_threshold: 75.0
+    memory_threshold: 80.0
+    queue_size_threshold: 50
+    response_time_threshold: 800  # milliseconds
+    error_rate_threshold: 0.02  # 2%
+    
+    # Sustained conditions required for scaling
+    sustained_duration_seconds: 180  # 3 minutes
+    consecutive_checks: 3
+  
+  # Scale down triggers  
+  scale_down:
+    cpu_threshold: 40.0
+    memory_threshold: 50.0
+    queue_size_threshold: 10
+    response_time_threshold: 200  # milliseconds
+    error_rate_threshold: 0.005  # 0.5%
+    
+    # Sustained conditions required for scaling
+    sustained_duration_seconds: 600  # 10 minutes
+    consecutive_checks: 5
+  
+  # Scaling limits
+  limits:
+    min_instances: 1
+    max_instances: 10
+    scale_up_cooldown_seconds: 300  # 5 minutes
+    scale_down_cooldown_seconds: 600  # 10 minutes
+    max_scale_up_step: 2  # Maximum instances to add at once
+    max_scale_down_step: 1  # Maximum instances to remove at once
+
+# Alert configuration for threshold violations
+alerting:
+  # Alert levels and their configurations
+  levels:
+    info:
+      enabled: true
+      notification_delay_seconds: 0
+      
+    warning:
+      enabled: true
+      notification_delay_seconds: 60  # 1 minute
+      escalation_delay_seconds: 300  # 5 minutes
+      
+    critical:
+      enabled: true
+      notification_delay_seconds: 0
+      escalation_delay_seconds: 60  # 1 minute
+      auto_remediation: true
+      
+    emergency:
+      enabled: true
+      notification_delay_seconds: 0
+      immediate_escalation: true
+      auto_remediation: true
+      circuit_breaker_trigger: true
+
+  # Alert suppression rules
+  suppression:
+    # Duplicate alert suppression
+    duplicate_window_seconds: 300  # 5 minutes
+    
+    # Maintenance window suppression
+    maintenance_windows:
+      enabled: false
+      windows: []  # Format: [{start: "02:00", end: "04:00", days: ["sunday"]}]
+    
+    # Threshold-based suppression
+    suppress_below_warning: true
+    suppress_flapping: true
+    flapping_detection_window: 600  # 10 minutes
+    flapping_threshold_count: 5
+
+# Health check configuration
+health_checks:
+  # System health check intervals
+  intervals:
+    fast_check_seconds: 5    # For critical metrics
+    normal_check_seconds: 30  # For standard metrics
+    slow_check_seconds: 300   # For historical trends
+  
+  # Health score calculation
+  scoring:
+    # Weight factors for different metrics
+    weights:
+      cpu: 0.25
+      memory: 0.25
+      disk: 0.20
+      network: 0.15
+      application: 0.15
+    
+    # Health score thresholds
+    healthy_threshold: 0.80
+    degraded_threshold: 0.60
+    unhealthy_threshold: 0.40
+  
+  # Failure detection
+  failure_detection:
+    consecutive_failures: 3
+    failure_window_seconds: 180  # 3 minutes
+    recovery_checks: 2
+
+# Performance optimization thresholds
+optimization:
+  # Batch size optimization triggers
+  batch_optimization:
+    performance_degradation_threshold: 0.20  # 20% degradation
+    resource_efficiency_threshold: 0.70  # 70% efficiency
+    adaptation_trigger_threshold: 0.15  # 15% performance change
+  
+  # Circuit breaker thresholds
+  circuit_breaker:
+    failure_rate_threshold: 0.50  # 50% failure rate
+    response_time_threshold: 2000  # 2 seconds
+    minimum_requests: 10
+    monitoring_window_seconds: 60
+    
+    # Circuit breaker state transitions
+    open_to_half_open_delay: 30  # seconds
+    half_open_success_threshold: 3
+    half_open_failure_threshold: 1
+  
+  # Load balancing optimization
+  load_balancing:
+    imbalance_threshold: 0.30  # 30% imbalance
+    response_time_variance_threshold: 200  # milliseconds
+    throughput_variance_threshold: 0.25  # 25% variance
+
+# Monitoring data retention and cleanup
+data_management:
+  # Retention policies
+  retention:
+    raw_metrics_hours: 24
+    aggregated_metrics_days: 7
+    historical_data_days: 30
+    alert_history_days: 90
+  
+  # Data aggregation intervals
+  aggregation:
+    short_term_minutes: 5
+    medium_term_hours: 1
+    long_term_days: 1
+  
+  # Cleanup thresholds
+  cleanup:
+    disk_usage_trigger: 0.85  # 85% disk usage
+    max_file_age_days: 30
+    max_log_size_mb: 100
+
+# Environment-specific threshold overrides
+environments:
+  development:
+    resource_thresholds:
+      cpu:
+        warning: 80.0
+        critical: 90.0
+      memory:
+        warning: 85.0
+        critical: 95.0
+    scaling:
+      scale_up:
+        sustained_duration_seconds: 60  # Faster scaling in dev
+      limits:
+        max_instances: 3
+  
+  staging:
+    resource_thresholds:
+      cpu:
+        warning: 75.0
+        critical: 87.0
+      memory:
+        warning: 80.0
+        critical: 92.0
+    scaling:
+      scale_up:
+        sustained_duration_seconds: 120
+      limits:
+        max_instances: 5
+  
+  production:
+    resource_thresholds:
+      cpu:
+        warning: 70.0
+        critical: 85.0
+      memory:
+        warning: 75.0
+        critical: 90.0
+    scaling:
+      scale_up:
+        sustained_duration_seconds: 300  # More conservative in prod
+      limits:
+        max_instances: 20
+    alerting:
+      levels:
+        warning:
+          notification_delay_seconds: 30
+        critical:
+          notification_delay_seconds: 0

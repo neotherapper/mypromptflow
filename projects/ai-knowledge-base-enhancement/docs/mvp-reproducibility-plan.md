@@ -16,7 +16,7 @@ Based on completed research in `research/findings/ai-workflow-reproducibility/`,
 ## MVP Components
 
 ### 1. Simple Workflow Recipe Meta-Prompt
-**Location**: `@ai/reproducibility/workflow-recipe.md`
+**Location**: `@ai/workflows/workflow-recipe.md`
 
 **Recipe Format**:
 ```yaml
@@ -43,7 +43,7 @@ workflow_recipe:
 4. **Success Criteria**: How to verify completion
 
 ### 2. Basic Snapshot System
-**Location**: `@ai/reproducibility/snapshot-manager.md`
+**Location**: `@ai/workflows/snapshot-manager.md`
 
 **Snapshot Contents**:
 1. **Document Dependencies**
@@ -62,7 +62,7 @@ workflow_recipe:
    - System configuration
 
 ### 3. Recreation Instructions
-**Location**: `@ai/reproducibility/recreation-guide.md`
+**Location**: `@ai/workflows/recreation-guide.md`
 
 **AI Agent Recreation Process**:
 1. **Load Workflow Recipe**: Read YAML specification
@@ -73,19 +73,19 @@ workflow_recipe:
 ## Implementation Steps
 
 ### Phase 1: Recipe System (Week 1)
-1. Create `@ai/reproducibility/workflow-recipe.md` meta-prompt
+1. Create `@ai/workflows/workflow-recipe.md` meta-prompt
 2. Define standard recipe format
 3. Test recipe creation for common workflows
 4. Document recipe writing guidelines
 
 ### Phase 2: Snapshot Creation (Week 2)
-1. Create `@ai/reproducibility/snapshot-manager.md`
+1. Create `@ai/workflows/snapshot-manager.md`
 2. Implement dependency state capture
 3. Add workflow parameter tracking
 4. Test snapshot creation process
 
 ### Phase 3: Recreation Testing (Week 3)
-1. Create `@ai/reproducibility/recreation-guide.md`
+1. Create `@ai/workflows/recreation-guide.md`
 2. Test recipe execution by different AI agents
 3. Validate reproducibility across scenarios
 4. Refine recipe format based on results
@@ -117,7 +117,7 @@ workflow_recipe:
 ## File Structure
 
 ```
-@ai/reproducibility/
+@ai/workflows/
 ├── workflow-recipe.md           # Core recipe creation meta-prompt
 ├── snapshot-manager.md          # Dependency and state capture
 ├── recreation-guide.md          # AI agent recreation instructions
@@ -159,7 +159,7 @@ workflow_recipe:
       input: "document_requirements"
       meta_prompt: "@ai/prompts/meta-prompts/document-generator.md"
     - action: "validate_output"
-      meta_prompt: "@ai/validation/simple-validator.md"
+      meta_prompt: "@ai/prompts/meta-prompts/simple-validator.md"
   success_criteria:
     - yaml_frontmatter_complete: true
     - required_sections_present: true

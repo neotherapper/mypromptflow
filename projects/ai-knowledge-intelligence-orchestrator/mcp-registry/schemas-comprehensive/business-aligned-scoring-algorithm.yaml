@@ -1,0 +1,189 @@
+# Business-Aligned Scoring Algorithm for MCP Servers
+# Prioritizes development and business tools to ensure enterprise success
+# Version 2.0 - Development Tools Focus
+
+metadata:
+  version: "2.0.0"
+  created: "2025-07-22"
+  purpose: "Business-aligned scoring algorithm prioritizing development/SDLC tools"
+  replaces: "Original information retrieval focused scoring (v1.0)"
+  focus: "Development infrastructure, databases, CI/CD, version control, testing"
+
+# New Business-Aligned Scoring Weights (Total: 100%)
+scoring_dimensions:
+  business_domain_relevance:
+    weight: 0.30  # 30% - Primary business value criterion
+    scale: "0-10"
+    description: "Relevance to core business operations and development workflows"
+    scoring_guide:
+      development_sdlc: 10  # Development/SDLC tools get maximum points
+      databases: 10  # Core infrastructure
+      version_control: 10  # Essential development
+      ci_cd: 10  # DevOps automation
+      testing: 9  # Quality assurance
+      apis_integration: 9  # System integration
+      cloud_platforms: 9  # Infrastructure
+      monitoring: 8  # Operations
+      productivity: 7  # Business tools
+      communication: 6  # Team coordination
+      content_management: 5  # Supporting tools
+      social_media: 3  # Marketing/engagement
+      gaming: 2  # Entertainment
+      demo_testing: 2  # Proof of concept
+      
+  technical_development_value:
+    weight: 0.25  # 25% - Technical value to development teams
+    scale: "0-10"
+    description: "Technical value and importance to development workflows"
+    scoring_guide:
+      core_infrastructure: 10  # Databases, file systems, version control
+      devops_automation: 9  # CI/CD, containerization, orchestration
+      development_apis: 8  # REST, GraphQL, OpenAPI
+      testing_quality: 8  # Testing frameworks, quality assurance
+      monitoring_observability: 7  # Application monitoring, metrics
+      productivity_tools: 6  # IDEs, documentation, project management
+      communication_tools: 5  # Team communication, collaboration
+      content_tools: 4  # Content management, creative tools
+      business_applications: 3  # CRM, ERP, business-specific
+      entertainment_social: 2  # Gaming, social media, leisure
+      
+  setup_complexity:
+    weight: 0.15  # 15% - Ease of implementation (reverse scored)
+    scale: "0-10 (10=simple, 1=complex)"
+    description: "Installation and configuration complexity"
+    scoring_guide:
+      no_dependencies: 10  # Ready to use
+      minimal_config: 9  # Basic configuration needed
+      standard_setup: 8  # Standard installation process
+      moderate_setup: 7  # Multiple steps, some dependencies
+      complex_setup: 5  # Multiple dependencies, configuration required
+      enterprise_setup: 4  # Enterprise infrastructure required
+      expert_setup: 3  # Expert knowledge required
+      very_complex: 2  # Extensive setup and configuration
+      extremely_complex: 1  # Prohibitively complex
+      
+  maintenance_status:
+    weight: 0.15  # 15% - Development and support status
+    scale: "0-10"
+    description: "Active development and maintenance quality"
+    scoring_guide:
+      official_anthropic: 10  # Official Anthropic servers
+      official_vendor: 9  # Official vendor maintained
+      commercial_supported: 8  # Commercial support available
+      active_community: 7  # Active community maintenance
+      regular_updates: 6  # Regular but infrequent updates
+      sporadic_updates: 5  # Occasional updates
+      minimal_activity: 4  # Minimal maintenance
+      inactive_maintained: 3  # No recent activity but functional
+      deprecated: 2  # Deprecated but still works
+      abandoned: 1  # Abandoned projects
+      
+  documentation_quality:
+    weight: 0.10  # 10% - Documentation and learning resources
+    scale: "0-10"
+    description: "Documentation completeness and quality"
+    scoring_guide:
+      excellent_complete: 10  # Comprehensive, clear, examples
+      good_comprehensive: 8  # Good coverage, mostly clear
+      adequate_basic: 6  # Basic documentation available
+      minimal_sufficient: 4  # Minimal but usable
+      poor_incomplete: 2  # Poor or incomplete
+      missing_none: 1  # No documentation
+      
+  community_adoption:
+    weight: 0.05  # 5% - Community usage and ecosystem
+    scale: "0-10"  
+    description: "Community usage and ecosystem support"
+    scoring_guide:
+      widespread_adoption: 10  # Widely used across industry
+      strong_adoption: 8  # Strong user base
+      moderate_adoption: 6  # Moderate usage
+      growing_adoption: 4  # Growing user base
+      niche_adoption: 3  # Niche but stable
+      limited_adoption: 2  # Limited usage
+      minimal_adoption: 1  # Very few users
+
+# Business Priority Categories for Development Focus
+business_priority_categories:
+  tier_1_critical:  # Business Domain Relevance = 10
+    - "databases"
+    - "version_control" 
+    - "development_apis"
+    - "file_systems"
+    - "ci_cd"
+    - "testing"
+    - "cloud_platforms"
+    
+  tier_2_important:  # Business Domain Relevance = 8-9
+    - "monitoring"
+    - "containerization"
+    - "devops_infrastructure"
+    - "system_automation"
+    - "productivity"
+    - "api_tools"
+    
+  tier_3_supporting:  # Business Domain Relevance = 6-7
+    - "communication"
+    - "project_management"
+    - "documentation"
+    - "business_intelligence"
+    - "content_management"
+    
+  tier_4_specialized:  # Business Domain Relevance = 3-5
+    - "creative_tools"
+    - "marketing"
+    - "social_media"
+    - "entertainment"
+    - "demo_testing"
+
+# Tier Thresholds (Unchanged)
+tier_thresholds:
+  tier_1_immediate: 8.0  # Top priority for immediate implementation
+  tier_2_medium_term: 6.0  # Good for enhanced capabilities  
+  tier_3_future: 0.0  # Future considerations
+
+# Composite Score Calculation
+# Score = (Business_Domain * 0.30) + (Technical_Value * 0.25) + (Setup_Simple * 0.15) + 
+#         (Maintenance * 0.15) + (Documentation * 0.10) + (Community * 0.05)
+
+# Development Server Priority Examples
+development_server_examples:
+  git_official:
+    business_domain_relevance: 10  # Essential development tool
+    technical_development_value: 10  # Core infrastructure
+    setup_complexity: 7  # Git installation required
+    maintenance_status: 10  # Official Anthropic
+    documentation_quality: 10  # Excellent
+    community_adoption: 9  # Widespread
+    composite_score: 9.4  # (10*0.30 + 10*0.25 + 7*0.15 + 10*0.15 + 10*0.10 + 9*0.05)
+    tier: "tier_1_immediate"
+    
+  postgresql:
+    business_domain_relevance: 10  # Critical database
+    technical_development_value: 10  # Core infrastructure
+    setup_complexity: 6  # Database setup required
+    maintenance_status: 9  # Well maintained
+    documentation_quality: 9  # Excellent docs
+    community_adoption: 10  # Very widespread
+    composite_score: 9.0  # (10*0.30 + 10*0.25 + 6*0.15 + 9*0.15 + 9*0.10 + 10*0.05)
+    tier: "tier_1_immediate"
+    
+  docker:
+    business_domain_relevance: 10  # Essential containerization
+    technical_development_value: 9  # DevOps automation
+    setup_complexity: 7  # Docker installation needed
+    maintenance_status: 8  # Community maintained
+    documentation_quality: 8  # Good documentation
+    community_adoption: 9  # Very popular
+    composite_score: 8.7  # (10*0.30 + 9*0.25 + 7*0.15 + 8*0.15 + 8*0.10 + 9*0.05)
+    tier: "tier_1_immediate"
+
+# Implementation Guidelines
+implementation_notes:
+  - "All development/SDLC tools should receive Business Domain Relevance = 10"
+  - "Database servers are critical infrastructure - prioritize highly"
+  - "Version control systems are essential - ensure Tier 1 placement"
+  - "CI/CD and testing tools enable automation - high priority"
+  - "Cloud platforms and APIs enable integration - important tier"
+  - "Community and social media tools receive lower business priority"
+  - "Maintain focus on enterprise development value over entertainment"

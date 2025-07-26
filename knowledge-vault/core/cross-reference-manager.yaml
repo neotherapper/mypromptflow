@@ -1,0 +1,409 @@
+# Cross-Reference Manager
+# Manages bidirectional relationships and cross-database references
+# Ensures consistency and integrity across the knowledge vault system
+
+manager_info:
+  name: "Cross-Reference Manager"
+  description: "Bidirectional relationship management and cross-database reference integrity"
+  version: "1.0.0"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+# Reference Format Specifications
+reference_formats:
+  internal_reference:
+    pattern: "@{database}/{item_id}"
+    regex: "^@([a-z_]+)/([0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$"
+    examples:
+      - "@knowledge_vault/a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+      - "@training_vault/b2c3d4e5-f6g7-8901-bcde-f23456789012" 
+      - "@business_ideas/c3d4e5f6-g7h8-9012-cdef-345678901234"
+    
+    validation_rules:
+      - "Database name must exist in system"
+      - "Item ID must be valid UUID v4"
+      - "Referenced item must exist"
+      - "Database must be accessible"
+  
+  external_reference:
+    pattern: "@external/{system}/{identifier}"
+    regex: "^@external/([a-z_]+)/(.+)$"
+    examples:
+      - "@external/notion/c3ab8f4e-e6fd-40c5-ad65-e0b69d303531"
+      - "@external/github/issues/123"
+      - "@external/jira/PROJ-456"
+    
+    supported_systems:
+      - "notion"
+      - "github"
+      - "jira"
+      - "confluence"
+      - "slack"
+    
+    validation_rules:
+      - "System must be in supported list"
+      - "Identifier format depends on external system"
+      - "External references are validated on access"
+
+# Relationship Types and Properties
+relationship_definitions:
+  hub_spoke_relationships:
+    # Knowledge Vault (Hub) to all other databases
+    knowledge_vault_relations:
+      - target_database: "training_vault"
+        property_name: "training_vault_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "learning_support"
+        cardinality: "many_to_many"
+        
+      - target_database: "business_ideas"
+        property_name: "business_ideas_relations" 
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "business_support"
+        cardinality: "many_to_many"
+        
+      - target_database: "platforms_sites"
+        property_name: "platforms_sites_relations"
+        dual_property: "knowledge_vault_relations" 
+        relationship_type: "platform_support"
+        cardinality: "many_to_many"
+        
+      - target_database: "tools_services"
+        property_name: "tools_services_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "tool_support"
+        cardinality: "many_to_many"
+        
+      - target_database: "notes_ideas"
+        property_name: "notes_ideas_relations"
+        dual_property: "knowledge_vault_relations"
+        relationship_type: "notes_support"
+        cardinality: "many_to_many"
+        
+  
+  cross_spoke_relationships:
+    # Direct relationships between spoke databases
+    training_business_connection:
+      source_database: "training_vault"
+      target_database: "business_ideas"
+      property_name: "business_ideas_relations"
+      dual_property: "training_vault_relations"
+      relationship_type: "skill_business_alignment"
+      cardinality: "many_to_many"
+    
+    business_tools_connection:
+      source_database: "business_ideas" 
+      target_database: "tools_services"
+      property_name: "tools_services_relations"
+      dual_property: "business_ideas_relations"
+      relationship_type: "implementation_tools"
+      cardinality: "many_to_many"
+    
+    notes_universal_connections:
+      source_database: "notes_ideas"
+      target_databases: ["training_vault", "business_ideas", "platforms_sites", "tools_services"]
+      property_pattern: "{target_database}_relations"
+      dual_property: "notes_ideas_relations"
+      relationship_type: "information_connection"
+      cardinality: "many_to_many"
+
+# Bidirectional Relationship Management
+bidirectional_management:
+  enforcement_rules:
+    mandatory_dual_properties:
+      enabled: true
+      description: "All relationships must have corresponding dual properties"
+      validation: "Create operation fails if dual property cannot be created"
+    
+    consistency_validation:
+      enabled: true
+      frequency: "on_every_change"
+      description: "Validate both sides of relationship exist and are consistent"
+    
+    cascade_operations:
+      update_propagation: true
+      delete_prevention: true
+      archive_coordination: true
+      status_synchronization: false  # Status changes don't cascade
+  
+  relationship_lifecycle:
+    creation:
+      steps:
+        - "Validate source and target items exist"
+        - "Check relationship constraints"
+        - "Create forward relationship property"
+        - "Create reverse relationship property"
+        - "Update relationship indexes"
+        - "Log relationship creation"
+    
+    modification:
+      steps:
+        - "Validate new relationship target exists"
+        - "Remove old reverse relationship"
+        - "Create new reverse relationship"
+        - "Update forward relationship"
+        - "Refresh relationship indexes"
+        - "Log relationship modification"
+    
+    deletion:
+      steps:
+        - "Identify all affected relationships"
+        - "Remove forward relationship property"
+        - "Remove reverse relationship property"
+        - "Update relationship indexes"
+        - "Log relationship deletion"
+        - "Check for orphaned items"
+
+# Reference Resolution Engine
+reference_resolution:
+  resolution_process:
+    internal_references:
+      steps:
+        - "Parse reference format"
+        - "Validate database exists"
+        - "Validate item ID format"
+        - "Check item exists in target database"
+        - "Verify access permissions"
+        - "Return resolved reference"
+    
+    external_references:
+      steps:
+        - "Parse reference format"
+        - "Validate external system"
+        - "Check external system connectivity"
+        - "Validate identifier format"
+        - "Attempt external resolution"
+        - "Cache resolution result"
+        - "Return resolved reference or error"
+  
+  caching_strategy:
+    internal_reference_caching:
+      enabled: true
+      ttl: 3600  # 1 hour
+      cache_hits_only: true
+      description: "Cache successful internal reference resolutions"
+    
+    external_reference_caching:
+      enabled: true
+      ttl: 1800  # 30 minutes
+      cache_failures: true
+      failure_retry_delay: 300  # 5 minutes
+      description: "Cache external reference resolutions with retry logic"
+  
+  error_handling:
+    missing_references:
+      action: "log_warning"
+      create_placeholder: false
+      notify_user: true
+      
+    broken_references:
+      action: "mark_broken"
+      auto_repair: false
+      escalate_threshold: 5
+      
+    circular_references:
+      action: "prevent_creation"
+      detection_depth: 10
+      log_attempts: true
+
+# Relationship Integrity Validation
+integrity_validation:
+  validation_types:
+    structural_validation:
+      orphan_detection:
+        enabled: true
+        description: "Detect relationships pointing to non-existent items"
+        frequency: "daily"
+        auto_cleanup: false
+      
+      circular_reference_detection:
+        enabled: true
+        description: "Detect and prevent circular relationship chains"
+        max_depth: 20
+        prevention: true
+      
+      duplicate_relationship_detection:
+        enabled: true
+        description: "Detect duplicate relationships between same items"
+        auto_deduplication: true
+    
+    consistency_validation:
+      bidirectional_consistency:
+        enabled: true
+        description: "Ensure both sides of relationship exist"
+        frequency: "on_change"
+        auto_repair: false
+      
+      constraint_validation:
+        enabled: true
+        description: "Validate relationship constraints and cardinalities"
+        frequency: "on_change"
+        strict_mode: true
+      
+      data_type_validation:
+        enabled: true
+        description: "Validate relationship property data types"
+        frequency: "on_change"
+        type_coercion: false
+  
+  validation_reporting:
+    validation_summary:
+      generate_daily: true
+      include_metrics: true
+      notify_on_errors: true
+      
+    validation_details:
+      log_all_validations: false
+      log_failures_only: true
+      include_stack_traces: true
+      
+    validation_metrics:
+      track_validation_performance: true
+      track_error_rates: true
+      track_auto_repair_success: true
+
+# Relationship Query Engine
+query_engine:
+  query_types:
+    direct_relationships:
+      syntax: "find_related({item_id}, {relationship_type})"
+      example: "find_related('uuid-123', 'training_vault_relations')"
+      result_format: "array_of_references"
+    
+    inverse_relationships:
+      syntax: "find_inverse_related({item_id}, {source_database}, {relationship_type})"
+      example: "find_inverse_related('uuid-456', 'knowledge_vault', 'training_vault_relations')"
+      result_format: "array_of_references"
+    
+    relationship_paths:
+      syntax: "find_path({source_item}, {target_item}, {max_depth})"
+      example: "find_path('uuid-123', 'uuid-789', 5)"
+      result_format: "array_of_paths"
+    
+    relationship_traversal:
+      syntax: "traverse_relationships({item_id}, {pattern}, {max_depth})"
+      example: "traverse_relationships('uuid-123', '*_relations', 3)"
+      result_format: "relationship_tree"
+  
+  query_optimization:
+    relationship_indexing:
+      enabled: true
+      index_types: ["forward", "reverse", "composite"]
+      update_strategy: "immediate"
+    
+    query_caching:
+      enabled: true
+      cache_complex_queries: true
+      ttl: 1800  # 30 minutes
+      max_cache_size: "100MB"
+    
+    lazy_loading:
+      enabled: true
+      load_on_access: true
+      prefetch_depth: 1
+
+# Relationship Analytics
+analytics:
+  relationship_metrics:
+    relationship_density:
+      description: "Average number of relationships per item"
+      calculation: "total_relationships / total_items"
+      tracking: "per_database"
+    
+    hub_centrality:
+      description: "How central the knowledge vault hub is"
+      calculation: "hub_connections / total_connections"
+      target_range: "0.6-0.8"
+    
+    relationship_distribution:
+      description: "Distribution of relationship types"
+      tracking: ["by_type", "by_database", "by_frequency"]
+      visualization: "histogram"
+  
+  health_indicators:
+    broken_relationship_rate:
+      description: "Percentage of relationships that are broken"
+      threshold: 0.05  # 5%
+      alert_level: "warning"
+    
+    orphan_item_rate:
+      description: "Percentage of items with no relationships"
+      threshold: 0.10  # 10%
+      alert_level: "info"
+    
+    circular_reference_count:
+      description: "Number of circular references detected"
+      threshold: 0
+      alert_level: "error"
+  
+  reporting:
+    relationship_health_report:
+      frequency: "weekly"
+      includes: ["metrics", "health_indicators", "trend_analysis"]
+      distribution: ["system_admin", "data_steward"]
+    
+    relationship_usage_report:
+      frequency: "monthly"
+      includes: ["usage_patterns", "popular_relationships", "recommendations"]
+      distribution: ["system_admin", "power_users"]
+
+# System Integration
+integration_points:
+  file_system_integration:
+    relationship_files:
+      location: "databases/{database}/relations/"
+      naming: "{source_db}_to_{target_db}_{property}.md"
+      format: "yaml"
+      
+    index_files:
+      location: "databases/{database}/indexes/"
+      naming: "{database}_relationships_index.md"
+      update_frequency: "on_change"
+  
+  validation_integration:
+    schema_validation:
+      enabled: true
+      validate_on_creation: true
+      validate_on_modification: true
+      
+    business_rule_validation:
+      enabled: true
+      custom_validators: true
+      validation_pipeline: true
+  
+  notification_integration:
+    relationship_events:
+      creation_notifications: true
+      modification_notifications: false
+      deletion_notifications: true
+      error_notifications: true
+    
+    batch_operations:
+      supported: true
+      batch_size_limit: 1000
+      progress_notifications: true
+
+# Configuration Management
+configuration:
+  global_settings:
+    strict_validation: true
+    auto_repair_enabled: false
+    performance_monitoring: true
+    debug_logging: false
+  
+  database_specific_settings:
+    knowledge_vault:
+      hub_role: true
+      relationship_limit_per_item: 1000
+      cascade_deletes: false
+    
+    spoke_databases:
+      relationship_limit_per_item: 100
+      require_hub_connection: true
+      cascade_deletes: false
+  
+  performance_tuning:
+    max_relationship_depth: 10
+    query_timeout: 30  # seconds
+    cache_size_limit: "200MB"
+    concurrent_operation_limit: 10

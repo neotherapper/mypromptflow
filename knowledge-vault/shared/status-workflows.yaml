@@ -1,0 +1,520 @@
+workflow_info:
+  name: Knowledge Vault Status Workflows
+  description: Standardized status workflows and transition rules for consistent lifecycle
+    management
+  version: 1.0.0
+  created: '2024-07-21'
+  last_updated: '2024-07-21'
+database_workflows:
+  knowledge_vault:
+    description: Central knowledge lifecycle management
+    workflow_type: linear_with_archive
+    statuses:
+    - id: to_explore
+      name: To Explore
+      description: Newly discovered knowledge item requiring exploration
+      color: default
+      initial_status: true
+    - id: in_review
+      name: In Review
+      description: Currently being evaluated and analyzed
+      color: yellow
+    - id: active_use
+      name: Active Use
+      description: Validated knowledge item in active use
+      color: green
+    - id: archived
+      name: Archived
+      description: No longer actively used but preserved for reference
+      color: gray
+      terminal_status: true
+    transitions:
+    - from: to_explore
+      to:
+      - in_review
+      - archived
+      auto_transition: false
+    - from: in_review
+      to:
+      - active_use
+      - to_explore
+      - archived
+      auto_transition: false
+    - from: active_use
+      to:
+      - in_review
+      - archived
+      auto_transition: false
+    - from: archived
+      to:
+      - to_explore
+      - in_review
+      - active_use
+      auto_transition: false
+      requires_justification: true
+    automation_rules:
+      inactive_timeout:
+        threshold_days: 180
+        action: suggest_archive
+        notification: true
+  training_vault:
+    description: Learning progression and completion tracking
+    workflow_type: linear_with_branches
+    statuses:
+    - id: to_do
+      name: To Do
+      description: Planned learning activity
+      color: yellow
+      initial_status: true
+    - id: doing_now
+      name: Doing Now
+      description: Currently active learning
+      color: green
+    - id: might_do
+      name: Might Do
+      description: Potential future learning, lower priority
+      color: orange
+    - id: completed
+      name: Completed
+      description: Successfully completed training
+      color: blue
+      terminal_status: true
+    - id: archived
+      name: Archived
+      description: No longer relevant or superseded
+      color: gray
+      terminal_status: true
+    transitions:
+    - from: to_do
+      to:
+      - doing_now
+      - might_do
+      - completed
+      - archived
+      auto_transition: false
+    - from: doing_now
+      to:
+      - completed
+      - to_do
+      - might_do
+      - archived
+      auto_transition: false
+    - from: might_do
+      to:
+      - to_do
+      - doing_now
+      - archived
+      auto_transition: false
+    - from: completed
+      to:
+      - archived
+      auto_transition: false
+    - from: archived
+      to:
+      - to_do
+      - might_do
+      auto_transition: false
+      requires_justification: true
+    automation_rules:
+      completion_detection:
+        trigger: certificate_earned = true
+        action: auto_transition
+        target_status: completed
+      stale_learning:
+        threshold_days: 90
+        action: suggest_might_do
+        notification: true
+  business_ideas:
+    description: Innovation development and validation pipeline
+    workflow_type: innovation_pipeline
+    statuses:
+    - id: ideation
+      name: Ideation
+      description: Initial idea capture and basic definition
+      color: yellow
+      initial_status: true
+    - id: research
+      name: Research
+      description: Market research and feasibility analysis
+      color: orange
+    - id: validation
+      name: Validation
+      description: Customer validation and problem-solution fit
+      color: blue
+    - id: development
+      name: Development
+      description: Active development and MVP creation
+      color: green
+    - id: launch
+      name: Launch
+      description: Launched and in market
+      color: red
+      terminal_status: true
+    - id: shelved
+      name: Shelved
+      description: Paused or discontinued but may be revisited
+      color: gray
+      terminal_status: true
+    transitions:
+    - from: ideation
+      to:
+      - research
+      - shelved
+      auto_transition: false
+    - from: research
+      to:
+      - validation
+      - ideation
+      - shelved
+      auto_transition: false
+    - from: validation
+      to:
+      - development
+      - research
+      - shelved
+      auto_transition: false
+      validation_required:
+      - customer_interviews
+      - market_research
+    - from: development
+      to:
+      - launch
+      - validation
+      - shelved
+      auto_transition: false
+    - from: launch
+      to:
+      - shelved
+      auto_transition: false
+      requires_justification: true
+    - from: shelved
+      to:
+      - ideation
+      - research
+      - validation
+      auto_transition: false
+      requires_justification: true
+    automation_rules:
+      validation_gate:
+        trigger: validation_status = validated
+        action: unlock_transition
+        target_status: development
+  platforms_sites:
+    description: Platform evaluation and usage lifecycle
+    workflow_type: evaluation_lifecycle
+    statuses:
+    - id: discovered
+      name: Discovered
+      description: Newly found platform requiring evaluation
+      color: yellow
+      initial_status: true
+    - id: evaluating
+      name: Evaluating
+      description: Currently testing and assessing capabilities
+      color: orange
+    - id: active_use
+      name: Active Use
+      description: Actively using for regular workflows
+      color: green
+    - id: occasional_use
+      name: Occasional Use
+      description: Used periodically for specific needs
+      color: blue
+    - id: archived
+      name: Archived
+      description: No longer used but preserved for reference
+      color: gray
+      terminal_status: true
+    - id: deprecated
+      name: Deprecated
+      description: Platform no longer viable or available
+      color: red
+      terminal_status: true
+    transitions:
+    - from: discovered
+      to:
+      - evaluating
+      - archived
+      auto_transition: false
+    - from: evaluating
+      to:
+      - active_use
+      - occasional_use
+      - discovered
+      - archived
+      - deprecated
+      auto_transition: false
+    - from: active_use
+      to:
+      - occasional_use
+      - evaluating
+      - archived
+      - deprecated
+      auto_transition: false
+    - from: occasional_use
+      to:
+      - active_use
+      - archived
+      - deprecated
+      auto_transition: false
+    - from: archived
+      to:
+      - discovered
+      - evaluating
+      auto_transition: false
+      requires_justification: true
+    - from: deprecated
+      to: []
+      auto_transition: false
+    automation_rules:
+      usage_tracking:
+        trigger: last_used > 180 days
+        action: suggest_archive
+        notification: true
+  tools_services:
+    description: Technology evaluation and adoption lifecycle
+    workflow_type: technology_adoption
+    statuses:
+    - id: discovered
+      name: Discovered
+      description: Newly identified tool or service
+      color: yellow
+      initial_status: true
+    - id: testing
+      name: Testing
+      description: Pilot testing and evaluation phase
+      color: orange
+    - id: adopted
+      name: Adopted
+      description: Fully integrated into tech stack
+      color: green
+    - id: evaluating
+      name: Evaluating
+      description: Ongoing evaluation for potential adoption
+      color: blue
+    - id: deprecated
+      name: Deprecated
+      description: Replaced or no longer recommended
+      color: red
+      terminal_status: true
+    - id: archived
+      name: Archived
+      description: No longer relevant but preserved
+      color: gray
+      terminal_status: true
+    transitions:
+    - from: discovered
+      to:
+      - testing
+      - evaluating
+      - archived
+      auto_transition: false
+    - from: testing
+      to:
+      - adopted
+      - evaluating
+      - discovered
+      - deprecated
+      - archived
+      auto_transition: false
+    - from: evaluating
+      to:
+      - testing
+      - adopted
+      - deprecated
+      - archived
+      auto_transition: false
+    - from: adopted
+      to:
+      - testing
+      - deprecated
+      - archived
+      auto_transition: false
+    - from: deprecated
+      to:
+      - discovered
+      - testing
+      auto_transition: false
+      requires_justification: true
+    - from: archived
+      to:
+      - discovered
+      - evaluating
+      auto_transition: false
+      requires_justification: true
+    automation_rules:
+      maturity_promotion:
+        trigger: maturity_level = stable AND rating >= 4
+        action: suggest_transition
+        target_status: adopted
+  notes_ideas:
+    description: Idea capture and development lifecycle
+    workflow_type: idea_development
+    statuses:
+    - id: captured
+      name: Captured
+      description: Initial capture of note or idea
+      color: yellow
+      initial_status: true
+    - id: processing
+      name: Processing
+      description: Being developed and refined
+      color: orange
+    - id: developed
+      name: Developed
+      description: Fully developed and actionable
+      color: green
+    - id: implemented
+      name: Implemented
+      description: Successfully implemented or acted upon
+      color: blue
+      terminal_status: true
+    - id: archived
+      name: Archived
+      description: Preserved for reference but not active
+      color: gray
+      terminal_status: true
+    - id: discarded
+      name: Discarded
+      description: Determined to be not viable or relevant
+      color: red
+      terminal_status: true
+    transitions:
+    - from: captured
+      to:
+      - processing
+      - developed
+      - archived
+      - discarded
+      auto_transition: false
+    - from: processing
+      to:
+      - developed
+      - captured
+      - archived
+      - discarded
+      auto_transition: false
+    - from: developed
+      to:
+      - implemented
+      - processing
+      - archived
+      auto_transition: false
+    - from: implemented
+      to:
+      - archived
+      auto_transition: false
+    - from: archived
+      to:
+      - captured
+      - processing
+      auto_transition: false
+      requires_justification: true
+    - from: discarded
+      to: []
+      auto_transition: false
+    automation_rules:
+      action_tracking:
+        trigger: action_required != none AND action_due_date < today
+        action: send_reminder
+        notification: true
+global_rules:
+  transition_logging:
+    enabled: true
+    log_user: true
+    log_timestamp: true
+    log_reason: true
+  validation_requirements:
+    terminal_to_active_transition:
+      requires_justification: true
+      approval_required: false
+  notification_settings:
+    automation_notifications: true
+    transition_notifications: false
+    reminder_notifications: true
+  audit_trail:
+    enabled: true
+    retention_days: 365
+    include_old_values: true
+metrics:
+  transition_tracking:
+  - Average time in each status
+  - Most common transition paths
+  - Bottleneck identification
+  - Completion rates by workflow
+  automation_effectiveness:
+  - Automation rule trigger frequency
+  - User override rates
+  - Notification response rates
+  workflow_health:
+  - Items stuck in status > threshold
+  - Workflow completion rates
+  - User satisfaction with workflows
+file_system_integration:
+  status_change_triggers:
+  - Update file metadata on status change
+  - Move files based on status (if configured)
+  - Update cross-references on terminal status
+  validation_hooks:
+  - Validate required fields before status transition
+  - Check relationship consistency
+  - Verify business rules compliance
+  synchronization:
+  - Sync status changes to Notion (if enabled)
+  - Update search indexes on status change
+  - Trigger dependent workflow updates
+technology_tracking_workflow:
+  states:
+  - monitoring
+  - active
+  - deprecated
+  - archived
+  transitions:
+    monitoring:
+    - active
+    - deprecated
+    active:
+    - deprecated
+    - archived
+    deprecated:
+    - archived
+    archived: []
+dependency_update_workflow:
+  states:
+  - detected
+  - analyzing
+  - approved
+  - updating
+  - completed
+  - failed
+  transitions:
+    detected:
+    - analyzing
+    analyzing:
+    - approved
+    - failed
+    approved:
+    - updating
+    updating:
+    - completed
+    - failed
+    completed: []
+    failed:
+    - analyzing
+change_event_workflow:
+  states:
+  - detected
+  - classified
+  - impact_assessed
+  - processed
+  - completed
+  transitions:
+    detected:
+    - classified
+    classified:
+    - impact_assessed
+    impact_assessed:
+    - processed
+    processed:
+    - completed
+    completed: []

@@ -1,0 +1,353 @@
+# Shared Tags Vocabulary
+# Standardized tagging system across all knowledge vault databases
+# Ensures consistency and enables cross-database tag-based searches
+
+vocabulary_info:
+  name: "Knowledge Vault Tags Vocabulary"
+  description: "Standardized tag definitions and hierarchies for consistent categorization"
+  version: "1.0.0"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+# Tag Categories and Hierarchies
+tag_categories:
+  
+  # TECHNOLOGY TAGS
+  technology:
+    description: "Technology-related categorization"
+    primary_tags:
+      - tag: "ai"
+        name: "AI"
+        description: "Artificial Intelligence, Machine Learning, and AI tools"
+        color: "red"
+        aliases: ["artificial-intelligence", "machine-learning", "ml", "ai-tools"]
+        
+      - tag: "automation"
+        name: "Automation"
+        description: "Process automation, workflow automation, and automated tools"
+        color: "blue"
+        aliases: ["process-automation", "workflow-automation", "automated-tools"]
+        
+      - tag: "developer-tools"
+        name: "Developer Tools"
+        description: "Development tools, IDEs, frameworks, and programming utilities"
+        color: "purple"
+        aliases: ["dev-tools", "programming-tools", "development-utilities"]
+        
+      - tag: "integration"
+        name: "Integration"
+        description: "API integration, system integration, and connectivity solutions"
+        color: "green"
+        aliases: ["api-integration", "system-integration", "connectivity"]
+        
+      - tag: "no-code"
+        name: "No-Code"
+        description: "No-code platforms, visual development, and citizen developer tools"
+        color: "orange"
+        aliases: ["low-code", "visual-development", "citizen-developer"]
+        
+      - tag: "software-development"
+        name: "Software Development"
+        description: "Software engineering, coding practices, and development methodologies"
+        color: "blue"
+        aliases: ["software-engineering", "coding", "programming", "development"]
+        
+      - tag: "tech-stack"
+        name: "Tech Stack"
+        description: "Technology stacks, architecture choices, and technical infrastructure"
+        color: "purple"
+        aliases: ["technology-stack", "architecture", "infrastructure"]
+  
+  # BUSINESS TAGS
+  business:
+    description: "Business-related categorization"
+    primary_tags:
+      - tag: "business-strategy"
+        name: "Business Strategy"
+        description: "Strategic planning, business models, and strategic initiatives"
+        color: "red"
+        aliases: ["strategy", "strategic-planning", "business-models"]
+        
+      - tag: "cost-optimization"
+        name: "Cost Optimization"
+        description: "Cost reduction, efficiency improvements, and resource optimization"
+        color: "yellow"
+        aliases: ["cost-reduction", "optimization", "efficiency"]
+        
+      - tag: "customer-experience"
+        name: "Customer Experience"
+        description: "Customer service, user experience, and customer satisfaction"
+        color: "green"
+        aliases: ["customer-service", "user-experience", "cx", "ux"]
+        
+      - tag: "digital-marketing"
+        name: "Digital Marketing"
+        description: "Online marketing, digital advertising, and marketing automation"
+        color: "orange"
+        aliases: ["online-marketing", "digital-advertising", "marketing-automation"]
+        
+      - tag: "entrepreneurship"
+        name: "Entrepreneurship"
+        description: "Startup development, business creation, and entrepreneurial resources"
+        color: "red"
+        aliases: ["startups", "business-creation", "entrepreneurial"]
+        
+      - tag: "finance"
+        name: "Finance"
+        description: "Financial management, accounting, and financial tools"
+        color: "green"
+        aliases: ["financial-management", "accounting", "fintech"]
+        
+      - tag: "growth-hacking"
+        name: "Growth Hacking"
+        description: "Growth strategies, user acquisition, and viral marketing"
+        color: "orange"
+        aliases: ["growth-strategies", "user-acquisition", "viral-marketing"]
+        
+      - tag: "sales"
+        name: "Sales"
+        description: "Sales processes, CRM, and sales enablement tools"
+        color: "blue"
+        aliases: ["sales-processes", "crm", "sales-enablement"]
+  
+  # PRODUCTIVITY TAGS
+  productivity:
+    description: "Productivity and efficiency categorization"
+    primary_tags:
+      - tag: "design"
+        name: "Design"
+        description: "Design tools, UI/UX design, and creative resources"
+        color: "purple"
+        aliases: ["ui-design", "ux-design", "graphic-design", "creative"]
+        
+      - tag: "efficiency"
+        name: "Efficiency"
+        description: "Productivity tools, time management, and efficiency optimization"
+        color: "green"
+        aliases: ["productivity-tools", "time-management", "optimization"]
+        
+      - tag: "innovation"
+        name: "Innovation"
+        description: "Innovation management, creative thinking, and disruptive technologies"
+        color: "red"
+        aliases: ["innovation-management", "creative-thinking", "disruptive"]
+        
+      - tag: "productivity"
+        name: "Productivity"
+        description: "Personal productivity, workflow optimization, and productivity systems"
+        color: "blue"
+        aliases: ["personal-productivity", "workflow-optimization", "productivity-systems"]
+        
+      - tag: "project-management"
+        name: "Project Management"
+        description: "Project management tools, methodologies, and team collaboration"
+        color: "orange"
+        aliases: ["project-tools", "team-collaboration", "agile", "scrum"]
+  
+  # INDUSTRY VERTICAL TAGS
+  industry:
+    description: "Industry-specific categorization"
+    primary_tags:
+      - tag: "edtech"
+        name: "EdTech"
+        description: "Educational technology and learning platforms"
+        color: "blue"
+        aliases: ["educational-technology", "learning-platforms", "education"]
+        
+      - tag: "fintech"
+        name: "FinTech"
+        description: "Financial technology and digital banking solutions"
+        color: "green"
+        aliases: ["financial-technology", "digital-banking", "payments"]
+        
+      - tag: "healthtech"
+        name: "HealthTech"
+        description: "Healthcare technology and medical innovation"
+        color: "red"
+        aliases: ["healthcare-technology", "medical-technology", "digital-health"]
+        
+      - tag: "proptech"
+        name: "PropTech"
+        description: "Property technology and real estate innovation"
+        color: "orange"
+        aliases: ["property-technology", "real-estate-tech", "real-estate"]
+        
+      - tag: "legaltech"
+        name: "LegalTech"
+        description: "Legal technology and law practice innovation"
+        color: "purple"
+        aliases: ["legal-technology", "law-tech", "legal-innovation"]
+        
+      - tag: "insurtech"
+        name: "InsurTech"
+        description: "Insurance technology and digital insurance solutions"
+        color: "yellow"
+        aliases: ["insurance-technology", "digital-insurance", "insurance-innovation"]
+  
+  # BUSINESS MODEL TAGS
+  business_model:
+    description: "Business model categorization"
+    primary_tags:
+      - tag: "saas"
+        name: "SaaS"
+        description: "Software as a Service platforms and tools"
+        color: "blue"
+        aliases: ["software-as-a-service", "cloud-software", "subscription-software"]
+        
+      - tag: "marketplace"
+        name: "Marketplace"
+        description: "Marketplace platforms and multi-sided business models"
+        color: "green"
+        aliases: ["platform-business", "multi-sided-platform", "marketplace-model"]
+        
+      - tag: "e-commerce"
+        name: "E-Commerce"
+        description: "Electronic commerce and online retail solutions"
+        color: "orange"
+        aliases: ["online-retail", "digital-commerce", "ecommerce"]
+        
+      - tag: "subscription"
+        name: "Subscription"
+        description: "Subscription-based business models and recurring revenue"
+        color: "purple"
+        aliases: ["subscription-model", "recurring-revenue", "subscription-business"]
+        
+      - tag: "platform"
+        name: "Platform"
+        description: "Platform business models and ecosystem strategies"
+        color: "red"
+        aliases: ["platform-business", "ecosystem", "platform-strategy"]
+  
+  # LEARNING AND DEVELOPMENT TAGS
+  learning:
+    description: "Learning and skill development categorization"
+    primary_tags:
+      - tag: "programming"
+        name: "Programming"
+        description: "Programming languages, coding skills, and software development"
+        color: "blue"
+        aliases: ["coding", "software-development", "programming-languages"]
+        
+      - tag: "web-development"
+        name: "Web Development"
+        description: "Web development technologies, frameworks, and tools"
+        color: "green"
+        aliases: ["frontend", "backend", "full-stack", "web-tech"]
+        
+      - tag: "data-science"
+        name: "Data Science"
+        description: "Data analysis, machine learning, and data engineering"
+        color: "red"
+        aliases: ["data-analysis", "machine-learning", "data-engineering"]
+        
+      - tag: "cybersecurity"
+        name: "Cybersecurity"
+        description: "Information security, cybersecurity tools, and security practices"
+        color: "red"
+        aliases: ["information-security", "security", "infosec"]
+        
+      - tag: "devops"
+        name: "DevOps"
+        description: "DevOps practices, CI/CD, and infrastructure automation"
+        color: "orange"
+        aliases: ["ci-cd", "infrastructure-automation", "deployment"]
+        
+      - tag: "communication"
+        name: "Communication"
+        description: "Communication skills, presentation, and interpersonal skills"
+        color: "blue"
+        aliases: ["presentation", "interpersonal-skills", "public-speaking"]
+        
+      - tag: "leadership"
+        name: "Leadership"
+        description: "Leadership development, management skills, and team building"
+        color: "brown"
+        aliases: ["management", "team-building", "leadership-development"]
+        
+      - tag: "creativity"
+        name: "Creativity"
+        description: "Creative skills, design thinking, and innovation techniques"
+        color: "purple"
+        aliases: ["design-thinking", "innovation", "creative-thinking"]
+
+# Tag Validation Rules
+validation_rules:
+  tag_format:
+    pattern: "^[a-z0-9-]+$"
+    description: "Tags must be lowercase, alphanumeric, with hyphens only"
+    max_length: 50
+    
+  color_validation:
+    allowed_colors: ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "gray", "default"]
+    
+  alias_validation:
+    max_aliases: 10
+    unique_aliases: true
+    no_duplicate_main_tags: true
+    
+  hierarchy_validation:
+    max_category_depth: 3
+    consistent_naming: true
+    no_circular_references: true
+
+# Usage Guidelines
+usage_guidelines:
+  tag_selection:
+    - "Use the most specific tag available"
+    - "Combine multiple tags when content spans categories"
+    - "Prefer primary tags over aliases"
+    - "Maintain consistency across databases"
+    
+  new_tag_creation:
+    - "Check existing vocabulary before creating new tags"
+    - "Follow naming conventions (lowercase, hyphen-separated)"
+    - "Add to appropriate category"
+    - "Define clear description and aliases"
+    
+  cross_database_consistency:
+    - "All databases should use same tag vocabulary"
+    - "Regular vocabulary updates should be synchronized"
+    - "Tag meanings should remain consistent across contexts"
+    
+# Database Integration
+database_integration:
+  knowledge_vault:
+    uses: "All categories"
+    primary_focus: ["technology", "business", "productivity"]
+    
+  training_vault:
+    uses: "Learning and development tags"
+    primary_focus: ["learning", "technology", "business"]
+    
+  business_ideas:
+    uses: "Business model and industry tags"
+    primary_focus: ["industry", "business_model", "business"]
+    
+  platforms_sites:
+    uses: "Technology and productivity tags"
+    primary_focus: ["technology", "productivity", "business"]
+    
+  tools_services:
+    uses: "Technology and business tags"
+    primary_focus: ["technology", "business", "productivity"]
+    
+  notes_ideas:
+    uses: "All categories for flexible organization"
+    primary_focus: ["all categories"]
+    
+
+# Maintenance and Updates
+maintenance:
+  review_frequency: "quarterly"
+  update_process:
+    - "Review tag usage patterns across databases"
+    - "Identify missing or underused tags"
+    - "Consolidate similar tags"
+    - "Update descriptions and aliases"
+    - "Synchronize across all databases"
+    
+  quality_metrics:
+    - "Tag usage distribution"
+    - "Consistency across databases"
+    - "User adoption of new tags"
+    - "Search effectiveness with tags"

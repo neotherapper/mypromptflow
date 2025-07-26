@@ -1,0 +1,186 @@
+# AI Knowledge Lifecycle Orchestrator - Change Detection Engine
+# Python dependencies for production-ready change detection system
+
+# Core Python Version: 3.13+
+
+# Async/IO and Concurrency
+asyncio-mqtt==0.16.2          # MQTT client for async/await
+aiohttp==3.9.5               # Async HTTP client/server
+aiofiles==23.2.1             # Async file operations
+aiosqlite==0.20.0            # Async SQLite interface
+
+# Configuration and Data Management
+PyYAML==6.0.1                # YAML configuration parsing
+pydantic==2.7.3              # Data validation and settings management
+marshmallow==3.21.3          # Object serialization/deserialization
+dataclasses-json==0.6.7     # JSON serialization for dataclasses
+
+# Version Management and Semantic Versioning
+semver==3.0.2                # Semantic version parsing and comparison
+packaging==24.1               # Version specifier parsing
+requests==2.32.3             # HTTP requests (for MCP server communication)
+
+# Scheduling and Task Management
+schedule==1.2.2              # Job scheduling library
+APScheduler==3.10.4          # Advanced Python Scheduler
+celery==5.3.7                # Distributed task queue (optional)
+
+# Database and Storage
+SQLAlchemy==2.0.31           # SQL toolkit and ORM
+alembic==1.13.2              # Database migration tool
+redis==5.0.7                 # Redis client for caching
+sqlite3                      # SQLite (built-in)
+
+# Logging and Monitoring
+structlog==24.2.0            # Structured logging
+prometheus-client==0.20.0   # Prometheus metrics client
+sentry-sdk==2.7.1            # Error tracking and performance monitoring
+
+# Web Framework (for REST API)
+fastapi==0.112.0             # Modern web framework
+uvicorn==0.30.1              # ASGI server
+starlette==0.37.2            # ASGI framework
+
+# Security and Authentication
+cryptography==42.0.8        # Cryptographic utilities
+jwt==1.3.1                  # JSON Web Token
+bcrypt==4.1.3               # Password hashing
+
+# Data Processing and Analysis
+pandas==2.2.2               # Data manipulation and analysis
+numpy==1.26.4               # Numerical computing
+regex==2024.5.15            # Advanced regex operations
+beautifulsoup4==4.12.3      # HTML/XML parsing
+
+# Network and Protocol Support
+websockets==12.0             # WebSocket client/server
+grpcio==1.64.1              # gRPC framework
+protobuf==5.27.2            # Protocol buffers
+
+# Development and Testing
+pytest==8.2.2               # Testing framework
+pytest-asyncio==0.23.7      # Async testing support
+pytest-cov==5.0.0           # Coverage reporting
+black==24.4.2               # Code formatting
+flake8==7.1.0               # Code linting
+mypy==1.10.1                # Static type checking
+isort==5.13.2               # Import sorting
+
+# Documentation
+sphinx==7.3.7               # Documentation generator
+sphinx-rtd-theme==2.0.0     # Read the Docs theme
+
+# Performance and Profiling
+memory-profiler==0.61.0     # Memory usage profiling
+line-profiler==4.1.3        # Line-by-line profiling
+py-spy==0.3.14              # Sampling profiler
+
+# Utility Libraries
+click==8.1.7                # Command line interface creation
+tqdm==4.66.4                # Progress bars
+colorama==0.4.6             # Cross-platform colored terminal text
+python-dotenv==1.0.1        # Environment variable loading
+pathlib                     # Path manipulation (built-in Python 3.4+)
+typing-extensions==4.12.2   # Extended typing support
+
+# Time and Date Handling
+python-dateutil==2.9.0.post0  # Date/time parsing
+pytz==2024.1                 # Timezone definitions
+
+# JSON and Data Serialization
+orjson==3.10.5              # Fast JSON library
+msgpack==1.0.8              # MessagePack serialization
+
+# Circuit Breaker and Resilience
+pybreaker==1.2.0            # Circuit breaker pattern implementation
+tenacity==8.5.0             # Retry library with various strategies
+
+# Health Checking and Monitoring
+healthcheck==1.3.3          # Health check endpoints
+psutil==6.0.0               # System and process utilities
+
+# Optional Dependencies for Enhanced Functionality
+# Uncomment if needed for specific features
+
+# Machine Learning and NLP (for advanced change classification)
+# scikit-learn==1.5.1        # Machine learning library
+# spacy==3.7.5               # NLP library for text processing
+# transformers==4.42.3       # Transformer models for AI
+
+# Graph Database Support (for dependency tracking)
+# neo4j==5.22.0              # Neo4j graph database driver
+
+# Message Queue Support
+# pika==1.3.2               # RabbitMQ client
+# kafka-python==2.0.2       # Apache Kafka client
+
+# Cloud Provider SDKs (uncomment if using cloud services)
+# boto3==1.34.144           # AWS SDK
+# google-cloud-storage==2.18.0  # Google Cloud Storage
+# azure-storage-blob==12.21.0   # Azure Blob Storage
+
+# Container and Kubernetes Integration
+# kubernetes==30.1.0        # Kubernetes client
+# docker==7.1.0             # Docker client
+
+# Development Environment Specific
+# jupyter==1.0.0            # Jupyter notebook
+# ipython==8.25.0           # Enhanced Python shell
+
+# Performance Optimization
+cython==3.0.10              # C extensions for Python performance
+
+# Configuration Validation
+cerberus==1.3.5             # Lightweight data validation
+
+# HTTP/REST API Testing
+httpx==0.27.0               # Modern HTTP client for testing
+
+# Background Task Processing
+rq==1.16.2                  # Simple job queues for Python
+
+# File System Monitoring (for configuration file changes)
+watchdog==4.0.1             # File system event monitoring
+
+# Email Notifications (for alerting)
+yagmail==0.15.293           # Simple email sending
+
+# Slack/Discord Notifications (for alerting)
+slack-sdk==3.29.0           # Slack SDK for notifications
+# discord.py==2.4.0         # Discord API wrapper
+
+# Environment and Configuration Management
+environs==11.0.0            # Environment variable parsing
+dynaconf==3.2.5             # Configuration management
+
+# Dependency injection (for enterprise patterns)
+dependency-injector==4.41.0 # Dependency injection framework
+
+# Rate Limiting
+limits==3.13.0              # Rate limiting utilities
+
+# Data Validation and Serialization
+cattrs==23.2.3              # Composable data conversion library
+
+# Metrics and Observability
+opentelemetry-api==1.25.0   # OpenTelemetry tracing
+opentelemetry-sdk==1.25.0   # OpenTelemetry SDK
+
+# CLI Enhancements
+rich==13.7.1                # Rich text and beautiful formatting in terminal
+
+# Performance Monitoring
+py-cpuinfo==9.0.0           # CPU information
+distro==1.9.0               # Linux distribution information
+
+# Security Scanning and Compliance
+safety==3.2.3               # Security vulnerability scanner
+bandit==1.7.9               # Security linter for Python
+
+# Code Quality and Standards
+pre-commit==3.7.1           # Git hooks for code quality
+pylint==3.2.5               # Code analysis and quality checking
+
+# API Documentation
+redoc==2.1.0                # API documentation
+swagger-ui-bundle==0.0.9    # Swagger UI for API docs

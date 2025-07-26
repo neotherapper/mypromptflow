@@ -9,7 +9,7 @@ This document maps existing research findings relevant to the AI Knowledge Intel
 ### AI Agent Orchestration and Coordination
 
 #### Meta-Framework Analysis Research
-**Source**: `@research/findings/meta-frameworks-analysis/comprehensive-analysis.md`
+**Source**: `@research/findings/archive/meta-frameworks-analysis/comprehensive-analysis.md`
 
 **Applicable Findings**:
 - **SuperClaude Token Optimization**: 70% token reduction through progressive detail levels and shared context pools
@@ -120,7 +120,7 @@ This document maps existing research findings relevant to the AI Knowledge Intel
 ### Technology Integration and Implementation
 
 #### MCP Integration Research
-**Source**: `@research/findings/figma-mcp-integration/reports/comprehensive-analysis.md`
+**Source**: `@research/findings/mcp-servers-2025/research/comprehensive-mcp-ecosystem-analysis.md`
 
 **Applicable Findings**:
 - **Local SSE Server Implementation**: Localhost:3845 JSON-RPC 2.0 for 30-50% token reduction

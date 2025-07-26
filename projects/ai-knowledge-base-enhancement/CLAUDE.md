@@ -86,6 +86,26 @@ This project enhances the existing AI knowledge base system at `@ai/` with produ
 - **Reproducibility**: Any AI agent can recreate workflows with 100% fidelity
 - **Research**: All enhancements backed by comprehensive research analysis
 
+## Quality Standards
+
+**Framework Validation Requirements**:
+- Validation system accuracy: ≥90% document quality assessment
+- Error handling coverage: ≥95% agent failure recovery rate
+- Reproducibility score: 100% workflow recreation fidelity
+- Research framework compliance: ≥95% with constitutional AI validation
+
+**Implementation Quality Metrics**:
+- Code quality: Zero implementation required (pure meta-prompting approach)
+- Documentation completeness: ≥95% coverage of all framework components
+- Cross-reference accuracy: 100% internal path resolution
+- AI agent actionability: ≤5 minutes execution time for all workflows
+
+**Integration Standards**:
+- Existing system compatibility: 100% backward compatibility with `@ai/` system
+- Claude Code integration: Full interactive terminal workflow support
+- Research orchestrator integration: Automatic triggering for all research tasks
+- Command system compliance: Full dual interface compatibility
+
 ## File Structure
 
 **Current Structure (Updated):**
@@ -148,6 +168,24 @@ When working on this project:
 - **System Architecture**: `@docs/system_overview.md` - AI Knowledge Base system architecture and components
 - **Command System**: `@docs/command_integration_guide.md` - Dual interface system and command execution patterns
 - **Research Framework**: `@docs/ai_research_framework_overview.md` - Advanced research orchestration capabilities
+
+## Task Management
+
+**Current Tasks**: Reference `task-list.md` for implementation priorities and phase-specific objectives
+**Progress Tracking**: Update `progress.md` with phase completion results and framework implementation status
+**Research Integration**: See `research-integration.md` for research applications and enhancement strategies
+
+**Task Completion Protocol**:
+1. **Mark Completed Tasks**: Update task status in `task-list.md` with completion timestamp and quality metrics
+2. **Document Progress**: Add detailed phase progress to `progress.md` with specific enhancement outcomes
+3. **Validate Framework Integration**: Ensure all enhancements maintain 95%+ validation standards and backward compatibility
+4. **Update Research Context**: Track research applications and integration success in research documentation
+5. **Cross-Reference Updates**: Verify all file references remain accessible and current with enhancement changes
+
+**Phase-Based Task Organization**:
+- **Phase 1 (Current)**: Validation & Quality Framework implementation with 90%+ accuracy targets
+- **Phase 2 (Next)**: Error Handling & Recovery system with 95%+ failure recovery rates
+- **Phase 3 (Future)**: AI-Agent Reproducibility framework with 100% workflow recreation fidelity
 
 ## Cross-References
 

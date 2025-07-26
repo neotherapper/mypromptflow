@@ -16,7 +16,7 @@ Based on completed research in `research/findings/ai-validation-frameworks/`, th
 ## MVP Components
 
 ### 1. Simple Document Validator Meta-Prompt
-**Location**: `@ai/validation/simple-validator.md`
+**Location**: `@meta/validation/validators/ai-instruction/simple-validator.md`
 
 **Validation Layers**:
 1. **Structural Validation**
@@ -40,7 +40,7 @@ Based on completed research in `research/findings/ai-validation-frameworks/`, th
 ### 2. Integration Points
 
 **With Existing System**:
-- Enhance `@ai/prompts/meta-prompts/quality-validator.md` with simplified validation
+- Enhance `@meta/validation/validators/ai-instruction/quality-validator.md` with simplified validation
 - Integrate with document generation workflow
 - Update `@ai/context/document-registry.yaml` to track validation scores
 - Connect to existing slash commands for validation on demand
@@ -85,7 +85,7 @@ interface ValidationScore {
 ## Implementation Steps
 
 ### Phase 1: Core Validator (Week 1)
-1. Create `@ai/validation/simple-validator.md` meta-prompt
+1. Create `@meta/validation/validators/ai-instruction/simple-validator.md` meta-prompt
 2. Test with 3-5 existing documents
 3. Refine validation criteria based on results
 4. Document validation workflow
@@ -130,7 +130,7 @@ interface ValidationScore {
 ## File Structure
 
 ```
-@ai/validation/
+@meta/validation/validators/ai-instruction/
 ├── simple-validator.md          # Core validation meta-prompt
 ├── validation-criteria.md       # Detailed scoring criteria
 └── integration-guide.md         # How to use with existing system

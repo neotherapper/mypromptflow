@@ -110,11 +110,25 @@
 ## ⚙️ Setup & Configuration
 
 ### Setup Complexity
-**Low Complexity (10/10)** - Estimated setup time: 5-10 minutes
+**Low Complexity (2/10)** - Estimated setup time: 5-15 minutes
 
-### Installation Steps
+### Installation Methods (Priority Order)
 
-#### Method 1: Python UV (Recommended)
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+```bash
+# Docker MCP setup (if available)
+docker run -d --name fetch-mcp \
+  -e MCP_FETCH_USER_AGENT="YourApp/1.0" \
+  -p 3000:3000 \
+  modelcontextprotocol/server-fetch
+
+# Test connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+```
+
+#### Method 2: 📦 Package Manager Installation - Python UV
 ```bash
 # Install UV package manager
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -122,26 +136,35 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install Fetch server
 uv tool install mcp-server-fetch
 
-# Configure in your MCP client
-# Test with simple URL fetch
+# Configure environment
+export MCP_FETCH_USER_AGENT="YourApp/1.0"
+
+# Initialize and test
+uv run mcp-server-fetch --test-fetch https://example.com
 ```
 
-#### Method 2: PIP
+#### Method 3: 📦 Package Manager Installation - PIP
 ```bash
 # Ensure Python 3.9+ is installed
 pip install mcp-server-fetch
 
-# Add to MCP client configuration
-# Verify installation with test fetch
+# Configure environment
+export MCP_FETCH_USER_AGENT="YourApp/1.0"
+
+# Add to MCP client configuration and test
+python -m mcp_server_fetch --validate
 ```
 
-#### Method 3: NPX
+#### Method 4: 🔗 Direct API/SDK Integration - NPX
 ```bash
 # Ensure Node.js 16+ is installed
 npx @modelcontextprotocol/server-fetch
 
 # Configure transport protocol (SSE recommended)
+export MCP_TRANSPORT=sse
+
 # Test with sample URL
+curl -X GET "http://localhost:3000/fetch?url=https://example.com"
 ```
 
 ### Configuration Parameters

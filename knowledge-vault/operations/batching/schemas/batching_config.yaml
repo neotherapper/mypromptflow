@@ -1,0 +1,301 @@
+# Intelligent Batching System Configuration
+# Comprehensive configuration for adaptive batching, resource monitoring, and performance optimization
+
+batching:
+  # Batch size configuration
+  min_batch_size: 10
+  max_batch_size: 500
+  
+  # Performance targets
+  target_response_time: 500.0  # milliseconds
+  max_error_rate: 0.05  # 5%
+  rate_limit_threshold: 3
+  
+  # Resource thresholds
+  cpu_threshold: 80.0  # percentage
+  memory_threshold: 85.0  # percentage
+  
+  # Adaptation sensitivity (0-1)
+  adaptation_sensitivity: 0.2
+  
+  # Strategy configuration
+  default_strategy: "adaptive"  # conservative, aggressive, adaptive, balanced
+  
+  # Circuit breaker configuration
+  circuit_breaker:
+    failure_threshold: 5
+    timeout_seconds: 300
+    recovery_attempts: 3
+
+# Operation type specific configurations
+operation_configs:
+  read:
+    preferred_batch_size: 100
+    max_batch_size: 500
+    strategy: "aggressive"
+    timeout_multiplier: 1.0
+    retry_attempts: 3
+    
+  write:
+    preferred_batch_size: 50
+    max_batch_size: 200
+    strategy: "balanced"
+    timeout_multiplier: 2.0
+    retry_attempts: 2
+    
+  delete:
+    preferred_batch_size: 25
+    max_batch_size: 100
+    strategy: "conservative"
+    timeout_multiplier: 1.5
+    retry_attempts: 1
+    
+  update:
+    preferred_batch_size: 75
+    max_batch_size: 300
+    strategy: "balanced"
+    timeout_multiplier: 1.8
+    retry_attempts: 2
+    
+  bulk_create:
+    preferred_batch_size: 200
+    max_batch_size: 500
+    strategy: "aggressive"
+    timeout_multiplier: 3.0
+    retry_attempts: 3
+    
+  query:
+    preferred_batch_size: 150
+    max_batch_size: 400
+    strategy: "balanced"
+    timeout_multiplier: 1.2
+    retry_attempts: 2
+
+# Coordinator configuration
+coordinator:
+  max_concurrent_jobs: 5
+  job_timeout_seconds: 300
+  max_retry_attempts: 3
+  
+  # Circuit breaker settings
+  circuit_breaker_threshold: 5
+  circuit_breaker_timeout: 300
+  
+  # Performance tracking
+  performance_tracking_enabled: true
+  auto_optimization_enabled: true
+  dashboard_update_interval: 30
+  
+  # Job queue configuration
+  max_queue_size: 1000
+  priority_queue_enabled: true
+  queue_timeout_seconds: 3600
+
+# Performance optimization configuration
+optimization:
+  # Machine learning model settings
+  model_update_frequency: 100  # Update models every N operations
+  min_training_samples: 50
+  model_confidence_threshold: 0.7
+  
+  # Feature engineering
+  feature_window_size: 100  # Number of recent samples for features
+  normalization_enabled: true
+  outlier_detection_enabled: true
+  
+  # A/B testing configuration
+  ab_testing:
+    enabled: true
+    default_split_ratio: 0.5
+    min_sample_size: 30
+    significance_threshold: 0.95
+    max_test_duration: 86400  # 24 hours
+  
+  # Prediction configuration
+  prediction:
+    confidence_threshold: 0.6
+    fallback_to_rules: true
+    cache_predictions: true
+    cache_ttl_seconds: 300
+
+# Load balancing configuration
+load_balancing:
+  enabled: true
+  algorithm: "weighted_round_robin"  # round_robin, weighted_round_robin, least_connections
+  health_check_interval: 30
+  
+  # Worker configuration
+  worker_pool:
+    min_workers: 2
+    max_workers: 10
+    scale_up_threshold: 0.8  # CPU/Memory threshold to scale up
+    scale_down_threshold: 0.3  # CPU/Memory threshold to scale down
+    scale_cooldown_seconds: 300
+
+# Retry and timeout configuration
+resilience:
+  # Retry configuration
+  retry:
+    max_attempts: 3
+    base_delay_ms: 100
+    max_delay_ms: 5000
+    exponential_backoff: true
+    jitter_enabled: true
+    
+  # Timeout configuration
+  timeouts:
+    connection_timeout_ms: 5000
+    read_timeout_ms: 30000
+    write_timeout_ms: 30000
+    total_timeout_ms: 60000
+  
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_second: 100
+    burst_capacity: 200
+    sliding_window_size: 60
+
+# Monitoring and observability
+monitoring:
+  # Metrics collection
+  metrics:
+    enabled: true
+    collection_interval: 5  # seconds
+    retention_hours: 24
+    
+  # Health checks
+  health_checks:
+    enabled: true
+    interval_seconds: 30
+    timeout_seconds: 10
+    failure_threshold: 3
+    
+  # Alerting
+  alerting:
+    enabled: true
+    email_notifications: false
+    webhook_url: null
+    
+    # Alert thresholds
+    thresholds:
+      high_error_rate: 0.1  # 10%
+      high_response_time: 1000  # milliseconds
+      high_cpu_usage: 90  # percentage
+      high_memory_usage: 95  # percentage
+      low_throughput: 10  # operations per second
+
+# Caching configuration
+caching:
+  # Performance metrics cache
+  metrics_cache:
+    enabled: true
+    ttl_seconds: 300
+    max_entries: 1000
+    
+  # Prediction cache
+  prediction_cache:
+    enabled: true
+    ttl_seconds: 600
+    max_entries: 500
+    
+  # Resource status cache
+  resource_cache:
+    enabled: true
+    ttl_seconds: 60
+    max_entries: 100
+
+# Security configuration
+security:
+  # Authentication
+  authentication:
+    enabled: false
+    token_validation: false
+    
+  # Authorization
+  authorization:
+    enabled: false
+    role_based_access: false
+    
+  # Data encryption
+  encryption:
+    data_at_rest: false
+    data_in_transit: true
+    
+  # Input validation
+  validation:
+    strict_mode: true
+    sanitize_inputs: true
+    max_payload_size: 10485760  # 10MB
+
+# Development and testing configuration
+development:
+  # Debug mode
+  debug_mode: false
+  verbose_logging: false
+  
+  # Mock data
+  mock_data:
+    enabled: false
+    response_delay_ms: 100
+    failure_rate: 0.0
+    
+  # Performance simulation
+  simulation:
+    enabled: false
+    cpu_usage_simulation: false
+    memory_usage_simulation: false
+    network_latency_simulation: false
+
+# Feature flags
+feature_flags:
+  # Adaptive batching features
+  dynamic_batch_sizing: true
+  predictive_optimization: true
+  resource_aware_scaling: true
+  
+  # Advanced features
+  machine_learning_optimization: true
+  circuit_breaker_patterns: true
+  auto_scaling: true
+  intelligent_routing: true
+  
+  # Experimental features
+  quantum_optimization: false
+  neural_network_batching: false
+  genetic_algorithm_tuning: false
+
+# Environment specific overrides
+environments:
+  development:
+    batching:
+      min_batch_size: 5
+      max_batch_size: 50
+    coordinator:
+      max_concurrent_jobs: 2
+    monitoring:
+      metrics:
+        retention_hours: 1
+        
+  staging:
+    batching:
+      min_batch_size: 10
+      max_batch_size: 200
+    coordinator:
+      max_concurrent_jobs: 3
+    monitoring:
+      metrics:
+        retention_hours: 6
+        
+  production:
+    batching:
+      min_batch_size: 20
+      max_batch_size: 1000
+    coordinator:
+      max_concurrent_jobs: 10
+    monitoring:
+      metrics:
+        retention_hours: 72
+      alerting:
+        enabled: true
+        email_notifications: true

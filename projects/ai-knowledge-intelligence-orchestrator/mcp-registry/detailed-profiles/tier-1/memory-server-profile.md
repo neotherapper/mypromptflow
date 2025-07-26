@@ -111,11 +111,26 @@
 ## ⚙️ Setup & Configuration
 
 ### Setup Complexity
-**Low Complexity (10/10)** - Estimated setup time: 10-15 minutes
+**Low Complexity (2/10)** - Estimated setup time: 10-15 minutes
 
-### Installation Steps
+### Installation Methods (Priority Order)
 
-#### Method 1: Python UV (Recommended)
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+```bash
+# Docker MCP setup with persistent volume
+docker run -d --name memory-mcp \
+  -e MCP_MEMORY_DB_PATH="/data/memory.db" \
+  -v memory-data:/data \
+  -p 3001:3001 \
+  modelcontextprotocol/server-memory
+
+# Test connection
+curl -X POST http://localhost:3001/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+```
+
+#### Method 2: 📦 Package Manager Installation - Python UV
 ```bash
 # Install UV package manager
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -123,13 +138,15 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install Memory server
 uv tool install mcp-server-memory
 
-# Configure database location (optional)
-export MCP_MEMORY_DB_PATH="/path/to/memory.db"
+# Configure environment
+export MCP_MEMORY_DB_PATH="~/.mcp/memory/memory.db"
+mkdir -p ~/.mcp/memory
 
-# Test with simple entity creation
+# Initialize and test
+uv run mcp-server-memory --create-entity test --entity-type validation
 ```
 
-#### Method 2: PIP
+#### Method 3: 📦 Package Manager Installation - PIP
 ```bash
 # Ensure Python 3.9+ is installed
 pip install mcp-server-memory
@@ -137,21 +154,28 @@ pip install mcp-server-memory
 # Create configuration directory
 mkdir -p ~/.mcp/memory
 
-# Add to MCP client configuration
-# Verify installation with test operations
+# Configure environment
+export MCP_MEMORY_DB_PATH="~/.mcp/memory/memory.db"
+
+# Add to MCP client configuration and test
+python -m mcp_server_memory --validate-db
 ```
 
-#### Method 3: Docker
+#### Method 4: ⚡ Custom Integration (Advanced)
 ```bash
-# Run with persistent volume
-docker run -d \
-  --name mcp-memory \
-  -v memory-data:/data \
-  -p 8080:8080 \
-  modelcontextprotocol/memory-server
+# Clone from source for custom modifications
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/src/memory
 
-# Configure volume persistence
-# Test container connectivity
+# Install dependencies and build
+pip install -e .
+
+# Custom configuration setup
+export MCP_MEMORY_DB_PATH="/custom/path/memory.db"
+export MCP_MEMORY_FTS_ENABLED="true"
+
+# Initialize with custom schema
+python -c "import mcp_server_memory; mcp_server_memory.init_custom_schema()"
 ```
 
 ### Configuration Parameters

@@ -44,15 +44,15 @@ This project creates an intelligent Pull Request validation system that leverage
    - Dependency analysis for enhanced file context
 
 2. **Specialized AI Agent Instructions**
-   - Claude Command Evaluator (`@ai/agents/claude-command-evaluator.md`)
-   - TypeScript Frontend Validator (`@ai/agents/typescript-frontend-validator.md`)
-   - Python Backend Validator (`@ai/agents/python-backend-validator.md`)
-   - Test Coverage Validator (`@ai/agents/test-validator.md`)
-   - Security Validation Agent (`@ai/agents/security-validator.md`)
-   - Documentation Validator (`@ai/agents/documentation-validator.md`)
+   - Claude Command Evaluator (`@meta/validation/validators/ai-instruction/claude-command-evaluator.md`)
+   - TypeScript Frontend Validator (`@meta/validation/validators/file-type/typescript-frontend-validator.md`)
+   - Python Backend Validator (`@meta/validation/validators/file-type/python-backend-validator.md`)
+   - Test Coverage Validator (`@meta/validation/validators/file-type/test-validator.md`)
+   - Security Validation Agent (`@meta/validation/validators/file-type/security-validator.md`)
+   - Documentation Validator (`@meta/validation/validators/file-type/documentation-validator.md`)
 
 3. **Self-Updating Agent System**
-   - Master AI Agent Instruction Updater (`@ai/agents/master-instruction-updater.md`)
+   - Master AI Agent Instruction Updater (`@projects/ai-pr-validation-system/ai/agents/master-instruction-updater.md`)
    - Registry of all agent instruction documents
    - Framework for applying new research findings to existing agents
    - Automated instruction quality assessment and improvement

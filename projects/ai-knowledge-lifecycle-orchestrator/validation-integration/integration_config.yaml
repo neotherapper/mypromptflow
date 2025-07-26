@@ -1,0 +1,311 @@
+# AI Knowledge Lifecycle Orchestrator - Validation Integration Configuration
+# Configuration for seamless integration with AI Agent Instruction Design Excellence framework
+
+version: "1.0.0"
+last_updated: "2025-07-25"
+integration_type: "ai_agent_instruction_design_excellence"
+
+# Framework Connection Configuration
+framework_integration:
+  framework_base_path: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-agent-instruction-design-excellence"
+  validators_path: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/validation/validators/ai-instruction"
+  automation_tools_path: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-agent-instruction-design-excellence/docs/automation-tools"
+  framework_version: "3.0.0"
+  
+  # Available validators
+  validators:
+    claude_command_evaluator:
+      path: "meta/validation/validators/ai-instruction/claude-command-evaluator.md"
+      applies_to: ["command_files", "claude_commands"]
+      scoring_range: "0-110"
+      focus: "ai_agent_instruction_quality"
+    
+    command_intent_validator:
+      path: "meta/validation/validators/ai-instruction/command-intent-validator.md"
+      applies_to: ["command_files"]
+      scoring_range: "0-100"
+      focus: "intent_classification_and_validation"
+    
+    ai_agent_instruction_evaluator:
+      path: "meta/validation/validators/ai-instruction/ai-agent-instruction-evaluator.md"
+      applies_to: ["claude_md", "instruction_files"]
+      scoring_range: "0-100"
+      focus: "general_ai_instruction_quality"
+    
+    intent_implementation_validator:
+      path: "meta/validation/validators/ai-instruction/intent-implementation-validator.md"
+      applies_to: ["claude_md", "instruction_files"]
+      scoring_range: "0-100"
+      focus: "intent_implementation_alignment"
+  
+  # Available automation tools
+  automation_tools:
+    vagueness_detector:
+      path: "docs/automation-tools/vagueness-detector.md"
+      execution_time: "30-45s"
+      output_format: "json"
+    
+    dependency_scanner:
+      path: "docs/automation-tools/dependency-scanner.md"
+      execution_time: "30-45s"
+      output_format: "json"
+    
+    checklist_automator:
+      path: "docs/automation-tools/checklist-automator.md"
+      execution_time: "60-90s"
+      output_format: "json"
+    
+    assessment_calculator:
+      path: "docs/automation-tools/assessment-calculator.md"
+      execution_time: "15-25s"
+      output_format: "json"
+    
+    report_generator:
+      path: "docs/automation-tools/report-generator.md"
+      execution_time: "30-45s"
+      output_format: "json"
+
+# Quality Thresholds Configuration
+quality_thresholds:
+  # Framework validation thresholds
+  framework_validation:
+    excellence_threshold: 90.0      # 90+ = excellent
+    target_threshold: 75.0          # 75+ = good/target
+    warning_threshold: 65.0         # 65-74 = acceptable with warnings
+    critical_threshold: 50.0        # <50 = critical/unacceptable
+    
+  # Quality preservation thresholds
+  quality_preservation:
+    max_quality_decline: 10.0       # Maximum acceptable quality decline (percentage points)
+    quality_preservation_threshold: 5.0  # Threshold for quality preservation monitoring
+    rollback_threshold: 50.0        # Rollback if quality falls below this
+    
+  # Component-specific thresholds
+  component_thresholds:
+    ai_instruction_structure: 80.0  # Minimum for approval
+    immediate_actionability: 80.0   # Minimum for approval
+    design_excellence_compliance: 80.0  # Minimum for approval
+    overall_effectiveness: 75.0     # Overall minimum for approval
+
+# Performance Configuration
+performance_settings:
+  # Validation timeouts
+  validation_timeout: 60           # seconds for individual validation
+  batch_validation_timeout: 300    # seconds for batch validation
+  rollback_detection_timeout: 10   # seconds for rollback assessment
+  rollback_execution_timeout: 30   # seconds for rollback execution
+  
+  # Parallel execution
+  enable_parallel_validation: true
+  max_concurrent_validations: 5
+  enable_batch_processing: true
+  batch_size: 10
+  
+  # Quality monitoring
+  monitoring_interval: 30          # seconds between quality checks
+  trend_analysis_window: 5         # number of snapshots for trend analysis
+  alert_cooldown: 300             # seconds between duplicate alerts
+
+# Integration Behavior Configuration
+integration_behavior:
+  # Update pipeline integration
+  pre_update_validation:
+    enabled: true
+    required: true
+    block_on_failure: true
+    quality_gate: "target_threshold"
+  
+  post_update_validation:
+    enabled: true
+    required: true
+    quality_preservation_check: true
+    automatic_rollback: true
+    quality_gate: "warning_threshold"
+  
+  # Quality monitoring integration
+  quality_monitoring:
+    enabled: true
+    mode: "continuous"            # continuous, periodic, on_demand
+    real_time_alerts: true
+    quality_trend_analysis: true
+    automatic_issue_detection: true
+  
+  # Rollback management integration
+  rollback_management:
+    enabled: true
+    automatic_rollback: true
+    rollback_confidence_threshold: 0.7
+    backup_retention_days: 30
+    quality_recovery_validation: true
+
+# File Type Mapping
+file_type_mapping:
+  # Command files
+  command_files:
+    patterns: ["*.claude/commands/*.md", "**/commands/*.md"]
+    primary_validator: "claude_command_evaluator"
+    secondary_validators: ["command_intent_validator"]
+    automation_tools: ["vagueness_detector", "dependency_scanner", "assessment_calculator"]
+    quality_focus: "ai_agent_instruction_excellence"
+  
+  # CLAUDE.md files
+  claude_md_files:
+    patterns: ["**/CLAUDE.md", "**/claude.md"]
+    primary_validator: "ai_agent_instruction_evaluator"
+    secondary_validators: ["intent_implementation_validator"]
+    automation_tools: ["vagueness_detector", "dependency_scanner", "checklist_automator"]
+    quality_focus: "project_instruction_quality"
+  
+  # General instruction files
+  instruction_files:
+    patterns: ["**/*-instructions.md", "**/*-guide.md", "**/*-protocol.md"]
+    primary_validator: "ai_agent_instruction_evaluator"
+    secondary_validators: []
+    automation_tools: ["vagueness_detector", "assessment_calculator"]
+    quality_focus: "general_instruction_quality"
+
+# Error Handling Configuration
+error_handling:
+  # Validation errors
+  validation_errors:
+    retry_attempts: 3
+    retry_delay: 5               # seconds
+    fallback_to_basic_validation: true
+    log_all_errors: true
+  
+  # Framework connection errors
+  framework_connection_errors:
+    connection_timeout: 30       # seconds
+    retry_attempts: 2
+    fallback_validation: true
+    cache_last_known_good: true
+  
+  # Quality monitoring errors
+  quality_monitoring_errors:
+    continue_on_monitoring_failure: true
+    disable_monitoring_on_repeated_failure: true
+    failure_threshold: 5         # consecutive failures
+    recovery_check_interval: 300  # seconds
+
+# Reporting Configuration
+reporting:
+  # Validation reports
+  validation_reports:
+    include_framework_details: true
+    include_quality_metrics: true
+    include_improvement_recommendations: true
+    include_component_breakdown: true
+    export_format: "json"
+  
+  # Quality monitoring reports
+  quality_monitoring_reports:
+    include_trend_analysis: true
+    include_alert_history: true
+    include_quality_snapshots: true
+    snapshot_retention: 100      # number of snapshots to keep
+    export_format: "json"
+  
+  # Rollback reports
+  rollback_reports:
+    include_decision_rationale: true
+    include_execution_details: true
+    include_quality_recovery_analysis: true
+    include_backup_information: true
+    export_format: "json"
+
+# Backup and Recovery Configuration
+backup_recovery:
+  # Backup management
+  backup_settings:
+    backup_directory: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/.backups"
+    backup_retention_days: 30
+    backup_compression: false
+    backup_verification: true
+    incremental_backups: false
+  
+  # Recovery settings
+  recovery_settings:
+    automatic_backup_creation: true
+    integrity_verification: true
+    recovery_validation: true
+    recovery_timeout: 60         # seconds
+
+# Metrics and Analytics Configuration
+metrics_analytics:
+  # Performance metrics
+  performance_metrics:
+    track_validation_times: true
+    track_quality_changes: true
+    track_rollback_rates: true
+    track_success_rates: true
+    metrics_retention_days: 90
+  
+  # Quality analytics
+  quality_analytics:
+    quality_trend_tracking: true
+    component_quality_tracking: true
+    improvement_tracking: true
+    regression_detection: true
+    analytics_window_days: 30
+  
+  # Reporting frequency
+  reporting_frequency:
+    daily_summary: true
+    weekly_analysis: true
+    monthly_trends: true
+    quarterly_review: false
+
+# Development and Testing Configuration
+development_testing:
+  # Test mode settings
+  test_mode:
+    enabled: false
+    use_test_files: false
+    mock_framework_responses: false
+    skip_actual_rollbacks: false
+    test_data_directory: "/tmp/validation_integration_test"
+  
+  # Debug settings
+  debug_settings:
+    verbose_logging: false
+    log_all_validation_details: false
+    log_framework_communications: false
+    log_quality_calculations: false
+    debug_file_path: "/tmp/validation_integration_debug.log"
+
+# Integration Success Criteria
+success_criteria:
+  # Quality preservation
+  quality_preservation:
+    target_success_rate: 95.0    # percentage
+    max_acceptable_degradation: 5.0  # percentage points
+    quality_recovery_rate: 90.0  # percentage
+  
+  # Performance targets
+  performance_targets:
+    validation_time_target: 60    # seconds
+    rollback_detection_time: 10   # seconds
+    overall_integration_overhead: 15  # percentage
+  
+  # Reliability targets
+  reliability_targets:
+    framework_connection_uptime: 99.0  # percentage
+    validation_success_rate: 98.0      # percentage
+    rollback_success_rate: 95.0        # percentage
+    false_positive_rate: 2.0           # percentage (max acceptable)
+
+# Version Compatibility
+version_compatibility:
+  framework_versions:
+    minimum_supported: "2.0.0"
+    recommended: "3.0.0"
+    maximum_supported: "3.x.x"
+  
+  integration_versions:
+    current_version: "1.0.0"
+    backward_compatible_with: ["1.0.0"]
+    upgrade_path: "automatic"
+  
+  dependency_versions:
+    python_minimum: "3.8"
+    required_packages: ["asyncio", "pathlib", "dataclasses", "json", "yaml"]

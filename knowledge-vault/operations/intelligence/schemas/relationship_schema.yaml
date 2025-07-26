@@ -1,0 +1,321 @@
+# Intelligent Relationship Discovery Schema
+# Defines relationship types, similarity analysis, and cross-database mapping
+# Version: 1.0.0
+
+relationship_info:
+  name: "Intelligent Relationship Discovery Schema"
+  version: "1.0.0"
+  created: "2025-01-24"
+  description: "AI-powered relationship discovery with semantic similarity and validation"
+  supports_cross_database: true
+  supports_bidirectional_mapping: true
+
+# Relationship Types Configuration
+relationship_types:
+  semantic_similarity:
+    type: "computed"
+    bidirectional: true
+    weight: 1.0
+    threshold: 0.7
+    description: "Items with high semantic content similarity"
+    
+  tag_overlap:
+    type: "computed"
+    bidirectional: true
+    weight: 0.8
+    threshold: 0.6
+    description: "Items sharing multiple tags or categories"
+    
+  explicit_relation:
+    type: "manual"
+    bidirectional: true
+    weight: 1.0
+    threshold: 1.0
+    description: "Manually defined relationships"
+    
+  dependency:
+    type: "computed"
+    bidirectional: false
+    weight: 0.9
+    threshold: 0.8
+    description: "Tool/service dependency relationships"
+    
+  complementary:
+    type: "computed"
+    bidirectional: true
+    weight: 0.7
+    threshold: 0.75
+    description: "Items that complement each other functionally"
+    
+  alternative:
+    type: "computed"
+    bidirectional: true
+    weight: 0.6
+    threshold: 0.8
+    description: "Alternative or competing solutions"
+    
+  workflow_sequence:
+    type: "computed"
+    bidirectional: false
+    weight: 0.8
+    threshold: 0.7
+    description: "Items used in sequence within workflows"
+
+# Semantic Similarity Analysis
+semantic_similarity:
+  text_analysis:
+    title_weight: 0.4
+    description_weight: 0.4
+    tags_weight: 0.2
+    
+  similarity_algorithms:
+    tfidf:
+      enabled: true
+      weight: 0.5
+      min_document_frequency: 2
+      max_features: 1000
+      
+    jaccard:
+      enabled: true
+      weight: 0.3
+      min_shared_tokens: 2
+      
+    cosine:
+      enabled: true
+      weight: 0.2
+      vector_dimensions: 100
+      
+  preprocessing:
+    lowercase: true
+    remove_punctuation: true
+    remove_stopwords: true
+    stemming: true
+    min_word_length: 3
+    
+  similarity_thresholds:
+    very_high: 0.9
+    high: 0.8
+    medium: 0.7
+    low: 0.6
+    minimum: 0.5
+
+# Cross-Database Relationship Rules
+cross_database_rules:
+  knowledge_vault_to_tools_services:
+    relationship_types: ["semantic_similarity", "dependency", "complementary"]
+    strength_multiplier: 1.0
+    bidirectional: true
+    
+  knowledge_vault_to_business_ideas:
+    relationship_types: ["semantic_similarity", "tag_overlap"]
+    strength_multiplier: 0.8
+    bidirectional: true
+    
+  tools_services_to_business_ideas:
+    relationship_types: ["dependency", "complementary"]
+    strength_multiplier: 0.9
+    bidirectional: true
+    
+  training_vault_to_knowledge_vault:
+    relationship_types: ["semantic_similarity", "tag_overlap", "complementary"]
+    strength_multiplier: 1.0
+    bidirectional: true
+    
+  platforms_sites_to_tools_services:
+    relationship_types: ["alternative", "complementary", "semantic_similarity"]
+    strength_multiplier: 0.9
+    bidirectional: true
+    
+  notes_ideas_to_all:
+    relationship_types: ["semantic_similarity", "tag_overlap"]
+    strength_multiplier: 0.7
+    bidirectional: true
+
+# Relationship Strength Scoring
+strength_scoring:
+  base_score_calculation:
+    semantic_similarity_factor: 0.4
+    tag_overlap_factor: 0.3
+    explicit_connection_factor: 0.2
+    usage_pattern_factor: 0.1
+    
+  strength_categories:
+    very_strong: 0.9
+    strong: 0.8
+    moderate: 0.7
+    weak: 0.6
+    very_weak: 0.5
+    
+  adjustment_factors:
+    same_category_bonus: 0.1
+    cross_database_penalty: -0.05
+    recent_access_bonus: 0.05
+    popularity_bonus: 0.05
+    manual_override_bonus: 0.2
+
+# Validation and Quality Control
+validation_rules:
+  minimum_relationship_strength: 0.6
+  maximum_relationships_per_item: 20
+  bidirectional_consistency_required: true
+  relationship_type_validation: true
+  
+  quality_checks:
+    reciprocal_relationship_validation: true
+    circular_dependency_detection: true
+    relationship_strength_calibration: true
+    duplicate_relationship_prevention: true
+    
+  exclusion_rules:
+    same_item_relationships: false
+    low_quality_items: true
+    archived_items: false
+    minimum_content_length: 50
+
+# Relationship Discovery Patterns
+discovery_patterns:
+  mcp_server_patterns:
+    tier_similarity:
+      pattern: "items with same MCP tier"
+      weight: 0.8
+      relationship_type: "complementary"
+      
+    functional_similarity:
+      pattern: "similar functionality based on description"
+      weight: 0.9
+      relationship_type: "alternative"
+      
+    integration_compatibility:
+      pattern: "compatible for integration workflows"
+      weight: 0.7
+      relationship_type: "complementary"
+      
+  business_patterns:
+    industry_similarity:
+      pattern: "same industry vertical"
+      weight: 0.8
+      relationship_type: "semantic_similarity"
+      
+    business_model_similarity:
+      pattern: "similar business model"
+      weight: 0.7
+      relationship_type: "complementary"
+      
+    market_competition:
+      pattern: "competing solutions"
+      weight: 0.6
+      relationship_type: "alternative"
+      
+  technology_patterns:
+    stack_compatibility:
+      pattern: "compatible technology stack components"
+      weight: 0.9
+      relationship_type: "complementary"
+      
+    framework_similarity:
+      pattern: "similar frameworks or libraries"
+      weight: 0.8
+      relationship_type: "alternative"
+      
+    dependency_chain:
+      pattern: "tool dependencies and requirements"
+      weight: 0.9
+      relationship_type: "dependency"
+
+# Bidirectional Relationship Mapping
+bidirectional_mapping:
+  consistency_enforcement:
+    enabled: true
+    tolerance: 0.1
+    auto_correction: true
+    
+  mapping_rules:
+    semantic_similarity: "symmetric"
+    dependency: "asymmetric"
+    complementary: "symmetric"
+    alternative: "symmetric"
+    workflow_sequence: "asymmetric"
+    
+  conflict_resolution:
+    strength_mismatch_handling: "average"
+    type_mismatch_handling: "manual_review"
+    missing_reciprocal_handling: "create_reciprocal"
+
+# Performance Optimization
+performance_optimization:
+  batch_processing:
+    enabled: true
+    batch_size: 100
+    parallel_processing: true
+    max_workers: 6
+    
+  caching:
+    similarity_matrix_cache: true
+    cache_ttl_hours: 48
+    cache_invalidation_on_update: true
+    
+  indexing:
+    content_index: true
+    tag_index: true
+    relationship_index: true
+    
+  incremental_updates:
+    enabled: true
+    update_affected_relationships: true
+    recompute_threshold: 0.1
+
+# Output Configuration
+output_configuration:
+  relationship_format:
+    include_strength_score: true
+    include_relationship_type: true
+    include_discovery_reason: true
+    include_confidence_level: true
+    
+  relationship_export:
+    json_format: true
+    yaml_format: true
+    csv_format: false
+    
+  visualization_support:
+    network_graph_data: true
+    adjacency_matrix: true
+    clustered_groups: true
+    
+  filtering_options:
+    by_strength: true
+    by_type: true
+    by_database: true
+    by_confidence: true
+
+# Integration Settings
+integration_settings:
+  database_sync:
+    update_related_items: true
+    propagate_changes: true
+    maintain_consistency: true
+    
+  notification_system:
+    new_relationships: true
+    strength_changes: true
+    validation_failures: true
+    
+  api_endpoints:
+    get_relationships: "/api/relationships/{item_id}"
+    discover_relationships: "/api/relationships/discover"
+    validate_relationships: "/api/relationships/validate"
+    update_relationships: "/api/relationships/update"
+
+# Success Metrics
+success_metrics:
+  discovery_accuracy: 0.85
+  relationship_precision: 0.80
+  relationship_recall: 0.75
+  processing_time_per_item_ms: 300
+  user_satisfaction_score: 0.85
+  
+  evaluation_criteria:
+    correct_relationship_identification: 1.0
+    appropriate_strength_scoring: 0.8
+    bidirectional_consistency: 0.9
+    cross_database_coverage: 0.7

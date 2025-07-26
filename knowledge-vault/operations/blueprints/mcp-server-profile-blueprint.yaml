@@ -1,0 +1,519 @@
+# MCP Server Profile Blueprint Template
+# Unified template for standardizing all MCP server profiles in the knowledge-vault system
+# Industry-neutral, Docker-first approach with knowledge-vault integration
+
+metadata:
+  template_version: "1.0.0"
+  created: "2025-01-24"
+  purpose: "Standardize MCP server profile structure across knowledge-vault system"
+  blueprint_type: "mcp_server_profile"
+  target_integration: "knowledge-vault/databases/tools_services/"
+  validation_schema: "tools-services-schema.yaml"
+
+# ============================================================================
+# PROFILE TEMPLATE STRUCTURE
+# ============================================================================
+
+profile_template:
+  
+  # SECTION 1: Basic Information (User-Preferred Header)
+  basic_information:
+    section_header: "## 📋 Basic Information"
+    required_fields:
+      server_name:
+        type: "string"
+        description: "Official name of the MCP server"
+        example: "{{SERVER_NAME}} MCP Server"
+        validation: "Must match official project/repository name"
+      
+      server_description:
+        type: "rich_text"
+        description: "Comprehensive overview of server capabilities and value proposition"
+        template: |
+          The {{SERVER_NAME}} MCP Server {{primary_capability}} through the Model Context Protocol, 
+          enabling {{key_features}} for {{target_use_cases}}. With a business value score of 
+          {{business_score}}/10, this server {{business_value_statement}}.
+        
+        key_value_propositions:
+          type: "bullet_list"
+          count: "4-6 items"
+          format: "- {{capability_description}}"
+          examples:
+            - "Complete {{domain}} integration with advanced {{feature}} capabilities"
+            - "Enterprise-grade security with {{security_features}}"
+            - "High-performance {{performance_feature}} and {{optimization_feature}}"
+            - "Comprehensive {{management_feature}} and {{automation_feature}}"
+            - "Advanced {{analytics_feature}} and {{monitoring_feature}} features"
+  
+  # SECTION 2: Quality & Scoring Metrics
+  quality_scoring_metrics:
+    section_header: "## Quality & Scoring Metrics"
+    
+    business_aligned_scoring:
+      section_header: "### Business-Aligned Scoring Analysis"
+      scoring_dimensions:
+        business_domain_relevance:
+          weight: 0.32
+          scale: "10/10"
+          description: "Strategic value for development infrastructure and business applications"
+          example: "{{relevance_score}}/10 ({{relevance_description}})"
+        
+        technical_development_value:
+          weight: 0.26
+          scale: "10/10" 
+          description: "Direct technical value for development infrastructure and workflows"
+          example: "{{technical_score}}/10 ({{technical_description}})"
+        
+        production_readiness:
+          weight: 0.18
+          scale: "10/10"
+          description: "Enterprise-grade production deployment capability and reliability"
+          example: "{{production_score}}/10 ({{production_description}})"
+        
+        setup_complexity:
+          weight: 0.12
+          scale: "10/10 (10=simple, 1=complex)"
+          description: "Ease of installation and configuration"
+          example: "{{setup_score}}/10 ({{setup_description}})"
+        
+        maintenance_status:
+          weight: 0.08
+          scale: "10/10"
+          description: "Active development and maintenance quality"
+          example: "{{maintenance_score}}/10 ({{maintenance_description}})"
+        
+        documentation_quality:
+          weight: 0.04
+          scale: "10/10"
+          description: "Documentation completeness and implementation guidance"
+          example: "{{documentation_score}}/10 ({{documentation_description}})"
+      
+      composite_score:
+        format: "**Composite Score: {{composite_score}}/10** - {{tier_classification}}"
+        tier_mapping:
+          tier_1: "Tier 1 Immediate Implementation Priority"
+          tier_2: "Tier 2 Strategic Implementation Priority"
+          tier_3: "Tier 3 Specialized Implementation Priority"
+    
+    production_readiness_assessment:
+      section_header: "### Production Readiness Assessment"
+      required_metrics:
+        - "**API Stability**: {{stability_metrics}}"
+        - "**Security Compliance**: {{compliance_standards}}"
+        - "**Scalability**: {{scalability_description}}"
+        - "**Enterprise Features**: {{enterprise_features}}"
+        - "**Support Quality**: {{support_description}}"
+    
+    quality_validation_metrics:
+      section_header: "### Quality Validation Metrics"
+      performance_indicators:
+        - "**Integration Testing**: {{testing_coverage}}"
+        - "**Performance Benchmarks**: {{performance_metrics}}"
+        - "**Error Handling**: {{error_handling_description}}"
+        - "**Monitoring**: {{monitoring_capabilities}}"
+        - "**Compliance**: {{compliance_validation}}"
+
+  # SECTION 3: Technical Specifications
+  technical_specifications:
+    section_header: "## Technical Specifications"
+    
+    core_architecture:
+      section_header: "### Core Architecture"
+      format: |
+        ```yaml
+        Server Type: {{server_type}}
+        Protocol: Model Context Protocol (MCP)
+        Primary Language: {{primary_language}}
+        Dependencies: {{key_dependencies}}
+        Authentication: {{auth_methods}}
+        ```
+    
+    system_requirements:
+      section_header: "### System Requirements"
+      required_specs:
+        - "**Runtime**: {{runtime_requirements}}"
+        - "**Memory**: {{memory_requirements}}"
+        - "**Network**: {{network_requirements}}"
+        - "**Storage**: {{storage_requirements}}"
+        - "**CPU**: {{cpu_requirements}}"
+        - "**Additional**: {{additional_requirements}}"
+    
+    api_capabilities:
+      section_header: "### API Capabilities"
+      format: |
+        ```typescript
+        interface {{ServerName}}MCPCapabilities {
+          {{capability_category_1}}: {
+            {{capability_1}}: boolean;
+            {{capability_2}}: boolean;
+            {{capability_3}}: boolean;
+          };
+          {{capability_category_2}}: {
+            {{capability_4}}: boolean;
+            {{capability_5}}: boolean;
+            {{capability_6}}: boolean;
+          };
+        }
+        ```
+    
+    data_models:
+      section_header: "### Data Models"
+      format: "- **{{model_name}}**: {{model_description}}"
+      examples:
+        - "**{{Primary_Entity}}**: {{entity_description_with_features}}"
+        - "**{{Secondary_Entity}}**: {{entity_description_with_lifecycle}}"
+        - "**{{Supporting_Entity}}**: {{entity_description_with_integration}}"
+
+  # SECTION 4: Setup Instructions (Docker-First Approach)
+  setup_configuration:
+    section_header: "## Setup & Configuration"
+    
+    installation_methods:
+      section_header: "### Installation Methods"
+      priority_order: "Docker-first approach"
+      
+      method_1_docker_mcp_toolkit:
+        header: "#### Method 1: Docker MCP Toolkit (Recommended)"
+        description: "Primary deployment method using Docker MCP server ecosystem"
+        code_block: |
+          ```bash
+          # Pull and run the {{server_name}} MCP server
+          docker pull {{docker_image}}:latest
+          
+          # Run with environment configuration
+          docker run -d --name {{container_name}} \
+            -e {{ENV_VAR_1}}=${{{ENV_VAR_1}}} \
+            -e {{ENV_VAR_2}}=${{{ENV_VAR_2}}} \
+            -p {{port}}:{{port}} \
+            {{docker_image}}:latest
+          ```
+      
+      method_2_docker_compose:
+        header: "#### Method 2: Docker Compose Deployment"
+        description: "Multi-service deployment with dependencies"
+        code_block: |
+          ```yaml
+          # docker-compose.yml
+          version: '3.8'
+          services:
+            {{service_name}}:
+              image: {{docker_image}}:latest
+              environment:
+                - {{ENV_VAR_1}}=${{{ENV_VAR_1}}}
+                - {{ENV_VAR_2}}=${{{ENV_VAR_2}}}
+              ports:
+                - "{{port}}:{{port}}"
+              volumes:
+                - ./config:/app/config
+              restart: unless-stopped
+          ```
+      
+      method_3_claude_code_integration:
+        header: "#### Method 3: Claude Code Integration"
+        description: "Direct integration with Claude Code development environment"
+        code_block: |
+          ```bash
+          # Install via Claude Code MCP configuration
+          npm install -g @modelcontextprotocol/server-{{package_name}}
+          
+          # Configure in Claude Code settings
+          {
+            "mcpServers": {
+              "{{server_name}}": {
+                "command": "{{command}}",
+                "args": [{{args}}],
+                "env": {
+                  "{{ENV_VAR}}": "{{value}}"
+                }
+              }
+            }
+          }
+          ```
+      
+      method_4_claude_desktop:
+        header: "#### Method 4: Claude Desktop Integration"
+        description: "Integration with Claude Desktop application"
+        code_block: |
+          ```json
+          // Claude Desktop configuration
+          {
+            "mcpServers": {
+              "{{server_name}}": {
+                "command": "{{desktop_command}}",
+                "args": [{{desktop_args}}]
+              }
+            }
+          }
+          ```
+      
+      method_5_alternatives:
+        header: "#### Method 5: Alternative Installation Methods"
+        description: "Fallback installation options"
+        options:
+          - "Package manager installation (npm, pip, etc.)"
+          - "Source compilation and build"
+          - "Platform-specific installers"
+          - "Enterprise deployment tools"
+    
+    authentication_configuration:
+      section_header: "### Authentication Configuration"
+      auth_methods:
+        primary_method:
+          header: "#### {{Primary_Auth_Method}} (Recommended)"
+          code_block: |
+            ```{{config_language}}
+            {{auth_config_example}}
+            ```
+        
+        secondary_method:
+          header: "#### {{Secondary_Auth_Method}}"
+          code_block: |
+            ```{{config_language}}
+            {{secondary_auth_config}}
+            ```
+        
+        enterprise_method:
+          header: "#### Enterprise Configuration"
+          code_block: |
+            ```{{config_language}}
+            {{enterprise_auth_config}}
+            ```
+    
+    advanced_configuration:
+      section_header: "### Advanced Configuration Options"
+      code_block: |
+        ```json
+        {
+          "server": {
+            "port": {{default_port}},
+            "host": "0.0.0.0",
+            "timeout": {{timeout_ms}}
+          },
+          "{{service_name}}": {
+            "{{config_section_1}}": {
+              "{{setting_1}}": {{value_1}},
+              "{{setting_2}}": {{value_2}}
+            },
+            "{{config_section_2}}": {
+              "{{setting_3}}": {{value_3}},
+              "{{setting_4}}": {{value_4}}
+            }
+          },
+          "logging": {
+            "level": "info",
+            "format": "json",
+            "file": "/var/log/{{server_name}}.log"
+          }
+        }
+        ```
+
+# ============================================================================
+# VALIDATION RULES AND CONSTRAINTS
+# ============================================================================
+
+validation_rules:
+  
+  content_validation:
+    industry_neutrality:
+      rule: "Remove ALL industry-specific references (maritime, insurance, etc.)"
+      examples:
+        forbidden: ["maritime insurance", "vessel", "P&I Club", "flag state", "IMO"]
+        allowed: ["business applications", "enterprise systems", "commercial platforms"]
+    
+    language_standards:
+      business_examples: "Use generic business examples (claims processing, asset management, compliance tracking)"
+      technical_references: "Focus on universal technical capabilities"
+      application_domains: "Reference broad application categories, not specific industries"
+    
+    section_headers:
+      required_format: "Use exact section headers as specified in template"
+      user_preference: "## 📋 Basic Information (NOT Executive Summary)"
+      consistency: "Maintain consistent header hierarchy and formatting"
+  
+  technical_validation:
+    docker_first_priority:
+      requirement: "Docker deployment methods must be listed first and most detailed"
+      order: "1. Docker MCP Toolkit, 2. Docker Compose, 3. Claude Code, 4. Claude Desktop, 5. Alternatives"
+      emphasis: "Docker methods should have most comprehensive examples and documentation"
+    
+    code_examples:
+      format: "Use proper syntax highlighting for all code blocks"
+      completeness: "Provide working, executable examples with placeholder variables"
+      consistency: "Use consistent variable naming and formatting patterns"
+    
+    api_documentation:
+      interface_format: "Use TypeScript interfaces for API capability definitions"
+      naming_convention: "Follow {{ServerName}}MCPCapabilities pattern"
+      completeness: "Document all major API categories and methods"
+
+  knowledge_vault_integration:
+    tagging_system:
+      required_tags: ["mcp-server", "tier-{{tier_number}}", "{{domain_category}}"]
+      optional_tags: ["{{business_category}}", "{{technical_category}}", "{{deployment_model}}"]
+      tag_format: "Use exact tag names from tools-services-schema.yaml"
+    
+    cross_references:
+      knowledge_vault_format: "Use @knowledge_vault/{{item_uuid}} format"
+      relationship_tracking: "Include bidirectional relationships"
+      dependency_mapping: "Document prerequisites and related items"
+    
+    file_structure:
+      base_path: "knowledge-vault/databases/tools_services/items/"
+      naming_convention: "{{server_name_lowercase}}_mcp_server.yaml"
+      metadata_inclusion: "Include complete YAML frontmatter with all required fields"
+
+# ============================================================================
+# TEMPLATE PLACEHOLDERS AND EXAMPLES
+# ============================================================================
+
+placeholder_examples:
+  
+  basic_placeholders:
+    "{{SERVER_NAME}}": "PostgreSQL"
+    "{{server_name}}": "postgresql"
+    "{{primary_capability}}": "delivers enterprise-grade database integration capabilities"
+    "{{key_features}}": "sophisticated database operations, query execution, schema management"
+    "{{target_use_cases}}": "PostgreSQL databases requiring robust, scalable, and secure database operations"
+    "{{business_score}}": "9.0"
+    "{{business_value_statement}}": "represents critical data infrastructure for modern applications"
+  
+  scoring_placeholders:
+    "{{relevance_score}}": "10"
+    "{{relevance_description}}": "Critical database infrastructure"
+    "{{technical_score}}": "10"
+    "{{technical_description}}": "Essential data layer functionality"
+    "{{production_score}}": "9"
+    "{{production_description}}": "Well-maintained with active community"
+    "{{composite_score}}": "9.0"
+    "{{tier_classification}}": "Tier 1 Immediate Implementation Priority"
+  
+  technical_placeholders:
+    "{{server_type}}": "Database Integration"
+    "{{primary_language}}": "TypeScript/Node.js"
+    "{{key_dependencies}}": "PostgreSQL 12+, Node.js runtime"
+    "{{auth_methods}}": "Multiple methods (password, certificates, LDAP, SAML)"
+    "{{docker_image}}": "mcp/server-postgresql"
+    "{{default_port}}": "3000"
+  
+  configuration_placeholders:
+    "{{ENV_VAR_1}}": "POSTGRES_HOST"
+    "{{ENV_VAR_2}}": "POSTGRES_PASSWORD"
+    "{{container_name}}": "postgresql-mcp"
+    "{{service_name}}": "postgresql-mcp"
+    "{{package_name}}": "postgresql"
+
+# ============================================================================
+# QUALITY ASSURANCE CHECKLIST
+# ============================================================================
+
+quality_checklist:
+  
+  content_review:
+    - "✅ All industry-specific references removed (maritime, insurance, etc.)"
+    - "✅ Generic business examples used throughout"
+    - "✅ Section headers match user preferences exactly"
+    - "✅ Key value propositions clearly articulated (4-6 items)"
+    - "✅ Business-aligned scoring properly calculated and formatted"
+  
+  technical_review:
+    - "✅ Docker-first deployment approach implemented"
+    - "✅ All installation methods properly documented"
+    - "✅ Code examples are complete and executable"
+    - "✅ API capabilities properly structured with TypeScript interfaces"
+    - "✅ Authentication methods comprehensively covered"
+  
+  integration_review:
+    - "✅ Knowledge-vault tagging system properly applied"
+    - "✅ Cross-references use correct @knowledge_vault/uuid format"
+    - "✅ File structure follows knowledge-vault conventions"
+    - "✅ YAML frontmatter includes all required metadata fields"
+    - "✅ Bidirectional relationships properly documented"
+  
+  validation_review:
+    - "✅ All template placeholders replaced with specific values"
+    - "✅ Scoring calculations match business-aligned algorithm"
+    - "✅ Production readiness assessment is comprehensive"
+    - "✅ Setup instructions prioritize Docker deployment methods"
+    - "✅ Documentation is complete and implementable"
+
+# ============================================================================
+# TEMPLATE USAGE INSTRUCTIONS
+# ============================================================================
+
+usage_instructions:
+  
+  template_application:
+    step_1: "Copy the profile_template structure for new MCP server profiles"
+    step_2: "Replace all {{placeholder}} variables with server-specific values"
+    step_3: "Apply business-aligned scoring algorithm from business-aligned-scoring-algorithm.yaml"
+    step_4: "Validate content against validation_rules and quality_checklist"
+    step_5: "Integrate with knowledge-vault tagging system and cross-references"
+  
+  customization_guidelines:
+    content_adaptation: "Adapt examples to specific server capabilities while maintaining industry neutrality"
+    technical_details: "Provide comprehensive technical specifications relevant to the server type"
+    deployment_focus: "Emphasize Docker deployment methods with detailed configuration examples"
+    business_alignment: "Ensure business value proposition aligns with development infrastructure priorities"
+  
+  maintenance_requirements:
+    template_updates: "Update template when new MCP servers introduce novel patterns or capabilities"
+    scoring_alignment: "Maintain consistency with latest business-aligned scoring algorithm versions"
+    knowledge_vault_sync: "Keep integration patterns updated with knowledge-vault schema changes"
+    quality_evolution: "Refine quality standards based on implementation experience and user feedback"
+
+# ============================================================================
+# CROSS-REFERENCE INTEGRATION POINTS
+# ============================================================================
+
+integration_points:
+  
+  knowledge_vault_schemas:
+    primary_schema: "@knowledge-vault/schemas/tools-services-schema.yaml"
+    validation_engine: "@knowledge-vault/core/validation-engine.yaml"
+    tagging_system: "@knowledge-vault/core/tag-categorization-engine.yaml"
+    cross_references: "@knowledge-vault/core/cross-reference-manager.yaml"
+  
+  scoring_system:
+    algorithm_reference: "@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+    tier_classifications: "Use enhanced tier thresholds from v3.0.0 algorithm"
+    composite_scoring: "Apply 6-dimension scoring matrix consistently"
+  
+  existing_profiles:
+    reference_examples: 
+      - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md"
+      - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md"
+    consistency_validation: "Ensure new profiles maintain consistency with established high-quality examples"
+    pattern_evolution: "Incorporate improvements and learnings from existing profile implementations"
+
+# ============================================================================
+# TEMPLATE METADATA FOR KNOWLEDGE-VAULT
+# ============================================================================
+
+knowledge_vault_metadata:
+  item_classification:
+    database: "tools_services"
+    category: "blueprint_template"
+    type: "standardization_tool"
+    maturity_level: "stable"
+    integration_complexity: "moderate"
+  
+  relationships:
+    enables: ["mcp_server_profiles", "standardized_documentation", "knowledge_vault_integration"]
+    depends_on: ["tools_services_schema", "business_scoring_algorithm", "tagging_system"]
+    used_by: ["profile_generation_workflows", "documentation_automation", "quality_validation"]
+  
+  tags:
+    - "blueprint"
+    - "mcp-server"
+    - "standardization"
+    - "knowledge-vault"
+    - "docker-first"
+    - "industry-neutral"
+    - "template-system"
+    - "quality-assurance"
+  
+  cross_references:
+    - "@knowledge-vault/schemas/tools-services-schema.yaml"
+    - "@knowledge-vault/core/validation-engine.yaml"
+    - "@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+    - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/"

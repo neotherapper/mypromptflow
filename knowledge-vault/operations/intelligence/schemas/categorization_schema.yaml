@@ -1,0 +1,252 @@
+# Intelligent Content Categorization Schema
+# Defines category mapping, confidence scoring, and validation mechanisms
+# Version: 1.0.0
+
+categorization_info:
+  name: "Intelligent Content Categorization Schema"
+  version: "1.0.0" 
+  created: "2025-01-24"
+  description: "AI-powered content categorization with confidence scoring and validation"
+  supports_semantic_analysis: true
+  supports_multi_database: true
+
+# Semantic Analysis Configuration
+semantic_analysis:
+  keyword_extraction:
+    enabled: true
+    min_keyword_length: 3
+    max_keywords_per_item: 50
+    stopwords_enabled: true
+    stemming_enabled: true
+    
+  content_patterns:
+    technology_patterns:
+      - "api|database|framework|library|tool|platform|service|cloud|hosting"
+      - "development|programming|coding|software|web|mobile|app"
+      - "ai|machine learning|ml|automation|integration|workflow"
+      - "javascript|python|react|vue|angular|nodejs|typescript"
+      
+    business_patterns:
+      - "strategy|marketing|sales|customer|revenue|profit|growth"
+      - "finance|cost|optimization|efficiency|roi|budget"
+      - "enterprise|startup|entrepreneur|business|company|market"
+      - "insurance|maritime|fintech|saas|marketplace|subscription"
+      
+    productivity_patterns:
+      - "productivity|efficiency|automation|workflow|process|management"
+      - "design|creative|collaboration|communication|documentation"
+      - "project|task|planning|organization|scheduling|tracking"
+      
+    learning_patterns:
+      - "tutorial|course|learning|education|training|knowledge|skill"
+      - "certification|programming|development|data science|leadership"
+      - "guide|documentation|resource|reference|example|case study"
+
+# Category Mapping Configuration
+category_mapping:
+  primary_categories:
+    technology:
+      weight: 1.0
+      subcategories:
+        - "ai"
+        - "automation" 
+        - "developer-tools"
+        - "integration"
+        - "software-development"
+        - "database"
+        - "cloud-hosting"
+        - "api-service"
+      confidence_threshold: 0.7
+      
+    business:
+      weight: 1.0
+      subcategories:
+        - "business-strategy"
+        - "maritime-insurance"
+        - "cost-optimization"
+        - "customer-experience"
+        - "finance"
+        - "sales"
+        - "project-management"
+      confidence_threshold: 0.75
+      
+    productivity:
+      weight: 0.8
+      subcategories:
+        - "design"
+        - "efficiency"
+        - "productivity"
+        - "communication"
+        - "analytics"
+      confidence_threshold: 0.7
+      
+    industry:
+      weight: 0.9
+      subcategories:
+        - "fintech"
+        - "insurtech"
+        - "edtech"
+        - "healthtech"
+        - "proptech"
+        - "legaltech"
+      confidence_threshold: 0.8
+      
+    learning:
+      weight: 0.8
+      subcategories:
+        - "programming"
+        - "web-development"
+        - "data-science"
+        - "machine-learning"
+        - "devops"
+        - "cybersecurity"
+        - "leadership"
+      confidence_threshold: 0.75
+
+# Database-Specific Category Rules
+database_category_rules:
+  knowledge_vault:
+    required_categories: ["technology", "business", "productivity"]
+    optional_categories: ["industry", "learning"]
+    max_categories: 5
+    min_confidence: 0.7
+    
+  tools_services:
+    required_categories: ["technology"]
+    optional_categories: ["business", "productivity", "industry"]
+    mcp_tier_required: true
+    max_categories: 6
+    min_confidence: 0.75
+    
+  business_ideas:
+    required_categories: ["business", "industry"]
+    optional_categories: ["technology", "productivity"]
+    max_categories: 4
+    min_confidence: 0.8
+    
+  training_vault:
+    required_categories: ["learning", "technology"]
+    optional_categories: ["business", "productivity"]
+    max_categories: 4
+    min_confidence: 0.75
+    
+  platforms_sites:
+    required_categories: ["technology", "business"]
+    optional_categories: ["productivity", "learning"]
+    max_categories: 5
+    min_confidence: 0.7
+    
+  notes_ideas:
+    required_categories: []
+    optional_categories: ["technology", "business", "productivity", "learning"]
+    max_categories: 3
+    min_confidence: 0.6
+
+# Confidence Scoring Algorithm
+confidence_scoring:
+  keyword_match_weight: 0.4
+  content_pattern_weight: 0.3
+  title_analysis_weight: 0.2
+  existing_tags_weight: 0.1
+  
+  scoring_thresholds:
+    high_confidence: 0.85
+    medium_confidence: 0.70
+    low_confidence: 0.50
+    minimum_acceptable: 0.40
+    
+  adjustment_factors:
+    url_domain_match: 0.1
+    description_length_bonus: 0.05
+    existing_category_penalty: -0.1
+    multiple_pattern_bonus: 0.15
+
+# Category Validation Rules
+validation_rules:
+  max_categories_per_item: 8
+  min_categories_per_item: 2
+  confidence_threshold_enforcement: true
+  cross_category_validation: true
+  
+  category_conflicts:
+    - categories: ["fintech", "insurtech"]
+      resolution: "choose_highest_confidence"
+    - categories: ["ai", "machine-learning"]
+      resolution: "allow_both"
+    - categories: ["software-development", "web-development"]
+      resolution: "allow_both"
+      
+  required_combinations:
+    mcp_servers:
+      must_have: ["technology"]
+      should_have: ["tier-1", "tier-2", "tier-3"]
+    maritime_insurance:
+      must_have: ["business"]
+      should_have: ["maritime-insurance"]
+
+# Correction Mechanisms
+correction_mechanisms:
+  user_feedback_integration:
+    enabled: true
+    feedback_weight: 0.3
+    learning_rate: 0.1
+    
+  pattern_learning:
+    enabled: true
+    pattern_update_frequency: "daily"
+    min_samples_for_pattern: 5
+    
+  confidence_adjustment:
+    enabled: true
+    adjustment_rate: 0.05
+    max_adjustment: 0.2
+
+# Performance Metrics
+performance_metrics:
+  accuracy_target: 0.85
+  precision_target: 0.80
+  recall_target: 0.75
+  f1_score_target: 0.78
+  processing_time_target_ms: 200
+  
+  evaluation_criteria:
+    correct_category_assignment: 1.0
+    partially_correct_assignment: 0.5
+    incorrect_category_assignment: 0.0
+    confidence_calibration_accuracy: 0.3
+
+# Integration Settings
+integration_settings:
+  batch_processing:
+    enabled: true
+    batch_size: 50
+    parallel_processing: true
+    max_workers: 4
+    
+  real_time_processing:
+    enabled: true
+    response_time_target_ms: 500
+    cache_results: true
+    cache_ttl_hours: 24
+    
+  fallback_strategies:
+    keyword_fallback: true
+    manual_categorization_threshold: 0.3
+    default_categories_by_database: true
+
+# Output Format Configuration
+output_format:
+  include_confidence_scores: true
+  include_reasoning: true
+  include_alternative_categories: true
+  max_alternatives: 3
+  
+  category_assignment:
+    format: "tag_value"
+    include_descriptions: false
+    include_colors: false
+    
+  confidence_format:
+    precision: 3
+    scale: "0_to_1"
+    include_breakdown: true

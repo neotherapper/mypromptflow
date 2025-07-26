@@ -1,0 +1,28 @@
+orchestrator_databases:
+  technology_tracking:
+    schema_file: technology-tracking-schema.yaml
+    description: Technology version and change pattern tracking
+    notion_integration: false
+  dependency_mapping:
+    schema_file: dependency-mapping-schema.yaml
+    description: AI file to technology dependency relationships
+    notion_integration: false
+  knowledge_updates:
+    schema_file: knowledge-update-schema.yaml
+    description: Update workflow and quality tracking
+    notion_integration: false
+  change_events:
+    schema_file: change-event-schema.yaml
+    description: Technology change detection and classification
+    notion_integration: false
+integration_enabled: true
+integration_date: '2025-07-25T00:34:04.594993'
+base_paths:
+  knowledge_vault: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault
+  orchestrator: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-lifecycle-orchestrator
+api_endpoints:
+  technology_tracking: /api/orchestrator/technology-tracking
+  dependency_mapping: /api/orchestrator/dependency-mapping
+  knowledge_updates: /api/orchestrator/knowledge-updates
+  change_events: /api/orchestrator/change-events
+  impact_analysis: /api/orchestrator/impact-analysis
