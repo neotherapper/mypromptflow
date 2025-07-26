@@ -64,7 +64,7 @@ This integration strategy synthesizes completed automated systems research with 
 - Breaking news detection systems
 
 #### 7. MCP Registry Analysis
-**Source**: `@research/findings/mcp-registry-analysis/`  
+**Source**: `@research/findings/mcp-servers-2025/research/`  
 **Key Outcomes**: Three-tier registry classification with automated discovery protocols achieving 85% efficiency improvement; Quality assessment frameworks with 95% accuracy prediction; JSON-RPC 2.0 integration patterns
 
 **Integration Value**:

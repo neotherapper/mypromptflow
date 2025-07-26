@@ -43,7 +43,7 @@ Create AI-powered information update system using intelligent agent orchestratio
 **MCP Registry Access**: Use comprehensive MCP server registry at `mcp-registry/detailed-profiles/` for server implementation guidance
 - **Tier 1 Servers**: Immediate implementation priority (Fetch, Memory, Filesystem, Qdrant, GitHub, Redis)
 - **Server Profiles**: Complete implementation guides with enterprise patterns and security compliance
-- **Master Database**: Reference `docs/mcp-server-registry/master-server-database.yaml` for comprehensive server catalog
+- **Master Database**: Reference `mcp-registry/master-server-database.yaml` for comprehensive server catalog
 
 **Implementation Focus**: Deploy Tier 1 MCP servers, implement quality frameworks, build information processing pipeline, create adaptive scheduling system
 
@@ -70,7 +70,7 @@ Create AI-powered information update system using intelligent agent orchestratio
 ## Cross-References
 
 **MCP Registry Resources** (Load when implementing servers):
-- Master Database: `docs/mcp-server-registry/master-server-database.yaml`
+- Master Database: `mcp-registry/master-server-database.yaml`
 - Detailed Profiles: `mcp-registry/detailed-profiles/tier-1/`, `tier-2/`, `tier-3/`
 - Implementation Guides: Server-specific setup and configuration documentation
 

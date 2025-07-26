@@ -17,17 +17,18 @@
 
 **Always**:
 
-- Use MCP JIRA tools (mcp__MCP_DOCKER__jira\_\*)
+- Use MCP JIRA tools (mcp**MCP_DOCKER**jira\_\*)
 - Execute parallel tool operations for efficiency
 - Mark TodoWrite complete with timestamps
 - Validate @file_path cross-references
 
 ## System Overview
 
-**AI Knowledge Base Development** (Critical Infrastructure, Tier 1)  
+**AI Knowledge Base Development** (Critical Infrastructure, Tier 1)
 Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specialist→Worker) with research capabilities and progressive context loading.
 
 **Three-Layer Architecture**:
+
 - **AI Orchestration** (`ai/`) - Multi-agent coordination, 67+ document types, feature orchestrators
 - **Knowledge Vault** (`knowledge-vault/`) - Structured YAML databases, change detection, cross-domain mapping
 - **Research & Projects** (`research/`, `projects/`) - Advanced orchestrator with 15+ methodologies, meta-framework patterns
@@ -37,12 +38,14 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 **Auto-Integration**: Research intentions trigger orchestrator automatically using `research/orchestrator/integration/claude-orchestrator-integration.yaml`
 
 **Research Requirements**:
+
 - MANDATORY registry similarity analysis (≥95% compliance)
 - 8-step orchestrator workflow with constitutional AI validation (≥95% accuracy)
 - Enhanced file structure: research/findings/[topic]/ with .meta/ folder
 - Universal intention detection: `meta/shared/intention-detection-framework.md`
 
 **Quality Standards**:
+
 - AI instruction files: ≥75/100 validation score
 - Task completion: 6-step protocol within ≤180 seconds
 - Cross-reference accuracy: 100% file path accessibility
@@ -52,11 +55,13 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 ## Context Loading Strategy
 
 **Immediate Loading** (@ prefix): Essential context needed for all operations
+
 - Core requirements and constraints (this file)
 - Quality standards and anti-fiction safeguards
 - Essential cross-references for project coordination
 
 **Conditional Loading** (bare paths): Load specific contexts when needed
+
 - `development/CLAUDE.md` - When doing development work
 - `ai/workflows/task-management/CLAUDE.md` - When managing tasks
 - `research/orchestrator/integration/claude-orchestrator-integration.yaml` - When conducting research
@@ -67,6 +72,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 ## Essential Protocols
 
 ### Task Management (≤180 seconds)
+
 1. Mark TodoWrite complete with timestamps
 2. Update projects/\*/task-list.md synchronously
 3. Document outcomes in progress.md with scores
@@ -75,18 +81,21 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 6. Verify completion criteria
 
 ### AI Instruction Standards
+
 - Eliminate human documentation artifacts (Purpose, Overview, Usage sections forbidden)
 - Start with direct actionable instructions (no titles or explanations)
 - Achieve ≥75/100 validation score using meta validation tools
 - Ensure 100% @file_path cross-reference accessibility
 
 ### Anti-Fiction Safeguards
+
 - Verify all numerical claims with sources (file_path:line_number format)
 - Label data type clearly: Verified/Estimated/Analysis/Unknown
 - Maintain cognitive separation between academic analysis and operational execution
 - Restrict knowledge-vault access to explicitly authorized research tasks
 
 ### MCP Error Learning
+
 1. **BEFORE MCP usage**: Check `meta/mcp-learning/usage-guides/[server-name]-guide.md` for known issues
 2. **WHEN errors occur**: Log immediately using `meta/mcp-learning/templates/error-log-template.md`
 3. **AFTER success**: Update usage guides with working patterns
@@ -94,25 +103,29 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 ## Key Resources
 
 **Framework Access** (Load when needed):
+
 - Tasks: `ai/workflows/task-management/CLAUDE.md`
 - Development: `development/CLAUDE.md`
 - Validation: `meta/validation/validators/ai-instruction/`
 - Commands: `.claude/commands/*`
 
 **Project Resources** (Load when working on specific projects):
+
 - Design Excellence: `projects/ai-agent-instruction-design-excellence/CLAUDE.md`
 - Claude Capabilities: `projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
-- MCP Registry: `projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/`
+- MCP Registry: `projects/ai-knowledge-intelligence-orchestrator/mcp-registry/`
 - Task Lists: `projects/*/task-list.md`
 - Progress: `projects/*/progress.md`
 
 **Quality Assurance** (Load when quality issues arise):
+
 - Anti-Fiction: `meta/validation/anti-fiction-safeguards.md`
 - Command Guidelines: `meta/docs/claude-command-creation-guidelines.md`
 - Intent Detection: `meta/shared/intention-detection-framework.md`
 - MCP Learning: `meta/mcp-learning/` (error-logs/, usage-guides/, patterns/, templates/)
 
 **System Configuration** (Reference when needed):
+
 - AI Context: `ai/context/` (dependencies.yaml, document-registry.yaml, feature-registry.yaml, tier-configuration.yaml)
 - Knowledge Vault: `knowledge-vault/` (schemas/, shared/, operations/)
 - Research: `research/` (findings/, orchestrator/, sessions/)
@@ -120,13 +133,3 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 ## Command Integration
 
 **Basic Workflows**: Use `development/CLAUDE.md` for complete development commands and workflows
-
-**Key Commands**:
-- `/create-document [type]` - Interactive document creation
-- `/orchestrate-agents [document-type]` - Multi-agent orchestrated creation
-- `/create-feature [feature-name]` - Feature workspace creation
-- `/research [topic]` - Research orchestrator with registry analysis
-
-**Command Integration**: Commands serve dual purposes (user interface + AI agent interface) with MCP protocol integration for Notion API, database operations, and external service integration.
-
-**Data Flow**: Research findings → Project implementations → Knowledge Vault storage → AI orchestration → Template improvements
