@@ -1,0 +1,502 @@
+# Tag Categorization Engine
+# Advanced tagging system with automatic categorization and intelligent organization
+# Implements tag-based search, filtering, and content discovery
+
+engine_info:
+  name: "Tag Categorization Engine"
+  description: "Intelligent tagging system with automatic categorization and semantic organization"
+  version: "1.0.0"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+# Tag System Architecture
+tag_architecture:
+  vocabulary_source: "../shared/tags-vocabulary.md"
+  
+  tag_structure:
+    flat_hierarchy: true
+    category_prefixes: false
+    multi_category_support: true
+    alias_support: true
+    
+  tag_properties:
+    tag_id:
+      type: "string"
+      pattern: "^[a-z0-9-]+$"
+      max_length: 50
+      required: true
+    
+    tag_name:
+      type: "string"
+      max_length: 100
+      required: true
+      
+    category:
+      type: "string"
+      enum: ["technology", "business", "productivity", "industry", "business_model", "learning"]
+      required: true
+      
+    color:
+      type: "string"
+      enum: ["red", "orange", "yellow", "green", "blue", "purple", "pink", "brown", "gray", "default"]
+      default: "default"
+      
+    description:
+      type: "string"
+      max_length: 500
+      required: true
+      
+    aliases:
+      type: "array"
+      items: "string"
+      max_items: 10
+      unique: true
+
+# Automatic Tagging System
+automatic_tagging:
+  content_analysis:
+    text_analysis:
+      enabled: true
+      techniques: ["keyword_extraction", "semantic_analysis", "pattern_matching"]
+      confidence_threshold: 0.7
+      
+    title_analysis:
+      enabled: true
+      weight: 2.0
+      description: "Title content has higher weight for tag extraction"
+      
+    description_analysis:
+      enabled: true
+      weight: 1.5
+      description: "Description content has medium weight"
+      
+    content_analysis:
+      enabled: true
+      weight: 1.0
+      description: "Main content has standard weight"
+  
+  pattern_matching:
+    technology_patterns:
+      - pattern: "\\b(ai|artificial intelligence|machine learning|ml|deep learning)\\b"
+        tags: ["ai", "technology"]
+        confidence: 0.9
+        
+      - pattern: "\\b(automation|workflow automation|process automation)\\b"
+        tags: ["automation", "productivity"]
+        confidence: 0.85
+        
+      - pattern: "\\b(developer tools?|programming tools?|dev tools?)\\b"
+        tags: ["developer-tools", "technology"]
+        confidence: 0.8
+        
+      - pattern: "\\b(integration|api integration|system integration)\\b"
+        tags: ["integration", "technology"]
+        confidence: 0.8
+    
+    business_patterns:
+      - pattern: "\\b(business strategy|strategic planning|strategy)\\b"
+        tags: ["business-strategy", "business"]
+        confidence: 0.9
+        
+      - pattern: "\\b(customer experience|user experience|cx|ux)\\b"
+        tags: ["customer-experience", "business"]
+        confidence: 0.85
+        
+      - pattern: "\\b(marketing|digital marketing|online marketing)\\b"
+        tags: ["digital-marketing", "business"]
+        confidence: 0.8
+        
+      - pattern: "\\b(startup|entrepreneur|business creation)\\b"
+        tags: ["entrepreneurship", "business"]
+        confidence: 0.85
+    
+    productivity_patterns:
+      - pattern: "\\b(productivity|efficiency|optimization)\\b"
+        tags: ["productivity", "efficiency"]
+        confidence: 0.8
+        
+      - pattern: "\\b(project management|team collaboration|agile|scrum)\\b"
+        tags: ["project-management", "productivity"]
+        confidence: 0.85
+        
+      - pattern: "\\b(design|ui design|ux design|graphic design)\\b"
+        tags: ["design", "productivity"]
+        confidence: 0.8
+        
+      - pattern: "\\b(innovation|creative thinking|disruptive)\\b"
+        tags: ["innovation", "productivity"]
+        confidence: 0.8
+    
+    industry_patterns:
+      - pattern: "\\b(fintech|financial technology|digital banking)\\b"
+        tags: ["fintech", "industry"]
+        confidence: 0.9
+        
+      - pattern: "\\b(healthtech|healthcare technology|medical technology)\\b"
+        tags: ["healthtech", "industry"]
+        confidence: 0.9
+        
+      - pattern: "\\b(edtech|educational technology|learning platforms)\\b"
+        tags: ["edtech", "industry"]
+        confidence: 0.9
+        
+      - pattern: "\\b(proptech|property technology|real estate tech)\\b"
+        tags: ["proptech", "industry"]
+        confidence: 0.9
+  
+  semantic_analysis:
+    enabled: true
+    techniques: ["word_embeddings", "topic_modeling", "semantic_similarity"]
+    models: ["word2vec", "sentence_transformers"]
+    confidence_threshold: 0.6
+    
+    semantic_clusters:
+      technology_cluster:
+        seed_words: ["technology", "software", "digital", "tech", "automation", "ai"]
+        associated_tags: ["technology", "developer-tools", "automation", "ai", "integration"]
+        
+      business_cluster:
+        seed_words: ["business", "strategy", "market", "revenue", "growth", "customer"]
+        associated_tags: ["business-strategy", "entrepreneurship", "growth-hacking", "customer-experience"]
+        
+      productivity_cluster:
+        seed_words: ["productivity", "efficiency", "workflow", "optimization", "management"]
+        associated_tags: ["productivity", "efficiency", "project-management", "design"]
+
+# Manual Tagging System
+manual_tagging:
+  validation_rules:
+    tag_existence:
+      enabled: true
+      description: "Tags must exist in the shared vocabulary"
+      strict_mode: true
+      
+    category_consistency:
+      enabled: true
+      description: "Suggest tags from same category when adding"
+      suggestions: true
+      
+    tag_limit:
+      per_item_limit: 20
+      recommended_limit: 10
+      warn_threshold: 8
+  
+  tag_suggestions:
+    related_tag_suggestions:
+      enabled: true
+      based_on: ["existing_tags", "content_analysis", "similar_items"]
+      max_suggestions: 5
+      
+    popular_tag_suggestions:
+      enabled: true
+      based_on: "usage_frequency"
+      min_usage_count: 5
+      max_suggestions: 3
+      
+    semantic_suggestions:
+      enabled: true
+      based_on: "semantic_similarity"
+      confidence_threshold: 0.7
+      max_suggestions: 3
+  
+  tag_management:
+    bulk_tagging:
+      enabled: true
+      max_items_per_operation: 100
+      validation: "pre_operation"
+      
+    tag_replacement:
+      enabled: true
+      confirmation_required: true
+      audit_trail: true
+      
+    tag_cleanup:
+      remove_unused_tags: false  # Manual operation only
+      consolidate_similar_tags: false  # Manual operation only
+      normalize_tag_format: true
+
+# Tag-Based Search and Filtering
+search_filtering:
+  search_syntax:
+    single_tag: "tag:ai"
+    multiple_tags_and: "tag:ai AND tag:business"
+    multiple_tags_or: "tag:ai OR tag:automation"
+    tag_negation: "NOT tag:deprecated"
+    complex_queries: "(tag:ai OR tag:automation) AND tag:business NOT tag:deprecated"
+  
+  search_operations:
+    exact_match: "tag:exact_tag_name"
+    partial_match: "tag:partial*"
+    category_search: "category:technology"
+    alias_search: true  # Automatically includes aliases
+    
+  filtering_capabilities:
+    tag_intersection:
+      description: "Items that have ALL specified tags"
+      operator: "AND"
+      
+    tag_union:
+      description: "Items that have ANY of the specified tags" 
+      operator: "OR"
+      
+    tag_exclusion:
+      description: "Items that do NOT have specified tags"
+      operator: "NOT"
+      
+    category_filtering:
+      description: "Filter by tag categories"
+      syntax: "category:{category_name}"
+      
+    popularity_filtering:
+      description: "Filter by tag usage frequency"
+      syntax: "popularity:{threshold}"
+  
+  search_optimization:
+    tag_indexing:
+      enabled: true
+      index_types: ["forward", "reverse", "popularity"]
+      update_frequency: "immediate"
+      
+    search_caching:
+      enabled: true
+      cache_popular_queries: true
+      ttl: 1800  # 30 minutes
+      
+    result_ranking:
+      tag_match_score: true
+      content_relevance: true
+      item_popularity: true
+      freshness_factor: true
+
+# Tag Analytics and Intelligence
+analytics:
+  usage_analytics:
+    tag_popularity:
+      metric: "usage_frequency"
+      tracking_period: "rolling_30_days"
+      min_threshold: 1
+      
+    tag_co_occurrence:
+      metric: "tags_used_together"
+      min_co_occurrence: 3
+      confidence_threshold: 0.3
+      
+    category_distribution:
+      metric: "items_per_category"
+      visualization: "pie_chart"
+      
+    trending_tags:
+      metric: "usage_growth_rate"
+      period: "last_7_days"
+      min_growth_rate: 0.2
+  
+  quality_metrics:
+    tag_coverage:
+      description: "Percentage of items that have tags"
+      target_threshold: 0.9
+      warning_threshold: 0.7
+      
+    tag_diversity:
+      description: "Average number of different tags per item"
+      target_range: [3, 8]
+      
+    automatic_tagging_accuracy:
+      description: "Accuracy of automatic tag suggestions"
+      measurement: "user_acceptance_rate"
+      target_threshold: 0.8
+  
+  intelligence_features:
+    tag_recommendations:
+      based_on: ["item_similarity", "user_behavior", "content_analysis"]
+      confidence_scoring: true
+      learning_enabled: true
+      
+    tag_clustering:
+      algorithm: "hierarchical_clustering"
+      similarity_metric: "co_occurrence"
+      cluster_threshold: 0.5
+      
+    anomaly_detection:
+      unusual_tag_combinations: true
+      outlier_items: true
+      tag_misuse_detection: true
+
+# Cross-Database Tag Coordination
+cross_database_coordination:
+  shared_vocabulary:
+    enforcement: true
+    description: "All databases use the same tag vocabulary"
+    synchronization: "real_time"
+    
+  tag_propagation:
+    relationship_based:
+      enabled: true
+      description: "Suggest tags based on related items in other databases"
+      confidence_threshold: 0.6
+      
+    hub_coordination:
+      enabled: true
+      description: "Knowledge vault hub coordinates tags across spokes"
+      priority_override: true
+  
+  consistency_management:
+    tag_normalization:
+      enabled: true
+      case_normalization: "lowercase"
+      special_character_handling: "replace_with_hyphen"
+      
+    duplicate_prevention:
+      alias_checking: true
+      similarity_checking: true
+      similarity_threshold: 0.8
+      
+    version_control:
+      tag_versioning: false  # Simple system, no versioning needed
+      change_tracking: true
+      audit_trail: true
+
+# Tag Maintenance and Curation
+maintenance:
+  automated_maintenance:
+    orphan_tag_cleanup:
+      enabled: false  # Manual process to prevent accidents
+      frequency: "manual"
+      notification_only: true
+      
+    tag_consolidation:
+      enabled: false  # Manual process
+      similarity_threshold: 0.9
+      suggestion_only: true
+      
+    tag_statistics_update:
+      enabled: true
+      frequency: "hourly"
+      include_trends: true
+  
+  manual_curation:
+    tag_review_process:
+      frequency: "quarterly"
+      reviewers: ["system_admin", "content_curator"]
+      review_criteria: ["usage", "relevance", "clarity"]
+      
+    tag_lifecycle:
+      creation_approval: false  # Auto-approved from vocabulary
+      modification_approval: true
+      deletion_approval: true
+      
+    quality_improvement:
+      description_enhancement: true
+      alias_expansion: true
+      category_refinement: true
+  
+  reporting:
+    tag_usage_report:
+      frequency: "monthly"
+      includes: ["popular_tags", "unused_tags", "trending_tags"]
+      
+    tag_quality_report:
+      frequency: "quarterly"
+      includes: ["coverage_metrics", "diversity_metrics", "accuracy_metrics"]
+      
+    tag_maintenance_report:
+      frequency: "as_needed"
+      includes: ["orphan_tags", "duplicate_candidates", "consolidation_suggestions"]
+
+# Performance and Scalability
+performance:
+  indexing_strategy:
+    tag_indexes:
+      primary_tag_index:
+        fields: ["tag_id"]
+        type: "btree"
+        unique: true
+        
+      tag_category_index:
+        fields: ["category", "tag_id"]
+        type: "composite"
+        
+      tag_popularity_index:
+        fields: ["usage_count", "tag_id"]
+        type: "composite"
+        order: "descending"
+        
+    item_tag_indexes:
+      item_tags_index:
+        fields: ["item_id", "tags"]
+        type: "multi_value"
+        
+      tag_items_index:
+        fields: ["tag_id", "item_ids"]
+        type: "reverse"
+  
+  caching_strategy:
+    tag_cache:
+      vocabulary_cache:
+        ttl: 7200  # 2 hours
+        size_limit: "10MB"
+        
+      popular_tags_cache:
+        ttl: 3600  # 1 hour
+        refresh_threshold: 0.8
+        
+      search_results_cache:
+        ttl: 1800  # 30 minutes
+        max_results_cached: 1000
+  
+  scalability_features:
+    distributed_tagging:
+      enabled: false  # Single-machine system
+      
+    batch_operations:
+      enabled: true
+      batch_size_limit: 1000
+      parallel_processing: true
+      
+    lazy_loading:
+      enabled: true
+      load_on_access: true
+      prefetch_popular: true
+
+# Integration and APIs
+integration:
+  search_integration:
+    full_text_search: true
+    tag_boosting: true
+    faceted_search: true
+    auto_complete: true
+    
+  analytics_integration:
+    usage_tracking: true
+    performance_metrics: true
+    user_behavior_analysis: true
+    
+  ui_integration:
+    tag_suggestions_api: true
+    tag_validation_api: true
+    tag_search_api: true
+    tag_analytics_api: true
+
+# Configuration
+configuration:
+  global_settings:
+    automatic_tagging_enabled: true
+    manual_tagging_required: false
+    tag_validation_strict: true
+    performance_monitoring: true
+    
+  algorithm_tuning:
+    confidence_thresholds:
+      automatic_tagging: 0.7
+      semantic_similarity: 0.6
+      tag_suggestions: 0.5
+      
+    performance_limits:
+      max_tags_per_item: 20
+      max_suggestions: 5
+      search_timeout: 30  # seconds
+      
+  feature_flags:
+    semantic_analysis: true
+    automatic_suggestions: true
+    advanced_analytics: true
+    cross_database_coordination: true

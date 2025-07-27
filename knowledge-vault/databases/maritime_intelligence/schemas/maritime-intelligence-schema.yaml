@@ -1,0 +1,426 @@
+# Maritime Intelligence Database Schema
+# Industry-specific intelligence and applications for MCP servers and tools
+# Maintains cross-references to generic profiles while providing maritime context
+
+database_info:
+  name: "Maritime Intelligence"
+  type: "specialized_database"
+  notion_id: "maritime-intelligence-db-placeholder"  # To be configured
+  description: "Maritime industry-specific intelligence and applications for tools and services"
+  version: "1.0.0"
+  created: "2025-01-24"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the maritime intelligence record"
+    format: "uuid_v4"
+    
+  title:
+    type: "title"
+    required: true
+    description: "Descriptive title for the maritime application"
+    max_length: 200
+    
+  # Status Workflow (aligned with knowledge-vault patterns)
+  status:
+    type: "select"
+    required: true
+    description: "Current evaluation and implementation status"
+    default: "discovered"
+    options:
+      - value: "discovered"
+        name: "Discovered"
+        color: "yellow"
+        description: "Identified potential maritime application"
+      - value: "evaluating"
+        name: "Evaluating"
+        color: "blue"
+        description: "Assessing maritime use case fit"
+      - value: "active_use"
+        name: "Active Use"
+        color: "green"
+        description: "Currently implemented in maritime operations"
+      - value: "archived"
+        name: "Archived"
+        color: "gray"
+        description: "No longer relevant or superseded"
+        
+  # Maritime Industry Categories
+  maritime_domain:
+    type: "multi_select"
+    required: false
+    description: "Maritime industry domains and specializations"
+    options:
+      - value: "claims-processing"
+        name: "Claims Processing"
+        color: "red"
+      - value: "vessel-tracking"
+        name: "Vessel Tracking"
+        color: "blue"
+      - value: "cargo-management"
+        name: "Cargo Management"
+        color: "green"
+      - value: "regulatory-compliance"
+        name: "Regulatory Compliance"
+        color: "orange"
+      - value: "marine-insurance"
+        name: "Marine Insurance"
+        color: "purple"
+      - value: "port-operations"
+        name: "Port Operations"
+        color: "yellow"
+      - value: "fleet-management"
+        name: "Fleet Management"
+        color: "blue"
+      - value: "risk-assessment"
+        name: "Risk Assessment"
+        color: "red"
+      - value: "survey-management"
+        name: "Survey Management"
+        color: "green"
+      - value: "documentation"
+        name: "Documentation"
+        color: "gray"
+      - value: "communication"
+        name: "Communication"
+        color: "purple"
+      - value: "analytics"
+        name: "Analytics"
+        color: "orange"
+        
+  # Business Value Assessment
+  business_impact:
+    type: "select"
+    required: false
+    description: "Assessed business impact for maritime operations"
+    options:
+      - value: "critical"
+        name: "Critical"
+        color: "red"
+        description: "Essential for maritime business operations"
+      - value: "high"
+        name: "High"
+        color: "orange"
+        description: "Significant operational improvement"
+      - value: "medium"
+        name: "Medium"
+        color: "yellow"
+        description: "Moderate efficiency gains"
+      - value: "low"
+        name: "Low"
+        color: "blue"
+        description: "Minor operational benefits"
+      - value: "unknown"
+        name: "Unknown"
+        color: "gray"
+        description: "Impact not yet assessed"
+        
+  # Implementation Priority
+  priority:
+    type: "select"
+    required: false
+    description: "Implementation priority for maritime use case"
+    options:
+      - value: "immediate"
+        name: "Immediate"
+        color: "red"
+      - value: "short_term"
+        name: "Short Term (1-3 months)"
+        color: "orange"
+      - value: "medium_term"
+        name: "Medium Term (3-6 months)"
+        color: "yellow"
+      - value: "long_term"
+        name: "Long Term (6+ months)"
+        color: "blue"
+      - value: "future"
+        name: "Future Consideration"
+        color: "gray"
+        
+  # Maritime Use Cases
+  use_cases:
+    type: "rich_text"
+    required: false
+    description: "Specific maritime industry use cases and applications"
+    
+  implementation_examples:
+    type: "rich_text"
+    required: false
+    description: "Concrete examples of maritime implementation scenarios"
+    
+  regulatory_considerations:
+    type: "rich_text"
+    required: false
+    description: "Relevant maritime regulations and compliance requirements"
+    
+  # Cross-Reference to Generic Tool/Service
+  generic_tool_reference:
+    type: "rich_text"
+    required: true
+    description: "Cross-reference to generic tool/service profile using @tools_services/{uuid} format"
+    validation_pattern: "@tools_services/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+    cross_reference_type: "tools_services"
+    bidirectional: true
+    
+  # Maritime Stakeholders
+  stakeholders:
+    type: "multi_select"
+    required: false
+    description: "Maritime industry stakeholders who would benefit"
+    options:
+      - value: "underwriters"
+        name: "Underwriters"
+        color: "blue"
+      - value: "claims-adjusters"
+        name: "Claims Adjusters"
+        color: "red"
+      - value: "ship-owners"
+        name: "Ship Owners"
+        color: "green"
+      - value: "port-authorities"
+        name: "Port Authorities"
+        color: "orange"
+      - value: "cargo-owners"
+        name: "Cargo Owners"
+        color: "purple"
+      - value: "surveyors"
+        name: "Marine Surveyors"
+        color: "yellow"
+      - value: "brokers"
+        name: "Insurance Brokers"
+        color: "blue"
+      - value: "legal-teams"
+        name: "Legal Teams"
+        color: "red"
+      - value: "compliance-officers"
+        name: "Compliance Officers"
+        color: "orange"
+      - value: "fleet-managers"
+        name: "Fleet Managers"
+        color: "green"
+      - value: "operations-teams"
+        name: "Operations Teams"
+        color: "purple"
+        
+  # Regulatory Framework Alignment
+  regulatory_frameworks:
+    type: "multi_select"
+    required: false
+    description: "Relevant maritime regulatory frameworks and standards"
+    options:
+      - value: "imo"
+        name: "IMO (International Maritime Organization)"
+        color: "blue"
+      - value: "solas"
+        name: "SOLAS (Safety of Life at Sea)"
+        color: "red"
+      - value: "marpol"
+        name: "MARPOL (Marine Pollution)"
+        color: "green"
+      - value: "stcw"
+        name: "STCW (Standards of Training)"
+        color: "orange"
+      - value: "isps"
+        name: "ISPS Code (Ship Security)"
+        color: "purple"
+      - value: "msr"
+        name: "Maritime Search and Rescue"
+        color: "yellow"
+      - value: "flag-state"
+        name: "Flag State Requirements"
+        color: "blue"
+      - value: "port-state"
+        name: "Port State Control"
+        color: "red"
+      - value: "class-society"
+        name: "Classification Society Rules"
+        color: "green"
+      - value: "pi-club"
+        name: "P&I Club Requirements"
+        color: "orange"
+        
+  # Risk Categories
+  risk_categories:
+    type: "multi_select"
+    required: false
+    description: "Maritime risk categories addressed"
+    options:
+      - value: "hull-damage"
+        name: "Hull & Machinery Damage"
+        color: "red"
+      - value: "cargo-damage"
+        name: "Cargo Damage/Loss"
+        color: "orange"
+      - value: "collision"
+        name: "Collision Risk"
+        color: "red"
+      - value: "grounding"
+        name: "Grounding Risk"
+        color: "yellow"
+      - value: "fire-explosion"
+        name: "Fire & Explosion"
+        color: "red"
+      - value: "piracy"
+        name: "Piracy & Security"
+        color: "purple"
+      - value: "environmental"
+        name: "Environmental Damage"
+        color: "green"
+      - value: "crew-injury"
+        name: "Crew Injury/Illness"
+        color: "orange"
+      - value: "weather-damage"
+        name: "Weather-Related Damage"
+        color: "blue"
+      - value: "mechanical-failure"
+        name: "Mechanical Failure"
+        color: "gray"
+      - value: "total-loss"
+        name: "Total Loss"
+        color: "red"
+        
+  # Implementation Notes
+  implementation_notes:
+    type: "rich_text"
+    required: false
+    description: "Technical implementation considerations and notes"
+    
+  success_metrics:
+    type: "rich_text"
+    required: false
+    description: "Metrics for measuring success in maritime context"
+    
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the maritime intelligence record was created"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the maritime intelligence record was last updated"
+    
+  # Cross-Database Relationships
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "maritime_intelligence_relations"
+    
+  tools_services_relations:
+    type: "relation"
+    required: false
+    description: "Related tools and services (generic profiles)"
+    related_database: "tools_services"
+    dual_property: "maritime_intelligence_relations"
+    
+  business_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related business ideas with maritime focus"
+    related_database: "business_ideas"
+    dual_property: "maritime_intelligence_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "maritime_intelligence_and_applications"
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    generic_tool_reference_required: true
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "title", "status", "generic_tool_reference"]
+    unique_fields: ["id"]
+    cross_reference_validation: true
+    maritime_domain_required: false
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/maritime_intelligence/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "schemas/maritime-intelligence-schema.yaml"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: false  # To be configured later
+    notion_database_id: "placeholder"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "priority"]
+    description: "Status and priority filtering"
+  - fields: ["maritime_domain", "business_impact"]
+    description: "Domain-specific impact analysis"
+  - fields: ["stakeholders", "regulatory_frameworks"]
+    description: "Stakeholder and regulatory filtering"
+  - fields: ["risk_categories"]
+    description: "Risk-based analysis and filtering"
+  - fields: ["generic_tool_reference"]
+    description: "Cross-reference lookup optimization"
+    
+# Views Configuration
+views:
+  active_maritime_applications:
+    name: "Active Maritime Applications"
+    filter:
+      status: ["active_use"]
+    sort:
+      - field: "business_impact"
+        direction: "descending"
+      - field: "priority"
+        direction: "ascending"
+        
+  high_priority_evaluation:
+    name: "High Priority Evaluation"
+    filter:
+      status: ["evaluating"]
+      priority: ["immediate", "short_term"]
+    sort:
+      - field: "business_impact"
+        direction: "descending"
+        
+  by_maritime_domain:
+    name: "By Maritime Domain"
+    group_by: "maritime_domain"
+    sort:
+      - field: "business_impact"
+        direction: "descending"
+        
+  regulatory_compliance:
+    name: "Regulatory Compliance Focus"
+    filter:
+      maritime_domain: ["regulatory-compliance"]
+    sort:
+      - field: "regulatory_frameworks"
+        direction: "ascending"
+        
+  claims_processing:
+    name: "Claims Processing Applications"
+    filter:
+      maritime_domain: ["claims-processing"]
+    sort:
+      - field: "business_impact"
+        direction: "descending"
+        
+  risk_management:
+    name: "Risk Management Tools"
+    filter:
+      maritime_domain: ["risk-assessment"]
+    sort:
+      - field: "risk_categories"
+        direction: "ascending"

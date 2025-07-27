@@ -1,0 +1,541 @@
+vocabulary_info:
+  name: Unified Tags Vocabulary
+  version: 2.0.0
+  created: '2025-01-23'
+  description: Comprehensive tagging system for all Knowledge Vault databases
+  supports_mcp_servers: true
+  business_domain: maritime_insurance
+tags_vocabulary:
+  technology:
+  - value: ai
+    name: AI
+    color: red
+    scope: all_databases
+    description: Artificial intelligence and machine learning
+  - value: automation
+    name: Automation
+    color: blue
+    scope: all_databases
+    description: Process automation and workflow optimization
+  - value: developer-tools
+    name: Developer Tools
+    color: purple
+    scope: all_databases
+    description: Development tools and utilities
+  - value: integration
+    name: Integration
+    color: green
+    scope: all_databases
+    description: System integration and API connectivity
+  - value: no-code
+    name: No-Code
+    color: orange
+    scope: all_databases
+    description: No-code and low-code solutions
+  - value: software-development
+    name: Software Development
+    color: blue
+    scope: all_databases
+    description: Software development practices and tools
+  - value: tech-stack
+    name: Tech Stack
+    color: purple
+    scope: all_databases
+    description: Technology stack components
+  - value: database
+    name: Database
+    color: green
+    scope: all_databases
+    description: Database technologies and management
+  - value: cloud-hosting
+    name: Cloud Hosting
+    color: blue
+    scope: all_databases
+    description: Cloud hosting and infrastructure
+  - value: api-service
+    name: API Service
+    color: red
+    scope: all_databases
+    description: API services and web services
+  business:
+  - value: business-strategy
+    name: Business Strategy
+    color: red
+    scope: all_databases
+    description: Strategic business planning and analysis
+  - value: maritime-insurance
+    name: Maritime Insurance
+    color: blue
+    scope: all_databases
+    description: Maritime insurance specific applications
+  - value: cost-optimization
+    name: Cost Optimization
+    color: yellow
+    scope: all_databases
+    description: Cost reduction and optimization strategies
+  - value: customer-experience
+    name: Customer Experience
+    color: green
+    scope: all_databases
+    description: Customer experience and service quality
+  - value: digital-marketing
+    name: Digital Marketing
+    color: orange
+    scope: all_databases
+    description: Digital marketing and online presence
+  - value: entrepreneurship
+    name: Entrepreneurship
+    color: red
+    scope: all_databases
+    description: Entrepreneurial activities and startup development
+  - value: finance
+    name: Finance
+    color: green
+    scope: all_databases
+    description: Financial planning and management
+  - value: growth-hacking
+    name: Growth Hacking
+    color: orange
+    scope: all_databases
+    description: Growth strategies and optimization
+  - value: sales
+    name: Sales
+    color: blue
+    scope: all_databases
+    description: Sales processes and optimization
+  - value: project-management
+    name: Project Management
+    color: orange
+    scope: all_databases
+    description: Project management tools and methodologies
+  productivity:
+  - value: design
+    name: Design
+    color: purple
+    scope: all_databases
+    description: Design tools and creative processes
+  - value: efficiency
+    name: Efficiency
+    color: green
+    scope: all_databases
+    description: Efficiency improvements and optimization
+  - value: innovation
+    name: Innovation
+    color: red
+    scope: all_databases
+    description: Innovation and creative solutions
+  - value: productivity
+    name: Productivity
+    color: blue
+    scope: all_databases
+    description: Productivity tools and techniques
+  - value: communication
+    name: Communication
+    color: blue
+    scope: all_databases
+    description: Communication tools and collaboration
+  - value: analytics
+    name: Analytics
+    color: blue
+    scope: all_databases
+    description: Analytics and data analysis
+  industry:
+  - value: fintech
+    name: FinTech
+    color: green
+    scope: all_databases
+    description: Financial technology solutions
+  - value: insurtech
+    name: InsurTech
+    color: yellow
+    scope: all_databases
+    description: Insurance technology innovations
+  - value: edtech
+    name: EdTech
+    color: blue
+    scope: all_databases
+    description: Educational technology
+  - value: healthtech
+    name: HealthTech
+    color: red
+    scope: all_databases
+    description: Healthcare technology
+  - value: proptech
+    name: PropTech
+    color: orange
+    scope: all_databases
+    description: Property technology
+  - value: legaltech
+    name: LegalTech
+    color: purple
+    scope: all_databases
+    description: Legal technology solutions
+  business_model:
+  - value: saas
+    name: SaaS
+    color: blue
+    scope: all_databases
+    description: Software as a Service
+  - value: marketplace
+    name: MarketPlace
+    color: green
+    scope: all_databases
+    description: Marketplace business model
+  - value: e-commerce
+    name: E-Commerce
+    color: orange
+    scope: all_databases
+    description: E-commerce and online retail
+  - value: subscription
+    name: Subscription
+    color: purple
+    scope: all_databases
+    description: Subscription-based services
+  - value: platform
+    name: Platform
+    color: red
+    scope: all_databases
+    description: Platform business model
+  - value: enterprise
+    name: Enterprise
+    color: purple
+    scope: all_databases
+    description: Enterprise-focused solutions
+  learning:
+  - value: programming
+    name: Programming
+    color: blue
+    scope: all_databases
+    description: Programming languages and techniques
+  - value: web-development
+    name: Web Development
+    color: green
+    scope: all_databases
+    description: Web development technologies
+  - value: data-science
+    name: Data Science
+    color: red
+    scope: all_databases
+    description: Data science and analytics
+  - value: machine-learning
+    name: Machine Learning
+    color: purple
+    scope: all_databases
+    description: Machine learning and AI algorithms
+  - value: devops
+    name: DevOps
+    color: orange
+    scope: all_databases
+    description: DevOps practices and tools
+  - value: cybersecurity
+    name: Cybersecurity
+    color: red
+    scope: all_databases
+    description: Security practices and tools
+  - value: leadership
+    name: Leadership
+    color: brown
+    scope: all_databases
+    description: Leadership skills and management
+  - value: creativity
+    name: Creativity
+    color: purple
+    scope: all_databases
+    description: Creative skills and processes
+  content:
+  - value: documentation
+    name: Documentation
+    color: yellow
+    scope: all_databases
+    description: Documentation and knowledge resources
+  - value: tutorial
+    name: Tutorial
+    color: green
+    scope: all_databases
+    description: Educational tutorials and guides
+  - value: research
+    name: Research
+    color: yellow
+    scope: all_databases
+    description: Research materials and findings
+  - value: insight
+    name: Insight
+    color: purple
+    scope: all_databases
+    description: Insights and observations
+  - value: case-study
+    name: Case Study
+    color: blue
+    scope: all_databases
+    description: Case studies and examples
+  organization:
+  - value: high-priority
+    name: High Priority
+    color: red
+    scope: all_databases
+    description: High priority items requiring immediate attention
+  - value: quick-win
+    name: Quick Win
+    color: green
+    scope: all_databases
+    description: Quick wins and easy implementations
+  - value: long-term
+    name: Long Term
+    color: blue
+    scope: all_databases
+    description: Long-term strategic initiatives
+  - value: experimental
+    name: Experimental
+    color: orange
+    scope: all_databases
+    description: Experimental or trial implementations
+  - value: knowledge-vault
+    name: Knowledge Vault
+    color: blue
+    scope: all_databases
+    description: Knowledge management system related
+  - value: platform-research
+    name: Platform Research
+    color: purple
+    scope: all_databases
+    description: Platform evaluation and research
+  mcp:
+  - value: mcp-server
+    name: MCP Server
+    color: purple
+    scope: tools_services
+    description: Model Context Protocol server
+  - value: tier-1
+    name: Tier 1
+    color: red
+    scope: tools_services
+    description: Tier 1 MCP servers (highest business value)
+  - value: tier-2
+    name: Tier 2
+    color: orange
+    scope: tools_services
+    description: Tier 2 MCP servers (high business value)
+  - value: tier-3
+    name: Tier 3
+    color: yellow
+    scope: tools_services
+    description: Tier 3 MCP servers (moderate business value)
+  - value: information-retrieval
+    name: Information Retrieval
+    color: blue
+    scope: tools_services
+    description: Information retrieval and search capabilities
+  - value: development-tools
+    name: Development Tools
+    color: green
+    scope: tools_services
+    description: Development and coding assistance
+  - value: communication
+    name: Communication
+    color: orange
+    scope: tools_services
+    description: Communication and collaboration tools
+  - value: monitoring
+    name: Monitoring
+    color: red
+    scope: tools_services
+    description: System monitoring and observability
+  - value: maritime-specific
+    name: Maritime Specific
+    color: blue
+    scope: tools_services
+    description: Maritime industry specific applications
+database_configurations:
+  knowledge_vault:
+    required_categories:
+    - technology
+    - business
+    - productivity
+    optional_categories:
+    - industry
+    - business_model
+    - learning
+    - content
+    - organization
+    mcp_support: false
+  tools_services:
+    required_categories:
+    - technology
+    - mcp
+    optional_categories:
+    - business
+    - productivity
+    - industry
+    - business_model
+    - organization
+    mcp_support: true
+    enhanced_mcp_fields:
+    - tier-1
+    - tier-2
+    - tier-3
+    - mcp-server
+  business_ideas:
+    required_categories:
+    - business
+    - industry
+    - business_model
+    optional_categories:
+    - technology
+    - productivity
+    - learning
+    - organization
+    mcp_support: false
+  notes_ideas:
+    required_categories:
+    - organization
+    optional_categories:
+    - technology
+    - business
+    - productivity
+    - industry
+    - learning
+    - content
+    mcp_support: false
+  training_vault:
+    required_categories:
+    - learning
+    - technology
+    optional_categories:
+    - business
+    - productivity
+    - industry
+    - organization
+    mcp_support: false
+  platforms_sites:
+    required_categories:
+    - technology
+    - business
+    optional_categories:
+    - productivity
+    - industry
+    - business_model
+    - learning
+    - content
+    - organization
+    mcp_support: false
+migration_strategy:
+  tools_services:
+    technology_type_mapping:
+      database_sql:
+      - database
+      - tech-stack
+      database_nosql:
+      - database
+      - tech-stack
+      dev_framework:
+      - developer-tools
+      - software-development
+      dev_library:
+      - developer-tools
+      - software-development
+      cloud_hosting:
+      - cloud-hosting
+      - tech-stack
+      analytics:
+      - analytics
+      - business
+      communication:
+      - communication
+      - productivity
+    preserve_existing_fields: true
+    add_tags_property: true
+  business_ideas:
+    industry_vertical_mapping:
+      fintech:
+      - fintech
+      - business-strategy
+      insurtech:
+      - insurtech
+      - maritime-insurance
+      saas:
+      - saas
+      - software-development
+      marketplace:
+      - marketplace
+      - platform
+      enterprise:
+      - enterprise
+      - business-strategy
+    preserve_existing_fields: true
+    add_tags_property: true
+  platforms_sites:
+    platform_type_mapping:
+      web_app:
+      - software-development
+      - platform
+      development_tool:
+      - developer-tools
+      - productivity
+      analytics_platform:
+      - analytics
+      - business
+      design_tool:
+      - design
+      - productivity
+    purpose_mapping:
+      web_development:
+      - web-development
+      - software-development
+      project_management:
+      - project-management
+      - productivity
+      marketing:
+      - digital-marketing
+      - business
+      education:
+      - tutorial
+      - learning
+    preserve_existing_fields: true
+    add_tags_property: true
+validation_rules:
+  max_tags_per_item: 8
+  required_tags_minimum: 2
+  mcp_servers_must_have_tier: true
+  maritime_insurance_items_must_have_domain_tag: true
+  cross_database_consistency_required: true
+implementation_priority:
+  phase_1:
+  - tools_services
+  phase_2:
+  - business_ideas
+  - platforms_sites
+  phase_3:
+  - notes_ideas
+  - training_vault
+  - knowledge_vault
+success_metrics:
+  tag_coverage_target: '>95%'
+  vocabulary_consistency: 100%
+  mcp_server_classification: 100%
+  cross_database_searchability: '>90%'
+unified_tags:
+  options:
+  - value: version_tracking
+    name: Version Tracking
+    color: blue
+  - value: dependency_analysis
+    name: Dependency Analysis
+    color: green
+  - value: change_monitoring
+    name: Change Monitoring
+    color: orange
+  - value: update_workflow
+    name: Update Workflow
+    color: purple
+  - value: impact_assessment
+    name: Impact Assessment
+    color: red
+  - value: technology_automation
+    name: Technology Automation
+    color: yellow
+  - value: orchestration
+    name: Orchestration
+    color: pink
+  - value: lifecycle_management
+    name: Lifecycle Management
+    color: brown

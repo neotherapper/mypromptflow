@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-07-25T22:13:50.483146",
+  "total_files_converted": 4,
+  "filename_mapping": {
+    "databases/change_events/items/6efb4a3f-9cd8-427a-b7d4-aa37857713b0.md": "databases/change_events/items/change_events-item-6efb4a3f.md",
+    "databases/technology_tracking/items/f8780062-b41b-4874-89c3-dee82e5774e5.md": "databases/technology_tracking/items/javascript-library-for-building-user-interfaces.md",
+    "databases/dependency_mapping/items/fa55f5fe-bf5f-40eb-add9-216eefb040a5.md": "databases/dependency_mapping/items/dependency_mapping-item-fa55f5fe.md",
+    "databases/knowledge_updates/items/dd041628-62d5-45e6-bcc5-030ca25e5884.md": "databases/knowledge_updates/items/knowledge_updates-item-dd041628.md"
+  },
+  "filename_conflicts": {}
+}

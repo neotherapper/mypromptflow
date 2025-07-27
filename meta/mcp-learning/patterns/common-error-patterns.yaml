@@ -1,0 +1,206 @@
+# Common MCP Server Error Patterns
+# This file tracks recurring error patterns across all MCP servers
+# Used for cross-server analysis and prevention rule generation
+
+version: "1.0.0"
+last_updated: "2025-01-24"
+total_servers_tracked: 4
+pattern_analysis_status: "baseline_established"
+
+# Cross-Server Error Categories
+error_categories:
+  authentication:
+    description: "Credential, token, and permission-related failures"
+    frequency: 0  # To be updated as errors occur
+    common_causes:
+      - expired_tokens
+      - invalid_credentials
+      - insufficient_permissions
+      - authentication_configuration_errors
+    prevention_strategies:
+      - validate_credentials_before_use
+      - implement_token_refresh_mechanisms
+      - verify_permissions_scope
+      - check_authentication_configuration
+  
+  parameter_validation:
+    description: "Missing, invalid, or malformed parameter errors"
+    frequency: 0  # To be updated as errors occur
+    common_causes:
+      - missing_required_parameters
+      - invalid_parameter_formats
+      - data_type_mismatches
+      - parameter_value_out_of_range
+    prevention_strategies:
+      - pre_validate_parameter_formats
+      - check_required_parameter_presence
+      - validate_data_types_before_submission
+      - apply_parameter_range_validation
+  
+  api_integration:
+    description: "External API communication and response handling errors"
+    frequency: 0  # To be updated as errors occur
+    common_causes:
+      - rate_limiting_exceeded
+      - api_endpoint_unavailable
+      - api_version_incompatibility
+      - response_timeout_exceeded
+    prevention_strategies:
+      - implement_rate_limiting_awareness
+      - check_service_status_before_requests
+      - validate_api_version_compatibility
+      - apply_appropriate_timeout_settings
+  
+  network_connectivity:
+    description: "Network, DNS, and connection-level failures"
+    frequency: 0  # To be updated as errors occur
+    common_causes:
+      - connection_timeouts
+      - dns_resolution_failures
+      - ssl_certificate_issues
+      - proxy_configuration_problems
+    prevention_strategies:
+      - verify_network_connectivity
+      - validate_dns_resolution
+      - check_ssl_certificate_validity
+      - confirm_proxy_configuration
+
+# Server-Specific Pattern Tracking
+server_patterns:
+  mcp_docker:
+    total_errors: 0
+    most_common_category: "not_determined"
+    specific_patterns: []
+    last_error_date: null
+    error_log: "@meta/mcp-learning/error-logs/mcp-docker-errors.md"
+  
+  notion_api:
+    total_errors: 0
+    most_common_category: "not_determined"
+    specific_patterns: []
+    last_error_date: null
+    error_log: "@meta/mcp-learning/error-logs/notion-api-errors.md"
+  
+  jira:
+    total_errors: 0
+    most_common_category: "not_determined"
+    specific_patterns: []
+    last_error_date: null
+    error_log: "@meta/mcp-learning/error-logs/jira-errors.md"
+  
+  browser_automation:
+    total_errors: 0
+    most_common_category: "not_determined"
+    specific_patterns: []
+    last_error_date: null
+    error_log: "@meta/mcp-learning/error-logs/browser-errors.md"
+
+# Pattern Recognition Rules
+pattern_recognition:
+  similarity_threshold: 0.8  # How similar errors must be to group together
+  frequency_threshold: 3     # Minimum occurrences to establish pattern
+  time_window_days: 30      # Period for pattern analysis
+  
+  grouping_criteria:
+    - error_message_similarity
+    - parameter_pattern_matching
+    - timing_correlation
+    - resolution_method_similarity
+
+# Automated Pattern Analysis
+analysis_rules:
+  daily_tasks:
+    - update_error_frequencies
+    - identify_new_patterns
+    - flag_recurring_issues
+  
+  weekly_tasks:
+    - cross_server_pattern_analysis
+    - prevention_strategy_evaluation
+    - usage_guide_update_recommendations
+  
+  monthly_tasks:
+    - comprehensive_pattern_review
+    - system_effectiveness_assessment
+    - prevention_rule_optimization
+
+# Prevention Rule Generation
+prevention_rules:
+  rule_types:
+    pre_validation:
+      description: "Checks performed before MCP tool execution"
+      rules: []  # To be populated based on error patterns
+    
+    parameter_formatting:
+      description: "Parameter format validation rules"
+      rules: []  # To be populated based on validation failures
+    
+    authentication_verification:
+      description: "Authentication status and validity checks"
+      rules: []  # To be populated based on auth failures
+    
+    service_availability:
+      description: "External service status verification"
+      rules: []  # To be populated based on API failures
+
+# Learning Effectiveness Metrics
+learning_metrics:
+  baseline_date: "2025-01-24"
+  error_reduction_target: 0.90  # 90% reduction in repeated errors
+  resolution_time_target: 900   # 15 minutes average resolution
+  prevention_rate_target: 0.95  # 95% prevention of known patterns
+  
+  current_metrics:
+    total_errors_prevented: 0
+    average_resolution_time: null
+    repeat_error_rate: null
+    pattern_recognition_accuracy: null
+
+# Integration Configuration
+integration:
+  main_protocol: "@CLAUDE.md#MCP Error Learning Protocol"
+  usage_guides_directory: "@meta/mcp-learning/usage-guides/"
+  error_logs_directory: "@meta/mcp-learning/error-logs/"
+  validation_patterns: "@meta/mcp-learning/patterns/parameter-validation-patterns.yaml"
+  
+  cross_references:
+    - "@meta/validation/protocols/self-healing-error-detection-patterns.md"
+    - "@meta/validation/protocols/self-healing-protocol.md"
+    - "@development/CLAUDE.md#MCP JIRA tools"
+
+# Pattern Update Protocol
+update_protocol:
+  automatic_updates:
+    - error_frequency_counters
+    - pattern_recognition_analysis
+    - prevention_rule_effectiveness
+  
+  manual_review_required:
+    - new_pattern_classification
+    - prevention_strategy_modification
+    - cross_server_correlation_analysis
+  
+  quality_gates:
+    - pattern_accuracy_validation
+    - prevention_effectiveness_verification
+    - system_performance_monitoring
+
+# Future Enhancement Areas
+enhancement_roadmap:
+  phase_2:
+    - machine_learning_pattern_recognition
+    - predictive_error_prevention
+    - automated_resolution_suggestions
+  
+  phase_3:
+    - cross_project_pattern_sharing
+    - intelligent_parameter_suggestion
+    - real_time_error_prevention
+
+---
+# Usage Instructions
+# 1. This file is automatically updated as errors occur across MCP servers
+# 2. Pattern analysis runs weekly to identify recurring issues
+# 3. Prevention rules are generated based on confirmed patterns
+# 4. Integration with usage guides ensures proactive error prevention
+# 5. Metrics track system effectiveness and learning progress

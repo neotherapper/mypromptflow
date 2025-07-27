@@ -1,0 +1,571 @@
+# Business Ideas Database Schema
+# Innovation tracking and idea evaluation database
+# Replicates Notion Business Ideas structure with full relationship support
+
+database_info:
+  name: "Business Ideas"
+  type: "specialized_database"
+  notion_id: "e4dea264-36d7-439f-ab80-a23c4aaae5e4"
+  description: "Innovation tracking, business opportunities, and idea evaluation"
+  version: "1.0.0"
+  created: "2024-07-21"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the business idea"
+    format: "uuid_v4"
+    
+  name:
+    type: "title"
+    required: true
+    description: "Name or title of the business idea"
+    max_length: 200
+    
+  # Innovation Rating System
+  idea_rating:
+    type: "select"
+    required: false
+    description: "5-star rating for idea quality and potential"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "Exceptional potential"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "High potential"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Moderate potential"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Low potential"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Very low potential"
+        
+  # Business Development Status
+  status:
+    type: "select"
+    required: true
+    description: "Current stage in business development lifecycle"
+    default: "ideation"
+    options:
+      - value: "ideation"
+        name: "Ideation"
+        color: "yellow"
+      - value: "research"
+        name: "Research"
+        color: "orange"
+      - value: "validation"
+        name: "Validation"
+        color: "blue"
+      - value: "development"
+        name: "Development"
+        color: "green"
+      - value: "launch"
+        name: "Launch"
+        color: "red"
+      - value: "shelved"
+        name: "Shelved"
+        color: "gray"
+        
+  # Industry Vertical Classification (20+ categories from Notion analysis)
+  industry_vertical:
+    type: "multi_select"
+    required: false
+    description: "Industry verticals and market categories"
+    options:
+      # Technology Verticals
+      - value: "edtech"
+        name: "EdTech"
+        color: "blue"
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "healthtech"
+        name: "HealthTech"
+        color: "red"
+      - value: "proptech"
+        name: "PropTech"
+        color: "orange"
+      - value: "legaltech"
+        name: "LegalTech"
+        color: "purple"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      
+      # Business Models
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "marketplace"
+        name: "MarketPlace"
+        color: "green"
+      - value: "e-commerce"
+        name: "E-Commerce"
+        color: "orange"
+      - value: "subscription"
+        name: "Subscription"
+        color: "purple"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      
+      # Market Categories
+      - value: "b2b"
+        name: "B2B"
+        color: "blue"
+      - value: "b2c"
+        name: "B2C"
+        color: "green"
+      - value: "b2b2c"
+        name: "B2B2C"
+        color: "orange"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "purple"
+      - value: "consumer"
+        name: "Consumer"
+        color: "yellow"
+        
+  # Market Assessment
+  market_size:
+    type: "select"
+    required: false
+    description: "Estimated total addressable market size"
+    options:
+      - value: "large"
+        name: "Large (>$10B)"
+        color: "red"
+      - value: "medium"
+        name: "Medium ($1B-$10B)"
+        color: "orange"
+      - value: "small"
+        name: "Small ($100M-$1B)"
+        color: "yellow"
+      - value: "niche"
+        name: "Niche (<$100M)"
+        color: "blue"
+      - value: "unknown"
+        name: "Unknown"
+        color: "gray"
+        
+  # Implementation Assessment
+  complexity:
+    type: "select"
+    required: false
+    description: "Technical and business complexity"
+    options:
+      - value: "low"
+        name: "Low"
+        color: "green"
+      - value: "medium"
+        name: "Medium"
+        color: "yellow"
+      - value: "high"
+        name: "High"
+        color: "orange"
+      - value: "very_high"
+        name: "Very High"
+        color: "red"
+        
+  investment_required:
+    type: "select"
+    required: false
+    description: "Initial investment requirements"
+    options:
+      - value: "minimal"
+        name: "Minimal (<$10K)"
+        color: "green"
+      - value: "low"
+        name: "Low ($10K-$100K)"
+        color: "yellow"
+      - value: "medium"
+        name: "Medium ($100K-$1M)"
+        color: "orange"
+      - value: "high"
+        name: "High ($1M-$10M)"
+        color: "red"
+      - value: "very_high"
+        name: "Very High (>$10M)"
+        color: "purple"
+        
+  # Detailed Documentation
+  statement_of_purpose:
+    type: "rich_text"
+    required: false
+    description: "Comprehensive description of the business idea, value proposition, and market opportunity"
+    
+  problem_statement:
+    type: "rich_text"
+    required: false
+    description: "Clear description of the problem being solved"
+    
+  solution_overview:
+    type: "rich_text"
+    required: false
+    description: "High-level solution approach"
+    
+  target_audience:
+    type: "rich_text"
+    required: false
+    description: "Primary and secondary target customer segments"
+    
+  competitive_landscape:
+    type: "rich_text"
+    required: false
+    description: "Analysis of existing competitors and alternatives"
+    
+  # Validation and Research
+  validation_status:
+    type: "select"
+    required: false
+    description: "Level of idea validation completed"
+    options:
+      - value: "none"
+        name: "None"
+        color: "gray"
+      - value: "initial"
+        name: "Initial Research"
+        color: "yellow"
+      - value: "market_research"
+        name: "Market Research"
+        color: "orange"
+      - value: "customer_interviews"
+        name: "Customer Interviews"
+        color: "blue"
+      - value: "mvp_tested"
+        name: "MVP Tested"
+        color: "green"
+      - value: "validated"
+        name: "Validated"
+        color: "red"
+        
+  # Timeline and Planning
+  estimated_timeline:
+    type: "rich_text"
+    required: false
+    description: "Estimated development and launch timeline"
+    
+  key_milestones:
+    type: "rich_text"
+    required: false
+    description: "Major milestones and checkpoints"
+    
+  # Unified Tagging System (Business Ideas Focus)
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Unified business idea categorization tags"
+    options:
+      # Business Categories (Primary for Business Ideas)
+      - value: "business-strategy"
+        name: "Business Strategy"
+        color: "red"
+      - value: "maritime-insurance"
+        name: "Maritime Insurance"
+        color: "blue"
+      - value: "entrepreneurship"
+        name: "Entrepreneurship"
+        color: "red"
+      - value: "cost-optimization"
+        name: "Cost Optimization"
+        color: "yellow"
+      - value: "customer-experience"
+        name: "Customer Experience"
+        color: "green"
+      - value: "digital-marketing"
+        name: "Digital Marketing"
+        color: "orange"
+      - value: "finance"
+        name: "Finance"
+        color: "green"
+      - value: "growth-hacking"
+        name: "Growth Hacking"
+        color: "orange"
+      - value: "sales"
+        name: "Sales"
+        color: "blue"
+      
+      # Industry Verticals (Primary for Business Ideas)
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      - value: "edtech"
+        name: "EdTech"
+        color: "blue"
+      - value: "healthtech"
+        name: "HealthTech"
+        color: "red"
+      - value: "proptech"
+        name: "PropTech"
+        color: "orange"
+      - value: "legaltech"
+        name: "LegalTech"
+        color: "purple"
+      
+      # Business Models (Primary for Business Ideas)
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "marketplace"
+        name: "MarketPlace"
+        color: "green"
+      - value: "e-commerce"
+        name: "E-Commerce"
+        color: "orange"
+      - value: "subscription"
+        name: "Subscription"
+        color: "purple"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "purple"
+      
+      # Technology Categories (Supporting)
+      - value: "ai"
+        name: "AI"
+        color: "red"
+      - value: "automation"
+        name: "Automation"
+        color: "blue"
+      - value: "no-code"
+        name: "No-Code"
+        color: "orange"
+      - value: "integration"
+        name: "Integration"
+        color: "green"
+      
+      # Productivity Categories (Supporting)
+      - value: "innovation"
+        name: "Innovation"
+        color: "red"
+      - value: "productivity"
+        name: "Productivity"
+        color: "blue"
+      - value: "design"
+        name: "Design"
+        color: "purple"
+      
+      # Organization Tags
+      - value: "high-priority"
+        name: "High Priority"
+        color: "red"
+      - value: "quick-win"
+        name: "Quick Win"
+        color: "green"
+      - value: "long-term"
+        name: "Long Term"
+        color: "blue"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+    
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the business idea was created"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the business idea was last updated"
+    
+  # Cross-Database Relationships
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge and research items"
+    related_database: "knowledge_vault"
+    dual_property: "business_ideas_relations"
+    
+  tools_services_relations:
+    type: "relation"
+    required: false
+    description: "Required tools and services for implementation"
+    related_database: "tools_services"
+    dual_property: "business_ideas_relations"
+    
+  platforms_sites_relations:
+    type: "relation"
+    required: false
+    description: "Related platforms and competitive analysis"
+    related_database: "platforms_sites"
+    dual_property: "business_ideas_relations"
+    
+  notes_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related research notes and supporting ideas"
+    related_database: "notes_ideas"
+    dual_property: "business_ideas_relations"
+    
+  # Rollup Properties for Analysis
+  related_tools_count:
+    type: "rollup"
+    description: "Number of tools required for implementation"
+    rollup_property: "id"
+    rollup_function: "count"
+    relation_property: "tools_services_relations"
+    
+  knowledge_priority:
+    type: "rollup"
+    description: "Priority level from related knowledge items"
+    rollup_property: "priority"
+    rollup_function: "max"
+    relation_property: "knowledge_vault_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "innovation_and_business_development"
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "name", "status"]
+    unique_fields: ["id"]
+    rating_range: [1, 5]
+    text_length_validation: true
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/business_ideas/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "business_ideas_schema.md"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: true
+    notion_database_id: "e4dea264-36d7-439f-ab80-a23c4aaae5e4"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+    
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "validation_status"]
+    description: "Development stage and validation filtering"
+  - fields: ["industry_vertical", "market_size"]
+    description: "Market and industry analysis"
+  - fields: ["idea_rating", "complexity"]
+    description: "Quality and complexity assessment"
+  - fields: ["last_modified"]
+    description: "Recently updated ideas"
+  - fields: ["tags"]
+    description: "Unified tagging system searches and filtering"
+  - fields: ["tags", "idea_rating"]
+    description: "Tag-based quality assessment for business ideas"
+    
+# Views Configuration (replicate Notion views)
+views:
+  active_ideas:
+    name: "Active Ideas"
+    filter:
+      status: ["ideation", "research", "validation", "development"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "last_modified"
+        direction: "descending"
+        
+  high_potential:
+    name: "High Potential"
+    filter:
+      idea_rating: [4, 5]
+      status: ["ideation", "research", "validation", "development"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+        
+  by_industry:
+    name: "By Industry"
+    group_by: "industry_vertical"
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+        
+  validation_pipeline:
+    name: "Validation Pipeline"
+    group_by: "validation_status"
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+        
+  investment_analysis:
+    name: "Investment Analysis"
+    group_by: "investment_required"
+    sort:
+      - field: "market_size"
+        direction: "descending"
+      - field: "complexity"
+        direction: "ascending"
+        
+  # Tag-Based Views for Enhanced Organization
+  maritime_insurance_ideas:
+    name: "Maritime Insurance Ideas"
+    filter:
+      tags: ["maritime-insurance", "insurtech"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "validation_status"
+        direction: "descending"
+        
+  by_business_model:
+    name: "By Business Model"
+    group_by: "tags"
+    filter:
+      tags: ["saas", "marketplace", "e-commerce", "subscription", "platform"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+        
+  high_priority_ideas:
+    name: "High Priority Business Ideas"
+    filter:
+      tags: ["high-priority"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "status"
+        direction: "ascending"
+        
+  quick_wins:
+    name: "Quick Win Opportunities"
+    filter:
+      tags: ["quick-win"]
+      complexity: ["low", "medium"]
+    sort:
+      - field: "idea_rating"
+        direction: "descending"
+      - field: "investment_required"
+        direction: "ascending"
+        
+  by_tags:
+    name: "By Tags"
+    group_by: "tags"
+    sort:
+      - field: "idea_rating"
+        direction: "descending"

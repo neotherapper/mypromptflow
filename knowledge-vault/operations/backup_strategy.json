@@ -1,0 +1,20 @@
+{
+  "backup_timestamp": "2025-07-26T17:56:02.875319",
+  "backup_location": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/operations/backups/pre_migration_backup_20250726_175602",
+  "items_to_backup": 51,
+  "backup_size_estimate": "~10MB",
+  "backup_verification": {
+    "checksum_validation": true,
+    "content_integrity_check": true,
+    "metadata_preservation": true
+  },
+  "recovery_plan": {
+    "recovery_time_estimate": "5-10 minutes",
+    "rollback_procedure": [
+      "Stop migration process",
+      "Restore from backup location",
+      "Verify content integrity",
+      "Update migration logs"
+    ]
+  }
+}

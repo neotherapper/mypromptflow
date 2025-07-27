@@ -1,0 +1,1417 @@
+# Notion Property Mappings Configuration
+# Complete database schemas for VanguardAI test environment migration
+# Version: 2.0.0 - Production-Ready with Comprehensive Validation
+
+property_mappings_info:
+  name: "Knowledge Vault Notion Property Mappings"
+  description: "Complete database schemas and property mappings for all 6 databases"
+  version: "2.0.0"
+  created: "2025-07-22"
+  last_updated: "2025-07-22"
+  databases_supported: 6
+  vanguardai_test_validated: true
+
+# Database Schema Definitions for Notion
+notion_database_schemas:
+  
+  knowledge_vault_database:
+    database_name: "Knowledge Vault"
+    description: "Methodologies, frameworks, and research insights - Hub database"
+    icon: "🧠"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and primary title"
+        required: true
+        example: "meta-prompting-frameworks"
+        
+      Name:
+        type: "rich_text"
+        description: "Display name for the knowledge item"
+        required: true
+        example: "Meta-Prompting Frameworks"
+        
+      Category:
+        type: "select"
+        description: "Knowledge category classification"
+        required: true
+        options:
+          - name: "AI_Frameworks"
+            color: "blue"
+          - name: "Research_Methods"  
+            color: "green"
+          - name: "Development_Patterns"
+            color: "purple"
+          - name: "Quality_Systems"
+            color: "orange"
+          - name: "Performance_Optimization"
+            color: "red"
+          - name: "Design_Systems"
+            color: "pink"
+            
+      Type:
+        type: "select"
+        description: "Type of knowledge item"
+        required: true
+        options:
+          - name: "Methodology"
+            color: "blue"
+          - name: "Framework"
+            color: "green"
+          - name: "Pattern"
+            color: "purple"
+          - name: "Research"
+            color: "orange"
+          - name: "Best_Practice"
+            color: "red"
+            
+      Status:
+        type: "select"
+        description: "Development and validation status"
+        required: true
+        options:
+          - name: "Research"
+            color: "yellow"
+          - name: "Development"
+            color: "blue"
+          - name: "Testing"
+            color: "orange"
+          - name: "Production"
+            color: "green"
+          - name: "Archived"
+            color: "gray"
+            
+      Description:
+        type: "rich_text"
+        description: "Comprehensive description of the knowledge item"
+        required: true
+        
+      Key_Insights:
+        type: "rich_text"
+        description: "Primary discoveries and insights"
+        required: false
+        
+      Applications:
+        type: "rich_text"
+        description: "Practical applications and use cases"
+        required: false
+        
+      Research_Quality:
+        type: "number"
+        description: "Research quality score (0-100)"
+        required: false
+        format: "number"
+        
+      Tags:
+        type: "multi_select"
+        description: "Categorization and filtering tags"
+        required: false
+        options:
+          - name: "ai-orchestration"
+            color: "blue"
+          - name: "meta-prompting"
+            color: "green"
+          - name: "context-optimization"
+            color: "purple"
+          - name: "validation-systems"
+            color: "orange"
+          - name: "performance-optimization"
+            color: "red"
+          - name: "constitutional-ai"
+            color: "pink"
+          - name: "research-methods"
+            color: "yellow"
+          - name: "quality-assurance"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Implementation priority level"
+        required: false
+        options:
+          - name: "Critical"
+            color: "red"
+          - name: "High"  
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      Related_Tools:
+        type: "relation"
+        description: "Related tools and services"
+        relation:
+          database_id: "{tools_services_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Knowledge"
+          
+      Related_Business_Ideas:
+        type: "relation"
+        description: "Related business opportunities"
+        relation:
+          database_id: "{business_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Knowledge"
+          
+      Related_Training:
+        type: "relation"
+        description: "Related training and certification"
+        relation:
+          database_id: "{training_vault_database_id}"
+          type: "dual_property" 
+          dual_property: "Related_Knowledge"
+          
+      Related_Platforms:
+        type: "relation"
+        description: "Related platforms and sites"
+        relation:
+          database_id: "{platforms_sites_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Knowledge"
+          
+      Related_Notes:
+        type: "relation"
+        description: "Related notes and insights"
+        relation:
+          database_id: "{notes_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Items"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time"
+        description: "Last modification timestamp"
+
+  tools_services_database:
+    database_name: "Tools & Services"
+    description: "Technology platforms, development tools, and services"
+    icon: "🛠️"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and tool name"
+        required: true
+        example: "claude-code-max"
+        
+      Name:
+        type: "rich_text"
+        description: "Display name for the tool or service"
+        required: true
+        example: "Claude Code Max"
+        
+      Category:
+        type: "select"
+        description: "Tool category classification"
+        required: true
+        options:
+          - name: "AI_Platforms"
+            color: "blue"
+          - name: "Development_Tools"
+            color: "green"
+          - name: "Cloud_Services"
+            color: "purple"
+          - name: "Databases"
+            color: "orange"
+          - name: "CI_CD"
+            color: "red"
+          - name: "Design_Tools"
+            color: "pink"
+          - name: "Communication"
+            color: "yellow"
+          - name: "Project_Management"
+            color: "gray"
+            
+      Type:
+        type: "select"
+        description: "Type of tool or service"
+        required: true
+        options:
+          - name: "SaaS_Platform"
+            color: "blue"
+          - name: "Open_Source_Tool"
+            color: "green"
+          - name: "Cloud_Service"
+            color: "purple"
+          - name: "Enterprise_Solution"
+            color: "orange"
+          - name: "Development_Environment"
+            color: "red"
+          - name: "API_Service"
+            color: "pink"
+            
+      Status:
+        type: "select"
+        description: "Adoption and usage status"
+        required: true
+        options:
+          - name: "Evaluating"
+            color: "yellow"
+          - name: "Testing"
+            color: "orange"
+          - name: "In_Use"
+            color: "green"
+          - name: "Production"
+            color: "blue"
+          - name: "Deprecated"
+            color: "gray"
+            
+      Description:
+        type: "rich_text"
+        description: "Comprehensive tool description"
+        required: true
+        
+      Key_Features:
+        type: "rich_text"
+        description: "Primary features and capabilities"
+        required: false
+        
+      Use_Cases:
+        type: "rich_text"
+        description: "Practical applications and scenarios"
+        required: false
+        
+      Performance_Rating:
+        type: "select"
+        description: "Performance assessment"
+        required: false
+        options:
+          - name: "⭐⭐⭐⭐⭐"
+            color: "green"
+          - name: "⭐⭐⭐⭐"
+            color: "blue"
+          - name: "⭐⭐⭐"
+            color: "yellow"
+          - name: "⭐⭐"
+            color: "orange"
+          - name: "⭐"
+            color: "red"
+            
+      Pricing_Model:
+        type: "select"
+        description: "Cost structure"
+        required: false
+        options:
+          - name: "Free"
+            color: "green"
+          - name: "Freemium"
+            color: "blue"
+          - name: "Subscription"
+            color: "purple"
+          - name: "Usage_Based"
+            color: "orange"
+          - name: "Enterprise"
+            color: "red"
+          - name: "One_Time"
+            color: "gray"
+            
+      Website:
+        type: "url"
+        description: "Official website URL"
+        required: false
+        
+      Documentation:
+        type: "url"
+        description: "Documentation URL"
+        required: false
+        
+      Tags:
+        type: "multi_select"
+        description: "Technology and feature tags"
+        required: false
+        options:
+          - name: "ai-powered"
+            color: "blue"
+          - name: "cloud-native"
+            color: "green"
+          - name: "enterprise-ready"
+            color: "purple"
+          - name: "open-source"
+            color: "orange"
+          - name: "real-time"
+            color: "red"
+          - name: "collaboration"
+            color: "pink"
+          - name: "automation"
+            color: "yellow"
+          - name: "integration"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Adoption priority level"
+        required: false
+        options:
+          - name: "Critical"
+            color: "red"
+          - name: "High"
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      Related_Knowledge:
+        type: "relation"
+        description: "Related knowledge vault items"
+        relation:
+          database_id: "{knowledge_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Tools"
+          
+      Related_Notes:
+        type: "relation"
+        description: "Related notes and insights"
+        relation:
+          database_id: "{notes_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Items"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time" 
+        description: "Last modification timestamp"
+
+  business_ideas_database:
+    database_name: "Business Ideas"
+    description: "Innovation opportunities and business concepts"
+    icon: "💡"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and idea name"
+        required: true
+        example: "ai-knowledge-intelligence-orchestrator"
+        
+      Name:
+        type: "rich_text"
+        description: "Business idea name"
+        required: true
+        example: "AI Knowledge Intelligence Orchestrator"
+        
+      Category:
+        type: "select"
+        description: "Business category"
+        required: true
+        options:
+          - name: "AI_Platform"
+            color: "blue"
+          - name: "Enterprise_Software"
+            color: "green"
+          - name: "Developer_Tools"
+            color: "purple"
+          - name: "Productivity_Tools"
+            color: "orange"
+          - name: "Educational_Platform"
+            color: "red"
+          - name: "Consulting_Services"
+            color: "pink"
+          - name: "SaaS_Solution"
+            color: "yellow"
+            
+      Market_Type:
+        type: "select"
+        description: "Target market classification"
+        required: true
+        options:
+          - name: "B2B_Enterprise"
+            color: "blue"
+          - name: "B2B_SMB"
+            color: "green"
+          - name: "B2C_Professional"
+            color: "purple"
+          - name: "B2C_Consumer"
+            color: "orange"
+          - name: "B2G_Government"
+            color: "red"
+          - name: "Marketplace"
+            color: "pink"
+            
+      Status:
+        type: "select"
+        description: "Development status"
+        required: true
+        options:
+          - name: "Concept"
+            color: "yellow"
+          - name: "Research"
+            color: "blue"
+          - name: "Prototype"
+            color: "orange"
+          - name: "MVP"
+            color: "green"
+          - name: "Launch"
+            color: "purple"
+          - name: "Growth"
+            color: "red"
+          - name: "Mature"
+            color: "gray"
+            
+      Description:
+        type: "rich_text"
+        description: "Comprehensive business idea description"
+        required: true
+        
+      Value_Proposition:
+        type: "rich_text"
+        description: "Core value proposition"
+        required: false
+        
+      Target_Market:
+        type: "rich_text"
+        description: "Target customer segments"
+        required: false
+        
+      Revenue_Model:
+        type: "select"
+        description: "Revenue generation approach"
+        required: false
+        options:
+          - name: "Subscription"
+            color: "blue"
+          - name: "Usage_Based"
+            color: "green"
+          - name: "License"
+            color: "purple"
+          - name: "Consulting"
+            color: "orange"
+          - name: "Marketplace_Fee"
+            color: "red"
+          - name: "Advertising"
+            color: "pink"
+          - name: "Freemium"
+            color: "yellow"
+            
+      Market_Opportunity:
+        type: "rich_text"
+        description: "Market size and opportunity analysis"
+        required: false
+        
+      Competitive_Advantage:
+        type: "rich_text"
+        description: "Key competitive advantages"
+        required: false
+        
+      Implementation_Complexity:
+        type: "select"
+        description: "Technical implementation complexity"
+        required: false
+        options:
+          - name: "Low"
+            color: "green"
+          - name: "Medium"
+            color: "yellow"
+          - name: "High"
+            color: "orange"
+          - name: "Very_High"
+            color: "red"
+            
+      Investment_Required:
+        type: "select"
+        description: "Estimated investment level"
+        required: false
+        options:
+          - name: "Bootstrap"
+            color: "green"
+          - name: "Seed_Funding"
+            color: "blue"
+          - name: "Series_A"
+            color: "purple"
+          - name: "Significant_Capital"
+            color: "orange"
+          - name: "Enterprise_Investment"
+            color: "red"
+            
+      Tags:
+        type: "multi_select"
+        description: "Business and technology tags"
+        required: false
+        options:
+          - name: "ai-powered"
+            color: "blue"
+          - name: "automation"
+            color: "green"
+          - name: "enterprise-scale"
+            color: "purple"
+          - name: "developer-focused"
+            color: "orange"
+          - name: "productivity"
+            color: "red"
+          - name: "validation-systems"
+            color: "pink"
+          - name: "workflow-optimization"
+            color: "yellow"
+          - name: "knowledge-management"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Development priority"
+        required: false
+        options:
+          - name: "Critical"
+            color: "red"
+          - name: "High"
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      Related_Knowledge:
+        type: "relation"
+        description: "Related knowledge vault items"
+        relation:
+          database_id: "{knowledge_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Business_Ideas"
+          
+      Related_Notes:
+        type: "relation"
+        description: "Related notes and insights"
+        relation:
+          database_id: "{notes_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Items"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time"
+        description: "Last modification timestamp"
+
+  training_vault_database:
+    database_name: "Training Vault"  
+    description: "Certification programs and learning resources"
+    icon: "🎓"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and program name"
+        required: true
+        example: "claude-code-mastery-program"
+        
+      Name:
+        type: "rich_text"
+        description: "Training program name"
+        required: true
+        example: "Claude Code Mastery Program"
+        
+      Category:
+        type: "select"
+        description: "Training category"
+        required: true
+        options:
+          - name: "AI_Development"
+            color: "blue"
+          - name: "Software_Engineering"
+            color: "green"
+          - name: "Project_Management"
+            color: "purple"
+          - name: "Design_Systems"
+            color: "orange"
+          - name: "DevOps_Infrastructure"
+            color: "red"
+          - name: "Business_Skills"
+            color: "pink"
+          - name: "Leadership"
+            color: "yellow"
+            
+      Type:
+        type: "select"
+        description: "Type of training program"
+        required: true
+        options:
+          - name: "Certification"
+            color: "blue"
+          - name: "Course"
+            color: "green"
+          - name: "Workshop"
+            color: "purple"
+          - name: "Bootcamp"
+            color: "orange"
+          - name: "Self_Paced"
+            color: "red"
+          - name: "Mentorship"
+            color: "pink"
+          - name: "Conference"
+            color: "yellow"
+            
+      Status:
+        type: "select"
+        description: "Program development status"
+        required: true
+        options:
+          - name: "Planning"
+            color: "yellow"
+          - name: "Development"
+            color: "blue"
+          - name: "Testing"
+            color: "orange"
+          - name: "Available"
+            color: "green"
+          - name: "Running"
+            color: "purple"
+          - name: "Completed"
+            color: "gray"
+          - name: "Archived"
+            color: "red"
+            
+      Description:
+        type: "rich_text"
+        description: "Comprehensive program description"
+        required: true
+        
+      Learning_Objectives:
+        type: "rich_text"
+        description: "Key learning outcomes"
+        required: false
+        
+      Target_Audience:
+        type: "rich_text"
+        description: "Intended learners and prerequisites"
+        required: false
+        
+      Duration:
+        type: "rich_text"
+        description: "Program duration and time commitment"
+        required: false
+        
+      Difficulty_Level:
+        type: "select"
+        description: "Skill level required"
+        required: false
+        options:
+          - name: "Beginner"
+            color: "green"
+          - name: "Intermediate"
+            color: "yellow"
+          - name: "Advanced"
+            color: "orange"
+          - name: "Expert"
+            color: "red"
+          - name: "Professional"
+            color: "purple"
+            
+      Delivery_Format:
+        type: "select"
+        description: "How the training is delivered"
+        required: false
+        options:
+          - name: "Online_Self_Paced"
+            color: "blue"
+          - name: "Live_Virtual"
+            color: "green"
+          - name: "In_Person"
+            color: "purple"
+          - name: "Hybrid"
+            color: "orange"
+          - name: "Cohort_Based"
+            color: "red"
+          - name: "One_on_One"
+            color: "pink"
+            
+      Cost:
+        type: "rich_text"
+        description: "Program cost and pricing structure"
+        required: false
+        
+      ROI_Potential:
+        type: "select"
+        description: "Expected return on investment"
+        required: false
+        options:
+          - name: "Very_High"
+            color: "green"
+          - name: "High"
+            color: "blue"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "orange"
+          - name: "TBD"
+            color: "gray"
+            
+      Certification_Body:
+        type: "rich_text"
+        description: "Issuing organization or authority"
+        required: false
+        
+      Tags:
+        type: "multi_select"
+        description: "Skills and technology tags"
+        required: false
+        options:
+          - name: "ai-development"
+            color: "blue"
+          - name: "claude-code"
+            color: "green"
+          - name: "prompt-engineering"
+            color: "purple"
+          - name: "workflow-automation"
+            color: "orange"
+          - name: "code-generation"
+            color: "red"
+          - name: "productivity"
+            color: "pink"
+          - name: "enterprise-skills"
+            color: "yellow"
+          - name: "leadership"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Learning priority level"
+        required: false
+        options:
+          - name: "Critical"
+            color: "red"
+          - name: "High"
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      Related_Knowledge:
+        type: "relation"
+        description: "Related knowledge vault items"
+        relation:
+          database_id: "{knowledge_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Training"
+          
+      Related_Notes:
+        type: "relation"
+        description: "Related notes and insights"
+        relation:
+          database_id: "{notes_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Items"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time"
+        description: "Last modification timestamp"
+
+  platforms_sites_database:
+    database_name: "Platforms & Sites"
+    description: "Resource websites, platforms, and information sources"
+    icon: "🌐"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and platform name"
+        required: true
+        example: "github-marketplace"
+        
+      Name:
+        type: "rich_text"
+        description: "Platform or site name"
+        required: true
+        example: "GitHub Marketplace"
+        
+      Category:
+        type: "select"
+        description: "Platform category"
+        required: true
+        options:
+          - name: "Developer_Platform"
+            color: "blue"
+          - name: "Marketplace"
+            color: "green"
+          - name: "Documentation"
+            color: "purple"
+          - name: "Community"
+            color: "orange"
+          - name: "Learning_Platform"
+            color: "red"
+          - name: "Resource_Library"
+            color: "pink"
+          - name: "Tool_Registry"
+            color: "yellow"
+          - name: "News_Information"
+            color: "gray"
+            
+      Type:
+        type: "select"
+        description: "Type of platform or site"
+        required: true
+        options:
+          - name: "Official_Platform"
+            color: "blue"
+          - name: "Third_Party_Service"
+            color: "green"
+          - name: "Community_Resource"
+            color: "purple"
+          - name: "Documentation_Site"
+            color: "orange"
+          - name: "Marketplace"
+            color: "red"
+          - name: "Blog_Publication"
+            color: "pink"
+          - name: "Reference_Guide"
+            color: "yellow"
+            
+      Status:
+        type: "select"
+        description: "Platform status and reliability"
+        required: true
+        options:
+          - name: "Active"
+            color: "green"
+          - name: "Stable"
+            color: "blue"
+          - name: "Beta"
+            color: "yellow"
+          - name: "Deprecated"
+            color: "orange"
+          - name: "Archived"
+            color: "gray"
+          - name: "Under_Development"
+            color: "purple"
+            
+      Description:
+        type: "rich_text"
+        description: "Platform description and purpose"
+        required: true
+        
+      Key_Resources:
+        type: "rich_text"
+        description: "Primary resources and content types"
+        required: false
+        
+      Target_Audience:
+        type: "rich_text"
+        description: "Intended users and use cases"
+        required: false
+        
+      URL:
+        type: "url"
+        description: "Primary website URL"
+        required: false
+        
+      API_Available:
+        type: "checkbox"
+        description: "Has programmatic API access"
+        required: false
+        
+      Registration_Required:
+        type: "checkbox"
+        description: "Requires user registration"
+        required: false
+        
+      Cost_Model:
+        type: "select"
+        description: "Access cost structure"
+        required: false
+        options:
+          - name: "Free"
+            color: "green"
+          - name: "Freemium"
+            color: "blue"
+          - name: "Subscription"
+            color: "purple"
+          - name: "Pay_Per_Use"
+            color: "orange"
+          - name: "Enterprise_Only"
+            color: "red"
+          - name: "Community_Supported"
+            color: "pink"
+            
+      Quality_Rating:
+        type: "select"
+        description: "Content quality and reliability"
+        required: false
+        options:
+          - name: "⭐⭐⭐⭐⭐"
+            color: "green"
+          - name: "⭐⭐⭐⭐"
+            color: "blue"
+          - name: "⭐⭐⭐"
+            color: "yellow"
+          - name: "⭐⭐"
+            color: "orange"
+          - name: "⭐"
+            color: "red"
+            
+      Update_Frequency:
+        type: "select"
+        description: "How often content is updated"
+        required: false
+        options:
+          - name: "Daily"
+            color: "green"
+          - name: "Weekly"
+            color: "blue"
+          - name: "Monthly"
+            color: "yellow"
+          - name: "Quarterly"
+            color: "orange"
+          - name: "Rarely"
+            color: "red"
+          - name: "Static"
+            color: "gray"
+            
+      Tags:
+        type: "multi_select"
+        description: "Content and technology tags"
+        required: false
+        options:
+          - name: "developer-tools"
+            color: "blue"
+          - name: "ai-resources"
+            color: "green"
+          - name: "documentation"
+            color: "purple"
+          - name: "marketplace"
+            color: "orange"
+          - name: "community"
+            color: "red"
+          - name: "open-source"
+            color: "pink"
+          - name: "enterprise"
+            color: "yellow"
+          - name: "learning"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Reference priority level"
+        required: false
+        options:
+          - name: "Essential"
+            color: "red"
+          - name: "High"
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      Related_Knowledge:
+        type: "relation"
+        description: "Related knowledge vault items"
+        relation:
+          database_id: "{knowledge_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Platforms"
+          
+      Related_Notes:
+        type: "relation"
+        description: "Related notes and insights"
+        relation:
+          database_id: "{notes_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Items"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time"
+        description: "Last modification timestamp"
+
+  notes_ideas_database:
+    database_name: "Notes & Ideas"
+    description: "Insights, observations, and implementation discoveries - Universal connector"
+    icon: "📝"
+    
+    properties:
+      ID:
+        type: "title"
+        description: "Unique identifier and note title"
+        required: true
+        example: "token-reduction-discoveries"
+        
+      Name:
+        type: "rich_text"
+        description: "Note or insight title"
+        required: true
+        example: "Token Reduction Discoveries"
+        
+      Category:
+        type: "select"
+        description: "Note category"
+        required: true
+        options:
+          - name: "Implementation_Insight"
+            color: "blue"
+          - name: "Performance_Discovery"
+            color: "green"
+          - name: "Technical_Observation"
+            color: "purple"
+          - name: "Process_Improvement"
+            color: "orange"
+          - name: "Quality_Finding"
+            color: "red"
+          - name: "Strategy_Note"
+            color: "pink"
+          - name: "Research_Insight"
+            color: "yellow"
+          - name: "Lesson_Learned"
+            color: "gray"
+            
+      Type:
+        type: "select"
+        description: "Type of note or idea"
+        required: true
+        options:
+          - name: "Discovery"
+            color: "blue"
+          - name: "Insight"
+            color: "green"
+          - name: "Observation"
+            color: "purple"
+          - name: "Best_Practice"
+            color: "orange"
+          - name: "Optimization"
+            color: "red"
+          - name: "Pattern"
+            color: "pink"
+          - name: "Recommendation"
+            color: "yellow"
+            
+      Source_Context:
+        type: "select"
+        description: "Where the insight originated"
+        required: false
+        options:
+          - name: "Implementation_Project"
+            color: "blue"
+          - name: "Research_Analysis"
+            color: "green"
+          - name: "User_Feedback"
+            color: "purple"
+          - name: "Performance_Testing"
+            color: "orange"
+          - name: "Problem_Solving"
+            color: "red"
+          - name: "Documentation_Review"
+            color: "pink"
+          - name: "Experimentation"
+            color: "yellow"
+            
+      Description:
+        type: "rich_text"
+        description: "Detailed description of the note or insight"
+        required: true
+        
+      Key_Points:
+        type: "rich_text"
+        description: "Primary findings or insights"
+        required: false
+        
+      Actionable_Items:
+        type: "rich_text"
+        description: "Specific actions or next steps"
+        required: false
+        
+      Impact_Assessment:
+        type: "select"
+        description: "Potential impact of the insight"
+        required: false
+        options:
+          - name: "High_Impact"
+            color: "red"
+          - name: "Medium_Impact"
+            color: "orange"
+          - name: "Low_Impact"
+            color: "yellow"
+          - name: "Strategic_Impact"
+            color: "purple"
+          - name: "Operational_Impact"
+            color: "blue"
+          - name: "Research_Impact"
+            color: "green"
+            
+      Implementation_Complexity:
+        type: "select"
+        description: "Difficulty of implementing insights"
+        required: false
+        options:
+          - name: "Simple"
+            color: "green"
+          - name: "Moderate"
+            color: "yellow"
+          - name: "Complex"
+            color: "orange"
+          - name: "Very_Complex"
+            color: "red"
+          - name: "Research_Needed"
+            color: "purple"
+            
+      Confidence_Level:
+        type: "select"
+        description: "Confidence in the insight's validity"
+        required: false
+        options:
+          - name: "High_Confidence"
+            color: "green"
+          - name: "Medium_Confidence" 
+            color: "yellow"
+          - name: "Low_Confidence"
+            color: "orange"
+          - name: "Hypothesis"
+            color: "red"
+          - name: "Requires_Validation"
+            color: "purple"
+            
+      Tags:
+        type: "multi_select"
+        description: "Insight categorization tags"
+        required: false
+        options:
+          - name: "optimization"
+            color: "blue"
+          - name: "performance"
+            color: "green"
+          - name: "user-experience"
+            color: "purple"
+          - name: "automation"
+            color: "orange"
+          - name: "quality-improvement"
+            color: "red"
+          - name: "cost-reduction"
+            color: "pink"
+          - name: "workflow-enhancement"
+            color: "yellow"
+          - name: "strategic-planning"
+            color: "gray"
+            
+      Priority:
+        type: "select"
+        description: "Implementation priority"
+        required: false
+        options:
+          - name: "Critical"
+            color: "red"
+          - name: "High"
+            color: "orange"
+          - name: "Medium"
+            color: "yellow"
+          - name: "Low"
+            color: "gray"
+            
+      # Universal Connector Relationships
+      Related_Knowledge:
+        type: "relation"
+        description: "Related knowledge vault items"
+        relation:
+          database_id: "{knowledge_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Notes"
+          
+      Related_Tools:
+        type: "relation"
+        description: "Related tools and services"
+        relation:
+          database_id: "{tools_services_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Notes"
+          
+      Related_Business_Ideas:
+        type: "relation"
+        description: "Related business opportunities"
+        relation:
+          database_id: "{business_ideas_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Notes"
+          
+      Related_Training:
+        type: "relation"
+        description: "Related training programs"
+        relation:
+          database_id: "{training_vault_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Notes"
+          
+      Related_Platforms:
+        type: "relation"
+        description: "Related platforms and sites"
+        relation:
+          database_id: "{platforms_sites_database_id}"
+          type: "dual_property"
+          dual_property: "Related_Notes"
+          
+      Created_Date:
+        type: "created_time"
+        description: "Item creation timestamp"
+        
+      Last_Modified:
+        type: "last_edited_time"
+        description: "Last modification timestamp"
+
+# Property Transformation Rules
+property_transformations:
+  
+  file_to_notion_transformations:
+    text_to_title:
+      source_type: "string"
+      target_type: "title"
+      transformation: "convert_to_title_format"
+      
+    text_to_rich_text:
+      source_type: "string"
+      target_type: "rich_text"
+      transformation: "convert_to_rich_text_array"
+      
+    array_to_multi_select:
+      source_type: "array"
+      target_type: "multi_select"
+      transformation: "map_array_to_select_options"
+      
+    integer_rating_to_stars:
+      source_type: "integer"
+      target_type: "select"
+      mapping:
+        5: "⭐⭐⭐⭐⭐"
+        4: "⭐⭐⭐⭐"
+        3: "⭐⭐⭐"
+        2: "⭐⭐"
+        1: "⭐"
+        
+    string_to_url:
+      source_type: "string"
+      target_type: "url"
+      validation: "url_format"
+      
+    boolean_to_checkbox:
+      source_type: "boolean"
+      target_type: "checkbox"
+      transformation: "direct_mapping"
+      
+  notion_to_file_transformations:
+    title_to_string:
+      source_type: "title"
+      target_type: "string"
+      transformation: "extract_plain_text"
+      
+    rich_text_to_string:
+      source_type: "rich_text"
+      target_type: "string"
+      transformation: "convert_rich_text_to_plain"
+      
+    multi_select_to_array:
+      source_type: "multi_select"
+      target_type: "array"
+      transformation: "extract_option_names"
+      
+    stars_to_integer:
+      source_type: "select"
+      target_type: "integer"
+      mapping:
+        "⭐⭐⭐⭐⭐": 5
+        "⭐⭐⭐⭐": 4
+        "⭐⭐⭐": 3
+        "⭐⭐": 2
+        "⭐": 1
+        
+    url_to_string:
+      source_type: "url"
+      target_type: "string"
+      transformation: "direct_string_conversion"
+      
+    checkbox_to_boolean:
+      source_type: "checkbox"
+      target_type: "boolean"
+      transformation: "direct_mapping"
+
+# Validation Rules
+validation_rules:
+  
+  required_properties:
+    all_databases: ["ID", "Name", "Category", "Status", "Description"]
+    knowledge_vault: ["Type", "Research_Quality"]
+    tools_services: ["Type", "Performance_Rating"]
+    business_ideas: ["Market_Type", "Revenue_Model"]
+    training_vault: ["Type", "Difficulty_Level"]
+    platforms_sites: ["Type", "URL"]
+    notes_ideas: ["Type", "Source_Context"]
+    
+  property_formats:
+    url_validation:
+      pattern: "^https?://[^\\s/$.?#].[^\\s]*$"
+      error_message: "Invalid URL format"
+      
+    id_validation:
+      pattern: "^[a-z0-9-]+$"
+      error_message: "ID must be lowercase alphanumeric with hyphens"
+      
+    rating_validation:
+      allowed_values: [1, 2, 3, 4, 5]
+      error_message: "Rating must be integer 1-5"
+      
+  relationship_validation:
+    bidirectional_required: true
+    orphaned_relations_allowed: false
+    maximum_relations_per_item: 50
+    
+  data_integrity:
+    duplicate_id_check: true
+    missing_required_properties_check: true
+    invalid_relationship_check: true
+    orphaned_item_check: false  # Allow standalone items
+    
+# Database Creation Templates
+database_creation_templates:
+  
+  vanguardai_workspace_setup:
+    workspace_name: "VanguardAI Test Environment"
+    workspace_description: "30-item knowledge vault test migration"
+    
+    database_creation_order:
+      1: "knowledge_vault_database"
+      2: "tools_services_database"
+      3: "business_ideas_database"
+      4: "training_vault_database"
+      5: "platforms_sites_database"
+      6: "notes_ideas_database"
+      
+    post_creation_tasks:
+      - "verify_all_properties_created"
+      - "test_relationship_creation"
+      - "validate_database_permissions"
+      - "create_initial_views"
+      - "configure_database_icons"
+      
+# Migration Configuration
+migration_configuration:
+  
+  batch_processing:
+    default_batch_size: 5      # Conservative for VanguardAI test
+    max_concurrent_requests: 3
+    delay_between_batches: 2000  # 2 seconds
+    
+  error_handling:
+    max_retries_per_item: 3
+    retry_delay_base: 1000      # 1 second
+    exponential_backoff: true
+    
+  progress_tracking:
+    checkpoint_frequency: 5     # Every 5 items
+    progress_file: "operations/migration-progress.json"
+    detailed_logging: true
+    
+  validation:
+    pre_migration_validation: true
+    post_migration_validation: true
+    relationship_validation: true
+    data_integrity_checks: true

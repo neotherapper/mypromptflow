@@ -1,0 +1,241 @@
+# Cross-Reference Mappings: Maritime Intelligence ↔ Tools & Services
+# Maintains bidirectional relationships between maritime applications and generic tool profiles
+
+mapping_info:
+  name: "Maritime Intelligence to Tools & Services Cross-References"
+  description: "Bidirectional relationship mappings between maritime applications and generic MCP server profiles"
+  version: "1.0.0"
+  created: "2025-01-24"
+
+# Cross-Reference Mappings
+cross_reference_mappings:
+  
+  # GitHub MCP Server Maritime Intelligence
+  github_mcp_maritime:
+    maritime_intelligence_id: "85ba17d5-33e5-4244-8ae4-dce080b9f55d"
+    maritime_title: "GitHub MCP Server - Maritime Claims Processing Intelligence"
+    generic_tool_reference: "@tools_services/github-mcp-server"  # To be updated with actual UUID
+    generic_tool_title: "GitHub MCP Server - Detailed Profile"
+    
+    relationship_type: "industry_application"
+    relationship_strength: "strong"
+    last_updated: "2025-01-24"
+    
+    maritime_domains_covered:
+      - "claims-processing"
+      - "regulatory-compliance" 
+      - "documentation"
+      - "risk-assessment"
+    
+    cross_reference_notes: |
+      This maritime intelligence record captures the maritime insurance claims processing
+      applications that were removed from the generic GitHub MCP server profile to maintain
+      industry neutrality. The generic profile focuses on general development workflows
+      while this record provides maritime-specific implementation examples and use cases.
+
+  # PostgreSQL MCP Server Maritime Intelligence  
+  postgresql_mcp_maritime:
+    maritime_intelligence_id: "b41495c1-70ee-4dab-b7d0-d68216348b0b"
+    maritime_title: "PostgreSQL MCP Server - Maritime Insurance Database Intelligence"
+    generic_tool_reference: "@tools_services/postgresql-mcp-server"  # To be updated with actual UUID
+    generic_tool_title: "PostgreSQL MCP Server - Detailed Profile"
+    
+    relationship_type: "industry_application"
+    relationship_strength: "strong"
+    last_updated: "2025-01-24"
+    
+    maritime_domains_covered:
+      - "claims-processing"
+      - "risk-assessment"
+      - "regulatory-compliance"
+      - "analytics"
+    
+    cross_reference_notes: |
+      This maritime intelligence record contains the maritime insurance database schemas,
+      risk assessment functions, and analytics queries that were removed from the generic
+      PostgreSQL MCP server profile. The generic profile now uses generic business examples
+      while this record provides comprehensive maritime database implementation guidance.
+
+  # GitLab MCP Server Maritime Intelligence
+  gitlab_mcp_maritime:
+    maritime_intelligence_id: "f7d3e2c1-8b9a-4e56-9c7d-1a2b3c4d5e6f"
+    maritime_title: "GitLab MCP Server - Maritime Claims Processing Intelligence"
+    generic_tool_reference: "@tools_services/gitlab-mcp-server"  # To be updated with actual UUID
+    generic_tool_title: "GitLab MCP Server - Detailed Profile"
+    
+    relationship_type: "industry_application"
+    relationship_strength: "strong"
+    last_updated: "2025-01-24"
+    
+    maritime_domains_covered:
+      - "claims-processing"
+      - "regulatory-compliance"
+      - "documentation"
+    
+    cross_reference_notes: |
+      This maritime intelligence record captures the maritime DevOps workflows, CI/CD pipelines,
+      and claims processing automation examples that were removed from the generic GitLab MCP 
+      server profile to maintain industry neutrality. The generic profile focuses on general 
+      development workflows while this record provides maritime-specific DevOps implementation 
+      examples and compliance automation patterns.
+
+# Relationship Maintenance Rules
+relationship_rules:
+  
+  # Bidirectional Consistency
+  bidirectional_consistency:
+    enabled: true
+    description: "All cross-references must exist in both directions"
+    validation_frequency: "on_update"
+    
+    consistency_checks:
+      - "Verify generic tool has maritime_intelligence_relations property"
+      - "Verify maritime intelligence has tools_services_relations property"
+      - "Ensure UUID references are valid and accessible"
+      - "Check that relationship metadata is synchronized"
+  
+  # Content Separation Enforcement
+  content_separation:
+    maritime_content_in_generic: "forbidden"
+    generic_content_in_maritime: "allowed_with_context"
+    
+    validation_rules:
+      - "Generic profiles must not contain maritime-specific examples"
+      - "Maritime intelligence can reference generic patterns with industry context"
+      - "Cross-references must use proper @database/{uuid} format"
+      - "Industry terminology separation must be maintained"
+  
+  # Update Synchronization
+  update_synchronization:
+    trigger_conditions:
+      - "Generic tool profile structural changes"
+      - "Maritime intelligence business impact updates"
+      - "New maritime domains added"
+      - "Regulatory framework changes"
+    
+    synchronization_actions:
+      - "Update cross-reference metadata"
+      - "Validate relationship integrity"
+      - "Refresh related content indices"
+      - "Notify dependent systems"
+
+# Cross-Reference Index
+cross_reference_index:
+  by_maritime_domain:
+    claims_processing:
+      - "github_mcp_maritime"
+      - "postgresql_mcp_maritime"
+      - "gitlab_mcp_maritime"
+    
+    regulatory_compliance:
+      - "github_mcp_maritime"
+      - "postgresql_mcp_maritime"
+      - "gitlab_mcp_maritime"
+    
+    risk_assessment:
+      - "postgresql_mcp_maritime"
+    
+    analytics:
+      - "postgresql_mcp_maritime"
+    
+    documentation:
+      - "github_mcp_maritime"
+      - "gitlab_mcp_maritime"
+  
+  by_generic_tool:
+    github_mcp_server:
+      maritime_applications: ["github_mcp_maritime"]
+      primary_domains: ["claims-processing", "documentation"]
+    
+    postgresql_mcp_server:
+      maritime_applications: ["postgresql_mcp_maritime"]
+      primary_domains: ["claims-processing", "risk-assessment", "analytics"]
+    
+    gitlab_mcp_server:
+      maritime_applications: ["gitlab_mcp_maritime"]
+      primary_domains: ["claims-processing", "regulatory-compliance", "documentation"]
+
+# Validation and Quality Assurance
+validation_framework:
+  
+  # Cross-Reference Integrity Checks
+  integrity_checks:
+    uuid_validation:
+      description: "Verify all UUID references are valid and accessible"
+      frequency: "daily"
+      
+    content_consistency:
+      description: "Ensure maritime content doesn't leak into generic profiles"
+      frequency: "on_update"
+      
+    relationship_completeness:
+      description: "Verify all cross-references are bidirectional"
+      frequency: "weekly"
+  
+  # Quality Metrics
+  quality_metrics:
+    cross_reference_accuracy: "percentage of valid cross-references"
+    content_separation_compliance: "percentage of profiles with proper content separation"
+    relationship_coverage: "percentage of maritime applications with generic tool references"
+    
+    targets:
+      cross_reference_accuracy: 100%
+      content_separation_compliance: 100%
+      relationship_coverage: 100%
+
+# Integration Points
+integration_points:
+  
+  # Knowledge Vault Hub Integration
+  knowledge_vault_hub:
+    relationship_type: "spoke_to_spoke_coordination"
+    coordination_mechanism: "hub_mediated_relationships"
+    
+    hub_benefits:
+      - "Central relationship validation"
+      - "Cross-database query coordination"
+      - "Unified relationship analytics"
+      - "Centralized integrity monitoring"
+  
+  # Notion Synchronization
+  notion_sync:
+    sync_cross_references: true
+    relationship_property_mapping: true
+    bidirectional_sync: true
+    
+    sync_considerations:
+      - "Preserve cross-reference formats in Notion relation properties"
+      - "Maintain relationship metadata in Notion database views"
+      - "Handle UUID reference synchronization between systems"
+
+# Future Expansion Framework
+expansion_framework:
+  
+  # New Maritime Intelligence Records
+  new_record_creation:
+    trigger_conditions:
+      - "New MCP server profile with maritime content identified"
+      - "Existing generic profile needs maritime content separation"
+      - "New maritime domain applications discovered"
+    
+    creation_process:
+      - "Extract maritime content from generic profile"
+      - "Create new maritime intelligence record"
+      - "Establish bidirectional cross-references"
+      - "Update cross-reference mappings file"
+      - "Validate relationship integrity"
+  
+  # Maritime Domain Expansion
+  domain_expansion:
+    potential_new_domains:
+      - "crew-management"
+      - "fuel-optimization"
+      - "route-planning"
+      - "environmental-monitoring"
+      - "cargo-loading"
+    
+    expansion_criteria:
+      - "Sufficient maritime-specific content available"
+      - "Clear business value for maritime stakeholders"
+      - "Distinct from existing domain categories"
+      - "Regulatory or operational significance"

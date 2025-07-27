@@ -1,0 +1,99 @@
+# Research Summary Template for Human-Friendly Registry Browser
+# AI INSTRUCTIONS: Use this template to generate human-readable summaries after research completion
+# This template creates summaries that are dynamically loaded by ai-help.md option [9]
+
+research_summary:
+  # Basic Research Information
+  topic_id: "extracted_from_registry"
+  title: "human_readable_research_title"
+  completion_date: "YYYY-MM-DD"
+  researcher: "ai_agent_identifier"
+  session_duration: "research_execution_time_human_readable"
+  
+  # Quality and Status Metrics
+  quality_metrics:
+    overall_quality_score: 0.0  # 0.0-1.0 scale from research-execution-log.yaml
+    quality_percentage: 0      # Convert to percentage for human display (0-100%)
+    confidence_level: "high|medium|low"
+    constitutional_compliance: 0  # Percentage from validation
+    accuracy_score: 0.0
+    completeness_score: 0.0
+    consistency_score: 0.0
+  
+  # Automated Categorization
+  category:
+    primary_domain: "auto_categorized_domain"  # AI/Authentication/Infrastructure/Enterprise/Tools
+    secondary_domains: []  # Array of related domains
+    research_type: "primary|secondary|comparative|analysis"
+    complexity_level: "simple|moderate|complex"
+    scope: "narrow|moderate|broad"
+  
+  # Human-Friendly Summary
+  executive_summary:
+    one_line_outcome: "single_sentence_key_finding"
+    key_discoveries: []  # 3-5 concrete, specific discoveries with evidence
+    primary_recommendation: "main_actionable_recommendation"
+    implementation_impact: "how_findings_affect_existing_work"
+  
+  # Practical Applications
+  applications:
+    immediate_applications: []  # List of direct applications
+    potential_use_cases: []     # List of potential applications
+    integration_points: []      # How this connects to existing systems/research
+    next_steps: []              # Priority-ranked actions from research
+  
+  # Research Assets and Outputs
+  research_outputs:
+    main_analysis_file: "research/findings/[topic]/research/comprehensive-analysis.md"
+    supporting_files: []        # List of individual perspective/module files
+    total_files_generated: 0
+    total_word_count: 0
+    
+  # Cross-References and Dependencies
+  relationships:
+    builds_on: []           # Research this builds upon (topic_ids)
+    enables: []             # Research that this enables (topic_ids)
+    similar_research: []    # Similar research with similarity scores
+    related_projects: []    # Project applications or implementations
+  
+  # Source Quality and Coverage
+  source_analysis:
+    total_sources: 0
+    web_sources: 0
+    internal_sources: 0
+    source_diversity_score: 0.0  # 0.0-1.0 scale
+    information_freshness: 0.0   # 0.0-1.0 scale (how recent sources are)
+    credibility_score: 0.0       # 0.0-1.0 scale (source authority)
+    
+  # Research Registry Integration
+  registry_metadata:
+    registry_entry_exists: true
+    cross_references_validated: true
+    dependency_mapping_complete: true
+    integration_status: "completed|pending|failed"
+  
+  # AI Agent Instructions for Template Usage
+  template_usage_instructions:
+    data_extraction_source: "Extract from research-execution-log.yaml in research/findings/[topic]/.meta/"
+    summary_generation_source: "Extract from comprehensive-analysis.md executive summary and key findings sections"
+    quality_metrics_source: "Extract from research-execution-log.yaml quality_validation section"
+    categorization_instructions: "Auto-categorize based on research topic and domain analysis from context-analyzer"
+    cross_reference_generation: "Parse research-registry.yaml to identify similar research and dependencies"
+    
+  # Validation Requirements
+  validation_checklist:
+    - quality_score_extracted: false      # Quality metrics from execution log
+    - executive_summary_generated: false  # Human-readable summary created
+    - categorization_applied: false       # Domain and complexity classification
+    - cross_references_mapped: false      # Relationships to other research identified
+    - applications_documented: false      # Practical use cases identified
+    - template_compliance: false          # All required fields completed
+    
+  # Human Display Formatting
+  display_formatting:
+    title_format: "[CATEGORY] Research Title (Quality: XX%)"
+    summary_format: "One-line outcome - Key discoveries summary"
+    application_format: "Primary application area with specific use cases"
+    date_format: "YYYY-MM-DD (X days ago)"
+    quality_badge: "🟢 High (≥95%) | 🟡 Medium (80-94%) | 🟠 Low (<80%)"
+    category_emoji: "🤖 AI | 🔐 Auth | 🏗️ Infra | 🏢 Enterprise | 🔧 Tools"

@@ -1,0 +1,566 @@
+# Knowledge Update Schema
+# Knowledge Vault Integration - AI Knowledge Lifecycle Orchestrator
+# Tracks update workflow states, approval processes, and quality metrics
+
+database_info:
+  name: "Knowledge Updates"
+  type: "workflow_tracking"
+  description: "AI instruction update workflow tracking and quality assurance"
+  version: "1.0.0"
+  created: "2025-01-24"
+  integration_purpose: "Manage AI instruction update lifecycle with approval and quality control"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the update entry"
+    format: "uuid_v4"
+    
+  update_title:
+    type: "title"
+    required: true
+    description: "Descriptive title for this update"
+    max_length: 200
+    
+  # Update Context
+  trigger_event:
+    type: "select"
+    required: true
+    description: "Event that triggered this update"
+    options:
+      - value: "technology_change"
+        name: "Technology Change"
+        color: "red"
+      - value: "breaking_change"
+        name: "Breaking Change"
+        color: "orange"
+      - value: "security_update"
+        name: "Security Update"
+        color: "purple"
+      - value: "deprecation"
+        name: "Deprecation"
+        color: "yellow"
+      - value: "new_feature"
+        name: "New Feature"
+        color: "green"
+      - value: "bug_fix"
+        name: "Bug Fix"
+        color: "blue"
+      - value: "quality_improvement"
+        name: "Quality Improvement"
+        color: "pink"
+      - value: "manual_request"
+        name: "Manual Request"
+        color: "gray"
+        
+  affected_file_path:
+    type: "rich_text"
+    required: true
+    description: "Path to the AI instruction file being updated"
+    
+  affected_file_type:
+    type: "select"
+    required: true
+    description: "Type of AI instruction file"
+    options:
+      - value: "claude_md"
+        name: "CLAUDE.md"
+        color: "purple"
+      - value: "command_md"
+        name: "Command (.md)"
+        color: "blue"
+      - value: "workflow_yaml"
+        name: "Workflow YAML"
+        color: "green"
+      - value: "config_yaml"
+        name: "Configuration YAML"
+        color: "orange"
+      - value: "instruction_md"
+        name: "Instruction Markdown"
+        color: "yellow"
+      - value: "template_md"
+        name: "Template Markdown"
+        color: "pink"
+      - value: "other"
+        name: "Other"
+        color: "gray"
+        
+  # Technology Context
+  related_technology:
+    type: "rich_text"
+    required: false
+    description: "Technology that triggered this update"
+    
+  technology_version_change:
+    type: "rich_text"
+    required: false
+    description: "Version change that triggered update (e.g., 3.1.0 → 3.2.0)"
+    
+  # Update Details
+  update_description:
+    type: "rich_text"
+    required: true
+    description: "Detailed description of the required update"
+    
+  update_type:
+    type: "select"
+    required: true
+    description: "Type of update required"
+    options:
+      - value: "content_update"
+        name: "Content Update"
+        color: "blue"
+      - value: "version_update"
+        name: "Version Update"
+        color: "green"
+      - value: "configuration_change"
+        name: "Configuration Change"
+        color: "orange"
+      - value: "structural_change"
+        name: "Structural Change"
+        color: "red"
+      - value: "deprecation_removal"
+        name: "Deprecation Removal"
+        color: "purple"
+      - value: "new_section"
+        name: "New Section"
+        color: "yellow"
+      - value: "quality_enhancement"
+        name: "Quality Enhancement"
+        color: "pink"
+        
+  update_scope:
+    type: "select"
+    required: true
+    description: "Scope of changes required"
+    options:
+      - value: "minor"
+        name: "Minor Changes"
+        color: "green"
+      - value: "moderate"
+        name: "Moderate Changes"
+        color: "yellow"
+      - value: "major"
+        name: "Major Changes"
+        color: "orange"
+      - value: "complete_rewrite"
+        name: "Complete Rewrite"
+        color: "red"
+        
+  # Workflow Status
+  workflow_status:
+    type: "select"
+    required: true
+    description: "Current status in update workflow"
+    default: "detected"
+    options:
+      - value: "detected"
+        name: "Detected"
+        color: "default"
+      - value: "analysis_pending"
+        name: "Analysis Pending"
+        color: "yellow"
+      - value: "impact_assessed"
+        name: "Impact Assessed"
+        color: "blue"
+      - value: "approval_pending"
+        name: "Approval Pending"
+        color: "orange"
+      - value: "approved"
+        name: "Approved"
+        color: "green"
+      - value: "in_progress"
+        name: "In Progress"
+        color: "purple"
+      - value: "testing"
+        name: "Testing"
+        color: "pink"
+      - value: "completed"
+        name: "Completed"
+        color: "green"
+      - value: "rejected"
+        name: "Rejected"
+        color: "red"
+      - value: "postponed"
+        name: "Postponed"
+        color: "gray"
+        
+  # Priority and Urgency
+  update_priority:
+    type: "select"
+    required: true
+    description: "Priority level for this update"
+    options:
+      - value: "critical"
+        name: "Critical"
+        color: "red"
+      - value: "high"
+        name: "High"
+        color: "orange"
+      - value: "medium"
+        name: "Medium"
+        color: "yellow"
+      - value: "low"
+        name: "Low"
+        color: "blue"
+      - value: "deferred"
+        name: "Deferred"
+        color: "gray"
+        
+  urgency_level:
+    type: "select"
+    required: false
+    description: "Urgency level based on business impact"
+    options:
+      - value: "immediate"
+        name: "Immediate (0-24h)"
+        color: "red"
+      - value: "urgent"
+        name: "Urgent (1-3 days)"
+        color: "orange"
+      - value: "normal"
+        name: "Normal (1-2 weeks)"
+        color: "yellow"
+      - value: "low"
+        name: "Low (1+ months)"
+        color: "blue"
+        
+  # Approval Process
+  approval_required:
+    type: "checkbox"
+    required: false
+    description: "Whether approval is required for this update"
+    
+  approval_level:
+    type: "select"
+    required: false
+    description: "Level of approval required"
+    options:
+      - value: "automatic"
+        name: "Automatic"
+        color: "green"
+      - value: "peer_review"
+        name: "Peer Review"
+        color: "blue"
+      - value: "technical_lead"
+        name: "Technical Lead"
+        color: "orange"
+      - value: "architect_review"
+        name: "Architect Review"
+        color: "purple"
+      - value: "governance_board"
+        name: "Governance Board"
+        color: "red"
+        
+  approver:
+    type: "rich_text"
+    required: false
+    description: "Person or system that approved the update"
+    
+  approval_date:
+    type: "date"
+    required: false
+    description: "Date when update was approved"
+    
+  approval_notes:
+    type: "rich_text"
+    required: false
+    description: "Notes from the approval process"
+    
+  # Implementation Details
+  implementation_approach:
+    type: "select"
+    required: false
+    description: "Planned implementation approach"
+    options:
+      - value: "automated"
+        name: "Automated"
+        color: "green"
+      - value: "semi_automated"
+        name: "Semi-Automated"
+        color: "yellow"
+      - value: "manual"
+        name: "Manual"
+        color: "orange"
+      - value: "human_review"
+        name: "Human Review Required"
+        color: "red"
+        
+  estimated_effort:
+    type: "select"
+    required: false
+    description: "Estimated effort required"
+    options:
+      - value: "minimal"
+        name: "Minimal (<1h)"
+        color: "green"
+      - value: "low"
+        name: "Low (1-4h)"
+        color: "yellow"
+      - value: "moderate"
+        name: "Moderate (4-8h)"
+        color: "orange"
+      - value: "high"
+        name: "High (1-3 days)"
+        color: "red"
+      - value: "extensive"
+        name: "Extensive (>3 days)"
+        color: "purple"
+        
+  # Quality Metrics
+  ai_instruction_quality_score:
+    type: "number"
+    required: false
+    description: "AI Instruction Design Excellence framework score (0-100)"
+    format: "float"
+    
+  constitutional_ai_compliance:
+    type: "number"
+    required: false
+    description: "Constitutional AI compliance percentage (0-100)"
+    format: "float"
+    
+  framework_coherence_score:
+    type: "number"
+    required: false
+    description: "Framework coherence score (0-100)"
+    format: "float"
+    
+  # Testing and Validation
+  testing_status:
+    type: "select"
+    required: false
+    description: "Testing status of the update"
+    options:
+      - value: "not_started"
+        name: "Not Started"
+        color: "gray"
+      - value: "in_progress"
+        name: "In Progress"
+        color: "yellow"
+      - value: "passed"
+        name: "Passed"
+        color: "green"
+      - value: "failed"
+        name: "Failed"
+        color: "red"
+      - value: "partial"
+        name: "Partially Passed"
+        color: "orange"
+        
+  validation_results:
+    type: "rich_text"
+    required: false
+    description: "Results from validation testing (JSON format)"
+    
+  # History and Rollback
+  previous_version_hash:
+    type: "rich_text"
+    required: false
+    description: "Hash of file content before update"
+    
+  updated_version_hash:
+    type: "rich_text"
+    required: false
+    description: "Hash of file content after update"
+    
+  rollback_available:
+    type: "checkbox"
+    required: false
+    description: "Whether rollback is available for this update"
+    
+  rollback_instructions:
+    type: "rich_text"
+    required: false
+    description: "Instructions for rolling back this update"
+    
+  # Timestamps
+  detected_date:
+    type: "created_time"
+    required: true
+    description: "When this update need was first detected"
+    
+  scheduled_date:
+    type: "date"
+    required: false
+    description: "Scheduled date for implementing update"
+    
+  started_date:
+    type: "date"
+    required: false
+    description: "When implementation started"
+    
+  completed_date:
+    type: "date"
+    required: false
+    description: "When update was completed"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When this update record was last modified"
+    
+  # Relationships
+  dependency_mapping_relations:
+    type: "relation"
+    required: false
+    description: "Related dependency mappings"
+    related_database: "dependency_mapping"
+    dual_property: "knowledge_updates"
+    
+  change_events_relations:
+    type: "relation"
+    required: false
+    description: "Related change events that triggered this update"
+    related_database: "change_events"
+    dual_property: "knowledge_updates_relations"
+    
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "knowledge_updates_relations"
+
+# Database Configuration
+configuration:
+  # Update workflow configuration
+  workflow_management: true
+  approval_process: true
+  quality_tracking: true
+  rollback_support: true
+  
+  # Validation Rules
+  validation:
+    required_fields: ["id", "update_title", "trigger_event", "affected_file_path", "affected_file_type", "update_description", "update_type", "update_scope", "workflow_status", "update_priority"]
+    unique_fields: ["id"]
+    file_path_validation: true
+    quality_score_range: [0, 100]
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/knowledge_updates/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "knowledge_update_schema.md"
+    
+  # Integration Settings
+  orchestrator_integration:
+    enabled: true
+    workflow_automation: true
+    quality_integration: true
+    approval_process_integration: true
+    
+# Index Configuration
+indexes:
+  - fields: ["workflow_status", "update_priority"]
+    description: "Workflow and priority management"
+  - fields: ["affected_file_path", "related_technology"]
+    description: "File and technology impact analysis"
+  - fields: ["approval_required", "approval_level"]
+    description: "Approval process tracking"
+  - fields: ["testing_status", "validation_results"]
+    description: "Quality and testing tracking"
+  - fields: ["scheduled_date", "completed_date"]
+    description: "Timeline management"
+    
+# Views Configuration
+views:
+  pending_approval:
+    name: "Pending Approval"
+    filter:
+      workflow_status: ["approval_pending"]
+    sort:
+      - field: "update_priority"
+        direction: "descending"
+      - field: "detected_date"
+        direction: "ascending"
+        
+  active_updates:
+    name: "Active Updates"
+    filter:
+      workflow_status: ["approved", "in_progress", "testing"]
+    sort:
+      - field: "update_priority"
+        direction: "descending"
+        
+  critical_updates:
+    name: "Critical Updates"
+    filter:
+      update_priority: ["critical", "high"]
+      workflow_status: ["detected", "analysis_pending", "impact_assessed", "approval_pending", "approved", "in_progress"]
+    sort:
+      - field: "urgency_level"
+        direction: "ascending"
+        
+  completed_updates:
+    name: "Completed Updates"
+    filter:
+      workflow_status: ["completed"]
+    sort:
+      - field: "completed_date"
+        direction: "descending"
+    limit: 50
+    
+  quality_issues:
+    name: "Quality Issues"
+    filter:
+      testing_status: ["failed", "partial"]
+    sort:
+      - field: "ai_instruction_quality_score"
+        direction: "ascending"
+        
+  by_technology:
+    name: "By Technology"
+    group_by: "related_technology"
+    sort:
+      - field: "update_priority"
+        direction: "descending"
+
+# Integration Points
+integration_points:
+  change_detection_system:
+    data_flow: "inbound"
+    trigger_creation: true
+    status_updates: true
+    
+  dependency_mapping:
+    data_flow: "bidirectional"
+    impact_analysis: true
+    file_relationship_tracking: true
+    
+  ai_instruction_framework:
+    data_flow: "bidirectional"
+    quality_validation: true
+    framework_compliance: true
+    
+  knowledge_vault:
+    relationship_type: "spoke_integration"
+    cross_references: true
+    update_notifications: true
+
+# Workflow Automation Rules
+workflow_automation:
+  auto_detection:
+    enabled: true
+    triggers: ["technology_change", "breaking_change", "security_update"]
+    priority_assignment: "impact_based"
+    
+  auto_approval:
+    enabled: true
+    conditions: ["minor_scope", "low_priority", "automated_approach"]
+    quality_threshold: 85
+    
+  quality_gates:
+    enabled: true
+    minimum_quality_score: 75
+    constitutional_ai_threshold: 90
+    framework_coherence_threshold: 80
+    
+  notification_rules:
+    critical_updates: "immediate"
+    high_priority: "within_1_hour"
+    normal_priority: "daily_batch"
+    approval_required: "immediate_to_approver"

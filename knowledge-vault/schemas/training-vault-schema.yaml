@@ -1,0 +1,446 @@
+# Training Vault Database Schema
+# Learning programs and educational content database
+# Replicates Notion Training Vault with full relationship support
+
+database_info:
+  name: "Training Vault"
+  type: "specialized_database"
+  notion_id: "e29ae06b-87b2-4884-93f8-b68e01a7a491"
+  description: "Learning programs, courses, certifications and skill development"
+  version: "1.0.0"
+  created: "2024-07-21"
+
+properties:
+  # Core Identification
+  id:
+    type: "uuid"
+    required: true
+    description: "Unique identifier for the training item"
+    format: "uuid_v4"
+    
+  name:
+    type: "title"
+    required: true
+    description: "Title of the training program or course"
+    max_length: 200
+    
+  # Rating System (5-star scale matching Notion)
+  rating:
+    type: "select"
+    required: false
+    description: "5-star rating system with color classification"
+    options:
+      - value: 5
+        name: "⭐⭐⭐⭐⭐"
+        color: "red"
+        description: "Exceptional"
+      - value: 4
+        name: "⭐⭐⭐⭐"
+        color: "green" 
+        description: "Excellent"
+      - value: 3
+        name: "⭐⭐⭐"
+        color: "yellow"
+        description: "Good"
+      - value: 2
+        name: "⭐⭐"
+        color: "blue"
+        description: "Fair"
+      - value: 1
+        name: "⭐"
+        color: "gray"
+        description: "Poor"
+        
+  # Training-Specific Status Workflow
+  status:
+    type: "select"
+    required: true
+    description: "Current status in learning progression"
+    default: "to_do"
+    options:
+      - value: "doing_now"
+        name: "Doing Now"
+        color: "green"
+      - value: "to_do"
+        name: "To Do"
+        color: "yellow"
+      - value: "might_do"
+        name: "Might Do"
+        color: "orange"
+      - value: "completed"
+        name: "Completed"
+        color: "blue"
+      - value: "archived"
+        name: "Archived"
+        color: "gray"
+        
+  # Learning Content Classification
+  medium:
+    type: "select"
+    required: false
+    description: "Type of learning medium"
+    options:
+      - value: "video"
+        name: "Video"
+        color: "red"
+      - value: "article"
+        name: "Article"
+        color: "blue"
+      - value: "code"
+        name: "Code"
+        color: "green"
+      - value: "presentation"
+        name: "Presentation"
+        color: "orange"
+      - value: "book"
+        name: "Book"
+        color: "purple"
+      - value: "podcast"
+        name: "Podcast"
+        color: "yellow"
+      - value: "workshop"
+        name: "Workshop"
+        color: "pink"
+      - value: "course"
+        name: "Course"
+        color: "brown"
+        
+  # Learning Metadata
+  provider:
+    type: "rich_text"
+    required: false
+    description: "Training provider or platform (e.g., Coursera, Udemy, YouTube)"
+    
+  instructor:
+    type: "rich_text"
+    required: false
+    description: "Instructor or creator name"
+    
+  duration:
+    type: "rich_text"
+    required: false
+    description: "Estimated completion time (e.g., '2 hours', '3 weeks')"
+    
+  skill_level:
+    type: "select"
+    required: false
+    description: "Required skill level for the training"
+    options:
+      - value: "beginner"
+        name: "Beginner"
+        color: "green"
+      - value: "intermediate"
+        name: "Intermediate"
+        color: "yellow"
+      - value: "advanced"
+        name: "Advanced"
+        color: "red"
+      - value: "expert"
+        name: "Expert"
+        color: "purple"
+        
+  # Content and Resources
+  url:
+    type: "url"
+    required: false
+    description: "Link to the training resource"
+    
+  description:
+    type: "rich_text"
+    required: false
+    description: "Detailed description of the training content"
+    
+  # Learning Tracking
+  completion_date:
+    type: "date"
+    required: false
+    description: "Date when training was completed"
+    
+  certificate_earned:
+    type: "checkbox"
+    required: false
+    description: "Whether a certificate was earned"
+    default: false
+    
+  # Unified Tagging System (Training Focus)
+  tags:
+    type: "multi_select"
+    required: false
+    description: "Unified training categorization tags"
+    options:
+      # Learning Categories (Primary for Training)
+      - value: "programming"
+        name: "Programming"
+        color: "blue"
+      - value: "web-development"
+        name: "Web Development"
+        color: "green"
+      - value: "data-science"
+        name: "Data Science"
+        color: "red"
+      - value: "machine-learning"
+        name: "Machine Learning"
+        color: "purple"
+      - value: "devops"
+        name: "DevOps"
+        color: "orange"
+      - value: "cybersecurity"
+        name: "Cybersecurity"
+        color: "red"
+      - value: "leadership"
+        name: "Leadership"
+        color: "brown"
+      - value: "creativity"
+        name: "Creativity"
+        color: "purple"
+      
+      # Technology Categories
+      - value: "ai"
+        name: "AI"
+        color: "red"
+      - value: "automation"
+        name: "Automation"
+        color: "blue"
+      - value: "developer-tools"
+        name: "Developer Tools"
+        color: "purple"
+      - value: "software-development"
+        name: "Software Development"
+        color: "blue"
+      - value: "database"
+        name: "Database"
+        color: "green"
+      - value: "cloud-hosting"
+        name: "Cloud Hosting"
+        color: "blue"
+      
+      # Business Categories
+      - value: "business-strategy"
+        name: "Business Strategy"
+        color: "red"
+      - value: "maritime-insurance"
+        name: "Maritime Insurance"
+        color: "blue"
+      - value: "customer-experience"
+        name: "Customer Experience"
+        color: "green"
+      - value: "digital-marketing"
+        name: "Digital Marketing"
+        color: "orange"
+      - value: "entrepreneurship"
+        name: "Entrepreneurship"
+        color: "red"
+      - value: "finance"
+        name: "Finance"
+        color: "green"
+      - value: "project-management"
+        name: "Project Management"
+        color: "orange"
+      
+      # Productivity Categories
+      - value: "design"
+        name: "Design"
+        color: "purple"
+      - value: "efficiency"
+        name: "Efficiency"
+        color: "green"
+      - value: "innovation"
+        name: "Innovation"
+        color: "red"
+      - value: "productivity"
+        name: "Productivity"
+        color: "blue"
+      - value: "communication"
+        name: "Communication"
+        color: "blue"
+      - value: "analytics"
+        name: "Analytics"
+        color: "blue"
+      
+      # Industry Verticals
+      - value: "fintech"
+        name: "FinTech"
+        color: "green"
+      - value: "insurtech"
+        name: "InsurTech"
+        color: "yellow"
+      - value: "edtech"
+        name: "EdTech"
+        color: "blue"
+      - value: "healthtech"
+        name: "HealthTech"
+        color: "red"
+      
+      # Business Models
+      - value: "saas"
+        name: "SaaS"
+        color: "blue"
+      - value: "marketplace"
+        name: "MarketPlace"
+        color: "green"
+      - value: "platform"
+        name: "Platform"
+        color: "red"
+      - value: "enterprise"
+        name: "Enterprise"
+        color: "purple"
+      
+      # Content Types
+      - value: "documentation"
+        name: "Documentation"
+        color: "yellow"
+      - value: "tutorial"
+        name: "Tutorial"
+        color: "green"
+      - value: "research"
+        name: "Research"
+        color: "yellow"
+      - value: "case-study"
+        name: "Case Study"
+        color: "blue"
+      
+      # Organization Tags
+      - value: "high-priority"
+        name: "High Priority"
+        color: "red"
+      - value: "quick-win"
+        name: "Quick Win"
+        color: "green"
+      - value: "long-term"
+        name: "Long Term"
+        color: "blue"
+      - value: "experimental"
+        name: "Experimental"
+        color: "orange"
+      - value: "knowledge-vault"
+        name: "Knowledge Vault"
+        color: "blue"
+        
+  # Timestamps
+  created_date:
+    type: "created_time"
+    required: true
+    description: "When the training item was created"
+    
+  last_modified:
+    type: "last_edited_time"
+    required: true
+    description: "When the training item was last updated"
+    
+  # Cross-Database Relationships
+  knowledge_vault_relations:
+    type: "relation"
+    required: false
+    description: "Related knowledge vault items"
+    related_database: "knowledge_vault"
+    dual_property: "training_vault_relations"
+    
+  platforms_sites_relations:
+    type: "relation"
+    required: false
+    description: "Related platforms where training is hosted"
+    related_database: "platforms_sites"
+    dual_property: "training_vault_relations"
+    
+  notes_ideas_relations:
+    type: "relation"
+    required: false
+    description: "Related notes and ideas from training"
+    related_database: "notes_ideas"
+    dual_property: "training_vault_relations"
+    
+  # Rollup Properties for Progress Tracking
+  knowledge_vault_priority:
+    type: "rollup"
+    description: "Priority level from related knowledge vault items"
+    rollup_property: "priority"
+    rollup_function: "max"
+    relation_property: "knowledge_vault_relations"
+
+# Database Configuration
+configuration:
+  # Specialized Database Role
+  specialized_database: true
+  focus_area: "learning_and_development"
+  
+  # Relationship Rules
+  relationship_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    hub_connection_required: "knowledge_vault"
+    
+  # Validation Rules
+  validation:
+    required_fields: ["id", "name", "status"]
+    unique_fields: ["id"]
+    url_validation: true
+    rating_range: [1, 5]
+    date_validation: ["completion_date"]
+    
+  # File Organization
+  file_structure:
+    base_path: "knowledge-vault/databases/training_vault/"
+    item_path: "items/"
+    relation_path: "relations/"
+    schema_path: "training_vault_schema.md"
+    
+  # Synchronization Settings
+  notion_sync:
+    enabled: true
+    notion_database_id: "e29ae06b-87b2-4884-93f8-b68e01a7a491"
+    sync_direction: "bidirectional"
+    conflict_resolution: "manual_review"
+    
+# Index Configuration for Performance
+indexes:
+  - fields: ["status", "skill_level"]
+    description: "Quick filtering by learning progress and skill level"
+  - fields: ["medium", "provider"]
+    description: "Content type and provider searches"
+  - fields: ["tags"]
+    description: "Tag-based searches and filtering"
+  - fields: ["completion_date"]
+    description: "Recently completed training"
+    
+# Views Configuration (replicate Notion views)
+views:
+  active_learning:
+    name: "Active Learning"
+    filter:
+      status: ["doing_now", "to_do"]
+    sort:
+      - field: "status"
+        direction: "ascending"
+      - field: "rating"
+        direction: "descending"
+        
+  completed_training:
+    name: "Completed Training"
+    filter:
+      status: ["completed"]
+    sort:
+      - field: "completion_date"
+        direction: "descending"
+        
+  by_skill_level:
+    name: "By Skill Level"
+    group_by: "skill_level"
+    sort:
+      - field: "rating"
+        direction: "descending"
+        
+  certificates_earned:
+    name: "Certificates Earned"
+    filter:
+      certificate_earned: true
+    sort:
+      - field: "completion_date"
+        direction: "descending"
+        
+  high_priority:
+    name: "High Priority Training"
+    filter:
+      status: ["doing_now", "to_do"]
+    sort:
+      - field: "knowledge_vault_priority"
+        direction: "descending"

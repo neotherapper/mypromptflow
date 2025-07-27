@@ -1,0 +1,1247 @@
+[
+  {
+    "file_name": "design-thinking.md",
+    "original_all_uuid_count": 13,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 13,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 13,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "game-design.md",
+    "original_all_uuid_count": 11,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 11,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 9,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "data-visualisation.md",
+    "original_all_uuid_count": 23,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 23,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 19,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "gov-uk-design-system.md",
+    "original_all_uuid_count": 5,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 5,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "firebase-studio.md",
+    "original_all_uuid_count": 12,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 12,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 11,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "spring-boot.md",
+    "original_all_uuid_count": 10,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 10,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+        "occurrences": 9,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "evergreen.md",
+    "original_all_uuid_count": 5,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 5,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "531b06b2-1a71-46eb-960e-0f47934c9985",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "mcp.md",
+    "original_all_uuid_count": 9,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 9,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "continue.md",
+    "original_all_uuid_count": 8,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 8,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 6,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "affiliate-marketing.md",
+    "original_all_uuid_count": 17,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 17,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "occurrences": 14,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 2,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "business-intelligence.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 6,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "mistral-ai.md",
+    "original_all_uuid_count": 8,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 8,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 2,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "real-time-strategy.md",
+    "original_all_uuid_count": 13,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 13,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1f4f8374-7088-8039-9e6b-e8e644735853",
+        "occurrences": 7,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 4,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "online-directory.md",
+    "original_all_uuid_count": 24,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 24,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+        "occurrences": 19,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "pim.md",
+    "original_all_uuid_count": 12,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 12,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+        "occurrences": 4,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "shooter.md",
+    "original_all_uuid_count": 9,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 9,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1f4f8374-7088-80e1-8e32-fda716839fda",
+        "occurrences": 3,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "desktop.md",
+    "original_all_uuid_count": 5,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 5,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "material-design.md",
+    "original_all_uuid_count": 12,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 12,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+        "occurrences": 9,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "gamification.md",
+    "original_all_uuid_count": 17,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 17,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "141d71b0-fa46-4c72-8075-b833950c1e2b",
+        "occurrences": 13,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "assembly-language.md",
+    "original_all_uuid_count": 9,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 9,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+        "occurrences": 5,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "linux.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "stripe.md",
+    "original_all_uuid_count": 8,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 8,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "fbd07457-873d-4b36-9505-c5c4ef479d8c",
+        "occurrences": 6,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "raft.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "unreal-engine.md",
+    "original_all_uuid_count": 9,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 9,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1e5f8374-7088-801b-9b45-fd7dd26e4b9d",
+        "occurrences": 7,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 2,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "adobe-commerce-magento.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "209f8374-7088-81dd-91fc-cffff197c0b4",
+        "occurrences": 3,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "discontinued-outdated.md",
+    "original_all_uuid_count": 11,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 11,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+        "occurrences": 10,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "carbon-design-system.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "vector-database.md",
+    "original_all_uuid_count": 10,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 10,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "occurrences": 6,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "meta-prompting-frameworks.md",
+    "original_all_uuid_count": 9,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 9,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "239f8374-7088-819c-92c6-eac956f35eec",
+        "occurrences": 9,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "claude-code-multi-agent-orchestration-framework.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "239f8374-7088-812f-89aa-f956eeb12366",
+        "occurrences": 7,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "neon.md",
+    "original_all_uuid_count": 10,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 10,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-818a-aea8-ec2d0f9ca797",
+        "occurrences": 7,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "knowledge_vault_example_item.md",
+    "original_all_uuid_count": 1,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 1,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "53e9028c-e7f9-4e99-9a9b-79f64a831f41",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "ai-knowledge-intelligence-orchestrator.md",
+    "original_all_uuid_count": 3,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 3,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
+        "occurrences": 3,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "atlassian-design-system.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "pinecone.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "apache-spark.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 2,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "platformers.md",
+    "original_all_uuid_count": 5,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 5,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1f4f8374-7088-807d-8a1f-db855edbe3ce",
+        "occurrences": 3,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "crystallize.md",
+    "original_all_uuid_count": 12,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 12,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-811c-8c39-e1f8992a3055",
+        "occurrences": 7,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "nvidia.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "unity-engine.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1e5f8374-7088-8097-9b73-f5d6976cac12",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 2,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "shopify-polaris.md",
+    "original_all_uuid_count": 8,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 8,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "354bb7fe-dec9-470b-ac32-e819fab9f3db",
+        "occurrences": 5,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "tower-defence.md",
+    "original_all_uuid_count": 8,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 8,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "occurrences": 4,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "d.md",
+    "original_all_uuid_count": 10,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 10,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+        "occurrences": 8,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "perplexity.md",
+    "original_all_uuid_count": 12,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 12,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1f7f8374-7088-811a-9db9-e8b65527addb",
+        "occurrences": 7,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "hono.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+        "occurrences": 3,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "llava.md",
+    "original_all_uuid_count": 7,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 7,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 2,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "llamaindex.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "9b56afea-6921-477c-aa6d-b2516d2af161",
+        "occurrences": 4,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "leonardo-ai.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "nitro.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "5930459b-d2ed-47bf-8ac1-6a265b8eaade",
+        "occurrences": 3,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "mobile.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "a245a512-a231-477b-80a7-759fef8b4602",
+        "occurrences": 4,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "file_name": "human-resources.md",
+    "original_all_uuid_count": 6,
+    "notion_uuids_converted": 0,
+    "local_uuids_preserved": 6,
+    "conversions": [],
+    "preserved": [
+      {
+        "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+        "occurrences": 1,
+        "action": "preserved"
+      },
+      {
+        "local_uuid": "1fdf8374-7088-8050-ac4b-c391f88e4787",
+        "occurrences": 5,
+        "action": "preserved"
+      }
+    ],
+    "errors": []
+  }
+]
