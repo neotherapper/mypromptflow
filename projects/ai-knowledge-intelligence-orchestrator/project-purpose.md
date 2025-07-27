@@ -2,7 +2,11 @@
 
 ## Project Vision
 
-Create an intelligent, AI-agent-driven information processing system that automatically gathers, validates, processes, and organizes information from diverse sources with quality assurance, adaptive learning, and seamless integration capabilities.
+Create a **Universal Topic Monitoring System** - an intelligent, AI-agent-driven information processing system that automatically monitors, gathers, validates, processes, and organizes information across **multiple topics of interest** from diverse sources with quality assurance, adaptive learning, and seamless cross-topic intelligence capabilities.
+
+### Core Innovation: Topic-Agnostic Infrastructure + Topic-Specific Configuration
+
+This system is designed to monitor ANY topic you care about - from AI/ML to cryptocurrency, biotech to climate tech, finance to geopolitics - using a single, unified infrastructure that can be rapidly configured for new domains.
 
 ## Problem Statement
 
@@ -18,6 +22,34 @@ Create an intelligent, AI-agent-driven information processing system that automa
 ### Opportunity for AI-Powered Solution
 
 AI agents can coordinate complex information workflows, provide consistent quality assessment, learn optimal scheduling patterns, and maintain systematic organization - capabilities that exceed human capacity for scale and consistency.
+
+## Multi-Topic Monitoring Architecture
+
+### Universal Infrastructure Components (Build Once, Use Forever)
+
+1. **Universal MCP Server Pool** - Fetch, GitHub, YouTube, Playwright, Reddit servers work for any topic
+2. **Topic-Agnostic AI Agent Framework** - 4-level hierarchy (Queen→Architect→Specialist→Worker) adapts to any domain
+3. **Universal Quality Assessment Engine** - Source authority, content quality, relevance scoring with topic-specific weights
+4. **Cross-Topic Intelligence System** - Detect relationships and shared sources across multiple topics
+
+### Topic-Specific Configuration (Template Once, Configure Per Topic)
+
+1. **Topic Definition Templates** - Structured configuration for source mapping, keywords, significance thresholds
+2. **Source Discovery Patterns** - How to find official sources, communities, and aggregators for any domain
+3. **Domain-Specific Authority Mapping** - Who are the experts and authoritative sources in each field
+4. **Content Classification Rules** - What constitutes "significant news" varies by topic
+
+### Multi-Topic Examples
+- **AI/ML**: Anthropic, OpenAI, arXiv papers, HuggingFace, r/MachineLearning
+- **Cryptocurrency**: Bitcoin.org, Ethereum.org, CoinDesk, r/cryptocurrency, crypto Twitter
+- **Biotech**: FDA, NIH, pharma companies, biotech journals, r/longevity
+- **Climate Tech**: IPCC, IEA, climate startups, research institutions, r/ClimateActionPlan
+
+### Cross-Topic Intelligence Benefits
+- **Shared Source Optimization** - One agent monitors TechCrunch for AI, crypto, and biotech news
+- **Cross-Domain Pattern Detection** - AI developments affecting crypto, biotech breakthroughs impacting climate tech
+- **Resource Efficiency** - Dynamic allocation across topics based on activity and priority
+- **Relationship Mapping** - Understand how topics influence and connect with each other
 
 ## Project Goals
 
