@@ -207,9 +207,112 @@ curl -X POST http://localhost:3000/rpc \
   -d '{"jsonrpc": "2.0", "method": "fs/get_info", "params": {"path": "/var/lib/filesystem-mcp/data"}, "id": 1}'
 ```
 
-#### Method 3: Kubernetes Deployment
-```yaml
-apiVersion: apps/v1
+#### Method 3: 🔗 Direct API Integration
+**Business Value**: Direct filesystem integration for custom applications with full control over file operations and enterprise security requirements.
+
+```bash
+# Install Node.js filesystem modules
+npm install fs-extra chokidar archiver mime-types
+
+# Test direct filesystem access
+node -e "
+const fs = require('fs-extra');
+console.log('Filesystem access test:');
+fs.ensureDir('./test-data').then(() => {
+  console.log('Directory created successfully');
+});
+"
+
+# Create MCP configuration
+cat > filesystem-direct-config.json << EOF
+{
+  "filesystem": {
+    "rootPath": "./data",
+    "maxFileSize": "100MB",
+    "allowedExtensions": ["txt", "md", "json", "csv", "xml", "pdf"],
+    "enableEncryption": true,
+    "enableAudit": true,
+    "watchForChanges": true
+  }
+}
+EOF
+
+# Test filesystem operations
+node -e "
+const fs = require('fs-extra');
+const path = require('path');
+const config = JSON.parse(fs.readFileSync('filesystem-direct-config.json', 'utf8'));
+console.log('Direct filesystem integration ready');
+"
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, compliance, or integration requirements.
+
+```bash
+# Clone filesystem MCP server source for customization
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/filesystem
+npm install
+
+# Install additional dependencies for custom features
+npm install fs-extra chokidar sharp pdf-parse winston helmet rate-limiter
+
+# Create custom enterprise configuration
+cat > enterprise-filesystem-config.json << EOF
+{
+  "filesystem": {
+    "rootPath": "/enterprise/data",
+    "maxFileSize": "1GB",
+    "allowedExtensions": ["*"],
+    "enterprise": {
+      "encryptionAlgorithm": "aes-256-gcm",
+      "auditLogging": true,
+      "accessControl": "acl",
+      "virusScanning": true,
+      "dataLossPrevention": true,
+      "backup": {
+        "enabled": true,
+        "schedule": "0 2 * * *",
+        "retention": 90
+      }
+    },
+    "maritimeInsurance": {
+      "documentTypes": {
+        "policies": "/policies",
+        "claims": "/claims",
+        "vessels": "/vessels",
+        "certificates": "/certificates"
+      },
+      "workflows": {
+        "policyProcessing": true,
+        "claimDocuments": true,
+        "complianceReports": true
+      },
+      "integration": {
+        "documentManagement": true,
+        "ocrProcessing": true,
+        "digitalSignatures": true
+      }
+    },
+    "security": {
+      "allowedIPs": ["10.0.0.0/8", "192.168.0.0/16"],
+      "requireSSL": true,
+      "tokenExpiration": 3600,
+      "maxConcurrentOperations": 100
+    }
+  }
+}
+EOF
+
+# Build custom MCP server with enterprise features
+npm run build
+
+# Deploy with enterprise configuration and monitoring
+node dist/index.js --config enterprise-filesystem-config.json --port 3000 --enable-monitoring
+```
+
+---
 kind: Deployment
 metadata:
   name: filesystem-mcp-server

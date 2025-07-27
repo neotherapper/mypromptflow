@@ -478,12 +478,36 @@ CMD ["mcp-server-jira"]
 - **Team Productivity**: 25% increase in story completion velocity
 
 ### Cost Analysis
-- **Implementation**: $3,000-8,000 (integration and workflow setup)
-- **Jira License**: $7.50-14.50/user/month (depending on plan)
-- **Operations**: $800-2,000/month (maintenance and customization)
-- **Training**: $1,500-4,000 (team onboarding and best practices)
-- **Annual ROI**: 180-350% first year
-- **Payback Period**: 3-5 months
+
+**Business Size Example: Mid-size Development Team (25-50 engineers)**
+
+**Time Savings Value:**
+- Project Manager Efficiency: 8 hours/week × $75/hour × 52 weeks = $31,200/year
+- Development Team Coordination: 20% efficiency gain × 35 engineers × $110K salary = $770,000/year
+- Total Time Savings: $801,200/year
+
+**Efficiency Increases:**
+- Sprint Planning: 60% faster × 26 sprints/year × 4 hours/sprint × $75/hour = $4,680/year
+- Issue Management: 70% reduction × 200 hours/year × $75/hour = $10,500/year
+- Total Efficiency Gains: $15,180/year
+
+**Cost Reductions:**
+- Process Optimization: 30% reduction in project delays × $50K average delay cost × 8 delays = $120,000/year
+- Quality Improvements: 50% fewer rework cycles × $25K average rework cost × 12 cycles = $150,000/year
+- Total Cost Reductions: $270,000/year
+
+**Implementation Costs:**
+- Software Licensing: $14.50/user/month × 50 users × 12 months = $8,700/year
+- Implementation Services: $8,000 (one-time setup and configuration)
+- Training and Onboarding: $4,000 (team training programs)
+- Annual Operating Cost: $2,000 (maintenance and support)
+
+**ROI Calculation:**
+- Total Annual Benefits: $1,086,380
+- Implementation Cost: $12,000 (setup, training, configuration)
+- Annual Operating Cost: $10,700 (licensing, operations)
+- Net ROI: 4,668% ($1,063,680 net benefit)
+- Payback Period: 1.2 months
 
 ### Enterprise Value Drivers
 - **Faster Delivery**: 30% reduction in development cycle time

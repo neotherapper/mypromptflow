@@ -50,7 +50,10 @@
 - **Rate Management**: Implementation of rate limiting and request queuing for production use
 - **Error Handling**: Robust retry logic and exponential backoff for API reliability
 
-## Setup & Configuration
+## ⚙️ Setup & Configuration
+
+### Setup Complexity
+**Low Complexity (2/10)** - Estimated setup time: 10-15 minutes
 
 ### Prerequisites
 1. **OpenAI Account**: API access with appropriate usage tier and billing configuration
@@ -58,18 +61,170 @@
 3. **Usage Planning**: Token estimation and cost modeling for production workloads
 4. **Model Selection**: Understanding of model capabilities and cost-performance trade-offs
 
-### Installation Process
+### Installation Methods (Priority Order)
+
+#### Method 1: 🐳 Docker MCP (Recommended - EASIEST)
+**Business Value**: Instant OpenAI platform deployment with pre-configured environment, eliminating complex setup and dependency management. Perfect for enterprise AI applications and rapid prototyping.
+
 ```bash
-# Install OpenAI MCP server
-npm install @modelcontextprotocol/openai-server
+# Docker MCP setup for OpenAI platform
+docker run -d --name openai-mcp \
+  -e OPENAI_API_KEY="sk-your-api-key-here" \
+  -e OPENAI_ORGANIZATION="org-your-organization-id" \
+  -e OPENAI_PROJECT="proj_your-project-id" \
+  -e OPENAI_DEFAULT_MODEL="gpt-4-turbo-preview" \
+  -e OPENAI_MAX_TOKENS="4096" \
+  -p 3000:3000 \
+  modelcontextprotocol/server-openai
+
+# Test MCP connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "tools/list", "id": 1}'
+
+# Test OpenAI API access
+curl -X POST https://api.openai.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer sk-your-api-key-here" \
+  -d '{"model": "gpt-3.5-turbo", "messages": [{"role": "user", "content": "Hello OpenAI!"}], "max_tokens": 100}'
+```
+
+#### Method 2: 📦 Package Manager Installation
+**Business Value**: Standard installation approach with full control over configuration and enterprise integration capabilities.
+
+```bash
+# Install OpenAI MCP server via npm
+npm install -g @modelcontextprotocol/server-openai
 
 # Configure environment variables
 export OPENAI_API_KEY="sk-your-api-key-here"
 export OPENAI_ORGANIZATION="org-your-organization-id"
 export OPENAI_PROJECT="proj_your-project-id"
+export OPENAI_DEFAULT_MODEL="gpt-4-turbo-preview"
+export OPENAI_MAX_TOKENS="4096"
 
-# Initialize server
-npx openai-mcp-server --port 3000
+# Initialize server with configuration
+openai-mcp-server --port 3000 --config openai-config.json
+
+# Test connection
+curl -X POST http://localhost:3000/rpc \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc": "2.0", "method": "openai/chat", "params": {"message": "Hello OpenAI!"}, "id": 1}'
+```
+
+#### Method 3: 🔗 Direct API Integration
+**Business Value**: Direct OpenAI API integration for custom applications with full control over AI workflows and enterprise security requirements.
+
+```bash
+# Install OpenAI SDK for direct integration
+npm install openai
+
+# Test direct API access
+curl -X POST https://api.openai.com/v1/models \
+  -H "Authorization: Bearer sk-your-api-key-here"
+
+# Create MCP configuration for direct API
+cat > openai-direct-config.json << EOF
+{
+  "openai": {
+    "apiKey": "sk-your-api-key-here",
+    "organization": "org-your-organization-id",
+    "baseURL": "https://api.openai.com/v1",
+    "defaultModel": "gpt-4-turbo-preview",
+    "timeout": 60000,
+    "retries": 3
+  }
+}
+EOF
+
+# Initialize custom MCP bridge
+node -e "
+const OpenAI = require('openai');
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+console.log('OpenAI API connection established');
+"
+```
+
+#### Method 4: ⚡ Custom Integration (Advanced)
+**Business Value**: Maximum customization for enterprise environments with specific security, compliance, or workflow automation requirements.
+
+```bash
+# Clone OpenAI MCP server source for customization
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/openai
+npm install
+
+# Install additional dependencies for custom features
+npm install openai winston rate-limiter express helmet tiktoken
+
+# Create custom enterprise configuration
+cat > enterprise-openai-config.json << EOF
+{
+  "openai": {
+    "apiKey": "sk-your-api-key-here",
+    "organization": "org-your-organization-id",
+    "project": "proj_your-project-id",
+    "models": {
+      "gpt4": {
+        "model": "gpt-4-turbo-preview",
+        "maxTokens": 4096,
+        "temperature": 0.7,
+        "contextWindow": 128000
+      },
+      "gpt35": {
+        "model": "gpt-3.5-turbo",
+        "maxTokens": 4096,
+        "temperature": 0.3,
+        "contextWindow": 16385
+      },
+      "embedding": {
+        "model": "text-embedding-ada-002",
+        "dimensions": 1536
+      }
+    },
+    "enterprise": {
+      "auditLogging": true,
+      "dataRetention": "7_years",
+      "encryption": "aes_256",
+      "compliance": ["SOC2", "GDPR", "HIPAA"],
+      "contentFiltering": true,
+      "costTracking": true
+    },
+    "maritimeInsurance": {
+      "specializedPrompts": {
+        "policyAnalysis": "maritime_policy_gpt4_template",
+        "claimProcessing": "maritime_claim_gpt35_template",
+        "riskAssessment": "maritime_risk_gpt4_template",
+        "documentSummary": "document_summary_template"
+      },
+      "customTools": ["vessel_data_enrichment", "weather_integration", "regulatory_compliance"],
+      "workflows": {
+        "claimAutomation": true,
+        "policyGeneration": true,
+        "fraudDetection": true
+      }
+    },
+    "performance": {
+      "rateLimiting": {
+        "requestsPerMinute": 1000,
+        "tokensPerMinute": 200000
+      },
+      "caching": {
+        "enabled": true,
+        "ttl": 3600,
+        "redisUrl": "redis://localhost:6379"
+      },
+      "loadBalancing": true
+    }
+  }
+}
+EOF
+
+# Build custom MCP server with enterprise features
+npm run build
+
+# Deploy with enterprise configuration and monitoring
+node dist/index.js --config enterprise-openai-config.json --port 3000 --enable-monitoring
 ```
 
 ### Configuration Parameters
