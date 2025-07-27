@@ -1,18 +1,18 @@
 ---
-id: 153c3823-8c18-41fe-b38a-a1151a4acd4f
+id: 1f7f8374-7088-811a-9db9-e8b65527addb
 business_ideas_relations:
 - context: Related business idea
-  id: 1dcf8374-7088-8004-b1d9-d37a49cec16e
+  id: 1f7f8374-7088-811a-9db9-e8b65527addb
 - context: Related business idea
-  id: d18835fd-e641-42ad-9738-eb0d4df1108a
+  id: 1f7f8374-7088-811a-9db9-e8b65527addb
 created_date: '2025-05-18T11:24:00.000Z'
 description: ' is a free AI-powered answer engine that provides accurate, trusted,
   and real-time answers to any question.'
 knowledge_vault_relations:
 - context: Related knowledge vault item
-  id: 4604bf87-aae4-4b6a-b81d-516de7c336bc
+  id: 20af8374-7088-812e-97cc-d599487b603f
 - context: Related knowledge vault item
-  id: 2b77aeeb-6e10-47c5-bdac-bc255d7d0875
+  id: 21af8374-7088-8031-a360-c517a82741cf
 last_modified: '2025-05-18T11:27:00.000Z'
 metadata:
   created_date: '2025-05-18T11:24:00.000Z'
@@ -25,7 +25,7 @@ name: Perplexity
 notion_url: https://www.notion.so/Perplexity-1f7f83747088811a9db9e8b65527addb
 pillars_relations:
 - context: Related foundational pillar
-  id: c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+  id: 764be31b-7c78-4e11-bc03-fd31c8eca465
 priority: 3rd_priority
 public_url: https://neotherapper.notion.site/Perplexity-1f7f83747088811a9db9e8b65527addb
 source_database: knowledge_vault
@@ -57,9 +57,9 @@ uuid: 1f7f8374-7088-811a-9db9-e8b65527addb
 ## Related Items
 
 ### Knowledge Vault
-- `4604bf87-aae4-4b6a-b81d-516de7c336bc` - Related knowledge vault item
-- `2b77aeeb-6e10-47c5-bdac-bc255d7d0875` - Related knowledge vault item
+- `20af8374-7088-812e-97cc-d599487b603f` - Related knowledge vault item
+- `21af8374-7088-8031-a360-c517a82741cf` - Related knowledge vault item
 
 ### Business Ideas
-- `1dcf8374-7088-8004-b1d9-d37a49cec16e` - Related business idea
-- `d18835fd-e641-42ad-9738-eb0d4df1108a` - Related business idea
+- `1f7f8374-7088-811a-9db9-e8b65527addb` - Related business idea
+- `1f7f8374-7088-811a-9db9-e8b65527addb` - Related business idea

@@ -5,12 +5,12 @@ description: AI Image Generator - Create Art, Images & Video
 pillars:
   context: pillars
   ids: 
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - ca6160e5-9912-4f68-adff-70b7f8dacce6
+    - 34ceedb5-aaeb-4d8b-9bcd-7260529fef41
 tools_services:
   context: tools_services
   ids: []

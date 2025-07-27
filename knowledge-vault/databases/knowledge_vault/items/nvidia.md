@@ -5,18 +5,18 @@ description: ''
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 4604bf87-aae4-4b6a-b81d-516de7c336bc
+    - 20af8374-7088-812e-97cc-d599487b603f
 media_vault:
   context: media_vault
   ids: []
 tools_services:
   context: tools_services
   ids:
-    - b31ba618-7aff-4193-81e9-68ad0aad89a9
+    - 4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd
 platforms_sites:
   context: platforms_sites
   ids: []

@@ -5,12 +5,12 @@ description: Data Framework for LLM Applications
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - ca6160e5-9912-4f68-adff-70b7f8dacce6
-    - 326fae87-60bd-428f-941f-311db74577cd
+    - 34ceedb5-aaeb-4d8b-9bcd-7260529fef41
+    - 9b56afea-6921-477c-aa6d-b2516d2af161
 media_vault:
   context: media_vault
   ids: []

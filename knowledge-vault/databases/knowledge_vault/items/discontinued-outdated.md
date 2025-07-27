@@ -5,7 +5,7 @@ description: ''
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids: []
@@ -15,13 +15,13 @@ media_vault:
 tools_services:
   context: tools_services
   ids:
-    - 93ed4dcd-15db-4d51-996b-52c6f053dcd9
-    - 94946014-3dc7-46f2-bac6-829fafeeea47
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
 platforms_sites:
   context: platforms_sites
   ids:
-    - 9a46bae0-e8a8-4acf-8956-72265e45e124
-    - cbeff48d-bed9-4661-b6f1-597e03a2b0ac
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
 projects:
   context: projects
   ids: []
@@ -40,9 +40,9 @@ quotes:
 training_vault:
   context: training_vault
   ids:
-    - 7799ed44-c9ac-4f25-97c3-d7efaa580d0c
-    - d618f205-9ea5-4075-b0a2-7b9a91211863
-    - c25242ec-16b6-4f3c-ba93-ca9c0f598d47
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
+    - c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b
 notes_ideas:
   context: notes_ideas
   ids: []

@@ -5,35 +5,35 @@ description: ''
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 1f6c3c35-36fa-48e4-8b6e-459f3736a93c
+    - 21af8374-7088-8031-a360-c517a82741cf
 platforms_sites:
   context: platforms_sites
   ids:
-    - 0586fe08-6279-47b4-8000-141293558f60
-    - 5151ce9e-c76a-49d8-98c7-c5c2d81fca11
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
 projects:
   context: projects
   ids:
-    - cb4d10e3-d4c2-4cb0-8229-a439cf6f2632
-    - 6c607492-0239-4c3d-bf56-05ce4cca3b21
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
 business_ideas:
   context: business_ideas
   ids:
-    - 1abf6ccd-6eee-4e83-a3da-9b83697b9768
-    - bd3c6045-4d2c-4c1a-864e-79e61559ad0e
-    - 87d79cb6-f770-40cf-975f-4874696929b1
-    - 931cbd26-3494-4930-98db-4d8782a90fc0
-    - 567472ab-c4ec-4fd1-87ec-97efb5f742c6
-    - 439f1858-9f59-4636-a9bf-38674e47cc57
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
 training_vault:
   context: training_vault
   ids:
-    - 4298c6da-5f7b-4bd3-8246-8b70eb4ee16d
+    - 141d71b0-fa46-4c72-8075-b833950c1e2b
 tools_services:
   context: tools_services
   ids: []

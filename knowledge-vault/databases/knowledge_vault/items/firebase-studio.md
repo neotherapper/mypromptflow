@@ -1,16 +1,16 @@
 ---
-id: 672699f0-e84b-4ee1-81af-a1305c67c931
+id: 20af8374-7088-812e-97cc-d599487b603f
 business_ideas_relations:
 - context: Related business idea
-  id: 208f8374-7088-8062-8d99-ee9021ba084e
+  id: 20af8374-7088-812e-97cc-d599487b603f
 created_date: '2025-06-06T10:55:00.000Z'
 description: Firebase Studio accelerates your entire development lifecycle with AI
   agents. Build backends, front ends, and mobile apps, all in one place.
 knowledge_vault_relations:
 - context: Related knowledge vault item
-  id: 4604bf87-aae4-4b6a-b81d-516de7c336bc
+  id: 20af8374-7088-812e-97cc-d599487b603f
 - context: Related knowledge vault item
-  id: 1bcb3a10-0bab-446f-971f-18fb3f572f76
+  id: 20af8374-7088-812e-97cc-d599487b603f
 last_modified: '2025-06-06T10:59:00.000Z'
 metadata:
   created_date: '2025-06-06T10:55:00.000Z'
@@ -23,7 +23,7 @@ name: Firebase Studio
 notion_url: https://www.notion.so/Firebase-Studio-20af83747088812e97ccd599487b603f
 pillars_relations:
 - context: Related foundational pillar
-  id: 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+  id: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 priority: 2nd_priority
 public_url: https://neotherapper.notion.site/Firebase-Studio-20af83747088812e97ccd599487b603f
 source_database: knowledge_vault
@@ -32,7 +32,7 @@ tags:
 - AI Tool
 tools_services_relations:
 - context: Related tool/service
-  id: 20df8374-7088-816b-a61e-ee64f8f04bef
+  id: 20af8374-7088-812e-97cc-d599487b603f
 url: https://firebase.studio/
 uuid: 20af8374-7088-812e-97cc-d599487b603f
 ---
@@ -58,11 +58,11 @@ Firebase Studio accelerates your entire development lifecycle with AI agents. Bu
 ## Related Items
 
 ### Knowledge Vault
-- `4604bf87-aae4-4b6a-b81d-516de7c336bc` - Related knowledge vault item
-- `1bcb3a10-0bab-446f-971f-18fb3f572f76` - Related knowledge vault item
+- `20af8374-7088-812e-97cc-d599487b603f` - Related knowledge vault item
+- `20af8374-7088-812e-97cc-d599487b603f` - Related knowledge vault item
 
 ### Tools & Services
-- `20df8374-7088-816b-a61e-ee64f8f04bef` - Related tool/service
+- `20af8374-7088-812e-97cc-d599487b603f` - Related tool/service
 
 ### Business Ideas
-- `208f8374-7088-8062-8d99-ee9021ba084e` - Related business idea
+- `20af8374-7088-812e-97cc-d599487b603f` - Related business idea

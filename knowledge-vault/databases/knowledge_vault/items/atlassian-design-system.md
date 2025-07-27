@@ -5,16 +5,16 @@ description: Atlassian's end-to-end design language to create simple, intuitive,
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 86996c3e-54d8-46a4-a893-965c567e9790
+    - 15903988-d2e1-4ac6-8089-2c4c7ac26ece
 tools_services:
   context: tools_services
   ids:
-    - 42f5f479-286c-4b4b-8a70-efb31b9ba2c1
+    - 53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f
 last_modified: '2024-08-16T13:27:00.000Z'
 metadata:
   created_date: '2024-08-16T13:26:00.000Z'

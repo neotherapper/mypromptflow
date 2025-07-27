@@ -1,11 +1,11 @@
 ---
-id: 7bf417ac-0141-4db4-b963-2f57c712c487
+id: 209f8374-7088-81dd-91fc-cffff197c0b4
 created_date: '2025-06-05T21:02:00.000Z'
 description: a composable ecommerce solution that lets you quickly create global,
   multi-brand B2C and B2B experiences
 knowledge_vault_relations:
 - context: Related knowledge vault item
-  id: 7dc1cc51-62d4-488f-bffc-f34958483db3
+  id: 20af8374-7088-80c5-9ae0-df585087651a
 last_modified: '2025-06-06T19:33:00.000Z'
 metadata:
   created_date: '2025-06-05T21:02:00.000Z'
@@ -18,7 +18,7 @@ name: Adobe Commerce (Magento)
 notion_url: https://www.notion.so/Adobe-Commerce-Magento-209f8374708881dd91fccffff197c0b4
 pillars_relations:
 - context: Related foundational pillar
-  id: 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+  id: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 priority: 4th_priority
 public_url: https://neotherapper.notion.site/Adobe-Commerce-Magento-209f8374708881dd91fccffff197c0b4
 source_database: knowledge_vault
@@ -50,4 +50,4 @@ a composable ecommerce solution that lets you quickly create global, multi-brand
 ## Related Items
 
 ### Knowledge Vault
-- `7dc1cc51-62d4-488f-bffc-f34958483db3` - Related knowledge vault item
+- `20af8374-7088-80c5-9ae0-df585087651a` - Related knowledge vault item

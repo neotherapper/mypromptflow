@@ -5,16 +5,16 @@ description: null
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids: []
 platforms_sites:
   context: platforms_sites
   ids:
-    - 703a0915-3dfd-4149-98b8-e2d75e85dba6
-    - 940b7e47-d36e-4ec2-a738-0ee68268a991
-    - 0586fe08-6279-47b4-8000-141293558f60
+    - bd2dc7b8-2bc1-4197-9f71-613e14750320
+    - bd2dc7b8-2bc1-4197-9f71-613e14750320
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 tools_services:
   context: tools_services
   ids: []

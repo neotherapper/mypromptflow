@@ -5,27 +5,27 @@ description: is the latest version of Google's open-source design system. Design
 pillars:
   context: pillars
   ids: 
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 86996c3e-54d8-46a4-a893-965c567e9790
+    - 15903988-d2e1-4ac6-8089-2c4c7ac26ece
 tools_services:
   context: tools_services
   ids:
-    - 8d9877b6-a43a-46eb-897f-5cb8bdf7ad89
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
 projects:
   context: projects
   ids:
-    - 9bae0eb6-a8ea-480a-853f-75015c044d49
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
 training_vault:
   context: training_vault
   ids:
-    - bcbd6540-8903-42a5-a8b8-6d043704b4b1
-    - 2142bbf3-25e7-4271-8f9d-a4954568b4d6
-    - 1c64a047-7139-4e01-b9e8-bd554757fdd9
-    - eeafbbce-8a42-4e96-ab64-8b5c0bb06e18
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
+    - f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23
 last_modified: '2024-08-16T13:22:00.000Z'
 metadata:
   created_date: '2024-08-12T11:53:00.000Z'

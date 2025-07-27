@@ -5,17 +5,17 @@ description: Shape the merchant experience for Shopify's core product, the admin
 pillars:
   context: pillars
   ids: 
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 86996c3e-54d8-46a4-a893-965c567e9790
-    - bcffe259-68d6-42a0-a43f-918c871d0b27
+    - 15903988-d2e1-4ac6-8089-2c4c7ac26ece
+    - 354bb7fe-dec9-470b-ac32-e819fab9f3db
 tools_services:
   context: tools_services
   ids:
-    - 913489f4-2564-4a33-b15e-b74998323a5d
+    - 354bb7fe-dec9-470b-ac32-e819fab9f3db
 last_modified: '2024-08-16T13:32:00.000Z'
 metadata:
   created_date: '2024-08-16T13:28:00.000Z'

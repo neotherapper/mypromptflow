@@ -8,9 +8,9 @@ tags:
 - ai
 - productivity
 notes_ideas_relations:
-- 239f8374-7088-8178-b337-e867a4af4e83
+- 239f8374-7088-812f-89aa-f956eeb12366
 training_vault_relations:
-- 239f8374-7088-81fb-88a6-e427b1742654
+- 239f8374-7088-812f-89aa-f956eeb12366
 notion_url: https://www.notion.so/Claude-Code-Multi-Agent-Orchestration-Framework-239f83747088812f89aaf956eeb12366
 public_url: https://neotherapper.notion.site/Claude-Code-Multi-Agent-Orchestration-Framework-239f83747088812f89aaf956eeb12366
 rating: 5
@@ -48,7 +48,7 @@ Claude Code Multi-Agent Orchestration Framework - A high-priority AI system for 
 ## Related Items
 
 ### Notes & Ideas
-- `239f8374-7088-8178-b337-e867a4af4e83` - Related note or idea
+- `239f8374-7088-812f-89aa-f956eeb12366` - Related note or idea
 
 ### Training Vault
-- `239f8374-7088-81fb-88a6-e427b1742654` - Related training material
+- `239f8374-7088-812f-89aa-f956eeb12366` - Related training material

@@ -5,14 +5,14 @@ description: null
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids: []
 tools_services:
   context: tools_services
   ids:
-    - c78523b2-29a6-4f6e-a78c-b3bedb927162
+    - fbee53bc-b8d6-4bd0-ad9d-be9116b85043
 last_modified: '2024-08-17T07:19:00.000Z'
 metadata:
   created_date: '2024-08-17T07:19:00.000Z'

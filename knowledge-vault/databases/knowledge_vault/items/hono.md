@@ -5,12 +5,12 @@ description: Ultrafast web framework for the Edges
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 5834ef63-2eec-457b-9712-fee6fa2f25ec
+    - 79f51bcc-3a69-43f0-978c-8d201cf4dca9
 tools_services:
   context: tools_services
   ids: []

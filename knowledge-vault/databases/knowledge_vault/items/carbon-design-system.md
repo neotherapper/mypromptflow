@@ -5,12 +5,12 @@ description: IBM's open source design system for products and digital experience
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 86996c3e-54d8-46a4-a893-965c567e9790
+    - 15903988-d2e1-4ac6-8089-2c4c7ac26ece
 tools_services:
   context: tools_services
   ids: []

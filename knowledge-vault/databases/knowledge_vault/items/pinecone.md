@@ -5,13 +5,13 @@ description: The vector database to build knowledgeable AI
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - c0ef6b7f-a608-4508-afbb-261e529c5898
     - 393bf209-df9c-4e4a-a8f3-a162e896f8f9
-    - 4604bf87-aae4-4b6a-b81d-516de7c336bc
+    - 393bf209-df9c-4e4a-a8f3-a162e896f8f9
+    - 20af8374-7088-812e-97cc-d599487b603f
 media_vault:
   context: media_vault
   ids: []

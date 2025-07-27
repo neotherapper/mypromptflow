@@ -5,13 +5,13 @@ description: Frontier AI in your hands
 pillars:
   context: pillars
   ids: 
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - ca6160e5-9912-4f68-adff-70b7f8dacce6
-    - 3985d550-b89c-40b1-bacd-56d384479a0b
-    - 5834ef63-2eec-457b-9712-fee6fa2f25ec
+    - 34ceedb5-aaeb-4d8b-9bcd-7260529fef41
+    - 34ceedb5-aaeb-4d8b-9bcd-7260529fef41
+    - 79f51bcc-3a69-43f0-978c-8d201cf4dca9
 media_vault:
   context: media_vault
   ids: []
@@ -21,7 +21,7 @@ tools_services:
 platforms_sites:
   context: platforms_sites
   ids:
-    - 9041663f-9632-45a5-88ab-ea52065b36e3
+    - 79f51bcc-3a69-43f0-978c-8d201cf4dca9
 projects:
   context: projects
   ids: []

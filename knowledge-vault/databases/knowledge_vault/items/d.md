@@ -5,16 +5,16 @@ description: is a general-purpose systems programming language with a C-like syn
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - abf3a819-5f90-42c8-ab44-e12cad9c20a7
-    - f8da9e24-3d7a-44a6-9797-c54cef9a94f9
-    - bd729f1b-ba81-4f92-a311-47944d12faa9
-    - 7de8cb82-5cc2-4b41-8057-34f8d1cfb7a7
-    - d4b10473-a55e-4c9b-a49d-735ac71e5ac1
-    - da2093fe-3a34-4974-a4f4-e883a320d432
+    - 1dcf8374-7088-8012-9ecc-d89f1a919c4f
+    - cc30d146-052c-45b7-ae29-6584ee8f42c8
+    - cc30d146-052c-45b7-ae29-6584ee8f42c8
+    - cc30d146-052c-45b7-ae29-6584ee8f42c8
+    - cc30d146-052c-45b7-ae29-6584ee8f42c8
+    - cc30d146-052c-45b7-ae29-6584ee8f42c8
 tools_services:
   context: tools_services
   ids: []

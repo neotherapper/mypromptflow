@@ -4,9 +4,9 @@ created_date: '2025-04-30T17:04:00.000Z'
 description: null
 knowledge_vault_relations:
 - context: Related knowledge vault item
-  id: dc85054e-a0fd-499c-9453-76d31083d243
+  id: 1e5f8374-7088-808a-9d76-fa648d83f4f6
 - context: Related knowledge vault item
-  id: 1d696d12-a89b-4a7f-bb82-d129cddab57e
+  id: 1e5f8374-7088-8097-9b73-f5d6976cac12
 last_modified: '2025-04-30T17:05:00.000Z'
 metadata:
   created_date: '2025-04-30T17:04:00.000Z'
@@ -42,5 +42,5 @@ uuid: 1e5f8374-7088-8097-9b73-f5d6976cac12
 ## Related Items
 
 ### Knowledge Vault
-- `dc85054e-a0fd-499c-9453-76d31083d243` - Related knowledge vault item
-- `1d696d12-a89b-4a7f-bb82-d129cddab57e` - Related knowledge vault item
+- `1e5f8374-7088-808a-9d76-fa648d83f4f6` - Related knowledge vault item
+- `1e5f8374-7088-8097-9b73-f5d6976cac12` - Related knowledge vault item

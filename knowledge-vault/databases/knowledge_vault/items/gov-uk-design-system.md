@@ -5,11 +5,11 @@ description: Design your service using GOV.UK styles, components and patterns
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 86996c3e-54d8-46a4-a893-965c567e9790
+    - 15903988-d2e1-4ac6-8089-2c4c7ac26ece
 tools_services:
   context: tools_services
   ids: []

@@ -1,12 +1,12 @@
 ---
-id: e063047b-c972-4c1d-9f7e-03f2cf377ffa
+id: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 created_date: '2024-08-10T15:59:00.000Z'
 description: ''
 pillars:
   context: pillars
   ids: 
-    - c65e5ac0-f455-4af7-9d37-92b3f00ddcdf
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 764be31b-7c78-4e11-bc03-fd31c8eca465
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids: []
@@ -16,8 +16,8 @@ media_vault:
 tools_services:
   context: tools_services
   ids:
-    - 17d4ae84-f788-47ff-bcdf-6473d17ad97f
-    - bfa23efb-c043-4c06-8fc6-2001b17a7cf0
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 platforms_sites:
   context: platforms_sites
   ids: []
@@ -48,7 +48,7 @@ metadata:
   item_type: knowledge_item
   last_modified: '2024-08-11T05:09:00.000Z'
   migration_date: '2025-01-24'
-  notion_id: e063047b-c972-4c1d-9f7e-03f2cf377ffa
+  notion_id: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
   source: notion_migration
 name: Business Intelligence
 notion_url: https://www.notion.so/Business-Intelligence-e063047bc9724c1d9f7e03f2cf377ffa
@@ -58,7 +58,7 @@ source_database: knowledge_vault
 status: Archived
 tags: 
   - Business Concepts
-uuid: e063047b-c972-4c1d-9f7e-03f2cf377ffa
+uuid: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 url: null
 date: null
 ---

@@ -5,20 +5,20 @@ description: ''
 pillars:
   context: pillars
   ids: 
-    - 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+    - 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 knowledge_vault:
   context: knowledge_vault
   ids:
-    - 6ef52839-fa77-4564-aedb-417fda2e227d
-    - 7dc1cc51-62d4-488f-bffc-f34958483db3
+    - fbd07457-873d-4b36-9505-c5c4ef479d8c
+    - 20af8374-7088-80c5-9ae0-df585087651a
 platforms_sites:
   context: platforms_sites
   ids:
-    - c2736565-182d-4b63-82ef-89ab931f5e7a
+    - fbd07457-873d-4b36-9505-c5c4ef479d8c
 training_vault:
   context: training_vault
   ids:
-    - 6152132a-2e90-4e8d-93f3-35d3d98d8daf
+    - fbd07457-873d-4b36-9505-c5c4ef479d8c
 tools_services:
   context: tools_services
   ids: []

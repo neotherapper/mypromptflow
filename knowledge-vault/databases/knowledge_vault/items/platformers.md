@@ -15,7 +15,7 @@ name: Platformers
 notion_url: https://www.notion.so/Platformers-1f4f83747088807d8a1fdb855edbe3ce
 pillars_relations:
 - context: Related foundational pillar
-  id: 5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f
+  id: 1dcf8374-7088-801f-b92c-c9f6a68bfa22
 priority: 4th_priority
 public_url: https://neotherapper.notion.site/Platformers-1f4f83747088807d8a1fdb855edbe3ce
 source_database: knowledge_vault
@@ -41,4 +41,4 @@ uuid: 1f4f8374-7088-807d-8a1f-db855edbe3ce
 ## Related Items
 
 ### Pillars
-- `5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f` - Related foundational pillar
+- `1dcf8374-7088-801f-b92c-c9f6a68bfa22` - Related foundational pillar
