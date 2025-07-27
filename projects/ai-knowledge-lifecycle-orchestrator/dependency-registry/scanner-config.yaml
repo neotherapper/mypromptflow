@@ -1,0 +1,314 @@
+# AI Knowledge Lifecycle Orchestrator - Dependency Scanner Configuration
+# Configuration for automated scanning of AI instruction files to detect technology dependencies
+
+version: "1.0.0"
+created: "2025-01-24"
+purpose: "Configure automated dependency detection scanner for AI instruction files"
+
+# Scanner behavior configuration
+scanner_configuration:
+  
+  # File discovery settings
+  file_discovery:
+    base_directories:
+      - "../../../"  # Go up from project directory to main mypromptflow directory
+      
+    include_patterns:
+      - "**/*CLAUDE.md"           # Project CLAUDE.md files
+      - "**/.claude/commands/*.md" # Claude command files
+      - "**/knowledge-vault/knowledge/**/*.md"  # Knowledge vault documentation
+      - "**/tools/*.md"            # Tool documentation files
+      - "**/docs/**/*.md"          # Project documentation
+      - "**/README.md"             # README files with AI instructions
+      
+    exclude_patterns:
+      - "**/node_modules/**"       # Exclude dependencies
+      - "**/.git/**"               # Exclude git internals
+      - "**/build/**"              # Exclude build artifacts
+      - "**/dist/**"              # Exclude distribution files
+      - "**/*.log"                 # Exclude log files
+      - "**/temp/**"               # Exclude temporary files
+      
+    file_size_limits:
+      maximum_file_size_mb: 5      # Skip files larger than 5MB
+      minimum_file_size_bytes: 10  # Skip empty or near-empty files
+      
+  # Technology detection patterns
+  technology_detection:
+    
+    # Pattern matching rules for technology identification
+    detection_patterns:
+      
+      # Framework patterns
+      React:
+        patterns:
+          - r"React\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"react(?:-dom)?[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"create-react-app"
+          - r"React\s+(?:components?|hooks?|context)"
+          - r"jsx?(?:\s+files?)?"
+          - r"useState|useEffect|useContext|useReducer"
+        context_keywords: ["component", "jsx", "props", "state", "hooks"]
+        minimum_confidence: 0.8
+        
+      TypeScript:
+        patterns:
+          - r"TypeScript\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"typescript[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"\.ts[x]?\b"
+          - r"tsc\b|tsconfig\.json"
+          - r"interface\s+\w+|type\s+\w+\s*="
+        context_keywords: ["interface", "type", "generic", "typing", "compile"]
+        minimum_confidence: 0.8
+        
+      "Next.js":
+        patterns:
+          - r"Next\.js\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"next[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"next/(?:link|image|router|head)"
+          - r"getStaticProps|getServerSideProps|getStaticPaths"
+          - r"pages/|app/.*route\.ts"
+        context_keywords: ["routing", "SSR", "SSG", "middleware", "app router"]
+        minimum_confidence: 0.8
+        
+      Jest:
+        patterns:
+          - r"Jest\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"jest[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"describe\(|test\(|it\(|expect\("
+          - r"jest\.config\.|\.test\.|\.spec\."
+          - r"@testing-library/jest"
+        context_keywords: ["testing", "unit test", "mock", "spy", "snapshot"]
+        minimum_confidence: 0.8
+        
+      ESLint:
+        patterns:
+          - r"ESLint\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"eslint[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"\.eslintrc\.|eslint\.config\."
+          - r"eslint-disable|eslint-enable"
+          - r"@typescript-eslint/"
+        context_keywords: ["linting", "code quality", "rules", "disable", "config"]
+        minimum_confidence: 0.8
+        
+      Docker:
+        patterns:
+          - r"Docker\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"docker[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"Dockerfile|docker-compose\.ya?ml"
+          - r"docker\s+(?:build|run|push|pull)"
+          - r"FROM\s+\w+:|COPY\s+|RUN\s+"
+        context_keywords: ["container", "image", "build", "deployment", "compose"]
+        minimum_confidence: 0.8
+        
+      "GitHub Actions":
+        patterns:
+          - r"GitHub\s+Actions\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"\.github/workflows/"
+          - r"actions/(?:checkout|setup-node|upload-artifact)"
+          - r"runs-on:|uses:|with:|env:"
+          - r"on:\s*(?:push|pull_request|schedule)"
+        context_keywords: ["CI/CD", "workflow", "pipeline", "automation", "deploy"]
+        minimum_confidence: 0.8
+        
+      "Node.js":
+        patterns:
+          - r"Node\.js\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"node[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"npm\s+(?:install|run|start|build)"
+          - r"package\.json|node_modules"
+          - r"require\(|import.*from"
+        context_keywords: ["runtime", "npm", "package", "module", "server"]
+        minimum_confidence: 0.8
+        
+      "Tailwind CSS":
+        patterns:
+          - r"Tailwind\s*CSS\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"tailwindcss[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"@tailwind\s+(?:base|components|utilities)"
+          - r"tailwind\.config\.|tw-|class.*=\".*\b(?:bg|text|p|m|w|h)-"
+        context_keywords: ["utility", "CSS", "classes", "styling", "responsive"]
+        minimum_confidence: 0.8
+        
+      Vercel:
+        patterns:
+          - r"Vercel\.?\s*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"vercel[@\s]*(?:v?\d+\.?\d*\.?\d*)?"
+          - r"vercel\.json|\.vercel/"
+          - r"vercel\s+(?:deploy|dev|build)"
+          - r"vercel\.app|vercel\.com"
+        context_keywords: ["deployment", "hosting", "serverless", "platform", "CDN"]
+        minimum_confidence: 0.7
+        
+    # Version detection patterns
+    version_patterns:
+      semantic_version: r"(?:v?(\d+)\.(\d+)\.(\d+)(?:-[\w.-]+)?(?:\+[\w.-]+)?)"
+      major_version: r"(?:v?(\d+)\.x|(\d+)\.\*)"
+      range_version: r"(?:\^|~|>=|<=|>|<)?(\d+(?:\.\d+(?:\.\d+)?)?)"
+      latest_keywords: ["latest", "current", "stable", "LTS"]
+      
+    # Context analysis settings
+    context_analysis:
+      context_window_lines: 3      # Lines before/after to analyze for context
+      keyword_boost_factor: 1.5    # Increase confidence when context keywords present
+      code_block_boost: 1.3        # Increase confidence for technology in code blocks
+      title_boost: 1.4             # Increase confidence for technology in headings
+      
+    # Confidence calculation
+    confidence_calculation:
+      base_confidence: 0.6          # Starting confidence for pattern match
+      multiple_pattern_bonus: 0.1   # Bonus per additional pattern match
+      context_keyword_bonus: 0.15   # Bonus when context keywords present
+      version_reference_bonus: 0.1  # Bonus when version is specified
+      official_docs_bonus: 0.2      # Bonus when referencing official documentation
+      
+  # Scanning performance settings
+  performance_settings:
+    
+    # Concurrency and threading
+    max_concurrent_files: 10       # Maximum files to process simultaneously
+    chunk_size: 50                 # Files to process in each batch
+    timeout_per_file_seconds: 30   # Maximum time to spend on single file
+    
+    # Caching and optimization
+    enable_file_hash_caching: true # Cache results based on file content hash
+    cache_duration_hours: 24       # How long to cache results
+    incremental_scanning: true     # Only rescan changed files
+    
+    # Memory management
+    max_memory_usage_mb: 500       # Maximum memory usage for scanner
+    garbage_collect_frequency: 100 # Run garbage collection every N files
+    
+  # Output and logging settings
+  output_configuration:
+    
+    # Registry file settings
+    registry_file_path: "dependency-registry/registry.yaml"
+    backup_registry: true         # Create backup before updating
+    backup_retention_days: 30     # Keep backups for 30 days
+    
+    # Logging configuration
+    log_level: "INFO"             # DEBUG, INFO, WARNING, ERROR
+    log_file_path: "dependency-registry/scanner.log"
+    log_rotation_size_mb: 10      # Rotate log files at 10MB
+    log_retention_days: 7         # Keep log files for 7 days
+    
+    # Progress reporting
+    progress_report_interval: 10  # Report progress every N files
+    show_confidence_scores: true  # Include confidence scores in output
+    show_detection_details: false # Include detailed pattern matches (debug mode)
+    
+  # Quality assurance settings
+  quality_assurance:
+    
+    # Validation thresholds
+    minimum_overall_confidence: 0.7  # Don't include technologies below this threshold
+    maximum_technologies_per_file: 15 # Flag files with excessive technology references
+    
+    # Cross-validation settings
+    enable_cross_validation: true    # Validate detected dependencies across files
+    cross_reference_consistency: true # Check @file_path references for consistency
+    
+    # Manual review triggers
+    manual_review_thresholds:
+      low_confidence_technologies: 0.75    # Flag technologies below this confidence
+      high_technology_count: 12            # Flag files with more than N technologies
+      conflicting_versions: true           # Flag when same technology has different versions
+      
+# Technology definitions for categorization and current versions
+technology_definitions:
+  standardized_technologies:
+    React:
+      category: "frontend_framework"
+      current_stable: "19.0.0"
+      criticality_default: "high"
+      
+    TypeScript:
+      category: "programming_language"
+      current_stable: "5.7.2"
+      criticality_default: "high"
+      
+    "Next.js":
+      category: "fullstack_framework"
+      current_stable: "15.1.0"
+      criticality_default: "high"
+      
+    Jest:
+      category: "testing_framework"
+      current_stable: "29.7.0"
+      criticality_default: "medium"
+      
+    ESLint:
+      category: "code_quality"
+      current_stable: "9.18.0"
+      criticality_default: "medium"
+      
+    Docker:
+      category: "containerization"
+      current_stable: "27.4.1"
+      criticality_default: "medium"
+      
+    "GitHub Actions":
+      category: "ci_cd"
+      current_stable: "latest"
+      criticality_default: "medium"
+      
+    "Node.js":
+      category: "runtime"
+      current_stable: "22.12.0"
+      criticality_default: "high"
+      
+    "Tailwind CSS":
+      category: "css_framework"
+      current_stable: "3.4.17"
+      criticality_default: "medium"
+      
+    Vercel:
+      category: "deployment_platform"
+      current_stable: "latest"
+      criticality_default: "low"
+
+# Integration settings
+integration_settings:
+  
+  # Knowledge Vault integration
+  knowledge_vault:
+    enabled: true
+    base_path: "../../../knowledge-vault/"
+    technology_schema_path: "schemas/technology-tracking-schema.yaml"
+    dependency_schema_path: "schemas/dependency-mapping-schema.yaml"
+    
+  # AI Agent Instruction Design Excellence integration  
+  validation_framework:
+    enabled: true
+    base_path: "../../../projects/ai-agent-instruction-design-excellence/"
+    quality_threshold: 0.85       # Minimum quality score for dependencies
+    
+  # MCP Server integration
+  mcp_servers:
+    enabled: true
+    fetch_server: "mcp__MCP_DOCKER__fetch"           # For web content retrieval
+    github_server: "mcp__MCP_DOCKER__github_server"  # For repository information
+    search_server: "mcp__MCP_DOCKER__search"         # For web search capabilities
+
+# Scheduled scanning configuration
+scheduling:
+  
+  # Automatic scanning schedule
+  automatic_scanning:
+    enabled: true
+    frequency: "daily"           # daily, weekly, monthly
+    time: "02:00"               # 2 AM daily scanning
+    timezone: "UTC"
+    
+  # Trigger-based scanning
+  trigger_scanning:
+    file_modification: true     # Scan when files are modified
+    new_file_detection: true    # Scan when new files are added
+    technology_change_alert: true # Scan when monitored technologies change
+    
+  # Performance windows
+  performance_windows:
+    max_scan_duration_minutes: 60    # Maximum time for full scan
+    priority_scan_files: []          # High-priority files to scan first
+    low_priority_hours: ["02:00-06:00"] # Time window for intensive operations

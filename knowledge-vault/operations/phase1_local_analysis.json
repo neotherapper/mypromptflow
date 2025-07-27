@@ -1,0 +1,1016 @@
+{
+  "total_items": 51,
+  "items_with_notion_uuids": 51,
+  "total_notion_uuid_count": 455,
+  "items": {
+    "design-thinking": {
+      "file_name": "design-thinking.md",
+      "title": "design-thinking",
+      "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+      "notion_uuid_count": 13,
+      "notion_uuids": [
+        "05445a61-8abd-44fa-bc1c-bc805d473e87",
+        "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "b2796f49-dfc7-41bb-a8c3-3c89d3e8a577",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "1dcf8374-7088-801f-b92c-c9f6a68bfa22"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1972,
+      "analysis_timestamp": "2025-07-26T17:56:02.867171"
+    },
+    "game-design": {
+      "file_name": "game-design.md",
+      "title": "game-design",
+      "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+      "notion_uuid_count": 11,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "dc85054e-a0fd-499c-9453-76d31083d243"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1443,
+      "analysis_timestamp": "2025-07-26T17:56:02.867302"
+    },
+    "data-visualisation": {
+      "file_name": "data-visualisation.md",
+      "title": "data-visualisation",
+      "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+      "notion_uuid_count": 23,
+      "notion_uuids": [
+        "12575617-ae86-4d96-848b-c2b7d67d727c",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "35b3d163-ba90-4b31-b10f-2e0c782705af",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "3c5a93d2-a340-4eee-908e-9a898f818713",
+        "18734b74-8dfd-4493-ba5f-f137911e4314",
+        "2b2202d9-3136-46b0-bee3-ef25910956e0",
+        "02aa3c96-2045-4a70-968e-fd1a2e7335a5",
+        "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "2cb2ebbf-246a-4961-b329-a65b6a8ae150"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2763,
+      "analysis_timestamp": "2025-07-26T17:56:02.867573"
+    },
+    "gov-uk-design-system": {
+      "file_name": "gov-uk-design-system.md",
+      "title": "gov-uk-design-system",
+      "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+      "notion_uuid_count": 5,
+      "notion_uuids": [
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1766,
+      "analysis_timestamp": "2025-07-26T17:56:02.867751"
+    },
+    "firebase-studio": {
+      "file_name": "firebase-studio.md",
+      "title": "firebase-studio",
+      "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+      "notion_uuid_count": 12,
+      "notion_uuids": [
+        "20df8374-7088-816b-a61e-ee64f8f04bef",
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "672699f0-e84b-4ee1-81af-a1305c67c931",
+        "1bcb3a10-0bab-446f-971f-18fb3f572f76",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "20af8374-7088-812e-97cc-d599487b603f"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2290,
+      "analysis_timestamp": "2025-07-26T17:56:02.867932"
+    },
+    "spring-boot": {
+      "file_name": "spring-boot.md",
+      "title": "spring-boot",
+      "local_uuid": "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+      "notion_uuid_count": 10,
+      "notion_uuids": [
+        "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+        "1b918823-262e-459d-a3fa-c226c7be9bd1",
+        "7770c2fa-4369-4112-ae73-5df8fc673fb6",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "3c44148c-b13a-45e4-974f-7af41f728582",
+        "1f5f8374-7088-8117-800e-c3c3a643be55"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2135,
+      "analysis_timestamp": "2025-07-26T17:56:02.868098"
+    },
+    "evergreen": {
+      "file_name": "evergreen.md",
+      "title": "evergreen",
+      "local_uuid": "531b06b2-1a71-46eb-960e-0f47934c9985",
+      "notion_uuid_count": 5,
+      "notion_uuids": [
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "531b06b2-1a71-46eb-960e-0f47934c9985"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1594,
+      "analysis_timestamp": "2025-07-26T17:56:02.868259"
+    },
+    "mcp": {
+      "file_name": "mcp.md",
+      "title": "mcp",
+      "local_uuid": "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+      "notion_uuid_count": 9,
+      "notion_uuids": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c3d689e5-982e-4a94-a0bf-b7d9a3b8e043",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+        "c2ad2570-7cb7-40b7-a6f4-f8589072c623",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1579,
+      "analysis_timestamp": "2025-07-26T17:56:02.868440"
+    },
+    "continue": {
+      "file_name": "continue.md",
+      "title": "continue",
+      "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+      "notion_uuid_count": 8,
+      "notion_uuids": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "90110293-eabf-4247-9ee5-d0a180b66771",
+        "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2506,
+      "analysis_timestamp": "2025-07-26T17:56:02.868624"
+    },
+    "affiliate-marketing": {
+      "file_name": "affiliate-marketing.md",
+      "title": "affiliate-marketing",
+      "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+      "notion_uuid_count": 17,
+      "notion_uuids": [
+        "a3f8d430-f35c-427f-b4ca-5a41c0ff2272",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "208f8374-7088-8182-890d-e79efd139a9c",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-81e2-8858-ea461a908f21",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "205f8374-7088-81b6-abd4-faaa21b78aec",
+        "212f8374-7088-8136-82bf-e55fc10b2b51",
+        "1fef8374-7088-8157-8054-fda0d862db16",
+        "5ff07701-35f0-410c-aacc-f71f133cb30c"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2306,
+      "analysis_timestamp": "2025-07-26T17:56:02.868775"
+    },
+    "business-intelligence": {
+      "file_name": "business-intelligence.md",
+      "title": "business-intelligence",
+      "local_uuid": "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+        "bfa23efb-c043-4c06-8fc6-2001b17a7cf0",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "17d4ae84-f788-47ff-bcdf-6473d17ad97f"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2414,
+      "analysis_timestamp": "2025-07-26T17:56:02.868949"
+    },
+    "mistral-ai": {
+      "file_name": "mistral-ai.md",
+      "title": "mistral-ai",
+      "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+      "notion_uuid_count": 8,
+      "notion_uuids": [
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "9041663f-9632-45a5-88ab-ea52065b36e3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "79f51bcc-3a69-43f0-978c-8d201cf4dca9"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2480,
+      "analysis_timestamp": "2025-07-26T17:56:02.869116"
+    },
+    "real-time-strategy": {
+      "file_name": "real-time-strategy.md",
+      "title": "real-time-strategy",
+      "local_uuid": "1f4f8374-7088-8039-9e6b-e8e644735853",
+      "notion_uuid_count": 13,
+      "notion_uuids": [
+        "1f5f8374-7088-813c-8908-fc1f67efd36f",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1f4f8374-7088-8039-9e6b-e8e644735853",
+        "6d68cee2-624e-436b-a17e-105000f149d1"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2016,
+      "analysis_timestamp": "2025-07-26T17:56:02.869278"
+    },
+    "online-directory": {
+      "file_name": "online-directory.md",
+      "title": "online-directory",
+      "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+      "notion_uuid_count": 24,
+      "notion_uuids": [
+        "1c196d36-174e-4803-9249-b926d6e4fcb0",
+        "2b77aeeb-6e10-47c5-bdac-bc255d7d0875",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "ee2a5a61-1f27-4d13-98fd-f4cbb9b0340b",
+        "1fdf8374-7088-8187-b625-c9129649a44b",
+        "21af8374-7088-8031-a360-c517a82741cf",
+        "8fe63d48-62ac-4248-9348-e0ad44485b2a",
+        "4616de00-3d23-4d4c-a20f-75105c18ce00",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "6b9b5916-ab35-4d99-a8c9-a4118e7d4bd1",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c",
+        "61201a7e-2983-4078-b294-37f02e087ef7"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 3053,
+      "analysis_timestamp": "2025-07-26T17:56:02.869462"
+    },
+    "pim": {
+      "file_name": "pim.md",
+      "title": "pim",
+      "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+      "notion_uuid_count": 12,
+      "notion_uuids": [
+        "1c196d36-174e-4803-9249-b926d6e4fcb0",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "e358faf2-d83f-476a-9e28-52eabc934424",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1847,
+      "analysis_timestamp": "2025-07-26T17:56:02.869633"
+    },
+    "shooter": {
+      "file_name": "shooter.md",
+      "title": "shooter",
+      "local_uuid": "1f4f8374-7088-80e1-8e32-fda716839fda",
+      "notion_uuid_count": 9,
+      "notion_uuids": [
+        "1f4f8374-7088-80e1-8e32-fda716839fda",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1562,
+      "analysis_timestamp": "2025-07-26T17:56:02.869784"
+    },
+    "desktop": {
+      "file_name": "desktop.md",
+      "title": "desktop",
+      "local_uuid": "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+      "notion_uuid_count": 5,
+      "notion_uuids": [
+        "c78523b2-29a6-4f6e-a78c-b3bedb927162",
+        "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1428,
+      "analysis_timestamp": "2025-07-26T17:56:02.869972"
+    },
+    "material-design": {
+      "file_name": "material-design.md",
+      "title": "material-design",
+      "local_uuid": "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+      "notion_uuid_count": 12,
+      "notion_uuids": [
+        "bcbd6540-8903-42a5-a8b8-6d043704b4b1",
+        "2142bbf3-25e7-4271-8f9d-a4954568b4d6",
+        "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "9bae0eb6-a8ea-480a-853f-75015c044d49",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "eeafbbce-8a42-4e96-ab64-8b5c0bb06e18",
+        "1c64a047-7139-4e01-b9e8-bd554757fdd9",
+        "8d9877b6-a43a-46eb-897f-5cb8bdf7ad89"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2295,
+      "analysis_timestamp": "2025-07-26T17:56:02.870127"
+    },
+    "gamification": {
+      "file_name": "gamification.md",
+      "title": "gamification",
+      "local_uuid": "141d71b0-fa46-4c72-8075-b833950c1e2b",
+      "notion_uuid_count": 17,
+      "notion_uuids": [
+        "cb4d10e3-d4c2-4cb0-8229-a439cf6f2632",
+        "439f1858-9f59-4636-a9bf-38674e47cc57",
+        "931cbd26-3494-4930-98db-4d8782a90fc0",
+        "4298c6da-5f7b-4bd3-8246-8b70eb4ee16d",
+        "6c607492-0239-4c3d-bf56-05ce4cca3b21",
+        "5151ce9e-c76a-49d8-98c7-c5c2d81fca11",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "141d71b0-fa46-4c72-8075-b833950c1e2b",
+        "87d79cb6-f770-40cf-975f-4874696929b1",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "1abf6ccd-6eee-4e83-a3da-9b83697b9768",
+        "567472ab-c4ec-4fd1-87ec-97efb5f742c6",
+        "bd3c6045-4d2c-4c1a-864e-79e61559ad0e",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2399,
+      "analysis_timestamp": "2025-07-26T17:56:02.870302"
+    },
+    "assembly-language": {
+      "file_name": "assembly-language.md",
+      "title": "assembly-language",
+      "local_uuid": "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+      "notion_uuid_count": 9,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "abf3a819-5f90-42c8-ab44-e12cad9c20a7",
+        "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+        "0586fe08-6279-47b4-8000-141293558f60"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1656,
+      "analysis_timestamp": "2025-07-26T17:56:02.870908"
+    },
+    "linux": {
+      "file_name": "linux.md",
+      "title": "linux",
+      "local_uuid": "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "940b7e47-d36e-4ec2-a738-0ee68268a991",
+        "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "703a0915-3dfd-4149-98b8-e2d75e85dba6"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1575,
+      "analysis_timestamp": "2025-07-26T17:56:02.871061"
+    },
+    "stripe": {
+      "file_name": "stripe.md",
+      "title": "stripe",
+      "local_uuid": "fbd07457-873d-4b36-9505-c5c4ef479d8c",
+      "notion_uuid_count": 8,
+      "notion_uuids": [
+        "6152132a-2e90-4e8d-93f3-35d3d98d8daf",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "c2736565-182d-4b63-82ef-89ab931f5e7a",
+        "6ef52839-fa77-4564-aedb-417fda2e227d",
+        "fbd07457-873d-4b36-9505-c5c4ef479d8c"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1798,
+      "analysis_timestamp": "2025-07-26T17:56:02.871143"
+    },
+    "raft": {
+      "file_name": "raft.md",
+      "title": "raft",
+      "local_uuid": "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "a7e763ba-4e29-4709-84dd-e5224c278fab"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1554,
+      "analysis_timestamp": "2025-07-26T17:56:02.871215"
+    },
+    "unreal-engine": {
+      "file_name": "unreal-engine.md",
+      "title": "unreal-engine",
+      "local_uuid": "1e5f8374-7088-801b-9b45-fd7dd26e4b9d",
+      "notion_uuid_count": 9,
+      "notion_uuids": [
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1e5f8374-7088-801b-9b45-fd7dd26e4b9d"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1256,
+      "analysis_timestamp": "2025-07-26T17:56:02.871339"
+    },
+    "adobe-commerce-magento": {
+      "file_name": "adobe-commerce-magento.md",
+      "title": "adobe-commerce-magento",
+      "local_uuid": "209f8374-7088-81dd-91fc-cffff197c0b4",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "7bf417ac-0141-4db4-b963-2f57c712c487",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "209f8374-7088-81dd-91fc-cffff197c0b4",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1874,
+      "analysis_timestamp": "2025-07-26T17:56:02.871507"
+    },
+    "discontinued-outdated": {
+      "file_name": "discontinued-outdated.md",
+      "title": "discontinued-outdated",
+      "local_uuid": "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+      "notion_uuid_count": 11,
+      "notion_uuids": [
+        "9a46bae0-e8a8-4acf-8956-72265e45e124",
+        "94946014-3dc7-46f2-bac6-829fafeeea47",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "cbeff48d-bed9-4661-b6f1-597e03a2b0ac",
+        "93ed4dcd-15db-4d51-996b-52c6f053dcd9",
+        "c25242ec-16b6-4f3c-ba93-ca9c0f598d47",
+        "d618f205-9ea5-4075-b0a2-7b9a91211863",
+        "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+        "7799ed44-c9ac-4f25-97c3-d7efaa580d0c"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2590,
+      "analysis_timestamp": "2025-07-26T17:56:02.871656"
+    },
+    "carbon-design-system": {
+      "file_name": "carbon-design-system.md",
+      "title": "carbon-design-system",
+      "local_uuid": "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1804,
+      "analysis_timestamp": "2025-07-26T17:56:02.871809"
+    },
+    "vector-database": {
+      "file_name": "vector-database.md",
+      "title": "vector-database",
+      "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+      "notion_uuid_count": 10,
+      "notion_uuids": [
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "9041663f-9632-45a5-88ab-ea52065b36e3",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "20ef8374-7088-81a4-b9b8-f5603ef6e355",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "34d3c014-6014-460d-b986-c01e71f29b82",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2869,
+      "analysis_timestamp": "2025-07-26T17:56:02.871981"
+    },
+    "meta-prompting-frameworks": {
+      "file_name": "meta-prompting-frameworks.md",
+      "title": "meta-prompting-frameworks",
+      "local_uuid": "239f8374-7088-819c-92c6-eac956f35eec",
+      "notion_uuid_count": 9,
+      "notion_uuids": [
+        "239f8374-7088-81a9-af25-f939d9442ab4",
+        "239f8374-7088-8164-a975-db5ab2b28917",
+        "239f8374-7088-81bd-905e-d08a7e81e9bd",
+        "239f8374-7088-819c-92c6-eac956f35eec"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1739,
+      "analysis_timestamp": "2025-07-26T17:56:02.872142"
+    },
+    "claude-code-multi-agent-orchestration-framework": {
+      "file_name": "claude-code-multi-agent-orchestration-framework.md",
+      "title": "claude-code-multi-agent-orchestration-framework",
+      "local_uuid": "239f8374-7088-812f-89aa-f956eeb12366",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "239f8374-7088-8178-b337-e867a4af4e83",
+        "239f8374-7088-812f-89aa-f956eeb12366",
+        "239f8374-7088-81fb-88a6-e427b1742654"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1730,
+      "analysis_timestamp": "2025-07-26T17:56:02.872271"
+    },
+    "neon": {
+      "file_name": "neon.md",
+      "title": "neon",
+      "local_uuid": "20af8374-7088-818a-aea8-ec2d0f9ca797",
+      "notion_uuid_count": 10,
+      "notion_uuids": [
+        "ab0a6b3c-3800-4413-8eaf-69219ddfbcef",
+        "125d988c-8c17-46b5-8c18-03a3a3118829",
+        "9d3279e2-dafa-49f1-896a-1a260e11d872",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "20af8374-7088-818a-aea8-ec2d0f9ca797",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1770,
+      "analysis_timestamp": "2025-07-26T17:56:02.872450"
+    },
+    "knowledge_vault_example_item": {
+      "file_name": "knowledge_vault_example_item.md",
+      "title": "knowledge_vault_example_item",
+      "local_uuid": null,
+      "notion_uuid_count": 1,
+      "notion_uuids": [
+        "205cf58b-b1a5-4464-9fb7-737637ed4e16"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 234,
+      "analysis_timestamp": "2025-07-26T17:56:02.872589"
+    },
+    "ai-knowledge-intelligence-orchestrator": {
+      "file_name": "ai-knowledge-intelligence-orchestrator.md",
+      "title": "ai-knowledge-intelligence-orchestrator",
+      "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
+      "notion_uuid_count": 3,
+      "notion_uuids": [
+        "239f8374-7088-8158-86c5-d4db7df1faf4"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1343,
+      "analysis_timestamp": "2025-07-26T17:56:02.872696"
+    },
+    "atlassian-design-system": {
+      "file_name": "atlassian-design-system.md",
+      "title": "atlassian-design-system",
+      "local_uuid": "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "42f5f479-286c-4b4b-8a70-efb31b9ba2c1",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1913,
+      "analysis_timestamp": "2025-07-26T17:56:02.872854"
+    },
+    "pinecone": {
+      "file_name": "pinecone.md",
+      "title": "pinecone",
+      "local_uuid": "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2463,
+      "analysis_timestamp": "2025-07-26T17:56:02.872992"
+    },
+    "apache-spark": {
+      "file_name": "apache-spark.md",
+      "title": "apache-spark",
+      "local_uuid": "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "99a62216-4b39-4b08-b3ba-49f24bc33c51",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "02aa3c96-2045-4a70-968e-fd1a2e7335a5"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2488,
+      "analysis_timestamp": "2025-07-26T17:56:02.873139"
+    },
+    "platformers": {
+      "file_name": "platformers.md",
+      "title": "platformers",
+      "local_uuid": "1f4f8374-7088-807d-8a1f-db855edbe3ce",
+      "notion_uuid_count": 5,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1f4f8374-7088-807d-8a1f-db855edbe3ce"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1258,
+      "analysis_timestamp": "2025-07-26T17:56:02.873262"
+    },
+    "crystallize": {
+      "file_name": "crystallize.md",
+      "title": "crystallize",
+      "local_uuid": "20af8374-7088-811c-8c39-e1f8992a3055",
+      "notion_uuid_count": 12,
+      "notion_uuids": [
+        "d8adb951-6aae-4dff-8f3f-3ed9b372c4fe",
+        "20af8374-7088-811c-8c39-e1f8992a3055",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "7d24cdc7-2590-46ad-9d96-4f6a6dcfe3d7",
+        "f9052276-7c8a-4a5e-88c4-8aab46950906",
+        "20af8374-7088-80c5-9ae0-df585087651a"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2030,
+      "analysis_timestamp": "2025-07-26T17:56:02.873402"
+    },
+    "nvidia": {
+      "file_name": "nvidia.md",
+      "title": "nvidia",
+      "local_uuid": "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+        "b31ba618-7aff-4193-81e9-68ad0aad89a9"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2277,
+      "analysis_timestamp": "2025-07-26T17:56:02.873566"
+    },
+    "unity-engine": {
+      "file_name": "unity-engine.md",
+      "title": "unity-engine",
+      "local_uuid": "1e5f8374-7088-8097-9b73-f5d6976cac12",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "1d696d12-a89b-4a7f-bb82-d129cddab57e",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1e5f8374-7088-8097-9b73-f5d6976cac12"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1389,
+      "analysis_timestamp": "2025-07-26T17:56:02.873691"
+    },
+    "shopify-polaris": {
+      "file_name": "shopify-polaris.md",
+      "title": "shopify-polaris",
+      "local_uuid": "354bb7fe-dec9-470b-ac32-e819fab9f3db",
+      "notion_uuid_count": 8,
+      "notion_uuids": [
+        "bcffe259-68d6-42a0-a43f-918c871d0b27",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "913489f4-2564-4a33-b15e-b74998323a5d",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "354bb7fe-dec9-470b-ac32-e819fab9f3db"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1851,
+      "analysis_timestamp": "2025-07-26T17:56:02.873855"
+    },
+    "tower-defence": {
+      "file_name": "tower-defence.md",
+      "title": "tower-defence",
+      "local_uuid": "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+      "notion_uuid_count": 8,
+      "notion_uuids": [
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "defb9158-a27c-4b38-a96a-0edd2f50689e"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1514,
+      "analysis_timestamp": "2025-07-26T17:56:02.874012"
+    },
+    "d": {
+      "file_name": "d.md",
+      "title": "d",
+      "local_uuid": "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+      "notion_uuid_count": 10,
+      "notion_uuids": [
+        "abf3a819-5f90-42c8-ab44-e12cad9c20a7",
+        "d4b10473-a55e-4c9b-a49d-735ac71e5ac1",
+        "f8da9e24-3d7a-44a6-9797-c54cef9a94f9",
+        "da2093fe-3a34-4974-a4f4-e883a320d432",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "bd729f1b-ba81-4f92-a311-47944d12faa9",
+        "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+        "7de8cb82-5cc2-4b41-8057-34f8d1cfb7a7"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1911,
+      "analysis_timestamp": "2025-07-26T17:56:02.874080"
+    },
+    "perplexity": {
+      "file_name": "perplexity.md",
+      "title": "perplexity",
+      "local_uuid": "1f7f8374-7088-811a-9db9-e8b65527addb",
+      "notion_uuid_count": 12,
+      "notion_uuids": [
+        "1dcf8374-7088-8004-b1d9-d37a49cec16e",
+        "2b77aeeb-6e10-47c5-bdac-bc255d7d0875",
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "153c3823-8c18-41fe-b38a-a1151a4acd4f",
+        "1f7f8374-7088-811a-9db9-e8b65527addb",
+        "d18835fd-e641-42ad-9738-eb0d4df1108a"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2156,
+      "analysis_timestamp": "2025-07-26T17:56:02.874241"
+    },
+    "hono": {
+      "file_name": "hono.md",
+      "title": "hono",
+      "local_uuid": "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1612,
+      "analysis_timestamp": "2025-07-26T17:56:02.874304"
+    },
+    "llava": {
+      "file_name": "llava.md",
+      "title": "llava",
+      "local_uuid": "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33",
+      "notion_uuid_count": 7,
+      "notion_uuids": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2544,
+      "analysis_timestamp": "2025-07-26T17:56:02.874472"
+    },
+    "llamaindex": {
+      "file_name": "llamaindex.md",
+      "title": "llamaindex",
+      "local_uuid": "9b56afea-6921-477c-aa6d-b2516d2af161",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "326fae87-60bd-428f-941f-311db74577cd",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "9b56afea-6921-477c-aa6d-b2516d2af161",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 2416,
+      "analysis_timestamp": "2025-07-26T17:56:02.874616"
+    },
+    "leonardo-ai": {
+      "file_name": "leonardo-ai.md",
+      "title": "leonardo-ai",
+      "local_uuid": "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1663,
+      "analysis_timestamp": "2025-07-26T17:56:02.874682"
+    },
+    "nitro": {
+      "file_name": "nitro.md",
+      "title": "nitro",
+      "local_uuid": "5930459b-d2ed-47bf-8ac1-6a265b8eaade",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "5930459b-d2ed-47bf-8ac1-6a265b8eaade"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1601,
+      "analysis_timestamp": "2025-07-26T17:56:02.874837"
+    },
+    "mobile": {
+      "file_name": "mobile.md",
+      "title": "mobile",
+      "local_uuid": "a245a512-a231-477b-80a7-759fef8b4602",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "20df8374-7088-8185-bd71-d331654c9935",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "a245a512-a231-477b-80a7-759fef8b4602"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1462,
+      "analysis_timestamp": "2025-07-26T17:56:02.874952"
+    },
+    "human-resources": {
+      "file_name": "human-resources.md",
+      "title": "human-resources",
+      "local_uuid": "1fdf8374-7088-8050-ac4b-c391f88e4787",
+      "notion_uuid_count": 6,
+      "notion_uuids": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1fdf8374-7088-8050-ac4b-c391f88e4787",
+        "1fdf8374-7088-8075-afba-f813dfb70885",
+        "13fc170c-8baa-4b6a-a9aa-f5143b8499b3"
+      ],
+      "has_yaml_frontmatter": true,
+      "content_length": 1367,
+      "analysis_timestamp": "2025-07-26T17:56:02.875264"
+    }
+  },
+  "notion_uuids_found": [
+    "86996c3e-54d8-46a4-a893-965c567e9790",
+    "125d988c-8c17-46b5-8c18-03a3a3118829",
+    "a245a512-a231-477b-80a7-759fef8b4602",
+    "141d71b0-fa46-4c72-8075-b833950c1e2b",
+    "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+    "a7e763ba-4e29-4709-84dd-e5224c278fab",
+    "bcbd6540-8903-42a5-a8b8-6d043704b4b1",
+    "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33",
+    "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+    "9a46bae0-e8a8-4acf-8956-72265e45e124",
+    "205cf58b-b1a5-4464-9fb7-737637ed4e16",
+    "b2796f49-dfc7-41bb-a8c3-3c89d3e8a577",
+    "567472ab-c4ec-4fd1-87ec-97efb5f742c6",
+    "1f4f8374-7088-8039-9e6b-e8e644735853",
+    "239f8374-7088-81bd-905e-d08a7e81e9bd",
+    "1dcf8374-7088-8004-b1d9-d37a49cec16e",
+    "1f4f8374-7088-807d-8a1f-db855edbe3ce",
+    "6c607492-0239-4c3d-bf56-05ce4cca3b21",
+    "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+    "35b3d163-ba90-4b31-b10f-2e0c782705af",
+    "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+    "9b56afea-6921-477c-aa6d-b2516d2af161",
+    "18734b74-8dfd-4493-ba5f-f137911e4314",
+    "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+    "1e5f8374-7088-8097-9b73-f5d6976cac12",
+    "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+    "bd3c6045-4d2c-4c1a-864e-79e61559ad0e",
+    "940b7e47-d36e-4ec2-a738-0ee68268a991",
+    "12575617-ae86-4d96-848b-c2b7d67d727c",
+    "239f8374-7088-8164-a975-db5ab2b28917",
+    "4298c6da-5f7b-4bd3-8246-8b70eb4ee16d",
+    "9bae0eb6-a8ea-480a-853f-75015c044d49",
+    "7770c2fa-4369-4112-ae73-5df8fc673fb6",
+    "bd729f1b-ba81-4f92-a311-47944d12faa9",
+    "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+    "212f8374-7088-8136-82bf-e55fc10b2b51",
+    "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+    "1f6c3c35-36fa-48e4-8b6e-459f3736a93c",
+    "20af8374-7088-818a-aea8-ec2d0f9ca797",
+    "61201a7e-2983-4078-b294-37f02e087ef7",
+    "1c196d36-174e-4803-9249-b926d6e4fcb0",
+    "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+    "0586fe08-6279-47b4-8000-141293558f60",
+    "eeafbbce-8a42-4e96-ab64-8b5c0bb06e18",
+    "2b2202d9-3136-46b0-bee3-ef25910956e0",
+    "d18835fd-e641-42ad-9738-eb0d4df1108a",
+    "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+    "1f4f8374-7088-80e1-8e32-fda716839fda",
+    "439f1858-9f59-4636-a9bf-38674e47cc57",
+    "b31ba618-7aff-4193-81e9-68ad0aad89a9",
+    "94946014-3dc7-46f2-bac6-829fafeeea47",
+    "87d79cb6-f770-40cf-975f-4874696929b1",
+    "7dc1cc51-62d4-488f-bffc-f34958483db3",
+    "3c5a93d2-a340-4eee-908e-9a898f818713",
+    "1c64a047-7139-4e01-b9e8-bd554757fdd9",
+    "1abf6ccd-6eee-4e83-a3da-9b83697b9768",
+    "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+    "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+    "c2736565-182d-4b63-82ef-89ab931f5e7a",
+    "e358faf2-d83f-476a-9e28-52eabc934424",
+    "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+    "2142bbf3-25e7-4271-8f9d-a4954568b4d6",
+    "1f5f8374-7088-813c-8908-fc1f67efd36f",
+    "3985d550-b89c-40b1-bacd-56d384479a0b",
+    "9041663f-9632-45a5-88ab-ea52065b36e3",
+    "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+    "dc85054e-a0fd-499c-9453-76d31083d243",
+    "672699f0-e84b-4ee1-81af-a1305c67c931",
+    "1fdf8374-7088-8187-b625-c9129649a44b",
+    "13fc170c-8baa-4b6a-a9aa-f5143b8499b3",
+    "208f8374-7088-81e2-8858-ea461a908f21",
+    "1f5f8374-7088-8117-800e-c3c3a643be55",
+    "f9052276-7c8a-4a5e-88c4-8aab46950906",
+    "239f8374-7088-8158-86c5-d4db7df1faf4",
+    "2cb2ebbf-246a-4961-b329-a65b6a8ae150",
+    "17d4ae84-f788-47ff-bcdf-6473d17ad97f",
+    "239f8374-7088-81a9-af25-f939d9442ab4",
+    "abf3a819-5f90-42c8-ab44-e12cad9c20a7",
+    "34d3c014-6014-460d-b986-c01e71f29b82",
+    "7d24cdc7-2590-46ad-9d96-4f6a6dcfe3d7",
+    "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f",
+    "20af8374-7088-80c5-9ae0-df585087651a",
+    "1fef8374-7088-8157-8054-fda0d862db16",
+    "5ff07701-35f0-410c-aacc-f71f133cb30c",
+    "c0ef6b7f-a608-4508-afbb-261e529c5898",
+    "5930459b-d2ed-47bf-8ac1-6a265b8eaade",
+    "cb4d10e3-d4c2-4cb0-8229-a439cf6f2632",
+    "05445a61-8abd-44fa-bc1c-bc805d473e87",
+    "239f8374-7088-812f-89aa-f956eeb12366",
+    "f8da9e24-3d7a-44a6-9797-c54cef9a94f9",
+    "da2093fe-3a34-4974-a4f4-e883a320d432",
+    "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+    "1b918823-262e-459d-a3fa-c226c7be9bd1",
+    "bfa23efb-c043-4c06-8fc6-2001b17a7cf0",
+    "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+    "90110293-eabf-4247-9ee5-d0a180b66771",
+    "239f8374-7088-81fb-88a6-e427b1742654",
+    "6ef52839-fa77-4564-aedb-417fda2e227d",
+    "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+    "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+    "7de8cb82-5cc2-4b41-8057-34f8d1cfb7a7",
+    "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+    "bcffe259-68d6-42a0-a43f-918c871d0b27",
+    "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+    "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+    "d4b10473-a55e-4c9b-a49d-735ac71e5ac1",
+    "913489f4-2564-4a33-b15e-b74998323a5d",
+    "6152132a-2e90-4e8d-93f3-35d3d98d8daf",
+    "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+    "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+    "354bb7fe-dec9-470b-ac32-e819fab9f3db",
+    "8d9877b6-a43a-46eb-897f-5cb8bdf7ad89",
+    "20df8374-7088-816b-a61e-ee64f8f04bef",
+    "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+    "42f5f479-286c-4b4b-8a70-efb31b9ba2c1",
+    "d8adb951-6aae-4dff-8f3f-3ed9b372c4fe",
+    "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+    "153c3823-8c18-41fe-b38a-a1151a4acd4f",
+    "3c44148c-b13a-45e4-974f-7af41f728582",
+    "93ed4dcd-15db-4d51-996b-52c6f053dcd9",
+    "1e5f8374-7088-801b-9b45-fd7dd26e4b9d",
+    "7799ed44-c9ac-4f25-97c3-d7efaa580d0c",
+    "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+    "cbeff48d-bed9-4661-b6f1-597e03a2b0ac",
+    "209f8374-7088-81dd-91fc-cffff197c0b4",
+    "c2ad2570-7cb7-40b7-a6f4-f8589072c623",
+    "c25242ec-16b6-4f3c-ba93-ca9c0f598d47",
+    "20ef8374-7088-81a4-b9b8-f5603ef6e355",
+    "9d3279e2-dafa-49f1-896a-1a260e11d872",
+    "99a62216-4b39-4b08-b3ba-49f24bc33c51",
+    "1f7f8374-7088-811a-9db9-e8b65527addb",
+    "208f8374-7088-8062-8d99-ee9021ba084e",
+    "205f8374-7088-81b6-abd4-faaa21b78aec",
+    "531b06b2-1a71-46eb-960e-0f47934c9985",
+    "ab0a6b3c-3800-4413-8eaf-69219ddfbcef",
+    "a3f8d430-f35c-427f-b4ca-5a41c0ff2272",
+    "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+    "ee2a5a61-1f27-4d13-98fd-f4cbb9b0340b",
+    "1bcb3a10-0bab-446f-971f-18fb3f572f76",
+    "239f8374-7088-8178-b337-e867a4af4e83",
+    "6b9b5916-ab35-4d99-a8c9-a4118e7d4bd1",
+    "20af8374-7088-812e-97cc-d599487b603f",
+    "326fae87-60bd-428f-941f-311db74577cd",
+    "931cbd26-3494-4930-98db-4d8782a90fc0",
+    "1fdf8374-7088-8075-afba-f813dfb70885",
+    "5151ce9e-c76a-49d8-98c7-c5c2d81fca11",
+    "20af8374-7088-811c-8c39-e1f8992a3055",
+    "8fe63d48-62ac-4248-9348-e0ad44485b2a",
+    "d618f205-9ea5-4075-b0a2-7b9a91211863",
+    "1d696d12-a89b-4a7f-bb82-d129cddab57e",
+    "703a0915-3dfd-4149-98b8-e2d75e85dba6",
+    "239f8374-7088-819c-92c6-eac956f35eec",
+    "20df8374-7088-8185-bd71-d331654c9935",
+    "764be31b-7c78-4e11-bc03-fd31c8eca465",
+    "defb9158-a27c-4b38-a96a-0edd2f50689e",
+    "2b77aeeb-6e10-47c5-bdac-bc255d7d0875",
+    "208f8374-7088-8182-890d-e79efd139a9c",
+    "c3d689e5-982e-4a94-a0bf-b7d9a3b8e043",
+    "21af8374-7088-8031-a360-c517a82741cf",
+    "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+    "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+    "4616de00-3d23-4d4c-a20f-75105c18ce00",
+    "02aa3c96-2045-4a70-968e-fd1a2e7335a5",
+    "1fdf8374-7088-8050-ac4b-c391f88e4787",
+    "7bf417ac-0141-4db4-b963-2f57c712c487",
+    "c78523b2-29a6-4f6e-a78c-b3bedb927162",
+    "fbd07457-873d-4b36-9505-c5c4ef479d8c",
+    "6d68cee2-624e-436b-a17e-105000f149d1"
+  ]
+}

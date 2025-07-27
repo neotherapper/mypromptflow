@@ -1,0 +1,452 @@
+# Knowledge Item Blueprint Template
+# Specialized template for standardizing knowledge items based on user's Notion Knowledge Vault patterns
+# Supports rich relationships, comprehensive tagging, and priority-based organization
+
+metadata:
+  template_version: "1.0.0"
+  created: "2025-01-24"
+  purpose: "Standardize knowledge item structure based on user's existing Notion Knowledge Vault patterns"
+  blueprint_type: "knowledge_item"
+  target_integration: "knowledge-vault/databases/knowledge_vault/"
+  validation_schema: "knowledge-vault-schema.yaml"
+  source_analysis: "Based on analysis of Notion database 3773b9d6-2c31-42e3-b79d-17b7a5fe1174"
+
+# ============================================================================
+# KNOWLEDGE ITEM TEMPLATE STRUCTURE
+# ============================================================================
+
+knowledge_item_template:
+  
+  # SECTION 1: Core Information
+  core_information:
+    section_header: "## 📝 Core Information"
+    required_fields:
+      name:
+        type: "string"
+        description: "Primary name/title of the knowledge item"
+        example: "{{ITEM_NAME}}"
+        validation: "Must be descriptive and unique within the knowledge vault"
+        notion_mapping: "title"
+      
+      description:
+        type: "rich_text"
+        description: "Comprehensive description of the knowledge item"
+        template: |
+          {{ITEM_DESCRIPTION}} - {{KEY_CHARACTERISTICS}}
+        validation: "Should provide clear understanding of the item's purpose and relevance"
+        notion_mapping: "Description"
+        max_length: 2000
+      
+      url:
+        type: "url"
+        description: "Primary URL reference for the knowledge item"
+        example: "https://example.com"
+        validation: "Must be valid URL format if provided"
+        notion_mapping: "URL"
+        required: false
+  
+  # SECTION 2: Classification & Status
+  classification_status:
+    section_header: "## 🏷️ Classification & Status"
+    
+    status:
+      type: "select"
+      description: "Current status of the knowledge item"
+      options:
+        - id: "active"
+          name: "Active"
+          color: "green"
+          description: "Currently relevant and in use"
+        - id: "archived"
+          name: "Archived"
+          color: "red"
+          description: "No longer active but preserved for reference"
+      default: "active"
+      notion_mapping: "Status"
+    
+    priority:
+      type: "select"
+      description: "Priority level for attention and focus"
+      options:
+        - id: "1st_priority"
+          name: "1st Priority"
+          color: "pink"
+          description: "Highest priority, immediate attention"
+        - id: "2nd_priority"
+          name: "2nd Priority"
+          color: "orange"
+          description: "High priority, near-term focus"
+        - id: "3rd_priority"
+          name: "3rd Priority"
+          color: "yellow"
+          description: "Medium priority, planned attention"
+        - id: "4th_priority"
+          name: "4th Priority"
+          color: "blue"
+          description: "Lower priority, eventual consideration"
+        - id: "5th_priority"
+          name: "5th Priority"
+          color: "gray"
+          description: "Lowest priority, background awareness"
+      default: "3rd_priority"
+      notion_mapping: "Priority"
+    
+    tags:
+      type: "multi_select"
+      description: "Comprehensive tagging for categorization and discovery"
+      categories:
+        technology_tags:
+          - "Language"
+          - "FE Framework"
+          - "BE Framework"
+          - "Database"
+          - "Tool"
+          - "AI Tool"
+          - "Business Tool"
+        
+        concept_tags:
+          - "Concept"
+          - "Web Concepts"
+          - "Technology Concepts"
+          - "Business Concepts"
+          - "Programming Concepts"
+          - "Frontend Concepts"
+          - "Backend Concepts"
+        
+        business_tags:
+          - "Companies"
+          - "Business Areas"
+          - "AI"
+        
+        specialized_tags:
+          - "Design System"
+          - "Mobile"
+          - "Gaming"
+          - "Data"
+      
+      validation: "Should use only predefined tags from vocabulary"
+      notion_mapping: "Tags"
+      max_selections: 10
+  
+  # SECTION 3: Relationship Management
+  relationship_management:
+    section_header: "## 🔗 Relationship Management"
+    
+    # Self-referencing relationships (Knowledge Vault to Knowledge Vault)
+    knowledge_vault_relations:
+      type: "relation"
+      description: "Direct relationships to other knowledge vault items"
+      target_database: "knowledge_vault"
+      relationship_type: "bidirectional"
+      context_required: true
+      notion_mapping: "Knowledge Vault"
+    
+    # Hub-spoke relationships to other databases
+    training_vault_relations:
+      type: "relation"
+      description: "Related training and learning resources"
+      target_database: "training_vault"
+      relationship_type: "bidirectional"
+      notion_mapping: "Training Vault"
+    
+    business_ideas_relations:
+      type: "relation"
+      description: "Related business ideas and opportunities"
+      target_database: "business_ideas"
+      relationship_type: "bidirectional"
+      notion_mapping: "Business Ideas"
+    
+    tools_services_relations:
+      type: "relation"
+      description: "Related tools and services"
+      target_database: "tools_services"
+      relationship_type: "bidirectional"
+      notion_mapping: "Tools - Services"
+    
+    platforms_sites_relations:
+      type: "relation"
+      description: "Related platforms and websites"
+      target_database: "platforms_sites"
+      relationship_type: "bidirectional"
+      notion_mapping: "Platforms / Sites"
+    
+    projects_relations:
+      type: "relation"
+      description: "Related projects and initiatives"
+      target_database: "projects"
+      relationship_type: "bidirectional"
+      notion_mapping: "Projects"
+    
+    habits_routines_relations:
+      type: "relation"
+      description: "Related habits and routines"
+      target_database: "habits_routines"
+      relationship_type: "bidirectional"
+      notion_mapping: "Habits & Routines"
+    
+    notes_ideas_relations:
+      type: "relation"
+      description: "Related notes and ideas"
+      target_database: "notes_ideas"
+      relationship_type: "bidirectional"
+      notion_mapping: "Notes & Ideas"
+    
+    media_vault_relations:
+      type: "relation"
+      description: "Related media and resources"
+      target_database: "media_vault"
+      relationship_type: "bidirectional"
+      notion_mapping: "Media Vault"
+    
+    pillars_relations:
+      type: "relation"
+      description: "Related foundational pillars"
+      target_database: "pillars"
+      relationship_type: "bidirectional"
+      notion_mapping: "Pillars"
+    
+    startups_relations:
+      type: "relation"
+      description: "Related startups and companies"
+      target_database: "startups"
+      relationship_type: "bidirectional"
+      notion_mapping: "Startups"
+
+  # SECTION 4: Metadata & Timestamps
+  metadata_timestamps:
+    section_header: "## 📊 Metadata & Timestamps"
+    
+    date:
+      type: "date"
+      description: "Relevant date for the knowledge item"
+      format: "YYYY-MM-DD"
+      notion_mapping: "Date"
+      required: false
+    
+    created_date:
+      type: "datetime"
+      description: "When the item was created"
+      auto_populate: true
+      format: "ISO 8601"
+    
+    last_modified:
+      type: "datetime"
+      description: "When the item was last modified"
+      auto_update: true
+      format: "ISO 8601"
+    
+    source_database:
+      type: "string"
+      description: "Source database information"
+      default: "knowledge_vault"
+    
+    uuid:
+      type: "string"
+      description: "Unique identifier for the item"
+      auto_generate: true
+      format: "UUID v4"
+
+# ============================================================================
+# VALIDATION RULES AND CONSTRAINTS
+# ============================================================================
+
+validation_rules:
+  
+  content_validation:
+    name_requirements:
+      rule: "Name must be between 1-200 characters and descriptive"
+      validation_regex: "^.{1,200}$"
+    
+    description_quality:
+      rule: "Description should provide clear context and value"
+      min_length: 10
+      max_length: 2000
+    
+    url_format:
+      rule: "URL must be valid HTTP/HTTPS format if provided"
+      validation_regex: "^https?://.*"
+      required: false
+    
+    tag_compliance:
+      rule: "Tags must be from predefined vocabulary"
+      max_tags: 10
+      enforce_vocabulary: true
+  
+  relationship_validation:
+    bidirectional_consistency:
+      rule: "All relationships must maintain bidirectional integrity"
+      auto_create_reverse: true
+      validate_targets: true
+    
+    relationship_limits:
+      knowledge_vault_relations: 50
+      other_database_relations: 20
+      total_relationships: 100
+  
+  status_workflow:
+    allowed_transitions:
+      active_to_archived: true
+      archived_to_active: true
+    
+    priority_constraints:
+      enforce_distribution: false
+      allow_duplicates: true
+
+# ============================================================================
+# TRANSFORMATION PATTERNS
+# ============================================================================
+
+notion_to_file_transformation:
+  
+  property_mapping:
+    title: "name"
+    Description: "description"
+    URL: "url"
+    Status: "status"
+    Priority: "priority"
+    Tags: "tags"
+    Date: "date"
+    "Knowledge Vault": "knowledge_vault_relations"
+    "Training Vault": "training_vault_relations"
+    "Business Ideas": "business_ideas_relations"
+    "Tools - Services": "tools_services_relations"
+    "Platforms / Sites": "platforms_sites_relations"
+    Projects: "projects_relations"
+    "Habits & Routines": "habits_routines_relations"
+    "Notes & Ideas": "notes_ideas_relations"
+    "Media Vault": "media_vault_relations"
+    Pillars: "pillars_relations"
+    Startups: "startups_relations"
+  
+  data_transformations:
+    rich_text_to_markdown:
+      source_format: "notion_rich_text"
+      target_format: "markdown"
+      preserve_formatting: true
+    
+    relation_id_mapping:
+      source_format: "notion_relation_ids"
+      target_format: "uuid_references"
+      maintain_bidirectional: true
+    
+    multi_select_normalization:
+      source_format: "notion_multi_select"
+      target_format: "tag_array"
+      validate_vocabulary: true
+    
+    icon_handling:
+      external_urls: "preserve_as_metadata"
+      emoji_icons: "convert_to_unicode"
+      file_icons: "download_and_reference"
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+
+usage_instructions:
+  
+  item_creation:
+    step_1: "Load knowledge-item-blueprint.yaml template"
+    step_2: "Populate required fields (name, description)"
+    step_3: "Add appropriate tags from vocabulary"
+    step_4: "Set status and priority levels"
+    step_5: "Create relationships to relevant items"
+    step_6: "Validate against schema requirements"
+    step_7: "Save as YAML file in knowledge_vault/items/"
+  
+  migration_workflow:
+    step_1: "Query source Notion database"
+    step_2: "Apply notion_to_file_transformation"
+    step_3: "Validate transformed data"
+    step_4: "Create bidirectional relationships"
+    step_5: "Generate YAML files using template"
+    step_6: "Update database indexes and views"
+  
+  maintenance_procedures:
+    regular_validation: "Run integrity checks weekly"
+    relationship_cleanup: "Remove orphaned relationships monthly"
+    tag_vocabulary_updates: "Review and update tags quarterly"
+    schema_evolution: "Update blueprint as patterns evolve"
+
+# ============================================================================
+# INTEGRATION POINTS
+# ============================================================================
+
+integration_points:
+  
+  knowledge_vault_schemas:
+    primary_schema: "@knowledge-vault/schemas/knowledge-vault-schema.yaml"
+    validation_engine: "@knowledge-vault/core/validation-engine.yaml"
+    tagging_system: "@knowledge-vault/shared/tags-vocabulary.yaml"
+    relationship_manager: "@knowledge-vault/core/cross-reference-manager.yaml"
+  
+  existing_blueprints:
+    reference_blueprint: "@knowledge-vault/operations/blueprints/mcp-server-profile-blueprint.yaml"
+    consistency_patterns: "Maintain alignment with existing blueprint structures"
+  
+  notion_integration:
+    sync_operations: "@knowledge-vault/operations/notion-integration.yaml"
+    mcp_tools: "Use mcp__MCP_DOCKER__API-* tools for Notion integration"
+    bidirectional_sync: "Support both file-to-notion and notion-to-file operations"
+
+# ============================================================================
+# EXAMPLE KNOWLEDGE ITEM
+# ============================================================================
+
+example_knowledge_item:
+  name: "React"
+  description: "A JavaScript library for building user interfaces, developed by Facebook. Focuses on component-based architecture and virtual DOM for efficient updates."
+  url: "https://reactjs.org/"
+  status: "active"
+  priority: "1st_priority"
+  tags: ["Language", "FE Framework", "Programming Concepts"]
+  
+  relationships:
+    knowledge_vault_relations:
+      - id: "vue-js-uuid"
+        context: "Alternative frontend framework"
+      - id: "javascript-uuid"
+        context: "Built on JavaScript language"
+    
+    tools_services_relations:
+      - id: "create-react-app-uuid"
+        context: "Scaffolding tool for React projects"
+    
+    training_vault_relations:
+      - id: "react-course-uuid"
+        context: "Learning resource for React development"
+  
+  metadata:
+    date: "2025-01-24"
+    created_date: "2025-01-24T10:30:00Z"
+    last_modified: "2025-01-24T10:30:00Z"
+    source_database: "knowledge_vault"
+    uuid: "react-frontend-framework-uuid"
+
+# ============================================================================
+# QUALITY ASSURANCE
+# ============================================================================
+
+quality_checklist:
+  
+  template_compliance:
+    - "✅ All required fields present and properly formatted"
+    - "✅ Relationships use correct target databases"
+    - "✅ Tags conform to predefined vocabulary"
+    - "✅ Status and priority use valid options"
+    - "✅ URLs are properly formatted if provided"
+  
+  relationship_integrity:
+    - "✅ Bidirectional relationships properly configured"
+    - "✅ Target items exist in referenced databases"
+    - "✅ Relationship context provides meaningful information"
+    - "✅ No circular dependency issues"
+  
+  content_quality:
+    - "✅ Names are descriptive and unique"
+    - "✅ Descriptions provide sufficient context"
+    - "✅ Tags accurately categorize the item"
+    - "✅ Priority level reflects actual importance"
+    - "✅ All metadata fields properly populated"
+
+This blueprint template captures the comprehensive structure and patterns found in your Knowledge Vault database and provides a robust foundation for creating and migrating knowledge items while maintaining full integration with the existing knowledge-vault system.

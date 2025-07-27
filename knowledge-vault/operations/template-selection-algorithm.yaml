@@ -1,0 +1,336 @@
+# Template Selection Algorithm
+# Automated classification system for Knowledge Vault items
+# Version: 1.0.0 | Created: 2025-01-26
+
+metadata:
+  purpose: "Automated template selection for dual-layer architecture migration"
+  accuracy_target: ">90%"
+  scope: "58 knowledge vault items across 8 databases"
+  validation_method: "Manual review of first 10 items"
+
+# ============================================================================
+# CLASSIFICATION RULES ENGINE
+# ============================================================================
+
+template_classification:
+  
+  technology_item:
+    blueprint: "technology-item-blueprint.yaml"
+    priority_score: 100  # Highest priority template
+    
+    trigger_conditions:
+      tags_contain:
+        - "Database"
+        - "AI Tool" 
+        - "Frontend Framework"
+        - "Backend Framework"
+        - "Development Tool"
+        - "Programming Language"
+        - "API Platform"
+        - "Cloud Service"
+      
+      url_patterns:
+        domains: [".io", ".dev", ".com", ".org"]
+        tech_indicators: ["api", "dev", "cloud", "platform", "framework"]
+      
+      description_keywords:
+        - "framework"
+        - "library"
+        - "platform"
+        - "API"
+        - "SDK"
+        - "engine"
+        - "service"
+        - "database"
+        - "analytics"
+      
+      name_patterns:
+        - Contains programming language names
+        - Contains tech stack components
+        - Ends with version numbers
+        - Contains technical acronyms
+    
+    estimated_matches: 35
+    percentage_of_total: 68%
+
+  business_concept_item:
+    blueprint: "business-concept-item-blueprint.yaml"
+    priority_score: 90
+    
+    trigger_conditions:
+      tags_contain:
+        - "Business Concepts"
+        - "Business Strategy"
+        - "Productivity"
+        - "Management"
+        - "Process"
+        - "Methodology"
+      
+      description_keywords:
+        - "management"
+        - "strategy"
+        - "process"
+        - "methodology"
+        - "framework"
+        - "approach"
+        - "concept"
+        - "system"
+      
+      name_patterns:
+        - Three-letter acronyms (PIM, DAM, CRM)
+        - Contains "Management" or "System"
+        - Business process terms
+        - Strategic framework names
+    
+    estimated_matches: 8
+    percentage_of_total: 16%
+
+  learning_resource_item:
+    blueprint: "learning-resource-item-blueprint.yaml"
+    priority_score: 80
+    
+    trigger_conditions:
+      tags_contain:
+        - "Educational"
+        - "Tutorial"
+        - "Course"
+        - "Learning"
+        - "Training"
+      
+      description_keywords:
+        - "learning"
+        - "course"
+        - "training"
+        - "education"
+        - "tutorial"
+        - "guide"
+        - "certification"
+        - "skill"
+      
+      name_patterns:
+        - Contains "Course", "Training", "Learning"
+        - Educational platform names
+        - Certification program names
+    
+    estimated_matches: 3
+    percentage_of_total: 6%
+
+  integration_item:
+    blueprint: "integration-item-blueprint.yaml"
+    priority_score: 85
+    
+    trigger_conditions:
+      name_contains:
+        - "MCP"
+        - "integration"
+        - "connector"
+        - "bridge"
+        - "sync"
+      
+      description_keywords:
+        - "integration"
+        - "connector"
+        - "protocol"
+        - "interface"
+        - "bridge"
+        - "sync"
+        - "API integration"
+      
+      special_handling:
+        - Maritime intelligence items (already dual-layer)
+        - MCP server profiles
+        - Cross-system connectors
+    
+    estimated_matches: 5
+    percentage_of_total: 10%
+
+  project_item:
+    blueprint: "project-item-blueprint.yaml"
+    priority_score: 70
+    
+    trigger_conditions:
+      tags_contain:
+        - "Project"
+        - "Initiative"
+        - "Development"
+      
+      description_keywords:
+        - "project"
+        - "initiative"
+        - "development"
+        - "implementation"
+        - "delivery"
+      
+      name_patterns:
+        - Project names with versioning
+        - Initiative titles
+        - Development project names
+    
+    estimated_matches: 7
+    percentage_of_total: 14%
+
+# ============================================================================
+# PRIORITY CLASSIFICATION MATRIX
+# ============================================================================
+
+migration_priority:
+  
+  immediate_priority:
+    process_order: 1
+    target_timeframe: "Week 1"
+    
+    criteria:
+      status_values: ["active", "Active", "Active Use"]
+      priority_values: ["1st_priority", "2nd_priority", "Critical", "High"]
+      relationship_count: 3+  # Items with 3+ relationships
+      description_status: "substantial"  # Not null, >50 characters
+    
+    estimated_items: 8
+    examples:
+      - "leonardo-ai.md (AI Tool, Active, 3rd Priority)"
+      - "design-thinking.md (Business Concept, Active)"
+      - "mcp.md (Integration, Active)"
+
+  high_priority:
+    process_order: 2
+    target_timeframe: "Week 2"
+    
+    criteria:
+      status_values: ["active", "Active"]
+      priority_values: ["3rd_priority", "3rd Priority"]
+      description_status: "clear"  # Not null, >20 characters
+      relationship_count: 1+
+    
+    estimated_items: 15
+    examples:
+      - "neon.md (Database, Active, 4th Priority)"
+      - "stripe.md (Payment Platform)"
+
+  standard_priority:
+    process_order: 3
+    target_timeframe: "Week 3"
+    
+    criteria:
+      status_values: ["active", "Active"]
+      priority_values: ["4th_priority", "4th Priority"]
+      description_status: "basic"  # May be null or minimal
+    
+    estimated_items: 19
+    examples:
+      - "crystallize.md (E-commerce Platform)"
+      - "adobe-commerce-magento.md"
+
+  low_priority:
+    process_order: 4
+    target_timeframe: "Week 4"
+    
+    criteria:
+      status_values: ["archived", "Archived", "discontinued"]
+      priority_values: ["5th Priority", "null"]
+      description_status: "any"
+    
+    estimated_items: 16
+    examples:
+      - "discontinued-outdated.md"
+      - All archived status items
+
+# ============================================================================
+# ALGORITHM EXECUTION LOGIC
+# ============================================================================
+
+execution_sequence:
+  
+  step_1_data_extraction:
+    action: "Extract frontmatter from all 58 items"
+    fields_required:
+      - "name"
+      - "description" 
+      - "tags"
+      - "status"
+      - "priority"
+      - "url"
+      - "relationships"
+    
+  step_2_template_scoring:
+    action: "Score each item against template criteria"
+    method: "Weighted scoring based on trigger conditions"
+    threshold: "Score >70 for confident assignment"
+    
+  step_3_priority_assignment:
+    action: "Assign migration priority based on matrix"
+    consideration: "Business impact and content readiness"
+    
+  step_4_validation:
+    action: "Manual review of first 10 assignments"
+    criteria: "Template accuracy >90%"
+    adjustment: "Refine triggers if needed"
+
+# ============================================================================
+# QUALITY ASSURANCE
+# ============================================================================
+
+validation_framework:
+  
+  template_accuracy:
+    measurement: "Manual review of template assignments"
+    target: ">90% correct classification"
+    sample_size: "First 10 items of each type"
+    
+  content_readiness:
+    measurement: "Assess current content vs target template"
+    scoring: "0-100 completeness score"
+    target: "Identify items needing major enhancement"
+    
+  relationship_integrity:
+    measurement: "Validate UUID relationships exist"
+    target: "100% valid relationships"
+    action: "Flag broken references for cleanup"
+
+# ============================================================================
+# AGENT COORDINATION
+# ============================================================================
+
+agent_responsibilities:
+  
+  content_analysis_agent:
+    primary_tasks:
+      - Execute template selection algorithm
+      - Generate priority-ordered migration queue
+      - Identify content enhancement requirements
+      - Validate relationship integrity
+    
+  data_extraction_agent:
+    primary_tasks:
+      - Extract structured data from all 58 items
+      - Prepare content enhancement pipelines
+      - Support parallel processing workflows
+    
+  migration_coordinator_agent:
+    primary_tasks:
+      - Monitor algorithm execution
+      - Coordinate agent workflows
+      - Manage quality assurance
+      - Report progress and issues
+
+# ============================================================================
+# SUCCESS METRICS
+# ============================================================================
+
+success_criteria:
+  
+  phase_completion:
+    template_selection: "100% of 58 items classified"
+    priority_assignment: "Migration queue established"
+    quality_validation: ">90% template accuracy"
+    timeline: "Phase 3 completed within 3 days"
+    
+  readiness_for_phase_4:
+    classification_complete: true
+    priority_queue_established: true
+    content_enhancement_strategy: true
+    quality_framework_validated: true
+
+---
+# Algorithm Status: Ready for Execution
+# Target Completion: 2025-01-26 (Phase 3)
+# Next Phase: Template-Based Enhancement (Phase 4)

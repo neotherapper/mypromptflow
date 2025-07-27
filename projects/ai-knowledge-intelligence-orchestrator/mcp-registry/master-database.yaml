@@ -4,13 +4,19 @@
 
 metadata:
   registry_type: "ai_agent_entry_point"
-  version: "2.0.0"
+  version: "2.1.0"
   created: "2025-07-21"
-  last_updated: "2025-07-21"
+  last_updated: "2025-07-24"
   purpose: "Central navigation hub for MCP server ecosystem"
   ai_agent_instructions: "This is your starting point for all MCP server information"
-  total_servers_documented: 302
-  ecosystem_completion: "30% (302/1,126 servers)"
+  total_servers_documented: 444  # Updated: 436 + 8 Phase 15 additions
+  ecosystem_completion: "40% (444/1,126 servers)"
+  docker_integration_date: "2025-07-22"
+  docker_servers_added: 127
+  phase_14_completion_date: "2025-07-24"
+  phase_14_focus: "Database management, business automation, monitoring/analytics"
+  phase_15_completion_date: "2025-07-24"
+  phase_15_focus: "Enterprise security, cloud platforms, business intelligence"
   
 # =============================================================================
 # AI AGENT NAVIGATION PATHS - USE THESE TO ACCESS DETAILED INFORMATION
@@ -66,14 +72,17 @@ navigation:
 # =============================================================================
 
 quick_stats:
-  total_servers: 302
-  tier_1_immediate: 45    # Production-ready, high ROI
-  tier_2_strategic: 120   # Strategic value, medium-term implementation  
-  tier_3_specialized: 137 # Niche/experimental, specific use cases
+  total_servers: 444      # Updated with Phase 15 additions (436 + 8 new Tier 1 profiles)
+  tier_1_immediate: 94    # Production-ready, high ROI (increased from 86 with Phase 15)
+  tier_2_strategic: 175   # Strategic value, medium-term implementation (estimated)
+  tier_3_specialized: 175 # Niche/experimental, specific use cases (estimated)
   official_anthropic: 7   # Official Anthropic maintained
-  community_servers: 295  # Community developed
-  enterprise_ready: 85    # Enterprise-grade features
-  information_retrieval_focused: 130  # High relevance for information access
+  community_servers: 437  # Community developed (updated with Phase 15)
+  enterprise_ready: 225   # Enterprise-grade features (increased with Phase 15 security/cloud focus)
+  development_focused: 317 # High relevance for development workflows (increased)
+  docker_discoveries: 127  # Servers from Docker/MCP-servers analysis
+  phase_14_additions: 7   # Strategic Expansion Phase 14 new/upgraded profiles
+  phase_15_additions: 8   # Strategic Expansion Phase 15 new Tier 1 profiles
 
 # =============================================================================  
 # AI AGENT WORKFLOW SHORTCUTS

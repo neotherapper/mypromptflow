@@ -3,8 +3,8 @@
 # Detailed session data is archived in research/sessions/
 
 research_registry:
-  version: "2.0.0"
-  last_updated: "2025-07-21"
+  version: "2.2.0"
+  last_updated: "2025-07-24"
   archive_location: "research/sessions/"
   
 research_sessions:
@@ -388,6 +388,85 @@ research_sessions:
         key_outcomes: "1,066+ servers cataloged with 25+ categories; 10-20x more comprehensive than other repositories; 13 high-priority new servers identified for information retrieval; Major categories include communication, monitoring, and specialized AI services"
         applications: "MCP ecosystem strategic planning, server selection prioritization, community resource utilization, information retrieval system enhancement"
 
+  remaining_mcp_repositories_analysis_research:
+    session_id: "remaining_mcp_repositories_research_20250722_140000"
+    archive_file: "research/sessions/remaining-mcp-repositories-analysis-20250722.yaml"
+    date: "2025-07-22"
+    researcher: "claude-sonnet-4"
+    project: "MCP Servers Registry Enhancement - Ecosystem Discovery Completion"
+    
+    research_topics:
+      - topic_id: "remaining-mcp-repositories-analysis"
+        title: "Remaining MCP Repositories Comprehensive Ecosystem Discovery: punkpeye and habitoai Analysis"
+        status: "completed"
+        quality_score: 96
+        location: "research/findings/remaining-mcp-repositories-analysis/"
+        key_outcomes: "Completed comprehensive MCP ecosystem discovery covering 2,200+ servers across 5 major repositories; Identified 20+ new high-priority servers with direct maritime insurance applications; MCPX Gateway and mcgravity Proxy emerge as critical enterprise infrastructure; Meta-orchestration pattern identified as key ecosystem trend"
+        applications: "Complete MCP ecosystem adoption strategy, enterprise infrastructure modernization, maritime insurance platform development, strategic technology partnerships and vendor relationships"
+
+  docker_mcp_servers_analysis_research:
+    session_id: "docker_mcp_servers_research_20250722_140000"
+    archive_file: "research/sessions/docker-mcp-servers-analysis-20250722.yaml"
+    date: "2025-07-22"
+    researcher: "claude-sonnet-4"
+    project: "MCP Servers Registry Enhancement"
+    
+    research_topics:
+      - topic_id: "docker-mcp-servers-analysis"
+        title: "Docker/MCP-Servers Repository Comprehensive Analysis and Registry Enhancement"
+        status: "completed"
+        quality_score: 94
+        location: "research/findings/docker-mcp-servers-analysis/"
+        key_outcomes: "Discovered 127 new high-priority MCP servers with 89 Tier 1-2 candidates offering significant business value for maritime insurance and development operations"
+        applications: "MCP servers registry enhancement, maritime insurance platform development, enterprise infrastructure modernization, AI-powered development workflow automation"
+
+  mcp_servers_ecosystem_consolidation_research:
+    session_id: "mcp_servers_consolidation_20250723"
+    archive_file: "research/sessions/mcp-servers-consolidation-20250723.yaml"
+    date: "2025-07-23"
+    researcher: "Claude Sonnet 4"
+    project: "Research Framework Enhancement - MCP Ecosystem Intelligence"
+    
+    research_topics:
+      - topic_id: "mcp-servers-2025"
+        title: "Comprehensive MCP Server Ecosystem Analysis and Consolidation"
+        status: "completed"
+        quality_score: 95
+        location: "research/findings/mcp-servers-2025/"
+        key_outcomes: "Consolidated comprehensive analysis of 2,200+ MCP servers across 5 major repositories with enterprise integration patterns and business value assessment"
+        applications: "Strategic MCP server selection, enterprise deployment planning, business process automation, maritime insurance platform development"
+        
+        consolidation_details:
+          research_sessions_consolidated: 12
+          total_servers_analyzed: 2200
+          enterprise_servers_identified: 200
+          roi_analysis_completed: "250-800% ROI ranges documented"
+          integration_patterns_defined: 6
+          implementation_phases_established: 3
+          
+        cross_references:
+          operational_registry: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+          business_scoring_algorithm: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+          detailed_profiles: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/"
+          implementation_guides: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/implementation/"
+          
+        related_research:
+          - research_id: "official-mcp-servers-analysis"
+            relationship: "integrated_subset"
+            similarity_score: 0.85
+          - research_id: "docker-mcp-servers-analysis"
+            relationship: "integrated_subset"
+            similarity_score: 0.80
+          - research_id: "appcypher-awesome-mcp-servers-analysis"
+            relationship: "integrated_subset"
+            similarity_score: 0.75
+          - research_id: "remaining-mcp-repositories-analysis"
+            relationship: "integrated_subset"
+            similarity_score: 0.70
+          - research_id: "mcp-registry-analysis"
+            relationship: "integrated_technical_foundation"
+            similarity_score: 0.65
+
 # Research Dependencies - preserved from original
 research_dependencies:
   ai_validation_frameworks:
@@ -425,8 +504,8 @@ research_effectiveness:
 
 # Research Archive and Consolidation
 research_archive:
-  version: "1.0.0"
-  last_updated: "2025-07-20"
+  version: "2.0.0"
+  last_updated: "2025-07-24"
   archive_location: "research/findings/archive/"
   
   consolidations:
@@ -459,3 +538,56 @@ research_archive:
         enabled: true
         forwarding_files: ["MOVED.md", "README.md"]
         cross_reference_updates: true
+    
+    domain_consolidation_2025_07_24:
+      consolidation_date: "2025-07-24"
+      consolidation_type: "domain_consolidation"
+      consolidator: "Claude Sonnet 4"
+      purpose: "Streamline research findings by consolidating related domains into comprehensive archives"
+      
+      consolidated_archives:
+        mcp_servers_ecosystem:
+          target_archive: "research/findings/mcp-servers-2025/"
+          consolidated_folders:
+            - "ai-testing-monitoring-mcp-integration"
+            - "appcypher-awesome-mcp-servers-analysis"
+            - "docker-mcp-servers-analysis"
+            - "figma-mcp-integration"
+            - "mcp-capability-assessment-matrix"
+            - "mcp-comprehensive-landscape-analysis"
+            - "mcp-ecosystem-comprehensive-analysis"
+            - "mcp-registry-analysis"
+            - "mcp-servers-comprehensive-catalog"
+            - "official-mcp-servers-analysis"
+            - "remaining-mcp-repositories-analysis"
+            - "tensorblock-mcp-servers-analysis"
+          folders_removed: 12
+          reason: "Unified MCP ecosystem analysis with comprehensive 2,200+ server coverage"
+        
+        authentication_solutions:
+          target_archive: "research/findings/keycloak-workos-comprehensive-analysis/"
+          consolidated_folders:
+            - "keycloak-workos-business-case-analysis"
+            - "keycloak-workos-security-analysis"
+            - "keycloak-workos-technical-implementation"
+          folders_removed: 3
+          reason: "Comprehensive authentication platform comparison with 392% WorkOS ROI analysis"
+        
+        notion_productivity:
+          target_archive: "research/findings/notion-comprehensive-analysis/"
+          consolidated_folders:
+            - "notion-architecture-analysis"
+            - "notion-claude-productivity-integration"
+            - "notion-knowledge-vault-structure-analysis"
+            - "notion-vs-confluence-comparison"
+          folders_removed: 4
+          reason: "Unified Notion productivity analysis with 5x improvement metrics"
+      
+      consolidation_benefits:
+        - streamlined_navigation: "Reduced research folder count by 19 folders"
+        - unified_knowledge_base: "Consolidated domain expertise into comprehensive archives"
+        - improved_discoverability: "Domain-based organization for faster research access"
+        - preserved_history: "All original research preserved in consolidated archives"
+        - maintained_cross_references: "Registry updated to reflect new structure"
+      
+      preservation_note: "All important standalone research preserved (ui-ux documentation, vector database analysis, cloud development, etc.)"

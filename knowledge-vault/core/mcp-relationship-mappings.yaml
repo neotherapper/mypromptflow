@@ -1,0 +1,406 @@
+# MCP Server to Knowledge-Vault Relationship Mappings
+# Intelligent tagging system connecting MCP servers to knowledge-vault items
+
+metadata:
+  version: "1.0.0"
+  created: "2025-01-24"
+  purpose: "Intelligent tagging system linking MCP servers to knowledge-vault database items"
+  description: "Defines relationship patterns, automatic tagging rules, and cross-reference generation for MCP server profiles"
+  integration_points:
+    - "knowledge-vault/schemas/tools-services-schema.md"
+    - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+    - "knowledge-vault/databases/tools_services/"
+
+# MCP Server Type Classifications (Enhanced from user examples)
+mcp_server_type_classifications:
+  
+  # Technology-Based Classifications
+  container_orchestration:
+    primary_tags: ["docker", "developer-tools", "deployment"]
+    company_tags: ["docker"]
+    description: "Container and orchestration platforms"
+    examples: ["Docker MCP", "Kubernetes MCP", "Podman MCP"]
+    knowledge_vault_mappings:
+      - category: "development-tools"
+        relationship_type: "implements"
+      - category: "deployment-automation"
+        relationship_type: "enables"
+  
+  version_control:
+    primary_tags: ["developer-tools", "collaboration", "software-development"]
+    company_tags: ["github", "atlassian"]
+    description: "Version control and code collaboration platforms"
+    examples: ["GitHub MCP", "GitLab MCP", "Bitbucket MCP"]
+    knowledge_vault_mappings:
+      - category: "source-control"
+        relationship_type: "implements"
+      - category: "development-workflow"
+        relationship_type: "enables"
+  
+  communication_platforms:
+    primary_tags: ["communication", "collaboration", "productivity"]
+    company_tags: ["microsoft", "slack"]
+    description: "Team communication and collaboration tools"
+    examples: ["Microsoft Teams MCP", "Slack MCP", "Discord MCP"]
+    knowledge_vault_mappings:
+      - category: "team-communication"
+        relationship_type: "implements"
+      - category: "business-collaboration"
+        relationship_type: "enables"
+  
+  database_systems:
+    primary_tags: ["database", "api-service", "developer-tools"]
+    company_tags: ["microsoft", "google", "amazon"]
+    description: "Database management and data storage platforms"
+    examples: ["PostgreSQL MCP", "MongoDB MCP", "Redis MCP"]
+    knowledge_vault_mappings:
+      - category: "data-storage"
+        relationship_type: "implements"
+      - category: "backend-infrastructure"
+        relationship_type: "supports"
+  
+  ai_platforms:
+    primary_tags: ["ai", "api-service", "developer-tools"]
+    company_tags: ["openai", "anthropic", "google"]
+    description: "AI and machine learning service platforms"
+    examples: ["OpenAI MCP", "Anthropic Claude MCP", "Hugging Face MCP"]
+    knowledge_vault_mappings:
+      - category: "artificial-intelligence"
+        relationship_type: "implements"
+      - category: "ai-integration"
+        relationship_type: "enables"
+  
+  monitoring_observability:
+    primary_tags: ["monitoring", "analytics", "developer-tools"]
+    company_tags: ["datadog", "newrelic", "sentry"]
+    description: "Application monitoring and observability platforms"
+    examples: ["Datadog MCP", "Sentry MCP", "New Relic MCP"]
+    knowledge_vault_mappings:
+      - category: "application-monitoring"
+        relationship_type: "implements"
+      - category: "system-observability"
+        relationship_type: "enables"
+
+# Industry Vertical Mappings (Enhanced from user examples)
+industry_vertical_mappings:
+  
+  fintech:
+    mcp_server_patterns: ["stripe", "plaid", "quickbooks", "financial-data"]
+    tags: ["fintech", "saas", "api-service"]
+    knowledge_vault_categories: ["payment-processing", "financial-services", "accounting"]
+    company_associations: ["stripe", "intuit", "plaid"]
+    
+  legaltech:
+    mcp_server_patterns: ["westlaw", "lexisnexis", "legal-research", "compliance"]
+    tags: ["legaltech", "enterprise", "information-retrieval"]
+    knowledge_vault_categories: ["legal-research", "compliance-management", "document-analysis"]
+    company_associations: ["thomson-reuters", "lexisnexis"]
+    
+  healthtech:
+    mcp_server_patterns: ["fhir", "epic", "cerner", "health-records", "medical"]
+    tags: ["healthtech", "enterprise", "security"]
+    knowledge_vault_categories: ["healthcare-systems", "medical-records", "health-apis"]
+    company_associations: ["epic", "cerner", "allscripts"]
+    
+  edtech:
+    mcp_server_patterns: ["canvas", "blackboard", "moodle", "education", "learning"]
+    tags: ["edtech", "saas", "collaboration"]
+    knowledge_vault_categories: ["education-platforms", "learning-management", "academic-tools"]
+    company_associations: ["instructure", "blackboard", "pearson"]
+    
+  insurtech:
+    mcp_server_patterns: ["insurance", "claims", "risk", "underwriting", "maritime-insurance"]
+    tags: ["insurtech", "maritime-insurance", "enterprise"]
+    knowledge_vault_categories: ["insurance-platforms", "claims-processing", "risk-assessment"]
+    company_associations: ["guidewire", "duck-creek", "applied-systems"]
+
+# Automatic Tagging Rules
+automatic_tagging_rules:
+  
+  # Name-based pattern matching
+  name_pattern_rules:
+    - pattern: "(?i)docker"
+      tags: ["docker", "developer-tools", "deployment"]
+      company_tags: ["docker"]
+      
+    - pattern: "(?i)github"
+      tags: ["developer-tools", "collaboration", "software-development"]
+      company_tags: ["github"]
+      
+    - pattern: "(?i)microsoft|teams|outlook|azure"
+      tags: ["communication", "collaboration", "enterprise"]
+      company_tags: ["microsoft"]
+      
+    - pattern: "(?i)slack"
+      tags: ["communication", "collaboration", "productivity"]
+      company_tags: ["slack"]
+      
+    - pattern: "(?i)notion"
+      tags: ["documentation", "productivity", "collaboration"]
+      company_tags: ["notion"]
+      
+    - pattern: "(?i)stripe"
+      tags: ["fintech", "api-service", "saas"]
+      company_tags: ["stripe"]
+      
+    - pattern: "(?i)postgresql|postgres"
+      tags: ["database", "developer-tools", "api-service"]
+      
+    - pattern: "(?i)mongodb|mongo"
+      tags: ["database", "developer-tools", "no-code"]
+      
+    - pattern: "(?i)redis"
+      tags: ["database", "developer-tools", "api-service"]
+      
+    - pattern: "(?i)openai|gpt"
+      tags: ["ai", "api-service", "developer-tools"]
+      company_tags: ["openai"]
+      
+    - pattern: "(?i)anthropic|claude"
+      tags: ["ai", "api-service", "developer-tools"] 
+      company_tags: ["anthropic"]
+  
+  # Description-based pattern matching
+  description_pattern_rules:
+    - pattern: "(?i)container|containerization|orchestration"
+      tags: ["deployment", "developer-tools", "cloud-hosting"]
+      
+    - pattern: "(?i)monitoring|observability|logging"
+      tags: ["monitoring", "analytics", "developer-tools"]
+      
+    - pattern: "(?i)authentication|auth|identity|sso"
+      tags: ["security", "enterprise", "api-service"]
+      
+    - pattern: "(?i)payment|billing|financial|accounting"
+      tags: ["fintech", "api-service", "saas"]
+      
+    - pattern: "(?i)legal|compliance|regulatory"
+      tags: ["legaltech", "enterprise", "security"]
+      
+    - pattern: "(?i)health|medical|healthcare|fhir"
+      tags: ["healthtech", "enterprise", "security"]
+      
+    - pattern: "(?i)education|learning|academic|student"
+      tags: ["edtech", "saas", "collaboration"]
+      
+    - pattern: "(?i)insurance|claims|underwriting|risk"
+      tags: ["insurtech", "enterprise", "maritime-insurance"]
+
+# Cross-Reference Generation Rules
+cross_reference_generation:
+  
+  # Knowledge-vault item relationship patterns
+  relationship_patterns:
+    implements_technology:
+      pattern: "MCP server that implements or provides access to {technology}"
+      cross_reference_format: "@knowledge_vault/{technology_uuid}"
+      bidirectional: true
+      
+    enables_workflow:
+      pattern: "MCP server that enables or supports {workflow} processes"
+      cross_reference_format: "@knowledge_vault/{workflow_uuid}"
+      bidirectional: true
+      
+    integrates_with_platform:
+      pattern: "MCP server for {platform} integration and automation"
+      cross_reference_format: "@knowledge_vault/{platform_uuid}"
+      bidirectional: true
+  
+  # Automatic cross-reference suggestions
+  suggestion_logic:
+    technology_match:
+      - input: "Docker MCP Server"
+        suggests: "@knowledge_vault/container-technology"
+        confidence: 0.95
+        
+    - input: "GitHub MCP Server"
+        suggests: "@knowledge_vault/version-control-systems"
+        confidence: 0.95
+        
+    - input: "Microsoft Teams MCP Server"
+        suggests: ["@knowledge_vault/team-communication", "@knowledge_vault/microsoft-ecosystem"]
+        confidence: 0.90
+        
+    - input: "Stripe MCP Server"
+        suggests: ["@knowledge_vault/payment-processing", "@knowledge_vault/fintech-platforms"]
+        confidence: 0.95
+
+# Bidirectional Relationship Management
+bidirectional_relationships:
+  
+  # MCP Profile → Knowledge-Vault Item
+  mcp_to_knowledge:
+    relationship_field: "mcp_server_profiles"
+    format: "@mcp_profile/{server-name}"
+    validation: "Ensure MCP profile exists in registry"
+    
+  # Knowledge-Vault Item → MCP Profile
+  knowledge_to_mcp:
+    relationship_field: "related_mcp_servers"
+    format: "@mcp_profile/{server-name}"
+    validation: "Ensure knowledge item exists in database"
+    
+  # Synchronization rules
+  sync_requirements:
+    - "When MCP profile references knowledge item, add reverse reference"
+    - "When knowledge item references MCP profile, add reverse reference"
+    - "Maintain consistency across both relationship directions"
+    - "Validate all cross-references during synchronization"
+
+# Knowledge-Vault Integration Patterns
+knowledge_vault_integration:
+  
+  # Category mappings for common MCP server types
+  category_mappings:
+    development_tools:
+      knowledge_categories: ["software-development", "developer-tools", "build-systems"]
+      common_mcps: ["github", "docker", "kubernetes", "jenkins"]
+      
+    data_platforms:
+      knowledge_categories: ["database-systems", "data-storage", "analytics"]
+      common_mcps: ["postgresql", "mongodb", "redis", "elasticsearch"]
+      
+    communication_tools:
+      knowledge_categories: ["team-communication", "collaboration-platforms"]
+      common_mcps: ["slack", "microsoft-teams", "discord"]
+      
+    ai_ml_platforms:
+      knowledge_categories: ["artificial-intelligence", "machine-learning", "ai-apis"]
+      common_mcps: ["openai", "anthropic", "huggingface", "replicate"]
+      
+    business_applications:
+      knowledge_categories: ["enterprise-software", "business-automation"]
+      common_mcps: ["salesforce", "hubspot", "quickbooks", "stripe"]
+  
+  # Tagging inheritance rules
+  tag_inheritance:
+    from_category: "Inherit primary category tags from linked knowledge items"
+    from_company: "Apply company tags based on vendor/provider"
+    from_industry: "Add industry vertical tags based on use case patterns"
+    from_technology: "Include technology stack tags from implementation details"
+
+# Quality Validation Rules
+quality_validation:
+  
+  # Relationship quality checks
+  relationship_validation:
+    - rule: "Every MCP server should link to at least one knowledge-vault category"
+      severity: "warning"
+      
+    - rule: "High-tier MCP servers (Tier 1-2) should have multiple knowledge relationships"
+      severity: "info"
+      
+    - rule: "Company tags should match vendor/provider information"
+      severity: "error"
+      
+    - rule: "Industry tags should align with business domain usage"
+      severity: "warning"
+  
+  # Cross-reference validation
+  cross_reference_validation:
+    - rule: "All @knowledge_vault/{uuid} references must resolve to valid items"
+      severity: "error"
+      
+    - rule: "All @mcp_profile/{server-name} references must resolve to valid profiles"
+      severity: "error"
+      
+    - rule: "Bidirectional relationships must be consistent"
+      severity: "error"
+
+# Implementation Guidelines
+implementation_guidelines:
+  
+  # Phase 1: Schema Enhancement (Completed)
+  phase_1:
+    - "✓ Updated tools-services-schema.md with new tags"
+    - "✓ Added company/vendor tags"
+    - "✓ Enhanced industry vertical tags"
+    - "✓ Added MCP server profile cross-reference field"
+  
+  # Phase 2: Relationship Mapping Creation
+  phase_2:
+    - "Create relationship mapping database entries"
+    - "Implement automatic tagging logic"
+    - "Set up cross-reference generation"
+    - "Test bidirectional relationship sync"
+  
+  # Phase 3: Integration Testing
+  phase_3:
+    - "Validate tag inheritance from knowledge items"
+    - "Test cross-reference resolution"
+    - "Verify bidirectional relationship consistency"
+    - "Implement quality validation checks"
+  
+  # Phase 4: Production Rollout
+  phase_4:
+    - "Apply intelligent tagging to existing MCP profiles"
+    - "Generate cross-references for all servers"
+    - "Enable automatic relationship suggestions"
+    - "Monitor relationship quality and accuracy"
+
+# Usage Examples
+usage_examples:
+  
+  # Example 1: Docker MCP Server
+  docker_mcp_example:
+    server_name: "Docker MCP Server"
+    automatic_tags: ["docker", "developer-tools", "deployment", "container-technology"]
+    company_tags: ["docker"]
+    knowledge_vault_links:
+      - "@knowledge_vault/container-technology" 
+      - "@knowledge_vault/deployment-automation"
+      - "@knowledge_vault/developer-tools"
+    relationship_type: "implements"
+    
+  # Example 2: Microsoft Teams MCP Server  
+  teams_mcp_example:
+    server_name: "Microsoft Teams MCP Server"
+    automatic_tags: ["microsoft", "communication", "collaboration", "enterprise"]
+    company_tags: ["microsoft"]
+    knowledge_vault_links:
+      - "@knowledge_vault/team-communication"
+      - "@knowledge_vault/microsoft-ecosystem"
+      - "@knowledge_vault/business-collaboration"
+    relationship_type: "implements"
+    
+  # Example 3: Stripe MCP Server
+  stripe_mcp_example:
+    server_name: "Stripe MCP Server"
+    automatic_tags: ["stripe", "fintech", "api-service", "saas", "payment-processing"]
+    company_tags: ["stripe"]
+    industry_tags: ["fintech"]
+    knowledge_vault_links:
+      - "@knowledge_vault/payment-processing"
+      - "@knowledge_vault/fintech-platforms"
+      - "@knowledge_vault/financial-apis"
+    relationship_type: "implements"
+
+# System Integration Points
+system_integration:
+  
+  # Hub-spoke architecture compatibility
+  hub_spoke_integration:
+    hub_connection: "knowledge_vault (central hub)"
+    spoke_connections: ["tools_services", "business_ideas", "notes_ideas"]
+    mcp_integration_layer: "Cross-references through tools_services database"
+    
+  # Notion synchronization compatibility
+  notion_sync_compatibility:
+    field_mapping: "Map tags to Notion multi-select properties"
+    cross_reference_sync: "Sync @references as Notion relation properties"
+    bidirectional_sync: "Maintain consistency between Notion and local databases"
+    
+  # Existing validation compatibility
+  existing_validation_integration:
+    cross_reference_validation: "Compatible with existing @file_path validation"
+    hub_connection_validation: "Maintains required knowledge_vault hub connections"
+    relationship_consistency: "Preserves bidirectional relationship requirements"
+
+---
+# Implementation Notes:
+# 1. This mapping system extends the existing knowledge-vault tagging without breaking changes
+# 2. Cross-references use established @reference patterns for consistency
+# 3. Automatic tagging reduces manual effort while maintaining accuracy
+# 4. Bidirectional relationships ensure data consistency across the system
+# 5. Industry vertical mappings enable business-focused organization
+# 6. Quality validation ensures relationship accuracy and completeness

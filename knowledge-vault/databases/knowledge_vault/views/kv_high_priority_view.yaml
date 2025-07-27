@@ -1,0 +1,73 @@
+# Knowledge Vault High Priority View
+# Predefined view for high-priority active knowledge items
+
+view_info:
+  name: "High Priority Items"
+  database: "knowledge_vault" 
+  type: "filtered_view"
+  created: "2024-07-21"
+  last_updated: "2024-07-21"
+
+view_specification:
+  filter_conditions:
+    priority:
+      operator: "greater_than_or_equal"
+      value: 4
+      
+    status:
+      operator: "in"
+      values: ["to_explore", "in_review", "active_use"]
+      
+    archived:
+      operator: "not_equal"
+      value: true
+  
+  sort_order:
+    - field: "priority"
+      direction: "descending"
+      
+    - field: "created_date"
+      direction: "descending"
+      
+    - field: "knowledge_type"
+      direction: "ascending"
+
+view_configuration:
+  result_limit: null
+  include_related_items: true
+  expand_relationships: false
+  cache_results: true
+  cache_ttl: 1800  # 30 minutes
+
+display_options:
+  default_columns:
+    - "name"
+    - "priority" 
+    - "status"
+    - "knowledge_type"
+    - "tags"
+    - "created_date"
+    - "related_training_count"
+    - "related_business_ideas_count"
+  
+  additional_columns:
+    - "description"
+    - "source_url"
+    - "complexity_level"
+    - "implementation_difficulty"
+
+usage_context:
+  primary_use_cases:
+    - "Daily review of critical knowledge items"
+    - "Priority-based knowledge management"
+    - "Strategic knowledge asset identification"
+  
+  target_users:
+    - "Knowledge managers"
+    - "Strategic planners"
+    - "Decision makers"
+
+performance:
+  expected_result_size: "10-50 items"
+  query_performance: "fast"
+  index_utilization: "kv_priority_status_index"

@@ -1,0 +1,299 @@
+# Maritime Intelligence Database Metadata
+# Configuration and operational metadata for the maritime intelligence database
+
+database_metadata:
+  name: "Maritime Intelligence Database"
+  type: "specialized_industry_database"
+  version: "1.0.0"
+  created: "2025-01-24T12:00:00Z"
+  last_updated: "2025-01-24T12:00:00Z"
+  
+  # Database Identity
+  database_id: "maritime-intelligence-db"
+  notion_database_id: "placeholder-notion-id"  # To be configured when Notion sync is enabled
+  
+  # Purpose and Scope
+  purpose: "Maritime industry-specific intelligence and applications for MCP servers and tools"
+  scope: "Maritime insurance, compliance, risk assessment, and operational applications"
+  target_users: ["maritime-insurance-professionals", "underwriters", "claims-adjusters", "compliance-officers"]
+
+# Database Statistics
+statistics:
+  current_record_count: 3
+  total_domains_covered: 5
+  stakeholder_types: 6
+  regulatory_frameworks: 6
+  risk_categories: 7
+  
+  # Content Distribution
+  content_distribution:
+    by_domain:
+      claims_processing: 3
+      regulatory_compliance: 3
+      risk_assessment: 1
+      analytics: 1
+      documentation: 2
+    
+    by_business_impact:
+      critical: 3
+      high: 0
+      medium: 0
+      low: 0
+      unknown: 0
+    
+    by_priority:
+      immediate: 3
+      short_term: 0
+      medium_term: 0
+      long_term: 0
+      future: 0
+    
+    by_status:
+      active_use: 3
+      evaluating: 0
+      discovered: 0
+      archived: 0
+
+# Schema Information
+schema_info:
+  schema_version: "1.0.0"
+  schema_file: "schemas/maritime-intelligence-schema.yaml"
+  
+  # Required Properties
+  required_properties:
+    - "id"
+    - "title"
+    - "status"
+    - "generic_tool_reference"
+  
+  # Optional Properties
+  optional_properties:
+    - "maritime_domain"
+    - "business_impact"
+    - "priority"
+    - "stakeholders"
+    - "regulatory_frameworks"
+    - "risk_categories"
+    - "use_cases"
+    - "implementation_examples"
+    - "regulatory_considerations"
+    - "implementation_notes"
+    - "success_metrics"
+
+# Relationship Configuration
+relationship_configuration:
+  
+  # Hub-Spoke Integration
+  hub_spoke_integration:
+    hub_database: "knowledge_vault"
+    relationship_property: "maritime_intelligence_relations"
+    hub_dual_property: "maritime_intelligence_relations"
+    connection_strength: "strong"
+    
+  # Cross-Database Relationships
+  cross_database_relationships:
+    tools_services:
+      relationship_type: "industry_application"
+      property_name: "tools_services_relations"
+      dual_property: "maritime_intelligence_relations"
+      cardinality: "many_to_many"
+      required: true
+      
+    business_ideas:
+      relationship_type: "business_context"
+      property_name: "business_ideas_relations"
+      dual_property: "maritime_intelligence_relations"
+      cardinality: "many_to_many"
+      required: false
+      
+    knowledge_vault:
+      relationship_type: "knowledge_context"
+      property_name: "knowledge_vault_relations"
+      dual_property: "maritime_intelligence_relations"
+      cardinality: "many_to_many"
+      required: false
+  
+  # Relationship Integrity Rules
+  integrity_rules:
+    bidirectional_required: true
+    consistency_validation: true
+    cross_reference_format: "@tools_services/{uuid}"
+    uuid_validation: true
+
+# Data Quality Framework
+data_quality:
+  
+  # Quality Metrics
+  quality_metrics:
+    completeness: 100%  # All required fields populated
+    accuracy: 100%      # All cross-references valid
+    consistency: 100%   # No conflicting information
+    timeliness: 100%    # All records up to date
+    uniqueness: 100%    # No duplicate records
+    
+  # Quality Rules
+  quality_rules:
+    - "All maritime intelligence records must reference a generic tool"
+    - "Cross-references must use proper @database/{uuid} format"
+    - "Maritime content must not appear in generic profiles"
+    - "Business impact and priority must be justified"
+    - "Regulatory frameworks must be relevant to maritime domain"
+    
+  # Validation Schedule
+  validation_schedule:
+    integrity_checks: "daily"
+    content_quality: "weekly"
+    cross_reference_validation: "real_time"
+    relationship_consistency: "daily"
+
+# Performance Configuration
+performance_configuration:
+  
+  # Index Strategy
+  index_strategy:
+    primary_indexes:
+      - "maritime_domain (GIN index for array searches)"
+      - "stakeholders (GIN index for array searches)"
+      - "regulatory_frameworks (GIN index for array searches)"
+      - "business_impact, priority (composite index)"
+      - "generic_tool_reference (btree index for joins)"
+    
+    query_optimization:
+      - "Domain-based filtering queries"
+      - "Stakeholder-specific searches"
+      - "Cross-reference lookups"
+      - "Priority-based ordering"
+  
+  # Cache Configuration
+  cache_configuration:
+    domain_index_cache: "30 minutes"
+    cross_reference_cache: "15 minutes"
+    statistics_cache: "60 minutes"
+    query_result_cache: "10 minutes"
+
+# Integration Points
+integration_points:
+  
+  # Knowledge Vault Hub
+  knowledge_vault_hub:
+    integration_type: "spoke_database"
+    coordination_level: "full"
+    benefits:
+      - "Centralized relationship management"
+      - "Cross-database analytics"
+      - "Unified search capabilities"
+      - "Consistency validation"
+  
+  # Tools & Services Database
+  tools_services_integration:
+    integration_type: "cross_spoke_relationship"
+    relationship_strength: "strong"
+    sync_requirements:
+      - "Bidirectional relationship maintenance"
+      - "Generic profile content separation enforcement"
+      - "Cross-reference integrity validation"
+  
+  # External Systems
+  external_systems:
+    notion_sync:
+      enabled: false  # To be configured
+      sync_direction: "bidirectional"
+      conflict_resolution: "manual_review"
+      
+    api_access:
+      read_access: true
+      write_access: true
+      bulk_operations: true
+      relationship_queries: true
+
+# Security and Access Control
+security_configuration:
+  
+  # Access Levels
+  access_levels:
+    public_read: false
+    authenticated_read: true
+    authenticated_write: true
+    admin_access: true
+    
+  # Data Sensitivity
+  data_sensitivity:
+    level: "business_confidential"
+    contains_pii: false
+    regulatory_requirements: ["maritime_data_protection"]
+    retention_period: "indefinite"
+  
+  # Audit Requirements
+  audit_requirements:
+    access_logging: true
+    change_tracking: true
+    relationship_auditing: true
+    cross_reference_monitoring: true
+
+# Monitoring and Alerting
+monitoring_configuration:
+  
+  # Health Metrics
+  health_metrics:
+    - "Database connectivity"
+    - "Record count stability"
+    - "Cross-reference integrity"
+    - "Relationship consistency"
+    - "Query performance"
+  
+  # Alert Conditions
+  alert_conditions:
+    - "Cross-reference validation failures"
+    - "Relationship integrity violations"
+    - "Unexpected record count changes"
+    - "Query performance degradation"
+    - "Schema validation errors"
+  
+  # Monitoring Schedule
+  monitoring_schedule:
+    health_checks: "every 5 minutes"
+    integrity_validation: "every hour"
+    performance_monitoring: "continuous"
+    relationship_auditing: "every 15 minutes"
+
+# Backup and Recovery
+backup_configuration:
+  
+  # Backup Strategy
+  backup_strategy:
+    frequency: "daily"
+    retention: "30 days"
+    backup_type: "full_database_snapshot"
+    include_relationships: true
+    include_indexes: true
+    
+  # Recovery Procedures
+  recovery_procedures:
+    rto: "4 hours"  # Recovery Time Objective
+    rpo: "1 hour"   # Recovery Point Objective
+    validation_required: true
+    relationship_integrity_check: true
+
+# Future Expansion
+expansion_framework:
+  
+  # Anticipated Growth
+  anticipated_growth:
+    record_count_projection: "50 records within 6 months"
+    new_domains_expected: ["crew-management", "environmental-monitoring"]
+    stakeholder_expansion: ["port-authorities", "cargo-owners"]
+    regulatory_framework_additions: ["stcw", "isps", "msr"]
+  
+  # Scalability Considerations
+  scalability_considerations:
+    - "Partition strategy for high record counts"
+    - "Index optimization for complex queries"
+    - "Caching strategy for frequently accessed data"
+    - "Horizontal scaling for read-heavy workloads"
+  
+  # Enhancement Roadmap
+  enhancement_roadmap:
+    phase_1: "Complete MCP server profile migration (Q1 2025)"
+    phase_2: "Add workflow automation intelligence (Q2 2025)"
+    phase_3: "Integrate real-time maritime data feeds (Q3 2025)"
+    phase_4: "Implement predictive analytics capabilities (Q4 2025)"

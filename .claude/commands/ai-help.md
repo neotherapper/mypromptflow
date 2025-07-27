@@ -10,6 +10,7 @@ Display this interactive menu to the user:
 │ [2] Fix GitHub Issue [6] System Status & Navigation │
 │ [3] Knowledge Base Validation [7] System Improvement │
 │ [4] Generate Tier Documents [8] Browse All Commands │
+│ [9] Browse Research History [0] Quick Research Analysis │
 ├─────────────────────────────────────────────────────────────────────┤
 │ 🧠 ADVANCED FRAMEWORKS - Production-Ready Orchestrators │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -50,10 +51,12 @@ Display this interactive menu to the user:
 - **[6]** → Execute `/knowledge-status` for interactive system navigation
 - **[7]** → Execute `/improve-claude` for system improvement suggestions
 - **[8]** → Show complete command reference from `.claude/commands/`
+- **[9]** → Display research registry with all completed research organized by category and quality scores
+- **[0] + [topic]** → Analyze research registry for similarity to proposed topic and provide recommendations
 
 ### 🧠 Advanced Frameworks Routing
 
-- **[R] + [topic]** → Execute `/research [topic]` using research orchestrator
+- **[R] + [topic]** → Execute registry analysis FIRST, then `/research [topic]` using research orchestrator with similarity assessment
 - **[P] + [name]** → Execute `/create-project [name]` with comprehensive setup
 - **[V] + [file]** → Execute `/validation-framework [file]` with AI Agent Design Standards
 - **[S]** → Execute `/ai-sdlc-assistant` for role-based development workflows
@@ -142,6 +145,100 @@ MCP servers are pre-configured. Use natural language to request actions:
 
 Registry: @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/
 ```
+
+### [9] - Research Registry Browser
+
+When user selects [9], execute:
+
+**Dynamic Research Browser Implementation:**
+1. **Load Research Data**: Read `research/findings/research-browser.yaml` using Read tool
+2. **Extract Display Data**: Parse research categories, quality dashboard, and recent research
+3. **Format for Display**: Apply display templates from research-browser.yaml
+4. **Present Organized View**: Show research by category with human-friendly formatting
+
+**Display Format** (loaded dynamically from research-browser.yaml):
+```
+📚 Research Registry - Completed Research History
+===============================================
+
+{quality_dashboard.dashboard_summary}
+
+📊 **Research Categories**:
+
+{for each category in research_categories:}
+**{category.category_emoji} {category.category_name}** ({category.research_count} sessions):
+{category.description}
+Average Quality: {category.average_quality}% | Recent: {category.recent_activity}
+
+{for each research_item in category.research_items:}
+- **{research_item.title}** ({research_item.quality_badge}) - {research_item.completion_date}
+  Key Outcome: {research_item.one_line_outcome}
+  Applications: {research_item.primary_application}
+  Location: {research_item.location}
+
+💡 **Usage**:
+- Type "0 [your topic]" to check similarity before new research
+- Type "R [topic]" to proceed with research (includes automatic similarity check)
+- All research locations: research/findings/[topic]/
+- Full registry details: @research/findings/research-registry.yaml
+```
+
+**Error Handling**: If research-browser.yaml doesn't exist, display message: "Research browser not yet initialized. Complete one research session to generate human-friendly summaries."
+
+### [0] - Quick Research Analysis  
+
+When user provides [0] + [topic], execute:
+
+**Registry Similarity Analysis Implementation:**
+1. **Load Registry Data**: Read `research/findings/research-browser.yaml` and `research/findings/research-registry.yaml`
+2. **Extract User Topic**: Parse topic from user input after [0]
+3. **Perform Similarity Analysis**: Apply similarity calculation logic from research-browser.yaml
+4. **Generate Recommendations**: Use decision framework thresholds (≥80% high, 40-79% moderate, <40% low)
+5. **Display Results**: Format findings with similarity scores and specific recommendations
+
+**Analysis Output Format**:
+```
+🔍 Research Registry Analysis for: {extracted_topic}
+==========================================
+
+**Step 1: Analyzing existing research...**
+✅ Loaded {total_research_sessions} completed research sessions
+✅ Performing semantic similarity analysis
+✅ Calculating keyword overlap and domain matching
+
+**Step 2: Similarity Assessment**
+
+{if high_similarity_matches found:}
+**🔍 High Similarity (≥80%)**:
+- **{research_title}** (Quality: {quality_percentage}%, Similarity: {similarity_score}%)
+  Key Outcomes: {one_line_outcome}
+  📍 Location: {location}
+  ✅ **Recommendation**: Reference existing research, avoid duplication
+  
+{if moderate_similarity_matches found:}
+**🔄 Moderate Similarity (40-79%)**:
+- **{research_title}** (Quality: {quality_percentage}%, Similarity: {similarity_score}%)
+  Key Outcomes: {one_line_outcome} 
+  📍 Location: {location}
+  🔄 **Recommendation**: Build upon existing findings, cite previous work
+
+{if low_similarity or no_matches:}
+**✅ Low Similarity (≤39%)**:
+✅ **Recommendation**: Proceed with comprehensive new research
+🔗 Will reference any moderately related work where appropriate
+
+**Decision Framework**:
+- **High Similarity**: Reference existing research, avoid duplication
+- **Moderate Similarity**: Extend existing research, build upon findings
+- **Low Similarity**: Proceed with new research, reference related work
+
+**Next Steps**:
+- Type "R {topic}" to proceed with research (includes this analysis automatically)
+- Type "9" to browse full research registry by category
+- Ask specific questions about existing research findings
+```
+
+**Error Handling**: If similarity analysis fails, display: "Registry analysis unavailable. Proceeding with standard research workflow."
 
 ## Quick Reference
 

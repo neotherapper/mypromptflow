@@ -1,0 +1,1059 @@
+{
+  "creation_timestamp": "2025-07-26T17:56:02.875275",
+  "migration_coordinator": "KnowledgeVaultMigrationCoordinator",
+  "version": "1.0.0",
+  "mapping_statistics": {
+    "total_local_items": 51,
+    "items_needing_uuid_conversion": 51,
+    "total_notion_uuids_to_convert": 455,
+    "unique_notion_uuids": 168
+  },
+  "notion_to_local_mappings": {},
+  "local_item_mappings": {
+    "design-thinking": {
+      "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+      "title": "design-thinking",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "05445a61-8abd-44fa-bc1c-bc805d473e87",
+        "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "b2796f49-dfc7-41bb-a8c3-3c89d3e8a577",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "1dcf8374-7088-801f-b92c-c9f6a68bfa22"
+      ],
+      "conversion_priority": "high"
+    },
+    "game-design": {
+      "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+      "title": "game-design",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "dc85054e-a0fd-499c-9453-76d31083d243"
+      ],
+      "conversion_priority": "high"
+    },
+    "data-visualisation": {
+      "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+      "title": "data-visualisation",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "12575617-ae86-4d96-848b-c2b7d67d727c",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "35b3d163-ba90-4b31-b10f-2e0c782705af",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "3c5a93d2-a340-4eee-908e-9a898f818713",
+        "18734b74-8dfd-4493-ba5f-f137911e4314",
+        "2b2202d9-3136-46b0-bee3-ef25910956e0",
+        "02aa3c96-2045-4a70-968e-fd1a2e7335a5",
+        "764be31b-7c78-4e11-bc03-fd31c8eca465",
+        "2cb2ebbf-246a-4961-b329-a65b6a8ae150"
+      ],
+      "conversion_priority": "high"
+    },
+    "gov-uk-design-system": {
+      "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+      "title": "gov-uk-design-system",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "firebase-studio": {
+      "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+      "title": "firebase-studio",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "20df8374-7088-816b-a61e-ee64f8f04bef",
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "672699f0-e84b-4ee1-81af-a1305c67c931",
+        "1bcb3a10-0bab-446f-971f-18fb3f572f76",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "20af8374-7088-812e-97cc-d599487b603f"
+      ],
+      "conversion_priority": "high"
+    },
+    "spring-boot": {
+      "local_uuid": "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+      "title": "spring-boot",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+        "1b918823-262e-459d-a3fa-c226c7be9bd1",
+        "7770c2fa-4369-4112-ae73-5df8fc673fb6",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "3c44148c-b13a-45e4-974f-7af41f728582",
+        "1f5f8374-7088-8117-800e-c3c3a643be55"
+      ],
+      "conversion_priority": "medium"
+    },
+    "evergreen": {
+      "local_uuid": "531b06b2-1a71-46eb-960e-0f47934c9985",
+      "title": "evergreen",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "531b06b2-1a71-46eb-960e-0f47934c9985"
+      ],
+      "conversion_priority": "medium"
+    },
+    "mcp": {
+      "local_uuid": "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+      "title": "mcp",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c3d689e5-982e-4a94-a0bf-b7d9a3b8e043",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+        "c2ad2570-7cb7-40b7-a6f4-f8589072c623",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f"
+      ],
+      "conversion_priority": "medium"
+    },
+    "continue": {
+      "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+      "title": "continue",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "90110293-eabf-4247-9ee5-d0a180b66771",
+        "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6"
+      ],
+      "conversion_priority": "medium"
+    },
+    "affiliate-marketing": {
+      "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+      "title": "affiliate-marketing",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "a3f8d430-f35c-427f-b4ca-5a41c0ff2272",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "208f8374-7088-8182-890d-e79efd139a9c",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-81e2-8858-ea461a908f21",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "205f8374-7088-81b6-abd4-faaa21b78aec",
+        "212f8374-7088-8136-82bf-e55fc10b2b51",
+        "1fef8374-7088-8157-8054-fda0d862db16",
+        "5ff07701-35f0-410c-aacc-f71f133cb30c"
+      ],
+      "conversion_priority": "high"
+    },
+    "business-intelligence": {
+      "local_uuid": "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+      "title": "business-intelligence",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+        "bfa23efb-c043-4c06-8fc6-2001b17a7cf0",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "17d4ae84-f788-47ff-bcdf-6473d17ad97f"
+      ],
+      "conversion_priority": "medium"
+    },
+    "mistral-ai": {
+      "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+      "title": "mistral-ai",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "9041663f-9632-45a5-88ab-ea52065b36e3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "79f51bcc-3a69-43f0-978c-8d201cf4dca9"
+      ],
+      "conversion_priority": "medium"
+    },
+    "real-time-strategy": {
+      "local_uuid": "1f4f8374-7088-8039-9e6b-e8e644735853",
+      "title": "real-time-strategy",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1f5f8374-7088-813c-8908-fc1f67efd36f",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1f4f8374-7088-8039-9e6b-e8e644735853",
+        "6d68cee2-624e-436b-a17e-105000f149d1"
+      ],
+      "conversion_priority": "high"
+    },
+    "online-directory": {
+      "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+      "title": "online-directory",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1c196d36-174e-4803-9249-b926d6e4fcb0",
+        "2b77aeeb-6e10-47c5-bdac-bc255d7d0875",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "ee2a5a61-1f27-4d13-98fd-f4cbb9b0340b",
+        "1fdf8374-7088-8187-b625-c9129649a44b",
+        "21af8374-7088-8031-a360-c517a82741cf",
+        "8fe63d48-62ac-4248-9348-e0ad44485b2a",
+        "4616de00-3d23-4d4c-a20f-75105c18ce00",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "208f8374-7088-8062-8d99-ee9021ba084e",
+        "6b9b5916-ab35-4d99-a8c9-a4118e7d4bd1",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c",
+        "61201a7e-2983-4078-b294-37f02e087ef7"
+      ],
+      "conversion_priority": "high"
+    },
+    "pim": {
+      "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+      "title": "pim",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1c196d36-174e-4803-9249-b926d6e4fcb0",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "e358faf2-d83f-476a-9e28-52eabc934424",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c"
+      ],
+      "conversion_priority": "high"
+    },
+    "shooter": {
+      "local_uuid": "1f4f8374-7088-80e1-8e32-fda716839fda",
+      "title": "shooter",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1f4f8374-7088-80e1-8e32-fda716839fda",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f"
+      ],
+      "conversion_priority": "medium"
+    },
+    "desktop": {
+      "local_uuid": "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+      "title": "desktop",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "c78523b2-29a6-4f6e-a78c-b3bedb927162",
+        "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "material-design": {
+      "local_uuid": "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+      "title": "material-design",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "bcbd6540-8903-42a5-a8b8-6d043704b4b1",
+        "2142bbf3-25e7-4271-8f9d-a4954568b4d6",
+        "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "9bae0eb6-a8ea-480a-853f-75015c044d49",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "eeafbbce-8a42-4e96-ab64-8b5c0bb06e18",
+        "1c64a047-7139-4e01-b9e8-bd554757fdd9",
+        "8d9877b6-a43a-46eb-897f-5cb8bdf7ad89"
+      ],
+      "conversion_priority": "high"
+    },
+    "gamification": {
+      "local_uuid": "141d71b0-fa46-4c72-8075-b833950c1e2b",
+      "title": "gamification",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "cb4d10e3-d4c2-4cb0-8229-a439cf6f2632",
+        "439f1858-9f59-4636-a9bf-38674e47cc57",
+        "931cbd26-3494-4930-98db-4d8782a90fc0",
+        "4298c6da-5f7b-4bd3-8246-8b70eb4ee16d",
+        "6c607492-0239-4c3d-bf56-05ce4cca3b21",
+        "5151ce9e-c76a-49d8-98c7-c5c2d81fca11",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "141d71b0-fa46-4c72-8075-b833950c1e2b",
+        "87d79cb6-f770-40cf-975f-4874696929b1",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "1abf6ccd-6eee-4e83-a3da-9b83697b9768",
+        "567472ab-c4ec-4fd1-87ec-97efb5f742c6",
+        "bd3c6045-4d2c-4c1a-864e-79e61559ad0e",
+        "1f6c3c35-36fa-48e4-8b6e-459f3736a93c"
+      ],
+      "conversion_priority": "high"
+    },
+    "assembly-language": {
+      "local_uuid": "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+      "title": "assembly-language",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "abf3a819-5f90-42c8-ab44-e12cad9c20a7",
+        "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+        "0586fe08-6279-47b4-8000-141293558f60"
+      ],
+      "conversion_priority": "medium"
+    },
+    "linux": {
+      "local_uuid": "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+      "title": "linux",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "940b7e47-d36e-4ec2-a738-0ee68268a991",
+        "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "0586fe08-6279-47b4-8000-141293558f60",
+        "703a0915-3dfd-4149-98b8-e2d75e85dba6"
+      ],
+      "conversion_priority": "medium"
+    },
+    "stripe": {
+      "local_uuid": "fbd07457-873d-4b36-9505-c5c4ef479d8c",
+      "title": "stripe",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "6152132a-2e90-4e8d-93f3-35d3d98d8daf",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "c2736565-182d-4b63-82ef-89ab931f5e7a",
+        "6ef52839-fa77-4564-aedb-417fda2e227d",
+        "fbd07457-873d-4b36-9505-c5c4ef479d8c"
+      ],
+      "conversion_priority": "medium"
+    },
+    "raft": {
+      "local_uuid": "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+      "title": "raft",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "a7e763ba-4e29-4709-84dd-e5224c278fab"
+      ],
+      "conversion_priority": "medium"
+    },
+    "unreal-engine": {
+      "local_uuid": "1e5f8374-7088-801b-9b45-fd7dd26e4b9d",
+      "title": "unreal-engine",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1e5f8374-7088-801b-9b45-fd7dd26e4b9d"
+      ],
+      "conversion_priority": "medium"
+    },
+    "adobe-commerce-magento": {
+      "local_uuid": "209f8374-7088-81dd-91fc-cffff197c0b4",
+      "title": "adobe-commerce-magento",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "7bf417ac-0141-4db4-b963-2f57c712c487",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "209f8374-7088-81dd-91fc-cffff197c0b4",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3"
+      ],
+      "conversion_priority": "medium"
+    },
+    "discontinued-outdated": {
+      "local_uuid": "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+      "title": "discontinued-outdated",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "9a46bae0-e8a8-4acf-8956-72265e45e124",
+        "94946014-3dc7-46f2-bac6-829fafeeea47",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "cbeff48d-bed9-4661-b6f1-597e03a2b0ac",
+        "93ed4dcd-15db-4d51-996b-52c6f053dcd9",
+        "c25242ec-16b6-4f3c-ba93-ca9c0f598d47",
+        "d618f205-9ea5-4075-b0a2-7b9a91211863",
+        "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+        "7799ed44-c9ac-4f25-97c3-d7efaa580d0c"
+      ],
+      "conversion_priority": "high"
+    },
+    "carbon-design-system": {
+      "local_uuid": "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+      "title": "carbon-design-system",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "vector-database": {
+      "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+      "title": "vector-database",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "9041663f-9632-45a5-88ab-ea52065b36e3",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "20ef8374-7088-81a4-b9b8-f5603ef6e355",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "34d3c014-6014-460d-b986-c01e71f29b82",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "conversion_priority": "medium"
+    },
+    "meta-prompting-frameworks": {
+      "local_uuid": "239f8374-7088-819c-92c6-eac956f35eec",
+      "title": "meta-prompting-frameworks",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "239f8374-7088-81a9-af25-f939d9442ab4",
+        "239f8374-7088-8164-a975-db5ab2b28917",
+        "239f8374-7088-81bd-905e-d08a7e81e9bd",
+        "239f8374-7088-819c-92c6-eac956f35eec"
+      ],
+      "conversion_priority": "medium"
+    },
+    "claude-code-multi-agent-orchestration-framework": {
+      "local_uuid": "239f8374-7088-812f-89aa-f956eeb12366",
+      "title": "claude-code-multi-agent-orchestration-framework",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "239f8374-7088-8178-b337-e867a4af4e83",
+        "239f8374-7088-812f-89aa-f956eeb12366",
+        "239f8374-7088-81fb-88a6-e427b1742654"
+      ],
+      "conversion_priority": "medium"
+    },
+    "neon": {
+      "local_uuid": "20af8374-7088-818a-aea8-ec2d0f9ca797",
+      "title": "neon",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "ab0a6b3c-3800-4413-8eaf-69219ddfbcef",
+        "125d988c-8c17-46b5-8c18-03a3a3118829",
+        "9d3279e2-dafa-49f1-896a-1a260e11d872",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "20af8374-7088-818a-aea8-ec2d0f9ca797",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "conversion_priority": "medium"
+    },
+    "knowledge_vault_example_item": {
+      "local_uuid": "53e9028c-e7f9-4e99-9a9b-79f64a831f41",
+      "title": "knowledge_vault_example_item",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "205cf58b-b1a5-4464-9fb7-737637ed4e16"
+      ],
+      "conversion_priority": "medium"
+    },
+    "ai-knowledge-intelligence-orchestrator": {
+      "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
+      "title": "ai-knowledge-intelligence-orchestrator",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "239f8374-7088-8158-86c5-d4db7df1faf4"
+      ],
+      "conversion_priority": "medium"
+    },
+    "atlassian-design-system": {
+      "local_uuid": "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f",
+      "title": "atlassian-design-system",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "42f5f479-286c-4b4b-8a70-efb31b9ba2c1",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f"
+      ],
+      "conversion_priority": "medium"
+    },
+    "pinecone": {
+      "local_uuid": "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+      "title": "pinecone",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+        "c0ef6b7f-a608-4508-afbb-261e529c5898"
+      ],
+      "conversion_priority": "medium"
+    },
+    "apache-spark": {
+      "local_uuid": "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+      "title": "apache-spark",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "99a62216-4b39-4b08-b3ba-49f24bc33c51",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "02aa3c96-2045-4a70-968e-fd1a2e7335a5"
+      ],
+      "conversion_priority": "medium"
+    },
+    "platformers": {
+      "local_uuid": "1f4f8374-7088-807d-8a1f-db855edbe3ce",
+      "title": "platformers",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1f4f8374-7088-807d-8a1f-db855edbe3ce"
+      ],
+      "conversion_priority": "medium"
+    },
+    "crystallize": {
+      "local_uuid": "20af8374-7088-811c-8c39-e1f8992a3055",
+      "title": "crystallize",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "d8adb951-6aae-4dff-8f3f-3ed9b372c4fe",
+        "20af8374-7088-811c-8c39-e1f8992a3055",
+        "7dc1cc51-62d4-488f-bffc-f34958483db3",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "7d24cdc7-2590-46ad-9d96-4f6a6dcfe3d7",
+        "f9052276-7c8a-4a5e-88c4-8aab46950906",
+        "20af8374-7088-80c5-9ae0-df585087651a"
+      ],
+      "conversion_priority": "high"
+    },
+    "nvidia": {
+      "local_uuid": "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+      "title": "nvidia",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+        "b31ba618-7aff-4193-81e9-68ad0aad89a9"
+      ],
+      "conversion_priority": "medium"
+    },
+    "unity-engine": {
+      "local_uuid": "1e5f8374-7088-8097-9b73-f5d6976cac12",
+      "title": "unity-engine",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1d696d12-a89b-4a7f-bb82-d129cddab57e",
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1e5f8374-7088-8097-9b73-f5d6976cac12"
+      ],
+      "conversion_priority": "medium"
+    },
+    "shopify-polaris": {
+      "local_uuid": "354bb7fe-dec9-470b-ac32-e819fab9f3db",
+      "title": "shopify-polaris",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "bcffe259-68d6-42a0-a43f-918c871d0b27",
+        "86996c3e-54d8-46a4-a893-965c567e9790",
+        "913489f4-2564-4a33-b15e-b74998323a5d",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "354bb7fe-dec9-470b-ac32-e819fab9f3db"
+      ],
+      "conversion_priority": "medium"
+    },
+    "tower-defence": {
+      "local_uuid": "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+      "title": "tower-defence",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "dc85054e-a0fd-499c-9453-76d31083d243",
+        "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "defb9158-a27c-4b38-a96a-0edd2f50689e"
+      ],
+      "conversion_priority": "medium"
+    },
+    "d": {
+      "local_uuid": "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+      "title": "d",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "abf3a819-5f90-42c8-ab44-e12cad9c20a7",
+        "d4b10473-a55e-4c9b-a49d-735ac71e5ac1",
+        "f8da9e24-3d7a-44a6-9797-c54cef9a94f9",
+        "da2093fe-3a34-4974-a4f4-e883a320d432",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "bd729f1b-ba81-4f92-a311-47944d12faa9",
+        "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+        "7de8cb82-5cc2-4b41-8057-34f8d1cfb7a7"
+      ],
+      "conversion_priority": "medium"
+    },
+    "perplexity": {
+      "local_uuid": "1f7f8374-7088-811a-9db9-e8b65527addb",
+      "title": "perplexity",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "1dcf8374-7088-8004-b1d9-d37a49cec16e",
+        "2b77aeeb-6e10-47c5-bdac-bc255d7d0875",
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "153c3823-8c18-41fe-b38a-a1151a4acd4f",
+        "1f7f8374-7088-811a-9db9-e8b65527addb",
+        "d18835fd-e641-42ad-9738-eb0d4df1108a"
+      ],
+      "conversion_priority": "high"
+    },
+    "hono": {
+      "local_uuid": "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+      "title": "hono",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "llava": {
+      "local_uuid": "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33",
+      "title": "llava",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "4604bf87-aae4-4b6a-b81d-516de7c336bc",
+        "3985d550-b89c-40b1-bacd-56d384479a0b",
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33"
+      ],
+      "conversion_priority": "medium"
+    },
+    "llamaindex": {
+      "local_uuid": "9b56afea-6921-477c-aa6d-b2516d2af161",
+      "title": "llamaindex",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "326fae87-60bd-428f-941f-311db74577cd",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "9b56afea-6921-477c-aa6d-b2516d2af161",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "leonardo-ai": {
+      "local_uuid": "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+      "title": "leonardo-ai",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+        "ca6160e5-9912-4f68-adff-70b7f8dacce6",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf"
+      ],
+      "conversion_priority": "medium"
+    },
+    "nitro": {
+      "local_uuid": "5930459b-d2ed-47bf-8ac1-6a265b8eaade",
+      "title": "nitro",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "5834ef63-2eec-457b-9712-fee6fa2f25ec",
+        "5930459b-d2ed-47bf-8ac1-6a265b8eaade"
+      ],
+      "conversion_priority": "medium"
+    },
+    "mobile": {
+      "local_uuid": "a245a512-a231-477b-80a7-759fef8b4602",
+      "title": "mobile",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "20df8374-7088-8185-bd71-d331654c9935",
+        "c65e5ac0-f455-4af7-9d37-92b3f00ddcdf",
+        "a245a512-a231-477b-80a7-759fef8b4602"
+      ],
+      "conversion_priority": "medium"
+    },
+    "human-resources": {
+      "local_uuid": "1fdf8374-7088-8050-ac4b-c391f88e4787",
+      "title": "human-resources",
+      "needs_uuid_cleanup": true,
+      "notion_uuids_found": [
+        "5d02c8f1-4b07-4445-8ad3-ab8a6a586b4f",
+        "1fdf8374-7088-8050-ac4b-c391f88e4787",
+        "1fdf8374-7088-8075-afba-f813dfb70885",
+        "13fc170c-8baa-4b6a-a9aa-f5143b8499b3"
+      ],
+      "conversion_priority": "medium"
+    }
+  },
+  "conversion_plan": [
+    {
+      "item": "design-thinking",
+      "local_uuid": "1dcf8374-7088-801f-b92c-c9f6a68bfa22",
+      "notion_uuids_to_replace": 6,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "game-design",
+      "local_uuid": "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+      "notion_uuids_to_replace": 3,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "data-visualisation",
+      "local_uuid": "764be31b-7c78-4e11-bc03-fd31c8eca465",
+      "notion_uuids_to_replace": 11,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "gov-uk-design-system",
+      "local_uuid": "15903988-d2e1-4ac6-8089-2c4c7ac26ece",
+      "notion_uuids_to_replace": 3,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "firebase-studio",
+      "local_uuid": "20af8374-7088-812e-97cc-d599487b603f",
+      "notion_uuids_to_replace": 7,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "spring-boot",
+      "local_uuid": "1f5f8374-7088-80fb-bcc3-dabe4db9dbf8",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "evergreen",
+      "local_uuid": "531b06b2-1a71-46eb-960e-0f47934c9985",
+      "notion_uuids_to_replace": 3,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "mcp",
+      "local_uuid": "1fdf8374-7088-80e5-b6d1-d218f38b49be",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "continue",
+      "local_uuid": "34ceedb5-aaeb-4d8b-9bcd-7260529fef41",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "affiliate-marketing",
+      "local_uuid": "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+      "notion_uuids_to_replace": 10,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "business-intelligence",
+      "local_uuid": "e063047b-c972-4c1d-9f7e-03f2cf377ffa",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "mistral-ai",
+      "local_uuid": "79f51bcc-3a69-43f0-978c-8d201cf4dca9",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "real-time-strategy",
+      "local_uuid": "1f4f8374-7088-8039-9e6b-e8e644735853",
+      "notion_uuids_to_replace": 6,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "online-directory",
+      "local_uuid": "21af8374-7088-8031-a360-c517a82741cf",
+      "notion_uuids_to_replace": 13,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "pim",
+      "local_uuid": "20af8374-7088-80c5-9ae0-df585087651a",
+      "notion_uuids_to_replace": 7,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "shooter",
+      "local_uuid": "1f4f8374-7088-80e1-8e32-fda716839fda",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "desktop",
+      "local_uuid": "fbee53bc-b8d6-4bd0-ad9d-be9116b85043",
+      "notion_uuids_to_replace": 3,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "material-design",
+      "local_uuid": "f4e3c268-d5a2-4bbb-b39b-f2a5fcae6c23",
+      "notion_uuids_to_replace": 10,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "gamification",
+      "local_uuid": "141d71b0-fa46-4c72-8075-b833950c1e2b",
+      "notion_uuids_to_replace": 15,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "assembly-language",
+      "local_uuid": "1dcf8374-7088-8012-9ecc-d89f1a919c4f",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "linux",
+      "local_uuid": "bd2dc7b8-2bc1-4197-9f71-613e14750320",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "stripe",
+      "local_uuid": "fbd07457-873d-4b36-9505-c5c4ef479d8c",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "raft",
+      "local_uuid": "12f5b8cf-fd87-45c5-829a-6182d36d3912",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "unreal-engine",
+      "local_uuid": "1e5f8374-7088-801b-9b45-fd7dd26e4b9d",
+      "notion_uuids_to_replace": 2,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "adobe-commerce-magento",
+      "local_uuid": "209f8374-7088-81dd-91fc-cffff197c0b4",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "discontinued-outdated",
+      "local_uuid": "c23d56fe-26b9-4ea4-957e-39b3e9bfbb3b",
+      "notion_uuids_to_replace": 9,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "carbon-design-system",
+      "local_uuid": "cf5e1488-1ee1-4846-b1f1-242b9b53e4ba",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "vector-database",
+      "local_uuid": "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+      "notion_uuids_to_replace": 8,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "meta-prompting-frameworks",
+      "local_uuid": "239f8374-7088-819c-92c6-eac956f35eec",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "claude-code-multi-agent-orchestration-framework",
+      "local_uuid": "239f8374-7088-812f-89aa-f956eeb12366",
+      "notion_uuids_to_replace": 3,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "neon",
+      "local_uuid": "20af8374-7088-818a-aea8-ec2d0f9ca797",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "knowledge_vault_example_item",
+      "local_uuid": "53e9028c-e7f9-4e99-9a9b-79f64a831f41",
+      "notion_uuids_to_replace": 1,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "ai-knowledge-intelligence-orchestrator",
+      "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
+      "notion_uuids_to_replace": 1,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "atlassian-design-system",
+      "local_uuid": "53cc21a6-c3e1-47cd-aa4c-eeacfee96a1f",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "pinecone",
+      "local_uuid": "4e6359ca-bac0-4599-aadb-5aeedbca7a15",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "apache-spark",
+      "local_uuid": "1fd38b01-791d-40ec-aa4b-c853b466cbd8",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "platformers",
+      "local_uuid": "1f4f8374-7088-807d-8a1f-db855edbe3ce",
+      "notion_uuids_to_replace": 2,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "crystallize",
+      "local_uuid": "20af8374-7088-811c-8c39-e1f8992a3055",
+      "notion_uuids_to_replace": 7,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "nvidia",
+      "local_uuid": "4c2c0681-c038-4bc3-8ef6-89ccfba3dcdd",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "unity-engine",
+      "local_uuid": "1e5f8374-7088-8097-9b73-f5d6976cac12",
+      "notion_uuids_to_replace": 3,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "shopify-polaris",
+      "local_uuid": "354bb7fe-dec9-470b-ac32-e819fab9f3db",
+      "notion_uuids_to_replace": 6,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "tower-defence",
+      "local_uuid": "1f4f8374-7088-80ca-a321-f5b43ba41f4c",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "d",
+      "local_uuid": "cc30d146-052c-45b7-ae29-6584ee8f42c8",
+      "notion_uuids_to_replace": 8,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "perplexity",
+      "local_uuid": "1f7f8374-7088-811a-9db9-e8b65527addb",
+      "notion_uuids_to_replace": 7,
+      "priority": "high",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "hono",
+      "local_uuid": "00809f02-5a0d-4834-b3d1-f05655dc8f44",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "llava",
+      "local_uuid": "27d61be4-c2f5-4f8b-9a68-f8507a3c4f33",
+      "notion_uuids_to_replace": 5,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "llamaindex",
+      "local_uuid": "9b56afea-6921-477c-aa6d-b2516d2af161",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "leonardo-ai",
+      "local_uuid": "7185755d-4bd8-4b1e-9d47-f589ec418d9e",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "nitro",
+      "local_uuid": "5930459b-d2ed-47bf-8ac1-6a265b8eaade",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "mobile",
+      "local_uuid": "a245a512-a231-477b-80a7-759fef8b4602",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    },
+    {
+      "item": "human-resources",
+      "local_uuid": "1fdf8374-7088-8050-ac4b-c391f88e4787",
+      "notion_uuids_to_replace": 4,
+      "priority": "medium",
+      "estimated_effort": "medium"
+    }
+  ]
+}

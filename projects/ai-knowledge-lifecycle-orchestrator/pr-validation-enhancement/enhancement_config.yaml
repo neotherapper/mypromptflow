@@ -1,0 +1,200 @@
+---
+# PR Validation Enhancement Configuration
+# Integration configuration for AI Knowledge Lifecycle Orchestrator with PR Validation System
+
+version: "1.0.0"
+created_date: "2025-07-25"
+updated_date: "2025-07-25"
+
+# Knowledge Vault Integration Settings
+knowledge_vault:
+  base_path: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault"
+  databases:
+    technology_tracking: "databases/technology_tracking"
+    dependency_mapping: "databases/dependency_mapping"
+    knowledge_updates: "databases/knowledge_updates"
+    change_events: "databases/change_events"
+  schemas_path: "schemas"
+  cache_timeout: 300  # 5 minutes
+
+# PR Analysis Configuration
+pr_analysis:
+  file_type_detection:
+    enabled: true
+    supported_extensions:
+      - ".js"
+      - ".jsx" 
+      - ".ts"
+      - ".tsx"
+      - ".py"
+      - ".md"
+      - ".json"
+      - ".yaml"
+      - ".yml"
+      - ".xml"
+      - ".css"
+      - ".scss"
+      - ".html"
+      - ".sql"
+      - ".sh"
+      - ".dockerfile"
+    
+  technology_detection:
+    enabled: true
+    detection_methods:
+      - "file_extension"
+      - "import_analysis"
+      - "package_json_scanning"
+      - "dependency_file_analysis"
+      - "configuration_file_analysis"
+    
+  change_impact_analysis:
+    enabled: true
+    severity_levels:
+      - "critical"
+      - "high" 
+      - "medium"
+      - "low"
+      - "informational"
+
+# Validation Rules Configuration
+validation_rules:
+  technology_version_validation:
+    enabled: true
+    check_current_versions: true
+    flag_outdated_versions: true
+    suggest_upgrades: true
+    criticality_threshold: "medium"
+    
+  deprecated_patterns:
+    enabled: true
+    check_deprecated_apis: true
+    check_deprecated_practices: true
+    provide_migration_suggestions: true
+    
+  security_validation:
+    enabled: true
+    vulnerability_scanning: true
+    dependency_security_check: true
+    known_vulnerability_check: true
+    security_pattern_analysis: true
+    
+  consistency_validation:
+    enabled: true
+    dependency_consistency: true
+    architecture_consistency: true
+    coding_standard_consistency: true
+    documentation_consistency: true
+
+# Performance Configuration
+performance:
+  timeout_settings:
+    pr_analysis: 30  # seconds
+    knowledge_lookup: 10  # seconds
+    validation_execution: 60  # seconds
+    total_validation: 120  # seconds
+    
+  caching:
+    enabled: true
+    cache_duration: 3600  # 1 hour
+    cache_size_limit: 100  # MB
+    
+  parallel_processing:
+    enabled: true
+    max_concurrent_validations: 5
+    max_concurrent_knowledge_queries: 10
+
+# Integration Points
+integrations:
+  github:
+    webhook_enabled: true
+    status_updates: true
+    comment_generation: true
+    
+  ci_cd:
+    pipeline_integration: true
+    quality_gates: true
+    blocking_validations: true
+    
+  ide:
+    real_time_validation: false  # Future feature
+    inline_suggestions: false    # Future feature
+
+# Quality Thresholds
+quality_thresholds:
+  overall_score:
+    minimum: 75
+    target: 85
+    excellent: 95
+    
+  security_score:
+    minimum: 80
+    target: 90
+    excellent: 98
+    
+  consistency_score:
+    minimum: 70
+    target: 85
+    excellent: 95
+    
+  technology_currency_score:
+    minimum: 60
+    target: 80
+    excellent: 95
+
+# Reporting Configuration
+reporting:
+  summary_report: true
+  detailed_analysis: true
+  improvement_suggestions: true
+  security_findings: true
+  consistency_violations: true
+  
+  output_formats:
+    - "markdown"
+    - "json"
+    
+  include_metrics: true
+  include_recommendations: true
+
+# Notification Settings
+notifications:
+  critical_issues: true
+  security_vulnerabilities: true
+  breaking_changes: true
+  improvement_suggestions: false
+  
+  channels:
+    - "github_comments"
+    - "pr_status_checks"
+
+# Feature Flags
+features:
+  experimental_ai_suggestions: false
+  advanced_architecture_analysis: true
+  dependency_graph_analysis: true
+  performance_impact_analysis: false
+  
+# Logging Configuration
+logging:
+  level: "INFO"
+  include_debug: false
+  log_validation_steps: true
+  log_knowledge_queries: true
+  log_performance_metrics: true
+  
+  output:
+    - "console"
+    - "file"
+  
+  file_settings:
+    path: "logs/pr_validation_enhancement.log"
+    max_size: "10MB"
+    backup_count: 5
+
+# Development Settings
+development:
+  mock_knowledge_vault: false
+  debug_mode: false
+  verbose_output: false
+  test_mode: false
