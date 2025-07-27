@@ -1,0 +1,151 @@
+{
+  "validation_timestamp": "2025-07-26T18:00:15.080562",
+  "total_files_checked": 51,
+  "files_with_remaining_notion_uuids": 15,
+  "remaining_notion_uuids": 65,
+  "local_uuids_properly_preserved": 455,
+  "validation_errors": [
+    {
+      "file": "game-design.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    },
+    {
+      "file": "affiliate-marketing.md",
+      "remaining_notion_uuids": [
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54"
+      ]
+    },
+    {
+      "file": "real-time-strategy.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    },
+    {
+      "file": "online-directory.md",
+      "remaining_notion_uuids": [
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54"
+      ]
+    },
+    {
+      "file": "pim.md",
+      "remaining_notion_uuids": [
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "1fef8374-7088-80b0-a9b8-cf6636c1fa54"
+      ]
+    },
+    {
+      "file": "shooter.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    },
+    {
+      "file": "stripe.md",
+      "remaining_notion_uuids": [
+        "20af8374-7088-80c5-9ae0-df585087651a"
+      ]
+    },
+    {
+      "file": "unreal-engine.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    },
+    {
+      "file": "adobe-commerce-magento.md",
+      "remaining_notion_uuids": [
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a"
+      ]
+    },
+    {
+      "file": "vector-database.md",
+      "remaining_notion_uuids": [
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9"
+      ]
+    },
+    {
+      "file": "neon.md",
+      "remaining_notion_uuids": [
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9"
+      ]
+    },
+    {
+      "file": "pinecone.md",
+      "remaining_notion_uuids": [
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9",
+        "393bf209-df9c-4e4a-a8f3-a162e896f8f9"
+      ]
+    },
+    {
+      "file": "crystallize.md",
+      "remaining_notion_uuids": [
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a",
+        "20af8374-7088-80c5-9ae0-df585087651a"
+      ]
+    },
+    {
+      "file": "unity-engine.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    },
+    {
+      "file": "tower-defence.md",
+      "remaining_notion_uuids": [
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6",
+        "1e5f8374-7088-808a-9d76-fa648d83f4f6"
+      ]
+    }
+  ],
+  "conversion_success_rate": 70.58823529411765,
+  "preservation_success_rate": 0.0
+}
