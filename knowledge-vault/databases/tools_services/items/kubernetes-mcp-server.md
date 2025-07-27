@@ -30,6 +30,7 @@ tier: Tier 1
 transport_protocols:
 - HTTPS API
 - gRPC
+mcp_profile_reference: "@mcp_profile/kubernetes"
 ---
 
 **Enterprise container orchestration platform for cloud-native application deployment and intelligent infrastructure management**  

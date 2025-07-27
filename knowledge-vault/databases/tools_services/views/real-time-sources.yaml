@@ -1,0 +1,273 @@
+# Real-time Sources View
+# AI Agent view for filtering tools_services by real-time data capabilities
+# Focuses on sources that provide live data, streaming, and real-time information access
+
+view_info:
+  name: "Real-time Information Sources"
+  description: "Filter tools and services by real-time data access and streaming capabilities"
+  database: "tools_services"
+  version: "1.0.0"
+  created: "2025-07-27"
+  purpose: "Enable AI agents to identify sources for live data monitoring and real-time information needs"
+
+# View Configuration
+view_config:
+  primary_grouping: "real_time_capability"
+  secondary_sort: "response_time_asc"
+  include_inactive: false
+  max_results: 50
+
+# Real-time Capability Categories
+real_time_categories:
+  live_streaming:
+    description: "Continuous data streams and live feeds"
+    characteristics:
+      - "Continuous data flow"
+      - "Real-time updates"
+      - "Streaming protocols"
+      - "Event-driven architecture"
+    use_cases:
+      - "Monitor live system metrics"
+      - "Track real-time user activity"
+      - "Process continuous data feeds"
+      - "Real-time analytics dashboards"
+    examples: ["Redis Streams", "Apache Kafka", "WebSocket APIs", "Server-Sent Events"]
+    
+  real_time_apis:
+    description: "APIs that provide real-time or near real-time data"
+    characteristics:
+      - "Low latency responses"
+      - "Frequent data updates"
+      - "Real-time API endpoints"
+      - "Minimal caching delays"
+    use_cases:
+      - "Get current stock prices"
+      - "Access live weather data"
+      - "Monitor system status"
+      - "Real-time user notifications"
+    examples: ["Financial APIs", "Weather APIs", "Social Media APIs", "IoT Sensors"]
+    
+  event_driven:
+    description: "Event-based systems and webhook integrations"
+    characteristics:
+      - "Event triggers"
+      - "Webhook notifications"
+      - "Push notifications"
+      - "Reactive updates"
+    use_cases:
+      - "React to system events"
+      - "Process webhook notifications"
+      - "Handle user interactions"
+      - "Trigger automated workflows"
+    examples: ["GitHub Webhooks", "Stripe Events", "Zapier Triggers", "Slack Events"]
+    
+  monitoring_systems:
+    description: "System monitoring and observability platforms"
+    characteristics:
+      - "Performance metrics"
+      - "Health monitoring"
+      - "Alert systems"
+      - "Real-time dashboards"
+    use_cases:
+      - "Monitor application performance"
+      - "Track infrastructure health"
+      - "Real-time error tracking"
+      - "Capacity monitoring"
+    examples: ["Datadog", "New Relic", "Grafana", "Prometheus"]
+
+# Performance Classification
+performance_tiers:
+  ultra_low_latency:
+    description: "Sub-second response times"
+    latency_range: "<100ms"
+    suitable_for: ["Trading systems", "Gaming", "Real-time communications"]
+    complexity: "high"
+    
+  low_latency:
+    description: "Near real-time responses"
+    latency_range: "100ms-1s"
+    suitable_for: ["Live dashboards", "User notifications", "System monitoring"]
+    complexity: "medium"
+    
+  standard_real_time:
+    description: "Real-time with acceptable delays"
+    latency_range: "1s-5s"
+    suitable_for: ["Content updates", "Status monitoring", "Batch processing"]
+    complexity: "low"
+    
+  near_real_time:
+    description: "Frequent updates with minimal delay"
+    latency_range: "5s-30s"
+    suitable_for: ["Data synchronization", "Periodic updates", "Background processing"]
+    complexity: "low"
+
+# Filter Configurations for Real-time Use Cases
+filter_presets:
+  critical_real_time:
+    description: "Ultra-low latency sources for critical applications"
+    filters:
+      - "performance_tier: ultra_low_latency"
+      - "reliability_score: >=9"
+      - "enterprise_grade: true"
+    priority: "immediate_response"
+    
+  standard_monitoring:
+    description: "Standard real-time monitoring and dashboards"
+    filters:
+      - "performance_tier: low_latency OR standard_real_time"
+      - "monitoring_capabilities: true"
+      - "setup_complexity: <=medium"
+    priority: "reliable_monitoring"
+    
+  event_processing:
+    description: "Event-driven and webhook-based sources"
+    filters:
+      - "real_time_category: event_driven"
+      - "webhook_support: true"
+      - "event_handling: true"
+    priority: "event_responsiveness"
+    
+  data_streaming:
+    description: "Continuous data streaming and processing"
+    filters:
+      - "real_time_category: live_streaming"
+      - "streaming_protocols: supported"
+      - "scalability: high"
+    priority: "data_throughput"
+
+# Integration Patterns for AI Agents
+integration_patterns:
+  polling_pattern:
+    description: "Regular polling for updates"
+    when_to_use: "When webhooks unavailable"
+    implementation: "Scheduled queries at defined intervals"
+    considerations: ["Rate limits", "Bandwidth usage", "Freshness requirements"]
+    
+  push_pattern:
+    description: "Push notifications and webhooks"
+    when_to_use: "When real-time events available"
+    implementation: "Event-driven triggers and callbacks"
+    considerations: ["Endpoint reliability", "Security", "Event ordering"]
+    
+  streaming_pattern:
+    description: "Continuous data streams"
+    when_to_use: "For high-volume real-time data"
+    implementation: "Stream processing and continuous consumption"
+    considerations: ["Buffer management", "Error handling", "Backpressure"]
+    
+  hybrid_pattern:
+    description: "Combination of polling and push"
+    when_to_use: "For robust real-time systems"
+    implementation: "Primary push with polling fallback"
+    considerations: ["Duplicate handling", "Failover logic", "Consistency"]
+
+# Source Selection Logic for AI Agents
+source_selection_logic:
+  by_urgency:
+    critical: "performance_tier:ultra_low_latency AND reliability_score:>=9"
+    high: "performance_tier:low_latency AND uptime:>=99%"
+    medium: "performance_tier:standard_real_time AND setup_complexity:<=medium"
+    low: "performance_tier:near_real_time AND cost:low"
+    
+  by_data_type:
+    financial: "financial_data:true AND performance_tier:ultra_low_latency"
+    social: "social_media:true AND rate_limits:reasonable"
+    system_metrics: "monitoring_capabilities:true AND real_time_dashboards:true"
+    user_activity: "event_driven:true AND webhook_support:true"
+    
+  by_complexity:
+    simple: "setup_complexity:low AND documentation:excellent"
+    moderate: "setup_complexity:medium AND support:good"
+    advanced: "enterprise_features:true AND customization:high"
+
+# Common Real-time Use Cases
+use_case_examples:
+  live_dashboard:
+    description: "Real-time monitoring dashboard"
+    requirements:
+      - "Low latency data access"
+      - "Multiple data sources"
+      - "Reliable updates"
+      - "Visual representation"
+    recommended_sources:
+      - category: "monitoring_systems"
+        examples: ["Grafana", "Datadog", "Custom APIs"]
+    
+  alert_system:
+    description: "Real-time alerting and notifications"
+    requirements:
+      - "Event-driven triggers"
+      - "Reliable notification delivery"
+      - "Escalation support"
+      - "Multiple channels"
+    recommended_sources:
+      - category: "event_driven"
+        examples: ["Webhook systems", "Message queues", "Notification services"]
+    
+  data_synchronization:
+    description: "Real-time data sync between systems"
+    requirements:
+      - "Bidirectional updates"
+      - "Conflict resolution"
+      - "Data consistency"
+      - "Error recovery"
+    recommended_sources:
+      - category: "live_streaming"
+        examples: ["Database triggers", "Message brokers", "Sync services"]
+    
+  user_interaction:
+    description: "Real-time user interaction processing"
+    requirements:
+      - "Low latency responses"
+      - "High concurrency"
+      - "State management"
+      - "Session handling"
+    recommended_sources:
+      - category: "real_time_apis"
+        examples: ["WebSocket servers", "Real-time databases", "Session stores"]
+
+# AI Agent Implementation Guidance
+ai_agent_guidance:
+  source_evaluation_checklist:
+    - "Identify real-time requirements (latency, reliability, scale)"
+    - "Check performance tier compatibility with use case"
+    - "Evaluate setup complexity vs. timeline constraints"
+    - "Verify authentication and security requirements"
+    - "Assess rate limits and usage restrictions"
+    - "Plan fallback strategies for source failures"
+    
+  implementation_priorities:
+    1: "Select primary source based on performance requirements"
+    2: "Identify fallback sources for redundancy"
+    3: "Implement appropriate integration pattern"
+    4: "Set up monitoring and error handling"
+    5: "Test real-time performance under load"
+    6: "Document configuration and maintenance procedures"
+    
+  troubleshooting_approach:
+    - "Monitor latency and response times"
+    - "Check rate limit compliance"
+    - "Verify authentication and permissions"
+    - "Test fallback mechanisms"
+    - "Review error logs and patterns"
+    - "Validate data freshness and accuracy"
+
+# Maintenance and Quality Assurance
+maintenance:
+  performance_monitoring:
+    - "Track response times and latency"
+    - "Monitor uptime and reliability"
+    - "Assess rate limit usage"
+    - "Evaluate data freshness"
+    
+  regular_updates:
+    - "Review new real-time sources"
+    - "Update performance classifications"
+    - "Refresh integration patterns"
+    - "Validate use case examples"
+    
+  quality_metrics:
+    - "Source availability and uptime"
+    - "Data freshness and accuracy"
+    - "Integration success rates"
+    - "Performance benchmark compliance"

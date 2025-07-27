@@ -31,6 +31,7 @@ tier: Tier 1
 transport_protocols:
 - HTTP REST API
 - gRPC
+mcp_profile_reference: "@mcp_profile/qdrant"
 ---
 
 **Official Qdrant server for high-performance vector search and AI memory systems**  

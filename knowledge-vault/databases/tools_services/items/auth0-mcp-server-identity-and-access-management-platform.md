@@ -17,6 +17,7 @@ tags:
 - MCP Server
 - Tier 3
 - Development Platform
+mcp_profile_reference: "@mcp_profile/auth0"
 ---
 
 ## Enterprise Use Cases

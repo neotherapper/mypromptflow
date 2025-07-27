@@ -29,6 +29,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/linear"
 ---
 
 **Modern project management and issue tracking for development teams**  

@@ -20,6 +20,7 @@ tags:
 - Tier 1
 - Analytics
 - Monitoring
+mcp_profile_reference: "@mcp_profile/neo4j"
 ---
 
 ## Header Classification

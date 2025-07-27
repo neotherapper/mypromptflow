@@ -30,6 +30,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/google-drive"
 ---
 
 **Cloud storage and document management integration for comprehensive file operations**  

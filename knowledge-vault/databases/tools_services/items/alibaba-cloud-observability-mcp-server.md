@@ -20,6 +20,7 @@ tags:
 - Tier 1
 - Alibaba Cloud
 - Development Platform
+mcp_profile_reference: "@mcp_profile/alibaba-cloud-observability"
 ---
 
 # Alibaba Cloud Observability MCP Server

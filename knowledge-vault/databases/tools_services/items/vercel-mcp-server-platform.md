@@ -34,6 +34,7 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
+mcp_profile_reference: "@mcp_profile/vercel"
 ---
 
 **Frontend deployment and serverless platform automation for modern web applications**  

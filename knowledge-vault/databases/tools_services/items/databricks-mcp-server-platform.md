@@ -31,6 +31,7 @@ tier: Tier 1
 transport_protocols:
 - REST API
 - WebSockets
+mcp_profile_reference: "@mcp_profile/databricks"
 ---
 
 **Enterprise unified analytics platform for big data and machine learning workflows**  

@@ -25,6 +25,7 @@ tags:
 - Monitoring
 - Development Platform
 tier: Tier 2
+mcp_profile_reference: "@mcp_profile/zendesk"
 ---
 
 **Customer service and support platform integration for enterprise customer experience**  

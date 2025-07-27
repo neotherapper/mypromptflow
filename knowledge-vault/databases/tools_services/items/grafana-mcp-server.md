@@ -32,6 +32,7 @@ transport_protocols:
 - HTTP/HTTPS API
 - WebSocket
 - gRPC
+mcp_profile_reference: "@mcp_profile/grafana"
 ---
 
 **Open-source observability platform for monitoring, alerting, and visualization of metrics, logs, and traces**  

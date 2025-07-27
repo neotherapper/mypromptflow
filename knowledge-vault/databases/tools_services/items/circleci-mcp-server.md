@@ -26,6 +26,7 @@ tags:
 - Tier 3
 - Development Platform
 tier: Tier 3
+mcp_profile_reference: "@mcp_profile/circleci"
 ---
 
 **Cloud-native CI/CD platform integration for automated DevOps workflows**  

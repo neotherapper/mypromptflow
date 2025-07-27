@@ -32,6 +32,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - WebSocket
+mcp_profile_reference: "@mcp_profile/redis"
 ---
 
 **Official Redis server for high-performance in-memory data management and real-time processing**  

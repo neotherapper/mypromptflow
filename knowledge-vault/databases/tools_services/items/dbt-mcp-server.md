@@ -30,6 +30,7 @@ tier: Tier 3
 transport_protocols:
 - HTTPS
 - REST API
+mcp_profile_reference: "@mcp_profile/dbt"
 ---
 
 **Data transformation and analytics engineering platform for building reliable data pipelines**  

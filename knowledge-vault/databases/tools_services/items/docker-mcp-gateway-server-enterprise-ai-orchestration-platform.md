@@ -21,6 +21,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+mcp_profile_reference: "@mcp_profile/docker"
 ---
 
 ## Executive Summary

@@ -33,6 +33,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - REST API
+mcp_profile_reference: "@mcp_profile/sentry"
 ---
 
 **Community-maintained server for application monitoring, error tracking, and performance analysis**  

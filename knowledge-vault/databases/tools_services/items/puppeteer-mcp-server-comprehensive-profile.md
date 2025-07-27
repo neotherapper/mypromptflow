@@ -21,6 +21,7 @@ tags:
 - Security Tool
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/puppeteer"
 ---
 
 ## Header Classification

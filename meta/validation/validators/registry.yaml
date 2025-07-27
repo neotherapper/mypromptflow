@@ -121,6 +121,27 @@ validator_registry:
       parallel_safe: true
       production_ready: true
       
+    # Information Access Validators (NEW)
+    - name: "information-access-source-validator"
+      location: "meta/validation/validators/information-access/source-validation.md"
+      file_types:
+        - "meta/information-access/**/*.yaml"
+        - "research/findings/**/.meta/research-sources.md" 
+        - "knowledge-vault/databases/tools_services/views/*.yaml"
+      capabilities:
+        - "Information access framework compliance validation"
+        - "Technology-specific source mapping validation (React, database patterns)"
+        - "MCP server accessibility and integration testing"
+        - "Multi-source workflow coordination validation"
+        - "Research framework source discovery integration"
+        - "AI-PR validation source enhancement verification"
+        - "Knowledge vault cross-reference and tag validation"
+      spawn_pattern: "Task tool with information-access-source-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Essential for unified information access framework compliance"
+      
     # Project Documentation Validators (NEW)
     - name: "project-documentation-validator"
       location: "meta/validation/validators/project/project-documentation-validator.md"
@@ -226,11 +247,12 @@ validator_registry:
       production_ready: false
 
   production_ready_validators:
-    count: 13
+    count: 14
     validators: 
       - "intent-implementation-validator"  # REVOLUTIONARY NEW VALIDATOR
       - "claude-command-evaluator"
       - "ai-agent-instruction-evaluator"
+      - "information-access-source-validator"  # NEW INFORMATION ACCESS VALIDATOR
       - "project-documentation-validator"  # NEW PROJECT VALIDATOR
       - "ai-documentation-validator"  # NEW AI DOCS VALIDATOR
       - "claude-project-file-validator"  # NEW CLAUDE.md VALIDATOR
@@ -261,6 +283,9 @@ validator_registry:
       - "**/CLAUDE.md": ["claude-project-file-validator - SPECIALIZED CLAUDE INTEGRATION"]
       - "*/progress.md, */task-list.md": ["project-documentation-validator"]
       - "projects/*/docs/**/*.md": ["ai-documentation-validator"]
+      - "meta/information-access/**/*.yaml": ["information-access-source-validator - UNIFIED INFORMATION ACCESS"]
+      - "research/findings/**/.meta/research-sources.md": ["information-access-source-validator - SOURCE TRACKING"]
+      - "knowledge-vault/databases/tools_services/views/*.yaml": ["information-access-source-validator - VIEW VALIDATION"]
       - "AI agent instructions": ["vagueness-detector", "anti-fiction-validator", "constitutional-ai-checker"]
       - "Framework specifications": ["framework-coherence-analyzer", "constitutional-ai-checker"]
       - "Multi-agent systems": ["communication-pattern-validator"]
@@ -270,6 +295,7 @@ validator_registry:
       - "Project Documentation": ["project-documentation-validator - AI AGENT EFFECTIVENESS"]
       - "AI-Consumable Docs": ["ai-documentation-validator - TECHNICAL CLARITY"]
       - "CLAUDE.md Project Files": ["claude-project-file-validator - CLAUDE INTEGRATION EXCELLENCE"]
+      - "Information Access Framework": ["information-access-source-validator - UNIFIED SOURCE MANAGEMENT"]
       
     partially_covered_types:
       - "workflow validations": ["chain validators - development stage"]

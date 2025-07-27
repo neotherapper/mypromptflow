@@ -29,6 +29,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/jira"
 ---
 
 **Enterprise project management and issue tracking integration for AI-powered development workflows**  

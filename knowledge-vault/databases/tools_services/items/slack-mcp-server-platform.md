@@ -32,6 +32,7 @@ tier: Tier 2
 transport_protocols:
 - Slack Web API
 - Events API
+mcp_profile_reference: "@mcp_profile/slack"
 ---
 
 **Enterprise-grade team communication platform integration server for automated messaging and workflow coordination**  

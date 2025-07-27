@@ -20,6 +20,7 @@ tags:
 - Tier 1
 - Google Service
 - Development Platform
+mcp_profile_reference: "@mcp_profile/google-analytics-web-platform"
 ---
 
 # Google Analytics Web Platform MCP Server

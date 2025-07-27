@@ -31,6 +31,7 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
+mcp_profile_reference: "@mcp_profile/postgresql"
 ---
 
 **Enterprise-grade PostgreSQL database integration server for comprehensive database operations and management**  

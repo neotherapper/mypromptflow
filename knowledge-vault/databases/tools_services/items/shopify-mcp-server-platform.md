@@ -31,6 +31,7 @@ transport_protocols:
 - REST API
 - GraphQL API
 - Partner API
+mcp_profile_reference: "@mcp_profile/shopify"
 ---
 
 **Enterprise e-commerce platform integration for comprehensive sales analytics and customer intelligence**  

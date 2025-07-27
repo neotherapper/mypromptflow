@@ -29,6 +29,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS API
+mcp_profile_reference: "@mcp_profile/bright-data"
 ---
 
 **Commercial-grade web scraping and data extraction infrastructure**  

@@ -22,6 +22,7 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 4
+mcp_profile_reference: "@mcp_profile/tier-4-youtube"
 ---
 
 **Tier**: Tier 4 Low-Priority  

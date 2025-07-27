@@ -32,6 +32,7 @@ tier: Tier 1
 transport_protocols:
 - REST API
 - GraphQL API
+mcp_profile_reference: "@mcp_profile/westlaw"
 ---
 
 **Premier legal research platform with comprehensive case law and AI-powered legal analytics**  

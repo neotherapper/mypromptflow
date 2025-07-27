@@ -24,6 +24,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+mcp_profile_reference: "@mcp_profile/digitalocean-cloud-management"
 ---
 
 ## Header Classification

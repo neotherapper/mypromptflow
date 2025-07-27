@@ -29,6 +29,7 @@ tier: Tier 3
 transport_protocols:
 - WebSocket
 - HTTP/HTTPS
+mcp_profile_reference: "@mcp_profile/puppeteer"
 ---
 
 **Headless Chrome automation for web scraping, testing, and PDF generation**  

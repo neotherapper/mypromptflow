@@ -31,6 +31,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/google-calendar"
 ---
 
 **Advanced scheduling automation, time management intelligence, and calendar optimization for AI agents**  

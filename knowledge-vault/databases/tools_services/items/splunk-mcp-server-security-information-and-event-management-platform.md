@@ -16,6 +16,7 @@ tags:
 - Monitoring
 - Analytics
 - Development Platform
+mcp_profile_reference: "@mcp_profile/splunk"
 ---
 
 ## Enterprise Use Cases

@@ -30,6 +30,7 @@ transport_protocols:
 - HTTPS/REST
 - gRPC
 - WebSocket
+mcp_profile_reference: "@mcp_profile/pulumi"
 ---
 
 **Modern Infrastructure as Code platform using familiar programming languages**  

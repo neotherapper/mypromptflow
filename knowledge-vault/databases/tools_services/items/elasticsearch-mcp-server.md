@@ -34,6 +34,7 @@ transport_protocols:
 - JSON over HTTP
 - gRPC
 - WebSocket
+mcp_profile_reference: "@mcp_profile/elasticsearch"
 ---
 
 **Full-text search and analytics engine for AI-powered knowledge discovery and data intelligence**  

@@ -33,6 +33,7 @@ tier: Tier 1
 transport_protocols:
 - Docker Engine API
 - Docker Registry API
+mcp_profile_reference: "@mcp_profile/docker"
 ---
 
 **Enterprise-grade containerization platform integration server for development workflow automation and deployment orchestration**  

@@ -32,6 +32,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - JSON API
+mcp_profile_reference: "@mcp_profile/sqlite"
 ---
 
 **Zero-configuration embedded database for rapid development and edge computing applications**  

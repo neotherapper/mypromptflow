@@ -23,6 +23,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+mcp_profile_reference: "@mcp_profile/tier-1-aws-comprehensive"
 ---
 
 **Classification:** Tier 1 Premium Enterprise Platform  

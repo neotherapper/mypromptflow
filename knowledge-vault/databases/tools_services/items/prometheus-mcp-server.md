@@ -29,6 +29,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - gRPC
+mcp_profile_reference: "@mcp_profile/prometheus"
 ---
 
 **Monitoring and alerting system for comprehensive metrics collection and observability infrastructure**  

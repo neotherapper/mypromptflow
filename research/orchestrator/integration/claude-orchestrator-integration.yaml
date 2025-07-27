@@ -219,6 +219,69 @@ claude_orchestrator_workflow:
       quality_level: "basic|high|critical"
       confidence_score: "0.0-1.0"
   
+  step_3_5_discover_information_sources:
+    reference_files:
+      - "meta/information-access/agent-decision-framework.md"
+      - "meta/information-access/topic-mappings/"
+      - "meta/information-access/category-mappings/"
+      - "knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+    
+    purpose: "Intelligent source discovery for optimal research information access"
+    integration: "Bridges comprehensive MCP infrastructure with practical research needs"
+    
+    source_discovery_process:
+      topic_analysis:
+        - extract_research_topic: "Parse research topic from user request and context analysis"
+        - identify_technology_specifics: "Look for specific technologies (React, PostgreSQL, etc.)"
+        - classify_domain_categories: "Identify broader categories (frontend, database, etc.)"
+        - assess_information_needs: "Determine what types of information will be required"
+      
+      mapping_selection:
+        specific_technology_routing:
+          - check_topic_mappings: "Look for specific technology mappings in meta/information-access/topic-mappings/"
+          - react_example: "React research → react-sources.yaml (GitHub, Context7, npm)"
+          - priority: "Specific mappings override categorical patterns"
+        
+        categorical_pattern_routing:
+          - check_category_mappings: "Look for category patterns in meta/information-access/category-mappings/"
+          - database_example: "Database research → database-sources.yaml (PostgreSQL MCP, knowledge-vault query)"
+          - fallback: "Use when specific technology not identified"
+        
+        knowledge_vault_fallback:
+          - query_tools_services: "Query knowledge-vault/databases/tools_services/ for available sources"
+          - apply_filters: "Use information-access tags and authentication requirements"
+          - rank_sources: "Apply decision framework scoring for optimal selection"
+      
+      multi_source_coordination:
+        - primary_sources: "Select 1-2 primary sources based on topic/category mapping"
+        - supplementary_sources: "Add complementary sources for comprehensive coverage"
+        - validation_sources: "Include cross-reference sources for accuracy validation"
+        - fallback_sources: "Prepare backup sources in case primary sources unavailable"
+    
+    output_format:
+      selected_sources:
+        primary: ["source_name with access_pattern"]
+        supplementary: ["source_name with access_pattern"]
+        validation: ["source_name with access_pattern"]
+        fallback: ["source_name with access_pattern"]
+      
+      source_coordination_plan:
+        sequential_sources: "Sources that must be accessed in order"
+        parallel_sources: "Sources that can be accessed simultaneously"
+        conditional_sources: "Sources activated based on intermediate findings"
+      
+      integration_strategy:
+        mcp_servers: "Specific MCP server tools and access patterns"
+        knowledge_vault: "Knowledge vault queries and view usage"
+        web_sources: "WebFetch and WebSearch coordination"
+        authentication: "Required authentication and setup complexity"
+      
+      source_optimization:
+        estimated_setup_time: "Total time to configure all selected sources"
+        authentication_complexity: "Overall authentication difficulty (1-10 scale)"
+        rate_limit_coordination: "Strategy for managing rate limits across sources"
+        error_handling: "Fallback procedures and error recovery"
+  
   step_4_select_methods:
     reference_files:
       - "research/orchestrator/config/selection-rules.yaml"
@@ -251,14 +314,17 @@ claude_orchestrator_workflow:
       
       execution_process:
         - "Load multi-agent method specification from methods/multi-agent/"
-        - "Extract sub-agent specifications and task prompts"
-        - "Spawn specialized sub-agents using Task tool with individual file saving"
-        - "Coordinate parallel sub-agent execution"
-        - "Monitor sub-agent progress and completion"
-        - "Collect and validate sub-agent outputs"
-        - "Save all individual sub-agent research files"
-        - "Apply synthesis instructions to integrate results"
-        - "Create comprehensive analysis file combining all perspectives"
+        - "Apply information source discovery results to sub-agent specialization"
+        - "Integrate selected sources into sub-agent task prompts"
+        - "Extract sub-agent specifications and task prompts with source coordination"
+        - "Spawn specialized sub-agents using Task tool with source-aware execution"
+        - "Coordinate parallel sub-agent execution with multi-source access"
+        - "Monitor sub-agent progress, completion, and source utilization"
+        - "Validate source accessibility and authentication across sub-agents"
+        - "Collect and validate sub-agent outputs with source attribution"
+        - "Save all individual sub-agent research files with source tracking"
+        - "Apply synthesis instructions to integrate results and source findings"
+        - "Create comprehensive analysis file combining all perspectives and sources"
       
       file_saving_requirements:
         CRITICAL_PATH_ENFORCEMENT: "RESEARCH FINDINGS MUST GO IN /research/findings/ - NEVER /docs/ OR ANY OTHER LOCATION"
@@ -324,10 +390,14 @@ claude_orchestrator_workflow:
         action: "Create research-sources.md file in research/findings/[topic]/.meta/ folder - NEVER in docs/ or projects/"
         source_tracking: "Track ALL tool usage during research execution"
         required_tracking:
+          - information_source_discovery: "Sources selected via information access framework with rationale"
+          - mcp_server_usage: "EVERY MCP server tool call with server name, tool, and result"
           - web_sources: "EVERY WebFetch/WebSearch URL with timestamp"
           - internal_docs: "EVERY Read tool file path with timestamp"
           - external_files: "EVERY file system access with timestamp"
           - search_queries: "EVERY search performed with timestamp"
+          - knowledge_vault_queries: "Knowledge vault view usage and filter applications"
+          - topic_vs_category_routing: "Whether specific technology or category mapping used"
         required_content:
           - session_summary: "Topic, duration, total source counts"
           - categorized_sources: "Organized by type with metadata"

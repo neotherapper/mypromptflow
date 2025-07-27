@@ -31,6 +31,7 @@ transport_protocols:
 - HTTPS REST API
 - gRPC
 - Streaming API
+mcp_profile_reference: "@mcp_profile/bigquery"
 ---
 
 **Google's serverless data warehouse for super-fast analytics and machine learning at scale**  

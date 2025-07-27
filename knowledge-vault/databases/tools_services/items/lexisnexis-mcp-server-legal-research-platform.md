@@ -16,6 +16,7 @@ tags:
 - Security Tool
 - Tier 1
 - Development Platform
+mcp_profile_reference: "@mcp_profile/lexisnexis"
 ---
 
 ## Enterprise Use Cases

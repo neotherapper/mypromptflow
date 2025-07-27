@@ -29,6 +29,7 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTP
+mcp_profile_reference: "@mcp_profile/mongodb"
 ---
 
 **NoSQL document database operations for flexible data storage and AI-powered content management**  

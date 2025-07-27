@@ -15,6 +15,7 @@ tags:
 - MCP Server
 - Tier 3
 - Development Platform
+mcp_profile_reference: "@mcp_profile/stripe"
 ---
 
 ## Enterprise Use Cases

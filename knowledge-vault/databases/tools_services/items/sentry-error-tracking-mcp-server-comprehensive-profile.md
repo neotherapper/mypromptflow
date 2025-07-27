@@ -21,6 +21,7 @@ tags:
 - Tier 1
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/sentry-error-tracking"
 ---
 
 ## Header Classification

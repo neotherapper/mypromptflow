@@ -24,6 +24,7 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/logfire-opentelemetry"
 ---
 
 ## Header Classification

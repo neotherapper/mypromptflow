@@ -29,6 +29,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - REST API
+mcp_profile_reference: "@mcp_profile/fhir"
 ---
 
 **Healthcare interoperability standard for secure health data exchange and clinical intelligence**  

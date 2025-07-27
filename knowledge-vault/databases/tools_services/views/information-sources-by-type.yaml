@@ -1,0 +1,188 @@
+# Information Sources by Type View
+# AI Agent view for filtering tools_services by information access capabilities
+# Groups MCP servers and tools by the type of information they can provide
+
+view_info:
+  name: "Information Sources by Type"
+  description: "Filter tools and services by information access capabilities and data types"
+  database: "tools_services"
+  version: "1.0.0"
+  created: "2025-07-27"
+  purpose: "Enable AI agents to quickly find appropriate sources for specific information needs"
+
+# View Configuration
+view_config:
+  primary_grouping: "information_type"
+  secondary_sort: "rating_desc"
+  include_inactive: false
+  max_results: 100
+
+# Information Type Categories (based on new tags)
+information_categories:
+  web_content:
+    tag_filter: "web-content"
+    description: "Web scraping, content extraction, real-time web data sources"
+    use_cases:
+      - "Extract content from websites and URLs"
+      - "Monitor web pages for changes"
+      - "Gather real-time web data"
+      - "Access public web APIs"
+    examples: ["Fetch MCP Server", "Bright Data", "Browser Automation", "Web Scraping Tools"]
+    
+  database_access:
+    tag_filter: "database-access"
+    description: "Database connections, SQL queries, structured data retrieval"
+    use_cases:
+      - "Query relational databases"
+      - "Access NoSQL databases"
+      - "Retrieve structured business data"
+      - "Perform complex data analysis"
+    examples: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Qdrant"]
+    
+  file_systems:
+    tag_filter: "file-systems"
+    description: "File operations, document processing, local storage access"
+    use_cases:
+      - "Read and write local files"
+      - "Process documents and PDFs"
+      - "Manage file system operations"
+      - "Access network file systems"
+    examples: ["Filesystem MCP Server", "Document Processors", "File Management Tools"]
+    
+  real_time_data:
+    tag_filter: "real-time-data"
+    description: "Live feeds, streaming data, real-time APIs, event systems"
+    use_cases:
+      - "Monitor live data streams"
+      - "Access real-time APIs"
+      - "Process event-driven data"
+      - "Track real-time metrics"
+    examples: ["Redis", "Streaming APIs", "Event Processing", "Live Monitoring"]
+    
+  version_control:
+    tag_filter: "version-control"
+    description: "Git operations, repository analysis, code access, version tracking"
+    use_cases:
+      - "Access Git repositories"
+      - "Analyze code changes"
+      - "Track version history"
+      - "Manage code repositories"
+    examples: ["GitHub", "GitLab", "Git MCP Server", "Repository Analysis Tools"]
+    
+  structured_data:
+    tag_filter: "structured-data"
+    description: "APIs, JSON/XML processing, data transformation, structured formats"
+    use_cases:
+      - "Access REST/GraphQL APIs"
+      - "Process JSON/XML data"
+      - "Transform data formats"
+      - "Handle structured responses"
+    examples: ["REST API Tools", "GraphQL Servers", "Data Transformation", "API Clients"]
+
+# Filter Configurations for AI Agents
+filter_presets:
+  immediate_deployment:
+    description: "Sources ready for immediate use (low complexity, no auth required)"
+    filters:
+      - "complexity_score: <=3"
+      - "authentication: none OR optional"
+      - "status: active_use OR adopted"
+    
+  enterprise_ready:
+    description: "Enterprise-grade sources with security and scalability"
+    filters:
+      - "rating: >=4"
+      - "enterprise_features: true"
+      - "security_compliance: high"
+    
+  development_friendly:
+    description: "Sources suitable for development and testing"
+    filters:
+      - "setup_complexity: low OR medium"
+      - "documentation_quality: good OR excellent"
+      - "developer_tools: true"
+    
+  production_ready:
+    description: "Sources validated for production use"
+    filters:
+      - "status: adopted OR active_use"
+      - "reliability_score: >=8"
+      - "maintenance_status: active"
+
+# Usage Patterns for AI Agents
+usage_patterns:
+  single_source_query:
+    description: "Query for specific information type"
+    query_format: "information_type:{category} AND filter_preset:{preset}"
+    example: "information_type:web_content AND filter_preset:immediate_deployment"
+    
+  multi_source_strategy:
+    description: "Identify multiple sources for redundancy"
+    query_format: "information_type:{category} ORDER BY rating_desc LIMIT 3"
+    example: "information_type:database_access ORDER BY rating_desc LIMIT 3"
+    
+  capability_discovery:
+    description: "Explore available capabilities for information gathering"
+    query_format: "has_information_capabilities:true AND status:active"
+    example: "List all active sources with documented information capabilities"
+    
+  fallback_identification:
+    description: "Find alternative sources when primary fails"
+    query_format: "information_type:{category} AND complexity_score:low"
+    example: "information_type:web_content AND complexity_score:low"
+
+# AI Agent Integration Instructions
+ai_agent_instructions:
+  view_access:
+    - "Use Read tool with path: knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+    - "Reference categories to understand information types available"
+    - "Apply filter_presets to narrow down sources based on requirements"
+    
+  source_selection:
+    - "Identify information need category (web_content, database_access, etc.)"
+    - "Apply appropriate filter_preset based on deployment requirements"
+    - "Sort by rating_desc for highest quality sources first"
+    - "Consider complexity_score for implementation effort estimation"
+    
+  integration_workflow:
+    - "Query view to identify candidate sources"
+    - "Review detailed profiles in tools_services/items/ for specific sources"
+    - "Check setup requirements and authentication needs"
+    - "Implement using highest-rated, lowest-complexity appropriate source"
+
+# Example Queries for Common Use Cases
+example_queries:
+  github_repo_analysis:
+    information_type: "version_control"
+    specific_source: "GitHub MCP Server"
+    capabilities: ["repository_access", "file_content", "commit_history"]
+    
+  real_time_web_monitoring:
+    information_type: "web_content"
+    filter_preset: "real_time_capable"
+    capabilities: ["url_monitoring", "change_detection", "content_extraction"]
+    
+  database_information_retrieval:
+    information_type: "database_access"  
+    filter_preset: "enterprise_ready"
+    capabilities: ["sql_queries", "structured_data", "real_time_access"]
+    
+  document_processing:
+    information_type: "file_systems"
+    filter_preset: "development_friendly"
+    capabilities: ["file_reading", "document_parsing", "format_conversion"]
+
+# Maintenance and Updates
+maintenance:
+  update_frequency: "monthly"
+  review_criteria:
+    - "New information access tags added to vocabulary"
+    - "Changes to MCP server capabilities"
+    - "Updates to filter presets based on usage patterns"
+    - "Performance feedback from AI agent usage"
+    
+  quality_metrics:
+    - "Accuracy of categorization by information type"
+    - "Effectiveness of filter presets for AI agent selection"
+    - "Coverage of available information sources"
+    - "Relevance of use case examples"

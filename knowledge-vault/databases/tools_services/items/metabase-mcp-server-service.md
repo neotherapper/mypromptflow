@@ -31,6 +31,7 @@ transport_protocols:
 - HTTP/HTTPS
 - WebSocket
 - REST API
+mcp_profile_reference: "@mcp_profile/metabase"
 ---
 
 **Open-source business intelligence and self-service analytics platform for data democratization**  

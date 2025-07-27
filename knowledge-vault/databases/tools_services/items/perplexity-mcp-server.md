@@ -28,6 +28,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/perplexity"
 ---
 
 **AI-powered research and real-time answers with source attribution for AI agents**  

@@ -19,6 +19,7 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/e2b"
 ---
 
 ## Header Classification

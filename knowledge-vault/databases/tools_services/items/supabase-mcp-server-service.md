@@ -30,6 +30,7 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
+mcp_profile_reference: "@mcp_profile/supabase"
 ---
 
 **Open-source Firebase alternative with PostgreSQL and real-time capabilities**  

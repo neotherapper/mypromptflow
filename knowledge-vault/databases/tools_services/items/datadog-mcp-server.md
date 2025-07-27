@@ -27,6 +27,7 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 2
+mcp_profile_reference: "@mcp_profile/datadog"
 ---
 
 **Infrastructure monitoring and observability platform integration for comprehensive system intelligence**  
