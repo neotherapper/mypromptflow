@@ -69,7 +69,7 @@ This project creates an intelligent Pull Request validation system that leverage
 
 **Quality Standards**: 
 - **Framework Compliance**: All agent instructions must achieve >90% effectiveness scores using validated assessment tools
-- **Constitutional AI Compliance**: 99% compliance required across all automated operations with ethical validation
+- **Constitutional AI Compliance**: Framework designed for 99% compliance across all automated operations with ethical validation
 - **Research Integration**: All implementation decisions must reference and apply research findings appropriately
 - **Self-Sufficiency**: Instructions must be self-contained and immediately actionable without external dependencies
 - **Performance Optimization**: Token optimization and sub-5-minute validation targets must be achieved
@@ -142,8 +142,14 @@ detection_layers:
 ```
 
 **Role-Aware Agent Spawning Logic:**
+*Integrates with unified source-discovery-framework.yaml*
+
 ```yaml
 spawning_conditions:
+  # UNIFIED FRAMEWORK INTEGRATION
+  framework_reference: "@meta/information-access/source-discovery-framework.yaml"
+  source_selection_algorithm: "source_selection_algorithm.step_2_mapping_selection"
+  
   claude_commands:
     file_pattern: ".claude/commands/*.md"
     content_validation: "Command structure verification"
@@ -154,41 +160,55 @@ spawning_conditions:
   react_frontend:
     file_pattern: "src/**/*.{ts,tsx,js,jsx}"
     context_check: "React dependencies in package.json"
+    # Uses unified framework technology mapping
+    framework_mapping: "technology_mappings.react"
     agent_role: "frontend-dev"
     agent: "react-frontend-validator"
     context_loading: "REQUEST_CONTEXT(react-frontend-dev)"
-    knowledge_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+    knowledge_source: "technology_mappings.react.pr_validation_context.knowledge_sources[1]"
+    information_sources: "technology_mappings.react.sources"
     parallel_safe: true
     depends_on: ["security-validator"]
     
   typescript_architecture:
     file_pattern: "src/**/*.{ts,tsx}"
     context_check: "TypeScript config and architecture files"
+    # Uses unified framework technology mapping
+    framework_mapping: "technology_mappings.typescript"
     agent_role: "architect"
     agent: "typescript-architect-validator"
     context_loading: "REQUEST_CONTEXT(typescript-architect)"
-    knowledge_source: "@knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
+    knowledge_source: "technology_mappings.typescript.pr_validation_context.knowledge_sources[0]"
+    information_sources: "technology_mappings.typescript.sources"
     parallel_safe: true
     depends_on: ["security-validator"]
     
   performance_assessment:
     file_pattern: "src/**/*.{ts,tsx,js,jsx}"
     context_check: "Performance-critical components or large bundles"
+    # Uses unified framework multi-technology mapping
+    framework_mappings: ["technology_mappings.react", "technology_mappings.typescript"]
     agent_role: "performance-specialist"
     agent: "performance-validator"
     context_loading: "REQUEST_CONTEXT(react-performance, typescript-performance)"
     knowledge_sources:
-      - "@knowledge-vault/knowledge/technologies/react/react-performance.md"
-      - "@knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"
+      - "technology_mappings.react.pr_validation_context.knowledge_sources[2]"
+      - "technology_mappings.typescript.pr_validation_context.knowledge_sources[2]"
+    information_sources: 
+      - "technology_mappings.react.sources"
+      - "technology_mappings.typescript.sources"
     parallel_safe: true
     depends_on: ["react-frontend-validator"]
     
   security_analysis:
     file_pattern: "**/*.{ts,tsx,js,jsx,py,md,yaml,json}"
+    # Uses unified framework category mapping for comprehensive security
+    framework_mapping: "category_mappings.frontend + category_mappings.backend + category_mappings.infrastructure"
     agent_role: "security-specialist"
     agent: "security-validator"
     context_loading: "REQUEST_CONTEXT(testing-security)"
-    knowledge_source: "@knowledge-vault/knowledge/technologies/testing/testing-security.md"
+    knowledge_source: "technology_mappings.react.pr_validation_context.knowledge_sources[3]"
+    information_sources: "category_mappings.*.pr_validation_roles security context"
     parallel_safe: true
     always_required: true
     
@@ -333,7 +353,7 @@ role_aware_contexts:
 
 **Constitutional AI Integration:**
 - **Principle Definition**: Accuracy, completeness, consistency, ethical compliance for all validation operations
-- **Validation Procedures**: Automated principle scoring with 99% compliance threshold
+- **Validation Procedures**: Automated principle scoring with framework designed for 99% compliance threshold
 - **Self-Correction**: 3-iteration maximum with escalation for non-compliance
 
 **Framework Effectiveness Assessment:**
@@ -351,7 +371,7 @@ Based on validated assessment tools in `@meta/validators/` (extracted from frame
 - **Validation Accuracy**: >95% accuracy with <10% false positive rates for multi-role validation
 - **Context Optimization**: Full knowledge access without token constraints, leveraging comprehensive role-specific contexts
 - **Comprehensive Context Loading**: Unlimited access to role-aware knowledge management with REQUEST_CONTEXT() patterns
-- **Constitutional Compliance**: 99% compliance across all automated operations and role-based validations
+- **Constitutional Compliance**: Framework designed for 99% compliance across all automated operations and role-based validations
 - **Role Coverage**: Comprehensive validation across architect, frontend-dev, performance, and security specialist perspectives
 - **Knowledge Currency**: Real-time access to latest technology patterns and best practices through knowledge vault integration
 
@@ -448,7 +468,7 @@ Based on validated assessment tools in `@meta/validators/` (extracted from frame
 **Quality Validation Checklist:**
 - [ ] **Framework Compliance**: All agent instructions achieve >90% effectiveness using assessment tools
 - [ ] **Research Integration**: Implementation decisions reference and apply research findings appropriately  
-- [ ] **Constitutional AI**: 99% compliance validated across all automated operations
+- [ ] **Constitutional AI**: Framework designed for 99% compliance across all automated operations
 - [ ] **Performance Targets**: Sub-5-minute validation with 60-70% token optimization achieved
 - [ ] **Self-Sufficiency**: All components self-contained and immediately actionable
 
