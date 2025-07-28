@@ -1,0 +1,431 @@
+# MCP Server Information Capabilities Metadata
+# Enhanced metadata for 5 pilot servers integrating with meta/information-access framework
+# Generated from Phase 2: Information Access Integration analysis
+
+version: "2.0.0"
+generated_date: "2025-07-27"
+integration_status: "production_ready"
+
+servers:
+  github_mcp:
+    name: "GitHub MCP Server"
+    tier: "tier_1"
+    composite_score: 9.40
+    information_capabilities:
+      information_types:
+        - "version_control"
+        - "project_management"  # Limited - issues only
+        - "collaboration"       # Limited - discussions, wikis
+      
+      access_patterns:
+        - "real_time"          # API responses, webhooks
+        - "batch"              # Repository cloning, bulk operations
+        - "on_demand"          # File access, issue queries
+        - "webhook"            # Event-driven updates
+      
+      authentication_methods:
+        - "api_key"            # Personal Access Tokens
+        - "oauth"              # GitHub Apps, OAuth flow
+        - "certificate"        # GitHub App private keys
+      
+      performance_metrics:
+        avg_latency_ms: 180
+        throughput_per_hour: 5000
+        reliability_percentage: 99
+      
+      setup_requirements:
+        complexity_score: 4
+        estimated_setup_time_minutes: 35
+        prerequisites:
+          - "GitHub account with repository access"
+          - "Personal Access Token or GitHub App"
+          - "Network access to api.github.com"
+      
+      integration_points:
+        decision_tree_category: "version_control"
+        fallback_options:
+          - "direct_github_api"
+          - "local_git_commands"
+        monitoring_requirements:
+          - "API rate limit utilization"
+          - "Authentication token validity"
+          - "Repository access permissions"
+          - "Webhook delivery success rates"
+    
+    information_access_scoring:
+      version_control:
+        capability_match: 10
+        setup_simplicity: 6
+        performance: 9
+        reliability: 10
+        auth_complexity: 6
+        rate_limits: 8
+        total_score: 9.4
+      
+      project_management:
+        capability_match: 6
+        setup_simplicity: 6
+        performance: 9
+        reliability: 10
+        auth_complexity: 6
+        rate_limits: 8
+        total_score: 7.1
+
+  docker_mcp:
+    name: "Docker MCP Server"
+    tier: "tier_1"
+    composite_score: 8.70
+    information_capabilities:
+      information_types:
+        - "infrastructure"
+        - "containerization"
+        - "deployment"
+        - "monitoring"          # Limited - container health
+      
+      access_patterns:
+        - "real_time"          # Container status, health checks
+        - "batch"              # Image operations, multi-container deployments
+        - "on_demand"          # Container inspection, logs
+        - "streaming"          # Log streaming, events
+      
+      authentication_methods:
+        - "none"               # Local Unix socket
+        - "certificate"        # TLS for remote Docker daemon
+        - "basic_auth"         # Docker registry authentication
+      
+      performance_metrics:
+        avg_latency_ms: 85
+        throughput_per_hour: 10000  # Local operations
+        reliability_percentage: 95
+      
+      setup_requirements:
+        complexity_score: 3
+        estimated_setup_time_minutes: 20
+        prerequisites:
+          - "Docker daemon running and accessible"
+          - "Appropriate user permissions for Docker socket"
+          - "Network access for registry operations"
+      
+      integration_points:
+        decision_tree_category: "infrastructure"
+        fallback_options:
+          - "direct_docker_cli"
+          - "kubernetes_api"
+        monitoring_requirements:
+          - "Docker daemon health"
+          - "Container resource utilization"
+          - "Image registry availability"
+          - "Volume and network status"
+    
+    information_access_scoring:
+      infrastructure:
+        capability_match: 10
+        setup_simplicity: 7
+        performance: 9
+        reliability: 8
+        auth_complexity: 9
+        rate_limits: 10
+        total_score: 8.7
+      
+      monitoring:
+        capability_match: 7
+        setup_simplicity: 7
+        performance: 9
+        reliability: 8
+        auth_complexity: 9
+        rate_limits: 10
+        total_score: 7.8
+
+  postgresql_mcp:
+    name: "PostgreSQL MCP Server"
+    tier: "tier_1"
+    composite_score: 9.00
+    information_capabilities:
+      information_types:
+        - "database_access"
+        - "analytics"
+        - "business_data"
+        - "user_data"
+      
+      access_patterns:
+        - "real_time"          # Live queries, transactions
+        - "batch"              # ETL operations, bulk inserts
+        - "streaming"          # Change data capture, logical replication
+        - "on_demand"          # Ad-hoc queries, reporting
+      
+      authentication_methods:
+        - "basic_auth"         # Username/password
+        - "certificate"        # SSL certificates
+        - "saml"               # Enterprise SSO
+      
+      performance_metrics:
+        avg_latency_ms: 45
+        throughput_per_hour: 36000000  # 10k queries/second
+        reliability_percentage: 99
+      
+      setup_requirements:
+        complexity_score: 5
+        estimated_setup_time_minutes: 25
+        prerequisites:
+          - "PostgreSQL database server accessible"
+          - "Database credentials with appropriate permissions"
+          - "SSL configuration for secure connections"
+          - "Connection pooling configuration"
+      
+      integration_points:
+        decision_tree_category: "database_access"
+        fallback_options:
+          - "direct_postgresql_driver"
+          - "database_rest_api"
+        monitoring_requirements:
+          - "Connection pool utilization"
+          - "Query performance metrics"
+          - "Database server health"
+          - "Lock contention monitoring"
+    
+    information_access_scoring:
+      database_access:
+        capability_match: 10
+        setup_simplicity: 5
+        performance: 10
+        reliability: 9
+        auth_complexity: 5
+        rate_limits: 10
+        total_score: 9.0
+      
+      analytics:
+        capability_match: 9
+        setup_simplicity: 5
+        performance: 9
+        reliability: 9
+        auth_complexity: 5
+        rate_limits: 10
+        total_score: 8.6
+
+  notion_mcp:
+    name: "Notion MCP Server"
+    tier: "tier_2"
+    composite_score: 7.80
+    information_capabilities:
+      information_types:
+        - "knowledge_management"
+        - "structured_data"    # Notion databases
+        - "collaboration"      # Comments, sharing
+        - "documentation"
+      
+      access_patterns:
+        - "on_demand"          # Page and database queries
+        - "batch"              # Database operations
+        - "real_time"          # Limited - webhooks for updates
+      
+      authentication_methods:
+        - "oauth"              # OAuth 2.0 flow
+        - "api_key"            # Internal integrations
+      
+      performance_metrics:
+        avg_latency_ms: 450
+        throughput_per_hour: 10800  # 3 requests/second limit
+        reliability_percentage: 95
+      
+      setup_requirements:
+        complexity_score: 6
+        estimated_setup_time_minutes: 40
+        prerequisites:
+          - "Notion workspace with admin permissions"
+          - "OAuth application registration"
+          - "Workspace integration approval"
+          - "Rate limiting strategy implementation"
+      
+      integration_points:
+        decision_tree_category: "knowledge_management"
+        fallback_options:
+          - "direct_notion_api"
+          - "local_markdown_files"
+        monitoring_requirements:
+          - "API rate limit consumption"
+          - "OAuth token expiration"
+          - "Workspace permission changes"
+          - "Integration status monitoring"
+    
+    information_access_scoring:
+      knowledge_management:
+        capability_match: 9
+        setup_simplicity: 4
+        performance: 6
+        reliability: 8
+        auth_complexity: 4
+        rate_limits: 3
+        total_score: 7.8
+      
+      structured_data:
+        capability_match: 8
+        setup_simplicity: 4
+        performance: 6
+        reliability: 8
+        auth_complexity: 4
+        rate_limits: 3
+        total_score: 7.1
+
+  linear_mcp:
+    name: "Linear MCP Server"
+    tier: "tier_1"
+    composite_score: 8.35
+    information_capabilities:
+      information_types:
+        - "project_management"
+        - "issue_tracking"
+        - "team_productivity"
+        - "development_workflows"
+      
+      access_patterns:
+        - "real_time"          # GraphQL subscriptions
+        - "on_demand"          # Issue and project queries
+        - "batch"              # Bulk issue operations
+        - "webhook"            # Status change notifications
+      
+      authentication_methods:
+        - "api_key"            # Linear API tokens
+        - "oauth"              # OAuth for third-party apps
+      
+      performance_metrics:
+        avg_latency_ms: 280
+        throughput_per_hour: 1000
+        reliability_percentage: 98
+      
+      setup_requirements:
+        complexity_score: 5
+        estimated_setup_time_minutes: 30
+        prerequisites:
+          - "Linear workspace access"
+          - "API token with appropriate scopes"
+          - "Team and project permissions"
+          - "GraphQL query optimization understanding"
+      
+      integration_points:
+        decision_tree_category: "project_management"
+        fallback_options:
+          - "direct_linear_api"
+          - "github_issues_integration"
+        monitoring_requirements:
+          - "API token validity and permissions"
+          - "GraphQL query performance"
+          - "Workspace access status"
+          - "Integration webhook delivery"
+    
+    information_access_scoring:
+      project_management:
+        capability_match: 9
+        setup_simplicity: 5
+        performance: 8
+        reliability: 9
+        auth_complexity: 5
+        rate_limits: 7
+        total_score: 8.35
+      
+      team_productivity:
+        capability_match: 8
+        setup_simplicity: 5
+        performance: 8
+        reliability: 9
+        auth_complexity: 5
+        rate_limits: 7
+        total_score: 7.8
+
+# Cross-Server Integration Patterns
+integration_patterns:
+  multi_source_coordination:
+    github_linear:
+      pattern: "development_workflow"
+      coordination_method: "issue_branch_correlation"
+      data_correlation_keys: ["issue_number", "branch_name", "commit_reference"]
+      expected_latency_ms: 650  # Combined latency
+      
+    postgresql_notion:
+      pattern: "business_intelligence"
+      coordination_method: "data_documentation_sync"
+      data_correlation_keys: ["record_id", "page_id", "database_name"]
+      expected_latency_ms: 520
+      
+    docker_github:
+      pattern: "deployment_tracking"
+      coordination_method: "container_commit_correlation"
+      data_correlation_keys: ["commit_sha", "container_image_tag", "deployment_id"]
+      expected_latency_ms: 300
+
+  fallback_chains:
+    version_control:
+      primary: "github_mcp"
+      secondary: "direct_github_api"
+      tertiary: "local_git_commands"
+      
+    database_access:
+      primary: "postgresql_mcp"
+      secondary: "direct_postgresql_driver"
+      tertiary: "database_rest_api"
+      
+    knowledge_management:
+      primary: "notion_mcp"
+      secondary: "direct_notion_api"
+      tertiary: "local_markdown_files"
+      
+    project_management:
+      primary: "linear_mcp"
+      secondary: "direct_linear_api"
+      tertiary: "github_issues"
+      
+    infrastructure:
+      primary: "docker_mcp"
+      secondary: "direct_docker_cli"
+      tertiary: "kubernetes_api"
+
+# Automated Selection Configuration
+selection_configuration:
+  algorithm_version: "2.0.0"
+  
+  scoring_weights:
+    capability_match: 0.30
+    setup_simplicity: 0.20
+    performance: 0.18
+    reliability: 0.15
+    auth_complexity: 0.10
+    rate_limits: 0.07
+  
+  selection_thresholds:
+    minimum_score: 6.0
+    optimal_score: 8.0
+    excellent_score: 9.0
+  
+  performance_targets:
+    selection_accuracy: 0.95
+    response_time_improvement: 0.40
+    fallback_success_rate: 0.90
+    
+  monitoring_intervals:
+    performance_check_minutes: 15
+    availability_check_minutes: 5
+    auth_validation_hours: 24
+    
+# Usage Analytics Schema
+usage_analytics:
+  tracking_fields:
+    - "server_selection_timestamp"
+    - "information_type_requested"
+    - "selected_server_name"
+    - "selection_score"
+    - "actual_response_time_ms"
+    - "success_status"
+    - "fallback_triggered"
+    - "error_category"
+    
+  performance_metrics:
+    - "average_selection_accuracy"
+    - "mean_response_time_by_server"
+    - "server_availability_percentage" 
+    - "fallback_execution_success_rate"
+    - "authentication_failure_rate"
+    
+  optimization_triggers:
+    - "selection_accuracy_below_threshold"
+    - "response_time_degradation"
+    - "high_fallback_usage"
+    - "authentication_issues"
