@@ -6,7 +6,7 @@
 
 - Follow task completion protocol when completing tasks: `ai/workflows/task-management/CLAUDE.md`
 - Apply development protocols when doing development work: `development/CLAUDE.md`
-- Validate using meta framework when validating instructions: `meta/validation/validators/ai-instruction/`
+- Validate using focused validators: `ai-instruction-validator`, `framework-compliance-validator`, `file-type-validator`
 
 ## Essential Constraints
 
@@ -125,7 +125,8 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 - Tasks: `ai/workflows/task-management/CLAUDE.md`
 - Development: `development/CLAUDE.md`
-- Validation: `meta/validation/validators/ai-instruction/`
+- Validation: `ai-instruction-validator.md`, `framework-compliance-validator.md`, `file-type-validator.md`
+- Task Coordination: `task-coordinator.md`, `project-manager.md`
 - Commands: `.claude/commands/*`
 - Information Access: `meta/information-access/agent-usage-guide.md`
 

@@ -24,7 +24,7 @@ This document summarizes the comprehensive implementation of sub-agents complian
 | `framework-compliance-validator.md` | Framework compliance checking | Read, Grep, Glob | 90+/100 |
 | `file-type-validator.md` | File validation patterns only | Read, Grep, Glob, Bash | 90+/100 |
 
-**Status**: ✅ All 3 agents created, original marked as DEPRECATED
+**Status**: ✅ All 3 agents created, validation-expert deprecated
 
 #### 1.2 Project Coordinator Split (72/100 → 85+/100)
 **Problem**: Broad scope approaching "do-everything" management pattern
@@ -35,7 +35,7 @@ This document summarizes the comprehensive implementation of sub-agents complian
 | `task-coordinator.md` | TodoWrite and task management | Read, Write, TodoWrite | 85+/100 |
 | `project-manager.md` | Project-level coordination | Read, Edit, MultiEdit | 85+/100 |
 
-**Status**: ✅ Both agents created, original marked as DEPRECATED
+**Status**: ✅ Both agents created, project-coordinator deprecated
 
 ### Phase 2: Framework Validator Consolidation ✅ COMPLETED
 
@@ -76,8 +76,8 @@ This document summarizes the comprehensive implementation of sub-agents complian
 | **NEW: `file-type-validator.md`** | ✅ Active | 90+/100 | ✅ Excellent | ✅ Yes |
 | **NEW: `task-coordinator.md`** | ✅ Active | 85+/100 | ✅ Excellent | ✅ Yes |
 | **NEW: `project-manager.md`** | ✅ Active | 85+/100 | ✅ Excellent | ✅ Yes |
-| `validation-expert.md` | ⚠️ DEPRECATED | 68/100 | ❌ Violated SRP | ⚠️ Replaced |
-| `project-coordinator.md` | ⚠️ DEPRECATED | 72/100 | ⚠️ Too Broad | ⚠️ Split |
+| `validation-expert.md` | ❌ DEPRECATED | 68/100 | ❌ Violated SRP | ❌ Split into 3 specialists |
+| `project-coordinator.md` | ❌ DEPRECATED | 72/100 | ❌ Too Broad | ❌ Split into 2 specialists |
 
 ### Summary Statistics
 

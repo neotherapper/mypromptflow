@@ -2,9 +2,9 @@
 
 ## Executive Summary
 
-The `knowledge-vault-manager.md` agent has a compliance score of **78/100** and is classified as **"ACCEPTABLE COMPLEXITY"** despite its sophisticated scope. This document provides comprehensive rationale for why this complexity is justified and how it differs from problematic "kitchen sink" anti-patterns exemplified by the `validation-expert.md` agent.
+The `knowledge-vault-manager.md` agent has a compliance score of **78/100** and is classified as **"ACCEPTABLE COMPLEXITY"** despite its sophisticated scope. This document provides comprehensive rationale for why this complexity is justified and how it differs from problematic "kitchen sink" anti-patterns exemplified by the deprecated `validation-expert.md` agent (now split into focused specialists).
 
-**Key Finding**: The knowledge-vault-manager demonstrates **single coherent domain focus** with all capabilities serving knowledge-vault operations, contrasting sharply with the validation-expert's **multiple unrelated domains** approach.
+**Key Finding**: The knowledge-vault-manager demonstrates **single coherent domain focus** with all capabilities serving knowledge-vault operations, contrasting sharply with the deprecated validation-expert's **multiple unrelated domains** approach (now properly split into ai-instruction-validator, framework-compliance-validator, and file-type-validator).
 
 ## Complexity Analysis Framework
 
@@ -284,7 +284,7 @@ complexity_audit:
    - Measure cross-reference management effectiveness
 
 3. **Boundary Maintenance**:
-   - Regular comparison with validation-expert anti-pattern
+   - Regular comparison with deprecated validation-expert anti-pattern (avoided through focused specialists)
    - Clear documentation of knowledge-vault vs general data management
    - Stakeholder education on appropriate agent usage
 
@@ -310,7 +310,7 @@ The knowledge-vault-manager agent demonstrates **justified complexity** through:
 3. **Clear Boundaries**: Obvious scope separation from other data management tasks
 4. **Tool Specialization**: Each tool serves multiple integrated functions within the knowledge domain
 
-This contrasts sharply with the validation-expert anti-pattern, which spans multiple unrelated domains without integration benefits. The knowledge-vault-manager's complexity is **architectural necessity**, not **scope creep**.
+This contrasts sharply with the deprecated validation-expert anti-pattern (now properly split into ai-instruction-validator, framework-compliance-validator, and file-type-validator), which spanned multiple unrelated domains without integration benefits. The knowledge-vault-manager's complexity is **architectural necessity**, not **scope creep**.
 
 **Verdict**: **COMPLEXITY APPROVED** with ongoing monitoring to prevent scope creep and maintain domain coherence.
 

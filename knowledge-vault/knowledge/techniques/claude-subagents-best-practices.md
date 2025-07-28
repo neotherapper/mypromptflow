@@ -185,7 +185,7 @@ cp generated-agent.md .claude/agents/db-performance.md
 claude "refine the db-performance sub-agent based on this usage feedback..."
 
 # 4. Validate Against Best Practices
-# Use meta/validation/validators/file-type/claude-agents-validator.md
+# Use .claude/agents/claude-agent-validator.md for configuration validation
 ```
 
 **Refinement Focus Areas**:
@@ -322,7 +322,9 @@ description: "Helps with development tasks and other stuff"
 agents:
   - name: "code-reviewer"
   - name: "quality-checker"    # Overlaps with code-reviewer
-  - name: "validation-expert"  # Overlaps with both above
+  - name: "ai-instruction-validator"  # Better: Focused AI instruction validation
+  - name: "framework-compliance-validator"  # Better: Focused framework compliance
+  - name: "file-type-validator"  # Better: Focused file type validation
 ```
 
 ### Usage Anti-Patterns
