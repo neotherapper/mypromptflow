@@ -1,0 +1,450 @@
+# SDLC Subagent Registry
+# Comprehensive catalog of specialized AI subagents for 6-stage SDLC workflow
+
+registry_version: "1.0.0"
+created_date: "2025-01-28"
+last_updated: "2025-01-28"
+total_subagents: 7
+
+# Registry Overview
+overview:
+  purpose: "Specialized AI subagents for maritime insurance platform SDLC workflow"
+  architecture: "6-stage SDLC with domain-specific expertise integration"
+  technology_stack: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL", "AWS"]
+  domain_focus: "Maritime insurance platform development"
+  integration_tools: ["WorkOS", "JIRA", "Sentry"]
+
+# SDLC Workflow Mapping
+sdlc_stages:
+  stage_1:
+    name: "Business Ideation & Requirements"
+    description: "Convert business ideas into structured technical requirements"
+    primary_subagent: "requirements-analyst"
+    supporting_subagents: []
+    
+  stage_2:
+    name: "Design & Architecture"  
+    description: "Create UI/UX designs and technical architecture specifications"
+    primary_subagents: ["ui-ux-specialist", "system-architect"]
+    supporting_subagents: []
+    coordination_required: true
+    
+  stage_3:
+    name: "Development Planning"
+    description: "Optimize team capacity and sprint planning with resource allocation"
+    primary_subagent: "capacity-planner"
+    supporting_subagents: []
+    
+  stage_4:
+    name: "Implementation"
+    description: "Coordinate development execution with quality enforcement"
+    primary_subagent: "implementation-lead"
+    supporting_subagents: []
+    
+  stage_5:
+    name: "Testing & Quality Assurance"
+    description: "Execute comprehensive testing and quality validation"
+    primary_subagent: "qa-specialist"
+    supporting_subagents: []
+    
+  stage_6:
+    name: "Deployment & Monitoring"
+    description: "Manage production deployments and monitoring setup"
+    primary_subagent: "deployment-coordinator"
+    supporting_subagents: []
+
+# Subagent Catalog
+subagents:
+  requirements-analyst:
+    name: "Requirements Analyst"
+    file: "requirements-analyst.md"
+    sdlc_stage: 1
+    priority: "high"
+    environment: "production"
+    team: "product"
+    
+    description: "Business requirements analysis specialist for SDLC Stage 1. Converts natural language requirements into structured technical specifications with JIRA integration and feasibility assessment."
+    
+    core_capabilities:
+      - "Natural language requirement extraction and formalization"
+      - "User story generation with acceptance criteria"
+      - "Automated JIRA Epic and Story creation"
+      - "Technical and business feasibility assessment"
+      - "Maritime insurance domain expertise"
+      - "Stakeholder communication and validation"
+    
+    tools: ["Read", "Grep", "Glob", "WebSearch", "Task"]
+    
+    integration_patterns:
+      - "JIRA automation for Epic/Story creation"
+      - "WorkOS integration for stakeholder management"  
+      - "Requirements handoff to design stage"
+    
+    success_metrics:
+      - "Requirements clarity score ≥4.5/5.0"
+      - "Feasibility assessment accuracy ±15%"
+      - "JIRA automation efficiency (60% time reduction)"
+      - "Stage handoff quality ≥4.0/5.0"
+
+  ui-ux-specialist:
+    name: "UI/UX Specialist"
+    file: "ui-ux-specialist.md"
+    sdlc_stage: 2
+    priority: "high"
+    environment: "production"
+    team: "design"
+    
+    description: "UI/UX design specialist for SDLC Stage 2. Handles Figma integration, design system management, and design-to-code conversion with React component specifications."
+    
+    core_capabilities:
+      - "User-centered design with persona development"
+      - "Figma integration and design system management"
+      - "Maritime insurance UI pattern specialization"
+      - "Accessibility compliance (WCAG AA standards)"
+      - "React component specification generation"
+      - "Design-to-development handoff optimization"
+    
+    tools: ["Read", "Grep", "Glob", "WebSearch", "Task"]
+    
+    integration_patterns:
+      - "Figma workflow integration and asset export"
+      - "Design system component library management"
+      - "Parallel coordination with system-architect"
+      - "Developer handoff with technical specifications"
+    
+    success_metrics:
+      - "User satisfaction score ≥4.5/5.0"
+      - "Design system compliance ≥95%"
+      - "Accessibility compliance 100%"
+      - "Developer handoff satisfaction ≥4.2/5.0"
+
+  system-architect:
+    name: "System Architect"
+    file: "system-architect.md"
+    sdlc_stage: 2
+    priority: "high"
+    environment: "production"
+    team: "architecture"
+    
+    description: "Technical system architecture specialist for SDLC Stage 2. Creates comprehensive technical architecture plans with React frontend, FastAPI backend, and AWS infrastructure integration."
+    
+    core_capabilities:
+      - "Comprehensive technical architecture design"
+      - "AWS cloud infrastructure planning"
+      - "React/FastAPI/PostgreSQL stack optimization"
+      - "Security architecture and compliance framework"
+      - "Integration architecture for WorkOS/JIRA/Sentry"
+      - "Performance and scalability planning"
+    
+    tools: ["Read", "Grep", "Glob", "WebSearch", "Task"]
+    
+    integration_patterns:
+      - "AWS infrastructure as code (CDK/TypeScript)"
+      - "API design and documentation automation"
+      - "Security framework integration"
+      - "Parallel coordination with ui-ux-specialist"
+    
+    success_metrics:
+      - "System availability ≥99.9%"
+      - "API response time ≤500ms (95th percentile)"
+      - "Security vulnerability count = 0 critical"
+      - "Architecture implementation timeline ≥95%"
+
+  capacity-planner:
+    name: "Capacity Planner"
+    file: "capacity-planner.md"
+    sdlc_stage: 3
+    priority: "high"
+    environment: "production"
+    team: "management"
+    
+    description: "Sprint planning and capacity management specialist for SDLC Stage 3. Provides AI-assisted capacity planning with skill-based task assignment and JIRA automation for optimal team productivity."
+    
+    core_capabilities:
+      - "AI-enhanced capacity planning and optimization"
+      - "Skill-based task assignment algorithms"
+      - "4-person team capacity modeling"
+      - "JIRA sprint automation and workflow management"
+      - "Predictive velocity forecasting"
+      - "Resource optimization and workload balancing"
+    
+    tools: ["Read", "Grep", "Glob", "Task"]
+    
+    integration_patterns:
+      - "JIRA sprint creation and task automation"
+      - "Team capacity calculation and optimization"
+      - "Skill-matching algorithm for task assignment"
+      - "Cross-functional coordination planning"
+    
+    success_metrics:
+      - "Sprint goal achievement rate ≥90%"
+      - "Effort estimation accuracy within ±15%"
+      - "Team capacity utilization 85-95%"
+      - "Workload satisfaction score ≥4.0/5.0"
+
+  implementation-lead:
+    name: "Implementation Lead"
+    file: "implementation-lead.md"
+    sdlc_stage: 4
+    priority: "high"
+    environment: "production"
+    team: "engineering"
+    
+    description: "Implementation coordination specialist for SDLC Stage 4. Orchestrates development execution with code quality enforcement, progress tracking, and team collaboration optimization."
+    
+    core_capabilities:
+      - "Development execution coordination and management"  
+      - "Code quality enforcement and review orchestration"
+      - "Cross-functional team collaboration optimization"
+      - "React/TypeScript and FastAPI/Python implementation standards"
+      - "CI/CD pipeline integration and quality gates"
+      - "Technical risk management and issue resolution"
+    
+    tools: ["Read", "Edit", "MultiEdit", "Bash", "Grep", "Glob", "Task"]
+    
+    integration_patterns:
+      - "Code review process automation and quality gates"
+      - "GitHub integration for progress tracking"
+      - "Cross-team coordination (frontend/backend/design)"
+      - "Continuous integration and automated testing"
+    
+    success_metrics:
+      - "Sprint commitment completion rate ≥95%"
+      - "Code quality score ≥8.5/10"
+      - "Test coverage ≥85% for new code"
+      - "Technical team collaboration ≥4.3/5.0"
+
+  qa-specialist:
+    name: "QA Specialist"
+    file: "qa-specialist.md"
+    sdlc_stage: 5
+    priority: "high"
+    environment: "production"
+    team: "quality"
+    
+    description: "Quality assurance and testing specialist for SDLC Stage 5. Orchestrates comprehensive testing strategies, automated quality validation, and performance optimization with security compliance verification."
+    
+    core_capabilities:
+      - "Comprehensive testing strategy development and execution"
+      - "Automated quality validation and performance testing"
+      - "Security testing and compliance verification"
+      - "User acceptance testing coordination"
+      - "Maritime insurance domain testing patterns"
+      - "Quality metrics dashboard and reporting"
+    
+    tools: ["Read", "Bash", "Grep", "Glob", "Task"]
+    
+    integration_patterns:
+      - "Automated testing pipeline integration"
+      - "Performance monitoring and baseline establishment"
+      - "Security validation and compliance checking"
+      - "Stakeholder UAT coordination and approval"
+    
+    success_metrics:
+      - "Test coverage ≥85% unit, ≥70% integration"
+      - "Defect detection rate ≥95%"
+      - "Performance benchmark achievement ≥95%"
+      - "User acceptance testing approval ≥98%"
+
+  deployment-coordinator:
+    name: "Deployment Coordinator"
+    file: "deployment-coordinator.md"
+    sdlc_stage: 6
+    priority: "high"
+    environment: "production"
+    team: "devops"
+    
+    description: "Deployment and monitoring specialist for SDLC Stage 6. Manages CI/CD pipeline automation, production deployments, and comprehensive monitoring setup with Sentry integration."
+    
+    core_capabilities:
+      - "Production deployment orchestration and automation"
+      - "Zero-downtime deployment strategies"
+      - "Comprehensive monitoring and alerting setup"
+      - "Rollback procedures and incident response"
+      - "AWS infrastructure management and optimization"
+      - "Sentry integration for error tracking and performance"
+    
+    tools: ["Read", "Bash", "Grep", "Glob", "Task"]
+    
+    integration_patterns:
+      - "CI/CD pipeline automation and quality gates"
+      - "AWS infrastructure deployment and management"
+      - "Sentry monitoring and alerting configuration"
+      - "Production performance and availability tracking"
+    
+    success_metrics:
+      - "Deployment success rate ≥99.5%"
+      - "Application uptime ≥99.9%"
+      - "Mean time to recovery ≤15 minutes"
+      - "Zero-downtime deployment achievement ≥95%"
+
+# Cross-Stage Integration Patterns
+cross_stage_integration:
+  stage_1_to_2:
+    name: "Requirements to Design Handoff"
+    participants: ["requirements-analyst", "ui-ux-specialist", "system-architect"]
+    deliverables:
+      - "Validated requirements specification"
+      - "User personas and journey maps"
+      - "Technical architecture constraints"
+    quality_gates:
+      - "Stakeholder approval ≥95%"
+      - "Feasibility validation complete"
+      - "JIRA structure created"
+  
+  stage_2_to_3:
+    name: "Design to Planning Handoff"
+    participants: ["ui-ux-specialist", "system-architect", "capacity-planner"]
+    deliverables:
+      - "High-fidelity designs with specifications"
+      - "Technical architecture documentation"
+      - "Implementation complexity assessment"
+    quality_gates:
+      - "Design system compliance ≥95%"
+      - "Architecture approval documented"
+      - "Technical feasibility confirmed"
+  
+  stage_3_to_4:
+    name: "Planning to Implementation Handoff"
+    participants: ["capacity-planner", "implementation-lead"]
+    deliverables:
+      - "Sprint plan with task assignments"
+      - "Team capacity allocation"
+      - "Development environment setup"
+    quality_gates:
+      - "Sprint plan approved"
+      - "Capacity validated"
+      - "Team alignment confirmed"
+  
+  stage_4_to_5:
+    name: "Implementation to Testing Handoff"
+    participants: ["implementation-lead", "qa-specialist"]
+    deliverables:
+      - "Feature implementation complete"
+      - "Code review approved"
+      - "Integration testing passed"
+    quality_gates:
+      - "Feature completion verified"
+      - "Code quality standards met"
+      - "Integration issues resolved"
+  
+  stage_5_to_6:
+    name: "Testing to Deployment Handoff"
+    participants: ["qa-specialist", "deployment-coordinator"]
+    deliverables:
+      - "Quality certification complete"
+      - "Performance baselines established"
+      - "Security validation passed"
+    quality_gates:
+      - "All testing phases passed"
+      - "Performance benchmarks met"
+      - "Security compliance verified"
+
+# Usage Patterns
+usage_patterns:
+  individual_subagent:
+    description: "Activate single subagent for specific SDLC stage work"
+    command_pattern: "Task with specific subagent and stage context"
+    use_cases:
+      - "Requirements analysis for new feature"
+      - "UI/UX design for specific workflow"
+      - "Capacity planning for upcoming sprint"
+  
+  stage_coordination:
+    description: "Coordinate multiple subagents within single SDLC stage"
+    command_pattern: "/sdlc-orchestrate [stage] [deliverable]"
+    use_cases:
+      - "Design stage with UI/UX and architecture coordination"
+      - "Cross-functional implementation coordination"
+      - "Comprehensive testing and quality validation"
+  
+  full_workflow:
+    description: "Complete 6-stage SDLC workflow orchestration"
+    command_pattern: "/sdlc-orchestrate workflow [feature-name]"
+    use_cases:
+      - "End-to-end feature development lifecycle"
+      - "New product capability development"
+      - "Major system integration projects"
+  
+  cross_stage_transitions:
+    description: "Manage stage transitions and quality gates"
+    command_pattern: "/sdlc-orchestrate cross-stage [transition]"
+    use_cases:
+      - "Requirements to design transition validation"
+      - "Implementation to testing handoff coordination"
+      - "Quality gate compliance verification"
+
+# Integration with Existing Commands
+command_integration:
+  sdlc_validate_pr:
+    file: ".claude/commands/sdlc-validate-pr.md"
+    purpose: "SDLC-enhanced PR validation with stage-specific quality gates"
+    integration: "Automatically detects and activates relevant SDLC subagents based on PR content"
+    
+  sdlc_orchestrate:
+    file: ".claude/commands/sdlc-orchestrate.md"
+    purpose: "SDLC-aware agent orchestration for workflow coordination"
+    integration: "Orchestrates subagents across stages with dependency management"
+
+# Shared Resources
+shared_resources:
+  instruction_libraries:
+    - "security-validation-core.md": "OWASP Top 10 compliance and security patterns"
+    - "code-review-criteria.md": "Code quality standards and review guidelines"
+    - "orchestration-patterns.md": "Multi-agent coordination and result aggregation"
+    - "mcp-integration-patterns.md": "WorkOS, JIRA, and Sentry integration workflows"
+  
+  integration_tools:
+    - "WorkOS": "Authentication and organization management"
+    - "JIRA": "Project management and sprint automation"
+    - "Sentry": "Error tracking and performance monitoring"
+
+# Maritime Insurance Domain Expertise
+domain_expertise:
+  regulatory_compliance:
+    - "Lloyd's of London standards and practices"
+    - "IMO (International Maritime Organization) requirements"
+    - "Maritime insurance regulatory compliance"
+    - "Data privacy and security requirements (GDPR)"
+  
+  business_processes:
+    - "Policy underwriting and risk assessment workflows"
+    - "Claims processing and settlement procedures"
+    - "Vessel inspection and survey requirements"
+    - "Premium calculation and actuarial analysis"
+  
+  technical_requirements:
+    - "High availability and disaster recovery"
+    - "Financial calculation accuracy and precision"
+    - "Audit logging and compliance reporting"
+    - "Integration with maritime data providers"
+
+# Quality Standards
+quality_standards:
+  code_quality:
+    - "TypeScript strict mode with comprehensive typing"
+    - "Python PEP compliance with Black/Ruff formatting"
+    - "Test coverage ≥85% unit, ≥70% integration"
+    - "Security vulnerability count = 0 critical"
+  
+  documentation:
+    - "Comprehensive API documentation with OpenAPI"
+    - "Component documentation with usage examples"
+    - "Architecture decision records (ADRs)"
+    - "Deployment and operational runbooks"
+  
+  performance:
+    - "API response time ≤500ms (95th percentile)"
+    - "Frontend load times ≤2 seconds"
+    - "Database query performance ≤100ms average"
+    - "Application availability ≥99.9%"
+
+# Version History
+version_history:
+  v1.0.0:
+    date: "2025-01-28"
+    changes:
+      - "Initial release with 7 specialized SDLC subagents"
+      - "Complete 6-stage SDLC workflow coverage"
+      - "Maritime insurance domain expertise integration"
+      - "WorkOS, JIRA, and Sentry integration patterns"
