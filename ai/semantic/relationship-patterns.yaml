@@ -3,7 +3,7 @@
 
 relationship_patterns:
   version: "1.0"
-  description: "Comprehensive relationship patterns for 67 document types"
+  description: "Comprehensive relationship patterns designed for research-identified 67 document types framework"
   total_patterns: 25
   pattern_categories: 6
   

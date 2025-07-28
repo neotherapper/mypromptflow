@@ -29,7 +29,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 **Three-Layer Architecture**:
 
-- **AI Orchestration** (`ai/`) - Multi-agent coordination, 67+ document types, feature orchestrators
+- **AI Orchestration** (`ai/`) - Multi-agent coordination, 40+ document templates available, feature orchestrators
 - **Knowledge Vault** (`knowledge-vault/`) - Structured YAML databases, change detection, cross-domain mapping
 - **Research & Projects** (`research/`, `projects/`) - Advanced orchestrator with 15+ methodologies, meta-framework patterns
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide provides comprehensive instructions for integrating the semantic tagging system with document templates, search functionality, and relationship mapping across all 67 document types in the AI Knowledge Base system.
+This guide provides comprehensive instructions for integrating the semantic tagging system with document templates, search functionality, and relationship mapping designed for the research-identified 67 document types framework in the AI Knowledge Base system.
 
 ## Integration Architecture
 
@@ -536,7 +536,7 @@ qa_workflows:
    - Implement quality validation rules
 
 2. **Integrate with Document Templates**
-   - Update all 67 document templates
+   - Update document templates based on 67 types framework
    - Add enhanced frontmatter schema
    - Configure auto-tag generation
    - Set up content tag extraction
@@ -817,6 +817,6 @@ review_process:
 
 ## Conclusion
 
-The semantic tagging system provides a comprehensive foundation for intelligent document classification and discovery across all 67 document types. By implementing the integration guidelines outlined in this document, organizations can significantly improve their document management capabilities, enabling more efficient workflows, better content discovery, and enhanced collaboration across teams.
+The semantic tagging system provides a comprehensive foundation for intelligent document classification and discovery designed for the research-identified 67 document types framework. By implementing the integration guidelines outlined in this document, organizations can significantly improve their document management capabilities, enabling more efficient workflows, better content discovery, and enhanced collaboration across teams.
 
 The system's hierarchical taxonomy structure, automated tag generation, and quality assurance frameworks ensure consistent, accurate, and maintainable semantic organization that scales with organizational growth and evolving business needs.

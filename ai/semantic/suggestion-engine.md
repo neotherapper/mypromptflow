@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Intelligent Suggestion Engine is a sophisticated AI-powered system that provides contextually relevant document recommendations for the 67-document knowledge base. It leverages multiple algorithms, pattern recognition, and machine learning to suggest the most valuable documents to create or enhance at any given time.
+The Intelligent Suggestion Engine is a sophisticated AI-powered system designed to provide contextually relevant document recommendations for the research-identified 67-document types framework. It leverages multiple algorithms, pattern recognition, and machine learning to suggest the most valuable documents to create or enhance at any given time.
 
 ## Architecture
 
