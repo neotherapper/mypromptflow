@@ -1,0 +1,105 @@
+# Snowflake MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+
+---
+# Core Identification (Schema Compliance)
+id: "cde90123-fgh4-5678-cdef-snowflake031"
+name: "Snowflake MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 6.3/10 = excellent
+maturity_level: "enterprise"  # Production ready 98%
+status: "adopted"  # Leading cloud data warehouse
+
+# Technology Classification
+technology_type:
+  - "database_sql"
+  - "analytics"
+  - "cloud_hosting"
+deployment_model: "cloud_hosted"
+integration_complexity: "moderate"
+
+# Vendor and Licensing
+vendor: "Snowflake Inc."
+licensing_model: "usage_based"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "database"
+  - "analytics"
+  - "enterprise"
+  - "cloud-hosting"
+  - "data-warehouse"
+
+# Technical Specifications
+supported_platforms:
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "warehouse_data"
+    - "database_schemas"
+    - "query_results"
+    - "usage_analytics"
+    - "performance_metrics"
+    - "cost_tracking"
+    - "security_logs"
+    - "sharing_configurations"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "batch"
+    
+  authentication:
+    required: true
+    methods:
+      - "username_password"
+      - "key_pair"
+      - "oauth"
+      - "saml"
+    security_level: "enterprise"
+    
+  rate_limits:
+    concurrent_queries: 100
+    warehouse_scaling: "auto"
+    api_requests_per_hour: 10000
+    
+  complexity_score: 7
+  
+  typical_use_cases:
+    - "data_warehousing"
+    - "analytics_platform"
+    - "data_sharing"
+    - "business_intelligence"
+    - "data_lake_analytics"
+    - "ml_data_preparation"
+    - "real_time_analytics"
+    - "enterprise_reporting"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 6.3
+  tier: "Tier 3 Specialized"
+  priority_rank: 1
+  production_readiness: 98
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/snowflake-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/snowflake-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"

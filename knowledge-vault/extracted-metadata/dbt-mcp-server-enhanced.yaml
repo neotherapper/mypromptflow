@@ -1,0 +1,188 @@
+# dbt MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/dbt-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "vwx23456-yza7-8901-vwxy-dbt024"
+name: "dbt MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.2/10 = excellent
+maturity_level: "stable"  # Production ready 90%
+status: "adopted"  # Leading data transformation tool
+
+# Technology Classification
+technology_type:
+  - "analytics"
+  - "developer-tools"
+  - "tech-stack"
+deployment_model: "hybrid"  # Self-hosted, cloud managed
+integration_complexity: "moderate"  # Setup complexity 6/10
+
+# Vendor and Licensing
+vendor: "dbt Labs"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "analytics"
+  - "developer-tools"
+  - "software-development"
+  - "tech-stack"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "data_models"
+    - "transformation_logic"
+    - "test_results"
+    - "documentation"
+    - "lineage_graphs"
+    - "compilation_artifacts"
+    - "run_results"
+    - "manifest_metadata"
+  
+  access_methods:
+    - "on-demand"  # CLI operations
+    - "batch"      # Scheduled runs
+    - "api"        # Cloud API access
+    
+  authentication:
+    required: true
+    methods:
+      - "database_credentials"
+      - "cloud_tokens"
+      - "git_authentication"
+      - "warehouse_connections"
+    security_level: "enterprise"
+    
+  rate_limits:
+    model_compilations: 1000
+    test_executions: 500
+    api_requests_per_hour: 3600
+    
+  complexity_score: 6  # Setup complexity (6/10) - moderate complexity
+  
+  typical_use_cases:
+    - "data_transformation"
+    - "data_modeling"
+    - "data_testing"
+    - "analytics_engineering"
+    - "data_documentation"
+    - "lineage_tracking"
+    - "data_quality"
+    - "warehouse_optimization"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.2
+  tier: "Tier 3 Specialized"
+  priority_rank: 7
+  production_readiness: 90
+  
+  detailed_scoring:
+    information_retrieval_relevance: 5
+    setup_complexity: 6
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 8
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 91
+    performance_score: 89
+    security_score: 88
+    scalability_score: 92
+
+# Content and Documentation
+url: "https://github.com/dbt-labs/dbt-core"
+description: "Leading data transformation tool enabling analytics engineers to transform data in their warehouse. Modern data build tool for creating reliable, maintainable data pipelines using SQL and software engineering best practices."
+
+key_features: |
+  ## Data Transformation
+  - SQL-based transformation with Jinja templating
+  - Modular data models with dependency management
+  - Incremental model building for large datasets
+  - Source control integration with version management
+  
+  ## Testing and Documentation
+  - Built-in data testing framework with schema tests
+  - Automatic documentation generation from code
+  - Data lineage visualization and impact analysis
+  - Data quality monitoring and assertion testing
+  
+  ## Analytics Engineering
+  - Macros for reusable transformation logic
+  - Package ecosystem for shared functionality
+  - Environment management (dev, staging, prod)
+  - CI/CD integration for automated testing
+  
+  ## Data Warehouse Integration
+  - Native support for 20+ data warehouses
+  - Optimized SQL generation for each platform
+  - Performance optimization with materialization strategies
+  - Connection management and credential handling
+
+use_cases: |
+  1. **Data Transformation**: Raw data → SQL transformations → Clean data models → Analytics-ready tables
+  2. **Analytics Engineering**: Business logic → Data models → Testing → Documentation → Deployment
+  3. **Data Quality**: Schema validation → Data tests → Quality monitoring → Issue resolution
+  4. **Data Documentation**: Model definitions → Lineage graphs → Business context → Team collaboration
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    analytics_efficiency: 300000  # $300K/year in data transformation efficiency
+    data_quality: 250000          # $250K/year in improved data reliability
+    development_velocity: 200000  # $200K/year in faster analytics development
+    maintenance_reduction: 150000 # $150K/year in reduced technical debt
+    
+  roi_metrics:
+    payback_period_months: 5
+    net_roi_percentage: 350
+    implementation_cost: 80000
+    annual_operating_cost: 70000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/dbt-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/dbt-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  dbt MCP Server provides comprehensive data transformation capabilities for modern analytics engineering workflows.
+  Composite score of 5.2/10 reflects strong specialized capabilities with moderate complexity and good production readiness.
+  
+  **Key Strengths:**
+  - Leading data transformation tool with SQL-based approach
+  - Comprehensive testing and documentation capabilities
+  - Strong community and ecosystem with extensive package library
+  - Modern analytics engineering practices with version control integration
+  
+  **Implementation Considerations:** 
+  - Moderate complexity requires SQL and data warehouse expertise
+  - Learning curve for teams new to analytics engineering practices
+  - Best suited for organizations with data warehouse and analytics requirements
+  
+  **Strategic Value:** Essential for organizations requiring modern data transformation capabilities with comprehensive testing, documentation, and analytics engineering practices

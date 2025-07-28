@@ -1,0 +1,108 @@
+# HashiCorp Consul MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/hashicorp-consul-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "yza56789-bcd0-1234-yzab-consul027"
+name: "HashiCorp Consul MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 5.0/10 = excellent
+maturity_level: "enterprise"  # Production ready 95%
+status: "adopted"  # Leading service mesh and discovery platform
+
+# Technology Classification
+technology_type:
+  - "developer-tools"
+  - "networking"
+  - "service_mesh"
+deployment_model: "hybrid"
+integration_complexity: "complex"
+
+# Vendor and Licensing
+vendor: "HashiCorp Inc."
+licensing_model: "open_source"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "developer-tools"
+  - "networking" 
+  - "service_mesh"
+  - "enterprise"
+  - "tech-stack"
+
+# Technical Specifications
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "service_registry"
+    - "health_checks"
+    - "key_value_store"
+    - "network_topology"
+    - "intentions_policies"
+    - "certificates"
+    - "agent_status"
+    - "datacenter_info"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "api"
+    
+  authentication:
+    required: true
+    methods:
+      - "acl_tokens"
+      - "tls_certificates"
+      - "consul_connect"
+      - "vault_integration"
+    security_level: "enterprise"
+    
+  rate_limits:
+    api_requests_per_second: 1000
+    service_registrations: 10000
+    kv_operations_per_second: 5000
+    
+  complexity_score: 3
+  
+  typical_use_cases:
+    - "service_discovery"
+    - "service_mesh"
+    - "configuration_management"
+    - "health_monitoring"
+    - "network_automation"
+    - "security_policies"
+    - "multi_datacenter"
+    - "microservices_coordination"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 5.0
+  tier: "Tier 3 Specialized"
+  priority_rank: 9
+  production_readiness: 95
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/hashicorp-consul-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/hashicorp-consul-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"

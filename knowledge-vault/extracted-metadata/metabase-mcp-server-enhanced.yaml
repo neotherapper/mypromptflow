@@ -1,0 +1,145 @@
+# Metabase MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "xyz45678-abc9-0123-xyza-metabase026"
+name: "Metabase MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 5.3/10 = excellent
+maturity_level: "stable"  # Production ready 91%
+status: "adopted"  # Popular BI platform
+
+# Technology Classification
+technology_type:
+  - "analytics"
+  - "business_intelligence"
+  - "database_visualization"
+deployment_model: "hybrid"
+integration_complexity: "moderate"
+
+# Vendor and Licensing
+vendor: "Metabase Inc."
+licensing_model: "open_source"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "analytics"
+  - "business_intelligence"
+  - "visualization"
+  - "enterprise"
+
+# Technical Specifications
+supported_platforms:
+  - "linux"
+  - "macos" 
+  - "windows"
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "dashboard_configurations"
+    - "query_results"
+    - "database_metadata"
+    - "user_analytics"
+    - "visualization_configs"
+    - "alert_rules"
+    - "collection_data"
+    - "permission_settings"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "scheduled"
+    
+  authentication:
+    required: true
+    methods:
+      - "email_password"
+      - "ldap"
+      - "saml"
+      - "google_auth"
+    security_level: "enterprise"
+    
+  rate_limits:
+    queries_per_minute: 1000
+    dashboard_loads: 500
+    api_requests_per_hour: 5000
+    
+  complexity_score: 6
+  
+  typical_use_cases:
+    - "business_intelligence"
+    - "data_visualization"
+    - "self_service_analytics"
+    - "dashboard_creation"
+    - "data_exploration"
+    - "reporting_automation"
+    - "kpi_monitoring"
+    - "executive_dashboards"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 5.3
+  tier: "Tier 3 Specialized"
+  priority_rank: 6
+  production_readiness: 91
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 6
+    maintenance_status: 8
+    documentation_quality: 8
+    community_adoption: 8
+    integration_potential: 7
+    
+  production_readiness_breakdown:
+    stability_score: 92
+    performance_score: 90
+    security_score: 90
+    scalability_score: 92
+
+# Content and Documentation
+url: "https://github.com/metabase/metabase"
+description: "Open-source business intelligence platform for data visualization and analytics. User-friendly BI tool enabling self-service analytics with intuitive dashboard creation and comprehensive database support."
+
+# Business Value Analysis
+business_value:
+  annual_benefits:
+    analytics_democratization: 200000
+    decision_making_speed: 150000
+    operational_efficiency: 120000
+    dashboard_automation: 100000
+    
+  roi_metrics:
+    payback_period_months: 5
+    net_roi_percentage: 290
+    implementation_cost: 70000
+    annual_operating_cost: 50000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/metabase-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Metabase MCP Server provides comprehensive business intelligence capabilities with user-friendly interface for self-service analytics.
+  Essential for organizations requiring accessible BI platform with strong visualization and dashboard capabilities.

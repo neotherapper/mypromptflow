@@ -1,0 +1,190 @@
+# CircleCI MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/circleci-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "jkl01234-mno5-6789-jklm-circleci012"
+name: "CircleCI MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.9/10 = excellent
+maturity_level: "stable"  # Production ready 95%
+status: "adopted"  # Popular CI/CD platform
+
+# Technology Classification
+technology_type:
+  - "ci_cd"
+  - "developer-tools"
+  - "automation"
+deployment_model: "cloud_hosted"  # CircleCI managed service
+integration_complexity: "moderate"  # Setup complexity 7/10
+
+# Vendor and Licensing
+vendor: "CircleCI"
+licensing_model: "freemium"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "ci_cd"
+  - "developer-tools"
+  - "automation"
+  - "software-development"
+  - "deployment"
+  - "testing"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "build_configurations"
+    - "pipeline_executions"
+    - "test_results"
+    - "deployment_logs"
+    - "workflow_metrics"
+    - "artifact_information"
+    - "environment_variables"
+    - "project_settings"
+  
+  access_methods:
+    - "real-time"  # Live build monitoring
+    - "on-demand"  # API requests
+    - "webhook"    # Build notifications
+    
+  authentication:
+    required: true
+    methods:
+      - "personal_tokens"
+      - "project_tokens"
+      - "oauth"
+      - "github_integration"
+    security_level: "enterprise"
+    
+  rate_limits:
+    api_requests_per_hour: 3600
+    concurrent_builds: 30
+    workflow_runs_per_month: 25000
+    
+  complexity_score: 7  # Setup complexity (7/10) - moderate complexity
+  
+  typical_use_cases:
+    - "continuous_integration"
+    - "automated_testing"
+    - "deployment_automation"
+    - "build_orchestration"
+    - "code_quality_checks"
+    - "artifact_management"
+    - "multi_environment_deployment"
+    - "pipeline_monitoring"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.9
+  tier: "Tier 3 Specialized"
+  priority_rank: 3
+  production_readiness: 95
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 7
+    maintenance_status: 9
+    documentation_quality: 9
+    community_adoption: 8
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 96
+    performance_score: 94
+    security_score: 95
+    scalability_score: 95
+
+# Content and Documentation
+url: "https://github.com/CircleCI-Public/circleci-cli"
+description: "Cloud-native continuous integration and delivery platform enabling automated build, test, and deployment workflows. Developer-focused CI/CD service with Docker-first approach and extensive integration ecosystem."
+
+key_features: |
+  ## Modern CI/CD Platform
+  - Docker-first execution environment with custom images
+  - YAML-based configuration with reusable components
+  - Parallel job execution for faster build times
+  - Advanced workflow orchestration and dependency management
+  
+  ## Developer Experience
+  - Local CLI for testing and debugging pipelines
+  - Real-time build monitoring and detailed logging
+  - Intelligent build optimization and caching
+  - Seamless integration with version control systems
+  
+  ## Enterprise Features
+  - Self-hosted runner options for security compliance
+  - Advanced security scanning and vulnerability detection
+  - Team management with role-based access control
+  - Comprehensive audit logging and compliance reporting
+  
+  ## Ecosystem Integration
+  - Native GitHub, Bitbucket, and GitLab integration
+  - Extensive marketplace of pre-built orbs and integrations
+  - Deployment integrations with major cloud platforms
+  - Notification systems for Slack, email, and webhooks
+
+use_cases: |
+  1. **Continuous Integration**: Code commit → Automated testing → Build validation → Quality gates
+  2. **Deployment Automation**: Build completion → Environment preparation → Deployment execution → Verification
+  3. **Multi-Environment Pipelines**: Development → Staging → Production deployment with approvals
+  4. **Code Quality Assurance**: Static analysis → Security scanning → Performance testing → Compliance checks
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    development_velocity: 300000  # $300K/year in faster releases
+    quality_improvement: 200000   # $200K/year in reduced bugs
+    operational_efficiency: 180000 # $180K/year in automation
+    developer_productivity: 150000 # $150K/year in tool efficiency
+    
+  roi_metrics:
+    payback_period_months: 4
+    net_roi_percentage: 380
+    implementation_cost: 70000
+    annual_operating_cost: 100000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/circleci-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/circleci-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  CircleCI MCP Server provides modern cloud-native CI/CD capabilities with Docker-first approach and comprehensive developer experience.
+  Composite score of 5.9/10 reflects strong capabilities with moderate complexity and excellent production readiness.
+  
+  **Key Strengths:**
+  - Modern Docker-first CI/CD platform with excellent performance
+  - Comprehensive developer experience with local testing capabilities
+  - Strong ecosystem integration and marketplace of pre-built components
+  - Reliable cloud-hosted service with enterprise security features
+  
+  **Implementation Considerations:** 
+  - Moderate complexity requires CI/CD pipeline expertise
+  - Usage-based pricing can scale with team size and usage
+  - Best suited for teams adopting modern containerized development practices
+  
+  **Strategic Value:** Essential for organizations requiring modern, scalable CI/CD infrastructure with comprehensive automation and integration capabilities

@@ -1,0 +1,189 @@
+# Supabase MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/supabase-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "pqr67890-stu1-2345-pqrs-supabase018"
+name: "Supabase MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.9/10 = excellent
+maturity_level: "stable"  # Production ready 91%
+status: "adopted"  # Popular open-source Firebase alternative
+
+# Technology Classification
+technology_type:
+  - "database_sql"
+  - "api_service"
+  - "cloud_hosting"
+deployment_model: "cloud_hosted"  # Supabase managed service
+integration_complexity: "simple"  # Setup complexity 8/10
+
+# Vendor and Licensing
+vendor: "Supabase Inc."
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "database"
+  - "api-service"
+  - "software-development"
+  - "tech-stack"
+  - "cloud-hosting"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "web"
+  - "ios"
+  - "android"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "postgresql_data"
+    - "realtime_subscriptions"
+    - "user_authentication"
+    - "file_storage"
+    - "edge_functions"
+    - "api_configurations"
+    - "database_schemas"
+    - "analytics_data"
+  
+  access_methods:
+    - "real-time"  # Live database updates
+    - "on-demand"  # REST API calls
+    - "graphql"    # GraphQL queries
+    
+  authentication:
+    required: true
+    methods:
+      - "jwt_tokens"
+      - "oauth_providers"
+      - "email_auth"
+      - "magic_links"
+    security_level: "enterprise"
+    
+  rate_limits:
+    api_requests_per_minute: 10000
+    realtime_connections: 500
+    storage_bandwidth_gb: 100
+    
+  complexity_score: 8  # Setup complexity (8/10) - simple complexity
+  
+  typical_use_cases:
+    - "web_application_backends"
+    - "mobile_app_apis"
+    - "realtime_applications"
+    - "user_authentication"
+    - "file_storage_management"
+    - "serverless_functions"
+    - "rapid_prototyping"
+    - "jamstack_applications"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.9
+  tier: "Tier 3 Specialized"
+  priority_rank: 2
+  production_readiness: 91
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 8
+    maintenance_status: 9
+    documentation_quality: 9
+    community_adoption: 7
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 92
+    performance_score: 91
+    security_score: 90
+    scalability_score: 91
+
+# Content and Documentation
+url: "https://github.com/supabase/supabase"
+description: "Open-source Firebase alternative providing PostgreSQL database with real-time subscriptions, authentication, and edge functions. Comprehensive backend-as-a-service platform with developer-friendly APIs and tooling."
+
+key_features: |
+  ## Database and Real-time
+  - PostgreSQL database with full SQL capabilities
+  - Real-time subscriptions to database changes
+  - Row Level Security (RLS) for fine-grained access control
+  - Database migrations and schema management
+  
+  ## Authentication and Authorization
+  - Built-in authentication with multiple providers
+  - JWT-based session management
+  - Social login integration (Google, GitHub, etc.)
+  - Magic link and passwordless authentication
+  
+  ## API and Functions
+  - Auto-generated REST APIs from database schema
+  - GraphQL support with PostgREST
+  - Edge Functions for serverless backend logic
+  - Real-time API with WebSocket connections
+  
+  ## Developer Experience
+  - Dashboard for database management and monitoring
+  - CLI tools for local development and deployment
+  - TypeScript support with auto-generated types
+  - Comprehensive documentation and examples
+
+use_cases: |
+  1. **Web Application Backends**: Database setup → API generation → Authentication → Real-time features
+  2. **Mobile App Development**: User management → Data synchronization → Offline support → Push notifications
+  3. **JAMstack Applications**: Static site → Dynamic APIs → User authentication → Content management
+  4. **Rapid Prototyping**: Quick backend setup → Authentication → Database → Deployment
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    development_acceleration: 180000  # $180K/year in faster development
+    infrastructure_savings: 150000    # $150K/year in backend management
+    operational_efficiency: 120000    # $120K/year in reduced maintenance
+    developer_productivity: 100000    # $100K/year in tool efficiency
+    
+  roi_metrics:
+    payback_period_months: 3
+    net_roi_percentage: 380
+    implementation_cost: 50000
+    annual_operating_cost: 80000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/supabase-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/supabase-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Supabase MCP Server provides comprehensive open-source backend-as-a-service capabilities with PostgreSQL foundation and real-time features.
+  Composite score of 5.9/10 reflects strong capabilities with simple complexity and excellent production readiness.
+  
+  **Key Strengths:**
+  - Open-source Firebase alternative with PostgreSQL foundation
+  - Comprehensive backend services with simple setup and integration
+  - Strong developer experience with excellent tooling and documentation
+  - Real-time capabilities with WebSocket connections and subscriptions
+  
+  **Implementation Considerations:** 
+  - Simple complexity makes it accessible for rapid development
+  - PostgreSQL expertise beneficial for advanced use cases
+  - Best suited for modern web and mobile application development
+  
+  **Strategic Value:** Essential for organizations requiring modern, open-source backend-as-a-service platform with PostgreSQL foundation and comprehensive developer tooling

@@ -1,0 +1,189 @@
+# Apache Cassandra MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-cassandra-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "fgh67890-ijk1-2345-fghi-cassandra008"
+name: "Apache Cassandra MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.8/10 = excellent
+maturity_level: "enterprise"  # Production ready 96%
+status: "adopted"  # Industry standard NoSQL database
+
+# Technology Classification
+technology_type:
+  - "database_nosql"
+  - "api_service"
+  - "tech-stack"
+deployment_model: "hybrid"  # Self-hosted, cloud managed, containerized
+integration_complexity: "complex"  # Setup complexity 4/10
+
+# Vendor and Licensing
+vendor: "Apache Foundation/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "database"
+  - "analytics"
+  - "enterprise"
+  - "tech-stack"
+  - "software-development"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "wide_column_data"
+    - "time_series_data"
+    - "distributed_data"
+    - "cluster_metadata"
+    - "keyspace_definitions"
+    - "table_schemas"
+    - "performance_metrics"
+    - "replication_status"
+  
+  access_methods:
+    - "real-time"  # Low-latency queries
+    - "on-demand"  # CQL queries
+    - "batch"      # Bulk operations
+    
+  authentication:
+    required: true
+    methods:
+      - "password"
+      - "certificates"
+      - "ldap"
+      - "kerberos"
+    security_level: "enterprise"
+    
+  rate_limits:
+    queries_per_second: 100000
+    concurrent_connections: 1000
+    writes_per_second: 50000
+    
+  complexity_score: 4  # Setup complexity (4/10) - high complexity
+  
+  typical_use_cases:
+    - "distributed_data_storage"
+    - "time_series_analytics"
+    - "high_availability_systems"
+    - "real_time_applications"
+    - "iot_data_management"
+    - "content_management"
+    - "messaging_platforms"
+    - "fraud_detection"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.8
+  tier: "Tier 3 Specialized"
+  priority_rank: 2
+  production_readiness: 96
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 4
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 9
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 97
+    performance_score: 96
+    security_score: 94
+    scalability_score: 98
+
+# Content and Documentation
+url: "https://github.com/apache/cassandra"
+description: "Highly scalable, distributed NoSQL database for managing large amounts of structured data across commodity servers. Enterprise-grade wide-column database providing high availability without single point of failure."
+
+key_features: |
+  ## Distributed Architecture
+  - Masterless architecture with peer-to-peer design
+  - Linear scalability with no single point of failure
+  - Tunable consistency levels for read/write operations
+  - Automatic data distribution and replication across nodes
+  
+  ## High Performance
+  - Sub-millisecond read and write latencies
+  - Excellent write performance with log-structured storage
+  - Column-family data model optimized for time-series data
+  - Efficient compression and compaction strategies
+  
+  ## Enterprise Features
+  - Multi-datacenter replication for disaster recovery
+  - Row-level security and role-based access control
+  - Comprehensive monitoring and management tools
+  - Integration with enterprise backup and monitoring systems
+  
+  ## Operational Excellence
+  - Online schema changes without downtime
+  - Repair and maintenance operations during operation
+  - Incremental backup and point-in-time recovery
+  - Rich ecosystem of drivers and tools
+
+use_cases: |
+  1. **Distributed Data Storage**: High-volume writes → Distributed storage → Fast reads → Analytics
+  2. **Time Series Analytics**: IoT data ingestion → Time-based queries → Aggregations → Reporting
+  3. **High Availability Systems**: Multi-region deployment → Automatic failover → Consistent operations
+  4. **Real-time Applications**: Low-latency reads → High-throughput writes → Scalable architecture
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    high_availability: 250000  # $250K/year in uptime improvement
+    scalability: 200000        # $200K/year in infrastructure efficiency
+    performance: 180000        # $180K/year in application performance
+    operational_savings: 150000 # $150K/year in management overhead
+    
+  roi_metrics:
+    payback_period_months: 8
+    net_roi_percentage: 280
+    implementation_cost: 160000
+    annual_operating_cost: 90000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-cassandra-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/apache-cassandra-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Apache Cassandra MCP Server provides robust distributed NoSQL database capabilities for high-scale, high-availability applications.
+  Composite score of 5.8/10 reflects strong specialized capabilities with manageable complexity for distributed systems.
+  
+  **Key Strengths:**
+  - Masterless architecture ensuring no single point of failure
+  - Exceptional write performance and linear scalability
+  - Proven enterprise deployments at massive scale
+  - Strong consistency and availability guarantees
+  
+  **Implementation Considerations:** 
+  - High complexity requires distributed systems and NoSQL expertise
+  - Significant operational overhead for cluster management
+  - Best suited for high-volume, high-availability use cases
+  
+  **Strategic Value:** Critical for organizations requiring distributed, highly available data storage with exceptional write performance and linear scalability

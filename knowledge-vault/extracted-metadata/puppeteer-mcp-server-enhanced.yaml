@@ -1,0 +1,106 @@
+# Puppeteer MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+
+---
+# Core Identification (Schema Compliance)
+id: "zab67890-cde1-2345-zabc-puppeteer028"
+name: "Puppeteer MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 5.7/10 = excellent
+maturity_level: "stable"  # Production ready 93%
+status: "adopted"  # Leading browser automation tool
+
+# Technology Classification
+technology_type:
+  - "automation"
+  - "testing"
+  - "developer-tools"
+deployment_model: "self_hosted"
+integration_complexity: "moderate"
+
+# Vendor and Licensing
+vendor: "Google/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "automation"
+  - "testing"
+  - "developer-tools"
+  - "software-development"
+  - "google"
+
+# Technical Specifications
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "browser_sessions"
+    - "page_content"
+    - "screenshots"
+    - "performance_metrics"
+    - "network_requests"
+    - "console_logs"
+    - "dom_elements"
+    - "pdf_documents"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "headless"
+    
+  authentication:
+    required: false
+    methods:
+      - "browser_authentication"
+      - "session_cookies"
+      - "custom_headers"
+    security_level: "moderate"
+    
+  rate_limits:
+    concurrent_browsers: 10
+    page_loads_per_minute: 100
+    screenshot_generation: 50
+    
+  complexity_score: 6
+  
+  typical_use_cases:
+    - "web_scraping"
+    - "automated_testing"
+    - "pdf_generation"
+    - "screenshot_capture"
+    - "performance_monitoring"
+    - "ui_automation"
+    - "data_extraction"
+    - "browser_automation"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 5.7
+  tier: "Tier 3 Specialized"
+  priority_rank: 3
+  production_readiness: 93
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/puppeteer-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/puppeteer-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
