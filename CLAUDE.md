@@ -21,6 +21,7 @@
 - Execute parallel tool operations for efficiency
 - Mark TodoWrite complete with timestamps
 - Validate @file_path cross-references
+- Apply unified source discovery framework for research and validation tasks
 
 ## System Overview
 
@@ -71,6 +72,24 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 ## Essential Protocols
 
+### Information Access Framework (Universal)
+
+**Unified Source Discovery**: Use `meta/information-access/source-discovery-framework.yaml` for ALL research and validation tasks
+
+**5-Step Implementation**:
+1. **Topic Analysis**: Extract technology (React, TypeScript, Python) or domain (frontend, backend, database)
+2. **Mapping Selection**: Use technology_mappings (specific) or category_mappings (general)
+3. **Source Coordination**: Apply primary + supplementary + validation sources
+4. **Error Handling**: Implement MCP fallbacks and authentication recovery
+5. **Attribution**: Document all sources for research-sources.md tracking
+
+**Agent Usage Guide**: `meta/information-access/agent-usage-guide.md` - Complete implementation instructions
+
+**Decision Logic**:
+- **Specific Technology Detected** → Use technology_mappings.react/typescript/python/database
+- **Domain Category Match** → Use category_mappings.frontend/backend/infrastructure
+- **No Clear Match** → Use knowledge-vault fallback with information-sources-by-type view
+
 ### Task Management (≤180 seconds)
 
 1. Mark TodoWrite complete with timestamps
@@ -108,6 +127,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 - Development: `development/CLAUDE.md`
 - Validation: `meta/validation/validators/ai-instruction/`
 - Commands: `.claude/commands/*`
+- Information Access: `meta/information-access/agent-usage-guide.md`
 
 **Project Resources** (Load when working on specific projects):
 
@@ -129,6 +149,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 - AI Context: `ai/context/` (dependencies.yaml, document-registry.yaml, feature-registry.yaml, tier-configuration.yaml)
 - Knowledge Vault: `knowledge-vault/` (schemas/, shared/, operations/)
 - Research: `research/` (findings/, orchestrator/, sessions/)
+- Information Access: `meta/information-access/` (source-discovery-framework.yaml, agent-usage-guide.md, topic-mappings/, category-mappings/)
 
 ## Command Integration
 

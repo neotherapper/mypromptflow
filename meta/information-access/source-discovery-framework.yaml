@@ -1,0 +1,649 @@
+# Unified Source Discovery Framework
+# Consolidates AI-PR validation mappings with information access framework
+# Version: 2.0 - Unified Framework
+# Updated: 2025-07-28
+
+metadata:
+  version: "2.0.0"
+  purpose: "Unified source discovery for research and validation workflows"
+  integration: "Bridges AI-PR validation system with research framework source intelligence"
+  supersedes: 
+    - "ai-pr-validation file-type-analysis-templates.md mappings"
+    - "separate research source selection logic"
+
+# TECHNOLOGY-SPECIFIC MAPPINGS (Critical Technologies)
+technology_mappings:
+  react:
+    description: "React frontend framework with ecosystem"
+    sources:
+      primary:
+        - name: "mcp-github"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "language:JavaScript,TypeScript stars:>1000 react"
+          rationale: "Official and community React projects"
+          
+        - name: "context7-docs"
+          access_pattern: "mcp__MCP_DOCKER__get-library-docs" 
+          library_id: "/vercel/next.js"
+          rationale: "Comprehensive React documentation"
+          
+      supplementary:
+        - name: "npm-registry-search"
+          access_pattern: "WebSearch"
+          query: "site:npmjs.com react hooks components"
+          rationale: "React package ecosystem"
+          
+        - name: "knowledge-vault-react"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/react-sources.yaml"
+          rationale: "React-specific information source mappings"
+          
+      validation:
+        - name: "official-react-docs"
+          access_pattern: "WebFetch"
+          url: "https://react.dev/learn"
+          rationale: "Official React documentation for accuracy"
+          
+    pr_validation_context:
+      architect_role: "React system design and component architecture"
+      frontend_dev_role: "React implementation patterns and user experience"
+      performance_role: "React rendering optimization and bundle analysis"
+      security_role: "React security patterns and XSS prevention"
+      knowledge_sources:
+        - "knowledge-vault/knowledge/technologies/react/react-architect.md"
+        - "knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+        - "knowledge-vault/knowledge/technologies/react/react-performance.md"
+        - "knowledge-vault/knowledge/technologies/react/react-security.md"
+
+  typescript:
+    description: "TypeScript language and tooling ecosystem"
+    sources:
+      primary:
+        - name: "mcp-github"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "language:TypeScript stars:>500 typescript"
+          rationale: "TypeScript projects and patterns"
+          
+        - name: "context7-docs"
+          access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+          library_id: "/microsoft/TypeScript"
+          rationale: "Official TypeScript documentation"
+          
+      supplementary:
+        - name: "typescript-handbook"
+          access_pattern: "WebFetch"
+          url: "https://www.typescriptlang.org/docs/"
+          rationale: "Official TypeScript handbook"
+          
+        - name: "knowledge-vault-typescript"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/typescript-sources.yaml"
+          rationale: "TypeScript-specific information source mappings"
+          
+    pr_validation_context:
+      architect_role: "TypeScript type system design and architecture"
+      frontend_dev_role: "TypeScript implementation and developer experience"
+      performance_role: "TypeScript compilation and runtime optimization"
+      security_role: "TypeScript type safety and security patterns"
+      knowledge_sources:
+        - "knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
+        - "knowledge-vault/knowledge/technologies/typescript/typescript-frontend-dev.md"
+        - "knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"
+
+  python:
+    description: "Python backend development and frameworks"
+    sources:
+      primary:
+        - name: "mcp-github"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "language:Python stars:>1000 django flask fastapi"
+          rationale: "Python web framework repositories"
+          
+        - name: "pypi-search"
+          access_pattern: "WebSearch"
+          query: "site:pypi.org python backend framework"
+          rationale: "Python package ecosystem"
+          
+      supplementary:
+        - name: "python-docs"
+          access_pattern: "WebFetch"
+          url: "https://docs.python.org/3/"
+          rationale: "Official Python documentation"
+          
+        - name: "knowledge-vault-python"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/python-sources.yaml"
+          rationale: "Python-specific information source mappings"
+          
+    pr_validation_context:
+      architect_role: "Python API architecture and system design"
+      backend_role: "Python implementation patterns and best practices"
+      performance_role: "Python optimization and scalability"
+      security_role: "Python security patterns and vulnerability prevention"
+
+  yaml:
+    description: "YAML configuration management and infrastructure as code"
+    sources:
+      primary:
+        - name: "yaml-specific-mappings"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/yaml-sources.yaml"
+          rationale: "Comprehensive YAML-specific source mappings and validation patterns"
+          
+        - name: "yaml-specification"
+          access_pattern: "WebFetch"
+          url: "https://yaml.org/spec/"
+          rationale: "Official YAML specification and standards"
+          
+      supplementary:
+        - name: "infrastructure-yaml-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "language:YAML kubernetes docker-compose ci yaml"
+          rationale: "YAML configuration repositories"
+          
+    pr_validation_context:
+      devops_role: "YAML configuration management and infrastructure as code"
+      security_role: "YAML security patterns and secrets management"
+      
+  testing_frameworks:
+    description: "Testing frameworks and quality assurance methodologies"
+    sources:
+      primary:
+        - name: "testing-specific-mappings"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/testing-sources.yaml"
+          rationale: "Comprehensive testing-specific source mappings and validation patterns"
+          
+        - name: "testing-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "topic:testing jest pytest cypress playwright"
+          rationale: "Testing framework repositories and patterns"
+          
+      supplementary:
+        - name: "testing-methodologies"
+          access_pattern: "WebSearch"
+          query: "testing best practices TDD BDD testing pyramid"
+          rationale: "Testing methodologies and best practices"
+          
+    pr_validation_context:
+      test_specialist_role: "Testing strategy and implementation patterns"
+      qa_engineer_role: "Quality assurance and test coverage validation"
+
+  database:
+    description: "Database technologies and data management"
+    sources:
+      primary:
+        - name: "knowledge-vault-query"
+          access_pattern: "Grep"
+          pattern: "database|postgresql|mysql|mongodb"
+          path: "knowledge-vault/databases/tools_services/"
+          rationale: "Available database MCP servers"
+          
+        - name: "mcp-postgresql"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "postgresql"
+          rationale: "Direct database access via MCP"
+          condition: "if postgresql MCP available"
+          
+      supplementary:
+        - name: "database-docs-search"
+          access_pattern: "WebSearch"
+          query: "database design patterns best practices"
+          rationale: "Database design documentation"
+  
+  ai_language_models:
+    description: "AI language models and content generation"
+    sources:
+      primary:
+        - name: "anthropic-claude"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "anthropic"
+          rationale: "Direct access to Claude API via MCP"
+          
+        - name: "openai-platform"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "openai"
+          rationale: "Access to GPT models and OpenAI services"
+          
+      supplementary:
+        - name: "ai-model-documentation"
+          access_pattern: "WebSearch"
+          query: "AI language model capabilities best practices"
+          rationale: "AI model usage documentation"
+          
+        - name: "knowledge-vault-ai"
+          access_pattern: "Grep"
+          pattern: "ai|language_model|claude|gpt"
+          path: "knowledge-vault/databases/tools_services/"
+          rationale: "AI platform MCP servers and capabilities"
+  
+  communication_platforms:
+    description: "Chat and communication platform integration"
+    sources:
+      primary:
+        - name: "discord-mcp"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "discord"
+          rationale: "Discord server and community management"
+          condition: "if Discord MCP available"
+          
+        - name: "slack-integration"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "slack"
+          rationale: "Slack workspace and team communication"
+          condition: "if Slack MCP available"
+          
+      supplementary:
+        - name: "communication-apis"
+          access_pattern: "WebSearch"
+          query: "chat platform API integration best practices"
+          rationale: "Communication platform documentation"
+  
+  productivity_tools:
+    description: "Business productivity and workflow automation"
+    sources:
+      primary:
+        - name: "google-sheets"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "google-sheets"
+          rationale: "Spreadsheet data and business analytics"
+          condition: "if Google Sheets MCP available"
+          
+        - name: "notion-workspace"
+          access_pattern: "mcp__MCP_DOCKER__*"
+          server: "notion"
+          rationale: "Document and knowledge management"
+          condition: "if Notion MCP available"
+          
+      supplementary:
+        - name: "productivity-tools-search"
+          access_pattern: "WebSearch"
+          query: "business productivity tools automation"
+          rationale: "Productivity platform documentation"
+
+# CATEGORICAL MAPPINGS (General Technology Types)
+category_mappings:
+  frontend:
+    description: "Frontend technologies and frameworks"
+    patterns: ["react", "vue", "angular", "svelte", "typescript", "javascript"]
+    sources:
+      primary:
+        - name: "frontend-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "language:JavaScript,TypeScript topic:frontend"
+          
+        - name: "mdn-docs"
+          access_pattern: "WebFetch"
+          url: "https://developer.mozilla.org/en-US/docs/Web"
+          
+      supplementary:
+        - name: "npm-frontend-packages"
+          access_pattern: "WebSearch"
+          query: "site:npmjs.com frontend framework"
+          
+    pr_validation_roles:
+      - "frontend-dev"
+      - "performance"
+      - "security"
+      - "architect"
+
+  backend:
+    description: "Backend services and API development"
+    patterns: ["python", "node", "java", "go", "rust", "api", "microservices"]
+    sources:
+      primary:
+        - name: "backend-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "topic:backend-api OR topic:microservices"
+          
+        - name: "api-design-patterns"
+          access_pattern: "WebSearch"
+          query: "REST API design patterns best practices"
+          
+      supplementary:
+        - name: "backend-frameworks"
+          access_pattern: "WebSearch"
+          query: "backend framework comparison 2024"
+          
+    pr_validation_roles:
+      - "backend-dev"
+      - "architect"
+      - "security"
+      - "performance"
+
+  database:
+    description: "Database systems and data management"
+    patterns: ["sql", "postgresql", "mysql", "mongodb", "redis", "database"]
+    sources:
+      primary:
+        - name: "database-mcp-servers"
+          access_pattern: "Grep"
+          pattern: "database|sql|mongo|redis"
+          path: "knowledge-vault/databases/tools_services/"
+          
+        - name: "database-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "topic:database OR topic:sql"
+          
+    pr_validation_roles:
+      - "database-architect"
+      - "backend-dev"
+      - "performance"
+      - "security"
+
+  infrastructure:
+    description: "DevOps, containers, and infrastructure"
+    patterns: ["docker", "kubernetes", "aws", "terraform", "ci", "cd", "yaml"]
+    sources:
+      primary:
+        - name: "infrastructure-mcp-servers"
+          access_pattern: "Grep"
+          pattern: "docker|kubernetes|aws|azure|terraform"
+          path: "knowledge-vault/databases/tools_services/"
+          
+        - name: "yaml-specific-mappings"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/yaml-sources.yaml"
+          rationale: "YAML-specific configuration management source mappings"
+          
+        - name: "devops-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "topic:devops OR topic:infrastructure"
+          
+    pr_validation_roles:
+      - "devops-architect"
+      - "security"
+      - "performance"
+
+  testing:
+    description: "Testing frameworks and quality assurance"
+    patterns: ["test", "jest", "pytest", "cypress", "unit", "integration"]
+    sources:
+      primary:
+        - name: "testing-repositories"
+          access_pattern: "mcp__MCP_DOCKER__search_repositories"
+          query: "topic:testing OR topic:test-automation"
+          
+        - name: "testing-specific-mappings"
+          access_pattern: "Read"
+          file_path: "meta/information-access/topic-mappings/testing-sources.yaml"
+          rationale: "Testing-specific information source mappings"
+          
+        - name: "testing-docs"
+          access_pattern: "WebSearch"
+          query: "testing best practices framework comparison"
+          
+    pr_validation_roles:
+      - "test-specialist"
+      - "qa-engineer"
+      - "security"
+
+  ai_integration:
+    description: "AI platforms and language model integration"
+    patterns: ["ai", "llm", "gpt", "claude", "openai", "anthropic", "machine-learning"]
+    sources:
+      primary:
+        - name: "ai-mcp-servers"
+          access_pattern: "Grep"
+          pattern: "ai|claude|openai|anthropic|gpt"
+          path: "knowledge-vault/databases/tools_services/"
+          
+        - name: "ai-platform-integration"
+          access_pattern: "WebSearch"
+          query: "AI platform integration best practices"
+          
+    pr_validation_roles:
+      - "ai-specialist"
+      - "architect"
+      - "security"
+      - "performance"
+
+  communication_automation:
+    description: "Chat platforms and communication automation"
+    patterns: ["discord", "slack", "chat", "messaging", "communication", "community"]
+    sources:
+      primary:
+        - name: "communication-mcp-servers"
+          access_pattern: "Grep"
+          pattern: "discord|slack|chat|messaging"
+          path: "knowledge-vault/databases/tools_services/"
+          
+        - name: "communication-automation"
+          access_pattern: "WebSearch"
+          query: "chat platform automation community management"
+          
+    pr_validation_roles:
+      - "community-manager"
+      - "backend-dev"
+      - "security"
+
+  productivity_automation:
+    description: "Business tools and productivity automation"
+    patterns: ["sheets", "spreadsheet", "productivity", "workflow", "automation", "business"]
+    sources:
+      primary:
+        - name: "productivity-mcp-servers"
+          access_pattern: "Grep"
+          pattern: "sheets|spreadsheet|productivity|workflow"
+          path: "knowledge-vault/databases/tools_services/"
+          
+        - name: "business-automation"
+          access_pattern: "WebSearch"
+          query: "business productivity automation tools"
+          
+    pr_validation_roles:
+      - "business-analyst"
+      - "backend-dev"
+      - "architect"
+
+# SOURCE SELECTION ALGORITHM
+source_selection_algorithm:
+  step_1_topic_analysis:
+    description: "Parse topic and identify specific technologies"
+    implementation:
+      - extract_technology_keywords: "Identify React, TypeScript, Python, etc."
+      - classify_domain_categories: "Frontend, backend, database, infrastructure"
+      - assess_complexity_level: "Simple, moderate, complex research needs"
+      
+  step_2_mapping_selection:
+    description: "Choose between specific and categorical mappings"
+    priority_order:
+      1: "technology_mappings (if specific technology identified)"
+      2: "category_mappings (if broader category applies)"
+      3: "knowledge_vault_fallback (if no specific mapping)"
+      
+    decision_logic:
+      specific_technology:
+        condition: "technology in technology_mappings.keys()"
+        action: "Use technology_mappings[technology]"
+        priority: "highest"
+        
+      category_match:
+        condition: "topic matches category_mappings patterns"
+        action: "Use best matching category_mappings"
+        priority: "medium"
+        
+      fallback:
+        condition: "no specific or category match"
+        action: "Query knowledge-vault for available sources"
+        priority: "lowest"
+
+  step_3_source_coordination:
+    description: "Coordinate multiple sources for comprehensive coverage"
+    coordination_patterns:
+      sequential_access:
+        - "Primary sources first (most authoritative)"
+        - "Supplementary sources for additional context"
+        - "Validation sources for accuracy checking"
+        
+      parallel_access:
+        - "Independent sources accessed simultaneously"
+        - "Results aggregated and cross-validated"
+        
+      conditional_access:
+        - "Sources activated based on intermediate findings"
+        - "Error fallback to backup sources"
+
+# RESEARCH FRAMEWORK INTEGRATION
+research_integration:
+  orchestrator_enhancement:
+    location: "research/orchestrator/integration/claude-orchestrator-integration.yaml"
+    step: "step_3_5_discover_information_sources"
+    integration_points:
+      - "Replace basic source discovery with unified framework"
+      - "Use technology_mappings for specific technology research"
+      - "Apply category_mappings for broader domain research"
+      - "Coordinate with knowledge-vault for comprehensive coverage"
+      
+  method_enhancement:
+    multi_agent_methods:
+      - "Enhance sub-agent specialization with source-specific expertise"
+      - "Coordinate parallel source access across sub-agents"
+      - "Apply source attribution and validation"
+      
+    quality_validation:
+      - "Cross-validate information across multiple sources"
+      - "Apply source credibility scoring"
+      - "Ensure comprehensive coverage via multi-source coordination"
+
+# AI-PR VALIDATION SYSTEM INTEGRATION
+pr_validation_integration:
+  consolidation_benefits:
+    single_source_truth: "One framework for all source discovery needs"
+    consistency: "Same source selection logic for research and validation"
+    maintenance: "Updates apply to both research and PR validation"
+    
+  enhanced_capabilities:
+    role_aware_sourcing:
+      - "Match sources to PR validation roles (architect, frontend-dev, etc.)"
+      - "Load role-specific knowledge contexts from sources"
+      - "Coordinate multi-role validation with appropriate sources"
+      
+    technology_specific_validation:
+      - "React PRs use React-specific sources and knowledge"
+      - "TypeScript PRs leverage TypeScript ecosystem sources"
+      - "Backend PRs access relevant backend framework sources"
+      
+    comprehensive_coverage:
+      - "Primary sources for authoritative information"
+      - "Supplementary sources for comprehensive analysis"
+      - "Validation sources for accuracy verification"
+
+# KNOWLEDGE VAULT INTEGRATION
+knowledge_vault_integration:
+  database_views:
+    information_sources_by_type: "knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+    real_time_sources: "knowledge-vault/databases/tools_services/views/real-time-sources.yaml"
+    authentication_required: "knowledge-vault/databases/tools_services/views/authentication-required.yaml"
+    
+  query_patterns:
+    tag_based_filtering: "tag:web-content AND complexity_score:<=3"
+    capability_matching: "information_capabilities.data_types contains 'code_repositories'"
+    authentication_assessment: "authentication.complexity_score for setup planning"
+    
+  fallback_strategy:
+    when_no_specific_mapping:
+      - "Query information-sources-by-type view with topic keywords"
+      - "Apply authentication and complexity filters"
+      - "Rank results using decision framework scoring"
+      - "Select top 3-5 sources for comprehensive coverage"
+
+# ERROR HANDLING AND FALLBACKS
+error_handling:
+  source_unavailability:
+    mcp_server_down:
+      action: "Fall back to WebSearch and WebFetch alternatives"
+      logging: "Record MCP server availability issues"
+      
+    authentication_failure:
+      action: "Use non-authenticated sources from same category"
+      user_notification: "Inform about authentication requirements"
+      
+    rate_limiting:
+      action: "Coordinate request timing across sources"
+      fallback: "Switch to alternative sources in same category"
+      
+  mapping_gaps:
+    unknown_technology:
+      action: "Use closest category_mapping match"
+      enhancement: "Create specific mapping for future use"
+      
+    no_category_match:
+      action: "Use knowledge-vault fallback query"
+      coverage: "Ensure minimum source diversity"
+
+# QUALITY METRICS AND VALIDATION
+quality_metrics:
+  source_diversity:
+    target: "Minimum 3 different source types per research topic"
+    measurement: "Count unique access patterns used"
+    
+  coverage_completeness:
+    target: "Primary + supplementary + validation sources for critical technologies"
+    measurement: "Source category coverage percentage"
+    
+  integration_success:
+    research_framework: "Seamless orchestrator integration"
+    pr_validation: "Role-aware source coordination"
+    knowledge_vault: "Effective fallback query performance"
+    
+  accuracy_validation:
+    cross_source_validation: "Information consistency across sources"
+    credibility_scoring: "Source authority and freshness assessment"
+    attribution_tracking: "Complete source documentation and timestamps"
+
+# USAGE EXAMPLES
+usage_examples:
+  react_research:
+    input: "Research React performance optimization techniques"
+    processing:
+      technology_identification: "React (specific technology)"
+      mapping_selection: "technology_mappings.react"
+      source_coordination: "GitHub repos + Context7 docs + React docs + knowledge-vault"
+      pr_validation_context: "performance_role context loading"
+      
+  database_analysis:
+    input: "Analyze database design patterns for microservices"
+    processing:
+      category_identification: "database + backend (categorical)"
+      mapping_selection: "category_mappings.database + category_mappings.backend"
+      source_coordination: "Database MCP servers + GitHub repos + design pattern docs"
+      
+  unknown_technology:
+    input: "Research Svelte framework capabilities"
+    processing:
+      category_fallback: "Frontend category (no specific Svelte mapping)"
+      mapping_selection: "category_mappings.frontend"
+      enhancement_opportunity: "Create technology_mappings.svelte for future"
+
+  ai_content_generation:
+    input: "Generate marketing content using AI language models"
+    processing:
+      category_identification: "ai_integration (AI platforms)"
+      mapping_selection: "category_mappings.ai_integration"
+      source_coordination: "Anthropic Claude + OpenAI Platform + AI documentation"
+      mcp_integration: "Direct Claude/OpenAI MCP server usage"
+
+  discord_community_management:
+    input: "Automate Discord server moderation and engagement"
+    processing:
+      category_identification: "communication_automation (Discord platform)"
+      mapping_selection: "category_mappings.communication_automation"
+      source_coordination: "Discord MCP + Community management docs + Bot development guides"
+      mcp_integration: "Discord MCP server for direct API access"
+
+  business_data_automation:
+    input: "Automate Google Sheets reporting and data analysis"
+    processing:
+      category_identification: "productivity_automation (Business tools)"
+      mapping_selection: "category_mappings.productivity_automation"
+      source_coordination: "Google Sheets MCP + Business automation docs + API integration guides"
+      mcp_integration: "Google Sheets MCP server for spreadsheet operations"
+
+  local_file_processing:
+    input: "Process local documents and configuration files"
+    processing:
+      category_identification: "file_systems (Local storage)"
+      mapping_selection: "category_mappings.infrastructure + filesystem MCP"
+      source_coordination: "Filesystem MCP + Document processing guides + System integration docs"
+      mcp_integration: "Filesystem MCP server for direct file operations"
