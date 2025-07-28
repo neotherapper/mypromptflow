@@ -107,21 +107,13 @@ validator_registry:
       
     - name: "framework-coherence-validator"
       location: "meta/validation/validators/framework/framework-coherence-validator.md"
-      file_types: ["Framework specifications", "multi-file instruction sets", "system architectures", "AI agent instructions with coherence issues"]
-      capabilities: 
-        - "CONSOLIDATED: Framework coherence analysis with anti-fiction validation"
-        - "5-dimension structural consistency assessment (30% structural, 25% semantic, 20% evidence, 15% procedural, 10% terminological)"
-        - "Creation-time anti-fiction validation with evidence requirements"
-        - "90+/100 compliance threshold for coherence and authenticity"
-        - "Integrated qualitative replacement recommendations"
-        - "Constitutional AI principle compliance integration"
-        - "Self-healing protocol compatibility with correction suggestions"
-      spawn_pattern: "Task tool with framework-coherence-validator specialist OR direct validator execution"
+      file_types: ["Framework specifications", "multi-file instruction sets", "system architectures"]
+      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "High production threshold"]
+      spawn_pattern: "Direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
-      innovation_level: "CONSOLIDATED VALIDATOR - Combines framework-coherence-analyzer + creation-time-anti-fiction-validator"
-      consolidation_source: "framework-coherence-analyzer.md + creation-time-anti-fiction-validator.md"      
+      
     - name: "communication-pattern-validator"
       location: "meta/validation/validators/framework/communication-pattern-validator.md"
       file_types: ["Multi-agent systems", "communication protocols", "coordination patterns"]
@@ -342,8 +334,7 @@ validator_registry:
       - "vagueness-detector → content-quality-validator (language precision)"
       - "anti-fiction-validator → content-quality-validator (content authenticity)" 
       - "constitutional-ai-checker → content-quality-validator (constitutional compliance)"
-      - "framework-coherence-analyzer → framework-coherence-validator (structural consistency)"
-      - "creation-time-anti-fiction-validator → framework-coherence-validator (evidence authenticity)"    
+    
   development_validators:
     count: 9
     categories:

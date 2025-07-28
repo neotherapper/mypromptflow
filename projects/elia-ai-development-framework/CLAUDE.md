@@ -30,6 +30,7 @@ ELIA (Enlightened Learning and Intelligence Architecture) is an **AI-assisted de
 - Context intelligence as primary architectural principle
 - Research-validated performance targets (60-80% improvement)
 - Git worktree optimization for context management
+- **Claude Sub-Agents Best Practices Compliance**: Single responsibility specialists, anti-pattern prevention, tool minimalism
 - Timeline: 6-week development cycle focused on context optimization features first
 
 ## Current Status
@@ -80,6 +81,13 @@ ELIA (Enlightened Learning and Intelligence Architecture) is an **AI-assisted de
 - **Real-Time Adaptation**: Live context adjustment based on project state and user intent
 - **Advanced Learning Integration**: Context recommendation improvement through usage patterns
 
+**Claude Sub-Agents Best Practices Integration**: 
+- **Domain Specialists Approach**: 5 comprehensive specialists vs 16+ micro-agents (69% reduction)
+- **Single Responsibility Validation**: Each specialist maintains coherent single domain
+- **Tool Minimalism**: Standard Read/Grep/Glob with minimal necessary additions  
+- **Context Isolation**: Independent 200k-token contexts per domain specialist
+- **Anti-Pattern Prevention**: Avoid micro-specialization following `knowledge-vault/knowledge/techniques/claude-subagents-best-practices.md`
+
 ### Tools and Resources
 
 **Research-Validated Context Intelligence**: 
@@ -88,14 +96,21 @@ ELIA (Enlightened Learning and Intelligence Architecture) is an **AI-assisted de
 - `research/findings/real-time-context-adaptation-elia/` - Dynamic context relevance scoring and progressive loading (96% coverage)
 - `docs/user-scenarios.md` - Comprehensive AI-assisted development workflows (28,000+ words)
 
+**MCP Integration Resources** (New):
+- `docs/mcp-server-options.md` - Comprehensive server selection guide with category-based recommendations and strategic mashups
+- `suggestions/README.md` - Server assessment framework with 6-dimension business value scoring algorithm
+- `suggestions/assessment-template.md` - Standardized evaluation template for new server discoveries
+- **Research Foundation**: Analysis of 2,200+ servers from mypromptflow registry with 47+ high-priority servers identified
+
 **Documentation Suite**:
 - `docs/system-architecture-v1.md` - Context Intelligence Architecture as primary system
-- `docs/implementation-roadmap.md` - Context optimization features first approach
-- `docs/mcp-integration-strategy.md` - 79 Tier 1 MCP servers with proven business value
+- `docs/implementation-roadmap.md` - Context optimization features first approach with MCP server deployment sequence
 - `docs/token-optimization-strategies.md` - 50-70% token reduction while maintaining 95%+ accuracy
 
 **Context Optimization Tools**:
-- Git worktree architecture optimized for context isolation and parallel development
+- **MCP Server Ecosystem**: Strategic tier-based server selection eliminating duplicates (Puppeteer over Playwright, Qdrant over Chroma)
+- **Strategic Mashups**: Server combinations providing 40-60% efficiency gains (Qdrant + Redis + PostgreSQL, Notion + GitBook)
+- Git worktree architecture optimized for context isolation and MCP server organization
 - Dynamic context relevance scoring algorithms with 85-95% accuracy targets
 - Progressive context loading achieving 60-80% performance improvements
 - Cross-reference validation maintaining >98% consistency across documentation
@@ -110,26 +125,49 @@ ELIA (Enlightened Learning and Intelligence Architecture) is an **AI-assisted de
 
 ## Context Intelligence Implementation Priorities
 
-**Phase 1: Context Intelligence Foundation (Weeks 1-3)**
-1. **Dynamic Context Engine Foundation** - Development phase detection, intent analysis, relevance scoring
-2. **Real-Time Context Adaptation System** - Project state monitoring, context migration, cross-reference validation
-3. **Context-Aware Knowledge Systems** - Context-intelligent databases, enhanced search, AI context generation
+**Phase 1: MCP Foundation Servers + Sub-Agents Specialists (Week 1)**
+1. **Information Retrieval Core** - Deploy Fetch, Memory, Filesystem for immediate context access
+2. **Development Integration** - Configure Git for version control intelligence and repository analysis
+3. **Sub-Agents Foundation** - Deploy 5 domain specialists following best practices (context-intelligence-specialist, research-knowledge-specialist, frontend-development-specialist, backend-development-specialist, devops-integration-specialist)
+4. **Basic Context Testing** - Validate server coordination and sub-agents context isolation
 
-**Phase 2: Context-Enhanced Capabilities (Weeks 4-6)**
-1. **Context-Optimized Research** - Context-aware information gathering, relevance filtering, quality validation
-2. **Advanced Context Learning** - Multi-modal learning systems, context recommendation improvement
-3. **MCP Integration** - 79 Tier 1 servers with context optimization for capability-specific workflows
+**Phase 2: Enhanced Intelligence Layer + Best Practices Validation (Week 2)**
+1. **High-Performance Data** - Deploy Redis for high-speed caching and Qdrant for semantic search
+2. **Development Platform** - Integrate GitHub for issue tracking and development workflow automation
+3. **Context Intelligence Core** - Begin dynamic context engine with specialized sub-agents coordination
+4. **Best Practices Compliance** - Validate single responsibility principle and anti-pattern prevention
+
+**Phase 3: Advanced Capabilities + Context Isolation (Week 3)**
+1. **Browser Automation** - Deploy Puppeteer for AI testing and web research automation
+2. **Knowledge Management** - Configure Notion for team collaboration and documentation
+3. **Progressive Context Loading** - Implement hierarchical context delivery with independent 200k-token contexts per specialist
+4. **Agent Coordination Optimization** - Achieve 69% reduction in agent count complexity
+
+**Phase 4: Context Optimization + Production Excellence (Weeks 4-6)**
+1. **Strategic Mashups** - Optimize server coordination for 40-60% efficiency gains with sub-agents
+2. **Real-Time Adaptation** - Complete context adaptation system with specialist coordination
+3. **Advanced Context Learning** - Multi-modal learning systems with sub-agents knowledge sharing
+4. **Best Practices Production** - Full compliance with `knowledge-vault/knowledge/techniques/claude-subagents-best-practices.md`
 
 **Success Validation**:
 - Context delivery performance: 60-80% improvement through progressive loading
 - Context accuracy: 85-95% relevance with automated pruning
 - Context consistency: >98% across all documentation through cross-reference validation
 - Real-time adaptation: <2 second response to changing project requirements
+- **Sub-Agents Best Practices Compliance**: ≥85/100 compliance score per specialist, 69% agent count reduction, single responsibility validation
+- **Context Isolation Effectiveness**: Independent 200k-token contexts with domain-specific expertise validation
 
 **Available Documents for Implementation**:
-- **MCP Integration Strategy**: Ready-to-implement 79 Tier 1 servers with business value scores
-- **Token Optimization**: 50-70% reduction strategies with quality preservation
-- **Research Foundation**: Three comprehensive studies providing implementation patterns
-- **User Scenarios**: Detailed AI-assisted development workflows for validation
+- **MCP Server Options**: Comprehensive category-based selection guide with tier classifications and strategic mashups
+- **Server Assessment Framework**: 6-dimension business value scoring algorithm with standardized evaluation templates
+- **New Server Discovery**: Suggestions folder structure with evaluation processes for ongoing server assessment
+- **Research Foundation**: Three comprehensive studies (95%+ coverage) providing context intelligence implementation patterns
+- **Strategic Server Analysis**: 47+ high-priority servers identified with $2.1M+ annual business impact from 2,200+ server analysis
 
-Last Updated: 2025-01-28 (Context Intelligence Priority Realignment Complete)
+**Implementation-Ready Resources**:
+- Complete deployment roadmap with 4-phase implementation sequence
+- Strategic mashup combinations for 40-60% efficiency gains
+- Duplicate elimination rationale (Puppeteer over Playwright, Qdrant over Chroma)
+- Cost-benefit analysis with 650-1400% 3-year ROI projections
+
+Last Updated: 2025-01-28 (MCP Integration Strategy Complete)
