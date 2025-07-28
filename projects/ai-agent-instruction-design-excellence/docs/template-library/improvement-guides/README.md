@@ -38,9 +38,9 @@ These guides are based on extensive research demonstrating:
 - Systematic recovery procedures
 
 ### 4. [Multi-Agent Improvement Validation Guide](./multi-agent-improvement-validation-guide.md)
-**Focus**: Using multi-agent validation achieving 99% accuracy
+**Focus**: Using multi-agent validation designed for 99% accuracy
 **Key Benefits**:
-- 99% accuracy vs 92% human performance
+- Framework design target: 99% accuracy vs 92% human performance
 - 92% reduction in validation time
 - Specialized validator coordination
 - Consensus-based quality assurance
