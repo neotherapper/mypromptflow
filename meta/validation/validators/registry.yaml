@@ -128,6 +128,7 @@ validator_registry:
         - "meta/information-access/**/*.yaml"
         - "research/findings/**/.meta/research-sources.md" 
         - "knowledge-vault/databases/tools_services/views/*.yaml"
+        - "projects/ai-pr-validation-system/docs/file-type-analysis-templates.md"
       capabilities:
         - "Information access framework compliance validation"
         - "Technology-specific source mapping validation (React, database patterns)"
@@ -136,11 +137,14 @@ validator_registry:
         - "Research framework source discovery integration"
         - "AI-PR validation source enhancement verification"
         - "Knowledge vault cross-reference and tag validation"
+        - "Unified source-discovery-framework integration verification"
+        - "Elimination of duplicate source mappings"
       spawn_pattern: "Task tool with information-access-source-validator specialist"
       authority_level: "Specialist Agent (Level 3)"
       parallel_safe: true
       production_ready: true
       innovation_level: "Essential for unified information access framework compliance"
+      unified_framework_integration: "meta/information-access/source-discovery-framework.yaml"
       
     # Project Documentation Validators (NEW)
     - name: "project-documentation-validator"
