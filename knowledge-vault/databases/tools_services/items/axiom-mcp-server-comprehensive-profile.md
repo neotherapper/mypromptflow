@@ -8,14 +8,14 @@ item_type: mcp_server
 migration_date: '2025-07-26'
 name: Axiom MCP Server
 original_file: mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
-priority: 2nd_priority
+priority: 3rd_priority
 production_readiness: 92
-quality_score: 7.3
+quality_score: 5.3
 source_database: tools_services
 status: active
 tags:
 - Database
-- Tier 2
+- Tier 3
 - Storage Service
 - MCP Server
 - API Service

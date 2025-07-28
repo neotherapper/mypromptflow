@@ -1,18 +1,18 @@
 ---
-description: 'Jupyter Notebook MCP Server - Tier 1 Interactive Computing and Data Science Platform'
+description: 'Jupyter Notebook MCP Server - Tier 3 Interactive Computing and Data Science Platform'
 id: d2a5c8f1-7e3b-4d9a-a6c2-8f1e5b3d7a9c
 installation_priority: 1
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: 'Jupyter Notebook MCP Server'
-priority: 1st_priority
+priority: 3rd_priority
 production_readiness: 91
-quality_score: 9.2
+quality_score: 5.75
 source_database: tools_services
 status: active
 tags:
 - MCP Server
-- Tier 1
+- Tier 3
 - Data Science
 - Interactive Computing
 - Scientific Computing
@@ -51,16 +51,15 @@ The **Jupyter Notebook MCP Server** delivers comprehensive interactive computing
 
 ## Quality & Scoring Metrics
 
-### Business-Aligned Scoring Analysis
+### Community-Driven Scoring Analysis (v5.0.0)
 
-**Business Domain Relevance**: 9/10 (Critical data science and machine learning infrastructure)
-**Technical Development Value**: 10/10 (Essential platform for data-driven development and research)
-**Production Readiness**: 9/10 (Enterprise-focused with comprehensive data science workflow support)
-**Setup Complexity**: 8/10 (Moderate complexity requiring data science environment knowledge)
-**Maintenance Status**: 10/10 (Active development with Jupyter ecosystem stability and community support)
-**Documentation Quality**: 9/10 (Comprehensive data science and interactive computing documentation)
+**Community Adoption**: 4/10 (Data science tools - not high priority currently per business needs)
+**Information Retrieval Relevance**: 5/10 (Data analytics platform - reduced business priority)
+**Integration Potential**: 7/10 (Good integration capabilities with development ecosystems)
+**Production Readiness**: 8/10 (Enterprise-focused with comprehensive data science workflow support)
+**Maintenance Status**: 9/10 (Active development with Jupyter ecosystem stability and community support)
 
-**Composite Score: 9.2/10** - Tier 1 Immediate Implementation Priority
+**Composite Score: 5.75/10** - Tier 3 Specialized Implementation Priority
 
 ### Production Readiness Assessment
 - **API Stability**: Enterprise Jupyter API with notebook execution and comprehensive data science integration

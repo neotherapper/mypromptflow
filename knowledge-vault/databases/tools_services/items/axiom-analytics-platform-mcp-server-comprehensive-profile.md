@@ -15,10 +15,10 @@ item_type: mcp_server
 migration_date: '2025-07-27'
 name: Axiom Analytics Platform MCP Server
 original_file: mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
-priority: 2nd_priority
+priority: 3rd_priority
 production_readiness: 92
 provider: Community
-quality_score: 7.3
+quality_score: 5.3
 repository_url: https://github.com/axiomhq/axiom-node
 setup_complexity: Moderate
 source_database: tools_services
@@ -36,7 +36,7 @@ tags:
 - tier-2
 - analytics
 - monitoring
-tier: Tier 2
+tier: Tier 3
 transport_protocols:
 - REST API
 - Streaming Endpoints

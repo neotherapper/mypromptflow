@@ -6,14 +6,14 @@ item_type: mcp_server
 migration_date: '2025-07-27'
 name: MotherDuck Analytics Platform MCP Server
 original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
-priority: 2nd_priority
+priority: 3rd_priority
 production_readiness: 88
-quality_score: 7.9
+quality_score: 5.4
 source_database: tools_services
 status: active
 tags:
 - MCP Server
-- Tier 2
+- Tier 3
 - Analytics Platform
 - Data Processing
 - Cloud Analytics

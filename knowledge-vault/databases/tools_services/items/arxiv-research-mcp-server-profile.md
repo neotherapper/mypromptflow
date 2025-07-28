@@ -1,18 +1,18 @@
 ---
-description: 'ArXiv Research MCP Server - Tier 1 Academic Research Paper Discovery and Analysis Platform'
+description: 'ArXiv Research MCP Server - Tier 3 Academic Research Paper Discovery and Analysis Platform'
 id: a8f3b2e7-9c4d-4a1e-b6f5-7e2d9a8c3b1f
 installation_priority: 1
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: 'ArXiv Research MCP Server'
-priority: 1st_priority
+priority: 3rd_priority
 production_readiness: 88
-quality_score: 9.0
+quality_score: 5.7
 source_database: tools_services
 status: active
 tags:
 - MCP Server
-- Tier 1
+- Tier 3
 - Academic Research
 - Scientific Computing
 - Research Discovery
@@ -51,16 +51,15 @@ The **ArXiv Research MCP Server** delivers comprehensive academic research disco
 
 ## Quality & Scoring Metrics
 
-### Business-Aligned Scoring Analysis
+### Community-Driven Scoring Analysis (v5.0.0)
 
-**Business Domain Relevance**: 9/10 (Critical academic research and scientific analysis infrastructure)
-**Technical Development Value**: 9/10 (Essential platform for research-driven development and innovation)
-**Production Readiness**: 8/10 (Academic-focused with comprehensive research workflow support)
-**Setup Complexity**: 9/10 (Simple integration requiring minimal configuration)
-**Maintenance Status**: 9/10 (Active development with ArXiv API stability and academic community support)
-**Documentation Quality**: 9/10 (Comprehensive research workflow and academic integration documentation)
+**Community Adoption**: 5/10 (Academic research tools - limited business value at the moment)
+**Information Retrieval Relevance**: 5/10 (Academic research platform - limited business relevance currently)
+**Integration Potential**: 6/10 (Reasonable integration capabilities for research workflows)
+**Production Readiness**: 7/10 (Academic-focused with comprehensive research workflow support)
+**Maintenance Status**: 8/10 (Active development with ArXiv API stability and academic community support)
 
-**Composite Score: 9.0/10** - Tier 1 Immediate Implementation Priority
+**Composite Score: 5.7/10** - Tier 3 Specialized Implementation Priority
 
 ### Production Readiness Assessment
 - **API Stability**: Academic ArXiv API with comprehensive research metadata and reliable data access

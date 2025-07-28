@@ -1,18 +1,18 @@
 ---
-description: 'Bioinformatics MCP Server - Tier 1 Biological Data Analysis and Genomics Research Platform'
+description: 'Bioinformatics MCP Server - Tier 3 Biological Data Analysis and Genomics Research Platform'
 id: e9f4b1c8-2d7a-4e6f-b3c5-9a8e7f2b4d1c
 installation_priority: 1
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: 'Bioinformatics MCP Server'
-priority: 1st_priority
+priority: 3rd_priority
 production_readiness: 89
-quality_score: 8.9
+quality_score: 4.75
 source_database: tools_services
 status: active
 tags:
 - MCP Server
-- Tier 1
+- Tier 3
 - Bioinformatics
 - Genomics
 - Scientific Computing
@@ -51,16 +51,15 @@ The **Bioinformatics MCP Server** delivers comprehensive biological data analysi
 
 ## Quality & Scoring Metrics
 
-### Business-Aligned Scoring Analysis
+### Community-Driven Scoring Analysis (v5.0.0)
 
-**Business Domain Relevance**: 9/10 (Critical life sciences and pharmaceutical research infrastructure)
-**Technical Development Value**: 9/10 (Essential platform for computational biology and drug discovery)
+**Community Adoption**: 3/10 (Life sciences research - not valuable at the moment per business priorities)
+**Information Retrieval Relevance**: 4/10 (Life sciences research - limited business relevance currently)
+**Integration Potential**: 6/10 (Reasonable integration capabilities for specialized research workflows)
 **Production Readiness**: 8/10 (Research-focused with comprehensive bioinformatics workflow support)
-**Setup Complexity**: 7/10 (High complexity requiring bioinformatics expertise and computational resources)
-**Maintenance Status**: 9/10 (Active development with bioinformatics community support and research backing)
-**Documentation Quality**: 9/10 (Comprehensive computational biology and bioinformatics research documentation)
+**Maintenance Status**: 7/10 (Active development with bioinformatics community support and research backing)
 
-**Composite Score: 8.9/10** - Tier 1 Immediate Implementation Priority
+**Composite Score: 4.75/10** - Tier 3 Specialized Implementation Priority
 
 ### Production Readiness Assessment
 - **API Stability**: Research-grade bioinformatics API with comprehensive analysis tools and algorithm integration
