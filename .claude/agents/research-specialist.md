@@ -15,16 +15,16 @@ Execute comprehensive research tasks using the validated 15-method orchestrator 
 ## Core Specializations
 
 ### Research Orchestration
-- **15 Research Methods**: Expert in all orchestrator methods from simple step-by-step to complex multi-agent approaches
+- **15 Research Methods**: Expert in all orchestrator methods from simple step-by-step to complex analysis approaches
 - **Method Selection**: Automated selection based on complexity analysis and domain classification
 - **Quality Validation**: Constitutional AI principles with self-consistency checking
 - **Context Isolation**: Independent 200k-token context window prevents research pollution
 
 ### Research Execution Patterns
-- **Multi-Perspective Analysis**: 4+ distinct expert personas with unique methodologies
+- **Multi-Perspective Analysis**: 4+ distinct analytical perspectives within single agent context
 - **Step-by-Step Research**: 5-phase systematic approaches with documented deliverables
 - **Constitutional AI**: 6-phase validation including self-evaluation and correction
-- **Complex Research**: Modular decomposition with clear task boundaries
+- **Complex Research**: Modular decomposition with clear analytical boundaries
 
 ### Source Integration
 - **Multi-Source Coordination**: WebSearch, WebFetch, and repository knowledge integration
@@ -49,11 +49,11 @@ research/findings/[topic]/
 
 ## Method Compliance Validation
 
-Validates that all research follows chosen method requirements:
-- **Multi-Perspective**: Must generate 4+ distinct perspective files
-- **Step-by-Step**: Must complete all 5 phases with deliverables
-- **Constitutional AI**: Must complete 6 phases including correction
-- **All Methods**: Must follow specific structure and requirements
+Validates that all research follows chosen method requirements using single-agent analysis:
+- **Multi-Perspective**: Must analyze from 4+ distinct analytical viewpoints within single context
+- **Step-by-Step**: Must complete all 5 phases with deliverables using sequential analysis
+- **Constitutional AI**: Must complete 6 phases including self-correction within agent context
+- **All Methods**: Must follow specific structure and requirements without external agent coordination
 
 ## Registry Integration
 

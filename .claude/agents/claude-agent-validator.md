@@ -74,6 +74,8 @@ optional_fields:
 - **Unclear Invocation**: Ambiguous usage criteria
 - **Tool Redundancy**: Unnecessary tool assignments
 - **Context Leakage**: Configurations that don't isolate properly
+- **Subagent Spawning**: Agents attempting to spawn other subagents (forbidden - causes system hangs)
+- **Task Tool Misuse**: Using Task tool to spawn subagents from within subagents
 
 ## Validation Protocols
 
@@ -94,6 +96,12 @@ validation_checks:
     - "System prompt clarity and specificity"
     - "Tool configuration appropriateness"
     - "Integration guidance completeness"
+  
+  subagent_spawning_prevention:
+    - "No Task tool usage for spawning other subagents"
+    - "No references to orchestrator systems requiring subagent delegation"
+    - "No multi-agent coordination patterns in system prompts"
+    - "Self-contained execution within single agent context"
 ```
 
 ### Quality Scoring Framework
@@ -101,6 +109,7 @@ validation_checks:
 - **Prompt Quality**: Assessment of system prompt effectiveness  
 - **Integration Rating**: Evaluation of coordination capabilities
 - **Performance Potential**: Prediction of sub-agent effectiveness
+- **Subagent Spawning Check**: Critical validation preventing system hangs (automatic failure if detected)
 
 ### Meta/Validation Framework Integration
 - **Constitutional AI Compliance**: Validates agents against 5-principle framework
@@ -135,6 +144,8 @@ validation_checks:
 - **Pollution Prevention**: Assessment of contamination risks
 - **Clean Communication**: Validation of result delivery patterns
 - **Parallel Safety**: Verification of concurrent execution safety
+- **Subagent Spawning Prevention**: Critical check for Task tool usage that would spawn nested subagents
+- **Self-Contained Execution**: Validation that agent operates entirely within its own context
 
 ### Performance Optimization
 - **Token Efficiency**: Assessment of context window usage
@@ -156,6 +167,7 @@ validation_checks:
 - **Vagueness Rating**: Clear, actionable language validation score
 - **Anti-Fiction Check**: Evidence-based claims verification
 - **Framework Coherence**: Cross-agent consistency scoring
+- **Subagent Spawning Check**: CRITICAL - Automatic failure if Task tool or orchestrator patterns detected
 - **Requirement Compliance**: Checklist of met/unmet requirements
 - **Optimization Recommendations**: Specific improvement suggestions
 - **Integration Readiness**: Assessment of deployment readiness

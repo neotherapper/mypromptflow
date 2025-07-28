@@ -52,6 +52,7 @@ anti_patterns:
   tool_bloat: "More than 6 tools without clear justification"
   missing_foundation: "Lacks standard Read/Grep/Glob foundation"
   domain_mismatch: "Tools don't align with agent domain responsibility"
+  subagent_spawning: "Task tool usage indicating subagent spawning (causes system hangs)"
 ```
 
 **Validation Process**:
@@ -59,7 +60,8 @@ anti_patterns:
 2. Verify standard foundation (Read, Grep, Glob) presence
 3. Assess necessity of additional tools based on domain requirements
 4. Check against technology-specific tool patterns in knowledge vault
-5. Identify tool optimization opportunities or excessive complexity
+5. **CRITICAL**: Scan for Task tool or subagent spawning patterns (automatic failure)
+6. Identify tool optimization opportunities or excessive complexity
 
 ### 3. Context Isolation (20 points)
 Verify independent 200k-token contexts with domain-specific expertise and contamination prevention.
@@ -81,14 +83,17 @@ context_isolation_patterns:
     - "References to multiple unrelated domains"
     - "Generic responsibilities crossing domain boundaries"
     - "Dependencies on other agent contexts for basic operation"
+    - "CRITICAL: Subagent spawning patterns or Task tool delegation references"
+    - "Multi-agent orchestration systems requiring subagent coordination"
 ```
 
 **Validation Process**:
 1. Analyze system prompt for domain focus and boundary clarity
 2. Check for cross-domain knowledge requirements or references
 3. Assess independence of operation within 200k-token context
-4. Identify contamination risks or unclear domain boundaries
-5. Verify domain-specific expertise depth and coherence
+4. **CRITICAL**: Scan for orchestrator patterns or subagent delegation references
+5. Identify contamination risks or unclear domain boundaries
+6. Verify domain-specific expertise depth and coherence
 
 ### 4. Anti-Pattern Prevention (20 points)
 Detect and prevent micro-specialization, overly broad agents, and other configuration anti-patterns.
@@ -109,16 +114,22 @@ anti_patterns:
     indicators: ["Multiple unrelated domains", "Jack-of-all-trades scope", "Context overload risk"]
     examples: ["frontend-backend-database-specialist", "everything-validator"]
     
+  subagent_spawning:
+    indicators: ["Task tool in tool list", "References to orchestrator systems", "Multi-agent coordination patterns"]
+    examples: ["research-specialist with orchestrator delegation", "Task tool usage for spawning subagents"]
+    severity: "CRITICAL - Causes system hangs and must be prevented"
+    
   consolidation_opportunities:
     patterns: ["Related micro-agents", "Overlapping domains", "Coordination overhead"]
 ```
 
 **Validation Process**:
 1. Assess agent scope granularity against best practices framework
-2. Identify micro-specialization patterns requiring consolidation
-3. Detect overly broad agents needing domain separation
-4. Compare against technology-specific patterns for optimal scope
-5. Recommend consolidation or separation based on best practices
+2. **CRITICAL**: Check for subagent spawning patterns (Task tool, orchestrator references)
+3. Identify micro-specialization patterns requiring consolidation
+4. Detect overly broad agents needing domain separation
+5. Compare against technology-specific patterns for optimal scope
+6. Recommend consolidation or separation based on best practices
 
 ### 5. Configuration Quality (15 points)
 Validate YAML frontmatter structure, system prompt clarity, and documentation completeness.

@@ -258,7 +258,7 @@ validator_registry:
         - "Single responsibility principle assessment (25 points)"
         - "Tool minimalism validation with standard Read/Grep/Glob pattern (20 points)"
         - "Context isolation verification with independent 200k-token contexts (20 points)"
-        - "Anti-pattern prevention (micro-specialization, excessive breadth) (20 points)"
+        - "Anti-pattern prevention (micro-specialization, excessive breadth, CRITICAL subagent spawning) (20 points)"
         - "Configuration quality assessment (YAML structure, system prompt) (15 points)"
         - "Best practices framework integration with knowledge vault patterns"
         - "Comprehensive scoring (0-100 scale) with ≥85/100 production threshold"
