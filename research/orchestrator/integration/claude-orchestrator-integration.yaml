@@ -221,66 +221,87 @@ claude_orchestrator_workflow:
   
   step_3_5_discover_information_sources:
     reference_files:
-      - "meta/information-access/agent-decision-framework.md"
+      - "meta/information-access/source-discovery-framework.yaml"
       - "meta/information-access/topic-mappings/"
       - "meta/information-access/category-mappings/"
       - "knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
     
-    purpose: "Intelligent source discovery for optimal research information access"
-    integration: "Bridges comprehensive MCP infrastructure with practical research needs"
+    purpose: "Unified intelligent source discovery using consolidated framework"
+    integration: "Uses unified source-discovery-framework.yaml for consistent source selection"
     
     source_discovery_process:
-      topic_analysis:
+      unified_framework_integration:
+        framework_reference: "meta/information-access/source-discovery-framework.yaml"
+        algorithm_application: "Apply source_selection_algorithm from unified framework"
+        technology_detection: "Use technology_mappings for specific technologies (React, TypeScript, Python)"
+        category_fallback: "Use category_mappings for broader domains (frontend, backend, database)"
+        
+      enhanced_topic_analysis:
         - extract_research_topic: "Parse research topic from user request and context analysis"
-        - identify_technology_specifics: "Look for specific technologies (React, PostgreSQL, etc.)"
-        - classify_domain_categories: "Identify broader categories (frontend, database, etc.)"
-        - assess_information_needs: "Determine what types of information will be required"
+        - apply_technology_detection: "Use source-discovery-framework technology_mappings detection"
+        - identify_specific_technologies: "React, TypeScript, Python get dedicated source mappings"
+        - classify_domain_categories: "Frontend, backend, database, infrastructure, testing"
+        - assess_information_complexity: "Simple, moderate, complex research information needs"
       
-      mapping_selection:
-        specific_technology_routing:
-          - check_topic_mappings: "Look for specific technology mappings in meta/information-access/topic-mappings/"
-          - react_example: "React research → react-sources.yaml (GitHub, Context7, npm)"
-          - priority: "Specific mappings override categorical patterns"
+      consolidated_mapping_selection:
+        technology_specific_routing:
+          framework_integration: "Load technology_mappings from source-discovery-framework.yaml"
+          react_routing: "React research → react-sources.yaml (GitHub, Context7, npm, knowledge-vault)"
+          typescript_routing: "TypeScript research → typescript sources (GitHub, Context7, TypeScript docs)"
+          python_routing: "Python research → python sources (GitHub, PyPI, Python docs, knowledge-vault)"
+          priority_enforcement: "Technology-specific mappings override category patterns"
         
-        categorical_pattern_routing:
-          - check_category_mappings: "Look for category patterns in meta/information-access/category-mappings/"
-          - database_example: "Database research → database-sources.yaml (PostgreSQL MCP, knowledge-vault query)"
-          - fallback: "Use when specific technology not identified"
+        category_pattern_routing:
+          framework_integration: "Load category_mappings from source-discovery-framework.yaml"
+          frontend_routing: "Frontend research → frontend category (GitHub, MDN, npm packages)"
+          backend_routing: "Backend research → backend category (GitHub, API docs, framework docs)"
+          database_routing: "Database research → database-sources.yaml (MCP servers, docs, knowledge-vault)"
+          infrastructure_routing: "Infrastructure research → infrastructure category (MCP servers, docs)"
+          testing_routing: "Testing research → testing category (GitHub, testing frameworks, best practices)"
+          fallback_application: "Use when specific technology not identified"
         
-        knowledge_vault_fallback:
-          - query_tools_services: "Query knowledge-vault/databases/tools_services/ for available sources"
-          - apply_filters: "Use information-access tags and authentication requirements"
-          - rank_sources: "Apply decision framework scoring for optimal selection"
+        knowledge_vault_coordination:
+          unified_approach: "Coordinated through source-discovery-framework.yaml knowledge_vault_integration"
+          query_optimization: "Use information-sources-by-type view for systematic source discovery"
+          tag_based_filtering: "Apply information-access tags and authentication complexity filters"
+          fallback_strategy: "When no specific/category mapping, use knowledge-vault fallback"
       
-      multi_source_coordination:
-        - primary_sources: "Select 1-2 primary sources based on topic/category mapping"
-        - supplementary_sources: "Add complementary sources for comprehensive coverage"
-        - validation_sources: "Include cross-reference sources for accuracy validation"
-        - fallback_sources: "Prepare backup sources in case primary sources unavailable"
+      enhanced_source_coordination:
+        multi_source_strategy: "Apply source coordination patterns from unified framework"
+        primary_source_selection: "1-2 authoritative sources based on technology/category mapping"
+        supplementary_source_addition: "Complementary sources for comprehensive coverage"
+        validation_source_inclusion: "Cross-reference sources for accuracy validation"
+        fallback_source_preparation: "Backup sources with error handling procedures"
+        
+        pr_validation_alignment: "Coordinate with AI-PR validation system role assignments"
+        research_method_integration: "Align source selection with selected research methods"
     
-    output_format:
-      selected_sources:
-        primary: ["source_name with access_pattern"]
-        supplementary: ["source_name with access_pattern"]
-        validation: ["source_name with access_pattern"]
-        fallback: ["source_name with access_pattern"]
+    enhanced_output_format:
+      unified_source_selection:
+        technology_specific_sources: "Sources from technology_mappings if applicable"
+        category_pattern_sources: "Sources from category_mappings if no specific technology"
+        knowledge_vault_sources: "Fallback sources from knowledge-vault query"
+        integration_metadata: "Source selection rationale and framework coordination"
       
-      source_coordination_plan:
-        sequential_sources: "Sources that must be accessed in order"
-        parallel_sources: "Sources that can be accessed simultaneously"
-        conditional_sources: "Sources activated based on intermediate findings"
+      consolidated_coordination_plan:
+        sequential_access_sources: "Sources requiring ordered access (authentication, dependencies)"
+        parallel_access_sources: "Sources for simultaneous access (GitHub, Context7, WebFetch)"
+        conditional_activation_sources: "Sources activated based on intermediate research findings"
+        error_recovery_sources: "Fallback sources with graceful degradation procedures"
       
-      integration_strategy:
-        mcp_servers: "Specific MCP server tools and access patterns"
-        knowledge_vault: "Knowledge vault queries and view usage"
-        web_sources: "WebFetch and WebSearch coordination"
-        authentication: "Required authentication and setup complexity"
+      framework_integration_strategy:
+        mcp_server_coordination: "Unified MCP server selection from framework mappings"
+        knowledge_vault_integration: "Systematic knowledge-vault query and view usage"
+        web_source_optimization: "WebFetch and WebSearch coordination with rate limiting"
+        authentication_management: "Consolidated authentication complexity assessment"
+        pr_validation_alignment: "Source coordination with AI-PR validation role assignments"
       
-      source_optimization:
-        estimated_setup_time: "Total time to configure all selected sources"
-        authentication_complexity: "Overall authentication difficulty (1-10 scale)"
-        rate_limit_coordination: "Strategy for managing rate limits across sources"
-        error_handling: "Fallback procedures and error recovery"
+      quality_optimization:
+        setup_time_estimation: "Total configuration time using framework complexity scoring"
+        authentication_complexity_assessment: "1-10 scale difficulty using unified framework"
+        rate_limit_coordination_strategy: "Multi-source rate limiting with framework guidance"
+        comprehensive_error_handling: "Framework-based fallback procedures and recovery"
+        source_attribution_tracking: "Complete source tracking for research-sources.md"
   
   step_4_select_methods:
     reference_files:
