@@ -78,6 +78,57 @@ information_categories:
       - "Transform data formats"
       - "Handle structured responses"
     examples: ["REST API Tools", "GraphQL Servers", "Data Transformation", "API Clients"]
+    
+  ai_platforms:
+    tag_filter: "ai"
+    description: "AI and machine learning services, language models, image generation"
+    use_cases:
+      - "Generate text content and creative writing"
+      - "Create images and visual content"
+      - "Process speech and audio data"
+      - "Perform AI analysis and reasoning"
+      - "Build conversational AI systems"
+    examples: ["Anthropic Claude API", "OpenAI Platform", "AI Analysis Tools", "Language Models"]
+    
+  communication_platforms:
+    tag_filter: "communication"
+    description: "Chat platforms, messaging systems, community management tools"
+    use_cases:
+      - "Manage community servers and channels"
+      - "Automate messaging and notifications"
+      - "Monitor chat activity and engagement"
+      - "Integrate with team communication workflows"
+    examples: ["Discord MCP Server", "Slack Integration", "Team Communication", "Chat Automation"]
+    
+  entertainment_media:
+    tag_filter: "entertainment"
+    description: "Music streaming, media platforms, content discovery services"
+    use_cases:
+      - "Access music libraries and playlists"  
+      - "Analyze audio features and preferences"
+      - "Discover and recommend content"
+      - "Integrate with entertainment workflows"
+    examples: ["Spotify MCP Server", "Music Analytics", "Content Discovery", "Media Integration"]
+    
+  productivity_tools:
+    tag_filter: "productivity"
+    description: "Business tools, spreadsheets, document management, workflow automation"
+    use_cases:
+      - "Manage spreadsheets and business data"
+      - "Automate document workflows"
+      - "Track business metrics and KPIs"
+      - "Coordinate team productivity tasks"
+    examples: ["Google Sheets", "Document Management", "Business Analytics", "Workflow Tools"]
+    
+  local_storage:
+    tag_filter: "file-systems"
+    description: "Local file operations, document processing, storage management"
+    use_cases:
+      - "Read and write local files"
+      - "Process documents and configurations"
+      - "Monitor file system changes"
+      - "Manage data storage and backups"
+    examples: ["Filesystem MCP Server", "File Management", "Document Processing", "Storage Tools"]
 
 # Filter Configurations for AI Agents
 filter_presets:
@@ -108,6 +159,34 @@ filter_presets:
       - "status: adopted OR active_use"
       - "reliability_score: >=8"
       - "maintenance_status: active"
+      
+  ai_ready:
+    description: "AI platforms and language models ready for integration"
+    filters:
+      - "information_type: ai_platforms"
+      - "authentication: manageable"
+      - "api_stability: high"
+      
+  creative_tools:
+    description: "Tools for creative content generation and media production"
+    filters:
+      - "information_type: ai_platforms OR entertainment_media"
+      - "capability: content_generation"
+      - "complexity_score: <=4"
+      
+  business_integration:
+    description: "Business productivity and workflow automation tools"
+    filters:
+      - "information_type: productivity_tools OR structured_data"
+      - "enterprise_features: available"
+      - "integration_complexity: low OR medium"
+      
+  communication_automation:
+    description: "Chat and communication platform integration tools"
+    filters:
+      - "information_type: communication_platforms"
+      - "automation_support: high"
+      - "real_time_capabilities: true"
 
 # Usage Patterns for AI Agents
 usage_patterns:
@@ -171,6 +250,31 @@ example_queries:
     information_type: "file_systems"
     filter_preset: "development_friendly"
     capabilities: ["file_reading", "document_parsing", "format_conversion"]
+    
+  ai_content_generation:
+    information_type: "ai_platforms"
+    filter_preset: "ai_ready"
+    capabilities: ["text_generation", "image_creation", "code_generation"]
+    
+  business_data_management:
+    information_type: "productivity_tools"
+    filter_preset: "business_integration"
+    capabilities: ["spreadsheet_access", "data_analysis", "workflow_automation"]
+    
+  community_management:
+    information_type: "communication_platforms"
+    filter_preset: "communication_automation" 
+    capabilities: ["server_management", "message_automation", "user_engagement"]
+    
+  music_analysis:
+    information_type: "entertainment_media"
+    filter_preset: "creative_tools"
+    capabilities: ["playlist_access", "audio_features", "recommendation_systems"]
+    
+  local_file_operations:
+    information_type: "local_storage"
+    filter_preset: "immediate_deployment"
+    capabilities: ["file_management", "content_processing", "system_integration"]
 
 # Maintenance and Updates
 maintenance:

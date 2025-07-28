@@ -139,7 +139,7 @@ constitutional_principles:
   transparency: "Validation reasoning must be explainable and auditable"
   
 compliance_requirements:
-  principle_adherence: "≥99% compliance across all validation operations"
+  principle_adherence: "Framework designed for ≥99% compliance across all validation operations"
   bias_detection: "Systematic identification and mitigation of assessment biases"
   fairness_assessment: "Equitable evaluation across different coding styles"
   harm_prevention: "Proactive identification of potential security or stability risks"
