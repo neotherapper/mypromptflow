@@ -5,7 +5,7 @@
 This comprehensive training module provides complete WorkOS AuthKit implementation guidance for the maritime insurance AI-SDLC workflow. The training covers account setup, development environment configuration, team onboarding, and security compliance aligned with maritime regulatory requirements.
 
 **Target Audience**: 4-person maritime development team  
-**Duration**: 3 weeks (18 hours total)  
+**Duration**: 3 weeks (24 hours total)  
 **Format**: Hands-on labs with role-specific implementation tracks  
 **Prerequisites**: Basic authentication concepts, React/TypeScript familiarity  
 
@@ -58,8 +58,7 @@ By the end of this training, participants will be able to:
    # Development Environment Settings
    Environment Name: "Development/Staging"
    Allowed Redirect URIs:
-     - http://localhost:3000/callback
-     - http://localhost:5173/callback
+     - http://localhost:5173/callback (recommended for Vite)
      - https://dev.maritimeinsurance.com/callback
    
    Webhook URLs:
@@ -184,7 +183,7 @@ By the end of this training, participants will be able to:
    ```bash
    # .env.development
    REACT_APP_WORKOS_CLIENT_ID=client_dev_123456789
-   REACT_APP_WORKOS_REDIRECT_URI=http://localhost:3000/callback
+   REACT_APP_WORKOS_REDIRECT_URI=http://localhost:5173/callback
    REACT_APP_WORKOS_API_HOSTNAME=api.workos.com
    REACT_APP_ENVIRONMENT=development
    
@@ -218,7 +217,7 @@ By the end of this training, participants will be able to:
    npm run dev &
    
    echo "WorkOS development environment started"
-   echo "Frontend: http://localhost:3000"
+   echo "Frontend: http://localhost:5173"
    echo "Backend: http://localhost:8000"
    echo "API Docs: http://localhost:8000/docs"
    ```

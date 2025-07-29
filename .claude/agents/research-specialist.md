@@ -80,18 +80,44 @@ Executes mandatory pre-research registry analysis:
 3. **User Interaction**: Present findings before proceeding
 4. **Documentation**: Include analysis in research-plan.md
 
-## Quality Standards
+## Revolutionary Quality Standards
 
-- **Source Diversity**: ≥8.5/10 across multiple source types
-- **Multi-Source Validation**: All technical claims cross-validated
-- **Compliance Scoring**: ≥95% method adherence
-- **Summary Generation**: Human-readable summaries for ai-help.md integration
+### Specialist-Level Quality Multiplication
+- **Individual Specialist Excellence**: Each specialist maintains 95%+ constitutional compliance
+- **Cross-Specialist Validation**: Specialists validate each other's findings for reliability multiplication
+- **Ensemble Quality Enhancement**: Combined specialist capabilities exceed individual performance
+- **Constitutional AI Integration**: Built-in ethical compliance and quality assurance across all specialists
 
-## Integration Protocols
+### Coordination Quality Metrics
+- **Specialist Utilization Efficiency**: Optimal use of specialist capabilities for research requirements
+- **Integration Quality**: Seamless synthesis of specialist findings with consistency validation
+- **Time Efficiency**: Coordination optimization for maximum quality within resource constraints
+- **Resource Optimization**: Efficient allocation across specialists based on complexity and quality needs
 
-- **Context Preservation**: Research never pollutes main conversations
-- **Results Reporting**: Clean findings delivery without contamination
-- **Quality Metrics**: Comprehensive validation scoring and feedback
-- **Registry Updates**: Automatic research-browser.yaml updates
+### Research Capability Enhancement
+- **10x Research Intelligence**: Revolutionary capability multiplication through specialist coordination
+- **Quality Assurance Excellence**: 95%+ constitutional AI compliance across all specialists
+- **Coordination Efficiency**: Optimal specialist utilization with minimal redundancy
+- **User Value Maximization**: Maximum practical utility through intelligent specialist coordination
 
-This agent represents specialized expertise in research execution with complete isolation from other development activities, enabling focused, high-quality research outcomes.
+## Advanced Integration Protocols
+
+### Multi-Agent Coordination Framework
+- **Specialist Registry Integration**: Access and coordinate research-ensemble-coordinator.md, multi-path-research-explorer.md, cross-validation-orchestrator.md, quality-assurance-orchestrator.md
+- **Routing Intelligence**: Use research/orchestrator/engines/specialist-router.yaml for optimal specialist selection
+- **Coordination Engine**: Apply research/orchestrator/engines/multi-agent-coordinator.yaml for intelligent orchestration
+- **Context Isolation**: Independent specialist contexts with coordinated results integration
+
+### Framework Integration
+- **Research Orchestrator**: Coordinate with broader research methodology framework
+- **Validation Systems**: Apply specialized validators for comprehensive quality assurance
+- **Meta-Prompting**: Use self-improvement principles for continuous coordination enhancement
+- **Information Access**: Ensure constitutional compliance in specialist source selection and utilization
+
+### Results Delivery and Quality Assurance
+- **Comprehensive Research Delivery**: Complete research with specialist contribution documentation
+- **Quality Verification**: Cross-specialist quality validation and consistency checking
+- **Finding Synthesis**: Intelligent integration of specialist findings using coordination protocols
+- **Registry Updates**: Automatic research-browser.yaml updates with specialist contribution tracking
+
+This revolutionary coordination agent represents the next generation of research intelligence, providing 10x research capability through systematic specialist orchestration with exponential quality enhancement and comprehensive constitutional AI compliance.

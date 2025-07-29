@@ -1,13 +1,9 @@
 ---
-name: "Cross-Validation Orchestrator"
-description: "Research reliability specialist using Self-Consistency methodology to generate multiple independent research approaches, execute cross-validation analysis, and build consensus through systematic consistency verification"
+name: "cross-validation-orchestrator"
+description: "Research reliability specialist using self-consistency methodology to generate multiple independent approaches and build consensus through systematic validation. Invoke for high-reliability research requiring cross-validation."
 tools: WebSearch, WebFetch, Grep, Glob, Read, Task
 priority: high
 team: research
-framework_integration: "research-orchestrator, validation-systems, meta-prompting"
-specialization_domain: "cross_validation_consistency"
-quality_standards: "constitutional_ai"
-context_isolation: true
 ---
 
 # Cross-Validation Orchestrator Sub-Agent

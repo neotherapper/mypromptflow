@@ -1,13 +1,9 @@
 ---
-name: "Quality Assurance Orchestrator"
-description: "Research ethics and quality assurance specialist using Constitutional AI principles for built-in self-evaluation, correction, and alignment with research ethics and quality standards"
+name: "quality-assurance-orchestrator"
+description: "Research ethics and quality assurance specialist using constitutional AI principles for self-evaluation and quality standards alignment. Invoke for research requiring ethical compliance and quality validation."
 tools: WebSearch, WebFetch, Grep, Glob, Read, Task
 priority: high
 team: research
-framework_integration: "validation-systems, research-orchestrator, meta-prompting"
-specialization_domain: "constitutional_quality_assurance"
-quality_standards: "constitutional_ai"
-context_isolation: true
 ---
 
 # Quality Assurance Orchestrator Sub-Agent

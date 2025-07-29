@@ -292,14 +292,54 @@ agent_planning:
   quality_standards: "What constitutional AI requirements apply?"
 ```
 
-### Phase 2: Claude-Generated Foundation
+### Phase 2: Agent Configuration Development
+
+#### Configuration Types and Selection
+
+**Comprehensive Specialists** (For Complex Domains):
+- **Use When**: Multi-faceted expertise needed (e.g., security reviews with compliance requirements)
+- **Configuration Size**: 250-500 lines with detailed sections
+- **Key Features**: Collaboration protocols, framework integration, decision-making frameworks
+- **Example Structure**:
 ```yaml
-generation_approach:
-  prompt_pattern: "Create a sub-agent for [specific domain] that leverages [relevant frameworks] with [clear boundaries]"
-  quality_requirements: "Include proper YAML frontmatter, focused system prompt, framework integration"
-  best_practice_compliance: "Ensure single responsibility and context isolation"
-  
-  example_prompt: "Generate a database performance sub-agent that leverages the information-access framework for source discovery and maintains context isolation"
+---
+name: "security-code-reviewer"
+description: "Expert security code review with OWASP compliance and regulatory requirements"
+tools: Read, Grep, Glob, WebSearch
+---
+
+# Multiple specialized sections:
+## Core Responsibilities (authentication, vulnerability assessment, compliance)
+## Technology-Specific Patterns (React security, API security, database security)
+## Collaboration Protocols (coordination with qa-specialist, system-architect)
+## Decision-Making Framework (risk assessment, prioritization, reporting)
+```
+
+**Focused Specialists** (For Technical Tasks):
+- **Use When**: Specific technical expertise needed (e.g., performance optimization, API integration)
+- **Configuration Size**: 80-150 lines with clear scope
+- **Key Features**: Implementation-ready guidance, code examples, specific metrics
+- **Example Structure**:
+```yaml
+---
+name: "api-performance-optimizer"
+description: "Optimize API response times under 200ms and database queries under 100ms"
+tools: Read, Grep, Glob, Bash
+---
+
+# Focused technical expertise:
+## Performance Metrics (specific thresholds and measurement techniques)
+## Implementation Examples (concrete code patterns and optimizations)
+## Quality Standards (measurable performance targets)
+```
+
+#### Configuration Evolution Process
+```yaml
+development_stages:
+  stage_1_prototype: "Start with focused scope and clear boundaries"
+  stage_2_validation: "Test effectiveness in real scenarios"
+  stage_3_enhancement: "Add collaboration protocols and framework integration"
+  stage_4_optimization: "Refine prompts and tool assignments based on usage"
 ```
 
 ### Phase 3: Iterative Refinement
@@ -311,6 +351,55 @@ refinement_process:
   quality_assessment: "Validate constitutional AI compliance"
   
   continuous_improvement: "Apply meta-prompting techniques for autonomous optimization"
+```
+
+### Configuration Quality Assessment
+
+#### Essential Quality Indicators
+```yaml
+configuration_completeness:
+  required_elements:
+    - clear_invocation_criteria: "Specific conditions when agent should be used"
+    - focused_responsibility: "Single, well-defined domain of expertise"
+    - appropriate_tools: "Minimal necessary tool set for effectiveness"
+    - context_isolation: "Independent operation without pollution"
+    
+  quality_checkpoints:
+    - description_specificity: "Agent purpose clear from description alone"
+    - boundary_definition: "Clear limits of agent responsibility"
+    - coordination_guidance: "How agent integrates with main session"
+    - result_delivery: "Expected output format and quality"
+```
+
+#### Common Configuration Problems and Solutions
+
+**Problem: Overly Broad Scope**
+```yaml
+# Problematic Configuration
+name: "full-stack-helper"
+description: "Helps with frontend, backend, database, and deployment tasks"
+
+# Improved Configuration  
+name: "react-component-specialist"
+description: "Create and optimize React components with TypeScript, focusing on reusability and performance"
+```
+
+**Problem: Unclear Invocation Criteria**
+```yaml
+# Problematic Configuration
+description: "Helps with security-related tasks when needed"
+
+# Improved Configuration
+description: "Use when conducting security code reviews, identifying OWASP Top 10 vulnerabilities, or validating authentication implementations"
+```
+
+**Problem: Tool Redundancy**
+```yaml
+# Problematic Configuration
+tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, WebSearch, WebFetch, TodoWrite
+
+# Improved Configuration (for code analysis specialist)
+tools: Read, Grep, Glob, Bash
 ```
 
 ## Integration with Meta-Capabilities

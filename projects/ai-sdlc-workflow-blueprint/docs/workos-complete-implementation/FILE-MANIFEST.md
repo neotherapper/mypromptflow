@@ -8,7 +8,7 @@ This manifest provides a detailed inventory of all WorkOS implementation files c
 - **Total Files**: 11 documents
 - **Total Content**: 50,000+ lines of implementation code and documentation
 - **Implementation Timeline**: 4 weeks ready-to-deploy
-- **Training Hours**: 18+ hours of comprehensive training materials
+- **Training Hours**: 32 hours of comprehensive training materials
 
 ---
 
@@ -64,7 +64,7 @@ This manifest provides a detailed inventory of all WorkOS implementation files c
 
 ### 8. **workos-setup-training.md**
    - **Type**: Training Module 1
-   - **Size**: 3-week training program (18 hours)
+   - **Size**: 3-week training program (24 hours)
    - **Purpose**: WorkOS account setup and environment configuration
    - **Key Content**: Role-specific training for 4-person development team
    - **Audience**: All team members, project managers

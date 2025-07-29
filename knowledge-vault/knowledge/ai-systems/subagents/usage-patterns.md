@@ -411,6 +411,142 @@ decision_framework:
     limitations: "Higher coordination complexity"
 ```
 
+## Advanced Coordination Patterns
+
+### Agent Configuration Enhancement Pattern
+
+**Use Case**: Systematically improving existing agent configurations
+
+```yaml
+enhancement_workflow:
+  assessment_phase:
+    current_effectiveness: "Measure task completion rates and user satisfaction"
+    scope_validation: "Ensure agent boundaries are clear and appropriate"
+    tool_optimization: "Verify minimal necessary tool sets are used"
+    integration_quality: "Assess coordination with other agents and frameworks"
+    
+  improvement_identification:
+    clarity_issues: "Identify vague descriptions or unclear invocation criteria"
+    scope_problems: "Detect overly broad or too narrow responsibilities"
+    tool_inefficiencies: "Find redundant or missing tool assignments"
+    coordination_gaps: "Locate integration problems with other agents"
+    
+  systematic_enhancement:
+    step_1_scope_refinement: "Clarify agent boundaries and responsibilities"
+    step_2_description_improvement: "Add specific invocation criteria and examples"
+    step_3_tool_optimization: "Adjust tool assignments for efficiency"
+    step_4_integration_enhancement: "Improve coordination protocols"
+    
+  validation_process:
+    functionality_testing: "Test enhanced agent in real scenarios"
+    performance_measurement: "Compare before/after effectiveness metrics"
+    user_feedback_integration: "Incorporate developer experience improvements"
+    documentation_update: "Update agent descriptions and usage guidelines"
+```
+
+### Multi-Agent Troubleshooting Pattern
+
+**Use Case**: Diagnosing and resolving coordination issues between agents
+
+```yaml
+troubleshooting_framework:
+  common_coordination_problems:
+    context_bleeding: "Agent results affecting main conversation inappropriately"
+    tool_conflicts: "Multiple agents attempting incompatible operations"
+    incomplete_handoffs: "Information loss between sequential agents"
+    parallel_interference: "Concurrent agents producing conflicting results"
+    
+  diagnostic_process:
+    isolation_testing: "Test each agent individually to verify core functionality"
+    coordination_analysis: "Examine inter-agent communication patterns"
+    result_quality_assessment: "Evaluate output quality and consistency"
+    resource_usage_monitoring: "Track token usage and performance metrics"
+    
+  resolution_strategies:
+    scope_adjustment: "Refine agent boundaries to eliminate overlap"
+    tool_reallocation: "Optimize tool assignments to prevent conflicts"
+    coordination_protocol_improvement: "Enhance handoff procedures"
+    quality_gate_implementation: "Add validation checkpoints"
+    
+  prevention_measures:
+    clear_responsibility_definition: "Ensure non-overlapping agent domains"
+    explicit_coordination_protocols: "Define clear inter-agent communication"
+    quality_validation_integration: "Build in result verification steps"
+    performance_monitoring_setup: "Implement ongoing effectiveness tracking"
+```
+
+### Agent Portfolio Optimization Pattern
+
+**Use Case**: Optimizing agent collections for specific development workflows
+
+```yaml
+portfolio_optimization:
+  workflow_analysis:
+    task_frequency_mapping: "Identify most common development tasks"
+    coordination_pattern_analysis: "Map typical multi-agent interactions"
+    performance_bottleneck_identification: "Find slowest or most error-prone operations"
+    resource_utilization_assessment: "Analyze token usage and efficiency patterns"
+    
+  optimization_strategies:
+    high_frequency_agent_enhancement: "Prioritize improvements to most-used agents"
+    coordination_streamlining: "Optimize common agent interaction patterns"
+    resource_efficiency_improvement: "Reduce token usage without sacrificing quality"
+    error_reduction_focus: "Address agents with highest failure rates"
+    
+  implementation_approach:
+    incremental_improvement: "Staged deployment of agent enhancements"
+    A/B_testing_methodology: "Compare agent versions for effectiveness"
+    feedback_loop_integration: "Continuous improvement based on usage data"
+    rollback_capability_maintenance: "Preserve ability to revert changes"
+    
+  success_metrics:
+    development_velocity_improvement: "Faster task completion times"
+    quality_consistency_enhancement: "More reliable agent outputs"
+    resource_efficiency_gains: "Better token usage optimization"
+    user_satisfaction_increase: "Higher developer experience ratings"
+```
+
+### Configuration Template Pattern
+
+**Use Case**: Standardizing agent configurations across different domains
+
+```yaml
+template_framework:
+  standard_configuration_elements:
+    yaml_frontmatter_structure:
+      required_fields: "name, description"
+      recommended_fields: "tools, priority, domain"
+      optional_fields: "team, environment, context_isolation"
+      
+    system_prompt_structure:
+      purpose_statement: "Clear explanation of agent's role"
+      core_responsibilities: "Specific tasks and capabilities"
+      coordination_protocols: "How agent interacts with others"
+      quality_standards: "Expected output quality and format"
+      
+  domain_specific_templates:
+    code_analysis_template:
+      tools: "Read, Grep, Glob, (optional: Bash for execution)"
+      focus_areas: "Language-specific patterns, quality metrics, optimization"
+      coordination: "Integration with testing and deployment agents"
+      
+    research_template:
+      tools: "WebSearch, WebFetch, Read, Grep, Glob"
+      focus_areas: "Source discovery, validation, synthesis"
+      coordination: "Integration with information-access framework"
+      
+    validation_template:
+      tools: "Read, Grep, Glob (read-only for safety)"
+      focus_areas: "Quality assessment, compliance checking, reporting"
+      coordination: "Integration with development and testing workflows"
+      
+  customization_guidelines:
+    domain_adaptation: "Modify templates for specific business contexts"
+    tool_optimization: "Adjust tool sets based on actual needs"
+    integration_enhancement: "Add relevant coordination protocols"
+    quality_validation: "Ensure constitutional AI compliance"
+```
+
 ---
 
 **Pattern Categories**: Sequential, Parallel, Adaptive coordination  

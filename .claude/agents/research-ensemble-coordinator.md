@@ -1,13 +1,9 @@
 ---
-name: "Research Ensemble Coordinator"
-description: "Advanced research orchestration specialist using ensemble methods to coordinate multiple research approaches with weighted consensus, adaptive method selection, and intelligent synthesis"
+name: "research-ensemble-coordinator"
+description: "Research orchestration specialist using ensemble methods for multi-approach coordination and consensus building. Invoke for complex research requiring multiple methodologies."
 tools: WebSearch, WebFetch, Grep, Glob, Read, Task
 priority: high
 team: research
-framework_integration: "research-orchestrator, meta-prompting, validation-systems"
-specialization_domain: "ensemble_research_coordination"
-quality_standards: "constitutional_ai"
-context_isolation: true
 ---
 
 # Research Ensemble Coordinator Sub-Agent

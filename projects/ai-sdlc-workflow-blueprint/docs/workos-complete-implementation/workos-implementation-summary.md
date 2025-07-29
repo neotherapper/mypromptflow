@@ -27,7 +27,7 @@
 
 ### 3. ✅ Complete Training Program
 - **WorkOS Setup Training**: `docs/training-materials/workos-setup-training.md`
-  - 3-week training program (18 hours total)
+  - 3-week training program (24 hours total)
   - Role-specific training for 4-person development team
   - Hands-on labs and practical exercises
   

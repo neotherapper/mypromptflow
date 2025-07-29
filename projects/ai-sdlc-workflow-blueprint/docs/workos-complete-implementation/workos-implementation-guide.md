@@ -45,7 +45,7 @@ pip install workos fastapi uvicorn python-jose[cryptography] python-multipart
 ```bash
 # .env - Development Environment
 REACT_APP_WORKOS_CLIENT_ID=your_staging_client_id
-REACT_APP_WORKOS_REDIRECT_URI=http://localhost:3000/callback
+REACT_APP_WORKOS_REDIRECT_URI=http://localhost:5173/callback
 REACT_APP_WORKOS_API_HOSTNAME=api.workos.com
 
 # Backend Environment

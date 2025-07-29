@@ -22,7 +22,7 @@ This folder contains the complete WorkOS authentication implementation for the m
 - **Maritime compliance features** integrated throughout all guides
 
 ### 4. Training Materials
-- **`workos-setup-training.md`** - 3-week setup training program (18 hours total)
+- **`workos-setup-training.md`** - 3-week setup training program (24 hours total)
 - **`authentication-implementation-training.md`** - Hands-on implementation training for developers
 - **`maritime-compliance-training.md`** - Maritime regulatory compliance training (8 hours)
 
