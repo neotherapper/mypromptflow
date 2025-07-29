@@ -1,0 +1,304 @@
+⭐ Logfire OpenTelemetry MCP Server (Score: 8.8, Category: )
+   File: logfire-opentelemetry-mcp-server-comprehensive-profile.md
+
+⭐ 'Tier 1: Alibaba AnalyticsDB MCP Server' (Score: 9.25, Category: )
+   File: tier-1-alibaba-analyticsdb-mcp-server-enterprise-profile.md
+
+⭐ Cohere AI Platform MCP Server (Score: 9.5, Category: )
+   File: cohere-ai-platform-mcp-server-comprehensive-profile.md
+
+⭐ Shopify MCP Server (Score: 8.65, Category: E-commerce Platform)
+   File: shopify-mcp-server-platform.md
+
+⭐ Spotify MCP Server (Score: 8.6, Category: Entertainment & Media)
+   File: spotify-mcp-server-comprehensive-profile.md
+
+⭐ Datadog Comprehensive Monitoring MCP Server (Score: 87.0, Category: )
+   File: datadog-comprehensive-monitoring-mcp-server.md
+
+⭐ Hugging Face AI Platform MCP Server (Score: 9.3, Category: )
+   File: hugging-face-ai-platform-mcp-server-comprehensive-profile.md
+
+⭐ PortSwigger Burp Suite MCP Server (Score: 9.5, Category: )
+   File: portswigger-burp-suite-mcp-server-detailed-profile.md
+
+⭐ Offensive Security Comprehensive Cybersecurity MCP Server (Score: 9.0, Category: )
+   File: offensive-security-comprehensive-cybersecurity-mcp-server-detailed-profile.md
+
+⭐ Bright Data MCP Server (Score: 8.1, Category: Web Scraping)
+   File: bright-data-mcp-server.md
+
+⭐ Sentry MCP Server (Score: 8.7, Category: )
+   File: sentry-mcp-server-comprehensive-profile.md
+
+⭐ PortSwigger Burp Suite Official MCP Server (Score: 9.5, Category: )
+   File: portswigger-burp-suite-official-mcp-server-detailed-profile.md
+
+⭐ Splunk SIEM MCP Server (Score: 8.5, Category: )
+   File: splunk-server-profile.md
+
+⭐ Metoro Kubernetes Monitoring MCP Server (Score: 89.0, Category: )
+   File: metoro-kubernetes-monitoring-server-profile.md
+
+⭐ Azure Comprehensive Resource Management MCP Server (Score: 9.75, Category: )
+   File: azure-comprehensive-resource-management-mcp-server-detailed-profile.md
+
+⭐ Git MCP Server
+AI-Assisted Git Workflow (Score: 8.8, Category: )
+   File: git-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ mcgravity Proxy MCP Server (Score: 94.0, Category: )
+   File: mcgravity-proxy-server-profile.md
+
+⭐ 'DynamoDB MCP Server - Enterprise NoSQL Database Operations Platform' (Score: 8.3, Category: )
+   File: dynamodb-mcp-server-comprehensive-profile.md
+
+⭐ Filesystem MCP Server (Score: 9.8, Category: File Management & Storage)
+   File: filesystem-mcp-server-comprehensive-profile.md
+
+⭐ Auth0 Identity Platform MCP Server (Score: 96.0, Category: )
+   File: auth0-identity-platform-server-profile.md
+
+⭐ Westlaw MCP Server (Score: 8.3, Category: Legal Research)
+   File: westlaw-mcp-server.md
+
+⭐ Infisical Secrets Management MCP Server (Score: 91.0, Category: )
+   File: infisical-secrets-management-server-profile.md
+
+⭐ GitHub Actions MCP Server (Score: 9.15, Category: )
+   File: github-actions-mcp-server-detailed-profile.md
+
+⭐ Salesforce CRM MCP Server (Score: 9.02, Category: )
+   File: salesforce-crm-mcp-server-detailed-profile.md
+
+⭐ Azure PostgreSQL Database MCP Server (Score: 9.0, Category: )
+   File: azure-postgresql-database-mcp-server-detailed-profile.md
+
+⭐ Twilio MCP Server (Score: 8.35, Category: Communications Platform)
+   File: twilio-mcp-server-platform.md
+
+⭐ Linear Project Management MCP Server (Score: 8.4, Category: )
+   File: linear-project-management-server-profile.md
+
+⭐ Octagon Investment Research MCP Server (Score: 82.0, Category: )
+   File: octagon-investment-research-server-profile.md
+
+⭐ YouTube Video Content Platform MCP Server (Score: 86.5, Category: )
+   File: youtube-video-content-platform-mcp-server.md
+
+⭐ Infisical Secrets Management MCP Server (Score: 8.4, Category: )
+   File: infisical-secrets-management-mcp-server-comprehensive-profile.md
+
+⭐ Datadog Comprehensive Monitoring MCP Server (Score: 9.1, Category: )
+   File: datadog-comprehensive-monitoring-mcp-server-comprehensive-profile.md
+
+⭐ Aiven Cloud Services MCP Server (Score: 96.0, Category: )
+   File: aiven-cloud-services-server-profile.md
+
+⭐ Continue IDE Integration MCP Server (Score: 91.0, Category: )
+   File: continue-ide-integration-server-profile.md
+
+⭐ DigitalOcean Cloud Management MCP Server
+Deploy to DigitalOcean (Score: 8.2, Category: )
+   File: digitalocean-cloud-management-mcp-server-comprehensive-profile.md
+
+⭐ 'Magg Meta-Server Universal MCP Aggregation Hub' (Score: 9.5, Category: )
+   File: magg-meta-server-universal-aggregation-hub-profile.md
+
+⭐ Cloudflare MCP Server (Score: 8.7, Category: )
+   File: cloudflare-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Adfin Financial Integration MCP Server (Score: 90.0, Category: )
+   File: adfin-financial-integration-server-profile.md
+
+⭐ Discord MCP Server (Score: 8.4, Category: Communication & Collaboration)
+   File: discord-mcp-server-comprehensive-profile.md
+
+⭐ MCPX Gateway MCP Server (Score: 96.0, Category: )
+   File: mcpx-gateway-server-profile.md
+
+⭐ Azure Blob Storage Cloud Platform MCP Server (Score: 8.2, Category: Cloud Storage Platform)
+   File: azure-blob-storage-cloud-platform-mcp-server-comprehensive-profile.md
+
+⭐ Chronulus AI Forecasting MCP Server (Score: 8.6, Category: )
+   File: chronulus-ai-forecasting-mcp-server-comprehensive-profile.md
+
+⭐ Auth0 Identity MCP Server (Score: 8.6, Category: )
+   File: auth0-identity-mcp-server-comprehensive-profile.md
+
+⭐ Apache Pinot Real MCP Server (Score: 94.0, Category: )
+   File: apache-pinot-real-time-analytics-server-profile.md
+
+⭐ GitHub PR Reviewer MCP Server
+business operations PR Review (Score: 8.75, Category: )
+   File: github-pr-reviewer-mcp-server-detailed-profile.md
+
+⭐ DuckDuckGo MCP Server (Score: 8.25, Category: Search Engines)
+   File: duckduckgo-mcp-server.md
+
+⭐ Tableau MCP Server (Score: 8.05, Category: Business Intelligence)
+   File: tableau-mcp-server.md
+
+⭐ Sequelize MCP Server (Score: 8.2, Category: )
+   File: sequelize-mcp-server-comprehensive-profile.md
+
+⭐ REST API MCP Server (Score: 9.25, Category: )
+   File: rest-api-mcp-server-detailed-profile.md
+
+⭐ GitHub PR Creator MCP Server
+business operations PR Automation (Score: 8.75, Category: )
+   File: github-pr-creator-mcp-server-detailed-profile.md
+
+⭐ Microsoft Teams MCP Server (Score: 8.08, Category: Collaboration Platform)
+   File: microsoft-teams-mcp-server-platform.md
+
+⭐ MetaMCP GUI MCP Server (Score: 94.0, Category: )
+   File: metamcp-gui-server-profile.md
+
+⭐ Plaid Financial API MCP Server (Score: 8.7, Category: )
+   File: plaid-financial-api-mcp-server-comprehensive-profile.md
+
+⭐ Shopify Enhanced E-commerce MCP Server (Score: 85.0, Category: )
+   File: shopify-enhanced-ecommerce-mcp-server.md
+
+⭐ SQLite MCP Server (Score: 8.9, Category: Database Operations)
+   File: sqlite-mcp-server-database.md
+
+⭐ E2B Secure Execution Environment MCP Server (Score: 93.0, Category: )
+   File: e2b-secure-execution-environment-server-profile.md
+
+⭐ Claude AI Platform MCP Server (Score: 9.8, Category: )
+   File: claude-ai-platform-mcp-server-comprehensive-profile.md
+
+⭐ Postman MCP Server (Score: 8.8, Category: )
+   File: postman-mcp-server-detailed-profile.md
+
+⭐ Vault Secrets MCP Server (Score: 85.0, Category: )
+   File: vault-secrets-mcp-server.md
+
+⭐ 'AWS CDK MCP Server - Infrastructure as Code Development Platform'
+CDK Infrastructure Deployment (Score: 8.05, Category: )
+   File: cdk-mcp-server-comprehensive-profile.md
+
+⭐ 'Base Blockchain Coinbase MCP Server' (Score: 9.3, Category: )
+   File: base-blockchain-coinbase-mcp-server-profile.md
+
+⭐ GitHub MCP Server (Score: 9.4, Category: Development Platform)
+   File: github-mcp-server-platform.md
+
+⭐ Azure Blob Storage MCP Server (Score: 8.2, Category: )
+   File: azure-blob-storage-mcp-server-comprehensive-profile.md
+
+⭐ 'Bitcoin & Lightning Network MCP Server' (Score: 9.2, Category: )
+   File: bitcoin-lightning-network-mcp-server-profile.md
+
+⭐ AWS Security MCP Server (Score: 9.5, Category: )
+   File: aws-security-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Couchbase MCP Server (Score: 8.3, Category: )
+   File: couchbase-mcp-server-detailed-profile.md
+
+⭐ Notion MCP Server (Score: 8.15, Category: Productivity Platform)
+   File: notion-mcp-server.md
+
+⭐ Qdrant MCP Server (Score: 8.8, Category: Vector Databases)
+   File: qdrant-mcp-server-database.md
+
+⭐ Stripe Payment Processing MCP Server (Score: 9.7, Category: )
+   File: stripe-payment-processing-mcp-server-comprehensive-profile.md
+
+⭐ ClickHouse MCP Server (Score: 8.4, Category: )
+   File: clickhouse-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Anthropic Claude MCP Server (Score: 9.9, Category: )
+   File: anthropic-claude-mcp-server-comprehensive-profile.md
+
+⭐ 'FastMCP Python Framework MCP Server' (Score: 9.4, Category: )
+   File: fastmcp-python-framework-server-profile.md
+
+⭐ JIRA MCP Server (Score: 8.2, Category: )
+   File: jira-server-profile.md
+
+⭐ GraphQL MCP Server (Score: 8.85, Category: )
+   File: graphql-mcp-server-detailed-profile.md
+
+⭐ Alibaba Cloud Observability MCP Server (Score: 85.0, Category: )
+   File: alibaba-cloud-observability-mcp-server.md
+
+⭐ Supabase Backend MCP Server (Score: 9.5, Category: )
+   File: supabase-backend-as-a-service-mcp-server-comprehensive-profile.md
+
+⭐ 'AWS API MCP Server - Comprehensive AWS Infrastructure Management' (Score: 8.75, Category: )
+   File: aws-api-mcp-server-comprehensive-profile.md
+
+⭐ Financial Datasets API MCP Server (Score: 83.0, Category: )
+   File: financial-datasets-api-server-profile.md
+
+⭐ SEC EDGAR MCP Server (Score: 8.0, Category: Regulatory Financial Data)
+   File: sec-edgar-mcp-server.md
+
+⭐ '@modelcontextprotocol/sdk TypeScript MCP Server' (Score: 9.7, Category: )
+   File: modelcontextprotocol-sdk-typescript-server-profile.md
+
+⭐ E2B MCP Server (Score: 8.2, Category: )
+   File: e2b-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Okta MCP Server (Score: 8.38, Category: Identity Access Management)
+   File: okta-mcp-server.md
+
+⭐ Aiven MCP Server
+Database Migration (Score: 8.5, Category: )
+   File: aiven-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Google Sheets MCP Server (Score: 8.8, Category: Productivity & Business Tools)
+   File: google-sheets-mcp-server-comprehensive-profile.md
+
+⭐ Sentry Error Tracking MCP Server (Score: 88.0, Category: )
+   File: sentry-error-tracking-server-profile.md
+
+⭐ Safe File Editing (Patch MCP Server (Score: 9.0, Category: )
+   File: safe-file-editing-patch-file-mcp-server-detailed-profile.md
+
+⭐ 'EVM Multi-Chain Server Universal Integration Platform' (Score: 9.1, Category: )
+   File: evm-multi-chain-server-comprehensive-profile.md
+
+⭐ Neo4j MCP Server (Score: 8.3, Category: )
+   File: neo4j-mcp-server-comprehensive-enterprise-profile.md
+
+⭐ Google Drive Storage MCP Server (Score: 8.0, Category: )
+   File: google-drive-storage-server-profile.md
+
+⭐ DocuSign MCP Server (Score: 8.2, Category: Digital Signature)
+   File: docusign-mcp-server.md
+
+⭐ WorkOS B2B Authentication MCP Server (Score: 8.3, Category: )
+   File: workos-b2b-authentication-mcp-server-comprehensive-profile.md
+
+⭐ AWS Knowledge MCP Server (Score: 8.35, Category: Knowledge Management)
+   File: aws-knowledge-mcp-server-comprehensive-profile.md
+
+⭐ Vercel Deployment Platform MCP Server
+Deploy to Vercel (Score: 8.1, Category: )
+   File: vercel-deployment-platform-mcp-server-comprehensive-profile.md
+
+⭐ WorkOS B2B Authentication MCP Server (Score: 92.0, Category: )
+   File: workos-b2b-authentication-server-profile.md
+
+⭐ Elasticsearch Search Engine MCP Server (Score: 8.8, Category: )
+   File: elasticsearch-search-engine-mcp-server-comprehensive-profile.md
+
+⭐ WAII Natural Language Database MCP Server (Score: 8.5, Category: )
+   File: waii-natural-language-database-mcp-server-detailed-profile.md
+
+⭐ Everything MCP Server (Score: 8.5, Category: Demo/Testing)
+   File: everything-mcp-server.md
+
+⭐ Amazon Seller Central MCP Server (Score: 8.13, Category: E-commerce Platform)
+   File: amazon-seller-central-mcp-server-platform.md
+
+⭐ Mistral AI Platform MCP Server (Score: 9.5, Category: )
+   File: mistral-ai-platform-mcp-server-comprehensive-profile.md
+
+⭐ Financial Datasets MCP Server (Score: 8.7, Category: )
+   File: financial-datasets-mcp-server-comprehensive-profile.md
+

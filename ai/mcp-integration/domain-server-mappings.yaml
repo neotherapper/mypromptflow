@@ -189,6 +189,45 @@ domain_mappings:
         integration_priority: "high"
         setup_complexity: "minimal"
 
+      - server_id: "burp_suite"
+        name: "PortSwigger Burp Suite"
+        tier: 1
+        composite_score: 8.8
+        profile_path: "knowledge-vault/databases/tools_services/items/portswigger-burp-suite-mcp-server-detailed-profile.md"
+        use_cases:
+          - "Web application security testing"
+          - "Vulnerability scanning and assessment" 
+          - "Penetration testing automation"
+          - "Security compliance validation"
+        integration_priority: "high"
+        setup_complexity: "moderate"
+
+      - server_id: "offensive_security"
+        name: "Offensive Security Cybersecurity Platform"
+        tier: 1
+        composite_score: 9.0
+        profile_path: "knowledge-vault/databases/tools_services/items/offensive-security-comprehensive-cybersecurity-mcp-server-detailed-profile.md"
+        use_cases:
+          - "Comprehensive cybersecurity assessment"
+          - "Advanced penetration testing"
+          - "Security training and certification"
+          - "Enterprise security auditing"
+        integration_priority: "medium"
+        setup_complexity: "high"
+
+      - server_id: "splunk"
+        name: "Splunk SIEM Platform"
+        tier: 2
+        composite_score: 8.5
+        profile_path: "knowledge-vault/databases/tools_services/items/splunk-server-profile.md"
+        use_cases:
+          - "Security information and event management"
+          - "Log analysis and correlation"
+          - "Threat detection and response"
+          - "Compliance reporting and auditing"
+        integration_priority: "medium"
+        setup_complexity: "high"
+
   # Analytics & Data Science
   analytics_data_science:
     description: "Analytics, data processing, machine learning, business intelligence"
@@ -277,7 +316,7 @@ domain_mappings:
         integration_priority: "medium"
         setup_complexity: "moderate"
 
-  # Business & CRM Systems
+  # Business & CRM Systems  
   business_systems:
     description: "CRM, marketing automation, business process management"
     keywords: ["crm", "sales", "marketing", "customer", "business", "automation", "workflow", "hubspot", "salesforce"]
@@ -294,6 +333,32 @@ domain_mappings:
           - "Sales pipeline optimization"
         integration_priority: "medium"
         setup_complexity: "moderate"
+
+      - server_id: "shopify"
+        name: "Shopify E-commerce Platform"
+        tier: 1
+        composite_score: 8.65
+        profile_path: "knowledge-vault/databases/tools_services/items/shopify-mcp-server-platform.md"
+        use_cases:
+          - "E-commerce platform integration"
+          - "Online store management"
+          - "Payment processing workflows"
+          - "Inventory and order management"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+
+      - server_id: "salesforce"
+        name: "Salesforce CRM"
+        tier: 2
+        composite_score: 8.2
+        profile_path: "knowledge-vault/databases/tools_services/items/salesforce-crm-mcp-server-detailed-profile.md"
+        use_cases:
+          - "Enterprise CRM operations"
+          - "Customer lifecycle management"
+          - "Sales automation workflows"
+          - "Business intelligence and reporting"
+        integration_priority: "medium"
+        setup_complexity: "high"
 
   # Information Retrieval & Search
   information_retrieval:
@@ -325,6 +390,32 @@ domain_mappings:
           - "Cross-session data persistence"
         integration_priority: "high"
         setup_complexity: "minimal"
+
+      - server_id: "bright_data"
+        name: "Bright Data Web Scraping"
+        tier: 1 
+        composite_score: 8.1
+        profile_path: "knowledge-vault/databases/tools_services/items/bright-data-mcp-server.md"
+        use_cases:
+          - "Advanced web scraping and data extraction"
+          - "Proxy network for global data access"
+          - "Real-time website monitoring"
+          - "Large-scale data collection workflows"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+
+      - server_id: "duckduckgo"
+        name: "DuckDuckGo Search"
+        tier: 2
+        composite_score: 7.8
+        profile_path: "knowledge-vault/databases/tools_services/items/duckduckgo-mcp-server.md"
+        use_cases:
+          - "Privacy-focused web search"
+          - "Instant answer API access"
+          - "Search results without tracking"
+          - "Alternative search engine integration"
+        integration_priority: "medium"
+        setup_complexity: "low"
 
   # AI & Machine Learning Platforms
   ai_platforms:
@@ -369,6 +460,32 @@ domain_mappings:
           - "Citation-backed research synthesis"
         integration_priority: "medium"
         setup_complexity: "low"
+
+      - server_id: "hugging_face"
+        name: "Hugging Face AI Platform"
+        tier: 1
+        composite_score: 9.3
+        profile_path: "knowledge-vault/databases/tools_services/items/hugging-face-ai-platform-mcp-server-comprehensive-profile.md"
+        use_cases:
+          - "Open-source AI model deployment"
+          - "Custom model training and fine-tuning"
+          - "Community AI model repository access"
+          - "Transformer models and NLP workflows"
+        integration_priority: "high"
+        setup_complexity: "moderate"
+
+      - server_id: "cohere"
+        name: "Cohere AI Platform"
+        tier: 1
+        composite_score: 9.5
+        profile_path: "knowledge-vault/databases/tools_services/items/cohere-ai-platform-mcp-server-comprehensive-profile.md"
+        use_cases:
+          - "Enterprise language model integration"
+          - "Text classification and generation"
+          - "Semantic search and embeddings"
+          - "Conversational AI development"
+        integration_priority: "high"
+        setup_complexity: "moderate"
 
   # Content & Knowledge Management
   content_knowledge:
@@ -460,8 +577,8 @@ cross_domain_mappings:
     recommended_servers: ["postgresql", "mongodb", "redis", "qdrant", "aws", "openai"]
 
   maritime_insurance_platform:
-    domains: ["fullstack_development", "database_systems", "cloud_infrastructure", "security_systems", "testing_quality_assurance"]
-    recommended_servers: ["github", "docker", "kubernetes", "postgresql", "redis", "cypress", "datadog"]
+    domains: ["fullstack_development", "database_systems", "cloud_infrastructure", "security_systems", "testing_quality_assurance", "business_systems"]
+    recommended_servers: ["github", "docker", "kubernetes", "postgresql", "redis", "cypress", "datadog", "burp_suite", "salesforce", "shopify"]
 
   ai_development_platform:
     domains: ["ai_platforms", "database_systems", "analytics_data_science", "development_tools"]
