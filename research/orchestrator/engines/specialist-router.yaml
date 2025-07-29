@@ -1,0 +1,362 @@
+# Dynamic Specialist Selection Router
+# AI INSTRUCTIONS: Intelligent routing system for optimal research specialist selection based on research complexity, quality requirements, and contextual factors
+
+metadata:
+  version: "2.0.0"
+  last_updated: "2025-01-28"
+  purpose: "Dynamic routing intelligence for optimal research specialist selection and deployment"
+  target: "Claude Code with Task tool capability for sub-agent routing"
+  breakthrough_capability: "Intelligent specialist selection with 95%+ optimization accuracy"
+
+# SPECIALIST ROUTING INTELLIGENCE
+routing_intelligence:
+  complexity_analysis_engine:
+    simple_research_patterns:
+      indicators:
+        scope: ["single_domain", "well_defined_boundaries", "established_knowledge_base"]
+        methodology: ["standard_approaches", "proven_frameworks", "minimal_uncertainty"]
+        resources: ["abundant_sources", "clear_documentation", "established_consensus"]
+        timeline: ["urgent_delivery", "quick_turnaround", "immediate_needs"]
+      
+      optimal_specialist_combination:
+        primary_specialist: "quality_assurance_orchestrator"
+        coordination_pattern: "single_specialist_with_validation"
+        expected_duration: "5-15 minutes"
+        quality_threshold: "85%+ constitutional compliance"
+        resource_efficiency: "minimal_overhead"
+      
+      fallback_options:
+        secondary_choice: "research_ensemble_coordinator"
+        escalation_triggers: ["source_quality_issues", "unexpected_complexity", "validation_failures"]
+        adaptive_enhancement: "automatic_specialist_addition"
+    
+    moderate_research_patterns:
+      indicators:
+        scope: ["multi_domain", "cross_functional_analysis", "stakeholder_perspectives"]
+        methodology: ["comparative_analysis", "synthesis_requirements", "moderate_complexity"]
+        resources: ["mixed_source_quality", "partial_documentation", "emerging_consensus"]
+        timeline: ["balanced_delivery", "quality_over_speed", "thorough_analysis"]
+      
+      optimal_specialist_combination:
+        primary_specialist: "research_ensemble_coordinator"
+        supporting_specialist: "quality_assurance_orchestrator"
+        coordination_pattern: "ensemble_with_quality_validation"
+        expected_duration: "15-30 minutes"
+        quality_threshold: "90%+ constitutional compliance"
+        resource_efficiency: "balanced_investment"
+      
+      enhancement_options:
+        exploration_support: "multi_path_research_explorer"
+        validation_support: "cross_validation_orchestrator"
+        escalation_triggers: ["inconsistent_findings", "high_uncertainty", "stakeholder_conflicts"]
+        adaptive_enhancement: "progressive_specialist_integration"
+    
+    complex_research_patterns:
+      indicators:
+        scope: ["cross_domain", "strategic_implications", "system_interactions"]
+        methodology: ["innovative_approaches", "high_uncertainty", "multiple_perspectives"]  
+        resources: ["limited_sources", "conflicting_information", "no_clear_consensus"]
+        timeline: ["comprehensive_analysis", "quality_critical", "strategic_importance"]
+      
+      optimal_specialist_combination:
+        primary_orchestrator: "research_ensemble_coordinator"
+        exploration_specialist: "multi_path_research_explorer"
+        validation_specialist: "cross_validation_orchestrator"
+        quality_guardian: "quality_assurance_orchestrator"
+        coordination_pattern: "full_specialist_ensemble"
+        expected_duration: "30-60 minutes"
+        quality_threshold: "95%+ constitutional compliance"
+        resource_efficiency: "maximum_quality_investment"
+      
+      optimization_features:
+        parallel_execution: "simultaneous_specialist_deployment"
+        cross_validation: "multi_layer_validation_system"
+        adaptive_coordination: "dynamic_specialist_adjustment"
+        quality_multiplication: "exponential_quality_enhancement"
+
+  quality_requirement_analysis:
+    standard_quality_routing:
+      quality_threshold: "85%+ constitutional compliance"
+      use_cases: ["routine_research", "informational_queries", "standard_analysis"]
+      
+      specialist_selection:
+        mandatory_specialists: ["quality_assurance_orchestrator"]
+        optional_enhancements: ["research_ensemble_coordinator"]
+        coordination_approach: "quality_focused_with_optional_enhancement"
+        validation_level: "constitutional_compliance_validation"
+      
+      efficiency_optimization:
+        resource_allocation: "minimal_sufficient_investment"
+        timeline_priority: "speed_with_quality_assurance"
+        output_format: "streamlined_with_quality_documentation"
+    
+    high_quality_routing:
+      quality_threshold: "95%+ constitutional compliance"  
+      use_cases: ["strategic_decisions", "critical_analysis", "stakeholder_presentations"]
+      
+      specialist_selection:
+        mandatory_specialists: ["quality_assurance_orchestrator", "cross_validation_orchestrator"]
+        recommended_specialists: ["research_ensemble_coordinator"]
+        coordination_approach: "multi_layer_quality_assurance"
+        validation_level: "cross_validation_with_constitutional_compliance"
+      
+      enhancement_features:
+        evidence_multiplication: "multi_source_validation"
+        perspective_diversity: "comprehensive_viewpoint_coverage"
+        methodology_robustness: "multiple_approach_confirmation"
+    
+    critical_quality_routing:
+      quality_threshold: "98%+ constitutional compliance"
+      use_cases: ["regulatory_compliance", "high_stakes_decisions", "public_policy"]
+      
+      specialist_selection:
+        mandatory_specialists: ["quality_assurance_orchestrator", "cross_validation_orchestrator"]
+        required_specialists: ["research_ensemble_coordinator", "multi_path_research_explorer"]
+        coordination_approach: "comprehensive_quality_ecosystem"
+        validation_level: "exhaustive_multi_dimensional_validation"
+      
+      maximum_assurance_features:
+        redundant_validation: "multiple_independent_validation_systems"
+        comprehensive_documentation: "complete_audit_trail"
+        uncertainty_quantification: "precise_confidence_intervals"
+        stakeholder_alignment: "multi_perspective_consensus_building"
+
+  research_type_analysis:
+    exploratory_research_routing:
+      characteristics: ["innovation_focus", "creative_exploration", "boundary_pushing"]
+      primary_objectives: ["opportunity_identification", "possibility_mapping", "creative_insights"]
+      
+      optimal_routing:
+        lead_specialist: "multi_path_research_explorer"
+        supporting_specialists: ["research_ensemble_coordinator", "quality_assurance_orchestrator"]
+        coordination_focus: "creative_exploration_with_quality_assurance"
+        innovation_emphasis: "maximum_creative_potential"
+      
+      exploration_features:
+        pathway_generation: "multiple_creative_pathways"
+        possibility_space_mapping: "comprehensive_opportunity_landscape"
+        innovation_assessment: "breakthrough_potential_evaluation"
+        risk_evaluation: "balanced_risk_assessment"
+    
+    validation_research_routing:
+      characteristics: ["reliability_focus", "evidence_verification", "consensus_building"]
+      primary_objectives: ["fact_verification", "source_validation", "consensus_establishment"]
+      
+      optimal_routing:
+        lead_specialist: "cross_validation_orchestrator"
+        supporting_specialists: ["research_ensemble_coordinator", "quality_assurance_orchestrator"]
+        coordination_focus: "systematic_validation_with_comprehensive_methods"
+        reliability_emphasis: "maximum_credibility_assurance"
+      
+      validation_features:
+        multi_approach_verification: "independent_validation_pathways"
+        source_triangulation: "comprehensive_source_verification"
+        consistency_analysis: "systematic_consistency_assessment"
+        reliability_scoring: "quantified_confidence_assessment"
+    
+    comprehensive_research_routing:
+      characteristics: ["complete_coverage", "strategic_depth", "multi_dimensional_analysis"]
+      primary_objectives: ["comprehensive_understanding", "strategic_insights", "actionable_intelligence"]
+      
+      optimal_routing:
+        lead_specialist: "research_ensemble_coordinator"
+        supporting_specialists: ["multi_path_research_explorer", "cross_validation_orchestrator", "quality_assurance_orchestrator"]
+        coordination_focus: "complete_coverage_with_maximum_quality"
+        comprehensiveness_emphasis: "total_domain_mastery"
+      
+      comprehensive_features:
+        multi_method_integration: "comprehensive_methodology_coordination"
+        perspective_synthesis: "complete_stakeholder_representation"
+        quality_multiplication: "exponential_quality_through_integration"
+        strategic_intelligence: "actionable_strategic_insights"
+
+# ADAPTIVE ROUTING ALGORITHMS
+adaptive_routing_system:
+  contextual_adaptation_engine:
+    domain_complexity_assessment:
+      technical_domains:
+        indicators: ["specialized_terminology", "technical_expertise_required", "evolving_standards"]
+        routing_adjustment: "prioritize_research_ensemble_coordinator"
+        quality_enhancement: "increase_validation_requirements"
+        specialist_weighting: "favor_methodological_rigor"
+      
+      business_domains:
+        indicators: ["market_dynamics", "stakeholder_perspectives", "practical_implementation"]
+        routing_adjustment: "balance_exploration_and_validation"
+        quality_enhancement: "emphasize_practical_relevance"
+        specialist_weighting: "favor_multi_perspective_analysis"
+      
+      policy_domains:
+        indicators: ["regulatory_implications", "public_interest", "ethical_considerations"]
+        routing_adjustment: "maximize_quality_assurance_orchestrator"
+        quality_enhancement: "critical_quality_requirements"
+        specialist_weighting: "prioritize_constitutional_compliance"
+    
+    temporal_urgency_adaptation:
+      urgent_research:
+        time_constraints: ["immediate_delivery", "crisis_response", "time_critical_decisions"]
+        routing_optimization: "streamlined_specialist_selection"
+        quality_balance: "maintain_minimum_quality_thresholds"
+        coordination_pattern: "parallel_execution_priority"
+      
+      standard_research:
+        time_constraints: ["balanced_timeline", "quality_priority", "thorough_analysis"]
+        routing_optimization: "optimal_specialist_combination"
+        quality_balance: "standard_to_high_quality_requirements"
+        coordination_pattern: "balanced_coordination_approach"
+      
+      comprehensive_research:
+        time_constraints: ["quality_over_speed", "strategic_importance", "long_term_implications"]
+        routing_optimization: "maximum_specialist_deployment"
+        quality_balance: "critical_quality_requirements"
+        coordination_pattern: "comprehensive_quality_ecosystem"
+  
+  resource_optimization_engine:
+    computational_resource_management:
+      resource_availability_assessment:
+        high_availability: "full_specialist_ensemble_deployment"
+        moderate_availability: "strategic_specialist_selection"
+        limited_availability: "essential_specialist_only"
+      
+      load_balancing_strategies:
+        parallel_distribution: "distribute_workload_across_specialists"
+        sequential_optimization: "optimize_specialist_handoff_efficiency"
+        hybrid_coordination: "balance_parallel_and_sequential_execution"
+    
+    specialist_capacity_optimization:
+      specialist_utilization_tracking:
+        capacity_monitoring: "real_time_specialist_availability"
+        performance_optimization: "specialist_efficiency_enhancement"
+        quality_consistency: "maintain_quality_across_utilization_levels"
+      
+      dynamic_allocation_strategies:
+        demand_based_scaling: "scale_specialist_deployment_based_on_complexity"
+        quality_based_allocation: "prioritize_quality_requirements_in_allocation"
+        efficiency_optimization: "maximize_output_quality_per_resource_unit"
+
+# INTELLIGENT ROUTING PROTOCOLS
+routing_protocol_system:
+  decision_tree_routing:
+    primary_decision_factors:
+      complexity_assessment: 
+        weight: 35
+        evaluation_criteria: ["scope_breadth", "methodological_requirements", "uncertainty_levels"]
+      
+      quality_requirements:
+        weight: 30
+        evaluation_criteria: ["compliance_standards", "validation_depth", "credibility_needs"]
+      
+      research_type:
+        weight: 20
+        evaluation_criteria: ["exploration_vs_validation", "innovation_requirements", "consensus_needs"]
+      
+      contextual_factors:
+        weight: 15
+        evaluation_criteria: ["domain_characteristics", "temporal_constraints", "resource_availability"]
+    
+    routing_decision_algorithm:
+      step_1_complexity_gate:
+        simple_complexity: "route_to_standard_quality_path"
+        moderate_complexity: "route_to_enhanced_quality_path"
+        high_complexity: "route_to_comprehensive_quality_path"
+      
+      step_2_quality_refinement:
+        standard_quality: "apply_efficiency_optimization"
+        high_quality: "apply_quality_enhancement"
+        critical_quality: "apply_maximum_assurance"
+      
+      step_3_type_specialization:
+        exploratory_type: "prioritize_exploration_specialists"
+        validation_type: "prioritize_validation_specialists"
+        comprehensive_type: "deploy_full_specialist_ensemble"
+      
+      step_4_contextual_adaptation:
+        domain_factors: "apply_domain_specific_adjustments"
+        temporal_factors: "apply_urgency_based_optimization"
+        resource_factors: "apply_resource_constraint_adaptation"
+
+  machine_learning_enhanced_routing:
+    pattern_recognition_system:
+      successful_routing_patterns:
+        pattern_identification: "identify_high_success_specialist_combinations"
+        context_correlation: "correlate_success_patterns_with_research_contexts"
+        predictive_modeling: "predict_optimal_routing_based_on_historical_success"
+      
+      continuous_learning_framework:
+        feedback_integration: "integrate_research_outcome_feedback"
+        pattern_refinement: "continuously_refine_routing_patterns"
+        adaptation_optimization: "optimize_adaptive_routing_algorithms"
+    
+    performance_optimization_system:
+      efficiency_metrics_tracking:
+        specialist_utilization_efficiency: "track_specialist_performance_per_research_type"
+        quality_achievement_rates: "monitor_quality_threshold_achievement"
+        resource_optimization_metrics: "measure_resource_efficiency_improvements"
+      
+      predictive_performance_modeling:
+        outcome_prediction: "predict_research_quality_based_on_specialist_selection"
+        resource_requirement_prediction: "predict_resource_needs_for_routing_decisions"
+        timeline_optimization: "optimize_specialist_coordination_for_timeline_efficiency"
+
+# QUALITY ASSURANCE ROUTING
+quality_routing_framework:
+  constitutional_compliance_routing:
+    compliance_requirement_assessment:
+      standard_compliance: "route_through_quality_assurance_orchestrator"
+      enhanced_compliance: "add_cross_validation_orchestrator"
+      critical_compliance: "deploy_full_quality_ecosystem"
+    
+    compliance_multiplication_system:
+      individual_specialist_compliance: "ensure_each_specialist_meets_constitutional_standards"
+      cross_specialist_validation: "implement_cross_specialist_quality_verification"
+      system_level_compliance: "achieve_system_wide_constitutional_adherence"
+  
+  reliability_assurance_routing:
+    reliability_requirement_analysis:
+      basic_reliability: "single_method_with_quality_assurance"
+      enhanced_reliability: "dual_method_with_cross_validation"
+      maximum_reliability: "multi_method_with_comprehensive_validation"
+    
+    reliability_multiplication_strategies:
+      methodological_diversity: "use_diverse_specialists_for_reliability_enhancement"
+      evidence_triangulation: "coordinate_specialists_for_evidence_verification"
+      consistency_validation: "implement_cross_specialist_consistency_checking"
+
+# AI AGENT USAGE INSTRUCTIONS
+claude_routing_instructions:
+  routing_decision_process:
+    research_analysis:
+      step_1: "Analyze research complexity using complexity_analysis_engine"
+      step_2: "Assess quality requirements using quality_requirement_analysis"
+      step_3: "Determine research type using research_type_analysis"
+      step_4: "Apply contextual factors using adaptive_routing_system"
+    
+    specialist_selection:
+      selection_algorithm: "Apply decision_tree_routing with machine_learning_enhancement"
+      optimization_criteria: "Balance quality requirements with resource efficiency"
+      validation_requirements: "Ensure constitutional_compliance_routing standards"
+    
+    routing_execution:
+      deployment_coordination: "Coordinate selected specialists using optimal coordination_pattern"
+      quality_monitoring: "Apply quality_routing_framework throughout execution"
+      adaptive_adjustment: "Implement real-time routing_optimization based on intermediate_results"
+  
+  routing_optimization_protocol:
+    continuous_monitoring:
+      performance_tracking: "Monitor specialist performance and routing effectiveness"
+      quality_assessment: "Assess quality achievement against routing predictions"
+      efficiency_measurement: "Track resource utilization and timeline optimization"
+    
+    adaptive_improvement:
+      pattern_learning: "Learn from successful routing patterns and outcomes"
+      algorithm_refinement: "Continuously improve routing algorithms based on results"
+      predictive_enhancement: "Enhance predictive accuracy of routing decisions"
+
+# SUCCESS METRICS
+routing_success_criteria:
+  routing_accuracy: "95%+ optimal specialist selection accuracy"
+  quality_achievement: "Meet or exceed quality requirements in 98%+ of routed research"
+  efficiency_optimization: "Achieve optimal resource utilization with minimal waste"
+  adaptive_learning: "Continuous improvement in routing decision quality over time"
+
+This Dynamic Specialist Router provides intelligent routing capabilities for optimal research specialist selection, ensuring maximum research quality through sophisticated analysis of complexity, quality requirements, research type, and contextual factors with continuous learning and optimization.
