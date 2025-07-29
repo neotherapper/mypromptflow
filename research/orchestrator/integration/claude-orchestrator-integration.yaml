@@ -228,6 +228,7 @@ claude_orchestrator_workflow:
     
     purpose: "Unified intelligent source discovery using consolidated framework"
     integration: "Uses unified source-discovery-framework.yaml for consistent source selection"
+    enhancement_status: "Phase 3 Enhanced - Advanced coordination with MCP error handling and fallback strategies"
     
     source_discovery_process:
       unified_framework_integration:
@@ -273,6 +274,13 @@ claude_orchestrator_workflow:
         validation_source_inclusion: "Cross-reference sources for accuracy validation"
         fallback_source_preparation: "Backup sources with error handling procedures"
         
+        mcp_server_error_handling:
+          server_availability_check: "Test MCP server connectivity before usage"
+          authentication_retry_logic: "Exponential backoff for authentication failures"
+          rate_limit_coordination: "Intelligent request spacing across multiple sources"
+          graceful_degradation: "WebFetch/WebSearch fallback for MCP failures"
+          error_logging: "Complete error tracking for source access issues"
+        
         pr_validation_alignment: "Coordinate with AI-PR validation system role assignments"
         research_method_integration: "Align source selection with selected research methods"
     
@@ -295,6 +303,21 @@ claude_orchestrator_workflow:
         web_source_optimization: "WebFetch and WebSearch coordination with rate limiting"
         authentication_management: "Consolidated authentication complexity assessment"
         pr_validation_alignment: "Source coordination with AI-PR validation role assignments"
+        
+        enhanced_coordination_patterns:
+          parallel_source_access: "Simultaneous multi-source access with result aggregation"
+          intelligent_fallback_chains: "Progressive fallback from MCP → Context7 → WebSearch"
+          source_quality_assessment: "Real-time credibility scoring and ranking"
+          constitutional_ai_integration: "95%+ compliance validation across all sources"
+          cross_framework_validation: "Multi-framework consistency checking and verification"
+          
+        mcp_server_coordination_integration:
+          framework_reference: "meta/information-access/mcp-server-coordination.yaml"
+          unified_error_handling: "Apply comprehensive MCP error handling framework"
+          intelligent_coordination: "Use parallel, sequential, and adaptive routing patterns"
+          fallback_orchestration: "Tier-based degradation with graceful recovery strategies"
+          performance_optimization: "Connection pooling, request batching, and intelligent caching"
+          monitoring_integration: "Health checks, performance metrics, and error tracking"
       
       quality_optimization:
         setup_time_estimation: "Total configuration time using framework complexity scoring"
@@ -302,6 +325,14 @@ claude_orchestrator_workflow:
         rate_limit_coordination_strategy: "Multi-source rate limiting with framework guidance"
         comprehensive_error_handling: "Framework-based fallback procedures and recovery"
         source_attribution_tracking: "Complete source tracking for research-sources.md"
+        
+      mcp_coordination_enhancement:
+        server_availability_validation: "Real-time health checks before MCP tool usage"
+        adaptive_routing_application: "Dynamic server selection based on performance metrics"
+        circuit_breaker_integration: "Temporary server exclusion on repeated failures"
+        intelligent_retry_mechanisms: "Exponential backoff with jitter for error recovery"
+        performance_monitoring: "Response time tracking and success rate optimization"
+        security_compliance: "Authentication management and data protection protocols"
   
   step_4_select_methods:
     reference_files:
