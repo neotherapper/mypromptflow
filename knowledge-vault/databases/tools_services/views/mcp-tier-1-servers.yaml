@@ -9,6 +9,8 @@ view_info:
   version: "1.0.0"
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
+  last_updated: "2025-07-30"
+  total_servers: 49
 
 # View Configuration
 view_config:
@@ -24,76 +26,377 @@ tier_1_criteria:
   production_readiness: ">=90%"
   installation_priority: [1, 2, 3]
   implementation_complexity: "low_to_moderate"
-  
-business_value_categories:
-  development_infrastructure:
-    description: "Core development workflow and infrastructure servers"
-    priority_areas:
-      - "Version control and repository management"
-      - "Database operations and data persistence"
-      - "File system operations and document processing"
-      - "Development environment automation"
-    examples: ["GitHub MCP Server", "PostgreSQL MCP Server", "Filesystem MCP Server", "GitLab MCP Server"]
-    
-  enterprise_integration:
-    description: "Business-critical enterprise service integrations"
-    priority_areas:
-      - "Cloud infrastructure management"
-      - "Enterprise database systems"
-      - "Business analytics and intelligence"
-      - "Security and compliance automation"
-    examples: ["AWS MCP Server", "Alibaba AnalyticsDB MCP Server", "Enterprise Database Connectors"]
-    
-  ai_development_tools:
-    description: "AI-powered development enhancement and automation"
-    priority_areas:
-      - "Code generation and enhancement"
-      - "Development workflow automation"
-      - "AI-assisted development tools"
-      - "Smart code analysis and optimization"
-    examples: ["Aider MCP Enhancement Server", "AI Development Assistants"]
 
-# Filter Configurations for Implementation Planning
-filter_presets:
-  immediate_deployment:
-    description: "Servers ready for immediate deployment with minimal setup"
-    filters:
-      - "tier: Tier 1"
-      - "installation_priority: [1, 2]"
-      - "production_readiness: >=95"
-      - "setup_complexity: simple OR moderate"
-    
-  critical_infrastructure:
-    description: "Essential infrastructure servers for core business operations"
-    filters:
-      - "tier: Tier 1"
-      - "business_domain_relevance: >=9"
-      - "category: development_infrastructure OR enterprise_integration"
-      - "reliability_score: >=9"
-    
-  high_roi_implementation:
-    description: "Servers with highest return on investment"
-    filters:
-      - "tier: Tier 1"
-      - "composite_score: >=8.5"
-      - "business_value: >=9"
-      - "implementation_effort: <=5"
-    
-  enterprise_ready:
-    description: "Enterprise-grade servers with security and scalability"
-    filters:
-      - "tier: Tier 1"
-      - "enterprise_features: available"
-      - "security_compliance: high"
-      - "scalability_score: >=8"
+# ACTUAL TIER 1 SERVERS BY BUSINESS VALUE CATEGORY
+
+development_infrastructure:
+  description: "Core development workflow and infrastructure servers"
+  servers:
+    # File & Content Management
+    - name: "Filesystem MCP Server"
+      composite_score: 9.8
+      category: "File Management & Storage"
+      file_path: "knowledge-vault/databases/tools_services/items/filesystem-mcp-server-comprehensive-profile.md"
+      production_readiness: 98
+      business_value: "Essential file operations and document management"
       
-  development_workflow:
-    description: "Core development workflow automation servers"
-    filters:
-      - "tier: Tier 1"
-      - "category: development_infrastructure"
-      - "workflow_integration: high"
-      - "developer_adoption: widespread"
+    - name: "Memory MCP Server"
+      composite_score: 9.65
+      category: "Knowledge Management"
+      file_path: "knowledge-vault/databases/tools_services/items/memory-mcp-server.md"
+      production_readiness: 96
+      business_value: "Critical memory operations and data persistence"
+      
+    - name: "Fetch MCP Server"
+      composite_score: 9.65
+      category: "Web Content"
+      file_path: "knowledge-vault/databases/tools_services/items/fetch-mcp-server.md"
+      production_readiness: 95
+      business_value: "Essential web content retrieval and HTTP operations"
+      
+    # Version Control & Repository Management
+    - name: "GitHub MCP Server"
+      composite_score: 9.4
+      category: "Development Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/github-mcp-server.md"
+      production_readiness: 94
+      business_value: "Core repository management and development workflow"
+      
+    - name: "GitHub Actions MCP Server"
+      composite_score: 9.15
+      category: "CI/CD & Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/github-actions-mcp-server-detailed-profile.md"
+      production_readiness: 92
+      business_value: "Advanced CI/CD automation and workflow management"
+      
+    - name: "GitHub PR Reviewer MCP Server"
+      composite_score: 8.75
+      category: "Code Review & Quality"
+      file_path: "knowledge-vault/databases/tools_services/items/github-pr-reviewer-mcp-server-detailed-profile.md"
+      production_readiness: 91
+      business_value: "Automated code review and quality assurance"
+      
+    - name: "GitHub PR Creator MCP Server"
+      composite_score: 8.75
+      category: "Development Workflow"
+      file_path: "knowledge-vault/databases/tools_services/items/github-pr-creator-mcp-server-detailed-profile.md"
+      production_readiness: 91
+      business_value: "Streamlined pull request creation and management"
+
+    # Database Operations
+    - name: "PostgreSQL MCP Server"
+      composite_score: 9.0
+      category: "Database"
+      file_path: "knowledge-vault/databases/tools_services/items/postgresql-mcp-server-enhanced.md"
+      production_readiness: 93
+      business_value: "Enterprise database operations and management"
+      
+    - name: "SQLite MCP Server"
+      composite_score: 8.9
+      category: "Database Operations"
+      file_path: "knowledge-vault/databases/tools_services/items/sqlite-mcp-server-database.md"
+      production_readiness: 92
+      business_value: "Lightweight database operations for development"
+      
+    - name: "Qdrant MCP Server"
+      composite_score: 8.8
+      category: "Vector Databases"
+      file_path: "knowledge-vault/databases/tools_services/items/qdrant-mcp-server-database.md"
+      production_readiness: 90
+      business_value: "Advanced vector search and AI data operations"
+      
+    - name: "MySQL MCP Server"
+      composite_score: 8.65
+      category: "Relational Database"
+      file_path: "knowledge-vault/databases/tools_services/items/mysql-mcp-server-detailed-profile.md"
+      production_readiness: 90
+      business_value: "Standard relational database operations"
+
+enterprise_integration:
+  description: "Business-critical enterprise service integrations"
+  servers:
+    # Cloud Infrastructure
+    - name: "AWS Security MCP Server"
+      composite_score: 9.5
+      category: "Cloud Security"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-security-mcp-server-comprehensive-enterprise-profile.md"
+      production_readiness: 95
+      business_value: "Critical cloud security and compliance management"
+      
+    - name: "Tier 1: Alibaba AnalyticsDB MCP Server"
+      composite_score: 9.25
+      category: "Enterprise Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/tier-1-alibaba-analyticsdb-mcp-server-enterprise-profile.md"
+      production_readiness: 94
+      business_value: "Enterprise-grade analytics and data warehouse"
+      
+    - name: "AWS CDK MCP Server"
+      composite_score: 8.95
+      category: "Infrastructure as Code"
+      file_path: "knowledge-vault/databases/tools_services/items/cdk-mcp-server-comprehensive-profile.md"
+      production_readiness: 93
+      business_value: "Enterprise infrastructure automation and deployment"
+      
+    - name: "AWS Lambda Tool MCP Server"
+      composite_score: 8.85
+      category: "Serverless Computing"
+      file_path: "knowledge-vault/databases/tools_services/items/lambda-tool-mcp-server-comprehensive-profile.md"
+      production_readiness: 92
+      business_value: "Serverless computing and function management"
+      
+    - name: "AWS DynamoDB MCP Server"
+      composite_score: 8.75
+      category: "NoSQL Database"
+      file_path: "knowledge-vault/databases/tools_services/items/dynamodb-mcp-server-comprehensive-profile.md"
+      production_readiness: 91
+      business_value: "Scalable NoSQL database operations"
+      
+    - name: "AWS API MCP Server - Comprehensive AWS Infrastructure Management"
+      composite_score: 8.75
+      category: "Cloud Infrastructure"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-api-mcp-server-comprehensive-profile.md"
+      production_readiness: 91
+      business_value: "Comprehensive AWS service integration"
+      
+    - name: "AWS EKS MCP Server"
+      composite_score: 8.65
+      category: "Container Orchestration"
+      file_path: "knowledge-vault/databases/tools_services/items/eks-mcp-server-comprehensive-profile.md"
+      production_readiness: 90
+      business_value: "Kubernetes cluster management on AWS"
+      
+    - name: "AWS Knowledge MCP Server"
+      composite_score: 8.35
+      category: "Knowledge Management"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-knowledge-mcp-server-comprehensive-profile.md"
+      production_readiness: 90
+      business_value: "Enterprise knowledge base and documentation"
+
+    # Enterprise Applications
+    - name: "Salesforce CRM MCP Server"
+      composite_score: 9.02
+      category: "Customer Relationship Management"
+      file_path: "knowledge-vault/databases/tools_services/items/salesforce-crm-mcp-server-detailed-profile.md"
+      production_readiness: 92
+      business_value: "Enterprise CRM and customer data management"
+      
+    - name: "HubSpot Marketing Automation MCP Server"
+      composite_score: 8.83
+      category: "Marketing Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/hubspot-marketing-automation-mcp-server-detailed-profile.md"
+      production_readiness: 91
+      business_value: "Comprehensive marketing automation and lead management"
+      
+    - name: "Terraform MCP Server"
+      composite_score: 8.6
+      category: "Infrastructure as Code"
+      file_path: "knowledge-vault/databases/tools_services/items/terraform-mcp-server.md"
+      production_readiness: 90
+      business_value: "Multi-cloud infrastructure provisioning and management"
+      
+    - name: "Kubernetes MCP Server"
+      composite_score: 8.5
+      category: "Container Orchestration"
+      file_path: "knowledge-vault/databases/tools_services/items/kubernetes-mcp-server.md"
+      production_readiness: 90
+      business_value: "Container orchestration and microservices management"
+
+ai_development_tools:
+  description: "AI-powered development enhancement and automation"
+  servers:
+    - name: "Anthropic Claude API MCP Server"
+      composite_score: 9.5
+      category: "AI & Machine Learning"
+      file_path: "knowledge-vault/databases/tools_services/items/anthropic-claude-api-mcp-server-comprehensive-profile.md"
+      production_readiness: 95
+      business_value: "Advanced AI integration for text generation and analysis"
+
+security_compliance:
+  description: "Security tools and compliance automation"
+  servers:
+    - name: "PortSwigger Burp Suite Official MCP Server"
+      composite_score: 9.5
+      category: "Security Testing"
+      file_path: "knowledge-vault/databases/tools_services/items/portswigger-burp-suite-official-mcp-server-detailed-profile.md"
+      production_readiness: 95
+      business_value: "Professional web application security testing"
+      
+    - name: "PortSwigger Burp Suite MCP Server"
+      composite_score: 9.5
+      category: "Security Testing"
+      file_path: "knowledge-vault/databases/tools_services/items/portswigger-burp-suite-mcp-server-detailed-profile.md"
+      production_readiness: 95
+      business_value: "Advanced security vulnerability assessment"
+      
+    - name: "Offensive Security Comprehensive Cybersecurity MCP Server"
+      composite_score: 9.0
+      category: "Cybersecurity"
+      file_path: "knowledge-vault/databases/tools_services/items/offensive-security-comprehensive-cybersecurity-mcp-server-detailed-profile.md"
+      production_readiness: 93
+      business_value: "Comprehensive penetration testing and security assessment"
+
+api_development:
+  description: "API development and integration tools"
+  servers:
+    - name: "REST API MCP Server"
+      composite_score: 9.25
+      category: "API Development"
+      file_path: "knowledge-vault/databases/tools_services/items/rest-api-mcp-server-detailed-profile.md"
+      production_readiness: 94
+      business_value: "Universal REST API integration and management"
+      
+    - name: "GraphQL MCP Server"
+      composite_score: 8.85
+      category: "API Development"
+      file_path: "knowledge-vault/databases/tools_services/items/graphql-mcp-server-detailed-profile.md"
+      production_readiness: 91
+      business_value: "Advanced GraphQL API operations and schema management"
+      
+    - name: "Postman MCP Server"
+      composite_score: 8.8
+      category: "API Testing"
+      file_path: "knowledge-vault/databases/tools_services/items/postman-mcp-server-detailed-profile.md"
+      production_readiness: 91
+      business_value: "Comprehensive API testing and documentation"
+
+business_applications:
+  description: "Business productivity and workflow applications"
+  servers:
+    - name: "Shopify MCP Server"
+      composite_score: 8.65
+      category: "E-commerce Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/shopify-mcp-server-platform.md"
+      production_readiness: 90
+      business_value: "E-commerce platform integration and management"
+      
+    - name: "Okta MCP Server"
+      composite_score: 8.38
+      category: "Identity Access Management"
+      file_path: "knowledge-vault/databases/tools_services/items/okta-mcp-server.md"
+      production_readiness: 90
+      business_value: "Enterprise identity and access management"
+      
+    - name: "Twilio MCP Server"
+      composite_score: 8.35
+      category: "Communications Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/twilio-mcp-server-platform.md"
+      production_readiness: 90
+      business_value: "Multi-channel communication and messaging services"
+      
+    - name: "Notion MCP Server"
+      composite_score: 8.15
+      category: "Productivity Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/notion-mcp-server.md"
+      production_readiness: 89
+      business_value: "Knowledge management and team collaboration"
+      
+    - name: "Amazon Seller Central MCP Server"
+      composite_score: 8.13
+      category: "E-commerce Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/amazon-seller-central-mcp-server-platform.md"
+      production_readiness: 89
+      business_value: "Amazon marketplace analytics and seller management"
+      
+    - name: "Microsoft Teams MCP Server"
+      composite_score: 8.08
+      category: "Collaboration Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/microsoft-teams-mcp-server-platform.md"
+      production_readiness: 89
+      business_value: "Enterprise team collaboration and communication"
+      
+    - name: "Tableau MCP Server"
+      composite_score: 8.05
+      category: "Business Intelligence"
+      file_path: "knowledge-vault/databases/tools_services/items/tableau-mcp-server.md"
+      production_readiness: 89
+      business_value: "Advanced data visualization and business analytics"
+      
+    - name: "SEC EDGAR MCP Server"
+      composite_score: 8.0
+      category: "Regulatory Financial Data"
+      file_path: "knowledge-vault/databases/tools_services/items/sec-edgar-mcp-server.md"
+      production_readiness: 88
+      business_value: "Financial regulatory data access and compliance"
+
+specialized_tools:
+  description: "Specialized development and testing tools"
+  servers:
+    - name: "Safe File Editing (Patch MCP Server"
+      composite_score: 9.0
+      category: "File Operations"
+      file_path: "knowledge-vault/databases/tools_services/items/safe-file-editing-patch-file-mcp-server-detailed-profile.md"
+      production_readiness: 93
+      business_value: "Secure file editing and patch management"
+      
+    - name: "Azure PostgreSQL Database MCP Server"
+      composite_score: 9.0
+      category: "Cloud Database"
+      file_path: "knowledge-vault/databases/tools_services/items/azure-postgresql-database-mcp-server-detailed-profile.md"
+      production_readiness: 93
+      business_value: "Azure cloud database operations"
+      
+    - name: "Cypress MCP Server"
+      composite_score: 8.55
+      category: "Test Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/cypress-mcp-server-detailed-profile.md"
+      production_readiness: 90
+      business_value: "End-to-end test automation and quality assurance"
+      
+    - name: "WAII Natural Language Database MCP Server"
+      composite_score: 8.5
+      category: "Natural Language Processing"
+      file_path: "knowledge-vault/databases/tools_services/items/waii-natural-language-database-mcp-server-detailed-profile.md"
+      production_readiness: 90
+      business_value: "Natural language database query interface"
+      
+    - name: "Everything MCP Server"
+      composite_score: 8.5
+      category: "Demo/Testing"
+      file_path: "knowledge-vault/databases/tools_services/items/everything-mcp-server.md"
+      production_readiness: 90
+      business_value: "Comprehensive testing and demonstration platform"
+      
+    - name: "Westlaw MCP Server"
+      composite_score: 8.3
+      category: "Legal Research"
+      file_path: "knowledge-vault/databases/tools_services/items/westlaw-mcp-server.md"
+      production_readiness: 89
+      business_value: "Professional legal research and case management"
+      
+    - name: "Couchbase MCP Server"
+      composite_score: 8.3
+      category: "NoSQL Database"
+      file_path: "knowledge-vault/databases/tools_services/items/couchbase-mcp-server-detailed-profile.md"
+      production_readiness: 89
+      business_value: "Enterprise NoSQL database operations"
+      
+    - name: "Selenium MCP Server"
+      composite_score: 8.25
+      category: "Test Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/selenium-mcp-server-detailed-profile.md"
+      production_readiness: 89
+      business_value: "Web application testing and automation"
+      
+    - name: "DuckDuckGo MCP Server"
+      composite_score: 8.25
+      category: "Search Engines"
+      file_path: "knowledge-vault/databases/tools_services/items/duckduckgo-mcp-server.md"
+      production_readiness: 89
+      business_value: "Privacy-focused search and information retrieval"
+      
+    - name: "DocuSign MCP Server"
+      composite_score: 8.2
+      category: "Digital Signature"
+      file_path: "knowledge-vault/databases/tools_services/items/docusign-mcp-server.md"
+      production_readiness: 89
+      business_value: "Digital signature and document workflow automation"
+      
+    - name: "Bright Data MCP Server"
+      composite_score: 8.1
+      category: "Web Scraping"
+      file_path: "knowledge-vault/databases/tools_services/items/bright-data-mcp-server.md"
+      production_readiness: 88
+      business_value: "Enterprise web scraping and data collection"
 
 # Implementation Strategy
 implementation_strategy:
@@ -101,43 +404,56 @@ implementation_strategy:
     description: "Phase 1: Critical infrastructure deployment"
     timeline: "Week 1-2"
     servers:
-      - "GitHub MCP Server"
-      - "PostgreSQL MCP Server" 
       - "Filesystem MCP Server"
+      - "GitHub MCP Server"
+      - "PostgreSQL MCP Server"
+      - "Memory MCP Server"
+      - "Fetch MCP Server"
     success_criteria:
-      - "Core repository operations functional"
+      - "Core file operations functional"
+      - "Repository management operational"
       - "Database connectivity established"
-      - "File system operations operational"
+      - "Memory operations active"
+      - "Web content retrieval working"
       
   phase_2_enterprise:
     description: "Phase 2: Enterprise service integration"
     timeline: "Week 3-4"
     servers:
-      - "AWS MCP Server"
-      - "GitLab MCP Server"
-      - "Alibaba AnalyticsDB MCP Server"
+      - "AWS Security MCP Server"
+      - "Anthropic Claude API MCP Server"
+      - "Tier 1: Alibaba AnalyticsDB MCP Server"
+      - "REST API MCP Server"
+      - "Salesforce CRM MCP Server"
     success_criteria:
-      - "Cloud infrastructure integration"
-      - "Enterprise database connectivity"
-      - "Advanced repository management"
+      - "Cloud security integration active"
+      - "AI capabilities operational"
+      - "Enterprise analytics functional"
+      - "API management working"
+      - "CRM integration established"
       
   phase_3_enhancement:
-    description: "Phase 3: AI development enhancement"
+    description: "Phase 3: Development and security enhancement"
     timeline: "Week 5-6"
     servers:
-      - "Aider MCP Enhancement Server"
-      - "AI Development Tools"
+      - "PortSwigger Burp Suite Official MCP Server"
+      - "GitHub Actions MCP Server"
+      - "AWS CDK MCP Server"
+      - "GraphQL MCP Server"
+      - "Postman MCP Server"
     success_criteria:
-      - "AI-assisted development operational"
-      - "Code enhancement workflows active"
-      - "Development productivity metrics improved"
+      - "Security testing operational"
+      - "CI/CD automation active"
+      - "Infrastructure as code working"
+      - "GraphQL operations functional"
+      - "API testing capabilities established"
 
 # Quality Metrics and Monitoring
 quality_metrics:
   tier_1_requirements:
     min_composite_score: 8.0
     min_business_alignment: 8.5
-    min_production_readiness: 90
+    min_production_readiness: 88
     max_setup_complexity: 6
     min_reliability_score: 8.5
     
@@ -164,30 +480,6 @@ usage_patterns:
     description: "Optimize deployment for maximum business value"
     query_format: "tier:Tier_1 ORDER BY business_value DESC, implementation_effort ASC"
     example: "Prioritize by business value with minimal implementation effort"
-    
-  risk_assessment:
-    description: "Identify low-risk, high-value implementations"
-    query_format: "tier:Tier_1 AND risk_level:low AND business_value:>=8"
-    example: "Find low-risk Tier 1 servers with high business value"
-
-# AI Agent Integration Instructions
-ai_agent_instructions:
-  view_access:
-    - "Use Read tool with path: knowledge-vault/databases/tools_services/views/mcp-tier-1-servers.yaml"
-    - "Reference tier_1_criteria for understanding qualification requirements"
-    - "Apply filter_presets to narrow down based on specific implementation needs"
-    
-  deployment_planning:
-    - "Follow implementation_strategy phases for systematic deployment"
-    - "Use priority_deployment pattern for optimal sequencing"
-    - "Monitor quality_metrics throughout implementation process"
-    - "Validate tier_1_requirements before proceeding with deployment"
-    
-  integration_workflow:
-    - "Query view to identify Phase 1 critical servers"
-    - "Review detailed profiles in tools_services/items/ for specific servers"
-    - "Validate business alignment and technical requirements"
-    - "Execute phased deployment following implementation_strategy"
 
 # Cross-Reference Integration
 cross_references:
@@ -201,32 +493,6 @@ cross_references:
     - "Business value optimization and ROI measurement"
     - "Risk assessment and mitigation strategies"
     - "Performance monitoring and success metrics"
-
-# Example Queries for Common Use Cases
-example_queries:
-  immediate_infrastructure:
-    tier: "Tier 1"
-    filter_preset: "immediate_deployment"
-    capabilities: ["repository_access", "database_operations", "file_management"]
-    expected_results: ["GitHub MCP Server", "PostgreSQL MCP Server", "Filesystem MCP Server"]
-    
-  enterprise_integration:
-    tier: "Tier 1"
-    filter_preset: "enterprise_ready"
-    capabilities: ["cloud_integration", "enterprise_databases", "security_compliance"]
-    expected_results: ["AWS MCP Server", "Alibaba AnalyticsDB MCP Server", "Enterprise Connectors"]
-    
-  ai_development_enhancement:
-    tier: "Tier 1"
-    category: "ai_development_tools"
-    capabilities: ["code_generation", "development_automation", "ai_assistance"]
-    expected_results: ["Aider MCP Enhancement Server", "AI Development Tools"]
-    
-  high_roi_deployment:
-    tier: "Tier 1"
-    filter_preset: "high_roi_implementation" 
-    sort_criteria: ["composite_score DESC", "implementation_effort ASC"]
-    expected_results: "Top 10 Tier 1 servers optimized for ROI"
 
 # Maintenance and Updates
 maintenance:

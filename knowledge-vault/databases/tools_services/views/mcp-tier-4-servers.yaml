@@ -1,362 +1,371 @@
 # MCP Tier 4 Servers View
-# Community and low priority servers for experimental use
-# Entertainment, social media, and niche community solutions
+# Community and experimental servers for niche use cases
+# Entertainment, social media, and specialized community solutions
 
 view_info:
   name: "MCP Tier 4 Servers"
-  description: "Community and low priority MCP servers for experimental use and niche applications"
+  description: "Community and experimental MCP servers for niche use cases and specialized interests"
   database: "tools_services"
   version: "1.0.0"
   created: "2025-07-30"
   purpose: "Enable discovery of community-driven servers for experimental projects and specialized interests"
+  last_updated: "2025-07-30"
+  total_servers: 5
 
 # View Configuration
 view_config:
   primary_grouping: "community_category"
-  secondary_sort: "community_interest_desc"
+  secondary_sort: "composite_score_desc"
   include_inactive: true
   max_results: 150
 
 # Tier 4 Criteria and Categories
 tier_4_criteria:
-  composite_score_range: "1.0-3.9"
-  business_alignment: "limited"
-  production_readiness: "30-80%"
+  composite_score_range: "1.0-4.9"
+  business_alignment: "limited_to_niche"
+  production_readiness: "30-85%"
   installation_priority: [4, 5]
   implementation_complexity: "variable"
-  
-community_categories:
-  entertainment_media:
-    description: "Entertainment platforms and media consumption services"
-    priority_areas:
-      - "Music streaming and audio services"
-      - "Video platforms and content discovery"
-      - "Gaming and interactive entertainment"
-      - "Social media content integration"
-    examples: ["Spotify MCP Server", "YouTube MCP Server", "Gaming Platform Integrations"]
-    business_value: "low"
-    community_interest: "high"
-    
-  social_communication:
-    description: "Social platforms and community communication tools"
-    priority_areas:
-      - "Chat and messaging platforms"
-      - "Community management tools"
-      - "Social media automation"
-      - "Online collaboration spaces"
-    examples: ["Discord MCP Server", "Social Media APIs", "Community Tools"]
-    business_value: "limited"
-    community_interest: "moderate"
-    
-  hobby_lifestyle:
-    description: "Personal interest and lifestyle management tools"
-    priority_areas:
-      - "Personal productivity and life management"
-      - "Hobby and interest tracking"
-      - "Health and fitness integration"
-      - "Personal finance and budgeting"
-    examples: ["Personal Finance Tools", "Fitness Trackers", "Hobby Management"]
-    business_value: "minimal"
-    community_interest: "variable"
-    
-  experimental_innovation:
-    description: "Experimental and proof-of-concept implementations"
-    priority_areas:
-      - "Cutting-edge technology experiments"
-      - "Research and development prototypes"
-      - "Academic and educational tools"
-      - "Innovation sandbox projects"
-    examples: ["Research Prototypes", "Educational Tools", "Innovation Projects"]
-    business_value: "speculative"
-    community_interest: "high"
-    
-  niche_specialized:
-    description: "Highly specialized niche applications"
-    priority_areas:
-      - "Industry-specific micro-solutions"
-      - "Personal workflow automations"
-      - "Artistic and creative tools"
-      - "Specialized data sources"
-    examples: ["Artistic Tools", "Micro-solutions", "Personal Automations"]
-    business_value: "niche"
-    community_interest: "targeted"
-    
-  legacy_deprecated:
-    description: "Legacy systems and deprecated implementations"
-    priority_areas:
-      - "Outdated platform integrations"
-      - "Superseded implementations"
-      - "Maintenance-mode services"
-      - "Historical data access"
-    examples: ["Legacy APIs", "Deprecated Services", "Historical Systems"]
-    business_value: "historical"
-    community_interest: "maintenance"
 
-# Filter Configurations for Community and Experimental Use
-filter_presets:
-  experimental_playground:
-    description: "Servers suitable for experimentation and learning"
-    filters:
-      - "tier: Tier 4"
-      - "maturity_level: experimental OR beta"
-      - "learning_value: high"
-      - "risk_tolerance: experimental"
-    
-  community_interest:
-    description: "Servers with high community engagement and interest"
-    filters:
-      - "tier: Tier 4"
-      - "community_adoption: active"
-      - "documentation_community: good"
-      - "maintenance_status: community_driven"
-    
-  entertainment_integration:
-    description: "Entertainment and media platform integrations"
-    filters:
-      - "tier: Tier 4"
-      - "category: entertainment_media"
-      - "user_engagement: high"
-      - "content_access: rich"
-    
-  low_commitment_testing:
-    description: "Servers suitable for low-commitment testing and exploration"
-    filters:
-      - "tier: Tier 4"
-      - "setup_complexity: <=4"
-      - "maintenance_burden: minimal"
-      - "exit_strategy: simple"
+# ACTUAL TIER 4 SERVERS BY COMMUNITY CATEGORY
+
+entertainment_media:
+  description: "Entertainment platforms and media consumption services"
+  servers:
+    - name: "Spotify MCP Server"
+      composite_score: 8.6
+      category: "Entertainment & Media"
+      file_path: "knowledge-vault/databases/tools_services/items/spotify-mcp-server-comprehensive-profile.md"
+      production_readiness: 85
+      business_value: "Music streaming integration and playlist management"
+      setup_complexity: "Low"
+      provider: "Spotify"
+      community_interest: "High"
+      use_cases: ["Music automation", "Playlist management", "Audio content integration"]
       
-  niche_requirements:
-    description: "Servers addressing very specific niche requirements"
-    filters:
-      - "tier: Tier 4"
-      - "use_case_specificity: very_narrow"
-      - "alternative_solutions: none"
-      - "specialized_value: high_for_niche"
+    - name: "Tier 4: Spotify MCP Server"
+      composite_score: 4.25
+      category: "Entertainment & Media"
+      file_path: "knowledge-vault/databases/tools_services/items/tier-4-spotify-mcp-server-detailed-profile.md"
+      production_readiness: 75
+      business_value: "Music platform automation and content discovery"
+      setup_complexity: "Moderate"
+      provider: "Community"
+      community_interest: "High"
+      use_cases: ["Music discovery", "Content automation", "Entertainment workflows"]
+      
+    - name: "Tier 4: YouTube MCP Server"
+      composite_score: 4.75
+      category: "Video Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/tier-4-youtube-mcp-server-detailed-profile.md"
+      production_readiness: 78
+      business_value: "Video content management and automation"
+      setup_complexity: "Moderate"
+      provider: "Community"
+      community_interest: "High"
+      use_cases: ["Video automation", "Content discovery", "Media workflows"]
+
+social_communication:
+  description: "Social platforms and community communication tools"
+  servers:
+    - name: "Discord MCP Server"
+      composite_score: 8.4
+      category: "Communication & Collaboration"
+      file_path: "knowledge-vault/databases/tools_services/items/discord-mcp-server-comprehensive-profile.md"
+      production_readiness: 84
+      business_value: "Community management and chat automation"
+      setup_complexity: "Moderate"
+      provider: "Discord"
+      community_interest: "High"
+      use_cases: ["Community management", "Bot automation", "Chat workflows"]
+      
+    - name: "Tier 4: Discord MCP Server"
+      composite_score: 4.35
+      category: "Community Communication"
+      file_path: "knowledge-vault/databases/tools_services/items/tier-4-discord-mcp-server-detailed-profile.md"
+      production_readiness: 76
+      business_value: "Community platform integration and automation"
+      setup_complexity: "Moderate"
+      provider: "Community"
+      community_interest: "High"
+      use_cases: ["Community automation", "Server management", "Communication workflows"]
 
 # Implementation Strategy
 implementation_strategy:
-  experimental_approach:
-    description: "Experimental: Low-risk exploration and testing"
-    timeline: "1-2 weeks"
-    approach:
-      - "Sandbox environment deployment"
-      - "Personal or team-level experimentation"
-      - "Feature exploration and capability assessment"
-      - "Community feedback and learning"
-    risk_level: "low"
-    
-  selective_niche_deployment:
-    description: "Selective: Deploy for specific validated niche needs"
-    timeline: "2-4 weeks"
-    approach:
-      - "Identify specific high-value niche requirements"
-      - "Validate lack of alternative solutions"
-      - "Implement with clear exit strategy"
-      - "Monitor value delivery and usage"
-    risk_level: "moderate"
-    
-  community_contribution:
-    description: "Community: Contribute to community-driven development"
-    timeline: "Ongoing"
-    approach:
-      - "Participate in community development"
-      - "Contribute improvements and feedback"
-      - "Share experiences and best practices"
-      - "Support community maintenance efforts"
-    risk_level: "variable"
-    
-  learning_and_research:
-    description: "Learning: Use for educational and research purposes"
-    timeline: "Variable"
-    approach:
-      - "Explore cutting-edge technologies"
-      - "Learn new integration patterns"
-      - "Research potential future applications"
-      - "Document insights and learnings"
-    risk_level: "low"
+  phase_1_high_value_entertainment:
+    description: "Phase 1: High-scoring entertainment and communication servers"
+    timeline: "Week 1-2"
+    servers:
+      - "Spotify MCP Server"
+      - "Discord MCP Server"
+    success_criteria:
+      - "Music streaming integration functional"
+      - "Community communication automation active"
+      - "Basic entertainment workflows operational"
+      
+  phase_2_experimental_features:
+    description: "Phase 2: Experimental and community-driven servers"
+    timeline: "Week 3-4"
+    servers:
+      - "Tier 4: YouTube MCP Server"
+      - "Tier 4: Spotify MCP Server"
+      - "Tier 4: Discord MCP Server"
+    success_criteria:
+      - "Video content automation operational"
+      - "Advanced music platform features active"
+      - "Enhanced community management functional"
 
 # Quality Metrics and Monitoring
 quality_metrics:
-  tier_4_expectations:
+  tier_4_requirements:
     min_composite_score: 1.0
-    min_community_value: 3.0
+    min_business_alignment: 2.0
     min_production_readiness: 30
-    max_business_criticality: 3
-    expected_maintenance: "community_driven"
+    max_setup_complexity: 10
+    min_reliability_score: 4.0
     
-  monitoring_approach:
-    - "Experimental success rate tracking"
-    - "Community engagement measurement"
-    - "Learning value assessment"
-    - "Niche requirement fulfillment"
-    - "Community contribution tracking"
+  monitoring_kpis:
+    - "Deployment success rate >=60%"
+    - "Time to experimental deployment <=2 weeks"
+    - "Community value realization >=40%"
+    - "User adoption rate >=30%"
+    - "System uptime >=95.0%"
 
 # Community Value Assessment
 community_value_factors:
   entertainment_value:
-    weight: 0.25
-    description: "Entertainment and engagement value for users"
-    measurement: "User engagement and satisfaction with entertainment features"
-    
-  learning_opportunity:
-    weight: 0.20
-    description: "Educational and skill development opportunities"
-    measurement: "Knowledge gain and skill development outcomes"
-    
-  innovation_exploration:
-    weight: 0.20
-    description: "Exploration of innovative technologies and approaches"
-    measurement: "Innovation insights and future potential assessment"
+    weight: 0.30
+    description: "Entertainment and media consumption enhancement"
+    measurement: "User engagement and entertainment workflow efficiency"
     
   community_engagement:
+    weight: 0.25
+    description: "Community building and social interaction facilitation"
+    measurement: "Community activity and interaction improvement"
+    
+  experimental_innovation:
+    weight: 0.20
+    description: "Experimental features and innovative use cases"
+    measurement: "Innovation adoption and experimental feature utilization"
+    
+  niche_specialization:
     weight: 0.15
-    description: "Active community participation and contribution"
-    measurement: "Community activity, contributions, and support quality"
+    description: "Specialized functionality for specific communities"
+    measurement: "Niche use case coverage and specialized feature adoption"
     
-  niche_utility:
+  automation_potential:
     weight: 0.10
-    description: "Utility for specific niche requirements"
-    measurement: "Niche requirement fulfillment effectiveness"
-    
-  experimental_value:
-    weight: 0.10
-    description: "Value for experimental and prototype development"
-    measurement: "Experimental success and learning outcomes"
+    description: "Automation capabilities for entertainment and social workflows"
+    measurement: "Workflow automation efficiency and time savings"
 
 # Usage Patterns for AI Agents
 usage_patterns:
-  experimental_discovery:
-    description: "Discover servers for experimental and learning purposes"
-    query_format: "tier:Tier_4 AND filter_preset:experimental_playground ORDER BY learning_value DESC"
-    example: "Find Tier 4 servers with high learning and experimental value"
+  experimental_deployment:
+    description: "Deploy servers for experimental and testing purposes"
+    query_format: "tier:Tier_4 ORDER BY composite_score DESC"
+    example: "Get highest-scoring Tier 4 servers for experimental deployment"
     
-  entertainment_integration:
-    description: "Integrate entertainment and media services"
-    query_format: "tier:Tier_4 AND category:entertainment_media ORDER BY user_engagement DESC"
-    example: "tier:Tier_4 AND category:entertainment_media"
+  community_focused_integration:
+    description: "Integrate servers based on community interest and engagement"
+    query_format: "tier:Tier_4 AND community_interest:High"
+    example: "Find Tier 4 servers with high community interest"
     
-  niche_solution_search:
-    description: "Search for solutions to very specific niche requirements"
-    query_format: "tier:Tier_4 AND filter_preset:niche_requirements ORDER BY specialized_value DESC"
-    example: "Find Tier 4 servers for specific niche requirements"
+  entertainment_automation:
+    description: "Select servers for entertainment and media automation"
+    query_format: "tier:Tier_4 AND community_category:entertainment_media"
+    example: "Get entertainment-focused Tier 4 servers"
     
-  community_exploration:
-    description: "Explore community-driven developments and innovations"
-    query_format: "tier:Tier_4 AND community_adoption:active ORDER BY innovation_potential DESC"
-    example: "Discover active community-driven Tier 4 servers"
+  low_risk_experimentation:
+    description: "Identify low-complexity servers for safe experimentation"
+    query_format: "tier:Tier_4 AND setup_complexity:Low ORDER BY production_readiness DESC"
+    example: "Find low-risk Tier 4 servers for experimental projects"
+
+# Filter Configurations for Community Integration
+filter_presets:
+  high_community_value:
+    description: "Servers with high community interest and decent scores"
+    filters:
+      - "tier: Tier 4"
+      - "composite_score: >=7.0"
+      - "community_interest: High"
+      - "production_readiness: >=80"
+    expected_results: ["Spotify MCP Server", "Discord MCP Server"]
+    
+  entertainment_focused:
+    description: "Entertainment and media platform servers"
+    filters:
+      - "tier: Tier 4"
+      - "community_category: entertainment_media"
+      - "production_readiness: >=70"
+    expected_results: ["Spotify MCP Server", "Tier 4: Spotify MCP Server", "Tier 4: YouTube MCP Server"]
+    
+  communication_platforms:
+    description: "Social and communication platform servers"
+    filters:
+      - "tier: Tier 4"
+      - "community_category: social_communication"
+      - "production_readiness: >=70"
+    expected_results: ["Discord MCP Server", "Tier 4: Discord MCP Server"]
+    
+  experimental_ready:
+    description: "Servers ready for experimental deployment"
+    filters:
+      - "tier: Tier 4"
+      - "composite_score: >=4.0"
+      - "setup_complexity: Low OR Moderate"
+    expected_results: ["Tier 4: YouTube MCP Server", "Tier 4: Discord MCP Server", "Tier 4: Spotify MCP Server"]
+    
+  low_complexity_community:
+    description: "Community servers with low setup complexity"
+    filters:
+      - "tier: Tier 4"
+      - "setup_complexity: Low"
+      - "community_interest: High OR Moderate"
+    expected_results: ["Spotify MCP Server"]
 
 # AI Agent Integration Instructions
 ai_agent_instructions:
   view_access:
     - "Use Read tool with path: knowledge-vault/databases/tools_services/views/mcp-tier-4-servers.yaml"
-    - "Reference tier_4_criteria for understanding community server characteristics"
-    - "Apply filter_presets based on experimental or niche requirements"
+    - "Reference tier_4_criteria for understanding experimental qualification standards"
+    - "Apply filter_presets based on specific community integration needs"
     
   experimental_planning:
-    - "Follow implementation_strategy for low-risk experimental approach"
-    - "Use experimental_discovery pattern for learning-focused exploration"
-    - "Assess community_value_factors for each server consideration"
-    - "Maintain clear exit strategies for experimental implementations"
+    - "Follow implementation_strategy phases for systematic experimental integration"
+    - "Use experimental_deployment pattern for safe testing approaches"
+    - "Monitor quality_metrics throughout experimental integration process"
+    - "Assess community_value_factors for community alignment"
     
-  integration_workflow:
-    - "Query view to identify experimental or niche servers"
-    - "Evaluate community support and maintenance status"
-    - "Review detailed profiles in tools_services/items/ for implementation guidance"
-    - "Execute experimental deployment with minimal business impact"
+  deployment_workflow:
+    - "Query view to identify community category servers"
+    - "Review detailed profiles in tools_services/items/ for experimental specifications"
+    - "Validate community requirements and experimental capabilities"
+    - "Execute phased integration following experimental implementation strategy"
 
 # Cross-Reference Integration
 cross_references:
   related_views:
-    - "mcp-tier-3-servers.yaml: Specialized servers with higher business alignment"
-    - "mcp-tier-2-servers.yaml: Business integration servers with proven value"
-    - "information-sources-by-type.yaml: Information access capability comparison"
+    - "mcp-tier-3-servers.yaml: Higher priority specialized servers"
+    - "mcp-tier-1-servers.yaml: Production-ready servers for foundational capabilities"
+    - "information-sources-by-type.yaml: Capability-based server discovery"
     
-  experimental_guides:
-    - "Experimental deployment best practices"
-    - "Community engagement strategies"
-    - "Learning-focused integration approaches"
-    - "Risk management for experimental implementations"
+  experimental_integration_guides:
+    - "Entertainment platform integration patterns"
+    - "Community automation best practices"
+    - "Experimental deployment safety guidelines"
+    - "Social media automation considerations"
 
 # Example Queries for Common Use Cases
 example_queries:
-  entertainment_platforms:
+  high_value_entertainment:
     tier: "Tier 4"
-    category: "entertainment_media"
-    capabilities: ["music_streaming", "video_content", "media_discovery"]
-    expected_results: ["Spotify MCP Server", "YouTube MCP Server", "Entertainment Integrations"]
+    filter_preset: "high_community_value"
+    capabilities: ["entertainment", "media_streaming", "community_management"]
+    expected_results: ["Spotify MCP Server", "Discord MCP Server"]
     
-  social_communication:
+  experimental_media_automation:
     tier: "Tier 4"
-    category: "social_communication"
-    capabilities: ["messaging", "community_management", "social_automation"]
-    expected_results: ["Discord MCP Server", "Social Media APIs", "Community Tools"]
+    filter_preset: "entertainment_focused"
+    capabilities: ["video_automation", "music_automation", "content_discovery"]
+    expected_results: ["Tier 4: YouTube MCP Server", "Tier 4: Spotify MCP Server"]
     
-  experimental_innovation:
+  community_management_tools:
     tier: "Tier 4"
-    category: "experimental_innovation"
-    capabilities: ["research_prototypes", "cutting_edge_tech", "innovation_sandbox"]
-    expected_results: ["Research Tools", "Experimental APIs", "Innovation Projects"]
+    filter_preset: "communication_platforms"
+    capabilities: ["community_management", "chat_automation", "social_interaction"]
+    expected_results: ["Discord MCP Server", "Tier 4: Discord MCP Server"]
     
-  niche_specialized_tools:
+  safe_experimental_deployment:
     tier: "Tier 4"
-    filter_preset: "niche_requirements"
-    sort_criteria: ["specialized_value DESC", "setup_complexity ASC"]
-    expected_results: "Highly specialized Tier 4 servers for specific niche needs"
+    filter_preset: "low_complexity_community"
+    sort_criteria: ["composite_score DESC", "setup_complexity ASC"]
+    expected_results: ["Spotify MCP Server"]
 
-# Risk Management and Expectations
-risk_management:
-  experimental_risks:
-    description: "Experimental implementations may be unstable or incomplete"
-    mitigation: "Sandbox deployment and clear exit strategies"
-    expectation: "Expect instability and limited production suitability"
+# Success Metrics and KPIs
+success_metrics:
+  experimental_deployment_success:
+    target: ">=60%"
+    measurement: "Percentage of successful experimental server deployments"
+    timeline: "Within 2 weeks of initiation"
     
-  community_dependency:
-    description: "Dependent on community maintenance and support"
-    mitigation: "Assess community health and engagement levels"
-    expectation: "Variable support quality and response times"
+  community_value_realization:
+    target: ">=40%"
+    measurement: "Percentage of expected community value achieved"
+    timeline: "Within 4 weeks of deployment"
     
-  limited_business_value:
-    description: "Minimal alignment with core business objectives"
-    mitigation: "Clear use case validation and value assessment"
-    expectation: "Limited ROI and business impact"
+  user_engagement:
+    target: ">=30%"
+    measurement: "Percentage of community users actively engaging with servers"
+    timeline: "Within 3 weeks of deployment"
     
-  maintenance_challenges:
-    description: "Potential maintenance and compatibility issues"
-    mitigation: "Regular health checks and compatibility monitoring"
-    expectation: "Higher maintenance burden and potential obsolescence"
+  experimental_reliability:
+    target: ">=95.0%"
+    measurement: "System uptime and availability for experimental services"
+    timeline: "Continuous monitoring during experimental phase"
 
-# Community Engagement Guidelines
-community_engagement:
-  contribution_opportunities:
-    - "Bug reports and issue identification"
-    - "Feature requests and enhancement suggestions"
-    - "Documentation improvements and examples"
-    - "Community support and knowledge sharing"
+# Community Engagement Metrics
+community_metrics:
+  entertainment_engagement:
+    description: "Engagement with entertainment and media servers"
+    measurements:
+      - "Music streaming automation usage"
+      - "Video content workflow efficiency"
+      - "Entertainment feature adoption rate"
+    target_improvement: "25%"
     
-  best_practices:
-    - "Engage respectfully with community maintainers"
-    - "Provide constructive feedback and suggestions"
-    - "Share experiences and use cases with community"
-    - "Contribute back to community projects when possible"
+  social_interaction_enhancement:
+    description: "Improvement in community and social interactions"
+    measurements:
+      - "Community management automation effectiveness"
+      - "Chat workflow efficiency improvement"
+      - "Social platform integration success rate"
+    target_improvement: "20%"
     
-  support_expectations:
-    - "Community-driven support with variable response times"
-    - "Limited formal support and SLA commitments"
-    - "Reliance on community knowledge and documentation"
-    - "Self-service troubleshooting and problem resolution"
+  experimental_feature_adoption:
+    description: "Adoption rate of experimental features"
+    measurements:
+      - "New feature exploration rate"
+      - "Experimental workflow creation"
+      - "Community feedback on experimental features"
+    target_adoption: "15%"
 
 # Maintenance and Updates
 maintenance:
   update_frequency: "quarterly"
   review_criteria:
-    - "Community activity and project health assessment"
-    - "Changes to experimental status and maturity levels"
-    - "Updates to community interest and engagement metrics"
-    - "Evaluation of new experimental and community servers"
+    - "Community feedback and engagement metrics"
+    - "Experimental feature performance and stability"
+    - "Changes to composite scores affecting community value"
+    - "Updates to community category classifications based on usage patterns"
     
   quality_assurance:
-    - "Community health and engagement monitoring"
-    - "Experimental value and learning outcome assessment"
-    - "Risk management effectiveness evaluation"
-    - "Community contribution and support quality review"
+    - "Validation of tier_4_criteria compliance for community servers"
+    - "Community value assessment accuracy and relevance"
+    - "Experimental deployment safety and reliability"
+    - "Community engagement measurement and optimization"
+
+# Special Considerations
+special_considerations:
+  experimental_nature:
+    description: "Tier 4 servers are experimental and community-driven"
+    guidelines:
+      - "Use for testing and experimental projects only"
+      - "Monitor closely for stability and performance issues"
+      - "Gather community feedback for continuous improvement"
+      - "Consider promotion to higher tiers based on maturity and adoption"
+      
+  community_support:
+    description: "Leverage community support and contribution"
+    approaches:
+      - "Engage with community developers for improvements"
+      - "Document community use cases and success stories"
+      - "Facilitate knowledge sharing among community users"
+      - "Encourage community contribution to server development"
+      
+  risk_management:
+    description: "Manage risks associated with experimental servers"
+    strategies:
+      - "Implement robust testing procedures for experimental deployments"
+      - "Maintain fallback options for critical workflows"
+      - "Document known limitations and workarounds"
+      - "Establish clear upgrade paths to more stable alternatives"
