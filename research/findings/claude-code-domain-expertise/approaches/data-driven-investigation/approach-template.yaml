@@ -1,0 +1,255 @@
+# Data-Driven Investigation Approach Template
+# Focus: Quantitative data analysis, statistical validation, and trend analysis
+# Methodology: Market research, survey data analysis, performance metrics evaluation
+# Isolation: Market data, statistics, and quantitative analytics only
+
+approach_identity:
+  name: "Data-Driven Investigation"
+  id: "data-driven-investigation"
+  approach_number: 3
+  isolation_protocol: "quantitative_data_only"
+  constitutional_ai_compliance: true
+
+# Methodological Framework
+methodology:
+  primary_focus: "Quantitative data analysis, statistical validation, and trend analysis"
+  analytical_approach: "Market research, survey data analysis, performance metrics evaluation"
+  validation_method: "Objective measurement, statistical significance, trend identification"
+  
+  strengths:
+    - "Objective measurement and statistical rigor"
+    - "Large-scale data analysis and trend identification"
+    - "Statistical significance testing and validation"
+    - "Quantitative evidence and numerical precision"
+  
+  evidence_types:
+    - "Survey data and market research statistics"
+    - "Performance benchmarks and analytics"
+    - "Usage patterns and adoption metrics"
+    - "Quantitative trend analysis and forecasting"
+
+# Source Channel Isolation
+source_channels:
+  permitted_channels:
+    market_statistics:
+      - "Stack Overflow Developer Survey annual data"
+      - "GitHub State of the Octoverse statistics"
+      - "JetBrains Developer Ecosystem Survey"
+      - "Developer productivity and tools surveys"
+      - "Code completion and AI assistance usage metrics"
+    
+    performance_benchmarks:
+      - "Coding performance measurement studies"
+      - "Development velocity improvement metrics"
+      - "Code quality improvement statistics"
+      - "Time-to-completion comparative analysis"
+    
+    survey_data:
+      - "Developer experience satisfaction surveys"
+      - "AI tool adoption and usage pattern studies"
+      - "Productivity impact measurement surveys"
+      - "User preference and behavior analysis"
+    
+    analytics_platforms:
+      - "GitHub activity and usage analytics"
+      - "Stack Overflow question and answer trends"
+      - "Development tool usage statistics"
+      - "Code repository analysis metrics"
+
+  prohibited_channels:
+    academic_sources:
+      - "Peer-reviewed research publications"
+      - "Academic conference proceedings"
+      - "University research studies"
+      - "Theoretical research frameworks"
+    
+    industry_reports:
+      - "Consultant implementation case studies"
+      - "Company success story documentation"
+      - "Industry analyst qualitative reports"
+      - "Implementation best practice guides"
+    
+    expert_opinions:
+      - "Expert interview transcripts"
+      - "Thought leader commentary"
+      - "Professional opinion articles"
+      - "Industry expert predictions"
+    
+    innovation_tracking:
+      - "Patent filing analysis"
+      - "Startup funding and activity data"
+      - "Technology innovation assessments"
+      - "Emerging trend speculation"
+
+# Research Execution Protocol
+execution_protocol:
+  phase_1_data_identification:
+    search_strategy:
+      - "Systematic survey database exploration"
+      - "Public API data collection and analysis"
+      - "Statistical report comprehensive review"
+      - "Quantitative metric database mining"
+    
+    inclusion_criteria:
+      - "Quantitative data with statistical validity"
+      - "Measurable metrics related to AI coding assistance"
+      - "Sufficient sample size for statistical significance"
+      - "Temporal data for trend analysis capability"
+    
+    exclusion_criteria:
+      - "Qualitative or opinion-based data"
+      - "Anecdotal evidence without statistical backing"
+      - "Small sample size without significance"
+      - "Non-representative or biased sampling"
+
+  phase_2_statistical_analysis:
+    descriptive_statistics:
+      - "Central tendency and dispersion measures"
+      - "Distribution analysis and normality testing"
+      - "Frequency analysis and pattern identification"
+      - "Correlation coefficient calculation and significance"
+    
+    inferential_statistics:
+      - "Hypothesis testing and significance evaluation"
+      - "Confidence interval calculation and interpretation"
+      - "Effect size estimation and practical significance"
+      - "Statistical power analysis and adequacy assessment"
+    
+    trend_analysis:
+      - "Time series analysis and seasonal decomposition"
+      - "Regression analysis for trend quantification"
+      - "Change point detection and significance testing"
+      - "Forecasting model development and validation"
+
+  phase_3_pattern_identification:
+    usage_patterns:
+      - "Adoption rate analysis across different segments"
+      - "Feature utilization frequency and preferences"
+      - "User behavior clustering and segmentation"
+      - "Geographic and demographic usage variations"
+    
+    performance_patterns:
+      - "Productivity improvement quantification"
+      - "Code quality enhancement measurement"
+      - "Development speed increase analysis"
+      - "Error reduction and accuracy improvement"
+    
+    market_trends:
+      - "Market penetration rate analysis"
+      - "Growth trajectory modeling and prediction"
+      - "Competitive landscape quantitative assessment"
+      - "Technology adoption lifecycle positioning"
+
+  phase_4_insights_extraction:
+    statistical_insights:
+      - "Significant relationship identification"
+      - "Predictive model development and validation"
+      - "Anomaly detection and explanation"
+      - "Causal relationship hypothesis formation"
+    
+    practical_implications:
+      - "Quantified benefit calculation and projection"
+      - "Risk assessment based on statistical evidence"
+      - "Optimization opportunity identification"
+      - "Resource allocation recommendation derivation"
+
+# Quality Assurance Framework
+quality_assurance:
+  bias_mitigation:
+    sampling_bias:
+      - "Representative sample verification"
+      - "Population coverage adequacy assessment"
+      - "Selection bias identification and correction"
+      - "Non-response bias impact evaluation"
+    
+    measurement_bias:
+      - "Instrument validity and reliability testing"
+      - "Measurement error quantification"
+      - "Systematic bias detection and adjustment"
+      - "Calibration accuracy verification"
+    
+    temporal_bias:
+      - "Time period representativeness evaluation"
+      - "Seasonal effect identification and control"
+      - "Temporal confounding factor analysis"
+      - "Trend stability assessment"
+
+  constitutional_ai_compliance:
+    accuracy_verification:
+      - "Data source credibility validation"
+      - "Statistical calculation accuracy checking"
+      - "Methodology appropriateness assessment"
+      - "Result interpretation accuracy verification"
+    
+    limitation_acknowledgment:
+      - "Statistical assumption violation documentation"
+      - "Confidence interval interpretation clarity"
+      - "Generalizability constraint identification"
+      - "Uncertainty quantification and communication"
+    
+    transparency_maintenance:
+      - "Complete methodology documentation"
+      - "Data source transparency"
+      - "Statistical assumption disclosure"
+      - "Analysis limitation explicit communication"
+
+# Evidence Documentation Framework
+documentation_structure:
+  source_attribution:
+    citation_format: "data_source_with_collection_methodology"
+    source_categorization: "survey_benchmark_analytics_statistics"
+    reliability_rating: "high_medium_low_with_statistical_justification"
+    sample_characteristics: "size_demographics_representativeness"
+  
+  findings_documentation:
+    finding_statement: "statistically_validated_with_confidence_intervals"
+    evidence_basis: "quantitative_data_synthesis"
+    confidence_level: "statistical_significance_based"
+    limitations: "statistical_assumption_boundary_conditions"
+  
+  statistical_validation:
+    significance_testing: "p_value_effect_size_confidence_interval"
+    effect_magnitude: "practical_significance_assessment"
+    reliability_measures: "consistency_stability_validation"
+    generalizability: "population_context_applicability"
+
+# Output Structure
+deliverables:
+  quantitative_analysis:
+    sections:
+      - "statistical_summary_key_metrics"
+      - "trend_analysis_temporal_patterns"
+      - "comparative_analysis_benchmarking"
+      - "predictive_modeling_forecasting"
+    
+    evidence_integration:
+      - "cross_dataset_consistency_validation"
+      - "contradictory_finding_statistical_reconciliation"
+      - "uncertainty_quantification_synthesis"
+      - "practical_significance_assessment"
+  
+  statistical_insights:
+    performance_metrics:
+      - "productivity_improvement_quantification"
+      - "accuracy_enhancement_measurement"
+      - "efficiency_gain_statistical_validation"
+      - "user_satisfaction_metric_analysis"
+    
+    trend_projections:
+      - "adoption_rate_forecasting"
+      - "market_penetration_modeling"
+      - "growth_trajectory_prediction"
+      - "technology_maturity_assessment"
+
+# Integration Points
+cross_validation_preparation:
+  finding_categorization: "statistical_evidence_based"
+  confidence_scoring: "significance_level_weighted"
+  limitation_documentation: "statistical_boundary_identification"
+  source_verification: "data_quality_validated"
+
+constitutional_ai_integration:
+  compliance_verification: "statistical_accuracy_validation"
+  bias_documentation: "systematic_bias_quantification"
+  uncertainty_communication: "statistical_uncertainty_disclosure"
+  numerical_precision: "quantitative_accuracy_verification"
