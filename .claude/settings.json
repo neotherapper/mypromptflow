@@ -13,5 +13,13 @@
     "enforceStructure": true,
     "requireAIInstructions": true,
     "checkDependencies": true
+  },
+  "hooks": {
+    "PostToolUse": {
+      "mcp__MCP_DOCKER__jira_search": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_get_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_create_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_update_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true"
+    }
   }
 }

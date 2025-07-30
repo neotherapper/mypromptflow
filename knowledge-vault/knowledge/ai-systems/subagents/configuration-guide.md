@@ -58,8 +58,7 @@ environment: production # Optional: Environment-specific usage
 ├── security-code-reviewer.md      # Team security standards and practices
 ├── performance-optimizer.md       # Project-specific performance criteria
 ├── api-integration-specialist.md  # External service integration patterns
-├── database-architect.md          # Data model and schema management
-└── deployment-coordinator.md      # CI/CD and production deployment
+└── database-architect.md          # Data model and schema management
 ```
 
 **User-Level Strategy:**

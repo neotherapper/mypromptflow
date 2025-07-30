@@ -58,4 +58,4 @@
 **For Quality Assessment**: Use framework validators in `knowledge/assessment/` for systematic evaluation
 **For Agent Coordination**: Reference `knowledge/orchestration/` for hierarchy patterns and communication protocols
 
-**Integration**: This framework integrates with the main system validation tools using focused validators (ai-instruction-validator, framework-compliance-validator, file-type-validator) for comprehensive instruction quality assurance.
+**Integration**: This framework integrates with the main system validation tools using focused validators (ai-instruction-validator, framework-compliance-validator) for comprehensive instruction quality assurance.

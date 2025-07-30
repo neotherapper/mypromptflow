@@ -751,7 +751,7 @@ main "$@"
         "JIRA_PROJECT_KEY": "${JIRA_PROJECT_KEY}"
       },
       "subagent_access": {
-        "allowed_subagents": ["project-manager", "task-coordinator", "quality-assurance-specialist"],
+        "allowed_subagents": ["project-manager", "quality-assurance-specialist"],
         "permission_level": "read_write",
         "rate_limits": {
           "requests_per_minute": 60,
@@ -804,7 +804,7 @@ main "$@"
         "ENTERPRISE_REGISTRY": "${ENTERPRISE_DOCKER_REGISTRY}"
       },
       "subagent_access": {
-        "allowed_subagents": ["deployment-coordinator", "infrastructure-manager", "performance-optimizer"],
+        "allowed_subagents": ["infrastructure-manager", "performance-optimizer"],
         "permission_level": "read_write",
         "security_context": "high",
         "rate_limits": {
@@ -2551,7 +2551,7 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
             stages: [
                 {
                     name: 'pre_deployment_validation',
-                    subagent: 'deployment-coordinator',
+                    subagent: 'infrastructure-manager',
                     parallel: false,
                     required: true,
                     timeout: 300000,
@@ -2569,7 +2569,7 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
                 },
                 {
                     name: 'application_deployment',
-                    subagent: 'deployment-coordinator',
+                    subagent: 'infrastructure-manager',
                     parallel: false,
                     required: true,
                     timeout: 900000,
@@ -2596,7 +2596,7 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
             rollback_strategy: {
                 enabled: true,
                 triggers: ['test_failure', 'health_check_failure'],
-                subagent: 'deployment-coordinator',
+                subagent: 'infrastructure-manager',
                 timeout: 300000
             }
         });
@@ -2871,17 +2871,6 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
                     performance_score: Math.floor(Math.random() * 20) + 80
                 };
                 
-            case 'deployment-coordinator':
-                return {
-                    ...baseResult,
-                    validation_results: 'passed',
-                    deployment_plan: {
-                        strategy: 'blue_green',
-                        estimated_duration: '15_minutes',
-                        rollback_plan: 'available'
-                    },
-                    deployment_status: 'successful'
-                };
                 
             default:
                 return {
