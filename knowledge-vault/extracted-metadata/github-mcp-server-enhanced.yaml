@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "12345678-abcd-4321-9876-github4mcp001"
 name: "GitHub MCP Server"
+tier: "Tier 1"
 
 # Rating System (Extracted from embedded tables)
 rating: 5  # Derived from composite score 9.40/10 = excellent

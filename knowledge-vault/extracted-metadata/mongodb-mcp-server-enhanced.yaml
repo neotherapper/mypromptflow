@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "lmn23456-opq7-8901-lmno-mongodb014"
 name: "MongoDB MCP Server"
+tier: "Tier 3"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 6.1/10 = excellent

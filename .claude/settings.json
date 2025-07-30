@@ -15,11 +15,17 @@
     "checkDependencies": true
   },
   "hooks": {
+    "PreToolUse": {
+      "mcp__MCP_DOCKER__jira_search": "bash meta/mcp-learning/scripts/mcp-parameter-validator.sh \"$CLAUDE_SESSION_ID\" \"$CLAUDE_TRANSCRIPT_PATH\" \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_INPUT\"",
+      "mcp__MCP_DOCKER__jira_get_issue": "bash meta/mcp-learning/scripts/mcp-parameter-validator.sh \"$CLAUDE_SESSION_ID\" \"$CLAUDE_TRANSCRIPT_PATH\" \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_INPUT\"",
+      "mcp__MCP_DOCKER__jira_create_issue": "bash meta/mcp-learning/scripts/mcp-parameter-validator.sh \"$CLAUDE_SESSION_ID\" \"$CLAUDE_TRANSCRIPT_PATH\" \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_INPUT\"",
+      "mcp__MCP_DOCKER__jira_update_issue": "bash meta/mcp-learning/scripts/mcp-parameter-validator.sh \"$CLAUDE_SESSION_ID\" \"$CLAUDE_TRANSCRIPT_PATH\" \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_INPUT\""
+    },
     "PostToolUse": {
-      "mcp__MCP_DOCKER__jira_search": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
-      "mcp__MCP_DOCKER__jira_get_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
-      "mcp__MCP_DOCKER__jira_create_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
-      "mcp__MCP_DOCKER__jira_update_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true"
+      "mcp__MCP_DOCKER__jira_search": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true; bash meta/mcp-learning/scripts/mcp-success-capturer.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_get_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true; bash meta/mcp-learning/scripts/mcp-success-capturer.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_create_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true; bash meta/mcp-learning/scripts/mcp-success-capturer.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true",
+      "mcp__MCP_DOCKER__jira_update_issue": "bash meta/mcp-learning/scripts/mcp-error-detector.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true; bash meta/mcp-learning/scripts/mcp-success-capturer.sh \"$CLAUDE_TOOL_NAME\" \"$CLAUDE_TOOL_OUTPUT\" 2>/dev/null || true"
     }
   }
 }

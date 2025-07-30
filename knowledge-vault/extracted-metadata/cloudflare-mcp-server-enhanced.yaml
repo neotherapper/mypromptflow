@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "stu90123-vwx4-5678-stuv-cloudflare021"
 name: "Cloudflare MCP Server"
+tier: "Tier 3"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 6.1/10 = excellent

@@ -5,6 +5,7 @@
 # Core Identification (Schema Compliance)
 id: "bcd89012-efg3-4567-bcde-redis-sentinel030"
 name: "Redis Sentinel MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 4  # Derived from composite score 5.8/10 = excellent

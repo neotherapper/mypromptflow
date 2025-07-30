@@ -6,11 +6,12 @@ metadata:
   registry_type: "tier_1_immediate_catalog"
   version: "2.0.0"
   created: "2025-07-21"
-  last_updated: "2025-07-22"
-  updated_by: "Docker Discovery Integration - Strategic Database Specialist"
+  last_updated: "2025-07-30"
+  updated_by: "AWS MCP Registry Integration - Strategic Database Specialist"
   purpose: "Production-ready servers for immediate implementation with high ROI"
-  total_servers: 79  # Updated from 45 to 79 (added 34 Docker Tier 1 servers)
-  docker_integration: 34  # New Docker servers added from comprehensive analysis
+  total_servers: 83  # Updated from 79 to 83 (added 4 AWS Labs Tier 1 servers)
+  docker_integration: 34  # Docker servers added from comprehensive analysis
+  aws_integration: 4  # New AWS Labs servers added from infrastructure analysis
   score_threshold: 8.0
   scoring_algorithm: "business-aligned-scoring-algorithm.yaml v2.0.0"
   quality_assurance: "Battle-tested servers with proven reliability and enterprise readiness"
@@ -327,6 +328,75 @@ enterprise_tier_1_servers:
       - "Advanced data visualization and dashboarding"
       - "Self-service analytics capabilities"
       - "Enterprise data governance"
+
+# =============================================================================
+# AWS LABS SERVERS (4 SERVERS) - OFFICIAL AWS INFRASTRUCTURE
+# =============================================================================
+
+aws_tier_1_servers:
+  aws_lambda:
+    name: "AWS Lambda MCP Server"
+    provider: "AWS Labs"
+    status: "official"
+    category: "cloud-serverless"
+    composite_score: 8.85
+    priority_rank: 5
+    information_retrieval_relevance: 9
+    setup_complexity: 8
+    key_value_proposition: "Serverless computing platform enabling AI-driven function execution"
+    aws_features:
+      - "Zero-code Lambda function exposure to AI systems"
+      - "Automatic function discovery and documentation generation"
+      - "Enterprise security with IAM integration"
+      - "Event-driven architecture with auto-scaling"
+    
+  aws_dynamodb:
+    name: "AWS DynamoDB MCP Server"
+    provider: "AWS Labs" 
+    status: "official"
+    category: "cloud-database"
+    composite_score: 8.75
+    priority_rank: 4
+    information_retrieval_relevance: 9
+    setup_complexity: 8
+    key_value_proposition: "Enterprise NoSQL database operations with single-digit millisecond performance"
+    aws_features:
+      - "Comprehensive DynamoDB operation coverage with 30+ tools"
+      - "Expert data modeling guidance integrated into development workflows"
+      - "Enterprise-grade backup and recovery with point-in-time recovery"
+      - "Advanced performance optimization through TTL and index management"
+    
+  aws_eks:
+    name: "AWS EKS MCP Server"
+    provider: "AWS Labs"
+    status: "official"
+    category: "cloud-container"
+    composite_score: 8.65
+    priority_rank: 8
+    information_retrieval_relevance: 9
+    setup_complexity: 7
+    key_value_proposition: "Managed Kubernetes service with simplified operations and AWS integration"
+    aws_features:
+      - "Automated cluster provisioning and lifecycle management"
+      - "Multi-AZ deployment with high availability configuration"
+      - "Container orchestration intelligence with pod and service management"
+      - "DevOps CI/CD integration with GitOps workflows"
+    
+  aws_cdk:
+    name: "AWS CDK MCP Server"
+    provider: "AWS Labs"
+    status: "official"
+    category: "cloud-infrastructure"
+    composite_score: 8.95
+    priority_rank: 3
+    information_retrieval_relevance: 9
+    setup_complexity: 8
+    key_value_proposition: "Infrastructure as Code platform with security validation and pattern libraries"
+    aws_features:
+      - "Prescriptive CDK guidance with AWS Well-Architected principles"
+      - "CDK Nag integration with real-time security rule validation"
+      - "AWS Solutions Constructs discovery and GenAI construct specialization"
+      - "Multi-language support with TypeScript, Python, Java, C#, Go"
 
 # =============================================================================
 # HIGH-VALUE COMMUNITY SERVERS (8+ SERVERS) - PROVEN SOLUTIONS
@@ -846,11 +916,11 @@ category_breakdown:
 
 quality_metrics:
   # Updated Aggregate Metrics
-  total_servers: 79           # Increased from 45 servers
+  total_servers: 83           # Increased from 79 servers (added 4 AWS Labs servers)
   average_composite_score: 8.47  # Improved from 8.31 (Docker servers high quality)
   highest_score: 9.6          # Aiven (Docker) - slightly below Anthropic 9.65
   lowest_score: 8.0           # Maintains Tier 1 threshold
-  docker_integration_impact: 75.9%  # 34/79 servers are Docker discoveries
+  docker_integration_impact: 72.3%  # 34/83 servers are Docker discoveries (60 total non-Docker)
   
   # Business Alignment Metrics (New)
   business_domain_relevance_distribution:
@@ -882,9 +952,9 @@ quality_metrics:
   # Registry Transformation Metrics
   registry_transformation:
     information_to_development_shift: true
-    development_servers_percentage: 70.9%  # 56/79 servers primarily development-focused
-    maritime_insurance_relevance: 60.8%    # 48/79 servers have maritime applications
-    enterprise_grade_percentage: 87.3%     # 69/79 servers enterprise-ready
+    development_servers_percentage: 72.3%  # 60/83 servers primarily development-focused (includes AWS infrastructure)
+    maritime_insurance_relevance: 59.0%    # 49/83 servers have maritime applications (AWS adds infrastructure relevance)
+    enterprise_grade_percentage: 88.0%     # 73/83 servers enterprise-ready (AWS adds 4 enterprise-grade servers)
     production_deployment_ready: 100%      # All Tier 1 servers production-ready
 
 # =============================================================================

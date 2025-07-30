@@ -27,45 +27,6 @@ tags:
 mcp_profile_reference: "@mcp_profile/apache-nifi-mcp"
 ---
 
----
-title: "Apache NiFi MCP Server"
-server_name: "apache-nifi-server"
-version: "1.6.0"
-category: "data-pipeline-management"
-tier: 3
-maintainer: "apache-nifi-community"
-last_updated: "2024-12-14"
-status: "production-ready"
-
-# Registry Information MCP Server
-registry_entry: "apache-nifi"
-repository_url: "https://github.com/apache/nifi-mcp-server"
-documentation_url: "https://nifi.apache.org/docs/"
-license: "Apache-2.0"
-language: "java"
-
-# Strategic Classification
-primary_purpose: "data_flow_automation"
-use_cases: ["etl_automation", "real_time_processing", "data_integration", "workflow_orchestration"]
-enterprise_readiness: "high"
-production_status: "stable"
-
-# Quality Metrics
-github_stars: 342
-last_commit: "2024-12-11"
-test_coverage: "87%"
-documentation_quality: "excellent"
-community_activity: "active"
-
-# Scoring Details
-relevance_score: 5.4
-strategic_value: 6.8
-implementation_complexity: 7.4
-market_demand: 6.2
-community_support: 6.0
-technical_maturity: 7.3
----
-
 ## Executive Summary
 
 The Apache NiFi MCP Server provides comprehensive integration between AI systems and Apache NiFi, the powerful data flow automation platform. This integration enables AI agents to perform advanced data pipeline management, real-time processing orchestration, and intelligent workflow optimization across enterprise data ecosystems.

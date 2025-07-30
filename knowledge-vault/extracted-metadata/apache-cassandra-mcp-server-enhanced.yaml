@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "fgh67890-ijk1-2345-fghi-cassandra008"
 name: "Apache Cassandra MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.8/10 = excellent

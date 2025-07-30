@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "tuv01234-wxy5-6789-tuvw-influxdb022"
 name: "InfluxDB MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.6/10 = excellent

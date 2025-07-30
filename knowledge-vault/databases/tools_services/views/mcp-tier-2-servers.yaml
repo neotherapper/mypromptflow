@@ -1,0 +1,320 @@
+# MCP Tier 2 Servers View
+# Standard business integration servers with solid value proposition
+# Proven capabilities for business workflow enhancement
+
+view_info:
+  name: "MCP Tier 2 Servers"
+  description: "Standard business integration MCP servers with solid value proposition for workflow enhancement"
+  database: "tools_services"
+  version: "1.0.0"
+  created: "2025-07-30"
+  purpose: "Enable systematic integration of business-valuable MCP servers with proven capabilities"
+
+# View Configuration
+view_config:
+  primary_grouping: "business_category"
+  secondary_sort: "composite_score_desc"
+  include_inactive: false
+  max_results: 75
+
+# Tier 2 Criteria and Categories
+tier_2_criteria:
+  composite_score_range: "6.0-7.9"
+  business_alignment: "valuable"
+  production_readiness: ">=75%"
+  installation_priority: [2, 3, 4]
+  implementation_complexity: "moderate"
+  
+business_categories:
+  ai_platforms:
+    description: "AI and machine learning service integrations"
+    priority_areas:
+      - "Content generation and creative AI"
+      - "Language model integration"
+      - "Image and media generation"
+      - "AI-powered analysis and insights"
+    examples: ["OpenAI MCP Server", "Anthropic Claude API", "AI Content Generation Tools"]
+    
+  business_intelligence:
+    description: "Data analytics and business intelligence platforms"
+    priority_areas:
+      - "Data visualization and reporting"
+      - "Business metrics and KPI tracking"
+      - "Advanced analytics and insights"
+      - "Real-time data processing"
+    examples: ["Analytics Platforms", "BI Tools", "Data Processing Services"]
+    
+  productivity_platforms:
+    description: "Business productivity and workflow automation"
+    priority_areas:
+      - "Document management and collaboration"
+      - "Workflow automation and optimization"
+      - "Project management integration"
+      - "Communication platform enhancement"
+    examples: ["Google Workspace", "Microsoft 365", "Productivity Automation Tools"]
+    
+  specialized_services:
+    description: "Domain-specific business service integrations"
+    priority_areas:
+      - "Industry-specific platforms"
+      - "Specialized data sources"
+      - "Niche workflow automation"
+      - "Domain expertise integration"
+    examples: ["Industry Platforms", "Specialized APIs", "Domain Services"]
+
+# Filter Configurations for Business Integration
+filter_presets:
+  high_business_value:
+    description: "Servers with high business value but moderate complexity"
+    filters:
+      - "tier: Tier 2"
+      - "business_value: >=7"
+      - "implementation_complexity: moderate"
+      - "roi_potential: high"
+    
+  ai_integration_ready:
+    description: "AI platforms ready for business integration"
+    filters:
+      - "tier: Tier 2"
+      - "category: ai_platforms"
+      - "api_stability: high"
+      - "documentation_quality: good OR excellent"
+    
+  workflow_enhancement:
+    description: "Servers that enhance existing business workflows"
+    filters:
+      - "tier: Tier 2"
+      - "workflow_integration: medium OR high"
+      - "business_process_alignment: >=6"
+      - "user_adoption_potential: medium OR high"
+    
+  analytics_and_insights:
+    description: "Business intelligence and analytics capabilities"
+    filters:
+      - "tier: Tier 2"
+      - "category: business_intelligence"
+      - "data_processing_capability: advanced"
+      - "reporting_features: comprehensive"
+      
+  moderate_complexity_deployment:
+    description: "Servers suitable for moderate complexity deployments"
+    filters:
+      - "tier: Tier 2"
+      - "setup_complexity: <=6"
+      - "maintenance_burden: low OR medium"
+      - "documentation_completeness: >=7"
+
+# Implementation Strategy
+implementation_strategy:
+  phase_1_ai_integration:
+    description: "Phase 1: AI platform integration for content and analysis"
+    timeline: "Week 1-3"
+    servers:
+      - "OpenAI MCP Server"
+      - "AI Content Generation Tools"
+      - "Language Model Integrations"
+    success_criteria:
+      - "AI content generation operational"
+      - "Language model integration functional"
+      - "Content workflow automation active"
+      
+  phase_2_business_intelligence:
+    description: "Phase 2: Business intelligence and analytics integration"
+    timeline: "Week 4-6"
+    servers:
+      - "Analytics Platforms"
+      - "BI Integration Tools"
+      - "Data Processing Services"
+    success_criteria:
+      - "Business metrics dashboard functional"
+      - "Automated reporting operational"
+      - "Data analysis workflows active"
+      
+  phase_3_productivity_enhancement:
+    description: "Phase 3: Productivity and workflow optimization"
+    timeline: "Week 7-9"
+    servers:
+      - "Productivity Platform Integrations"
+      - "Workflow Automation Tools"
+      - "Communication Enhancements"
+    success_criteria:
+      - "Workflow automation operational"
+      - "Productivity metrics improved"
+      - "Team collaboration enhanced"
+      
+  phase_4_specialized_services:
+    description: "Phase 4: Domain-specific and specialized integrations"
+    timeline: "Week 10-12"
+    servers:
+      - "Industry-Specific Platforms"
+      - "Specialized Data Sources"
+      - "Domain Expert Systems"
+    success_criteria:
+      - "Domain expertise accessible"
+      - "Specialized workflows operational"
+      - "Industry compliance maintained"
+
+# Quality Metrics and Monitoring
+quality_metrics:
+  tier_2_requirements:
+    min_composite_score: 6.0
+    min_business_alignment: 6.5
+    min_production_readiness: 75
+    max_setup_complexity: 7
+    min_reliability_score: 7.0
+    
+  monitoring_kpis:
+    - "Deployment success rate >=85%"
+    - "Time to production <=4 weeks"
+    - "Business value realization >=70%"
+    - "User adoption rate >=60%"
+    - "System uptime >=99.0%"
+
+# Business Value Assessment
+business_value_factors:
+  content_generation:
+    weight: 0.25
+    description: "AI-powered content creation and enhancement"
+    measurement: "Content output quality and efficiency"
+    
+  workflow_automation:
+    weight: 0.20
+    description: "Business process automation and optimization"
+    measurement: "Process efficiency improvement percentage"
+    
+  data_insights:
+    weight: 0.20
+    description: "Business intelligence and analytical insights"
+    measurement: "Decision-making improvement metrics"
+    
+  productivity_enhancement:
+    weight: 0.15
+    description: "Team productivity and collaboration improvement"
+    measurement: "Productivity metrics and user satisfaction"
+    
+  integration_value:
+    weight: 0.10
+    description: "Integration with existing business systems"
+    measurement: "Integration completeness and reliability"
+    
+  cost_effectiveness:
+    weight: 0.10
+    description: "Cost-benefit ratio and ROI"
+    measurement: "Financial impact and resource efficiency"
+
+# Usage Patterns for AI Agents
+usage_patterns:
+  business_value_deployment:
+    description: "Deploy servers based on business value alignment"
+    query_format: "tier:Tier_2 ORDER BY business_value DESC, implementation_effort ASC"
+    example: "Get Tier 2 servers prioritized by business value"
+    
+  category_focused_integration:
+    description: "Integrate servers by business category"
+    query_format: "tier:Tier_2 AND category:{business_category}"
+    example: "tier:Tier_2 AND category:ai_platforms"
+    
+  complexity_managed_deployment:
+    description: "Deploy based on complexity management capabilities"
+    query_format: "tier:Tier_2 AND setup_complexity:<=6 ORDER BY business_value DESC"
+    example: "Tier 2 servers with manageable complexity and high value"
+    
+  workflow_optimization:
+    description: "Identify servers for specific workflow enhancements"
+    query_format: "tier:Tier_2 AND workflow_integration:high"
+    example: "Find Tier 2 servers with high workflow integration potential"
+
+# AI Agent Integration Instructions
+ai_agent_instructions:
+  view_access:
+    - "Use Read tool with path: knowledge-vault/databases/tools_services/views/mcp-tier-2-servers.yaml"
+    - "Reference tier_2_criteria for understanding qualification standards"
+    - "Apply filter_presets based on specific business integration needs"
+    
+  integration_planning:
+    - "Follow implementation_strategy phases for systematic business integration"
+    - "Use business_value_deployment pattern for ROI optimization"
+    - "Monitor quality_metrics throughout integration process"
+    - "Assess business_value_factors for each server consideration"
+    
+  deployment_workflow:
+    - "Query view to identify category-specific servers"
+    - "Review detailed profiles in tools_services/items/ for technical specifications"
+    - "Validate business alignment and integration requirements"
+    - "Execute phased integration following implementation_strategy"
+
+# Cross-Reference Integration
+cross_references:
+  related_views:
+    - "mcp-tier-1-servers.yaml: Higher priority servers for foundational capabilities"
+    - "mcp-tier-3-servers.yaml: Specialized workflow servers for extended capabilities"
+    - "information-sources-by-type.yaml: Information access capability mapping"
+    
+  business_integration_guides:
+    - "AI platform integration best practices"
+    - "Business intelligence deployment strategies"
+    - "Productivity platform optimization techniques"
+    - "ROI measurement and value realization"
+
+# Example Queries for Common Use Cases
+example_queries:
+  ai_content_generation:
+    tier: "Tier 2"
+    category: "ai_platforms"
+    capabilities: ["content_generation", "language_models", "creative_ai"]
+    expected_results: ["OpenAI MCP Server", "AI Content Tools", "Language Model Integrations"]
+    
+  business_analytics:
+    tier: "Tier 2"
+    category: "business_intelligence"
+    capabilities: ["data_analysis", "reporting", "visualization", "metrics"]
+    expected_results: ["Analytics Platforms", "BI Tools", "Data Processing Services"]
+    
+  productivity_automation:
+    tier: "Tier 2"
+    category: "productivity_platforms"
+    capabilities: ["workflow_automation", "collaboration", "document_management"]
+    expected_results: ["Productivity Tools", "Workflow Automation", "Collaboration Platforms"]
+    
+  moderate_complexity_integration:
+    tier: "Tier 2"
+    filter_preset: "moderate_complexity_deployment"
+    sort_criteria: ["business_value DESC", "setup_complexity ASC"]
+    expected_results: "Tier 2 servers optimized for business value with manageable complexity"
+
+# Success Metrics and KPIs
+success_metrics:
+  deployment_success:
+    target: ">=85%"
+    measurement: "Percentage of successful server deployments"
+    timeline: "Within 4 weeks of initiation"
+    
+  business_value_realization:
+    target: ">=70%"
+    measurement: "Percentage of expected business value achieved"
+    timeline: "Within 8 weeks of deployment"
+    
+  user_adoption:
+    target: ">=60%"
+    measurement: "Percentage of target users actively using integrated servers"
+    timeline: "Within 6 weeks of deployment"
+    
+  system_reliability:
+    target: ">=99.0%"
+    measurement: "System uptime and availability"
+    timeline: "Continuous monitoring"
+
+# Maintenance and Updates
+maintenance:
+  update_frequency: "bi-weekly"
+  review_criteria:
+    - "Server performance and business value validation"
+    - "Changes to composite scores affecting tier classification"
+    - "Updates to business category classifications"
+    - "Integration success metrics and lessons learned"
+    
+  quality_assurance:
+    - "Validation of tier_2_criteria compliance"
+    - "Business value assessment accuracy"
+    - "Integration complexity evaluation"
+    - "ROI measurement and optimization opportunities"

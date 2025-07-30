@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "efg56789-hij0-1234-efgh-nifi007"
 name: "Apache Nifi MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.5/10 = good

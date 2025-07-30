@@ -685,6 +685,61 @@ sync_workflow:
 - **Documentation**: Log all significant operations for audit and troubleshooting
 - **User Experience**: Provide clear feedback on operation status and results
 
+## 🔍 MCP Server Discovery and Expansion
+
+### Integration with Meta MCP System
+
+**Discovery Intelligence**: For MCP server ecosystem intelligence and expansion workflows, AI agents should reference the meta MCP system:
+
+#### MCP System Discovery Workflow
+```yaml
+# When asked to "expand knowledge-vault with MCP servers"
+discovery_workflow:
+  step_1_ecosystem_assessment:
+    - "Read @meta/mcp-system/intelligence/ecosystem-registry.yaml"
+    - "Review @meta/mcp-system/intelligence/source-tracking.yaml"
+    - "Understand completion percentages and gaps"
+    
+  step_2_systematic_expansion:
+    - "Follow @meta/mcp-system/AI-AGENT-DISCOVERY-WORKFLOW.md"
+    - "Use @meta/mcp-system/discovery/profile-generators.yaml"
+    - "Apply @meta/mcp-system/blueprints/mcp-server-profile-blueprint.yaml"
+    
+  step_3_knowledge_vault_integration:
+    - "Create profiles in databases/tools_services/items/"
+    - "Maintain schema compliance and relationship integrity"
+    - "Update meta system progress tracking"
+```
+
+#### Source Tracking Intelligence
+AI agents can access comprehensive MCP ecosystem tracking:
+- **Total Servers Discovered**: 2200+ across 6 major sources
+- **Completion Status**: 29.2% overall (175 profiles created)
+- **Priority Gaps**: awesome-mcp-servers (37.5% complete), docker_hub_mcp (27.1% complete)
+- **Next Actions**: Systematic processing of high-quality community-curated servers
+
+#### Discovery Integration Points
+- **Ecosystem Registry**: `@meta/mcp-system/intelligence/ecosystem-registry.yaml`
+- **Source Progress**: `@meta/mcp-system/intelligence/source-tracking.yaml`
+- **AI Workflow Guide**: `@meta/mcp-system/AI-AGENT-DISCOVERY-WORKFLOW.md`
+- **Profile Templates**: `@meta/mcp-system/blueprints/`
+- **Implementation Guides**: `@meta/mcp-system/implementation/`
+
+### MCP Server Profile Creation Standards
+
+**Blueprint Template**: Use `@meta/mcp-system/blueprints/mcp-server-profile-blueprint.yaml` for all new MCP server profiles
+
+**Quality Requirements**:
+- **Industry Neutrality**: Remove all domain-specific references (maritime, insurance, etc.)
+- **Docker-First Setup**: Prioritize container deployment methods
+- **Business Value Focus**: Include comprehensive ROI and value proposition analysis
+- **Schema Compliance**: Ensure 100% adherence to tools-services-schema.yaml
+
+**Tier-Based Profile Depth**:
+- **Tier 1 (Score ≥8.0)**: Comprehensive enterprise-grade profiles (2500+ words)
+- **Tier 2 (Score 6.0-7.9)**: Standard business integration profiles (1500+ words)
+- **Tier 3 (Score 4.0-5.9)**: Basic functional profiles (800+ words)
+
 ## 🔧 Troubleshooting for AI Agents
 
 ### Common Issues and Solutions

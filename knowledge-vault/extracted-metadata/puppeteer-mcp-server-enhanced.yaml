@@ -5,6 +5,7 @@
 # Core Identification (Schema Compliance)
 id: "zab67890-cde1-2345-zabc-puppeteer028"
 name: "Puppeteer MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 4  # Derived from composite score 5.7/10 = excellent

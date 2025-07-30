@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "jkl01234-mno5-6789-jklm-circleci012"
 name: "CircleCI MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.9/10 = excellent

@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "ijk90123-lmn4-5678-ijkl-stripe011"
 name: "Stripe MCP Server"
+tier: "Tier 3"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 6.8/10 = excellent

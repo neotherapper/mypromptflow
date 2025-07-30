@@ -7976,6 +7976,84 @@ additional_enterprise_mcp_servers:
     compliance: ["SOC 2", "HIPAA", "PCI DSS", "FedRAMP"]
     last_updated: "2024"
 
+  aws_eks:
+    name: "AWS EKS Kubernetes Container Orchestration"
+    provider: "Amazon Web Services"
+    status: "official"
+    category: "cloud-container"
+    repository: "https://github.com/awslabs/eks-mcp-server"
+    description: "Managed Kubernetes service with auto-scaling, high availability, and AWS ecosystem integration"
+    setup_complexity: 7  # Complex - Kubernetes and AWS configuration
+    maintenance_status: 9  # Official AWS support
+    documentation_quality: 9  # Comprehensive AWS documentation
+    community_adoption: 8  # Growing enterprise container adoption
+    integration_potential: 9  # Deep AWS ecosystem integration
+    information_retrieval_relevance: 9  # HIGH - Critical container orchestration intelligence
+    composite_score: 8.65  # (9*0.25 + 7*0.20 + 9*0.20 + 9*0.15 + 8*0.10 + 9*0.10)
+    tier: "tier_1_immediate"
+    business_applications:
+      - "Enterprise container orchestration and microservices deployment"
+      - "DevOps automation with scalable container management"
+      - "Multi-environment application deployment and management"
+      - "High-availability containerized application architectures"
+      - "Cloud-native development with Kubernetes best practices"
+    dependencies: ["AWS account", "Kubernetes knowledge", "VPC configuration"]
+    pricing_model: "$0.10/hour per cluster + EC2 node costs"
+    compliance: ["SOC 2", "HIPAA", "PCI DSS", "FedRAMP"]
+    last_updated: "2024"
+
+  aws_dynamodb:
+    name: "AWS DynamoDB NoSQL Database"
+    provider: "Amazon Web Services"
+    status: "official"
+    category: "cloud-database"
+    repository: "https://github.com/awslabs/mcp-dynamodb-server"
+    description: "Serverless NoSQL database with auto-scaling, backup recovery, and single-digit millisecond performance"
+    setup_complexity: 8  # Moderate - DynamoDB design patterns and AWS setup
+    maintenance_status: 9  # Official AWS support
+    documentation_quality: 9  # Comprehensive AWS documentation
+    community_adoption: 8  # Strong adoption in serverless architectures
+    integration_potential: 10  # Native AWS integration with complete feature coverage
+    information_retrieval_relevance: 9  # HIGH - Critical NoSQL database operations
+    composite_score: 8.75  # (9*0.25 + 8*0.20 + 9*0.20 + 9*0.15 + 8*0.10 + 10*0.10)
+    tier: "tier_1_immediate"
+    business_applications:
+      - "High-performance web and mobile application data storage"
+      - "Real-time analytics and IoT data processing"
+      - "E-commerce and inventory management systems"
+      - "Gaming and social media application backends"
+      - "Enterprise data warehousing with NoSQL flexibility"
+    dependencies: ["AWS account", "IAM permissions", "DynamoDB design knowledge"]
+    pricing_model: "On-demand: $1.25 per million writes, $0.25 per million reads"
+    compliance: ["SOC 2", "HIPAA", "PCI DSS", "GDPR", "FedRAMP"]
+    last_updated: "2024"
+
+  aws_cdk:
+    name: "AWS CDK Infrastructure as Code"
+    provider: "Amazon Web Services"
+    status: "official"
+    category: "cloud-infrastructure"
+    repository: "https://github.com/awslabs/mcp-cdk-server"
+    description: "Infrastructure as Code platform with security validation, pattern libraries, and multi-language support"
+    setup_complexity: 8  # Moderate - CDK concepts and multi-language setup
+    maintenance_status: 9  # Official AWS support
+    documentation_quality: 10  # Exceptional documentation with comprehensive examples
+    community_adoption: 9  # Strong enterprise adoption for infrastructure
+    integration_potential: 10  # Native AWS integration with multi-language support
+    information_retrieval_relevance: 9  # HIGH - Critical infrastructure development guidance
+    composite_score: 8.95  # (9*0.25 + 8*0.20 + 9*0.20 + 10*0.15 + 9*0.10 + 10*0.10)
+    tier: "tier_1_immediate"
+    business_applications:
+      - "Enterprise AWS infrastructure development and deployment"
+      - "Security-first infrastructure with automated compliance validation"
+      - "Multi-environment infrastructure standardization and governance"
+      - "DevOps automation with Infrastructure as Code best practices"
+      - "AI/ML infrastructure deployment with specialized constructs"
+    dependencies: ["AWS account", "CDK CLI", "Node.js", "Programming language SDKs"]
+    pricing_model: "Free (open source) + standard AWS service costs"
+    compliance: ["SOC 2", "HIPAA", "PCI DSS", "GDPR", "FedRAMP"]
+    last_updated: "2024"
+
   azure_functions:
     name: "Azure Functions Serverless Platform"
     provider: "Microsoft Azure"

@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "abcd1234-ef56-7890-abcd-postgres003"
 name: "PostgreSQL MCP Server"
+tier: "Tier 1"
 
 # Rating System (Extracted from embedded tables)
 rating: 5  # Derived from composite score 9.00/10 = excellent

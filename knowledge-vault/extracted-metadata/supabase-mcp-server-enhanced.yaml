@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "pqr67890-stu1-2345-pqrs-supabase018"
 name: "Supabase MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.9/10 = excellent

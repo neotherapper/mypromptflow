@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "cde34567-fgh8-9012-cdef-kafka005"
 name: "Apache Kafka MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 5.3/10 = good

@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "yza56789-bcd0-1234-yzab-consul027"
 name: "HashiCorp Consul MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 4  # Derived from composite score 5.0/10 = excellent

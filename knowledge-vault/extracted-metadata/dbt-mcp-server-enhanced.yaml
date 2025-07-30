@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "vwx23456-yza7-8901-vwxy-dbt024"
 name: "dbt MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.2/10 = excellent

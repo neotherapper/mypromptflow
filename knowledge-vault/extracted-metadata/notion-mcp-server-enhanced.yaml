@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "efgh5678-ijkl-9012-mnop-notion00004"
 name: "Notion Productivity MCP Server"
+tier: "Tier 1"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 8.15/10 = excellent

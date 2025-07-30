@@ -5,6 +5,7 @@
 # Core Identification (Schema Compliance)
 id: "cde90123-fgh4-5678-cdef-snowflake031"
 name: "Snowflake MCP Server"
+tier: "Tier 3"
 
 # Rating System
 rating: 4  # Derived from composite score 6.3/10 = excellent

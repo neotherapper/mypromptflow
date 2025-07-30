@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "opq56789-rst0-1234-opqr-prometheus017"
 name: "Prometheus MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.4/10 = excellent

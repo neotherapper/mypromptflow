@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "mno34567-pqr8-9012-mnop-figma015"
 name: "Figma MCP Server"
+tier: "Tier 3"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 6.4/10 = excellent

@@ -23,45 +23,6 @@ tags:
 mcp_profile_reference: "@mcp_profile/vmware-vsphere-mcp"
 ---
 
----
-title: "VMware vSphere MCP Server"
-server_name: "vmware-vsphere-server"
-version: "2.1.0"
-category: "infrastructure-management"
-tier: 3
-maintainer: "vmware-community"
-last_updated: "2024-12-08"
-status: "production-ready"
-
-# Registry Information MCP Server
-registry_entry: "vmware-vsphere"
-repository_url: "https://github.com/vmware/vsphere-mcp-server"
-documentation_url: "https://docs.vmware.com/mcp-integration"
-license: "Apache-2.0"
-language: "go"
-
-# Strategic Classification
-primary_purpose: "virtualization_management"
-use_cases: ["infrastructure_automation", "capacity_planning", "disaster_recovery", "cost_optimization"]
-enterprise_readiness: "high"
-production_status: "stable"
-
-# Quality Metrics
-github_stars: 567
-last_commit: "2024-12-05"
-test_coverage: "89%"
-documentation_quality: "good"
-community_activity: "active"
-
-# Scoring Details
-relevance_score: 5.9
-strategic_value: 7.5
-implementation_complexity: 6.8
-market_demand: 7.0
-community_support: 6.5
-technical_maturity: 7.8
----
-
 ## Executive Summary
 
 The VMware vSphere MCP Server provides comprehensive integration between AI systems and VMware's industry-leading virtualization platform. This integration enables AI agents to perform advanced infrastructure management, capacity planning, and operational automation tasks directly within vSphere environments.

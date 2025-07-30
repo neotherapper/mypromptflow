@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "hij89012-klm3-4567-hijk-firebase010"
 name: "Firebase MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.6/10 = good

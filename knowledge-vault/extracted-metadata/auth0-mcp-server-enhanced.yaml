@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "rst89012-uvw3-4567-rstu-auth0020"
 name: "Auth0 MCP Server"
+tier: "Tier 3"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 6.7/10 = excellent

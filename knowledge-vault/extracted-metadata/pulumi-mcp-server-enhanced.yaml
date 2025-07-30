@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "wxy34567-zab8-9012-wxyz-pulumi025"
 name: "Pulumi MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.1/10 = excellent

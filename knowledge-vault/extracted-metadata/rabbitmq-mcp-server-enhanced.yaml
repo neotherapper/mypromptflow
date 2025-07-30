@@ -5,6 +5,7 @@
 # Core Identification (Schema Compliance)
 id: "abc78901-def2-3456-abcd-rabbitmq029"
 name: "RabbitMQ MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 4  # Derived from composite score 5.5/10 = excellent

@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "bcd23456-efg7-8901-bcde-beam004"
 name: "Apache Beam MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.8/10 = good

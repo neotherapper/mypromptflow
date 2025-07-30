@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "nop45678-qrs9-0123-nopq-grafana016"
 name: "Grafana MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.7/10 = excellent

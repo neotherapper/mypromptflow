@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "klm12345-nop6-7890-klmn-jenkins013"
 name: "Jenkins MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.9/10 = good

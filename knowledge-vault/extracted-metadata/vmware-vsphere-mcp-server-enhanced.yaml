@@ -5,6 +5,7 @@
 # Core Identification (Schema Compliance)
 id: "def01234-ghi5-6789-defg-vmware-vsphere032"
 name: "VMware vSphere MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 3  # Derived from composite score 4.7/10 = good

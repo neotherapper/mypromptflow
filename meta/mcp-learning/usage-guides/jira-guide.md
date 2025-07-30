@@ -303,3 +303,36 @@ Based on common JIRA API issues:
 ---
 
 *This guide focuses specifically on JIRA operations and will be enhanced based on real usage patterns and error analysis*
+## Auto-Generated Insights
+
+### Error Pattern Analysis (Updated 2025-07-30)
+
+**Common Issues Detected:**
+- **Total Errors Logged:** 2
+- **Authentication Errors:** 1
+- **Parameter Errors:** 1
+- **Tool Errors:** 2
+
+**Auto-Generated Recommendations:**
+- [ ] Review error patterns in `/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/error-logs/jira-errors.md`
+- [ ] Focus on preventing most common error type
+- [ ] Update pre-flight checklist based on error analysis
+- [ ] Consider additional parameter validation
+
+**Last Analysis:** 2025-07-30 11:18
+
+## Validated Working Patterns (Auto-Generated)
+
+### Success Statistics (Updated 2025-07-30)
+- **Total Successful Operations:** 2
+- **Success Rate:** High (operations completing without errors)
+- **Pattern Confidence:** Based on actual successful operations
+
+### Confirmed Working Approaches
+*These patterns have been validated through successful operations:*
+
+- **Issue Key Formats:** Validated through successful retrievals
+
+**Success Pattern Details:** See `/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/success-patterns/jira-success-patterns.md` for complete successful operation logs
+**Reliability:** These patterns represent actual working operations
+**Last Validation:** 2025-07-30 11:18

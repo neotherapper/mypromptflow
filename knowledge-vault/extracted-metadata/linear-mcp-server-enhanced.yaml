@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "qrst9012-uvwx-3456-yzab-linear000005"
 name: "Linear MCP Server"
+tier: "Tier 1"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 8.35/10 = excellent

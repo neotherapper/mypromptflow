@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "abc12345-def6-7890-abcd-airflow003"
 name: "Apache Airflow MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.1/10 = good

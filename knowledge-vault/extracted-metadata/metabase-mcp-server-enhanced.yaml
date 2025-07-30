@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "xyz45678-abc9-0123-xyza-metabase026"
 name: "Metabase MCP Server"
+tier: "Tier 4"
 
 # Rating System
 rating: 4  # Derived from composite score 5.3/10 = excellent

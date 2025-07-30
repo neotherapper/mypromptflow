@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "87654321-dcba-4321-6789-docker00mcp02"
 name: "Docker MCP Server"
+tier: "Tier 1"
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 8.70/10 = excellent

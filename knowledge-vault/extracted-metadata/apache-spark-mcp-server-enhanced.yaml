@@ -6,6 +6,7 @@
 # Core Identification (Schema Compliance)
 id: "def45678-ghi9-0123-defg-spark006"
 name: "Apache Spark MCP Server"
+tier: "Tier 4"
 
 # Rating System (Extracted from embedded tables)
 rating: 3  # Derived from composite score 4.0/10 = good
