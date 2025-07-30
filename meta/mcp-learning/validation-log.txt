@@ -120,3 +120,5 @@
 [2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
 [2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
 [2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 18:31:25] Validating mcp__MCP_DOCKER__jira_search
+[2025-07-30 18:31:25] Applied parameter corrections for mcp__MCP_DOCKER__jira_search
