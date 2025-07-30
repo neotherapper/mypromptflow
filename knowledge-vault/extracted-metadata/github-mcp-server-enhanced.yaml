@@ -1,0 +1,182 @@
+# GitHub MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "12345678-abcd-4321-9876-github4mcp001"
+name: "GitHub MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 5  # Derived from composite score 9.40/10 = excellent
+maturity_level: "enterprise"  # Production ready 94%, enterprise features
+status: "adopted"  # Universally used development platform
+
+# Technology Classification
+technology_type: 
+  - "dev_tool"
+  - "version_control"
+  - "api_service"
+deployment_model: "cloud_hosted"
+integration_complexity: "moderate"  # Setup complexity 4/10
+
+# Vendor and Licensing
+vendor: "GitHub/Community"
+licensing_model: "freemium"  # GitHub Enterprise has paid tiers
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-1" 
+  - "developer-tools"
+  - "version-control"
+  - "github"
+  - "integration"
+  - "api-service"
+  - "software-development"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "web"
+  - "linux"
+  - "macos"
+  - "windows"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "repository_data"
+    - "issue_tracking"
+    - "pull_requests"
+    - "code_analysis"
+    - "ci_cd_metrics"
+    - "user_activity"
+    - "security_scanning"
+    - "project_management"
+  
+  access_methods:
+    - "real-time"  # Webhooks, live API
+    - "on-demand"  # REST/GraphQL queries
+    - "batch"      # Bulk operations
+    - "webhook"    # Event-driven updates
+  
+  authentication:
+    required: true
+    methods:
+      - "github_apps"
+      - "personal_access_tokens"
+      - "oauth"
+    security_level: "enterprise"
+    
+  rate_limits:
+    requests_per_hour: 5000  # GitHub API limits
+    burst_capacity: true
+    enterprise_limits: "higher"
+    
+  complexity_score: 4  # Setup complexity (4/10) - moderate
+  
+  typical_use_cases:
+    - "repository_management"
+    - "issue_lifecycle_automation" 
+    - "pull_request_workflows"
+    - "ci_cd_integration"
+    - "security_vulnerability_management"
+    - "project_coordination"
+    - "development_analytics"
+    - "release_management"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 9.40
+  tier: "Tier 1 Immediate"
+  priority_rank: 3
+  production_readiness: 94
+  
+  detailed_scoring:
+    community_adoption: 10
+    information_retrieval_relevance: 9
+    integration_potential: 10
+    production_readiness_score: 9
+    maintenance_status: 9
+    
+  production_readiness_breakdown:
+    stability_score: 99
+    performance_score: 92
+    security_score: 96
+    scalability_score: 95
+
+# Content and Documentation
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+description: "Official GitHub integration server for comprehensive repository management and development workflow automation. Essential development infrastructure server enabling GitHub API integration, issue tracking, pull request automation, and CI/CD orchestration through MCP."
+
+key_features: |
+  ## Repository Management
+  - Complete repository lifecycle management (create, clone, archive, delete)
+  - Branch and tag management with protection rules
+  - File and directory operations with commit tracking
+  
+  ## Issue & Project Management  
+  - Issue creation, assignment, and lifecycle management
+  - Label and milestone management with automation
+  - Project board integration with kanban workflows
+  
+  ## Pull Request Workflow
+  - Pull request creation with template enforcement
+  - Review request automation and approval workflows
+  - Merge strategies and auto-merge capabilities
+  
+  ## CI/CD Integration
+  - GitHub Actions workflow triggering and monitoring
+  - Workflow run status tracking and log retrieval
+  - Artifact management and download capabilities
+
+use_cases: |
+  1. **Development Workflow Automation**: Repository setup → Issue tracking → Pull request automation → CI/CD integration
+  2. **Release Management**: Version planning → Branch management → Release automation → Deployment tracking  
+  3. **Security and Compliance Management**: Vulnerability scanning → Issue creation → Remediation tracking → Audit reporting
+  4. **Project Management Integration**: Project planning → Task tracking → Progress monitoring → Reporting
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    development_automation: 50000  # $50K/year saved
+    issue_management: 25000       # $25K/year saved  
+    security_integration: 75000   # $75K/year risk reduction
+    compliance_reporting: 40000   # $40K/year saved
+    
+  roi_metrics:
+    payback_period_months: 2.1
+    net_roi_percentage: 467
+    implementation_cost: 50000
+    annual_operating_cost: 100000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-27"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "production_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/github-server"
+
+# Timestamps
+created_date: "2025-07-27T00:00:00Z"
+last_modified: "2025-07-27T00:00:00Z"
+last_evaluated: "2025-07-26"
+
+# Evaluation Notes
+evaluation_notes: |
+  GitHub MCP Server represents the gold standard for development workflow automation. 
+  Composite score of 9.40/10 indicates exceptional production readiness and business value.
+  
+  **Key Strengths:**
+  - Universal adoption in enterprise environments
+  - Comprehensive API coverage and automation capabilities  
+  - Enterprise-grade security and compliance features
+  - Strong ROI with 467% return and 2.1 month payback period
+  
+  **Implementation Priority:** Immediate - Essential infrastructure for GitHub-based workflows
+  
+  **Strategic Value:** Sustainable competitive advantage through enhanced developer productivity

@@ -30,6 +30,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS REST API
 - WebSocket
+mcp_profile_reference: "@mcp_profile/jenkins"
 ---
 
 **CI/CD pipeline automation and build management for comprehensive DevOps workflow orchestration**  

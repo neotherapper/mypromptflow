@@ -30,6 +30,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/REST
 - gRPC
+mcp_profile_reference: "@mcp_profile/influxdb"
 ---
 
 **Time series database and IoT data management platform for real-time metrics and observability**  

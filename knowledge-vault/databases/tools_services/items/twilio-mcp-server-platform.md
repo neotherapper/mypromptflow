@@ -31,6 +31,7 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSockets
+mcp_profile_reference: "@mcp_profile/twilio"
 ---
 
 **Cloud communications platform for voice, SMS, messaging, and customer engagement**  

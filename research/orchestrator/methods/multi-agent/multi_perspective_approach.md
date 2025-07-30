@@ -40,12 +40,27 @@ sub_agent_specifications:
       3. Analyze trends and patterns in the data
       4. Provide evidence-based conclusions with statistical validation
       
-      SOURCES TO PRIORITIZE:
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework from meta/information-access/source-discovery-framework.yaml:
+      
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "Use React/TypeScript/Python/Database mappings if topic involves specific technologies"
+      - category_mappings: "Use frontend/backend/infrastructure mappings for broader domains"
+      - mcp_servers: "GitHub repositories, technical documentation, code examples"
+      
+      QUANTITATIVE FOCUS SOURCES:
       - Academic research papers with statistical analysis
-      - Industry reports with quantitative data
-      - Government statistics and datasets
-      - Survey results and polling data
-      - Financial and performance metrics
+      - Industry reports with quantitative data and benchmarks
+      - Government statistics and performance datasets
+      - Survey results and polling data with statistical validation
+      - Financial and performance metrics from authoritative sources
+      
+      SOURCE COORDINATION STRATEGY:
+      - Apply parallel source access for comprehensive data gathering
+      - Use MCP server coordination for technical repositories and documentation
+      - Implement fallback to web sources if MCP servers unavailable
+      - Cross-validate quantitative claims across multiple authoritative sources
+      - Prioritize recent data sources for current trends and metrics
       
       OUTPUT FORMAT:
       - Executive summary with key quantitative findings
@@ -96,12 +111,27 @@ sub_agent_specifications:
       3. Explore narrative themes and qualitative patterns
       4. Provide rich, nuanced understanding of the topic
       
-      SOURCES TO PRIORITIZE:
-      - Case studies and narrative accounts
-      - Interview transcripts and testimonials
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework for qualitative perspectives:
+      
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "User experience insights, community discussions, developer testimonials"
+      - category_mappings: "Domain-specific qualitative research and case studies"
+      - mcp_servers: "GitHub discussions, documentation narratives, community insights"
+      
+      QUALITATIVE FOCUS SOURCES:
+      - Case studies and narrative accounts with rich contextual detail
+      - Interview transcripts, testimonials, and user experience reports
       - Ethnographic research and observational studies
-      - Qualitative academic research
-      - Expert opinions and commentary
+      - Qualitative academic research with thematic analysis
+      - Expert opinions, commentary, and thought leadership content
+      
+      SOURCE COORDINATION STRATEGY:
+      - Use sequential access for in-depth contextual analysis
+      - Coordinate community sources (forums, discussions) with official documentation
+      - Apply adaptive routing to find high-quality narrative sources
+      - Cross-validate stakeholder perspectives across multiple qualitative sources
+      - Prioritize diverse perspectives and underrepresented voices
       
       OUTPUT FORMAT:
       - Executive summary with key qualitative insights
@@ -153,12 +183,27 @@ sub_agent_specifications:
       3. Examine case studies and real-world applications
       4. Provide practical, actionable recommendations
       
-      SOURCES TO PRIORITIZE:
-      - Industry reports and whitepapers
-      - Company case studies and implementation guides
-      - Best practice documentation
-      - Practitioner blogs and professional forums
-      - Standards and certification documentation
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework for industry practices:
+      
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "Production implementations, enterprise case studies, technical best practices"
+      - category_mappings: "Industry-specific practices and domain standards"
+      - mcp_servers: "GitHub Enterprise repos, industry documentation, implementation guides"
+      
+      INDUSTRY PRACTICE FOCUS SOURCES:
+      - Industry reports and whitepapers from authoritative organizations
+      - Company case studies and implementation guides with measurable outcomes
+      - Best practice documentation from recognized industry leaders
+      - Practitioner blogs and professional forums with validated experiences
+      - Standards and certification documentation from official bodies
+      
+      SOURCE COORDINATION STRATEGY:
+      - Prioritize authoritative industry sources and recognized standards bodies
+      - Use MCP coordination for accessing enterprise repositories and documentation
+      - Apply adaptive routing to find current implementation examples
+      - Cross-validate practices across multiple industry sources
+      - Focus on recent implementations and current industry trends
       
       OUTPUT FORMAT:
       - Executive summary with key practice insights
@@ -210,12 +255,27 @@ sub_agent_specifications:
       3. Examine disruptive forces and potential impacts
       4. Provide forward-looking strategic recommendations
       
-      SOURCES TO PRIORITIZE:
-      - Technology trend reports and forecasts
-      - Strategic consulting analyses
-      - Innovation research and patent analysis
-      - Expert predictions and thought leadership
-      - Venture capital and investment trend reports
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework for future trends analysis:
+      
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "Emerging tech developments, future roadmaps, innovation patterns"
+      - category_mappings: "Strategic industry evolution and emerging domain trends"
+      - mcp_servers: "GitHub trending repos, cutting-edge research, innovation showcases"
+      
+      FUTURE TRENDS FOCUS SOURCES:
+      - Technology trend reports and forecasts from reputable research organizations
+      - Strategic consulting analyses with future scenario modeling
+      - Innovation research, patent analysis, and emerging technology assessments
+      - Expert predictions and thought leadership from recognized industry visionaries
+      - Venture capital and investment trend reports indicating market directions
+      
+      SOURCE COORDINATION STRATEGY:
+      - Prioritize forward-looking sources with predictive analytics
+      - Use parallel access for comprehensive trend coverage across domains
+      - Apply adaptive routing to find cutting-edge research and innovation sources
+      - Cross-validate trend predictions across multiple authoritative sources
+      - Focus on convergent trends and strategic inflection points
       
       OUTPUT FORMAT:
       - Executive summary with key trend insights

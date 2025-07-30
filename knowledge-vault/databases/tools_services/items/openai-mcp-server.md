@@ -31,6 +31,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/openai"
 ---
 
 **GPT and DALL-E API access for versatile AI content generation and multimodal workflows**  

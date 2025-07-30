@@ -1,0 +1,191 @@
+# Apache Airflow MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-airflow-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "abc12345-def6-7890-abcd-airflow003"
+name: "Apache Airflow MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 3  # Derived from composite score 4.1/10 = good
+maturity_level: "stable"  # Production ready 88%, enterprise deployments
+status: "adopted"  # Industry standard for workflow orchestration
+
+# Technology Classification
+technology_type:
+  - "automation"
+  - "developer-tools"
+  - "ci_cd"
+deployment_model: "hybrid"  # Self-hosted, cloud managed, or Kubernetes
+integration_complexity: "very_complex"  # Setup complexity 2/10
+
+# Vendor and Licensing
+vendor: "Apache Foundation/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "automation"
+  - "developer-tools"
+  - "software-development"
+  - "analytics"
+  - "ci_cd"
+  - "enterprise"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "workflow_definitions"
+    - "execution_logs"
+    - "task_metadata"
+    - "dag_execution_history"
+    - "performance_metrics"
+    - "connection_configs"
+    - "variable_definitions"
+    - "scheduler_statistics"
+  
+  access_methods:
+    - "real-time"  # Live workflow monitoring
+    - "on-demand"  # API calls for workflow management
+    - "batch"      # Scheduled workflow executions
+    
+  authentication:
+    required: true
+    methods:
+      - "basic_auth"
+      - "ldap"
+      - "oauth"
+      - "rbac"
+    security_level: "enterprise"
+    
+  rate_limits:
+    concurrent_workflows: 1000
+    tasks_per_hour: 10000
+    api_requests_per_minute: 1000
+    
+  complexity_score: 2  # Setup complexity (2/10) - very high complexity
+  
+  typical_use_cases:
+    - "data_pipeline_orchestration"
+    - "ml_workflow_automation"
+    - "business_process_automation"
+    - "infrastructure_automation"
+    - "etl_elt_processing"
+    - "scheduled_job_management"
+    - "multi_system_coordination"
+    - "workflow_monitoring"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 4.1
+  tier: "Tier 3 Specialized"
+  priority_rank: 3
+  production_readiness: 88
+  
+  detailed_scoring:
+    information_retrieval_relevance: 8
+    setup_complexity: 2
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 9
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 85
+    performance_score: 87
+    security_score: 90
+    scalability_score: 92
+
+# Content and Documentation
+url: "https://github.com/apache/airflow"
+description: "Industry-leading workflow orchestration platform for programmatically authoring, scheduling, and monitoring complex data pipelines and ML workflows. Essential for organizations requiring sophisticated automation and process coordination across multiple systems."
+
+key_features: |
+  ## Workflow Orchestration
+  - Python-based workflow definition (DAGs) with complex dependency management
+  - Rich scheduling capabilities with cron expressions and dynamic generation
+  - Retry mechanisms, failure handling, and branching logic
+  - 1000+ pre-built operators for integration with external systems
+  
+  ## Monitoring and Observability
+  - Comprehensive web-based UI for real-time workflow monitoring
+  - Detailed execution tracking, logging, and performance metrics
+  - SLA monitoring and configurable alerting systems
+  - Integration with external monitoring platforms
+  
+  ## Enterprise Features
+  - Role-based access control (RBAC) with fine-grained permissions
+  - Multi-tenancy support with namespace isolation
+  - REST API for programmatic workflow management
+  - High availability and disaster recovery capabilities
+  
+  ## Scalability and Performance
+  - Multiple executor types (Sequential, Local, Celery, Kubernetes)
+  - Horizontal scaling with distributed task execution
+  - Resource optimization and parallel task processing
+  - Enterprise-grade production deployments
+
+use_cases: |
+  1. **Data Engineering Pipeline Orchestration**: ETL/ELT workflows → Dependency management → Failure handling → Performance monitoring
+  2. **Machine Learning Operations (MLOps)**: Model training → Validation → Deployment → Performance monitoring
+  3. **Business Process Automation**: Multi-system coordination → Rule-based processing → Notification systems
+  4. **Infrastructure and DevOps Automation**: Deployment pipelines → Maintenance tasks → Security compliance
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    workflow_automation: 120000  # $120K/year saved in manual coordination
+    pipeline_reliability: 95000   # $95K/year in reduced downtime
+    operational_visibility: 70000 # $70K/year in monitoring efficiency
+    development_velocity: 85000   # $85K/year in faster deployments
+    
+  roi_metrics:
+    payback_period_months: 6
+    net_roi_percentage: 280
+    implementation_cost: 80000
+    annual_operating_cost: 50000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-airflow-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/apache-airflow-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Apache Airflow MCP Server provides sophisticated workflow orchestration capabilities for complex data engineering and automation requirements.
+  Composite score of 4.1/10 reflects specialized nature with high setup complexity but exceptional capabilities for appropriate use cases.
+  
+  **Key Strengths:**
+  - Industry-leading workflow orchestration with 1000+ operators
+  - Proven enterprise scalability and comprehensive feature set
+  - Strong community support and active development ecosystem
+  - Flexible deployment options from local to Kubernetes scale
+  
+  **Implementation Considerations:** 
+  - High setup complexity requires experienced DevOps/data engineering teams
+  - Significant infrastructure requirements for production deployments
+  - Best suited for organizations with complex multi-system workflows
+  
+  **Strategic Value:** Essential for data-intensive organizations requiring sophisticated automation and process coordination

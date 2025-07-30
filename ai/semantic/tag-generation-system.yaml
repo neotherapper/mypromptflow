@@ -1,12 +1,12 @@
 # Semantic Tag Generation System
-# Comprehensive tagging system for all 67 document types in the AI Knowledge Base
+# Comprehensive tagging system designed for research-identified 67 document types framework
 
 metadata:
   version: "1.0.0"
   created: "2025-07-18"
   author: "Tag Generation Agent"
   description: "Semantic tagging system for intelligent document classification and discovery"
-  total_document_types: 67
+  total_document_types_framework: 67  # Research-identified framework
   categories: 7
 
 # Tag Generation Rules - Applied hierarchically to all documents

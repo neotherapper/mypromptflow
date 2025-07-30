@@ -19,6 +19,7 @@ tags:
 - API Service
 - Tier 1
 - Development Platform
+mcp_profile_reference: "@mcp_profile/shopify-enhanced-ecommerce"
 ---
 
 # Shopify Enhanced E-commerce MCP Server

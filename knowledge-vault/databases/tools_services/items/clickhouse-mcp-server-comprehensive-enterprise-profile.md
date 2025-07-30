@@ -21,6 +21,7 @@ tags:
 - Analytics
 - Monitoring
 - Cloud Platform
+mcp_profile_reference: "@mcp_profile/clickhouse"
 ---
 
 ## Header Classification

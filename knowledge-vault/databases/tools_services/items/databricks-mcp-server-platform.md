@@ -9,10 +9,10 @@ item_type: mcp_server
 migration_date: '2025-07-26'
 name: Databricks MCP Server
 original_file: mcp-registry/detailed-profiles/tier-1/databricks-server-profile.md
-priority: 1st_priority
+priority: 3rd_priority
 production_readiness: 90
 provider: Databricks (Enterprise)
-quality_score: 8.48
+quality_score: 5.75
 repository_url: https://github.com/RafaelCartenet/mcp-databricks-server
 source_database: tools_services
 status: active
@@ -22,15 +22,16 @@ tags:
 - MCP Server
 - API Service
 - Security Tool
-- Tier 1
+- Tier 3
 - Analytics
 - Monitoring
 - Cloud Platform
 - Development Platform
-tier: Tier 1
+tier: Tier 3
 transport_protocols:
 - REST API
 - WebSockets
+mcp_profile_reference: "@mcp_profile/databricks"
 ---
 
 **Enterprise unified analytics platform for big data and machine learning workflows**  

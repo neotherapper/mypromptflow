@@ -31,6 +31,7 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSocket
+mcp_profile_reference: "@mcp_profile/duckduckgo"
 ---
 
 **Privacy-focused search engine API integration with comprehensive search capabilities**  

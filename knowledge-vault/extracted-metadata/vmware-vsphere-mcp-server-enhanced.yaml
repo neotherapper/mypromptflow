@@ -1,0 +1,104 @@
+# VMware vSphere MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+
+---
+# Core Identification (Schema Compliance)
+id: "def01234-ghi5-6789-defg-vmware-vsphere032"
+name: "VMware vSphere MCP Server"
+
+# Rating System
+rating: 3  # Derived from composite score 4.7/10 = good
+maturity_level: "enterprise"  # Production ready 98%
+status: "adopted"  # Leading virtualization platform
+
+# Technology Classification
+technology_type:
+  - "virtualization"
+  - "infrastructure"
+  - "enterprise"
+deployment_model: "on_premise"
+integration_complexity: "very_complex"
+
+# Vendor and Licensing
+vendor: "VMware Inc."
+licensing_model: "enterprise"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3" 
+  - "virtualization"
+  - "infrastructure"
+  - "enterprise"
+  - "tech-stack"
+
+# Technical Specifications
+supported_platforms:
+  - "vmware"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "virtual_machines"
+    - "host_configurations"
+    - "cluster_information"
+    - "datastore_metadata"
+    - "network_configurations"
+    - "resource_pools"
+    - "performance_metrics"
+    - "alarm_events"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "api"
+    
+  authentication:
+    required: true
+    methods:
+      - "vcenter_credentials"
+      - "active_directory"
+      - "certificates"
+      - "saml"
+    security_level: "enterprise"
+    
+  rate_limits:
+    api_requests_per_minute: 1000
+    concurrent_sessions: 100
+    vm_operations_per_hour: 500
+    
+  complexity_score: 2
+  
+  typical_use_cases:
+    - "vm_management"
+    - "infrastructure_monitoring"
+    - "capacity_planning"
+    - "automation_orchestration"
+    - "disaster_recovery"
+    - "performance_optimization"
+    - "compliance_reporting"
+    - "resource_allocation"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 4.7
+  tier: "Tier 3 Specialized"
+  priority_rank: 10
+  production_readiness: 98
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/vmware-vsphere-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/vmware-vsphere-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"

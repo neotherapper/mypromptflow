@@ -1,0 +1,106 @@
+# RabbitMQ MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+
+---
+# Core Identification (Schema Compliance)
+id: "abc78901-def2-3456-abcd-rabbitmq029"
+name: "RabbitMQ MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 5.5/10 = excellent
+maturity_level: "enterprise"  # Production ready 96%
+status: "adopted"  # Leading message broker
+
+# Technology Classification
+technology_type:
+  - "messaging"
+  - "integration"
+  - "api_service"
+deployment_model: "hybrid"
+integration_complexity: "moderate"
+
+# Vendor and Licensing
+vendor: "VMware/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "messaging"
+  - "integration"
+  - "enterprise"
+  - "tech-stack"
+
+# Technical Specifications
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "message_queues"
+    - "exchange_configurations"
+    - "routing_tables"
+    - "consumer_groups"
+    - "cluster_status"
+    - "virtual_hosts"
+    - "user_permissions"
+    - "message_statistics"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "amqp"
+    
+  authentication:
+    required: true
+    methods:
+      - "username_password"
+      - "certificates"
+      - "ldap"
+      - "oauth"
+    security_level: "enterprise"
+    
+  rate_limits:
+    messages_per_second: 100000
+    concurrent_connections: 1000
+    queues_per_vhost: 10000
+    
+  complexity_score: 6
+  
+  typical_use_cases:
+    - "message_queuing"
+    - "microservice_communication"
+    - "event_driven_architecture"
+    - "task_distribution"
+    - "publish_subscribe"
+    - "workflow_orchestration"
+    - "system_integration"
+    - "load_balancing"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 5.5
+  tier: "Tier 3 Specialized"
+  priority_rank: 5
+  production_readiness: 96
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/rabbitmq-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/rabbitmq-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"

@@ -5,9 +5,9 @@
 vocabulary_info:
   name: "Knowledge Vault Tags Vocabulary"
   description: "Standardized tag definitions and hierarchies for consistent categorization"
-  version: "1.0.0"
+  version: "1.1.0"
   created: "2024-07-21"
-  last_updated: "2024-07-21"
+  last_updated: "2025-07-27"
 
 # Tag Categories and Hierarchies
 tag_categories:
@@ -57,6 +57,43 @@ tag_categories:
         description: "Technology stacks, architecture choices, and technical infrastructure"
         color: "purple"
         aliases: ["technology-stack", "architecture", "infrastructure"]
+        
+      # INFORMATION ACCESS TAGS (for AI agent source selection)
+      - tag: "web-content"
+        name: "Web Content"
+        description: "Web scraping, content extraction, real-time web data, and web APIs"
+        color: "blue"
+        aliases: ["web-scraping", "content-extraction", "web-data", "web-apis"]
+        
+      - tag: "database-access"
+        name: "Database Access"
+        description: "Database connections, SQL queries, data retrieval, and database management"
+        color: "green"
+        aliases: ["database-connections", "sql-queries", "data-retrieval", "db-management"]
+        
+      - tag: "file-systems"
+        name: "File Systems"
+        description: "File operations, document processing, local storage, and file management"
+        color: "orange"
+        aliases: ["file-operations", "document-processing", "local-storage", "file-management"]
+        
+      - tag: "real-time-data"
+        name: "Real-time Data"
+        description: "Live feeds, streaming data, real-time APIs, and event-driven systems"
+        color: "red"
+        aliases: ["live-feeds", "streaming-data", "real-time-apis", "event-driven"]
+        
+      - tag: "version-control"
+        name: "Version Control"
+        description: "Git operations, repository analysis, code access, and version management"
+        color: "purple"
+        aliases: ["git-operations", "repository-analysis", "code-access", "version-management"]
+        
+      - tag: "structured-data"
+        name: "Structured Data"
+        description: "APIs, JSON/XML processing, data transformation, and structured formats"
+        color: "yellow"
+        aliases: ["api-access", "json-processing", "xml-processing", "data-transformation"]
   
   # BUSINESS TAGS
   business:

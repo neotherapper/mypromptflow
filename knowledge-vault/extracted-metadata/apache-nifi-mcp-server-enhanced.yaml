@@ -1,0 +1,190 @@
+# Apache Nifi MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-nifi-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "efg56789-hij0-1234-efgh-nifi007"
+name: "Apache Nifi MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 3  # Derived from composite score 4.5/10 = good
+maturity_level: "stable"  # Production ready 89%
+status: "adopted"  # Data flow automation standard
+
+# Technology Classification
+technology_type:
+  - "integration"
+  - "developer-tools"
+  - "automation"
+deployment_model: "hybrid"  # Self-hosted, containerized, cloud
+integration_complexity: "complex"  # Setup complexity 3/10
+
+# Vendor and Licensing
+vendor: "Apache Foundation/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "integration"
+  - "automation"
+  - "developer-tools"
+  - "software-development"
+  - "tech-stack"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "data_flows"
+    - "processor_metadata"
+    - "flow_statistics"
+    - "provenance_data"
+    - "connection_queues"
+    - "cluster_information"
+    - "system_diagnostics"
+    - "audit_logs"
+  
+  access_methods:
+    - "real-time"  # Flow monitoring
+    - "on-demand"  # API access
+    - "batch"      # Bulk data processing
+    
+  authentication:
+    required: true
+    methods:
+      - "ldap"
+      - "kerberos"
+      - "certificates"
+      - "oauth"
+    security_level: "enterprise"
+    
+  rate_limits:
+    concurrent_flows: 1000
+    data_throughput_mbps: 1000
+    api_requests_per_minute: 600
+    
+  complexity_score: 3  # Setup complexity (3/10) - high complexity
+  
+  typical_use_cases:
+    - "data_flow_automation"
+    - "system_integration"
+    - "etl_processing"
+    - "data_routing"
+    - "api_orchestration"
+    - "file_processing"
+    - "stream_processing"
+    - "data_governance"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 4.5
+  tier: "Tier 3 Specialized"
+  priority_rank: 4
+  production_readiness: 89
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 3
+    maintenance_status: 8
+    documentation_quality: 8
+    community_adoption: 8
+    integration_potential: 9
+    
+  production_readiness_breakdown:
+    stability_score: 91
+    performance_score: 88
+    security_score: 87
+    scalability_score: 90
+
+# Content and Documentation
+url: "https://github.com/apache/nifi"
+description: "Visual data flow automation platform for designing, controlling, and monitoring data flows between systems. Enterprise-grade data integration server enabling sophisticated routing, transformation, and system mediation logic."
+
+key_features: |
+  ## Visual Data Flow Design
+  - Browser-based flow design with drag-and-drop interface
+  - Real-time flow modification without stopping and starting
+  - Fine-grained data provenance tracking and lineage
+  - Template-based flow sharing and reuse
+  
+  ## Robust System Integration
+  - 280+ processors for various data sources and destinations
+  - Built-in support for HTTP, TCP, UDP, and file system protocols
+  - Enterprise system connectors (databases, message queues, APIs)
+  - Custom processor development framework
+  
+  ## Enterprise Security
+  - Multi-tenant authorization with role-based access control
+  - SSL/TLS encryption for secure data transmission
+  - Integration with enterprise identity management systems
+  - Comprehensive audit logging and compliance reporting
+  
+  ## Scalability and Reliability
+  - Clustered architecture for high availability
+  - Back-pressure resistant design with built-in buffering
+  - Content prioritization and quality of service
+  - Zero-leader clustering for fault tolerance
+
+use_cases: |
+  1. **Data Flow Automation**: Source system → Data transformation → Target system delivery
+  2. **System Integration**: API orchestration → Data routing → Protocol translation
+  3. **ETL Processing**: Data extraction → Complex transformations → Destination loading
+  4. **Stream Processing**: Real-time data ingestion → Processing → Event routing
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    integration_automation: 180000  # $180K/year in manual integration reduction
+    data_flow_visibility: 120000    # $120K/year in operational monitoring
+    system_reliability: 100000      # $100K/year in reduced failures
+    development_velocity: 90000     # $90K/year in faster integration development
+    
+  roi_metrics:
+    payback_period_months: 7
+    net_roi_percentage: 240
+    implementation_cost: 100000
+    annual_operating_cost: 70000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-nifi-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/apache-nifi-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Apache Nifi MCP Server provides comprehensive visual data flow automation capabilities for complex system integration scenarios.
+  Composite score of 4.5/10 reflects specialized nature with manageable complexity for data integration use cases.
+  
+  **Key Strengths:**
+  - Visual flow design with browser-based interface
+  - Comprehensive processor library with 280+ built-in processors
+  - Strong enterprise security and compliance features
+  - Excellent data provenance and lineage tracking
+  
+  **Implementation Considerations:** 
+  - High complexity requires data integration and flow design expertise
+  - Resource-intensive for large-scale deployments
+  - Best suited for organizations with complex data integration requirements
+  
+  **Strategic Value:** Essential for organizations requiring visual, manageable data flow automation with comprehensive monitoring and governance capabilities

@@ -1,0 +1,187 @@
+# Netlify MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/netlify-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "uvw12345-xyz6-7890-uvwx-netlify023"
+name: "Netlify MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.8/10 = excellent
+maturity_level: "stable"  # Production ready 94%
+status: "adopted"  # Popular JAMstack platform
+
+# Technology Classification
+technology_type:
+  - "cloud_hosting"
+  - "deployment"
+  - "developer-tools"
+deployment_model: "cloud_hosted"  # Netlify managed service
+integration_complexity: "simple"  # Setup complexity 8/10
+
+# Vendor and Licensing
+vendor: "Netlify Inc."
+licensing_model: "freemium"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "cloud-hosting"
+  - "deployment"
+  - "developer-tools"
+  - "software-development"
+  - "productivity"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "site_deployments"
+    - "build_configurations"
+    - "form_submissions"
+    - "function_logs"
+    - "domain_settings"
+    - "environment_variables"
+    - "analytics_data"
+    - "team_permissions"
+  
+  access_methods:
+    - "real-time"  # Live deployment status
+    - "on-demand"  # API requests
+    - "webhook"    # Build notifications
+    
+  authentication:
+    required: true
+    methods:
+      - "personal_tokens"
+      - "oauth"
+      - "netlify_identity"
+      - "github_integration"
+    security_level: "moderate"
+    
+  rate_limits:
+    api_requests_per_hour: 1000
+    builds_per_month: 300
+    serverless_functions: 125000
+    
+  complexity_score: 8  # Setup complexity (8/10) - simple complexity
+  
+  typical_use_cases:
+    - "jamstack_hosting"
+    - "static_site_deployment"
+    - "serverless_functions"
+    - "form_handling"
+    - "continuous_deployment"
+    - "branch_previews"
+    - "edge_functions"
+    - "identity_management"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.8
+  tier: "Tier 3 Specialized"
+  priority_rank: 4
+  production_readiness: 94
+  
+  detailed_scoring:
+    information_retrieval_relevance: 5
+    setup_complexity: 8
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 8
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 95
+    performance_score: 94
+    security_score: 93
+    scalability_score: 94
+
+# Content and Documentation
+url: "https://github.com/netlify/netlify-python"
+description: "Popular JAMstack platform for deploying and hosting modern web applications. Developer-focused cloud platform enabling continuous deployment with serverless functions and edge computing capabilities."
+
+key_features: |
+  ## JAMstack Platform
+  - Git-based continuous deployment with automatic builds
+  - Global CDN with edge locations worldwide
+  - Branch deploy previews for collaboration and testing
+  - Build plugins ecosystem for extended functionality
+  
+  ## Serverless Functions
+  - Functions-as-a-Service with automatic scaling
+  - Background functions for scheduled tasks
+  - Edge Functions running at CDN locations
+  - Support for multiple runtimes and languages
+  
+  ## Developer Experience
+  - One-click deployment from Git repositories
+  - Form handling with spam protection
+  - Split testing and feature flags
+  - Analytics and performance monitoring
+  
+  ## Enterprise Features
+  - Team collaboration with role-based access
+  - Custom domains with SSL certificates
+  - Identity and access management
+  - Advanced build settings and environment management
+
+use_cases: |
+  1. **Static Site Hosting**: Git commit → Build process → Global deployment → CDN distribution
+  2. **JAMstack Applications**: Frontend framework → API integration → Serverless functions → Edge delivery
+  3. **Continuous Deployment**: Branch creation → Automatic builds → Preview deployments → Production release
+  4. **Form Processing**: Form creation → Submission handling → Data processing → Email notifications
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    development_velocity: 150000  # $150K/year in faster deployments
+    infrastructure_savings: 120000 # $120K/year in hosting efficiency
+    operational_efficiency: 100000 # $100K/year in reduced maintenance
+    developer_productivity: 80000  # $80K/year in tool efficiency
+    
+  roi_metrics:
+    payback_period_months: 4
+    net_roi_percentage: 320
+    implementation_cost: 30000
+    annual_operating_cost: 60000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/netlify-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/netlify-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Netlify MCP Server provides comprehensive JAMstack hosting capabilities with continuous deployment and serverless functions.
+  Composite score of 5.8/10 reflects strong capabilities with simple complexity and excellent production readiness.
+  
+  **Key Strengths:**
+  - Leading JAMstack platform with excellent developer experience
+  - Simple continuous deployment with Git-based workflows
+  - Comprehensive serverless functions and edge computing
+  - Strong ecosystem integration and build plugin system
+  
+  **Implementation Considerations:** 
+  - Simple complexity enables rapid adoption for frontend teams
+  - Usage-based pricing scales with site traffic and function usage
+  - Best suited for static sites and JAMstack applications
+  
+  **Strategic Value:** Essential for organizations requiring modern web hosting with continuous deployment and serverless capabilities for JAMstack applications

@@ -24,6 +24,7 @@ tags:
 - Tier 1
 - Analytics
 - Monitoring
+mcp_profile_reference: "@mcp_profile/tier-1-postgresql"
 ---
 
 ## Executive Summary

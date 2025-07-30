@@ -12,7 +12,7 @@ original_file: mcp-registry/detailed-profiles/tier-4/fhir-server-profile.md
 priority: 4th_priority
 production_readiness: 90
 provider: HL7 International
-quality_score: 8.15
+quality_score: 5.15
 source_database: tools_services
 status: active
 tags:
@@ -29,6 +29,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - REST API
+mcp_profile_reference: "@mcp_profile/fhir"
 ---
 
 **Healthcare interoperability standard for secure health data exchange and clinical intelligence**  

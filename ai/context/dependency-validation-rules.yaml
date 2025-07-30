@@ -5,7 +5,7 @@
 validation_system:
   version: "1.0"
   description: "Comprehensive validation rules for critical document chains"
-  total_document_types: 67
+  total_document_types_framework: 67  # Research-identified framework
   critical_chains: 4
 
 # 4 Critical Dependency Chains
@@ -271,7 +271,7 @@ success_criteria:
     - "Cross-chain integration is validated"
 
   system_validation:
-    - "Validation system processes all 67 document types"
+    - "Validation system designed for 67 document types framework"
     - "Error detection accuracy > 95%"
     - "Resolution strategies are effective"
     - "Performance metrics meet targets"

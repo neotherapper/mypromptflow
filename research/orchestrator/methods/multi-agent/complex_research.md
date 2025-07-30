@@ -57,12 +57,27 @@ sub_agent_specifications:
       3. Analyze market size, growth trends, and forecasts
       4. Map market opportunities and white spaces
       
-      SOURCES TO PRIORITIZE:
-      - Industry analyst reports (Gartner, McKinsey, etc.)
-      - Market research firms (IDC, Forrester, etc.)
-      - Company financial reports and investor presentations
-      - Trade publications and industry news
-      - Government market statistics
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework for market research:
+      
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "Technology market reports, adoption metrics, competitive landscapes"
+      - category_mappings: "Industry-specific market analysis and competitive intelligence"
+      - mcp_servers: "GitHub market insights, business intelligence repositories"
+      
+      MARKET RESEARCH FOCUS SOURCES:
+      - Industry analyst reports from authoritative sources (Gartner, McKinsey, BCG)
+      - Market research firms with validated methodologies (IDC, Forrester, Statista)
+      - Company financial reports, investor presentations, and earnings calls
+      - Trade publications and industry news from recognized sources
+      - Government market statistics and regulatory filings
+      
+      SOURCE COORDINATION STRATEGY:
+      - Use parallel coordination for comprehensive market coverage
+      - Apply MCP servers for accessing business intelligence and market data
+      - Implement adaptive routing to find current market analysis
+      - Cross-validate market metrics across multiple authoritative sources
+      - Prioritize recent data for current market conditions and forecasts
       
       OUTPUT FORMAT:
       - Executive summary of market landscape

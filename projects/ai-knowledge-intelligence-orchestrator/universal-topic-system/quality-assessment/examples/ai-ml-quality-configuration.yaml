@@ -1,0 +1,410 @@
+# AI/ML Quality Configuration Example
+# Demonstrates quality assessment configuration for artificial intelligence and machine learning topic
+
+topic_quality_metadata:
+  topic_slug: "ai-ml"
+  topic_name: "Artificial Intelligence & Machine Learning"
+  quality_profile: "technical"
+  last_updated: "2025-07-27"
+  configuration_version: "1.0"
+
+# Topic Characteristics for Quality Adaptation
+topic_characteristics:
+  information_volatility: "high"                # AI moves very quickly with frequent breakthroughs
+  authority_distribution: "centralized"         # Clear authority hierarchy (research institutions, major companies)
+  information_density: "high"                   # High volume of research papers, company announcements
+  speculation_prevalence: "medium"              # Some hype but strong technical foundation
+  technical_complexity: "high"                  # Highly technical content requiring expertise
+  regulatory_sensitivity: "medium"              # Growing regulatory interest but not highly regulated yet
+
+# Quality Threshold Customization
+quality_thresholds:
+  source_authority:
+    minimum_threshold: 0.6                      # Higher standard due to technical complexity
+    tier_1_threshold: 0.85                      # Very high standard for authoritative sources
+    adjustment_factors:
+      volatility_adjustment: -0.05              # Slight reduction due to fast-moving field
+      authority_distribution_factor: +0.1       # Bonus for clear authority hierarchy
+      
+  content_accuracy:
+    minimum_threshold: 0.7                      # High accuracy requirement for technical content
+    verification_requirement: 0.85              # High verification threshold for claims
+    adjustment_factors:
+      speculation_penalty: -0.1                 # Penalty for speculative AI claims
+      technical_bonus: +0.15                    # Bonus for technically accurate content
+      
+  relevance_alignment:
+    minimum_threshold: 0.65                     # Higher relevance requirement
+    significance_threshold: 0.8                 # High bar for significance in AI
+    adjustment_factors:
+      density_adjustment: -0.05                 # Slight reduction due to high information density
+      complexity_factor: +0.1                   # Bonus for handling technical complexity well
+      
+  completeness_depth:
+    minimum_threshold: 0.5                      # Moderate completeness requirement
+    comprehensive_threshold: 0.85               # High bar for comprehensive analysis
+    adjustment_factors:
+      technical_requirement: +0.15              # Higher requirement for technical depth
+      practical_utility_bonus: +0.1             # Bonus for implementation guidance
+      
+  constitutional_compliance:
+    minimum_threshold: 0.85                     # High ethical standard due to AI implications
+    strict_enforcement: true
+    topic_specific_considerations: 
+      - "AI safety and alignment considerations"
+      - "Bias and fairness in AI systems"
+      - "Privacy implications of AI technologies"
+      - "Responsible AI development practices"
+
+# Topic-Specific Quality Indicators
+topic_quality_indicators:
+  primary_quality_signals:
+    peer_review_status:
+      name: "Peer Review and Academic Validation"
+      description: "Content from peer-reviewed sources or validated by academic community"
+      detection_method: "Check for arxiv.org, conference proceedings, journal publications"
+      score_impact: +0.2
+      
+    mathematical_accuracy:
+      name: "Mathematical and Technical Accuracy"
+      description: "Accurate mathematical formulations and technical descriptions"
+      detection_method: "Cross-reference against established AI literature and technical specifications"
+      score_impact: +0.15
+      
+    reproducibility_information:
+      name: "Reproducibility and Implementation Details"
+      description: "Sufficient detail for reproduction or clear implementation guidance"
+      detection_method: "Check for code availability, methodology descriptions, parameter details"
+      score_impact: +0.1
+      
+  secondary_quality_signals:
+    author_expertise:
+      name: "Author Technical Expertise"
+      description: "Content created by recognized AI/ML experts or practitioners"
+      detection_method: "Check author credentials, publication history, institutional affiliation"
+      score_impact: +0.1
+      
+    experimental_validation:
+      name: "Experimental Validation"
+      description: "Claims supported by experimental results or empirical evidence"
+      detection_method: "Look for experimental setup, results, comparison with baselines"
+      score_impact: +0.15
+      
+  quality_warning_indicators:
+    hype_language:
+      name: "AI Hype and Exaggerated Claims"
+      description: "Content using excessive hype language or making unrealistic claims"
+      detection_criteria: "Words like 'revolutionary', 'will replace humans', without evidence"
+      severity: "medium"
+      score_penalty: -0.2
+      
+    missing_methodology:
+      name: "Insufficient Technical Detail"
+      description: "Technical claims without sufficient methodological detail"
+      detection_criteria: "Claims about model performance without methodology description"
+      severity: "high"
+      score_penalty: -0.3
+
+# Source Authority Mapping for AI/ML
+source_authority_configuration:
+  tier_1_authority_indicators:
+    official_designations: 
+      - "Major AI company official blogs (OpenAI, Anthropic, Google DeepMind)"
+      - "Top research institutions (MIT, Stanford, CMU, etc.)"
+      - "Peer-reviewed conference proceedings (NeurIPS, ICML, ICLR)"
+      - "Major journal publications (Nature, Science)"
+    institutional_indicators:
+      - "University research labs and centers"
+      - "Government research agencies (NSF, NIH)"
+      - "Major tech company research divisions"
+    expert_credentials:
+      - "PhD in AI/ML or related field"
+      - "Senior research positions at major institutions"
+      - "Significant publication record in top venues"
+      
+  tier_2_authority_indicators:
+    community_recognition:
+      - "High-quality AI/ML blog with consistent technical content"
+      - "Conference speaking engagements"
+      - "Community-recognized expertise in specific AI subfields"
+    expertise_demonstration:
+      - "Track record of accurate technical analysis"
+      - "Clear understanding of AI/ML concepts and methods"
+      - "Balanced perspective on AI capabilities and limitations"
+    professional_association:
+      - "Employment at AI/ML companies or research institutions"
+      - "Active participation in AI research community"
+      - "Contributions to open-source AI projects"
+      
+  tier_3_authority_indicators:
+    curation_quality:
+      - "Well-moderated AI/ML discussion forums"
+      - "Quality control mechanisms for technical accuracy"
+      - "Community fact-checking and correction mechanisms"
+    community_engagement:
+      - "Active, knowledgeable community participation"
+      - "Quality discussions with technical depth"
+      - "Regular contributions from domain experts"
+    signal_to_noise:
+      - "Effective filtering of hype and speculation"
+      - "Focus on technical substance over sensationalism"
+      - "Ability to identify significant developments"
+      
+  authority_red_flags:
+    anonymity_concerns:
+      - "Anonymous sources making significant technical claims"
+      - "Lack of verifiable expertise or credentials"
+      - "No clear institutional affiliation"
+    bias_indicators:
+      - "Financial conflicts of interest not disclosed"
+      - "Consistent bias toward specific companies or technologies"
+      - "Agenda-driven content without balanced perspective"
+    accuracy_issues:
+      - "History of technical inaccuracies or misunderstandings"
+      - "Frequent corrections needed for factual errors"
+      - "Misrepresentation of research findings"
+
+# Content Validation Rules for AI/ML
+content_validation_rules:
+  fact_checking_requirements:
+    high_impact_claims:
+      - "Claims about AI achieving human-level performance"
+      - "Breakthrough announcements in AI capabilities"
+      - "AI safety or alignment developments"
+    quantitative_claims:
+      - "Model performance metrics and benchmarks"
+      - "Training costs and computational requirements"
+      - "Market predictions and investment figures"
+    prediction_claims:
+      - "Timeline predictions for AI developments"
+      - "Capability predictions for future AI systems"
+      - "Market impact predictions"
+      
+  cross_reference_requirements:
+    controversial_topics:
+      - "AI consciousness or sentience claims"
+      - "AI safety risks and mitigation strategies"
+      - "AGI timeline predictions"
+    breaking_news:
+      - "New model releases and capabilities"
+      - "Major AI company announcements"
+      - "Regulatory developments affecting AI"
+    technical_specifications:
+      - "Model architectures and training details"
+      - "Performance benchmarks and evaluation methods"
+      - "Implementation specifications and requirements"
+      
+  verification_methods:
+    official_verification:
+      - "Check against official company announcements"
+      - "Verify against peer-reviewed publications"
+      - "Confirm with authoritative technical documentation"
+    expert_consultation:
+      - "Consult recognized AI researchers for technical claims"
+      - "Seek expert opinion on significant developments"
+      - "Validate methodology and experimental design"
+    community_validation:
+      - "Check consensus among AI research community"
+      - "Look for independent replication or validation"
+      - "Assess community expert reactions and analysis"
+
+# Significance Assessment for AI/ML
+significance_assessment:
+  high_significance_indicators:
+    impact_indicators:
+      - "Breakthrough model capabilities or architectures"
+      - "Major product releases with new AI capabilities"
+      - "Significant regulatory or policy developments"
+      - "AI safety milestones or alignment breakthroughs"
+    novelty_indicators:
+      - "Novel AI techniques or methodologies"
+      - "First-of-kind AI applications or capabilities"
+      - "Paradigm shifts in AI research or development"
+    urgency_indicators:
+      - "Time-sensitive AI safety or security issues"
+      - "Immediate regulatory or policy implications"
+      - "Competitive market developments requiring quick response"
+      
+  medium_significance_indicators:
+    development_indicators:
+      - "Incremental improvements in existing AI models"
+      - "New AI tools or frameworks for developers"
+      - "Research papers with solid but incremental contributions"
+    analysis_indicators:
+      - "Expert analysis of AI trends and implications"
+      - "Technical reviews of AI systems or methods"
+      - "Industry analysis and market developments"
+    trend_indicators:
+      - "Emerging patterns in AI research or adoption"
+      - "Market trend analysis and predictions"
+      - "Technology convergence observations"
+      
+  low_significance_indicators:
+    routine_updates:
+      - "Minor version updates to AI tools"
+      - "Regular conference presentation announcements"
+      - "Routine company earnings or hiring news"
+    discussion_content:
+      - "General AI discussion without new insights"
+      - "Repetitive coverage of known information"
+      - "Speculative discussion without evidence"
+    historical_context:
+      - "Historical AI development retrospectives"
+      - "Educational content covering established concepts"
+      - "Background information on well-known AI topics"
+
+# Quality Learning and Adaptation
+learning_configuration:
+  feedback_integration:
+    user_feedback_weight: 0.2                  # Lower weight due to technical complexity
+    outcome_tracking_weight: 0.6               # Higher weight on actual content utility
+    expert_validation_weight: 0.9              # Very high weight on expert assessment
+    
+  adaptation_parameters:
+    threshold_adjustment_rate: 0.05             # Conservative adjustment for technical field
+    learning_period: "weekly"
+    minimum_sample_size: 100                    # Higher sample size due to technical complexity
+    
+  pattern_recognition:
+    quality_pattern_tracking: true
+    cross_topic_learning: true
+    seasonal_adjustment: true                   # Account for conference seasons
+
+# Integration with Multi-Agent Framework
+agent_integration:
+  worker_agent_responsibilities:
+    extraction_quality:
+      - "Verify technical paper abstracts and key claims"
+      - "Check mathematical notation and formula accuracy"
+      - "Validate code examples and implementation details"
+    format_validation:
+      - "Ensure proper citation format for research papers"
+      - "Validate technical diagram and figure quality"
+      - "Check for complete methodology descriptions"
+    basic_filtering:
+      - "Filter obvious non-technical or promotional content"
+      - "Remove content lacking basic AI/ML relevance"
+      - "Flag content with obvious technical inaccuracies"
+      
+  specialist_agent_responsibilities:
+    domain_validation:
+      - "Assess technical accuracy using AI/ML expertise"
+      - "Evaluate methodology soundness and experimental design"
+      - "Validate claims against established AI knowledge"
+    accuracy_assessment:
+      - "Cross-reference technical claims with authoritative sources"
+      - "Verify mathematical formulations and algorithms"
+      - "Check experimental results and performance claims"
+    significance_scoring:
+      - "Assess significance within AI/ML research context"
+      - "Evaluate novelty and contribution to field"
+      - "Determine impact on AI development and applications"
+      
+  architect_agent_responsibilities:
+    threshold_monitoring:
+      - "Monitor quality thresholds for AI technical content"
+      - "Adjust thresholds based on field development pace"
+      - "Balance technical rigor with coverage completeness"
+    pattern_analysis:
+      - "Analyze patterns in AI research quality and trends"
+      - "Track emerging AI subfields and quality patterns"
+      - "Monitor hype cycles and adjust filtering accordingly"
+    resource_optimization:
+      - "Allocate resources based on AI development importance"
+      - "Optimize coverage of major AI conferences and events"
+      - "Balance depth vs breadth in AI topic coverage"
+      
+  escalation_criteria:
+    quality_disputes:
+      - "Disagreements on technical accuracy assessments"
+      - "Conflicting expert opinions on significance"
+      - "Disputes over experimental validation requirements"
+    framework_issues:
+      - "Quality framework inadequate for new AI developments"
+      - "Threshold adjustments needed for emerging AI subfields"
+      - "Technical complexity exceeding current assessment capabilities"
+    ethical_concerns:
+      - "AI safety implications requiring careful consideration"
+      - "Bias or fairness concerns in AI systems"
+      - "Responsible AI development questions"
+
+# Performance Monitoring for AI/ML
+performance_monitoring:
+  quality_metrics:
+    accuracy_tracking: true
+    user_satisfaction: true
+    expert_validation: true                     # Critical for technical field
+    
+  reporting_requirements:
+    daily_quality_summary: true
+    weekly_performance_report: true
+    monthly_optimization_review: true
+    quarterly_expert_review: true              # Additional expert review for AI
+    
+  alert_thresholds:
+    accuracy_degradation: 0.03                 # Lower tolerance for accuracy loss
+    threshold_violation: 0.1                   # Lower tolerance for threshold violations
+    processing_delays: 180                      # Shorter delay tolerance for fast-moving field
+
+# Validation and Testing
+validation_framework:
+  testing_procedures:
+    sample_content_testing:
+      - "Test with recent AI/ML research papers"
+      - "Validate with major AI company announcements"
+      - "Test with technical blog posts from recognized experts"
+    threshold_validation:
+      - "Validate thresholds with AI research community feedback"
+      - "Test threshold effectiveness on known high/low quality content"
+      - "Compare quality assessments with expert evaluations"
+    cross_validation:
+      - "Cross-validate technical assessments with multiple AI experts"
+      - "Compare quality scores across similar AI content"
+      - "Validate consistency across different AI subfields"
+      
+  calibration_requirements:
+    initial_calibration:
+      - "Calibrate with established AI research papers and rankings"
+      - "Align quality assessments with conference acceptance standards"
+      - "Validate against expert-curated AI content collections"
+    ongoing_calibration:
+      - "Regular calibration against new high-quality AI research"
+      - "Adjustment based on AI community feedback and standards"
+      - "Continuous refinement based on quality outcome tracking"
+    expert_calibration:
+      - "Involve AI researchers in quality standard setting"
+      - "Seek expert validation for significant technical content"
+      - "Regular expert review of quality assessment methodology"
+      
+  quality_assurance:
+    assessment_validation:
+      - "Multi-expert validation for high-significance AI content"
+      - "Automated cross-checking against known AI facts and standards"
+      - "Regular auditing of quality assessment accuracy"
+    consistency_checking:
+      - "Ensure consistent quality scoring across AI subfields"
+      - "Monitor for bias toward specific AI approaches or companies"
+      - "Validate quality consistency across different content types"
+    bias_detection:
+      - "Monitor for bias toward specific AI research institutions"
+      - "Detect bias toward certain AI methodologies or approaches"
+      - "Check for commercial bias in AI product and company coverage"
+
+# Documentation and Compliance
+documentation_requirements:
+  quality_decision_logging: true
+  rationale_documentation: true
+  audit_trail: true
+  expert_validation_tracking: true             # Track expert validation for AI content
+  
+compliance_monitoring:
+  constitutional_ai_compliance: true
+  ethical_guidelines: true
+  quality_standards: true
+  ai_safety_considerations: true               # Additional AI safety compliance
+  
+reporting_and_transparency:
+  quality_transparency: true
+  methodology_documentation: true
+  performance_reporting: true
+  expert_feedback_integration: true           # Report on expert feedback integration

@@ -1,0 +1,106 @@
+# Redis Sentinel MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+
+---
+# Core Identification (Schema Compliance)
+id: "bcd89012-efg3-4567-bcde-redis-sentinel030"
+name: "Redis Sentinel MCP Server"
+
+# Rating System
+rating: 4  # Derived from composite score 5.8/10 = excellent
+maturity_level: "enterprise"  # Production ready 97%
+status: "adopted"  # Redis high availability solution
+
+# Technology Classification
+technology_type:
+  - "database_key_value"
+  - "caching"
+  - "high_availability"
+deployment_model: "hybrid"
+integration_complexity: "complex"
+
+# Vendor and Licensing
+vendor: "Redis Labs/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "database"
+  - "caching"
+  - "high_availability"
+  - "enterprise"
+  - "tech-stack"
+
+# Technical Specifications
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities
+information_capabilities:
+  data_types:
+    - "redis_instances"
+    - "sentinel_configurations"
+    - "failover_logs"
+    - "master_slave_topology"
+    - "health_monitoring"
+    - "replication_status"
+    - "performance_metrics"
+    - "cluster_information"
+  
+  access_methods:
+    - "real-time"
+    - "on-demand"
+    - "monitoring"
+    
+  authentication:
+    required: true
+    methods:
+      - "auth_passwords"
+      - "certificates"
+      - "acl_users"
+    security_level: "enterprise"
+    
+  rate_limits:
+    commands_per_second: 100000
+    concurrent_connections: 10000
+    sentinel_checks: 1000
+    
+  complexity_score: 3
+  
+  typical_use_cases:
+    - "high_availability_redis"
+    - "automatic_failover"
+    - "master_monitoring"
+    - "redis_clustering"
+    - "cache_management"
+    - "session_storage"
+    - "real_time_data"
+    - "distributed_systems"
+
+# Scoring Metrics
+scoring_metrics:
+  composite_score: 5.8
+  tier: "Tier 3 Specialized"
+  priority_rank: 1
+  production_readiness: 97
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/redis-sentinel-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships
+mcp_server_profiles: "@mcp_profile/redis-sentinel-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"

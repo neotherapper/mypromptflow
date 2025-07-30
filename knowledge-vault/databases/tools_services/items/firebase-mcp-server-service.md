@@ -31,6 +31,7 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
+mcp_profile_reference: "@mcp_profile/firebase"
 ---
 
 **Backend-as-a-Service and real-time application development platform**  

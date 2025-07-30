@@ -19,6 +19,7 @@ tags:
 - Tier 1
 - HashiCorp
 - Development Platform
+mcp_profile_reference: "@mcp_profile/vault-secrets"
 ---
 
 # Vault Secrets MCP Server

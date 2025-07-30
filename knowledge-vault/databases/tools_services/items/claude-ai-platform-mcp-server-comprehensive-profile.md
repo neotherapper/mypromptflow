@@ -22,6 +22,7 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/claude-ai-platform"
 ---
 
 ## Header Classification

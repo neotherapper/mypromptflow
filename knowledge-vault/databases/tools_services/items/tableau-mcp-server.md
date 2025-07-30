@@ -32,6 +32,7 @@ transport_protocols:
 - REST API
 - JavaScript API
 - Extensions API
+mcp_profile_reference: "@mcp_profile/tableau"
 ---
 
 **Leading business intelligence and data visualization platform for enterprise analytics**  

@@ -26,6 +26,7 @@ tags:
 - Tier 3
 - Development Platform
 tier: Tier 3
+mcp_profile_reference: "@mcp_profile/auth0-enhanced"
 ---
 
 **Advanced identity and authentication platform integration for enterprise security excellence**  

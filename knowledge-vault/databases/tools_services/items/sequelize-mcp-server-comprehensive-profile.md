@@ -23,6 +23,7 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/sequelize"
 ---
 
 ## Header Classification

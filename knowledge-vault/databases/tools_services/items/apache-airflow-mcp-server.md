@@ -27,6 +27,7 @@ tags:
 - Tier 3
 - Development Platform
 tier: Tier 3
+mcp_profile_reference: "@mcp_profile/apache-airflow"
 ---
 
 **Open-source workflow orchestration platform for programmatically authoring, scheduling, and monitoring data pipelines**  

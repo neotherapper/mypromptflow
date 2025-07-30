@@ -1,0 +1,284 @@
+# TypeScript-Specific Information Source Mappings
+# Integration with AI-PR Validation System and Information Access Framework
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-28"
+  purpose: "TypeScript-specific information source mappings for AI agents"
+  integration: "AI-PR validation system, typescript-validator, knowledge-vault"
+  authority: "Specific technology mappings override general categorical patterns"
+
+# TYPESCRIPT TECHNOLOGY PROFILE
+typescript_technology_profile:
+  primary_sources:
+    github_repositories:
+      source_type: "version_control"  
+      priority: "primary"
+      mcp_server: "github-mcp-server-platform"
+      access_pattern: "mcp__MCP_DOCKER__get_file_contents"
+      authentication: "github_pat"
+      
+      recommended_repositories:
+        official_typescript:
+          - "microsoft/TypeScript"
+          - "microsoft/TypeScript-Handbook"
+          - "microsoft/TypeScript-Website"
+          - "microsoft/vscode"
+        
+        compiler_tools:
+          - "microsoft/rushstack" 
+          - "swc-project/swc"
+          - "esbuild-kit/tsx"
+          - "privatenumber/tsx"
+        
+        type_definitions:
+          - "DefinitelyTyped/DefinitelyTyped"
+          - "type-challenges/type-challenges"
+          - "typescript-eslint/typescript-eslint"
+        
+        frameworks_typescript:
+          - "nestjs/nest"
+          - "trpc/trpc"
+          - "apollographql/apollo-server"
+          - "prisma/prisma"
+        
+        testing_libraries:
+          - "vitest-dev/vitest"
+          - "microsoft/playwright"
+          - "jestjs/jest"
+          - "facebook/jest"
+      
+      integration_patterns:
+        ai_pr_validation: "Used by typescript-validator for TypeScript pattern validation"
+        file_detection: "Triggered by .ts/.tsx files and TypeScript dependencies in package.json"
+        knowledge_source: "knowledge-vault/knowledge/technologies/typescript/typescript-frontend-dev.md"
+    
+    documentation_sources:
+      context7_library_docs:
+        source_type: "structured_data"
+        priority: "primary"
+        mcp_server: "context7-mcp-server"
+        access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+        authentication: "none"
+        
+        library_mappings:
+          typescript_core: "/microsoft/TypeScript"
+          typescript_handbook: "/microsoft/TypeScript-Handbook"
+          definitely_typed: "/DefinitelyTyped/DefinitelyTyped"
+          typescript_eslint: "/typescript-eslint/typescript-eslint"
+          nestjs: "/nestjs/nest"
+          prisma: "/prisma/prisma"
+        
+        usage_patterns:
+          topic_resolution: "Always call resolve-library-id first to get exact Context7 ID"
+          documentation_access: "Use get-library-docs with resolved library ID"
+          topic_filtering: "Use topic parameter for specific areas (types, generics, decorators)"
+          version_specific: "Request specific versions when compatibility matters"
+        
+        integration_with_validation:
+          typescript_validator: "Reference for TypeScript patterns and best practices"
+          type_system_validation: "Validate against official TypeScript documentation patterns"
+          performance_optimization: "Cross-reference compilation optimization, strict mode"
+    
+    package_ecosystem:
+      npm_registry:
+        source_type: "structured_data"
+        priority: "secondary"
+        access_pattern: "WebFetch"
+        base_urls:
+          - "https://registry.npmjs.org/"
+          - "https://www.npmjs.com/package/"
+        
+        typescript_packages:
+          core: ["typescript", "@types/node", "ts-node", "tsx"]
+          compilers: ["@swc/core", "esbuild", "@babel/preset-typescript"]
+          linting: ["@typescript-eslint/parser", "@typescript-eslint/eslint-plugin", "tslint"]
+          testing: ["@types/jest", "ts-jest", "vitest", "@types/mocha"]
+          frameworks: ["@nestjs/core", "@trpc/server", "prisma", "typeorm"]
+          build_tools: ["webpack", "rollup", "vite", "tsup"]
+        
+        validation_integration:
+          dependency_analysis: "Check package.json for TypeScript ecosystem dependencies"
+          version_compatibility: "Validate TypeScript version compatibility across packages"
+          security_assessment: "Cross-reference with security-validator for vulnerability scanning"
+
+# CONDITIONAL SOURCE SELECTION LOGIC
+conditional_selection:
+  typescript_detection_triggers:
+    file_patterns:
+      - "**/*.ts"
+      - "**/*.tsx" 
+      - "**/tsconfig.json"
+      - "**/*.d.ts"
+      - "**/types/**/*.ts"
+    
+    dependency_indicators:
+      package_json_dependencies:
+        - "typescript"
+        - "@types/node"
+        - "ts-node"
+        - "@typescript-eslint/parser"
+      
+      config_files:
+        - "tsconfig.json"
+        - "tsconfig.base.json"
+        - ".eslintrc.js with @typescript-eslint"
+        - "jest.config.ts"
+        - "vite.config.ts"
+    
+    content_analysis:
+      import_patterns:
+        - "import type {"
+        - "import { type "
+        - "interface "
+        - "type "
+        - "enum "
+      
+      typescript_syntax:
+        - ": string"
+        - ": number"
+        - "?: "
+        - "<T>"
+        - "extends "
+
+  source_selection_algorithm:
+    step_1_detection:
+      confidence_scoring:
+        file_patterns: 0.4
+        dependencies: 0.3
+        config_files: 0.2
+        content_analysis: 0.1
+      minimum_confidence: 0.7
+    
+    step_2_source_prioritization:
+      primary_sources:
+        condition: "confidence >= 0.8"
+        sources: ["github_repositories", "context7_library_docs", "npm_registry"]
+      
+      supplementary_sources:
+        condition: "0.7 <= confidence < 0.8"
+        sources: ["context7_library_docs", "npm_registry"]
+      
+      fallback_sources:
+        condition: "confidence < 0.7"
+        sources: ["general_frontend_patterns"]
+    
+    step_3_integration_coordination:
+      ai_pr_validation:
+        typescript_validator: "Use TypeScript-specific validation patterns"
+        type_system_validation: "Reference official TypeScript documentation"
+        performance_assessment: "Apply TypeScript compilation optimization patterns"
+      
+      knowledge_vault_integration:
+        knowledge_source: "knowledge-vault/knowledge/technologies/typescript/typescript-frontend-dev.md"
+        context_loading: "REQUEST_CONTEXT(typescript-frontend-dev)"
+        role_assignment: "typescript specialist agent"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  ai_pr_validation_system:
+    validation_enhancement:
+      typescript_validator:
+        type_patterns: "Enhanced with TypeScript-specific type system patterns"
+        generic_validation: "Generic type validation using official sources"
+        decorator_validation: "Decorator pattern validation against TypeScript documentation"
+        strict_mode_patterns: "Strict TypeScript configuration validation"
+      
+      file_detection_system:
+        multi_layered_detection: "Extension + content + TypeScript dependency analysis"
+        confidence_scoring: "TypeScript-specific confidence calculation"
+        agent_spawning: "Role-aware TypeScript specialist spawning"
+      
+      knowledge_context_loading:
+        progressive_loading: "Load TypeScript context only when TypeScript files detected"
+        role_specialization: "typescript-dev role with TypeScript expertise"
+        unlimited_context: "Full TypeScript implementation knowledge without token limits"
+    
+    orchestration_integration:
+      conditional_activation: "TypeScript sources activated when TypeScript files detected in PR"
+      parallel_validation: "TypeScript validation runs parallel with security and performance"
+      result_aggregation: "TypeScript validation results integrated into comprehensive PR report"
+      fallback_handling: "Graceful degradation to general frontend patterns if TypeScript detection fails"
+
+  research_framework_integration:
+    source_discovery:
+      step_2_7_integration: "Add TypeScript source discovery to research orchestrator workflow"
+      topic_specific_routing: "TypeScript research requests route to TypeScript-specific sources"
+      multi_source_coordination: "Coordinate GitHub, Context7, and npm sources for TypeScript research"
+    
+    method_enhancement:
+      domain_adaptive: "Enhanced with TypeScript-specific domain adaptation patterns"
+      multi_perspective: "TypeScript perspectives include core, frameworks, testing, performance"
+      constitutional_ai: "TypeScript validation includes ethical framework usage assessment"
+
+  knowledge_vault_coordination:
+    authoritative_sources:
+      typescript_frontend_dev: "knowledge-vault/knowledge/technologies/typescript/typescript-frontend-dev.md"
+      typescript_performance: "knowledge-vault/knowledge/technologies/typescript/typescript-performance.md"  
+      typescript_architect: "knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
+      typescript_testing: "knowledge-vault/knowledge/technologies/typescript/typescript-testing.md"
+    
+    cross_reference_validation:
+      source_consistency: "Ensure TypeScript mappings align with knowledge vault content"
+      update_coordination: "Knowledge vault updates trigger TypeScript mapping reviews" 
+      bidirectional_sync: "TypeScript source discoveries update knowledge vault"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  typescript_detection_workflow:
+    step_1: "Scan PR files for TypeScript indicators using conditional_selection logic"
+    step_2: "Calculate confidence score based on file patterns, dependencies, content"
+    step_3: "If confidence >= 0.7, activate TypeScript-specific source mappings" 
+    step_4: "Load TypeScript knowledge context using REQUEST_CONTEXT(typescript-frontend-dev)"
+    step_5: "Spawn typescript specialist agent with TypeScript expertise"
+    step_6: "Coordinate TypeScript validation with security and performance validators"
+  
+  source_access_workflow:
+    github_analysis:
+      step_1: "Use mcp__MCP_DOCKER__get_file_contents for TypeScript repository analysis"
+      step_2: "Focus on type definitions, generic patterns, and architectural decisions"
+      step_3: "Reference official TypeScript repositories for validation patterns"
+    
+    context7_documentation:
+      step_1: "Call mcp__MCP_DOCKER__resolve-library-id with 'typescript' to get Context7 ID"
+      step_2: "Use mcp__MCP_DOCKER__get-library-docs with resolved TypeScript library ID"
+      step_3: "Apply topic filtering for specific TypeScript areas (types, generics, decorators)"
+    
+    npm_ecosystem:
+      step_1: "Analyze package.json for TypeScript ecosystem dependencies"
+      step_2: "Use WebFetch for npm registry queries when version compatibility needed"
+      step_3: "Cross-reference with security scanning for vulnerability assessment"
+  
+  validation_coordination:
+    type_system_integration: "Enhance type validation with TypeScript-specific patterns"
+    security_assessment: "Include TypeScript-specific security patterns (type safety, strict mode)"
+    performance_analysis: "Apply TypeScript compilation optimization validation"
+    framework_compliance: "TypeScript framework patterns and best practices"
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_accuracy:
+    github_repositories: "Use only official and well-maintained TypeScript repositories"
+    documentation_currency: "Prefer latest stable TypeScript documentation versions"
+    ecosystem_completeness: "Cover core TypeScript, compilers, frameworks, testing tools"
+  
+  integration_effectiveness:
+    ai_pr_validation: "≥95% accuracy in TypeScript pattern detection and validation"
+    research_coordination: "≥90% relevant source selection for TypeScript research topics"
+    knowledge_consistency: "100% alignment with knowledge vault TypeScript content"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct TypeScript technology identification"
+    completeness: "≥90% coverage of TypeScript ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive TypeScript development guidance only"
+    transparency: "Clear rationale for TypeScript source selection decisions"
+
+# SUCCESS CRITERIA
+success_criteria:
+  typescript_specificity: "TypeScript development gets dedicated GitHub, Context7, npm sources"
+  ai_pr_integration: "Seamless integration with typescript-validator"
+  research_enhancement: "TypeScript research requests automatically use optimized sources"
+  knowledge_consistency: "TypeScript mappings align with knowledge vault structure"
+  performance_optimization: "TypeScript-specific context loading only when needed"
+  validation_accuracy: "≥95% accuracy in TypeScript development information retrieval"

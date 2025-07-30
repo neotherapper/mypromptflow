@@ -31,6 +31,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP
+mcp_profile_reference: "@mcp_profile/memory"
 ---
 
 **Official Anthropic server for persistent knowledge graph-based memory management**  

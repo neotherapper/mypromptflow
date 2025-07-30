@@ -1,0 +1,190 @@
+# Apache Kafka MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-kafka-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "cde34567-fgh8-9012-cdef-kafka005"
+name: "Apache Kafka MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 3  # Derived from composite score 5.3/10 = good
+maturity_level: "enterprise"  # Production ready 94%, industry standard
+status: "adopted"  # Industry standard for event streaming
+
+# Technology Classification
+technology_type:
+  - "api_service"
+  - "developer-tools"
+  - "integration"
+deployment_model: "hybrid"  # Self-hosted, cloud managed, containerized
+integration_complexity: "very_complex"  # Setup complexity 3/10
+
+# Vendor and Licensing
+vendor: "Apache Foundation/Community"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "integration"
+  - "developer-tools"
+  - "software-development"
+  - "analytics"
+  - "enterprise"
+  - "tech-stack"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "event_streams"
+    - "message_data"
+    - "topic_metadata"
+    - "consumer_group_info"
+    - "partition_statistics"
+    - "broker_metrics"
+    - "cluster_configuration"
+    - "throughput_metrics"
+  
+  access_methods:
+    - "real-time"  # Event streaming
+    - "on-demand"  # Topic and metadata queries
+    - "batch"      # Historical data processing
+    
+  authentication:
+    required: true
+    methods:
+      - "sasl"
+      - "ssl"
+      - "oauth"
+      - "acl"
+    security_level: "enterprise"
+    
+  rate_limits:
+    messages_per_second: 1000000
+    concurrent_connections: 10000
+    partition_count: 4000
+    
+  complexity_score: 3  # Setup complexity (3/10) - very high complexity
+  
+  typical_use_cases:
+    - "event_streaming"
+    - "data_pipeline_integration"
+    - "real_time_analytics"
+    - "microservice_communication"
+    - "log_aggregation"
+    - "change_data_capture"
+    - "message_queuing"
+    - "distributed_system_coordination"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.3
+  tier: "Tier 3 Specialized"
+  priority_rank: 7
+  production_readiness: 94
+  
+  detailed_scoring:
+    information_retrieval_relevance: 4
+    setup_complexity: 3
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 9
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 96
+    performance_score: 93
+    security_score: 91
+    scalability_score: 97
+
+# Content and Documentation
+url: "https://github.com/dpkp/kafka-python"
+description: "Premier event streaming platform for building real-time data pipelines and streaming applications. Distributed, fault-tolerant streaming server enabling high-throughput, low-latency data processing at enterprise scale."
+
+key_features: |
+  ## Event Streaming Architecture
+  - Distributed commit log with topic-based partitioning
+  - High-throughput, low-latency message processing
+  - Fault-tolerant replication across multiple brokers
+  - Horizontal scaling with automatic load balancing
+  
+  ## Producer and Consumer APIs
+  - Flexible producer API with configurable delivery semantics
+  - Consumer groups for scalable message processing
+  - Exactly-once processing guarantees with idempotent producers
+  - Stream processing with Kafka Streams API
+  
+  ## Enterprise Features
+  - Multi-tenancy with quotas and access control lists (ACLs)
+  - SASL/SSL security with fine-grained authorization
+  - Schema registry integration for data governance
+  - Monitoring and alerting with comprehensive metrics
+  
+  ## Integration Ecosystem
+  - Kafka Connect for external system integration
+  - Rich ecosystem of connectors and plugins
+  - Cloud-native deployment with Kubernetes operators
+  - Multi-datacenter replication and disaster recovery
+
+use_cases: |
+  1. **Event Streaming**: Real-time event capture → Stream processing → Multiple consumer integration
+  2. **Data Pipeline Integration**: System integration → Message transformation → Target system delivery
+  3. **Microservice Communication**: Service decoupling → Asynchronous messaging → Event-driven architecture
+  4. **Real-time Analytics**: Event ingestion → Stream processing → Analytics dashboard updates
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    system_decoupling: 200000  # $200K/year in architecture flexibility
+    real_time_processing: 150000  # $150K/year in faster insights
+    fault_tolerance: 120000  # $120K/year in reduced downtime
+    scalability: 100000  # $100K/year in infrastructure efficiency
+    
+  roi_metrics:
+    payback_period_months: 9
+    net_roi_percentage: 190
+    implementation_cost: 150000
+    annual_operating_cost: 100000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/apache-kafka-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/apache-kafka-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Apache Kafka MCP Server provides essential event streaming capabilities for distributed systems and real-time data processing.
+  Composite score of 5.3/10 reflects specialized nature with very high setup complexity but industry-standard capabilities.
+  
+  **Key Strengths:**
+  - Industry standard for event streaming with proven scalability
+  - Exceptional throughput and fault-tolerance capabilities
+  - Rich ecosystem with extensive integration options
+  - Strong Apache Foundation support and active community
+  
+  **Implementation Considerations:** 
+  - Very high setup complexity requires distributed systems expertise
+  - Significant operational overhead for cluster management
+  - Best suited for organizations with high-volume streaming requirements
+  
+  **Strategic Value:** Critical for organizations building event-driven architectures and requiring high-throughput, fault-tolerant messaging systems

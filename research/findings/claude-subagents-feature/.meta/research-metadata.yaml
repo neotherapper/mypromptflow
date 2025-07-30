@@ -1,0 +1,65 @@
+# Research Metadata for Claude Code Sub-Agents Feature Analysis
+# Version: 1.0
+# Created: 2025-07-28
+
+metadata:
+  research_id: "claude-subagents-feature-2025"
+  title: "Claude Code .claude/agents Sub-Agents Feature Analysis"
+  version: "1.0.0"
+  created_date: "2025-07-28"
+  last_updated: "2025-07-28"
+  
+  # Research Classification
+  research_type: "technology_analysis"
+  domain: "ai_development_tools"
+  category: "claude_code_features"
+  priority: "critical"
+  
+  # Scope and Objectives
+  research_scope:
+    primary_focus: "Claude Code .claude/agents sub-agents feature released July 2025"
+    key_questions:
+      - "What is the sub-agents feature and how does it work?"
+      - "What is the configuration format and directory structure?"
+      - "How does it solve context pollution compared to Task tool?"
+      - "What are practical implementation patterns?"
+      - "What are the technical requirements and limitations?"
+    
+  methodology: "unified_source_discovery_framework"
+  information_sources:
+    - "official_anthropic_documentation"
+    - "community_github_repositories"
+    - "developer_blog_posts_july_2025"
+    - "technical_analysis_articles"
+    - "community_discussions"
+
+  # Quality Metrics
+  source_diversity_score: 8.5  # Multiple source types used
+  information_freshness: "current"  # July 2025 release
+  technical_depth: "comprehensive"
+  validation_level: "high"  # Cross-validated across multiple sources
+
+  # Integration Points
+  related_research:
+    - "claude-code-frontend-development"
+    - "ai-tool-integration-requirements"
+    - "ai-orchestration-platforms-analysis"
+  
+  # Repository Integration
+  integration_status: "active"
+  ai_knowledge_base_tier: "tier_1_critical"
+  
+tags:
+  - claude_code
+  - sub_agents
+  - ai_development
+  - context_isolation
+  - yaml_configuration
+  - anthropic
+  - july_2025_release
+  
+status:
+  research_phase: "completed"
+  validation_status: "validated"
+  documentation_status: "comprehensive"
+  integration_readiness: "ready"

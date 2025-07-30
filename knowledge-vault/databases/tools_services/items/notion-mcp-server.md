@@ -1,112 +1,136 @@
 ---
-category: Knowledge Management
-description: Strategic workspace and knowledge management integration for AI agents
-  Highest Tier 2 priority server for enterprise knowledge workflows
-id: adb7197f-314e-4459-8bac-b283da059d89
-installation_priority: 4
+api_version: Notion API v2022-06-28
+authentication_types:
+- OAuth 2.0
+- API Token
+- Internal Integration
+category: Productivity Platform
+description: All-in-one productivity and project management platform integration
+  server for comprehensive team collaboration and knowledge management. Essential
+  team productivity infrastructure enabling database management, content creation,
+  and workflow automation through MCP.
+estimated_setup_time: 15-20 minutes
+id: f3e2d1c0-5a78-4b91-9e2f-3c5d7e9f1a2b
+installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
+migration_date: '2025-07-27'
 name: Notion MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/notion-server-profile.md
-priority: 2nd_priority
-production_readiness: 85
-provider: Anthropic
-quality_score: 7.8
+original_file: mcp-registry/detailed-profiles/tier-1/notion-productivity-server-profile.md
+priority: 1st_priority
+production_readiness: 95
+provider: Community
+quality_score: 8.15
 repository_url: https://github.com/modelcontextprotocol/servers/tree/main/src/notion
+setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- Database
-- Tier 2
-- Storage Service
-- API Service
 - MCP Server
-- Search Engine
-- Security Tool
-- Analytics
-- Monitoring
-tier: Tier 2
+- Productivity Platform
+- Project Management
+- Collaboration
+- Documentation
+- Database
+- Tier 1
+- Enterprise
+- mcp-server
+- tier-1
+- notion
+tier: Tier 1
 transport_protocols:
-- HTTP Transport
+- Notion REST API
+- Webhook Integration
+- Real-time Sync
+information_capabilities:
+  data_types:
+  - database_records
+  - page_content
+  - block_data
+  - user_data
+  - workspace_metadata
+  - template_data
+  - property_schemas
+  - relation_data
+  - formula_results
+  access_methods:
+  - real-time
+  - batch
+  - on-demand
+  - webhook
+  authentication: required
+  rate_limits: medium
+  complexity_score: 3
+  typical_use_cases:
+  - "Create and manage project databases with custom properties and automation"
+  - "Generate reports and dashboards from team collaboration data"
+  - "Automate task management and workflow coordination"
+  - "Access team knowledge base and documentation systems"
+  - "Synchronize project data with external tools and platforms"
+  - "Create standardized templates for consistent team processes"
+  - "Track team productivity and project progress metrics"
+mcp_profile_reference: "@mcp_profile/notion-server"
 ---
 
-**Strategic workspace and knowledge management integration for AI agents**  
-**Highest Tier 2 priority server for enterprise knowledge workflows**
-
----
+**All-in-one productivity platform integration for comprehensive team collaboration and knowledge management through MCP**
 
 ## 📋 Basic Information
 
 | Field | Value |
 |-------|-------|
-| **Name** | Notion |
-| **Provider** | Anthropic |
-| **Status** | Official |
-| **Category** | Knowledge Management |
-| **Repository** | [GitHub](https://github.com/modelcontextprotocol/servers/tree/main/src/notion) |
-| **Documentation** | [Official Docs](https://modelcontextprotocol.io/servers/notion) |
+| **Provider** | Community |
+| **Category** | Productivity Platform |
+| **Production Readiness** | 95% |
+| **Setup Complexity** | Simple (3/10) |
+| **Repository** | [Notion MCP Server](https://github.com/modelcontextprotocol/servers/tree/main/src/notion) |
 
----
+## 📊 Information Access Capabilities  
 
-## 🎯 Quality & Scoring Metrics
+### Primary Information Types
+- **Database Management**: Flexible database creation with custom properties, views, and automated workflows
+- **Content Creation**: Rich text pages with multimedia support, templates, and collaborative editing
+- **Project Tracking**: Task management, project boards, calendars, and progress monitoring
+- **Team Collaboration**: Real-time editing, commenting, sharing, and permission management
+- **Knowledge Management**: Documentation systems, wikis, and information organization
+- **Workflow Automation**: Formula-based automation, rollups, and inter-database relationships
 
-### Overall Assessment
-- **Composite Score**: 7.8/10
-- **Tier**: Tier 2 Strategic
-- **Priority Rank**: #1 (Tier 2)
-- **Production Readiness**: 85%
+### Access Patterns
+- **Real-time Collaboration**: Live editing and synchronization across team members
+- **Batch Operations**: Bulk data import/export and database management
+- **Webhook Integration**: Event-driven updates and automation triggers
+- **On-demand Queries**: Specific data retrieval with filtering and sorting
 
-### Detailed Scoring
-| Metric | Score | Rationale |
-|--------|-------|-----------|
-| **Information Retrieval Relevance** | 8/10 | Excellent structured knowledge access |
-| **Setup Complexity** | 7/10 | Moderate - requires API key and workspace setup |
-| **Maintenance Status** | 9/10 | Actively maintained by Anthropic |
-| **Documentation Quality** | 8/10 | Good documentation with examples |
-| **Community Adoption** | 7/10 | Growing adoption in enterprise AI |
-| **Integration Potential** | 8/10 | Rich API with comprehensive workspace access |
-
-### Production Readiness Breakdown
-- **Stability Score**: 85% - Well-tested with active maintenance
-- **Performance Score**: 80% - Good response times for typical workloads
-- **Security Score**: 90% - Enterprise-grade OAuth 2.0 security
-- **Scalability Score**: 85% - Handles team-scale operations effectively
-
----
+### Authentication & Security
+- **Authentication Required**: Notion workspace access with OAuth 2.0 or API tokens
+- **Rate Limits**: Medium (3 requests/second with burst capacity)
+- **Permissions**: Workspace-level access control with granular sharing settings
+- **Enterprise Security**: SAML/SSO integration, audit logging, and compliance features
 
 ## 🚀 Core Capabilities & Features
 
-### Primary Function
-**Comprehensive workspace management and knowledge base integration for AI agents**
+### Database Operations
+- **Flexible Schemas**: Create custom databases with properties, relations, and formulas
+- **Advanced Querying**: Complex filtering, sorting, and view configuration
+- **Automation**: Workflow automation with property-based triggers and actions
 
-### Key Features
+### Content Management
+- **Rich Text Editing**: Comprehensive formatting with blocks, embeds, and multimedia
+- **Template Systems**: Standardized content creation with reusable templates
+- **Version Control**: Page history and collaborative editing with conflict resolution
 
-#### Workspace Operations
-- ✅ Page creation with hierarchical structure support
-- ✅ Database operations with property management
-- ✅ Block-level content manipulation and updates
-- ✅ Comment system integration for collaboration
-- ✅ User and permission management queries
+### Project Management
+- **Task Tracking**: Issue management with status, priority, and assignment workflows
+- **Project Planning**: Milestone tracking, capacity planning, and progress monitoring
+- **Team Coordination**: Sprint management, standup reports, and productivity analytics
 
-#### Content Management
-- 🔄 Rich text content with formatting preservation
-- 🔄 Database querying with filters and sorting
-- 🔄 Page property updates and metadata management
-- 🔄 Block children retrieval and manipulation
-- 🔄 Search functionality across workspace content
+### Integration & Automation
+- **API Integration**: Comprehensive REST API for external tool connectivity
+- **Workflow Automation**: Custom automations and business process optimization
+- **Cross-Platform Sync**: Desktop, mobile, and web synchronization
 
-#### Collaboration Features
-- 👥 User profile and workspace access management
-- 👥 Comment creation and retrieval systems
-- 👥 Page sharing and permission controls
-- 👥 Team member directory and access patterns
-- 👥 Activity tracking and audit capabilities
-
-#### Integration Capabilities
-- 🔗 REST API compatibility with full Notion API
-- 🔗 Webhook support for real-time updates
-- 🔗 Bulk operations for large-scale data management
-- 🔗 Export/import capabilities for data migration
-- 🔗 Template system for standardized page creation
-
----
+### Typical Use Cases for AI Agents
+- **Project Coordination**: "Create project database with tasks, milestones, and team assignments"
+- **Knowledge Management**: "Organize team documentation with searchable knowledge base"
+- **Reporting Automation**: "Generate weekly progress reports from project databases"
+- **Template Creation**: "Develop standardized meeting notes and project planning templates"
+- **Team Analytics**: "Track team productivity and project completion metrics"
+- **Workflow Optimization**: "Automate routine tasks and status updates across projects"

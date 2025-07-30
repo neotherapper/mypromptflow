@@ -32,6 +32,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - WebSocket
+mcp_profile_reference: "@mcp_profile/figma"
 ---
 
 **Design system automation and design-to-code workflows for modern development teams**  

@@ -72,7 +72,7 @@ File Types → Specialized Agents:
 ### Applied Framework (`@projects/ai-agent-instruction-design-excellence/`)
 - **93% Overall Effectiveness**: Validated through comprehensive system assessment
 - **Token Optimization**: 60-70% reduction while maintaining comprehensive functionality
-- **Constitutional AI Compliance**: 99% compliance across all operations
+- **Constitutional AI Compliance**: Framework designed for 99% compliance across all operations
 - **Production Readiness**: Enterprise-grade scalability with 70+ component validation
 
 ## Implementation Strategy
@@ -104,7 +104,7 @@ File Types → Specialized Agents:
 - **Agent Effectiveness**: >90% effectiveness scores using validated framework assessment
 
 ### Compliance Requirements
-- **Constitutional AI**: 99% compliance across all automated operations
+- **Constitutional AI**: Framework designed for 99% compliance across all automated operations
 - **Self-Consistency**: Cross-validation verification for all system components
 - **Research Integration**: Continuous application of validated research findings
 - **Security Standards**: Enterprise-grade security patterns for automated execution

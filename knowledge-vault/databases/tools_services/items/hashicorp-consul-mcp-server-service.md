@@ -29,6 +29,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - gRPC
+mcp_profile_reference: "@mcp_profile/hashicorp-consul"
 ---
 
 **Service discovery, configuration, and mesh networking platform for distributed systems**  

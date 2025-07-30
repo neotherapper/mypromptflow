@@ -6,7 +6,7 @@ An orchestrated document generation system using Claude Code for comprehensive b
 
 This repository implements an AI-powered knowledge base that:
 
-- Generates 67 types of business and technical documents
+- Designed to generate documents based on comprehensive 67-type framework research
 - Orchestrates multi-agent workflows for complex documentation
 - Provides feature-driven development workspaces
 - Optimizes all content for AI agent consumption

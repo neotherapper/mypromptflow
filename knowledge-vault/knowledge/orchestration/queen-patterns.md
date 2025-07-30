@@ -249,12 +249,135 @@ strategic_orchestration_example:
      - requirement_evolution: "stakeholder_requirement_updates"
    ```
 
+## AI Systems Integration
+
+### Framework Coordination Enhancement
+
+**Information Access Integration**:
+```yaml
+information_access_coordination:
+  queen_agent_role: "Master coordinator for technology-specific source discovery"
+  integration_pattern: "Information Access Specialist provides sources, Queen orchestrates utilization"
+  optimization_scope: "Source quality prioritization and multi-domain coordination"
+  reference: "See knowledge/ai-systems/frameworks/information-access/README.md"
+```
+
+**Research Orchestrator Integration**:
+```yaml
+research_orchestrator_coordination:
+  queen_agent_role: "Strategic research methodology selection and quality oversight"
+  integration_pattern: "15-method research system with Queen-level priority management"
+  optimization_scope: "Method selection optimization and constitutional AI compliance"
+  reference: "See knowledge/ai-systems/frameworks/research-orchestrator/README.md"
+```
+
+**Validation Systems Integration**:
+```yaml
+validation_systems_coordination:
+  queen_agent_role: "System-wide quality assurance and compliance enforcement"
+  integration_pattern: "Multi-level validation with Queen authority for threshold management"
+  optimization_scope: "95%+ constitutional compliance across all coordinated operations"
+  reference: "See knowledge/ai-systems/frameworks/validation-systems/README.md"
+```
+
+**Meta-Prompting Integration**:
+```yaml
+meta_prompting_coordination:
+  queen_agent_role: "Continuous optimization of all coordination patterns"
+  integration_pattern: "40-60% performance enhancement through learned optimization"
+  optimization_scope: "Self-improving orchestration with constitutional AI constraints"
+  reference: "See knowledge/ai-systems/frameworks/meta-prompting/README.md"
+```
+
+### Enhanced Sub-Agent Coordination
+
+**Sub-Agent Orchestration with Context Isolation**:
+```yaml
+sub_agent_orchestration:
+  parallel_coordination: "Up to 10 sub-agents with independent 200k contexts"
+  framework_specialists:
+    - "information-access-specialist (unified source discovery)"
+    - "research-specialist (15-method research system)"
+    - "validation-specialists (multi-dimensional quality assurance)"
+    - "framework-compliance-validator (constitutional AI validation)"
+  
+  coordination_patterns:
+    sequential_coordination: "Framework-specific task chains with quality gates"
+    parallel_coordination: "Simultaneous multi-framework execution"
+    adaptive_coordination: "Dynamic framework selection based on complexity"
+  
+  quality_standards:
+    constitutional_compliance: "95%+ compliance across all sub-agent operations"
+    context_isolation: "Clean separation prevents main conversation pollution"
+    integration_quality: "Seamless result integration without complexity exposure"
+    
+  reference: "See knowledge/ai-systems/subagents/README.md for complete coordination patterns"
+```
+
+### Command Integration Patterns
+
+**Slash Command Orchestration**:
+```yaml
+command_orchestration:
+  queen_authority_commands:
+    "/research": "Enhanced research with Information Access + Research Orchestrator"
+    "/sdlc-orchestrate": "Complete SDLC coordination with all framework integration"
+    "/orchestrate-agents": "Master sub-agent coordination with quality validation"
+    "/validate-pr": "Comprehensive validation with technology-specific expertise"
+  
+  multi_command_workflows:
+    research_to_implementation: "/research → /create-feature → /sdlc-validate-pr"
+    analysis_to_optimization: "/analyse-dependencies → /orchestrate-agents → /validate-pr"
+  
+  framework_enhancement:
+    information_access: "Technology-specific source discovery for all commands"
+    research_orchestrator: "Systematic methodology application"
+    validation_systems: "Quality gates and compliance validation"
+    meta_prompting: "Continuous optimization of command effectiveness"
+    
+  reference: "See knowledge/ai-systems/commands/ for complete command integration"
+```
+
+### Meta-Prompting Enhanced Orchestration
+
+**Self-Improving Queen Patterns**:
+```yaml
+meta_optimization:
+  performance_measurement:
+    orchestration_effectiveness: "Success rates and quality outcomes by coordination pattern"
+    resource_efficiency: "Token and computational resource optimization"
+    user_satisfaction: "Value delivery and workflow improvement metrics"
+    constitutional_compliance: "95%+ compliance maintenance across all operations"
+  
+  optimization_cycles:
+    pattern_learning: "Identification of successful orchestration strategies"
+    failure_analysis: "Analysis of coordination failures and improvement opportunities"
+    adaptive_enhancement: "Dynamic adjustment of coordination complexity"
+    quality_optimization: "Continuous improvement of quality achievement patterns"
+  
+  adaptive_behavior:
+    complexity_scaling: "Appropriate orchestration complexity for task requirements"
+    framework_selection: "Intelligent framework combination based on success patterns"
+    resource_allocation: "Optimal resource distribution based on learned patterns"
+    quality_threshold: "Dynamic quality standard adjustment based on context"
+    
+  reference: "See knowledge/ai-systems/frameworks/meta-prompting/README.md for optimization patterns"
+```
+
 ## Cross-References
 
+### Traditional Orchestration Patterns
 - **Architect Patterns**: See `knowledge/orchestration/architect-patterns.md` for technical coordination
 - **Specialist Patterns**: See `knowledge/orchestration/specialist-patterns.md` for domain expertise
 - **Worker Patterns**: See `knowledge/orchestration/worker-patterns.md` for task execution
 - **Coordination Protocols**: See `knowledge/orchestration/coordination-protocols.md` for communication
+
+### AI Systems Integration
+- **AI Systems Overview**: See `knowledge/ai-systems/README.md` for comprehensive AI capabilities
+- **Framework Integration**: See `knowledge/ai-systems/integration-patterns/README.md` for multi-framework coordination
+- **Sub-Agent Coordination**: See `knowledge/ai-systems/subagents/README.md` for specialist orchestration
+- **Command Integration**: See `knowledge/ai-systems/commands/README.md` for workflow automation
+- **Meta-Capabilities**: See `knowledge/meta-capabilities/README.md` for self-improving systems
 
 ## Quality Validation
 

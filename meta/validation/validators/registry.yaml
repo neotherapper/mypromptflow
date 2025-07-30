@@ -2,9 +2,9 @@
 # Updated: 2025-07-20 - Reorganized structure with revolutionary intent validation
 
 validator_registry:
-  discovery_date: "2025-07-21"
+  discovery_date: "2025-07-28"
   total_validators: 22
-  organization: "Enhanced with CLAUDE.md specialized validator for comprehensive project file coverage"
+  organization: "Enhanced with claude-agents-validator and claude-subagents-compliance-validator for complete Claude sub-agents architecture validation and best practices compliance. CONSOLIDATED content-quality-validator combines vagueness-detector, anti-fiction-validator, and constitutional-ai-checker for unified quality assessment."
   
   existing_validators:
     # Revolutionary Intent Validation (NEW)
@@ -58,6 +58,23 @@ validator_registry:
       production_ready: true
       
     # Framework Validators (Reorganized)
+    - name: "content-quality-validator"
+      location: "meta/validation/validators/framework/content-quality-validator.md"
+      file_types: ["AI agent instructions", "command definitions", "documentation", "assessment reports", "validation documents", "framework specifications"]
+      capabilities: 
+        - "CONSOLIDATED: Three-dimensional content quality assessment"
+        - "Language precision detection (vagueness patterns, human artifacts)"
+        - "Content authenticity verification (fabricated metrics, evidence requirements)"
+        - "Constitutional compliance validation (5-principle assessment)"
+        - "Integrated quality scoring with 95% compliance threshold"
+        - "Production readiness gates with quality density thresholds"
+        - "Comprehensive quality enhancement templates"
+      spawn_pattern: "Task tool with content-quality-validator specialist"
+      authority_level: "Meta Validator"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "CONSOLIDATED VALIDATOR - Combines vagueness-detector + anti-fiction-validator + constitutional-ai-checker"
+      
     - name: "vagueness-detector"
       location: "meta/validation/validators/framework/vagueness-detector.md"
       file_types: ["AI agent instructions", "command definitions", "documentation"]
@@ -66,6 +83,7 @@ validator_registry:
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
+      status: "REPLACED by content-quality-validator (language precision dimension)"
       
     - name: "anti-fiction-validator"
       location: "meta/validation/validators/framework/anti-fiction-validator.md"
@@ -75,6 +93,7 @@ validator_registry:
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
+      status: "REPLACED by content-quality-validator (content authenticity dimension)"
       
     - name: "constitutional-ai-checker"
       location: "meta/validation/validators/framework/constitutional-ai-checker.md"
@@ -84,16 +103,25 @@ validator_registry:
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
+      status: "REPLACED by content-quality-validator (constitutional compliance dimension)"
       
-    - name: "framework-coherence-analyzer"
-      location: "meta/validation/validators/framework/framework-coherence-analyzer.md"
-      file_types: ["Framework specifications", "multi-file instruction sets", "system architectures"]
-      capabilities: ["5-dimension coherence analysis", "Structural consistency validation", "High production threshold"]
-      spawn_pattern: "Direct validator execution"
+    - name: "framework-coherence-validator"
+      location: "meta/validation/validators/framework/framework-coherence-validator.md"
+      file_types: ["Framework specifications", "multi-file instruction sets", "system architectures", "AI agent instructions with coherence issues"]
+      capabilities: 
+        - "CONSOLIDATED: Framework coherence analysis with anti-fiction validation"
+        - "5-dimension structural consistency assessment (30% structural, 25% semantic, 20% evidence, 15% procedural, 10% terminological)"
+        - "Creation-time anti-fiction validation with evidence requirements"
+        - "90+/100 compliance threshold for coherence and authenticity"
+        - "Integrated qualitative replacement recommendations"
+        - "Constitutional AI principle compliance integration"
+        - "Self-healing protocol compatibility with correction suggestions"
+      spawn_pattern: "Task tool with framework-coherence-validator specialist OR direct validator execution"
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
-      
+      innovation_level: "CONSOLIDATED VALIDATOR - Combines framework-coherence-analyzer + creation-time-anti-fiction-validator"
+      consolidation_source: "framework-coherence-analyzer.md + creation-time-anti-fiction-validator.md"      
     - name: "communication-pattern-validator"
       location: "meta/validation/validators/framework/communication-pattern-validator.md"
       file_types: ["Multi-agent systems", "communication protocols", "coordination patterns"]
@@ -120,6 +148,31 @@ validator_registry:
       authority_level: "Meta Validator"
       parallel_safe: true
       production_ready: true
+      
+    # Information Access Validators (NEW)
+    - name: "information-access-source-validator"
+      location: "meta/validation/validators/information-access/source-validation.md"
+      file_types:
+        - "meta/information-access/**/*.yaml"
+        - "research/findings/**/.meta/research-sources.md" 
+        - "knowledge-vault/databases/tools_services/views/*.yaml"
+        - "projects/ai-pr-validation-system/docs/file-type-analysis-templates.md"
+      capabilities:
+        - "Information access framework compliance validation"
+        - "Technology-specific source mapping validation (React, database patterns)"
+        - "MCP server accessibility and integration testing"
+        - "Multi-source workflow coordination validation"
+        - "Research framework source discovery integration"
+        - "AI-PR validation source enhancement verification"
+        - "Knowledge vault cross-reference and tag validation"
+        - "Unified source-discovery-framework integration verification"
+        - "Elimination of duplicate source mappings"
+      spawn_pattern: "Task tool with information-access-source-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Essential for unified information access framework compliance"
+      unified_framework_integration: "meta/information-access/source-discovery-framework.yaml"
       
     # Project Documentation Validators (NEW)
     - name: "project-documentation-validator"
@@ -176,6 +229,48 @@ validator_registry:
       innovation_level: "Essential for Claude project file optimization and integration"
     
     # File Type Validators (Existing and Planned)
+    - name: "claude-agents-validator"
+      location: "meta/validation/validators/file-type/claude-agents-validator.md"
+      file_types: [".claude/agents/*.md"]
+      capabilities:
+        - "Primary Claude sub-agents configuration validator with comprehensive assessment"
+        - "Integrates best practices compliance via claude-subagents-compliance-validator reference"
+        - "YAML frontmatter compliance and system prompt quality assessment"
+        - "Context isolation verification and parallel execution safety"
+        - "Meta/validation framework integration (Constitutional AI, anti-fiction, vagueness detection)"
+        - "Architecture compliance with Claude Code sub-agents specifications"
+        - "Cross-agent consistency and framework coherence analysis"
+        - "Production readiness assessment with ≥85/100 threshold"
+        - "Hierarchical validation with specialized component integration"
+      spawn_pattern: "Task tool with claude-agents-validator specialist"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Primary validator for Claude sub-agents with integrated best practices assessment"
+      meta_framework_integration: "Full integration with Constitutional AI, anti-fiction, vagueness detection, framework coherence"
+      best_practices_reference: "@meta/validation/validators/file-type/claude-subagents-compliance-validator.md"
+      
+    - name: "claude-subagents-compliance-validator"
+      location: "meta/validation/validators/file-type/claude-subagents-compliance-validator.md"
+      file_types: [".claude/agents/*.md"]
+      capabilities:
+        - "Specialized best practices compliance validator (referenced by claude-agents-validator)"
+        - "Single responsibility principle assessment (25 points)"
+        - "Tool minimalism validation with standard Read/Grep/Glob pattern (20 points)"
+        - "Context isolation verification with independent 200k-token contexts (20 points)"
+        - "Anti-pattern prevention (micro-specialization, excessive breadth, CRITICAL subagent spawning) (20 points)"
+        - "Configuration quality assessment (YAML structure, system prompt) (15 points)"
+        - "Best practices framework integration with knowledge vault patterns"
+        - "Comprehensive scoring (0-100 scale) with ≥85/100 production threshold"
+        - "Technology-specific pattern validation (React, TypeScript, Python)"
+      spawn_pattern: "Task tool with claude-subagents-compliance-validator specialist OR referenced by claude-agents-validator"
+      authority_level: "Specialist Agent (Level 3)"
+      parallel_safe: true
+      production_ready: true
+      innovation_level: "Specialized component for best practices enforcement, integrated with primary validator"
+      best_practices_integration: "knowledge-vault/knowledge/techniques/claude-subagents-best-practices.md"
+      usage_pattern: "Standalone validator OR component referenced by claude-agents-validator"
+    
     # Note: Some validators still need creation
     
     # Legacy/Development Validators (Kept for Reference)
@@ -226,22 +321,29 @@ validator_registry:
       production_ready: false
 
   production_ready_validators:
-    count: 13
+    count: 14
     validators: 
       - "intent-implementation-validator"  # REVOLUTIONARY NEW VALIDATOR
       - "claude-command-evaluator"
       - "ai-agent-instruction-evaluator"
+      - "information-access-source-validator"  # NEW INFORMATION ACCESS VALIDATOR
       - "project-documentation-validator"  # NEW PROJECT VALIDATOR
       - "ai-documentation-validator"  # NEW AI DOCS VALIDATOR
       - "claude-project-file-validator"  # NEW CLAUDE.md VALIDATOR
-      - "vagueness-detector"
-      - "anti-fiction-validator"
-      - "constitutional-ai-checker"
-      - "framework-coherence-analyzer"
+      - "claude-agents-validator"  # NEW CLAUDE SUB-AGENTS VALIDATOR
+      - "claude-subagents-compliance-validator"  # NEW BEST PRACTICES COMPLIANCE VALIDATOR
+      - "content-quality-validator"  # CONSOLIDATED QUALITY VALIDATOR
+      - "framework-coherence-validator"
       - "communication-pattern-validator"
       - "workflow-completeness-inspector"
       - "resilience-assessment-engine"
     
+    replaced_validators:
+      - "vagueness-detector → content-quality-validator (language precision)"
+      - "anti-fiction-validator → content-quality-validator (content authenticity)" 
+      - "constitutional-ai-checker → content-quality-validator (constitutional compliance)"
+      - "framework-coherence-analyzer → framework-coherence-validator (structural consistency)"
+      - "creation-time-anti-fiction-validator → framework-coherence-validator (evidence authenticity)"    
   development_validators:
     count: 9
     categories:
@@ -256,13 +358,17 @@ validator_registry:
       
     well_covered_types:
       - ".claude/commands/*.md": ["claude-command-evaluator"]
+      - ".claude/agents/*.md": ["claude-agents-validator - CLAUDE SUB-AGENTS ARCHITECTURE", "claude-subagents-compliance-validator - BEST PRACTICES COMPLIANCE"]
       - "ai/agents/*.md": ["ai-agent-instruction-evaluator"]
       - "ai/prompts/**/*.md": ["ai-agent-instruction-evaluator"]
       - "**/CLAUDE.md": ["claude-project-file-validator - SPECIALIZED CLAUDE INTEGRATION"]
       - "*/progress.md, */task-list.md": ["project-documentation-validator"]
       - "projects/*/docs/**/*.md": ["ai-documentation-validator"]
-      - "AI agent instructions": ["vagueness-detector", "anti-fiction-validator", "constitutional-ai-checker"]
-      - "Framework specifications": ["framework-coherence-analyzer", "constitutional-ai-checker"]
+      - "meta/information-access/**/*.yaml": ["information-access-source-validator - UNIFIED INFORMATION ACCESS"]
+      - "research/findings/**/.meta/research-sources.md": ["information-access-source-validator - SOURCE TRACKING"]
+      - "knowledge-vault/databases/tools_services/views/*.yaml": ["information-access-source-validator - VIEW VALIDATION"]
+      - "AI agent instructions": ["content-quality-validator - CONSOLIDATED QUALITY ASSESSMENT"]
+      - "Framework specifications": ["framework-coherence-validator", "content-quality-validator - CONSTITUTIONAL COMPLIANCE"]
       - "Multi-agent systems": ["communication-pattern-validator"]
       - "Workflow specifications": ["workflow-completeness-inspector"]
       - "System resilience patterns": ["resilience-assessment-engine"]
@@ -270,6 +376,9 @@ validator_registry:
       - "Project Documentation": ["project-documentation-validator - AI AGENT EFFECTIVENESS"]
       - "AI-Consumable Docs": ["ai-documentation-validator - TECHNICAL CLARITY"]
       - "CLAUDE.md Project Files": ["claude-project-file-validator - CLAUDE INTEGRATION EXCELLENCE"]
+      - "Claude Sub-Agents Config": ["claude-agents-validator - SUB-AGENTS ARCHITECTURE COMPLIANCE"]
+      - "Claude Sub-Agents Best Practices": ["claude-subagents-compliance-validator - BEST PRACTICES ENFORCEMENT"]
+      - "Information Access Framework": ["information-access-source-validator - UNIFIED SOURCE MANAGEMENT"]
       
     partially_covered_types:
       - "workflow validations": ["chain validators - development stage"]

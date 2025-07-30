@@ -28,6 +28,7 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTPS
+mcp_profile_reference: "@mcp_profile/apache-cassandra"
 ---
 
 **Distributed NoSQL database designed for handling massive amounts of data across commodity servers**  

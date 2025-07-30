@@ -26,6 +26,7 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
+mcp_profile_reference: "@mcp_profile/azure-comprehensive-resource-management"
 ---
 
 **Tier**: Tier 1 Immediate  

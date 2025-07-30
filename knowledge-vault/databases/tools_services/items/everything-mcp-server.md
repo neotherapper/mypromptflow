@@ -25,6 +25,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP
+mcp_profile_reference: "@mcp_profile/everything"
 ---
 
 **Official Anthropic demo server for comprehensive MCP protocol development and testing**  
