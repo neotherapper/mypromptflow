@@ -57,22 +57,20 @@ sub_agent_specifications:
       3. Analyze market size, growth trends, and forecasts
       4. Map market opportunities and white spaces
       
-      INTELLIGENT MCP SERVER COORDINATION:
-      Apply market-focused server selection for comprehensive business intelligence:
+      INTELLIGENT SOURCE COORDINATION:
+      Apply unified source discovery framework for market research:
       
-      MARKET LANDSCAPE SPECIALIZED SERVERS:
-      - bright_data: "Professional web scraping for market data, competitive analysis, and business intelligence"
-      - shopify: "E-commerce market insights, product data, and online retail analytics"
-      - linear: "Modern business workflow insights and project management market data"
-      - redis: "High-performance data access for real-time market metrics and caching"
-      - fetch: "Industry reports, analyst publications, and authoritative market research"
-      - memory: "Persistent storage for market findings and competitive intelligence"
+      PRIMARY SOURCES (Technology-Specific if detected):
+      - technology_mappings: "Technology market reports, adoption metrics, competitive landscapes"
+      - category_mappings: "Industry-specific market analysis and competitive intelligence"
+      - mcp_servers: "GitHub market insights, business intelligence repositories"
       
-      SERVER COORDINATION STRATEGY:
-      - Primary market coordination: bright_data + shopify + fetch + memory
-      - Business workflow enhancement: linear + redis (if SaaS/business tools domain detected)
-      - Fallback sequence: bright_data unavailable → fetch + memory intensive market search
-      - Market validation: Cross-validate market metrics across multiple business intelligence sources
+      MARKET RESEARCH FOCUS SOURCES:
+      - Industry analyst reports from authoritative sources (Gartner, McKinsey, BCG)
+      - Market research firms with validated methodologies (IDC, Forrester, Statista)
+      - Company financial reports, investor presentations, and earnings calls
+      - Trade publications and industry news from recognized sources
+      - Government market statistics and regulatory filings
       
       SOURCE COORDINATION STRATEGY:
       - Use parallel coordination for comprehensive market coverage
@@ -128,22 +126,12 @@ sub_agent_specifications:
       3. Evaluate implementation complexity and challenges
       4. Analyze infrastructure and resource needs
       
-      INTELLIGENT MCP SERVER COORDINATION:
-      Apply technical-focused server selection for implementation feasibility assessment:
-      
-      TECHNICAL FEASIBILITY SPECIALIZED SERVERS:
-      - github: "Production code repositories, technical implementations, and open source project analysis"
-      - git: "Version control insights, development patterns, and technical architecture analysis"
-      - filesystem: "Local technical documentation, specifications, and implementation guides"
-      - sentry: "Error tracking, performance monitoring, and technical risk assessment"
-      - fetch: "Technical whitepapers, vendor specifications, and engineering documentation"
-      - memory: "Persistent storage for technical feasibility findings and architecture patterns"
-      
-      SERVER COORDINATION STRATEGY:
-      - Primary technical coordination: github + git + filesystem + memory
-      - Monitoring enhancement: sentry (for performance and reliability assessment)
-      - Fallback sequence: github unavailable → filesystem + fetch intensive technical search
-      - Technical validation: Cross-validate implementations across multiple technical sources
+      SOURCES TO PRIORITIZE:
+      - Technical documentation and whitepapers
+      - Academic research papers on relevant technologies
+      - Open source project documentation
+      - Technology vendor specifications
+      - Engineering blogs and case studies
       
       OUTPUT FORMAT:
       - Technical architecture overview
@@ -192,21 +180,12 @@ sub_agent_specifications:
       3. Analyze regulatory and compliance requirements
       4. Develop risk mitigation and contingency strategies
       
-      INTELLIGENT MCP SERVER COORDINATION:
-      Apply risk-focused server selection for comprehensive risk assessment:
-      
-      RISK ASSESSMENT SPECIALIZED SERVERS:
-      - sentry: "Error tracking, performance monitoring, and operational risk analysis"
-      - atlassian: "Enterprise risk documentation, compliance tracking, and project risk management"
-      - fetch: "Risk management frameworks, regulatory guidance, and compliance documentation"
-      - memory: "Persistent storage for risk patterns, mitigation strategies, and regulatory requirements"
-      
-      SERVER COORDINATION STRATEGY:
-      - Primary risk coordination: sentry + atlassian + fetch + memory
-      - Operational risk focus: sentry (for technical and operational risk assessment)
-      - Enterprise risk focus: atlassian (for business and compliance risk management)
-      - Fallback sequence: sentry unavailable → atlassian + fetch intensive risk search
-      - Risk validation: Cross-validate risk factors across operational and enterprise sources
+      SOURCES TO PRIORITIZE:
+      - Risk management frameworks and standards
+      - Regulatory guidance and compliance documents
+      - Industry risk reports and case studies
+      - Insurance and actuarial data
+      - Legal and regulatory analysis
       
       OUTPUT FORMAT:
       - Comprehensive risk register
@@ -255,21 +234,12 @@ sub_agent_specifications:
       3. Develop ROI models and financial projections
       4. Assess funding requirements and financing options
       
-      INTELLIGENT MCP SERVER COORDINATION:
-      Apply financial-focused server selection for comprehensive economic analysis:
-      
-      FINANCIAL IMPACT SPECIALIZED SERVERS:
-      - redis: "High-performance data access for real-time financial metrics and economic data caching"
-      - bright_data: "Financial market data, investment research, and economic intelligence scraping"
-      - fetch: "Financial analyst reports, economic studies, and investment research documentation"
-      - memory: "Persistent storage for financial models, ROI calculations, and economic impact findings"
-      
-      SERVER COORDINATION STRATEGY:
-      - Primary financial coordination: redis + bright_data + fetch + memory
-      - Real-time data focus: redis (for current financial metrics and economic indicators)
-      - Market intelligence focus: bright_data (for investment data and financial benchmarks)
-      - Fallback sequence: redis unavailable → bright_data + fetch intensive financial search
-      - Financial validation: Cross-validate economic data across market intelligence and analytical sources
+      SOURCES TO PRIORITIZE:
+      - Financial analyst reports and models
+      - Industry cost benchmarks and studies
+      - Investment research and venture capital data
+      - Economic impact studies
+      - Government financial and economic data
       
       OUTPUT FORMAT:
       - Comprehensive cost analysis
@@ -318,22 +288,12 @@ sub_agent_specifications:
       3. Analyze resource requirements and timeline considerations
       4. Develop performance metrics and success criteria
       
-      INTELLIGENT MCP SERVER COORDINATION:
-      Apply implementation-focused server selection for strategic execution planning:
-      
-      IMPLEMENTATION PLANNING SPECIALIZED SERVERS:
-      - linear: "Modern project management workflows, issue tracking, and development methodology insights"
-      - atlassian: "Enterprise project management, implementation frameworks, and team collaboration patterns"
-      - github: "Implementation case studies, project repositories, and development workflow examples"
-      - fetch: "Implementation guides, methodology documentation, and best practice research"
-      - memory: "Persistent storage for implementation patterns, success factors, and execution strategies"
-      
-      SERVER COORDINATION STRATEGY:
-      - Primary implementation coordination: linear + atlassian + github + memory
-      - Modern methodology focus: linear (for agile and contemporary project management approaches)
-      - Enterprise methodology focus: atlassian (for large-scale implementation frameworks)
-      - Fallback sequence: linear unavailable → atlassian + github intensive implementation search
-      - Implementation validation: Cross-validate methodologies across modern and enterprise project management sources
+      SOURCES TO PRIORITIZE:
+      - Implementation case studies and success stories
+      - Project management methodologies and frameworks
+      - Best practice guides and implementation standards
+      - Consultant reports on implementation strategies
+      - Academic research on implementation success factors
       
       OUTPUT FORMAT:
       - Implementation methodology recommendations
