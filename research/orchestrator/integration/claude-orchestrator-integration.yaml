@@ -24,6 +24,11 @@ orchestrator_file_references:
     pattern_extraction_engine: "research/orchestrator/engines/pattern-extraction-engine.yaml"
     engine_registry: "research/orchestrator/engines/engine-registry.yaml"
   
+  phase_3_engines:
+    token_investment_calculator: "research/orchestrator/engines/token-investment-calculator.yaml"
+    mcp_memory_coordinator: "research/orchestrator/engines/mcp-memory-coordinator.yaml"
+    resource_quality_correlation_tracker: "research/orchestrator/analytics/resource-quality-correlation-tracker.yaml"
+  
   citation_system:
     enhanced_citation_framework: "research/orchestrator/citation-system/enhanced-citation-framework.yaml"
     citation_validation_engine: "research/orchestrator/citation-system/citation-validation-engine.yaml"

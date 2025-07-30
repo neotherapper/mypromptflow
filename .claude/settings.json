@@ -4,14 +4,42 @@
     "primaryLanguage": "typescript",
     "documentationStandard": "comprehensive"
   },
+  "agents": {
+    "parallelLimit": 5,
+    "defaultTimeout": 300,
+    "retryAttempts": 3
+  },
+  "validation": {
+    "enforceStructure": true,
+    "requireAIInstructions": true,
+    "checkDependencies": true
+  },
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "mcp__MCP_DOCKER__get_me",
+        "matcher": "mcp__MCP_DOCKER__search_wikipedia",
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/simple-test-hook.sh"
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/comprehensive-mcp-hook.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__MCP_DOCKER__get_me", 
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/debug-hook.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__MCP_DOCKER__fetch",
+        "hooks": [
+          {
+            "type": "command", 
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/debug-hook.sh"
           }
         ]
       }
