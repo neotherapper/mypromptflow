@@ -1,0 +1,251 @@
+# Universal Topic Configuration Template
+# This template defines the structure for configuring any topic in the monitoring system
+# Copy this template and customize for each new topic of interest
+
+topic_metadata:
+  name: "{TOPIC_NAME}"                    # Display name for the topic
+  slug: "{topic_slug}"                    # URL-safe identifier (lowercase, hyphens)
+  description: "{Brief description of what this topic covers}"
+  priority_level: "high|medium|low"       # Overall monitoring priority
+  monitoring_frequency: "realtime|hourly|daily|weekly"  # Base monitoring frequency
+  status: "active|paused|archived"        # Current monitoring status
+  created_date: "YYYY-MM-DD"             # When topic was added
+  last_updated: "YYYY-MM-DD"             # Last configuration update
+  related_topics: []                      # List of related topic slugs
+  keywords_primary: []                    # Primary keywords for relevance detection
+  keywords_secondary: []                  # Secondary/contextual keywords
+  keywords_exclusion: []                  # Keywords to filter out as noise
+
+# Source Discovery and Mapping Configuration
+source_mapping:
+  tier_1_official:
+    description: "Authoritative, official sources for this topic"
+    discovery_patterns:
+      - "Official organization websites"
+      - "Government agency sites"
+      - "Primary company/project websites"
+      - "Official documentation sites"
+    authority_indicators:
+      - "Domain authority factors"
+      - "Official designation criteria"
+      - "Primary source characteristics"
+    update_patterns:
+      expected_frequency: "daily|weekly|monthly"
+      peak_activity_times: []
+      seasonal_patterns: ""
+    sources: []  # Will be populated with discovered sources
+
+  tier_2_community:
+    description: "Community sources, expert creators, specialized media"
+    discovery_patterns:
+      - "Industry-specific news sites"
+      - "Expert YouTube channels"
+      - "Professional newsletters"
+      - "Conference/event sites"
+      - "Research institution blogs"
+    authority_indicators:
+      - "Domain expertise criteria"
+      - "Community recognition factors"
+      - "Content quality metrics"
+    update_patterns:
+      expected_frequency: "daily|weekly"
+      peak_activity_times: []
+      content_types: ["articles", "videos", "newsletters", "reports"]
+    sources: []  # Will be populated with discovered sources
+
+  tier_3_aggregators:
+    description: "Discussion forums, social media, news aggregators"
+    discovery_patterns:
+      - "Reddit communities"
+      - "Discord servers"
+      - "Twitter/X lists"
+      - "HackerNews discussions"
+      - "LinkedIn groups"
+      - "Specialized forums"
+    authority_indicators:
+      - "Community size and engagement"
+      - "Discussion quality"
+      - "Signal-to-noise ratio"
+    update_patterns:
+      expected_frequency: "hourly|daily"
+      peak_activity_times: []
+      engagement_metrics: ["upvotes", "comments", "shares"]
+    sources: []  # Will be populated with discovered sources
+
+# Content Analysis and Quality Configuration
+content_analysis:
+  relevance_scoring:
+    keyword_weights:
+      primary_keywords: 1.0      # Highest relevance weight
+      secondary_keywords: 0.7    # Medium relevance weight
+      topic_context: 0.5         # Contextual relevance weight
+    content_type_weights:
+      official_announcements: 1.0
+      research_papers: 0.9
+      news_articles: 0.8
+      blog_posts: 0.7
+      social_discussions: 0.6
+      rumors_speculation: 0.3
+
+  significance_indicators:
+    high_significance:
+      - "Major announcements"
+      - "Regulatory changes"
+      - "Technology breakthroughs"
+      - "Market movements"
+      - "Security incidents"
+    medium_significance:
+      - "Product updates"
+      - "Company news"
+      - "Research publications"
+      - "Conference presentations"
+      - "Expert opinions"
+    low_significance:
+      - "General discussions"
+      - "Minor updates"
+      - "Speculation"
+      - "Routine announcements"
+
+  quality_thresholds:
+    minimum_relevance_score: 0.6    # Below this, content is filtered out
+    minimum_authority_score: 0.5    # Source authority threshold
+    minimum_significance_score: 0.4  # Content significance threshold
+    
+# MCP Server Configuration for Topic Sources
+mcp_server_mapping:
+  fetch_server:
+    use_cases: ["Official websites", "News sites", "Blog content"]
+    rate_limits: "Respect robots.txt and site policies"
+    error_handling: "Retry with exponential backoff"
+    
+  github_server:
+    use_cases: ["Repository monitoring", "Release tracking", "Issue discussions"]
+    repositories: []  # Topic-specific repos to monitor
+    monitoring_scope: ["releases", "issues", "discussions", "pull_requests"]
+    
+  youtube_server:
+    use_cases: ["Expert channels", "Conference talks", "Educational content"]
+    channels: []      # Topic-specific channels to monitor
+    content_types: ["uploads", "live_streams", "premieres"]
+    
+  playwright_server:
+    use_cases: ["Dynamic content", "Social media", "Complex sites"]
+    target_sites: []  # Sites requiring dynamic content extraction
+    
+  reddit_server:
+    use_cases: ["Community discussions", "Trend detection", "Sentiment analysis"]
+    subreddits: []    # Topic-specific subreddits
+    monitoring_scope: ["hot", "new", "top", "rising"]
+
+# AI Agent Specialization Configuration
+agent_specialization:
+  content_specialists:
+    technical_analyst:
+      focus: "Technical accuracy, implementation details, specifications"
+      expertise_areas: []
+      validation_criteria: []
+      
+    sentiment_analyst:
+      focus: "Community reception, opinion analysis, trend sentiment"
+      analysis_scope: ["positive", "negative", "neutral", "controversy"]
+      sentiment_sources: ["social_media", "forums", "comments"]
+      
+    trend_analyst:
+      focus: "Pattern recognition, emerging topics, prediction"
+      analysis_timeframes: ["short_term", "medium_term", "long_term"]
+      trend_indicators: []
+
+  source_specialists:
+    official_source_monitor:
+      responsibilities: ["Monitor official sources", "Validate authenticity", "Track announcements"]
+      monitoring_frequency: "high"
+      
+    community_monitor:
+      responsibilities: ["Track expert opinions", "Monitor discussions", "Identify influencers"]
+      monitoring_frequency: "medium"
+      
+    aggregator_monitor:
+      responsibilities: ["Scan discussions", "Detect viral content", "Track sentiment"]
+      monitoring_frequency: "low"
+
+# Cross-Topic Integration Configuration
+cross_topic_integration:
+  relationship_types:
+    - "competitive"     # Topics that compete or conflict
+    - "complementary"   # Topics that enhance each other
+    - "dependent"       # One topic depends on another
+    - "convergent"      # Topics that are merging/combining
+    - "influential"     # One topic influences another
+    
+  shared_sources:
+    identification_patterns: []  # How to detect sources covering multiple topics
+    resource_optimization: true  # Whether to optimize resource usage for shared sources
+    
+  trigger_conditions:
+    cross_topic_alerts:
+      - "Major developments affecting multiple topics"
+      - "Regulatory changes with broad impact"
+      - "Technology convergence events"
+    
+    resource_reallocation:
+      - "Breaking news requiring immediate attention"
+      - "Seasonal activity changes"
+      - "Emergency monitoring situations"
+
+# Performance and Monitoring Configuration
+performance_monitoring:
+  success_metrics:
+    coverage_percentage: 95      # % of significant news captured within target time
+    relevance_accuracy: 90       # % of captured content that is actually relevant
+    false_positive_rate: 10      # % of irrelevant content captured
+    response_time: 300           # Maximum seconds from source update to processing
+    
+  monitoring_intervals:
+    real_time_sources: 300       # 5 minutes for critical sources
+    high_priority_sources: 1800  # 30 minutes for important sources
+    medium_priority_sources: 3600 # 1 hour for regular sources
+    low_priority_sources: 21600  # 6 hours for background sources
+    
+  resource_allocation:
+    max_concurrent_agents: 10    # Maximum agents working on this topic simultaneously
+    processing_priority: "high|medium|low"  # Queue priority for resource contention
+    storage_retention: 365       # Days to retain processed content
+
+# File Organization Configuration
+file_organization:
+  base_path: "knowledge-vault/topics/{topic_slug}/"
+  structure:
+    config: "config/"
+    news: "news/"
+    sources: "sources/"
+    analysis: "analysis/"
+    relationships: "relationships/"
+    
+  naming_conventions:
+    daily_files: "YYYY-MM-DD-{source_tier}.md"
+    weekly_files: "YYYY-WW-weekly-digest.md"
+    event_files: "YYYY-MM-DD-{event_name}.md"
+    
+  content_templates:
+    news_file_template: "templates/news-file-template.md"
+    source_profile_template: "templates/source-profile-template.md"
+    analysis_report_template: "templates/analysis-report-template.md"
+
+# Validation and Testing Configuration
+validation_framework:
+  configuration_validation:
+    required_fields: ["name", "slug", "description", "priority_level"]
+    format_validation: true
+    cross_reference_validation: true
+    
+  testing_procedures:
+    source_connectivity: "Verify all configured sources are accessible"
+    keyword_effectiveness: "Test keyword patterns for relevance detection"
+    agent_coordination: "Validate agent specialization and coordination"
+    quality_thresholds: "Confirm quality scoring produces expected results"
+    
+  optimization_tracking:
+    learning_enabled: true
+    adaptation_frequency: "weekly"
+    performance_history: 30  # Days of performance data to maintain
+    optimization_triggers: ["poor_performance", "configuration_drift", "new_patterns"]

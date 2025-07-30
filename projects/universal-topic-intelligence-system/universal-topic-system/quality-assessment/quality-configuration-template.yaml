@@ -1,0 +1,282 @@
+# Universal Quality Configuration Template
+# Topic-specific quality assessment configuration that integrates with Universal Quality Engine
+
+topic_quality_metadata:
+  topic_slug: "{topic_slug}"                    # Must match topic configuration slug
+  topic_name: "{TOPIC_NAME}"                    # Human-readable topic name
+  quality_profile: "{profile_type}"             # technical|market|regulatory|research|community
+  last_updated: "YYYY-MM-DD"                    # Last quality configuration update
+  configuration_version: "1.0"                  # Version for tracking changes
+
+# Topic Characteristics for Quality Adaptation
+topic_characteristics:
+  information_volatility: "high|medium|low"     # How quickly information changes
+  authority_distribution: "centralized|distributed|community"  # How authority is structured
+  information_density: "high|medium|low"        # Volume of information flow
+  speculation_prevalence: "high|medium|low"     # Amount of speculation vs facts
+  technical_complexity: "high|medium|low"       # Technical depth of content
+  regulatory_sensitivity: "high|medium|low"     # Regulatory implications
+
+# Quality Threshold Customization
+quality_thresholds:
+  # Core dimension thresholds (adapt based on topic characteristics)
+  source_authority:
+    minimum_threshold: 0.5                      # Minimum acceptable authority score
+    tier_1_threshold: 0.8                       # Threshold for Tier 1 source quality
+    adjustment_factors:
+      volatility_adjustment: 0.0                # +/- adjustment for topic volatility
+      authority_distribution_factor: 0.0        # Adjustment for authority structure
+      
+  content_accuracy:
+    minimum_threshold: 0.6                      # Minimum acceptable accuracy score
+    verification_requirement: 0.8               # Threshold requiring verification
+    adjustment_factors:
+      speculation_penalty: 0.0                  # Penalty for high-speculation topics
+      technical_bonus: 0.0                      # Bonus for technical accuracy
+      
+  relevance_alignment:
+    minimum_threshold: 0.6                      # Minimum relevance for inclusion
+    significance_threshold: 0.7                 # Threshold for high-significance flagging
+    adjustment_factors:
+      density_adjustment: 0.0                   # Adjustment for information density
+      complexity_factor: 0.0                    # Factor for technical complexity
+      
+  completeness_depth:
+    minimum_threshold: 0.4                      # Minimum completeness requirement
+    comprehensive_threshold: 0.8                # Threshold for comprehensive content
+    adjustment_factors:
+      technical_requirement: 0.0                # Higher requirement for technical topics
+      practical_utility_bonus: 0.0              # Bonus for actionable content
+      
+  constitutional_compliance:
+    minimum_threshold: 0.8                      # High standard for ethical compliance
+    strict_enforcement: true                    # Whether to enforce strictly
+    topic_specific_considerations: []           # List any topic-specific ethical considerations
+
+# Topic-Specific Quality Indicators
+topic_quality_indicators:
+  primary_quality_signals:
+    # Define the most important quality indicators for this topic
+    signal_1:
+      name: ""                                  # Name of quality signal
+      description: ""                           # What this signal indicates
+      detection_method: ""                      # How to detect this signal
+      score_impact: 0.0                         # Impact on quality score (+/-)
+      
+    signal_2:
+      name: ""
+      description: ""
+      detection_method: ""
+      score_impact: 0.0
+      
+  secondary_quality_signals:
+    # Additional quality indicators specific to this topic
+    signal_1:
+      name: ""
+      description: ""
+      detection_method: ""
+      score_impact: 0.0
+      
+  quality_warning_indicators:
+    # Signals that indicate potential quality issues
+    warning_1:
+      name: ""                                  # Name of warning indicator
+      description: ""                           # What this warning means
+      detection_criteria: ""                    # How to detect this issue
+      severity: "high|medium|low"               # Severity level
+      score_penalty: 0.0                        # Penalty applied to quality score
+
+# Source Authority Mapping for Topic
+source_authority_configuration:
+  tier_1_authority_indicators:
+    # What constitutes authoritative sources for this topic
+    official_designations: []                   # Official titles, domains, certifications
+    institutional_indicators: []               # University, government, foundation indicators
+    expert_credentials: []                      # Professional qualifications, experience markers
+    
+  tier_2_authority_indicators:
+    # What constitutes expert community sources
+    community_recognition: []                   # Community awards, citations, following
+    expertise_demonstration: []                # Track record, analysis quality, consistency
+    professional_association: []               # Industry connections, conference speaking
+    
+  tier_3_authority_indicators:
+    # What constitutes valuable aggregator sources
+    curation_quality: []                        # Moderation, fact-checking, quality control
+    community_engagement: []                    # Active, thoughtful community participation
+    signal_to_noise: []                         # Ability to surface valuable information
+    
+  authority_red_flags:
+    # Indicators that reduce source authority
+    anonymity_concerns: []                      # Lack of identity or credentials
+    bias_indicators: []                         # Financial conflicts, agenda-driven content
+    accuracy_issues: []                         # History of misinformation, corrections needed
+
+# Content Validation Rules for Topic
+content_validation_rules:
+  fact_checking_requirements:
+    # What types of claims require fact-checking
+    high_impact_claims: []                      # Claims that significantly impact understanding
+    quantitative_claims: []                     # Statistics, measurements, financial figures
+    prediction_claims: []                       # Future-oriented statements requiring validation
+    
+  cross_reference_requirements:
+    # When cross-referencing against other sources is required
+    controversial_topics: []                    # Subjects requiring multiple source validation
+    breaking_news: []                           # New developments requiring confirmation
+    technical_specifications: []               # Technical details requiring verification
+    
+  verification_methods:
+    # How to verify different types of information
+    official_verification: []                   # Methods for checking against official sources
+    expert_consultation: []                     # When to consult domain experts
+    community_validation: []                    # When community consensus adds value
+
+# Significance Assessment for Topic
+significance_assessment:
+  high_significance_indicators:
+    # What makes content highly significant for this topic
+    impact_indicators: []                       # Indicators of broad impact or importance
+    novelty_indicators: []                      # Indicators of new or breakthrough information
+    urgency_indicators: []                      # Time-sensitive or immediate-action content
+    
+  medium_significance_indicators:
+    # What makes content moderately significant
+    development_indicators: []                  # Incremental progress or development updates
+    analysis_indicators: []                     # Expert analysis or interpretation
+    trend_indicators: []                        # Pattern or trend identification
+    
+  low_significance_indicators:
+    # What content is still relevant but lower priority
+    routine_updates: []                         # Regular, expected updates or announcements
+    discussion_content: []                      # Community discussion without new information
+    historical_context: []                     # Background or historical information
+
+# Quality Learning and Adaptation
+learning_configuration:
+  feedback_integration:
+    user_feedback_weight: 0.3                  # Weight given to user quality feedback
+    outcome_tracking_weight: 0.5               # Weight given to content utility outcomes
+    expert_validation_weight: 0.8              # Weight given to expert quality assessments
+    
+  adaptation_parameters:
+    threshold_adjustment_rate: 0.1              # Maximum threshold adjustment per period
+    learning_period: "weekly"                   # How often to update based on learning
+    minimum_sample_size: 50                     # Minimum content samples before adjustment
+    
+  pattern_recognition:
+    quality_pattern_tracking: true              # Whether to track quality patterns
+    cross_topic_learning: true                  # Whether to learn from other topics
+    seasonal_adjustment: false                  # Whether to adjust for seasonal patterns
+
+# Integration with Multi-Agent Framework
+agent_integration:
+  worker_agent_responsibilities:
+    # What quality checks worker agents perform
+    extraction_quality: []                      # Quality checks during content extraction
+    format_validation: []                       # Validation of content format and structure
+    basic_filtering: []                         # Initial filtering based on obvious quality issues
+    
+  specialist_agent_responsibilities:
+    # What quality analysis specialist agents perform
+    domain_validation: []                       # Domain-specific quality validation
+    accuracy_assessment: []                     # Content accuracy evaluation methods
+    significance_scoring: []                    # How to score content significance
+    
+  architect_agent_responsibilities:
+    # What quality oversight architect agents provide
+    threshold_monitoring: []                    # Monitoring and adjusting quality thresholds
+    pattern_analysis: []                        # Analyzing quality patterns and trends
+    resource_optimization: []                   # Optimizing resources based on quality insights
+    
+  escalation_criteria:
+    # When to escalate quality decisions up the hierarchy
+    quality_disputes: []                        # Criteria for escalating quality disagreements
+    framework_issues: []                        # When quality framework needs adjustment
+    ethical_concerns: []                        # Constitutional AI compliance issues
+
+# Performance Monitoring for Topic
+performance_monitoring:
+  quality_metrics:
+    # Metrics to track for this topic's quality assessment
+    accuracy_tracking: true                     # Track quality prediction accuracy
+    user_satisfaction: true                     # Track user satisfaction with quality
+    expert_validation: false                    # Whether to seek expert validation
+    
+  reporting_requirements:
+    # What quality reports to generate
+    daily_quality_summary: true                # Daily summary of quality metrics
+    weekly_performance_report: true            # Weekly quality performance analysis
+    monthly_optimization_review: true          # Monthly review for optimization opportunities
+    
+  alert_thresholds:
+    # When to generate quality alerts
+    accuracy_degradation: 0.05                 # Alert if accuracy drops by this amount
+    threshold_violation: 0.2                   # Alert if threshold violations exceed this rate
+    processing_delays: 300                      # Alert if quality assessment takes longer (seconds)
+
+# Validation and Testing
+validation_framework:
+  testing_procedures:
+    # How to test quality configuration effectiveness
+    sample_content_testing: []                  # Methods for testing with sample content
+    threshold_validation: []                    # Methods for validating threshold effectiveness
+    cross_validation: []                        # Methods for cross-validating quality assessments
+    
+  calibration_requirements:
+    # How to calibrate quality assessment for this topic
+    initial_calibration: []                     # Steps for initial quality calibration
+    ongoing_calibration: []                     # Ongoing calibration procedures
+    expert_calibration: []                      # When to involve domain experts in calibration
+    
+  quality_assurance:
+    # Quality assurance for the quality assessment itself
+    assessment_validation: []                   # How to validate quality assessments
+    consistency_checking: []                    # Methods for ensuring consistent quality scoring
+    bias_detection: []                          # Methods for detecting bias in quality assessment
+
+# Documentation and Compliance
+documentation_requirements:
+  quality_decision_logging:
+    decision_tracking: true                     # Whether to log quality decisions
+    rationale_documentation: true              # Whether to document quality rationale
+    audit_trail: true                          # Whether to maintain audit trail
+    
+  compliance_monitoring:
+    constitutional_ai_compliance: true          # Monitor compliance with Constitutional AI principles
+    ethical_guidelines: true                    # Monitor adherence to ethical guidelines
+    quality_standards: true                     # Monitor adherence to universal quality standards
+    
+  reporting_and_transparency:
+    quality_transparency: true                  # Provide transparency in quality assessments
+    methodology_documentation: true            # Document quality assessment methodology
+    performance_reporting: true                # Report on quality assessment performance
+
+# Example Usage Notes
+usage_guidelines:
+  customization_steps:
+    1: "Copy this template and rename with topic slug"
+    2: "Fill in topic_characteristics based on domain analysis"
+    3: "Customize quality_thresholds for topic requirements"
+    4: "Define topic_quality_indicators specific to domain"
+    5: "Configure source_authority_configuration for topic sources"
+    6: "Set up content_validation_rules for domain-specific validation"
+    7: "Define significance_assessment criteria for topic importance"
+    8: "Configure learning_configuration for continuous improvement"
+    9: "Set up performance_monitoring appropriate for topic needs"
+    10: "Validate configuration through testing procedures"
+    
+  best_practices:
+    - "Start with conservative thresholds and adjust based on performance"
+    - "Define clear, measurable quality indicators specific to topic"
+    - "Ensure quality indicators align with user value and importance"
+    - "Regular review and adjustment of quality configuration"
+    - "Document rationale for topic-specific quality decisions"
+    - "Validate quality configuration with domain experts when possible"
+    
+  common_pitfalls:
+    - "Setting thresholds too high initially, missing valuable content"
+    - "Not adapting quality indicators to topic-specific characteristics"
+    - "Ignoring topic community standards and expectations"
+    - "Failing to account for topic-specific authority structures"
+    - "Not considering seasonal or cyclical patterns in topic information"

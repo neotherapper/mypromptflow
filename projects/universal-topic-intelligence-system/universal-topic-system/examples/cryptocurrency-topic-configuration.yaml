@@ -1,0 +1,281 @@
+# Cryptocurrency Topic Configuration Example
+# Comprehensive configuration for monitoring cryptocurrency and blockchain developments
+
+topic_metadata:
+  name: "Cryptocurrency & Blockchain"
+  slug: "cryptocurrency"
+  description: "Cryptocurrency markets, blockchain technology, DeFi, NFTs, and regulatory developments"
+  priority_level: "medium"
+  monitoring_frequency: "hourly"
+  status: "active"
+  created_date: "2025-07-27"
+  last_updated: "2025-07-27"
+  related_topics: ["fintech", "payments", "ai-ml", "regulations"]
+  keywords_primary: ["cryptocurrency", "bitcoin", "ethereum", "blockchain", "crypto", "BTC", "ETH", "DeFi", "decentralized finance", "NFT", "web3"]
+  keywords_secondary: ["altcoin", "mining", "staking", "smart contracts", "dApps", "DAO", "yield farming", "liquidity", "tokenomics", "fork"]
+  keywords_exclusion: ["cryptography", "encrypted", "crypto stock", "cryptocurrency mining equipment", "crypto winter clothing"]
+
+# Source Discovery and Mapping Configuration
+source_mapping:
+  tier_1_official:
+    description: "Official cryptocurrency and blockchain organization sources"
+    discovery_patterns:
+      - "Official blockchain project websites and documentation"
+      - "Major cryptocurrency exchange announcements"
+      - "Regulatory body official statements"
+      - "Blockchain foundation official communications"
+    authority_indicators:
+      - "Direct from blockchain projects (Bitcoin.org, Ethereum.org)"
+      - "Major exchange official announcements (Coinbase, Binance)"
+      - "Regulatory authority statements (SEC, CFTC, EU authorities)"
+    update_patterns:
+      expected_frequency: "daily"
+      peak_activity_times: ["09:00-11:00 EST", "14:00-16:00 EST"]  # Market hours
+      seasonal_patterns: "Increased activity during Bitcoin halvings, major upgrades"
+    sources:
+      - url: "https://bitcoin.org/en/bitcoin-core/releases/"
+        type: "protocol_updates"
+        authority_score: 1.0
+        monitoring_method: "RSS + Fetch"
+      - url: "https://blog.ethereum.org/"
+        type: "protocol_blog"
+        authority_score: 1.0
+        monitoring_method: "RSS + Fetch"
+      - url: "https://blog.coinbase.com/"
+        type: "exchange_blog"
+        authority_score: 0.9
+        monitoring_method: "RSS + Fetch"
+      - url: "https://www.sec.gov/news/pressreleases"
+        type: "regulatory"
+        authority_score: 0.95
+        monitoring_method: "RSS + Custom Filter"
+        filter_keywords: ["cryptocurrency", "bitcoin", "ethereum", "digital asset"]
+
+  tier_2_community:
+    description: "Crypto expert creators, specialized media, research communities"
+    discovery_patterns:
+      - "Cryptocurrency news and analysis websites"
+      - "Blockchain researcher and expert content"
+      - "Crypto YouTube channels and podcasts"
+      - "Industry newsletter and analysis publications"
+    authority_indicators:
+      - "Recognized crypto journalists and researchers"
+      - "Consistent accurate reporting and analysis"
+      - "Deep technical understanding of blockchain technology"
+    update_patterns:
+      expected_frequency: "daily"
+      peak_activity_times: ["08:00-10:00", "16:00-18:00"]
+      content_types: ["market_analysis", "technical_analysis", "regulatory_analysis", "project_reviews"]
+    sources:
+      - url: "https://coindesk.com/feed/"
+        type: "crypto_journalism"
+        authority_score: 0.85
+        monitoring_method: "RSS + Fetch"
+      - url: "https://cointelegraph.com/rss"
+        type: "crypto_journalism"
+        authority_score: 0.8
+        monitoring_method: "RSS + Fetch"
+      - url: "https://decrypt.co/feed"
+        type: "crypto_journalism"
+        authority_score: 0.8
+        monitoring_method: "RSS + Fetch"
+      - url: "https://www.youtube.com/c/CoinBureau"
+        type: "expert_youtube"
+        authority_score: 0.85
+        monitoring_method: "YouTube MCP"
+
+  tier_3_aggregators:
+    description: "Crypto community forums, social media, discussion platforms"
+    discovery_patterns:
+      - "Reddit cryptocurrency communities"
+      - "Crypto Twitter/X discussions and influencer lists"
+      - "Discord crypto project communities"
+      - "Telegram crypto discussion groups"
+    authority_indicators:
+      - "Active communities with informed discussions"
+      - "Quality moderation and expertise validation"
+      - "Early detection of trends and developments"
+    update_patterns:
+      expected_frequency: "hourly"
+      peak_activity_times: ["12:00-14:00", "20:00-23:00"]  # Global crypto discussion times
+      engagement_metrics: ["upvotes", "quality_discussion", "signal_to_noise"]
+    sources:
+      - url: "https://reddit.com/r/CryptoCurrency"
+        type: "community_forum"
+        authority_score: 0.75
+        monitoring_method: "Reddit API + Playwright"
+      - url: "https://reddit.com/r/Bitcoin"
+        type: "community_forum"
+        authority_score: 0.8
+        monitoring_method: "Reddit API + Playwright"
+      - url: "https://reddit.com/r/ethereum"
+        type: "community_forum"
+        authority_score: 0.8
+        monitoring_method: "Reddit API + Playwright"
+
+# Content Analysis and Quality Configuration
+content_analysis:
+  relevance_scoring:
+    keyword_weights:
+      primary_keywords: 1.0
+      secondary_keywords: 0.7
+      topic_context: 0.5
+    content_type_weights:
+      protocol_upgrades: 1.0
+      regulatory_announcements: 0.95
+      exchange_announcements: 0.9
+      market_analysis: 0.8
+      project_updates: 0.8
+      technical_analysis: 0.7
+      social_sentiment: 0.6
+
+  significance_indicators:
+    high_significance:
+      - "Bitcoin halving events"
+      - "Major protocol upgrades (Ethereum 2.0, Lightning Network)"
+      - "Regulatory approval or bans"
+      - "Major exchange hacks or security incidents"
+      - "Central bank digital currency (CBDC) announcements"
+      - "Institutional adoption announcements"
+    medium_significance:
+      - "New cryptocurrency exchange listings"
+      - "DeFi protocol launches or major updates"
+      - "NFT marketplace developments"
+      - "Mining difficulty adjustments"
+      - "Cryptocurrency ETF developments"
+    low_significance:
+      - "Minor price movements and speculation"
+      - "Celebrity crypto endorsements"
+      - "Social media sentiment fluctuations"
+      - "Minor altcoin announcements"
+
+  quality_thresholds:
+    minimum_relevance_score: 0.6    # Moderate threshold due to market volatility
+    minimum_authority_score: 0.5    # Allow varied sources for market coverage
+    minimum_significance_score: 0.4  # Include broader range of developments
+    
+# MCP Server Configuration for Crypto Sources
+mcp_server_mapping:
+  fetch_server:
+    use_cases: ["Official project sites", "Exchange announcements", "Regulatory statements"]
+    rate_limits: "2 requests per second per domain"
+    error_handling: "5 retries with exponential backoff (markets can be volatile)"
+    
+  github_server:
+    use_cases: ["Blockchain protocol development", "DeFi project updates", "Crypto tool development"]
+    repositories: 
+      - "bitcoin/bitcoin"
+      - "ethereum/go-ethereum"
+      - "uniswap/v3-core"
+      - "aave/aave-protocol"
+      - "compound-finance/compound-protocol"
+    monitoring_scope: ["releases", "issues", "security_advisories"]
+    
+  youtube_server:
+    use_cases: ["Market analysis", "Technical education", "Project interviews"]
+    channels:
+      - "UCqK_GSMbpiV8spgD3ZGloSw"  # Coin Bureau
+      - "UCRvqjQPSeaWn-uEx-w0XOIg"  # Finematics
+      - "UC2PA-AKmVpU6NKCGtZq_rKQ"  # Whiteboard Crypto
+    content_types: ["uploads", "live_streams"]
+    
+  playwright_server:
+    use_cases: ["Exchange announcements", "DeFi protocol interfaces", "Social sentiment"]
+    target_sites:
+      - "coinmarketcap.com"  # Market data
+      - "defipulse.com"      # DeFi analytics
+      - "twitter.com"        # Crypto Twitter
+
+# AI Agent Specialization Configuration  
+agent_specialization:
+  content_specialists:
+    market_analyst:
+      focus: "Price movements, market trends, trading volume analysis"
+      expertise_areas: ["technical_analysis", "market_psychology", "trading_patterns", "liquidity"]
+      validation_criteria: ["market_relevance", "data_accuracy", "trend_analysis"]
+      
+    protocol_analyst:
+      focus: "Blockchain technology, protocol upgrades, technical developments"
+      expertise_areas: ["blockchain_technology", "consensus_mechanisms", "smart_contracts", "scalability"]
+      validation_criteria: ["technical_accuracy", "security_implications", "adoption_potential"]
+      
+    regulatory_analyst:
+      focus: "Legal developments, compliance, government policy"
+      expertise_areas: ["financial_regulation", "compliance", "policy_analysis", "legal_frameworks"]
+      validation_criteria: ["regulatory_impact", "legal_accuracy", "policy_implications"]
+      
+    defi_analyst:
+      focus: "Decentralized finance, yield farming, liquidity protocols"
+      expertise_areas: ["defi_protocols", "yield_strategies", "liquidity_mining", "tokenomics"]
+      validation_criteria: ["protocol_security", "economic_sustainability", "innovation_significance"]
+
+# Cross-Topic Integration Configuration
+cross_topic_integration:
+  relationship_types:
+    - type: "influential"
+      targets: ["fintech", "payments", "banking"]
+      description: "Crypto disrupting traditional financial services"
+    - type: "dependent"
+      targets: ["energy", "semiconductors", "internet-infrastructure"]
+      description: "Crypto mining and operation dependencies"
+    - type: "convergent"
+      targets: ["ai-ml", "iot", "supply-chain"]
+      description: "Blockchain integration with other technologies"
+    - type: "competitive"
+      targets: ["traditional-finance", "central-banks"]
+      description: "Crypto vs traditional financial systems"
+      
+  shared_sources:
+    identification_patterns:
+      - "Financial news covering both crypto and traditional finance"
+      - "Technology news covering blockchain and other innovations"
+      - "Regulatory news affecting multiple financial sectors"
+    resource_optimization: true
+    
+  trigger_conditions:
+    cross_topic_alerts:
+      - "AI developments in crypto trading and analysis"
+      - "Regulatory changes affecting fintech and crypto"
+      - "Energy policies impacting crypto mining"
+    
+    resource_reallocation:
+      - "Major market events requiring real-time monitoring"
+      - "Regulatory hearings and announcements"
+      - "Security incidents requiring immediate coverage"
+
+# Performance and Monitoring Configuration
+performance_monitoring:
+  success_metrics:
+    coverage_percentage: 90       # 90% coverage due to fast-moving crypto news
+    relevance_accuracy: 85        # 85% accuracy due to market speculation noise
+    false_positive_rate: 20       # Higher tolerance due to speculation and rumors
+    response_time: 900            # 15 minutes for crypto developments
+    
+  monitoring_intervals:
+    real_time_sources: 600        # 10 minutes for major exchanges and protocols
+    high_priority_sources: 1800   # 30 minutes for crypto news sites
+    medium_priority_sources: 3600 # 1 hour for general tech news crypto coverage
+    low_priority_sources: 7200    # 2 hours for community discussions
+    
+  resource_allocation:
+    max_concurrent_agents: 12     # High allocation due to market volatility
+    processing_priority: "medium" # Medium priority, below AI but above others
+    storage_retention: 365        # 1 year retention for market developments
+
+# File Organization Configuration
+file_organization:
+  base_path: "knowledge-vault/topics/cryptocurrency/"
+  structure:
+    config: "config/"
+    news: "news/"
+    markets: "markets/"
+    protocols: "protocols/"
+    regulation: "regulation/"
+    analysis: "analysis/"
+    relationships: "relationships/"
+    
+  naming_conventions:
+    daily_files: "YYYY-MM-DD-{tier}-crypto-news.md"
+    weekly_files: "YYYY-WW-crypto-weekly-digest.md"
+    market_files: "YYYY-MM-DD-market-analysis.md"
+    regulatory_files: "YYYY-MM-DD-regulatory-updates.md"

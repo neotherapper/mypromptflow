@@ -1,0 +1,190 @@
+# Startup Funding News Monitoring Configuration
+# Example showing system adaptability to business/finance topics
+
+topic_metadata:
+  name: "Startup Funding & Venture Capital News"
+  slug: "startup-funding"
+  description: "Startup funding rounds, VC investments, market trends, and ecosystem developments"
+  priority_level: "medium"
+  monitoring_frequency: "daily"
+  status: "active"
+  created_date: "2025-07-30"
+  last_updated: "2025-07-30"
+  related_topics: ["venture-capital", "entrepreneurship", "market-trends", "ipo-news"]
+  keywords_primary: ["funding", "investment", "venture capital", "startup", "Series A", "Series B", "seed round", "IPO"]
+  keywords_secondary: ["valuation", "investors", "portfolio", "acquisition", "merger", "unicorn", "exit", "pitch deck"]
+  keywords_exclusion: ["personal finance", "retirement funding", "government funding", "research grants"]
+
+# Source Mapping - Business/Finance Focus
+source_mapping:
+  tier_1_official:
+    description: "Official funding announcements and regulatory filings"
+    sources:
+      - url: "https://www.sec.gov/edgar"
+        type: "regulatory_filings"
+        authority_score: 1.0
+        monitoring_method: "SEC EDGAR API"
+        description: "Official SEC filings for funding rounds and IPOs"
+        
+      - url: "https://www.crunchbase.com/funding-rounds"
+        type: "funding_database"
+        authority_score: 0.95
+        monitoring_method: "Crunchbase API + Fetch"
+        description: "Comprehensive startup funding database"
+        
+      - url: "https://pitchbook.com/news"
+        type: "industry_data"
+        authority_score: 0.9
+        monitoring_method: "Fetch + RSS"
+        description: "Professional VC and PE market intelligence"
+
+  tier_2_community:
+    description: "VC firms, startup publications, and industry experts"
+    sources:
+      - url: "https://techcrunch.com/category/startups/"
+        type: "industry_news"
+        authority_score: 0.85
+        monitoring_method: "RSS + Fetch"
+        description: "Leading startup and funding news publication"
+        
+      - url: "https://news.ycombinator.com"
+        type: "community_aggregator" 
+        authority_score: 0.8
+        monitoring_method: "RSS + Custom Filter"
+        filter_keywords: ["funding", "Series A", "investment", "startup"]
+        description: "Tech community discussions including funding news"
+        
+      - url: "https://www.bloomberg.com/technology"
+        type: "financial_news"
+        authority_score: 0.9
+        monitoring_method: "RSS + Fetch"
+        description: "Financial news including tech startup funding"
+
+  tier_3_aggregators:
+    description: "Social media discussions and community insights"
+    sources:
+      - url: "https://twitter.com/i/lists/vc-investors"
+        type: "social_media"
+        authority_score: 0.7
+        monitoring_method: "Twitter API"
+        description: "VC investor Twitter discussions and announcements"
+        
+      - url: "https://reddit.com/r/startups"
+        type: "community_forum"
+        authority_score: 0.65
+        monitoring_method: "Reddit API"
+        description: "Startup community discussions and funding news"
+
+# Content Analysis - Business Focus
+content_analysis:
+  significance_indicators:
+    high_significance:
+      - "Series A+ funding rounds over $10M"
+      - "IPO announcements and filings"
+      - "Unicorn valuations ($1B+)"
+      - "Major VC fund launches"
+      - "Acquisition announcements over $100M"
+    medium_significance:
+      - "Seed rounds over $1M"
+      - "VC firm strategy announcements"
+      - "Market trend analysis from reputable sources"
+      - "Startup ecosystem reports"
+    low_significance:
+      - "Small seed rounds under $500K"
+      - "General startup advice articles"
+      - "Unverified funding rumors"
+
+  quality_thresholds:
+    minimum_relevance_score: 0.6
+    minimum_authority_score: 0.7    # Higher threshold for financial information
+    minimum_significance_score: 0.5
+
+# MCP Server Mapping - Business Data Focus
+mcp_server_mapping:
+  fetch_server:
+    use_cases: ["News sites", "VC firm announcements", "Press releases"]
+    rate_limits: "1 request per 3 seconds for financial sites"
+    
+  github_server:
+    use_cases: ["Open source startup tools", "VC firm repositories"]
+    repositories: ["awesome-startup", "startup-school"]
+    
+  playwright_server:
+    use_cases: ["Dynamic financial sites", "Social media monitoring"]
+    target_sites: ["crunchbase.com", "pitchbook.com", "twitter.com"]
+
+# Agent Specialization - Business Focus
+agent_specialization:
+  content_specialists:
+    financial_analyst:
+      focus: "Funding valuation analysis, market trends, financial metrics"
+      expertise_areas: ["valuation_analysis", "market_trends", "financial_metrics"]
+      validation_criteria: ["financial_accuracy", "market_relevance"]
+      
+    market_analyst: 
+      focus: "Industry trends, competitive landscape, market timing"
+      expertise_areas: ["industry_analysis", "competitive_intelligence", "market_timing"]
+      validation_criteria: ["trend_accuracy", "competitive_insight"]
+
+# File Organization - Business Structure
+file_organization:
+  base_path: "knowledge-vault/topics/startup-funding/"
+  structure:
+    config: "config/"
+    daily-funding: "daily-funding/"
+    big-rounds: "big-rounds/"
+    market-analysis: "market-analysis/"
+    vc-activity: "vc-activity/"
+    
+  naming_conventions:
+    daily_files: "YYYY-MM-DD-funding-digest.md"
+    big_round_files: "YYYY-MM-DD-{company}-series-{round}.md"
+    market_files: "YYYY-MM-DD-market-analysis.md"
+
+# Performance Monitoring - Business Context
+performance_monitoring:
+  success_metrics:
+    coverage_percentage: 90      # 90% of major funding rounds captured
+    relevance_accuracy: 85       # 85% relevance for business content
+    response_time: 3600          # 1 hour for major funding announcements
+    
+  monitoring_intervals:
+    real_time_sources: 1800      # 30 minutes for major announcements
+    high_priority_sources: 3600  # 1 hour for industry news
+    medium_priority_sources: 7200 # 2 hours for community discussions
+
+# Business Intelligence Focus
+business_intelligence:
+  funding_tracking:
+    round_size_categories:
+      - "Pre-seed: <$500K"
+      - "Seed: $500K-$2M" 
+      - "Series A: $2M-$15M"
+      - "Series B: $15M-$40M"
+      - "Series C+: $40M+"
+      - "Growth/Late Stage: $100M+"
+      
+  market_analysis:
+    sector_tracking: ["fintech", "healthtech", "edtech", "cleantech", "ai/ml"]
+    geographic_focus: ["US", "Europe", "Asia-Pacific", "emerging_markets"]
+    investor_tracking: ["tier_1_vcs", "corporate_vcs", "angels", "government"]
+
+# Implementation Notes
+implementation_notes: >
+  This configuration demonstrates the system's adaptability to business/finance topics:
+  
+  ✅ Different Source Types: SEC filings, financial databases, business publications
+  ✅ Business-Specific Quality Criteria: Higher authority thresholds for financial data
+  ✅ Financial Terminology: Funding rounds, valuations, investor types
+  ✅ Business Intelligence Structure: Organized by funding stages and market sectors
+  ✅ Regulatory Compliance: SEC filing monitoring for official announcements
+  
+  Shows how the Universal Topic Intelligence System adapts its:
+  - Source selection and authority assessment
+  - Content analysis and significance indicators  
+  - Quality thresholds and validation criteria
+  - Agent specialization and expertise areas
+  - File organization and naming conventions
+  
+  The same framework that monitors React news can effectively track startup funding,
+  demonstrating true universal adaptability across completely different domains.
