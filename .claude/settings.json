@@ -17,6 +17,15 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "mcp__MCP_DOCKER__get_me",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/ultra-simple-hook.sh"
+          }
+        ]
+      },
+      {
         "matcher": "mcp__MCP_DOCKER__search_wikipedia",
         "hooks": [
           {
@@ -26,19 +35,10 @@
         ]
       },
       {
-        "matcher": "mcp__MCP_DOCKER__get_me", 
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/debug-hook.sh"
-          }
-        ]
-      },
-      {
         "matcher": "mcp__MCP_DOCKER__fetch",
         "hooks": [
           {
-            "type": "command", 
+            "type": "command",
             "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/debug-hook.sh"
           }
         ]
