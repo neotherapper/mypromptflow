@@ -31,6 +31,7 @@ transport_protocols:
 - HTTPS REST APIs
 - WebSocket
 - gRPC
+mcp_profile_reference: "@mcp_profile/aws"
 ---
 
 **Enterprise cloud infrastructure management and DevOps automation for AI-powered development workflows**  

@@ -30,6 +30,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS REST API
+mcp_profile_reference: "@mcp_profile/okta"
 ---
 
 **Enterprise identity and access management platform with comprehensive SSO and user lifecycle management**  

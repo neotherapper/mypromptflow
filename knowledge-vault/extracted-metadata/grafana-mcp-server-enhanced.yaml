@@ -1,0 +1,190 @@
+# Grafana MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "nop45678-qrs9-0123-nopq-grafana016"
+name: "Grafana MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.7/10 = excellent
+maturity_level: "stable"  # Production ready 93%
+status: "adopted"  # Leading monitoring and observability platform
+
+# Technology Classification
+technology_type:
+  - "monitoring"
+  - "analytics"
+  - "developer-tools"
+deployment_model: "hybrid"  # Self-hosted, cloud managed, containerized
+integration_complexity: "moderate"  # Setup complexity 6/10
+
+# Vendor and Licensing
+vendor: "Grafana Labs"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "monitoring"
+  - "analytics"
+  - "developer-tools"
+  - "tech-stack"
+  - "enterprise"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "web"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "time_series_metrics"
+    - "dashboard_configurations"
+    - "alert_rules"
+    - "data_source_metadata"
+    - "user_annotations"
+    - "query_results"
+    - "panel_visualizations"
+    - "organization_settings"
+  
+  access_methods:
+    - "real-time"  # Live monitoring dashboards
+    - "on-demand"  # API queries
+    - "historical" # Time-series analysis
+    
+  authentication:
+    required: true
+    methods:
+      - "ldap"
+      - "oauth"
+      - "saml"
+      - "api_keys"
+    security_level: "enterprise"
+    
+  rate_limits:
+    queries_per_second: 1000
+    concurrent_dashboards: 100
+    alert_evaluations_per_minute: 1000
+    
+  complexity_score: 6  # Setup complexity (6/10) - moderate complexity
+  
+  typical_use_cases:
+    - "infrastructure_monitoring"
+    - "application_performance"
+    - "business_analytics"
+    - "iot_data_visualization"
+    - "alert_management"
+    - "capacity_planning"
+    - "troubleshooting"
+    - "compliance_reporting"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.7
+  tier: "Tier 3 Specialized"
+  priority_rank: 4
+  production_readiness: 93
+  
+  detailed_scoring:
+    information_retrieval_relevance: 7
+    setup_complexity: 6
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 9
+    integration_potential: 9
+    
+  production_readiness_breakdown:
+    stability_score: 94
+    performance_score: 93
+    security_score: 92
+    scalability_score: 94
+
+# Content and Documentation
+url: "https://github.com/grafana/grafana"
+description: "Leading open-source monitoring and observability platform for creating, exploring, and sharing dashboards. Comprehensive visualization platform supporting multiple data sources with advanced alerting capabilities."
+
+key_features: |
+  ## Visualization Platform
+  - Rich library of visualization panels and chart types
+  - Interactive dashboards with drill-down capabilities
+  - Template variables for dynamic dashboard content  
+  - Real-time data streaming and automatic refresh
+  
+  ## Data Source Integration
+  - 60+ official data source plugins (Prometheus, InfluxDB, etc.)
+  - Custom data source development framework
+  - Query builder with syntax highlighting
+  - Data transformation and correlation capabilities
+  
+  ## Alerting and Notification
+  - Unified alerting system with flexible rule configuration
+  - Multi-dimensional alert routing and grouping
+  - Integration with notification channels (Slack, email, PagerDuty)
+  - Alert history and state management
+  
+  ## Enterprise Features
+  - Team and organization management with RBAC
+  - High availability with clustering support  
+  - Advanced authentication and SSO integration
+  - Comprehensive audit logging and reporting
+
+use_cases: |
+  1. **Infrastructure Monitoring**: Metrics collection → Dashboard visualization → Alert configuration → Issue resolution
+  2. **Application Performance**: APM data → Performance dashboards → Anomaly detection → Optimization
+  3. **Business Analytics**: KPI tracking → Executive dashboards → Trend analysis → Decision support
+  4. **IoT Data Visualization**: Sensor data → Real-time monitoring → Historical analysis → Predictive insights
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    operational_visibility: 300000  # $300K/year in monitoring efficiency
+    incident_reduction: 250000      # $250K/year in faster issue resolution
+    capacity_optimization: 200000   # $200K/year in resource efficiency
+    compliance_automation: 150000   # $150K/year in reporting automation
+    
+  roi_metrics:
+    payback_period_months: 4
+    net_roi_percentage: 350
+    implementation_cost: 80000
+    annual_operating_cost: 70000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/grafana-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Grafana MCP Server provides comprehensive monitoring and observability capabilities with rich visualization features and extensive data source integration.
+  Composite score of 5.7/10 reflects strong capabilities with moderate complexity and excellent production readiness.
+  
+  **Key Strengths:**
+  - Leading visualization platform with extensive data source support
+  - Comprehensive alerting system with flexible notification routing
+  - Strong open-source community with enterprise features available
+  - Excellent integration ecosystem with monitoring and observability tools
+  
+  **Implementation Considerations:** 
+  - Moderate complexity requires monitoring and observability expertise
+  - Operational overhead for dashboard management and maintenance
+  - Best suited for organizations requiring comprehensive monitoring visibility
+  
+  **Strategic Value:** Essential for organizations requiring advanced monitoring, observability, and data visualization capabilities with extensive integration options

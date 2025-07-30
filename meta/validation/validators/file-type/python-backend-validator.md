@@ -4,7 +4,14 @@
 
 Specialized AI agent validator for Python backend files (.py) with API security validation, PEP compliance checking, architecture pattern validation, and performance optimization assessment.
 
+**Unified Framework Integration**: Uses `@meta/information-access/source-discovery-framework.yaml` for consistent source discovery and backend-specific mappings, eliminating duplicate validation logic.
+
 ## Activation Criteria
+
+**Unified Framework Integration**:
+- **Technology Mappings**: `technology_mappings.python`
+- **Category Mappings**: `category_mappings.backend` + `category_mappings.database`
+- **Source Discovery**: Leverages unified framework source selection algorithm
 
 **File Patterns:**
 - `**/*.py` (Python modules)
@@ -20,6 +27,12 @@ Specialized AI agent validator for Python backend files (.py) with API security 
 - Database ORM imports (SQLAlchemy, Django ORM, Tortoise)
 - Authentication middleware (JWT, OAuth implementations)
 - Async/await patterns for API handling
+
+**Information Sources** (from unified framework):
+- **Primary**: `technology_mappings.python.sources.primary`
+- **Supplementary**: `technology_mappings.python.sources.supplementary`
+- **Backend Patterns**: `category_mappings.backend.sources`
+- **Database Integration**: `category_mappings.database.sources`
 
 ## Validation Scope
 

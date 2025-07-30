@@ -25,9 +25,33 @@ tags:
 - Security Tool
 - Tier 1
 - Monitoring
+- web-content
+- real-time-data
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP
+information_capabilities:
+  data_types:
+  - web_content
+  - html_content
+  - api_responses
+  - json_data
+  - text_content
+  - metadata
+  access_methods:
+  - real-time
+  - on-demand
+  - streaming
+  authentication: none
+  rate_limits: none
+  complexity_score: 1
+  typical_use_cases:
+  - "Extract content from any public website URL"
+  - "Retrieve API responses from public endpoints"
+  - "Monitor web pages for content changes"
+  - "Access real-time web data and news feeds"
+  - "Process HTML content and extract structured data"
+mcp_profile_reference: "@mcp_profile/fetch"
 ---
 
 **Official Anthropic server for real-time web content retrieval and processing**  
@@ -108,5 +132,48 @@ transport_protocols:
 - ⚡ Graceful degradation for partial content failures
 - ⚡ Detailed error messaging and troubleshooting guidance
 - ⚡ Connection pooling and resource cleanup
+
+---
+
+## 📊 Information Access Capabilities
+
+### Primary Information Types
+- **Web Content**: Complete HTML content, markdown conversion, and text extraction
+- **API Responses**: JSON, XML, and structured data from public endpoints
+- **Real-time Data**: Live web content, news feeds, and dynamic website updates
+- **Metadata**: Page titles, descriptions, meta tags, and structured data markup
+- **Media Information**: Link resolution, image metadata, and multimedia content references
+
+### Access Patterns
+- **Real-time Retrieval**: Instant web content fetching with sub-second response times
+- **On-demand Access**: Single URL requests for immediate content extraction
+- **Streaming Support**: Chunked content delivery for large web pages
+- **Batch Processing**: Sequential URL processing for multiple sources
+
+### Typical Use Cases for AI Agents
+- **Content Monitoring**: "Fetch latest news articles from specific websites"
+- **Data Extraction**: "Extract product information from e-commerce pages"
+- **Research Gathering**: "Retrieve documentation and technical articles"
+- **Real-time Updates**: "Monitor website changes and content updates"
+- **API Integration**: "Access public APIs and process JSON responses"
+- **Information Validation**: "Verify information by fetching source websites"
+
+### Authentication & Access Control
+- **Authentication Required**: None (public web content access)
+- **Rate Limits**: None (built-in respectful crawling practices)
+- **Permissions**: Public internet access only (respects robots.txt)
+- **Security**: Robots.txt compliance, IP filtering, SSL validation
+
+### Setup Complexity Assessment
+- **Complexity Score**: 1/10 (Immediate use, no setup required)
+- **Setup Time**: Under 5 minutes (zero configuration)
+- **Requirements**: Internet connectivity only
+- **Dependencies**: None (self-contained)
+
+### Performance Characteristics
+- **Response Time**: Typically under 2 seconds for standard web pages
+- **Throughput**: Handles concurrent requests efficiently
+- **Content Limits**: Configurable via max_length parameter
+- **Error Recovery**: Automatic retry mechanisms for transient failures
 
 ---

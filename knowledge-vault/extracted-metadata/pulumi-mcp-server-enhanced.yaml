@@ -1,0 +1,189 @@
+# Pulumi MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/pulumi-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "wxy34567-zab8-9012-wxyz-pulumi025"
+name: "Pulumi MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.1/10 = excellent
+maturity_level: "stable"  # Production ready 89%
+status: "adopted"  # Modern infrastructure as code platform
+
+# Technology Classification
+technology_type:
+  - "developer-tools"
+  - "deployment"
+  - "automation"
+deployment_model: "hybrid"  # Self-hosted, cloud managed
+integration_complexity: "complex"  # Setup complexity 4/10
+
+# Vendor and Licensing
+vendor: "Pulumi Corporation"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "developer-tools"
+  - "deployment"
+  - "automation"
+  - "software-development"
+  - "tech-stack"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "infrastructure_state"
+    - "resource_definitions"
+    - "stack_configurations"
+    - "deployment_history"
+    - "policy_rules"
+    - "project_metadata"
+    - "provider_configurations"
+    - "secrets_management"
+  
+  access_methods:
+    - "real-time"  # Live infrastructure state
+    - "on-demand"  # CLI operations
+    - "api"        # Service API access
+    
+  authentication:
+    required: true
+    methods:
+      - "access_tokens"
+      - "cloud_credentials"
+      - "oauth"
+      - "service_accounts"
+    security_level: "enterprise"
+    
+  rate_limits:
+    api_requests_per_minute: 1000
+    deployments_per_hour: 100
+    state_operations: 10000
+    
+  complexity_score: 4  # Setup complexity (4/10) - high complexity
+  
+  typical_use_cases:
+    - "infrastructure_as_code"
+    - "cloud_resource_management"
+    - "multi_cloud_deployment"
+    - "continuous_deployment"
+    - "policy_as_code"
+    - "secrets_management"
+    - "compliance_automation"
+    - "infrastructure_testing"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.1
+  tier: "Tier 3 Specialized"
+  priority_rank: 8
+  production_readiness: 89
+  
+  detailed_scoring:
+    information_retrieval_relevance: 5
+    setup_complexity: 4
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 7
+    integration_potential: 8
+    
+  production_readiness_breakdown:
+    stability_score: 90
+    performance_score: 88
+    security_score: 89
+    scalability_score: 89
+
+# Content and Documentation
+url: "https://github.com/pulumi/pulumi"
+description: "Modern infrastructure as code platform using familiar programming languages for cloud resource management. Developer-focused infrastructure platform enabling infrastructure deployment and management using TypeScript, Python, Go, and .NET."
+
+key_features: |
+  ## Infrastructure as Code
+  - Real programming languages (TypeScript, Python, Go, .NET, Java)
+  - Object-oriented infrastructure with classes and inheritance
+  - Loops, conditionals, and functions for dynamic infrastructure
+  - Rich ecosystem of reusable components and libraries
+  
+  ## Multi-Cloud Support
+  - Native support for 100+ cloud and infrastructure providers
+  - Unified programming model across AWS, Azure, GCP, Kubernetes
+  - Cross-cloud resource dependencies and orchestration
+  - Provider-specific optimizations and features
+  
+  ## Developer Experience
+  - IDE support with IntelliSense and debugging
+  - Testing framework for infrastructure validation
+  - Package managers for component distribution
+  - Version control integration with GitOps workflows
+  
+  ## Enterprise Features
+  - Policy as Code with automated compliance checking
+  - Secrets management with encrypted state
+  - Team collaboration with stacks and organizations
+  - Advanced deployment features with rollback capabilities
+
+use_cases: |
+  1. **Infrastructure Deployment**: Code definition → Resource provisioning → State management → Monitoring
+  2. **Multi-Cloud Management**: Provider configuration → Cross-cloud resources → Unified management → Cost optimization
+  3. **Policy Enforcement**: Policy definition → Automated validation → Compliance checking → Violation remediation
+  4. **GitOps Workflows**: Code changes → Automated testing → Deployment pipelines → Infrastructure updates
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    infrastructure_automation: 250000  # $250K/year in automation efficiency
+    developer_productivity: 200000     # $200K/year in faster deployments
+    compliance_automation: 150000      # $150K/year in policy enforcement
+    operational_consistency: 120000    # $120K/year in standardization
+    
+  roi_metrics:
+    payback_period_months: 6
+    net_roi_percentage: 280
+    implementation_cost: 100000
+    annual_operating_cost: 80000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/pulumi-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/pulumi-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Pulumi MCP Server provides modern infrastructure as code capabilities using familiar programming languages for cloud resource management.
+  Composite score of 5.1/10 reflects strong specialized capabilities with high complexity and good production readiness.
+  
+  **Key Strengths:**
+  - Modern infrastructure as code using real programming languages
+  - Comprehensive multi-cloud support with unified programming model
+  - Strong developer experience with IDE support and testing frameworks
+  - Advanced enterprise features including policy as code and secrets management
+  
+  **Implementation Considerations:** 
+  - High complexity requires infrastructure and cloud expertise
+  - Learning curve for teams transitioning from traditional IaC tools
+  - Best suited for organizations requiring modern, programmable infrastructure management
+  
+  **Strategic Value:** Essential for organizations requiring modern infrastructure as code capabilities with comprehensive multi-cloud support and developer-focused tooling

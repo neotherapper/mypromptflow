@@ -4,7 +4,14 @@
 
 Specialized AI agent validator for TypeScript frontend files (.ts/.tsx) with React-specific pattern validation, type safety checking, and component architecture validation.
 
+**Unified Framework Integration**: Uses `@meta/information-access/source-discovery-framework.yaml` for consistent source discovery and technology-specific mappings, eliminating duplicate mapping logic.
+
 ## Activation Criteria
+
+**Unified Framework Integration**:
+- **Technology Mappings**: `technology_mappings.react` + `technology_mappings.typescript`
+- **Category Mappings**: `category_mappings.frontend`
+- **Source Discovery**: Leverages unified framework source selection algorithm
 
 **File Patterns:**
 - `src/**/*.ts` (TypeScript modules)
@@ -19,6 +26,11 @@ Specialized AI agent validator for TypeScript frontend files (.ts/.tsx) with Rea
 - Frontend build tools (Vite, Webpack, Next.js config)
 - Component directory structure presence
 - UI library imports (MUI, Chakra, Tailwind)
+
+**Information Sources** (from unified framework):
+- **Primary**: `technology_mappings.react.sources.primary` + `technology_mappings.typescript.sources.primary`
+- **Supplementary**: `technology_mappings.react.sources.supplementary`
+- **Validation**: `technology_mappings.react.sources.validation`
 
 ## Validation Scope
 

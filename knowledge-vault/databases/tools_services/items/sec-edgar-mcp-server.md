@@ -28,6 +28,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS REST API
+mcp_profile_reference: "@mcp_profile/sec-edgar"
 ---
 
 **Official SEC database access for public company filings and financial regulatory data**  

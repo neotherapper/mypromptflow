@@ -21,6 +21,7 @@ tags:
 - Analytics
 - Development Platform
 tier: Tier 4
+mcp_profile_reference: "@mcp_profile/tier-4-spotify"
 ---
 
 **Tier**: Tier 4 Low-Priority  

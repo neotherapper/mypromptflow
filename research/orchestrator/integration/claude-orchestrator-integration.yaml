@@ -219,6 +219,121 @@ claude_orchestrator_workflow:
       quality_level: "basic|high|critical"
       confidence_score: "0.0-1.0"
   
+  step_3_5_discover_information_sources:
+    reference_files:
+      - "meta/information-access/source-discovery-framework.yaml"
+      - "meta/information-access/topic-mappings/"
+      - "meta/information-access/category-mappings/"
+      - "knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+    
+    purpose: "Unified intelligent source discovery using consolidated framework"
+    integration: "Uses unified source-discovery-framework.yaml for consistent source selection"
+    enhancement_status: "Phase 3 Enhanced - Advanced coordination with MCP error handling and fallback strategies"
+    
+    source_discovery_process:
+      unified_framework_integration:
+        framework_reference: "meta/information-access/source-discovery-framework.yaml"
+        algorithm_application: "Apply source_selection_algorithm from unified framework"
+        technology_detection: "Use technology_mappings for specific technologies (React, TypeScript, Python)"
+        category_fallback: "Use category_mappings for broader domains (frontend, backend, database)"
+        
+      enhanced_topic_analysis:
+        - extract_research_topic: "Parse research topic from user request and context analysis"
+        - apply_technology_detection: "Use source-discovery-framework technology_mappings detection"
+        - identify_specific_technologies: "React, TypeScript, Python get dedicated source mappings"
+        - classify_domain_categories: "Frontend, backend, database, infrastructure, testing"
+        - assess_information_complexity: "Simple, moderate, complex research information needs"
+      
+      consolidated_mapping_selection:
+        technology_specific_routing:
+          framework_integration: "Load technology_mappings from source-discovery-framework.yaml"
+          react_routing: "React research → react-sources.yaml (GitHub, Context7, npm, knowledge-vault)"
+          typescript_routing: "TypeScript research → typescript sources (GitHub, Context7, TypeScript docs)"
+          python_routing: "Python research → python sources (GitHub, PyPI, Python docs, knowledge-vault)"
+          priority_enforcement: "Technology-specific mappings override category patterns"
+        
+        category_pattern_routing:
+          framework_integration: "Load category_mappings from source-discovery-framework.yaml"
+          frontend_routing: "Frontend research → frontend category (GitHub, MDN, npm packages)"
+          backend_routing: "Backend research → backend category (GitHub, API docs, framework docs)"
+          database_routing: "Database research → database-sources.yaml (MCP servers, docs, knowledge-vault)"
+          infrastructure_routing: "Infrastructure research → infrastructure category (MCP servers, docs)"
+          testing_routing: "Testing research → testing category (GitHub, testing frameworks, best practices)"
+          fallback_application: "Use when specific technology not identified"
+        
+        knowledge_vault_coordination:
+          unified_approach: "Coordinated through source-discovery-framework.yaml knowledge_vault_integration"
+          query_optimization: "Use information-sources-by-type view for systematic source discovery"
+          tag_based_filtering: "Apply information-access tags and authentication complexity filters"
+          fallback_strategy: "When no specific/category mapping, use knowledge-vault fallback"
+      
+      enhanced_source_coordination:
+        multi_source_strategy: "Apply source coordination patterns from unified framework"
+        primary_source_selection: "1-2 authoritative sources based on technology/category mapping"
+        supplementary_source_addition: "Complementary sources for comprehensive coverage"
+        validation_source_inclusion: "Cross-reference sources for accuracy validation"
+        fallback_source_preparation: "Backup sources with error handling procedures"
+        
+        mcp_server_error_handling:
+          server_availability_check: "Test MCP server connectivity before usage"
+          authentication_retry_logic: "Exponential backoff for authentication failures"
+          rate_limit_coordination: "Intelligent request spacing across multiple sources"
+          graceful_degradation: "WebFetch/WebSearch fallback for MCP failures"
+          error_logging: "Complete error tracking for source access issues"
+        
+        pr_validation_alignment: "Coordinate with AI-PR validation system role assignments"
+        research_method_integration: "Align source selection with selected research methods"
+    
+    enhanced_output_format:
+      unified_source_selection:
+        technology_specific_sources: "Sources from technology_mappings if applicable"
+        category_pattern_sources: "Sources from category_mappings if no specific technology"
+        knowledge_vault_sources: "Fallback sources from knowledge-vault query"
+        integration_metadata: "Source selection rationale and framework coordination"
+      
+      consolidated_coordination_plan:
+        sequential_access_sources: "Sources requiring ordered access (authentication, dependencies)"
+        parallel_access_sources: "Sources for simultaneous access (GitHub, Context7, WebFetch)"
+        conditional_activation_sources: "Sources activated based on intermediate research findings"
+        error_recovery_sources: "Fallback sources with graceful degradation procedures"
+      
+      framework_integration_strategy:
+        mcp_server_coordination: "Unified MCP server selection from framework mappings"
+        knowledge_vault_integration: "Systematic knowledge-vault query and view usage"
+        web_source_optimization: "WebFetch and WebSearch coordination with rate limiting"
+        authentication_management: "Consolidated authentication complexity assessment"
+        pr_validation_alignment: "Source coordination with AI-PR validation role assignments"
+        
+        enhanced_coordination_patterns:
+          parallel_source_access: "Simultaneous multi-source access with result aggregation"
+          intelligent_fallback_chains: "Progressive fallback from MCP → Context7 → WebSearch"
+          source_quality_assessment: "Real-time credibility scoring and ranking"
+          constitutional_ai_integration: "95%+ compliance validation across all sources"
+          cross_framework_validation: "Multi-framework consistency checking and verification"
+          
+        mcp_server_coordination_integration:
+          framework_reference: "meta/information-access/mcp-server-coordination.yaml"
+          unified_error_handling: "Apply comprehensive MCP error handling framework"
+          intelligent_coordination: "Use parallel, sequential, and adaptive routing patterns"
+          fallback_orchestration: "Tier-based degradation with graceful recovery strategies"
+          performance_optimization: "Connection pooling, request batching, and intelligent caching"
+          monitoring_integration: "Health checks, performance metrics, and error tracking"
+      
+      quality_optimization:
+        setup_time_estimation: "Total configuration time using framework complexity scoring"
+        authentication_complexity_assessment: "1-10 scale difficulty using unified framework"
+        rate_limit_coordination_strategy: "Multi-source rate limiting with framework guidance"
+        comprehensive_error_handling: "Framework-based fallback procedures and recovery"
+        source_attribution_tracking: "Complete source tracking for research-sources.md"
+        
+      mcp_coordination_enhancement:
+        server_availability_validation: "Real-time health checks before MCP tool usage"
+        adaptive_routing_application: "Dynamic server selection based on performance metrics"
+        circuit_breaker_integration: "Temporary server exclusion on repeated failures"
+        intelligent_retry_mechanisms: "Exponential backoff with jitter for error recovery"
+        performance_monitoring: "Response time tracking and success rate optimization"
+        security_compliance: "Authentication management and data protection protocols"
+  
   step_4_select_methods:
     reference_files:
       - "research/orchestrator/config/selection-rules.yaml"
@@ -251,14 +366,17 @@ claude_orchestrator_workflow:
       
       execution_process:
         - "Load multi-agent method specification from methods/multi-agent/"
-        - "Extract sub-agent specifications and task prompts"
-        - "Spawn specialized sub-agents using Task tool with individual file saving"
-        - "Coordinate parallel sub-agent execution"
-        - "Monitor sub-agent progress and completion"
-        - "Collect and validate sub-agent outputs"
-        - "Save all individual sub-agent research files"
-        - "Apply synthesis instructions to integrate results"
-        - "Create comprehensive analysis file combining all perspectives"
+        - "Apply information source discovery results to sub-agent specialization"
+        - "Integrate selected sources into sub-agent task prompts"
+        - "Extract sub-agent specifications and task prompts with source coordination"
+        - "Spawn specialized sub-agents using Task tool with source-aware execution"
+        - "Coordinate parallel sub-agent execution with multi-source access"
+        - "Monitor sub-agent progress, completion, and source utilization"
+        - "Validate source accessibility and authentication across sub-agents"
+        - "Collect and validate sub-agent outputs with source attribution"
+        - "Save all individual sub-agent research files with source tracking"
+        - "Apply synthesis instructions to integrate results and source findings"
+        - "Create comprehensive analysis file combining all perspectives and sources"
       
       file_saving_requirements:
         CRITICAL_PATH_ENFORCEMENT: "RESEARCH FINDINGS MUST GO IN /research/findings/ - NEVER /docs/ OR ANY OTHER LOCATION"
@@ -324,10 +442,14 @@ claude_orchestrator_workflow:
         action: "Create research-sources.md file in research/findings/[topic]/.meta/ folder - NEVER in docs/ or projects/"
         source_tracking: "Track ALL tool usage during research execution"
         required_tracking:
+          - information_source_discovery: "Sources selected via information access framework with rationale"
+          - mcp_server_usage: "EVERY MCP server tool call with server name, tool, and result"
           - web_sources: "EVERY WebFetch/WebSearch URL with timestamp"
           - internal_docs: "EVERY Read tool file path with timestamp"
           - external_files: "EVERY file system access with timestamp"
           - search_queries: "EVERY search performed with timestamp"
+          - knowledge_vault_queries: "Knowledge vault view usage and filter applications"
+          - topic_vs_category_routing: "Whether specific technology or category mapping used"
         required_content:
           - session_summary: "Topic, duration, total source counts"
           - categorized_sources: "Organized by type with metadata"

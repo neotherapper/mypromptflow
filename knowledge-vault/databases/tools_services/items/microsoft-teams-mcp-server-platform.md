@@ -32,6 +32,7 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSockets
+mcp_profile_reference: "@mcp_profile/microsoft-teams"
 ---
 
 **Enterprise collaboration platform with comprehensive communication APIs and workflow integration**  

@@ -7,7 +7,7 @@ description: Official GitHub integration server for comprehensive repository man
   and development workflow automation Essential development infrastructure server
   enabling GitHub API integration, issue tracking, pull request automation,
 estimated_setup_time: 5-15 minutes
-id: 44d864f1-5a77-4ec2-b186-baa3fb771fcb
+id: bd764478-20c2-436d-98d3-f716bb051da2
 installation_priority: 1
 item_type: mcp_server
 migration_date: '2025-07-26'
@@ -32,10 +32,35 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+- version-control
+- structured-data
 tier: Tier 1
 transport_protocols:
 - GitHub REST API
 - GitHub GraphQL API
+information_capabilities:
+  data_types:
+  - repository_files
+  - commit_history
+  - issue_data
+  - pull_request_data
+  - code_content
+  - metadata
+  access_methods:
+  - real-time
+  - batch
+  - on-demand
+  - webhook
+  authentication: required
+  rate_limits: medium
+  complexity_score: 4
+  typical_use_cases:
+  - "Access repository files and directory structures"
+  - "Retrieve commit history and code changes"
+  - "Manage issues and pull requests programmatically"
+  - "Monitor repository activity and events"
+  - "Extract code documentation and README files"
+mcp_profile_reference: "@mcp_profile/github"
 ---
 
 **Official GitHub integration server for comprehensive repository management and development workflow automation**  
@@ -122,5 +147,43 @@ transport_protocols:
 - 🔒 Secret scanning and leak detection
 - 🔒 Security advisory management and response
 - 🔒 Compliance reporting and audit trail generation
+
+---
+
+## 📊 Information Access Capabilities
+
+### Primary Information Types
+- **Repository Files**: Complete access to file contents, directory structures, and file metadata
+- **Version History**: Full commit history, branch information, tags, and code evolution tracking  
+- **Issue Data**: Comprehensive issue management including comments, labels, milestones, and assignments
+- **Pull Request Data**: PR content, reviews, status checks, merge information, and collaboration data
+- **Code Analysis**: Code content extraction, documentation access, and repository analytics
+- **Metadata**: Repository settings, permissions, team information, and organizational data
+
+### Access Patterns
+- **Real-time Access**: Live API calls for current state information
+- **Batch Operations**: Bulk data retrieval for multiple repositories or large datasets
+- **On-demand Queries**: Specific information requests with immediate responses
+- **Webhook Integration**: Event-driven updates for real-time monitoring and automation
+
+### Typical Use Cases for AI Agents
+- **Repository Analysis**: "Extract all Python files from the main branch for code review"
+- **Change Monitoring**: "Monitor commits to specific files and notify on modifications"
+- **Issue Management**: "Retrieve all open issues labeled 'bug' with assigned developers"
+- **Documentation Access**: "Get README and documentation files for project understanding"
+- **Code Search**: "Find function definitions and usage patterns across repositories"
+- **Collaboration Tracking**: "Monitor pull request reviews and team collaboration patterns"
+
+### Authentication & Access Control
+- **Authentication Required**: Personal Access Token or GitHub App authentication
+- **Rate Limits**: Medium (5,000 requests/hour for authenticated requests)
+- **Permissions**: Scope-based access control (public repos, private repos, specific permissions)
+- **Security**: Enterprise-grade with SOC 2 compliance and audit logging
+
+### Setup Complexity Assessment
+- **Complexity Score**: 4/10 (Moderate setup required)
+- **Setup Time**: 15-30 minutes for basic authentication
+- **Requirements**: GitHub account, API token generation, permission configuration
+- **Enterprise Setup**: Additional SSO and compliance configuration may be required
 
 ---

@@ -76,7 +76,7 @@ The Queen-Agent Coordinator system implements a hierarchical coordination struct
 - **Symbol**: 📄
 - **Role**: Document creation and management specialist
 - **Authority**: Can spawn content workers
-- **Specialization**: All 67 document types from AI knowledge base
+- **Specialization**: All 40+ document templates available from AI knowledge base
 - **Max Concurrent Tasks**: 10
 - **Supported Document Types**: Complete range from Tier 1-4 documents
 - **Communication**: Architects ↔ Workers

@@ -116,7 +116,7 @@ agent_roles:
     description: "Document creation and management specialist"
     specialization: "document_generation"
     max_concurrent_tasks: 10
-    supported_document_types: ["all_67_types"]
+    supported_document_types: ["40+_available_templates"]
     communication_channels: ["architects", "workers"]
     
   research-specialist:

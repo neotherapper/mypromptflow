@@ -293,7 +293,7 @@ new_schemas:
 ```yaml
 # Use existing framework for automated instruction updates
 integration_points:
-  vagueness_detection: "Identify outdated technology references"
+  content_quality_validation: "Identify outdated technology references using content-quality-validator"
   specificity_enhancement: "Update examples to current versions"
   self_sufficiency_validation: "Ensure updated instructions remain complete"
   quality_scoring: "Maintain high validation scores after updates"

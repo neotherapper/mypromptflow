@@ -1,0 +1,179 @@
+# Docker MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/docker-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "87654321-dcba-4321-6789-docker00mcp02"
+name: "Docker MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 8.70/10 = excellent
+maturity_level: "enterprise"  # Production ready 87%, enterprise deployments
+status: "adopted"  # Industry standard containerization platform
+
+# Technology Classification
+technology_type:
+  - "dev_tool"
+  - "containerization"
+  - "deployment"
+deployment_model: "hybrid"  # Can be self-hosted or cloud
+integration_complexity: "moderate"  # Setup complexity 5/10
+
+# Vendor and Licensing
+vendor: "Docker Inc./Community"
+licensing_model: "freemium"  # Open source + enterprise features
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-1"
+  - "developer-tools"
+  - "containerization"
+  - "docker"
+  - "deployment"
+  - "software-development"
+  - "cloud-hosting"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos" 
+  - "windows"
+  - "web"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "container_metrics"
+    - "image_metadata"
+    - "deployment_status"
+    - "resource_usage"
+    - "network_configuration"
+    - "volume_management"
+    - "service_discovery"
+    - "orchestration_data"
+  
+  access_methods:
+    - "real-time"  # Container status monitoring
+    - "on-demand"  # Docker API queries
+    - "batch"      # Bulk container operations
+    
+  authentication:
+    required: true
+    methods:
+      - "unix_sockets"
+      - "tcp_tls"
+      - "docker_context"
+    security_level: "enterprise"
+    
+  rate_limits:
+    concurrent_operations: 10
+    resource_dependent: true
+    
+  complexity_score: 5  # Setup complexity (5/10) - moderate
+  
+  typical_use_cases:
+    - "development_environment_standardization"
+    - "microservices_architecture"
+    - "ci_cd_pipeline_integration"
+    - "application_deployment_scaling"
+    - "container_lifecycle_management"
+    - "image_registry_operations"
+    - "orchestration_automation"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 8.70
+  tier: "Tier 1 Immediate"
+  priority_rank: 5
+  production_readiness: 87
+  
+  detailed_scoring:
+    community_adoption: 9
+    information_retrieval_relevance: 8
+    integration_potential: 9
+    production_readiness_score: 9
+    maintenance_status: 8
+    
+  production_readiness_breakdown:
+    stability_score: 95
+    performance_score: 90
+    security_score: 85
+    scalability_score: 92
+
+# Content and Documentation
+url: "https://github.com/modelcontextprotocol/servers/tree/main/src/docker"
+description: "Enterprise-grade containerization platform integration server for development workflow automation and deployment orchestration. Critical infrastructure server enabling Docker container management, image operations, and containerized application deployment through MCP."
+
+key_features: |
+  ## Container Lifecycle Management
+  - Container creation, start, stop, restart, and deletion operations
+  - Real-time container status monitoring and health checks
+  - Container resource management (CPU, memory, storage limits)
+  
+  ## Image Operations
+  - Docker image building with Dockerfile and BuildKit support
+  - Image registry operations (push, pull, tag, delete)
+  - Multi-architecture image building and deployment
+  
+  ## Network & Service Management
+  - Custom network creation and management
+  - Service discovery and inter-container communication
+  - Load balancing and traffic routing
+  
+  ## Development Workflow Integration
+  - Hot reloading and live development environments
+  - Multi-stage build optimization for production deployments
+  - CI/CD pipeline integration and automation
+
+use_cases: |
+  1. **Development Environment Standardization**: Environment setup → Container creation → Development workflow → Testing
+  2. **Microservices Architecture Implementation**: Service containerization → Network configuration → Service discovery → Deployment  
+  3. **CI/CD Pipeline Integration**: Code commit → Build automation → Testing → Deployment
+  4. **Application Deployment and Scaling**: Image preparation → Deployment configuration → Monitoring → Scaling
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    development_speed: 25000      # $25K/year saved
+    deployment_consistency: 50000 # $50K/year saved  
+    resource_optimization: 15000  # $15K/year saved
+    scaling_efficiency: 40000     # $40K/year saved
+    
+  roi_metrics:
+    payback_period_months: 3.5
+    net_roi_percentage: 283
+    implementation_cost: 100000
+    annual_operating_cost: 200000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-27"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/docker-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "production_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/docker-server"
+
+# Timestamps
+created_date: "2025-07-27T00:00:00Z"
+last_modified: "2025-07-27T00:00:00Z"
+last_evaluated: "2025-07-26"
+
+# Evaluation Notes
+evaluation_notes: |
+  Docker MCP Server provides essential infrastructure for modern containerization workflows.
+  Composite score of 8.70/10 indicates strong production readiness and business value.
+  
+  **Key Strengths:**
+  - Industry standard containerization with widespread adoption
+  - Comprehensive container and image management capabilities
+  - Strong CI/CD integration and automation support
+  - Good ROI with 283% return and 3.5 month payback period
+  
+  **Implementation Priority:** High - Essential for containerization and modern development workflows
+  
+  **Strategic Value:** Foundation for microservices architecture and scalable deployment strategies

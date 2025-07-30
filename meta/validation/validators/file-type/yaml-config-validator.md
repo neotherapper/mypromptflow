@@ -4,7 +4,14 @@
 
 Specialized AI agent validator for YAML configuration files (.yaml/.yml) with syntax validation, Docker Compose analysis, CI/CD configuration checking, and infrastructure-as-code pattern validation.
 
+**Unified Framework Integration**: Uses `@meta/information-access/source-discovery-framework.yaml` for consistent source discovery and infrastructure-specific mappings, eliminating duplicate configuration validation logic.
+
 ## Activation Criteria
+
+**Unified Framework Integration**:
+- **Category Mappings**: `category_mappings.infrastructure`
+- **Technology Integration**: Infrastructure MCP servers from framework
+- **Source Discovery**: Leverages unified framework source selection algorithm
 
 **File Patterns:**
 - `**/*.yaml` (YAML configuration files)
@@ -22,6 +29,12 @@ Specialized AI agent validator for YAML configuration files (.yaml/.yml) with sy
 - Infrastructure as Code (Terraform, Ansible)
 - Application configuration files
 - OpenAPI/Swagger specifications
+
+**Information Sources** (from unified framework):
+- **Primary**: `category_mappings.infrastructure.sources.primary`
+- **MCP Integration**: Infrastructure MCP servers (Docker, Kubernetes, AWS)
+- **DevOps Repositories**: `category_mappings.infrastructure.sources` GitHub repos
+- **Knowledge Vault**: Infrastructure patterns and best practices
 
 ## Validation Scope
 

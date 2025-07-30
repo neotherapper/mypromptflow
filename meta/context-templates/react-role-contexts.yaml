@@ -1,0 +1,162 @@
+# React Role-Based Context Templates
+# Integration with existing REQUEST_CONTEXT patterns from PR validation system
+
+react_role_contexts:
+  # Integrates with projects/ai-pr-validation-system/docs/file-type-analysis-templates.md
+  framework_integration: "projects/ai-pr-validation-system/docs/file-type-analysis-templates.md"
+  
+  architect_context:
+    context_pattern: "REQUEST_CONTEXT(react-architect, typescript-architect)"
+    focus_areas:
+      - "System design and component architecture"
+      - "Type safety and TypeScript integration patterns"
+      - "Scalability and maintainability considerations"
+      - "Cross-component communication patterns"
+      - "State management architecture decisions"
+    knowledge_sources:
+      primary: "React architectural patterns, component design principles"
+      secondary: "TypeScript advanced patterns, system design best practices"
+      tertiary: "Performance implications of architectural decisions"
+    token_allocation: "300-400 tokens for architect-focused development"
+    
+  frontend_dev_context:
+    context_pattern: "REQUEST_CONTEXT(react-frontend-dev, typescript-frontend-dev)"
+    focus_areas:
+      - "Component implementation and user experience"
+      - "React hooks usage and custom hook development"
+      - "Event handling and user interaction patterns"
+      - "Form handling and validation implementation"
+      - "Responsive design and styling integration"
+    knowledge_sources:
+      primary: "React development patterns, hooks implementation"
+      secondary: "UX best practices, accessibility considerations"
+      tertiary: "Modern CSS patterns, responsive design techniques"
+    token_allocation: "250-350 tokens for implementation-focused tasks"
+    
+  performance_context:
+    context_pattern: "REQUEST_CONTEXT(react-performance, bundle-optimization)"
+    focus_areas:
+      - "Bundle optimization and code splitting strategies"
+      - "Rendering performance and React optimization"
+      - "Memory management and leak prevention"
+      - "Core Web Vitals optimization"
+      - "Lazy loading and progressive enhancement"
+    knowledge_sources:
+      primary: "React performance patterns, optimization techniques"
+      secondary: "Webpack/Vite optimization, bundle analysis"
+      tertiary: "Browser performance metrics, profiling tools"
+    token_allocation: "300-400 tokens for performance optimization tasks"
+    
+  security_context:
+    context_pattern: "REQUEST_CONTEXT(react-security, frontend-security)"
+    focus_areas:
+      - "XSS prevention and secure coding practices"
+      - "Content Security Policy implementation"
+      - "Authentication and authorization patterns"
+      - "Dependency security and vulnerability management"
+      - "Data validation and sanitization"
+    knowledge_sources:
+      primary: "React security patterns, XSS prevention techniques"
+      secondary: "Web security standards, authentication best practices"
+      tertiary: "Dependency security tools, vulnerability databases"
+    token_allocation: "300-400 tokens for security-focused development"
+    
+  accessibility_context:
+    context_pattern: "REQUEST_CONTEXT(react-accessibility, wcag-compliance)"
+    focus_areas:
+      - "WCAG 2.1 AA/AAA compliance implementation"
+      - "ARIA attributes and semantic markup"
+      - "Keyboard navigation and focus management"
+      - "Screen reader compatibility and testing"
+      - "Inclusive design patterns and best practices"
+    knowledge_sources:
+      primary: "WCAG guidelines, ARIA implementation patterns"
+      secondary: "Accessibility testing tools, screen reader behavior"
+      tertiary: "Inclusive design principles, disability awareness"
+    token_allocation: "250-350 tokens for accessibility-focused development"
+    
+  testing_context:
+    context_pattern: "REQUEST_CONTEXT(react-testing, component-testing)"
+    focus_areas:
+      - "Component testing strategies and implementation"
+      - "React Testing Library patterns and best practices"
+      - "Mock implementation and test isolation"
+      - "Integration testing and E2E test strategies"
+      - "Test coverage optimization and quality metrics"
+    knowledge_sources:
+      primary: "React Testing Library patterns, Jest configuration"
+      secondary: "Testing best practices, mock implementation strategies"
+      tertiary: "E2E testing tools, continuous integration patterns"
+    token_allocation: "250-300 tokens for testing-focused development"
+
+# Context Loading Strategies
+context_loading_strategies:
+  single_role_loading:
+    description: "Load context for single specialist role"
+    use_case: "Simple component development or focused optimization"
+    token_efficiency: "High - only load needed context"
+    
+  multi_role_coordination:
+    description: "Load primary role + lightweight secondary contexts"
+    use_case: "Complex components requiring multiple perspectives"
+    coordination_pattern: "Primary role (full context) + Secondary roles (essential patterns only)"
+    token_efficiency: "Moderate - balanced coverage vs efficiency"
+    
+  progressive_role_expansion:
+    description: "Start with primary role, expand based on needs"
+    use_case: "Evolving requirements during development conversation"
+    expansion_triggers: ["complexity increase", "new requirements", "cross-cutting concerns"]
+    token_efficiency: "Optimal - context grows with actual needs"
+
+# Integration with File-Type Routing
+file_type_context_mapping:
+  "*.tsx":
+    default_context: "frontend_dev_context"
+    conditional_contexts:
+      performance_indicators: "performance_context"
+      security_patterns: "security_context"
+      accessibility_attributes: "accessibility_context"
+      complex_architecture: "architect_context"
+    
+  "*.test.tsx":
+    default_context: "testing_context"
+    conditional_contexts:
+      component_testing: "frontend_dev_context"
+      performance_testing: "performance_context"
+      accessibility_testing: "accessibility_context"
+    
+  complex_components:
+    detection_criteria:
+      - "Multiple hooks usage"
+      - "Performance-critical sections"
+      - "Security-sensitive operations"
+      - "Accessibility requirements"
+    multi_context_loading: "architect_context + relevant specialist contexts"
+    coordination_pattern: "Sequential handoff with context preservation"
+
+# Token Optimization
+token_optimization:
+  baseline_comprehensive_loading: "~1000 tokens for all React contexts"
+  optimized_role_based_loading: "250-400 tokens per active role"
+  average_savings: "60-75% token reduction through targeted role loading"
+  
+  efficiency_scenarios:
+    simple_component:
+      roles: ["frontend_dev_context"]
+      token_usage: "250-350 tokens"
+      savings: "70-75%"
+      
+    performance_optimization:
+      roles: ["performance_context", "architect_context (lightweight)"]
+      token_usage: "400-500 tokens" 
+      savings: "50-60%"
+      
+    security_implementation:
+      roles: ["security_context", "frontend_dev_context (lightweight)"]
+      token_usage: "400-450 tokens"
+      savings: "55-60%"
+      
+    complex_feature:
+      roles: ["architect_context", "frontend_dev_context", "performance_context (lightweight)"]
+      token_usage: "500-700 tokens"
+      savings: "30-50%"

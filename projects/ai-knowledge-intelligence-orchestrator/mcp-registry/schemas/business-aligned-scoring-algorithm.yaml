@@ -1,19 +1,19 @@
 # Community-Driven MCP Server Scoring Algorithm
-# Enhanced based on community adoption and information retrieval priorities
-# Version: 4.0.0 - Community-First Excellence
+# Enhanced with Data Science and Life Sciences Downgrading
+# Version: 5.0.0 - Business Priority Alignment
 
 metadata:
-  version: "4.0.0"
+  version: "5.0.0"
   created: "2025-07-24"
-  updated: "2025-07-24"
-  purpose: "Community-driven scoring algorithm prioritizing adoption metrics and information retrieval relevance"
-  supersedes: "Business-aligned scoring v3.0.0"
-  enhancement_basis: "Strategic pivot to community adoption as primary success indicator with information retrieval as core value driver"
+  updated: "2025-07-28"
+  purpose: "Community-driven scoring algorithm with appropriate downgrading of data science and life sciences servers"
+  supersedes: "Community-driven scoring v4.0.0"
+  enhancement_basis: "Strategic realignment to reflect current business priorities - data science and life sciences are not high-value at the moment"
   key_improvements:
-    - "Community adoption as highest priority (35%) reflecting real-world usage patterns"
-    - "Information retrieval relevance as second priority (25%) for knowledge-based applications"
-    - "Integration potential as third priority (20%) for ecosystem connectivity"
-    - "Reduced emphasis on maintenance status (10%) while maintaining production readiness (10%)"
+    - "Community adoption maintains highest priority (35%) with sector-specific adjustments"
+    - "Information retrieval relevance (25%) with reduced scoring for data science and life sciences"
+    - "Integration potential (20%) unchanged for ecosystem connectivity"
+    - "Added explicit downgrading for data science tools (4/10), life sciences research (3/10), academic research (5/10)"
 
 # NEW: Community-Driven Scoring Criteria (5 Dimensions)
 community_driven_scoring_criteria:
@@ -33,7 +33,10 @@ community_driven_scoring_criteria:
         active_community_projects: 8  # 1k-10k stars, active community, regular usage
         emerging_community_tools: 7  # Growing adoption, active development, community interest
         niche_specialized_tools: 6  # Smaller but dedicated user base in specific domains
+        academic_research_tools: 5  # Academic research platforms - limited business value at the moment
+        data_science_tools: 4  # Data science platforms - not high priority currently
         experimental_early_stage: 4  # Limited adoption, experimental stage, early community
+        life_sciences_research: 3  # Life sciences and bioinformatics - not valuable at the moment
         minimal_usage: 2  # Very limited community usage or adoption
         
       adoption_indicators:
@@ -47,7 +50,10 @@ community_driven_scoring_criteria:
         - "Slack, Notion, Linear: 9 (Widespread business adoption)"
         - "Sentry, Auth0, Redis: 8 (Strong community adoption)"
         - "Specialized tools with active communities: 6-7"
-        - "Experimental or niche tools: 4-5"
+        - "ArXiv, academic research platforms: 5 (Academic tools - limited business value)"
+        - "Jupyter, data science platforms: 4 (Data science - not high priority currently)"
+        - "Experimental or early stage tools: 4"
+        - "FHIR, bioinformatics platforms: 3 (Life sciences - not valuable at the moment)"
 
   # DIMENSION 2: Information Retrieval Relevance (Second Priority)
   information_retrieval_relevance:
@@ -61,11 +67,13 @@ community_driven_scoring_criteria:
       knowledge_management: 9  # Notion, Obsidian, documentation platforms, wikis
       database_query_systems: 9  # PostgreSQL, MongoDB, graph databases with query capabilities
       content_management: 8  # CMS platforms, content APIs, document management
-      data_analytics: 8  # Analytics platforms, reporting tools, data visualization
       api_documentation: 7  # OpenAPI, REST documentation, API explorers
       communication_search: 7  # Slack, Discord, searchable communication platforms
       file_storage_search: 6  # Google Drive, file systems with search capabilities
       social_content: 5  # Social media platforms with content discovery
+      data_analytics: 5  # Analytics platforms, reporting tools - downgraded priority
+      academic_research: 5  # Academic research platforms - limited business relevance
+      life_sciences_research: 4  # Life sciences, bioinformatics - not valuable currently
       entertainment_media: 3  # Entertainment platforms with limited information value
       
     information_value_examples:
@@ -81,6 +89,11 @@ community_driven_scoring_criteria:
         - "PostgreSQL: 9 (Full-text search, JSON queries, structured data retrieval)"
         - "Neo4j: 9 (Graph queries, relationship discovery, complex data navigation)"
         - "MongoDB: 8 (Document search, aggregation, flexible queries)"
+      downgraded_categories:
+        - "Tableau, PowerBI: 5 (Data analytics - reduced business priority)"
+        - "ArXiv, research databases: 5 (Academic research - limited business relevance)"
+        - "FHIR, genomics databases: 4 (Life sciences - not valuable currently)"
+        - "Jupyter notebooks: 5 (Data science analytics - downgraded priority)"
 
   # DIMENSION 3: Integration Potential (Third Priority)
   integration_potential:
@@ -335,6 +348,42 @@ community_implementation_strategy:
 
 # Community-Driven Version History
 version_history:
+  v5.0.0:
+    date: "2025-07-28"
+    transformation_basis: "Strategic realignment to reflect current business priorities - data science and life sciences are not high-value at the moment"
+    key_changes:
+      algorithm_adjustments:
+        - "Added explicit downgrading for data science tools (4/10) in community adoption matrix"
+        - "Added explicit downgrading for life sciences research (3/10) in community adoption matrix"
+        - "Added explicit downgrading for academic research tools (5/10) in community adoption matrix"
+        - "Reduced data analytics scoring from 8/10 to 5/10 in information retrieval relevance"
+        - "Added life sciences research category (4/10) in information retrieval relevance"
+        - "Added academic research category (5/10) in information retrieval relevance"
+      
+      scoring_impact:
+        - "Jupyter Notebook expected to drop from 9.2 to ~6.0 (Tier 1 → Tier 2)"
+        - "Bioinformatics servers expected to drop from 8.9 to ~5.5 (Tier 1 → Tier 3)"
+        - "ArXiv Research expected to drop from 9.0 to ~6.5 (Tier 1 → Tier 2)"
+        - "Data analytics platforms expected to drop significantly in tier rankings"
+        - "Life sciences servers expected to move to Tier 3-4 classifications"
+      
+      tier_redistribution:
+        - "Expected Tier 1 reduction from ~91 to ~75-80 servers"
+        - "Data science and life sciences servers relegated to Tier 3-4"
+        - "Academic research tools appropriately valued for limited business relevance"
+    
+    strategic_impact:
+      - "Registry realignment: community-driven → business priority focused"
+      - "Ensures data science and life sciences receive appropriate (lower) priority scoring"
+      - "Maintains integrity of tier system for current business needs"
+      - "Preserves algorithm validity while reflecting sector-specific priorities"
+    
+    validation_criteria:
+      - "All data science servers must score ≤6.5 (no longer Tier 1)"
+      - "All life sciences servers must score ≤5.5 (Tier 3-4)"
+      - "Academic research platforms appropriately valued at 5-6.5 range"
+      - "Business applications maintain appropriate scoring levels"
+
   v4.0.0:
     date: "2025-07-24"
     transformation_basis: "Strategic pivot to community adoption as primary success indicator with information retrieval as core value driver"

@@ -1,0 +1,189 @@
+# Prometheus MCP Server - Enhanced Metadata Extraction
+# Phase 1: Enhanced Metadata Extraction for MCP server profiles
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/prometheus-server-profile.md
+
+---
+# Core Identification (Schema Compliance)
+id: "opq56789-rst0-1234-opqr-prometheus017"
+name: "Prometheus MCP Server"
+
+# Rating System (Extracted from embedded tables)
+rating: 4  # Derived from composite score 5.4/10 = excellent
+maturity_level: "stable"  # Production ready 95%
+status: "adopted"  # Industry standard monitoring system
+
+# Technology Classification
+technology_type:
+  - "monitoring"
+  - "analytics"
+  - "tech-stack"
+deployment_model: "hybrid"  # Self-hosted, containerized, cloud
+integration_complexity: "moderate"  # Setup complexity 6/10
+
+# Vendor and Licensing
+vendor: "Prometheus Community/CNCF"
+licensing_model: "open_source"
+
+# Unified Tagging System (Critical for MCP Integration)
+tags:
+  - "mcp-server"
+  - "tier-3"
+  - "monitoring"
+  - "analytics"
+  - "developer-tools"
+  - "tech-stack"
+  - "enterprise"
+
+# Technical Specifications (Extracted)
+supported_platforms:
+  - "linux"
+  - "macos"
+  - "windows"
+  - "cross_platform"
+
+# Enhanced Information Capabilities Metadata
+information_capabilities:
+  data_types:
+    - "time_series_metrics"
+    - "scrape_targets"
+    - "alerting_rules"
+    - "recording_rules"
+    - "service_discovery"
+    - "target_health"
+    - "query_results"
+    - "federation_data"
+  
+  access_methods:
+    - "real-time"  # Live metrics collection
+    - "on-demand"  # PromQL queries
+    - "historical" # Time-series analysis
+    
+  authentication:
+    required: false
+    methods:
+      - "basic_auth"
+      - "oauth_proxy"
+      - "tls_certificates"
+      - "rbac_integration"
+    security_level: "moderate"
+    
+  rate_limits:
+    queries_per_second: 1000
+    scrape_targets: 10000
+    samples_per_second: 1000000
+    
+  complexity_score: 6  # Setup complexity (6/10) - moderate complexity
+  
+  typical_use_cases:
+    - "infrastructure_monitoring"
+    - "application_metrics"
+    - "kubernetes_monitoring"
+    - "service_level_monitoring"
+    - "alerting_systems"
+    - "capacity_planning"
+    - "performance_analysis"
+    - "compliance_monitoring"
+
+# Scoring Metrics (Extracted from embedded tables)
+scoring_metrics:
+  composite_score: 5.4
+  tier: "Tier 3 Specialized"
+  priority_rank: 6
+  production_readiness: 95
+  
+  detailed_scoring:
+    information_retrieval_relevance: 6
+    setup_complexity: 6
+    maintenance_status: 9
+    documentation_quality: 8
+    community_adoption: 9
+    integration_potential: 9
+    
+  production_readiness_breakdown:
+    stability_score: 96
+    performance_score: 95
+    security_score: 93
+    scalability_score: 96
+
+# Content and Documentation
+url: "https://github.com/prometheus/prometheus"
+description: "Industry-standard monitoring system and time series database for collecting and processing metrics. CNCF-graduated project providing reliable monitoring infrastructure with powerful query language and alerting capabilities."
+
+key_features: |
+  ## Metrics Collection
+  - Pull-based metrics collection with configurable scraping
+  - Multi-dimensional data model with labels and time series
+  - Service discovery for dynamic target configuration
+  - Rich client libraries for application instrumentation
+  
+  ## Query and Analysis
+  - PromQL powerful functional query language
+  - Real-time and historical data analysis capabilities
+  - Built-in mathematical functions and operators
+  - Recording rules for pre-computed aggregations
+  
+  ## Alerting System
+  - Flexible alerting rules with PromQL expressions
+  - Integration with Alertmanager for notification routing
+  - Alert grouping, inhibition, and silencing
+  - Multi-dimensional alert routing and escalation
+  
+  ## Ecosystem Integration
+  - Native Kubernetes monitoring with operators
+  - Extensive exporter ecosystem for third-party systems
+  - Federation support for multi-cluster deployments
+  - Grafana integration for visualization and dashboards
+
+use_cases: |
+  1. **Infrastructure Monitoring**: Target discovery → Metrics collection → Analysis → Alerting
+  2. **Application Performance**: Instrumentation → Metrics exposure → Monitoring → Optimization
+  3. **Kubernetes Monitoring**: Cluster metrics → Service monitoring → Resource tracking → Scaling decisions
+  4. **SLA Monitoring**: SLI definition → SLO tracking → Error budget monitoring → Reliability engineering
+
+# Business Value Analysis (Extracted)
+business_value:
+  annual_benefits:
+    monitoring_efficiency: 280000  # $280K/year in operational visibility
+    incident_prevention: 220000    # $220K/year in proactive issue detection
+    capacity_optimization: 180000  # $180K/year in resource efficiency  
+    compliance_automation: 140000  # $140K/year in automated reporting
+    
+  roi_metrics:
+    payback_period_months: 5
+    net_roi_percentage: 310
+    implementation_cost: 90000
+    annual_operating_cost: 60000
+
+# Migration Tracking
+migration_tracking:
+  migration_date: "2025-07-28"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/prometheus-server-profile.md"
+  extraction_version: "1.0.0"
+  schema_compliance: true
+  validation_status: "specialized_ready"
+
+# Cross-Database Relationships (Schema requirement)
+mcp_server_profiles: "@mcp_profile/prometheus-server"
+
+# Timestamps
+created_date: "2025-07-28T00:00:00Z"
+last_modified: "2025-07-28T00:00:00Z"
+last_evaluated: "2025-07-27"
+
+# Evaluation Notes
+evaluation_notes: |
+  Prometheus MCP Server provides industry-standard monitoring capabilities with powerful time-series database and query language.
+  Composite score of 5.4/10 reflects strong capabilities with moderate complexity and excellent production readiness.
+  
+  **Key Strengths:**
+  - Industry-standard monitoring with CNCF graduation and widespread adoption
+  - Powerful PromQL query language with flexible alerting capabilities
+  - Strong ecosystem integration especially with Kubernetes and cloud-native tools
+  - Reliable pull-based architecture with service discovery
+  
+  **Implementation Considerations:** 
+  - Moderate complexity requires monitoring and time-series database expertise
+  - Storage and retention planning for large-scale deployments
+  - Best suited for organizations adopting cloud-native monitoring practices
+  
+  **Strategic Value:** Essential for organizations requiring reliable, scalable monitoring infrastructure with industry-standard practices and strong ecosystem integration

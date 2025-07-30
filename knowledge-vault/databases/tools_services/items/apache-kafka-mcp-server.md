@@ -29,6 +29,7 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTP
+mcp_profile_reference: "@mcp_profile/apache-kafka"
 ---
 
 **Event streaming and data pipeline management for real-time data processing and AI-driven analytics**  

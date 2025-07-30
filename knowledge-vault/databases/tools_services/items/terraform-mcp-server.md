@@ -29,6 +29,7 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS API
+mcp_profile_reference: "@mcp_profile/terraform"
 ---
 
 **Enterprise Infrastructure as Code automation platform for multi-cloud resource management and DevOps orchestration**  

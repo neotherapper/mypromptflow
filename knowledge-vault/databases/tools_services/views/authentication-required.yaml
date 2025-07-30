@@ -1,0 +1,381 @@
+# Authentication Required Sources View
+# AI Agent view for filtering tools_services by authentication requirements and security features
+# Helps agents understand setup complexity and security considerations
+
+view_info:
+  name: "Authentication Required Sources"
+  description: "Filter tools and services by authentication requirements, security features, and access control"
+  database: "tools_services"
+  version: "1.0.0"
+  created: "2025-07-27"
+  purpose: "Enable AI agents to assess authentication complexity and plan secure integrations"
+
+# View Configuration
+view_config:
+  primary_grouping: "authentication_type"
+  secondary_sort: "security_score_desc"
+  include_inactive: false
+  max_results: 100
+
+# Authentication Type Categories
+authentication_categories:
+  api_key:
+    description: "Simple API key authentication"
+    complexity: "low"
+    setup_time: "5-15 minutes"
+    characteristics:
+      - "Single API key required"
+      - "Usually provided in headers"
+      - "Simple to implement"
+      - "Moderate security level"
+    use_cases:
+      - "Public API access"
+      - "Development and testing"
+      - "Simple integrations"
+      - "Low-security environments"
+    examples: ["OpenAI API", "Weather APIs", "Basic web services"]
+    security_considerations:
+      - "Key rotation policies"
+      - "Secure storage requirements"
+      - "Rate limiting"
+      - "Scope limitations"
+    
+  oauth2:
+    description: "OAuth 2.0 authorization flow"
+    complexity: "medium"
+    setup_time: "30-60 minutes"
+    characteristics:
+      - "Authorization code flow"
+      - "Access and refresh tokens"
+      - "Scoped permissions"
+      - "High security level"
+    use_cases:
+      - "User-delegated access"
+      - "Third-party integrations"
+      - "Enterprise applications"
+      - "Social media APIs"
+    examples: ["Google APIs", "Microsoft Graph", "GitHub OAuth", "Slack APIs"]
+    security_considerations:
+      - "Token management"
+      - "Scope minimization"
+      - "Refresh token security"
+      - "PKCE implementation"
+    
+  enterprise_sso:
+    description: "Enterprise Single Sign-On integration"
+    complexity: "high"
+    setup_time: "2-8 hours"
+    characteristics:
+      - "SAML or OIDC protocols"
+      - "Enterprise directory integration"
+      - "Complex configuration"
+      - "Enterprise-grade security"
+    use_cases:
+      - "Enterprise software access"
+      - "Internal systems integration"
+      - "Compliance requirements"
+      - "Large-scale deployments"
+    examples: ["AWS SSO", "Azure AD", "Okta", "Auth0 Enterprise"]
+    security_considerations:
+      - "Certificate management"
+      - "Identity federation"
+      - "Compliance requirements"
+      - "Audit logging"
+    
+  basic_auth:
+    description: "Username and password authentication"
+    complexity: "low"
+    setup_time: "5-10 minutes"
+    characteristics:
+      - "Simple credentials"
+      - "Base64 encoding"
+      - "Legacy compatibility"
+      - "Lower security level"
+    use_cases:
+      - "Legacy systems"
+      - "Internal tools"
+      - "Development environments"
+      - "Simple services"
+    examples: ["Legacy APIs", "Internal databases", "Development tools"]
+    security_considerations:
+      - "Credential security"
+      - "HTTPS requirement"
+      - "Password policies"
+      - "Access logging"
+    
+  certificate_based:
+    description: "Certificate-based mutual authentication"
+    complexity: "high"
+    setup_time: "1-4 hours"
+    characteristics:
+      - "Client certificates"
+      - "PKI infrastructure"
+      - "Mutual TLS"
+      - "Highest security level"
+    use_cases:
+      - "High-security environments"
+      - "Financial systems"
+      - "Government applications"
+      - "IoT device authentication"
+    examples: ["Banking APIs", "Government services", "IoT platforms"]
+    security_considerations:
+      - "Certificate lifecycle"
+      - "PKI management"
+      - "Revocation checking"
+      - "Hardware security modules"
+    
+  no_auth:
+    description: "No authentication required"
+    complexity: "none"
+    setup_time: "immediate"
+    characteristics:
+      - "Public access"
+      - "No credentials needed"
+      - "Immediate use"
+      - "Limited functionality"
+    use_cases:
+      - "Public data access"
+      - "Testing and development"
+      - "Open APIs"
+      - "Read-only access"
+    examples: ["Public REST APIs", "Open data sources", "Free tier services"]
+    security_considerations:
+      - "Rate limiting"
+      - "IP restrictions"
+      - "Usage monitoring"
+      - "Terms of service compliance"
+
+# Security Feature Classification
+security_features:
+  encryption:
+    description: "Data encryption in transit and at rest"
+    levels: ["TLS 1.2", "TLS 1.3", "End-to-end encryption"]
+    importance: "critical"
+    
+  audit_logging:
+    description: "Comprehensive access and action logging"
+    capabilities: ["Access logs", "Action logs", "Security events"]
+    importance: "high"
+    
+  access_control:
+    description: "Fine-grained access control and permissions"
+    features: ["Role-based access", "Attribute-based access", "Resource-level permissions"]
+    importance: "high"
+    
+  compliance:
+    description: "Regulatory compliance certifications"
+    standards: ["SOC 2", "GDPR", "HIPAA", "PCI DSS"]
+    importance: "critical"
+    
+  monitoring:
+    description: "Security monitoring and threat detection"
+    capabilities: ["Anomaly detection", "Real-time alerts", "Security dashboards"]
+    importance: "medium"
+
+# Filter Presets for Different Security Requirements
+filter_presets:
+  low_security:
+    description: "Minimal security requirements for development"
+    filters:
+      - "authentication_type: no_auth OR api_key"
+      - "setup_complexity: low"
+      - "security_level: basic OR moderate"
+    suitable_for: ["Development", "Testing", "Public data access"]
+    
+  standard_security:
+    description: "Standard business security requirements"
+    filters:
+      - "authentication_type: api_key OR oauth2"
+      - "encryption: TLS 1.2+"
+      - "audit_logging: available"
+    suitable_for: ["Business applications", "Customer data", "Standard APIs"]
+    
+  high_security:
+    description: "High security for sensitive data"
+    filters:
+      - "authentication_type: oauth2 OR enterprise_sso"
+      - "compliance: SOC2 OR GDPR"
+      - "access_control: fine_grained"
+    suitable_for: ["Enterprise systems", "Sensitive data", "Regulated industries"]
+    
+  enterprise_security:
+    description: "Maximum security for critical systems"
+    filters:
+      - "authentication_type: enterprise_sso OR certificate_based"
+      - "compliance: multiple_standards"
+      - "monitoring: advanced"
+    suitable_for: ["Financial systems", "Healthcare", "Government"]
+
+# Setup Complexity Assessment
+setup_complexity:
+  immediate:
+    description: "Ready to use immediately"
+    time_estimate: "0-5 minutes"
+    requirements: ["No authentication", "Public access"]
+    examples: ["Public APIs", "Open data sources"]
+    
+  simple:
+    description: "Basic setup with minimal configuration"
+    time_estimate: "5-30 minutes"
+    requirements: ["API key", "Basic configuration"]
+    examples: ["Most SaaS APIs", "Simple integrations"]
+    
+  moderate:
+    description: "Standard OAuth or configuration setup"
+    time_estimate: "30 minutes - 2 hours"
+    requirements: ["OAuth flow", "App registration", "Permissions setup"]
+    examples: ["Google APIs", "Social media integrations"]
+    
+  complex:
+    description: "Enterprise setup with multiple steps"
+    time_estimate: "2-8 hours"
+    requirements: ["SSO configuration", "Enterprise approval", "Compliance review"]
+    examples: ["Enterprise software", "Regulated systems"]
+    
+  advanced:
+    description: "Complex PKI or custom authentication"
+    time_estimate: "1-5 days"
+    requirements: ["Certificate setup", "PKI infrastructure", "Custom development"]
+    examples: ["Banking systems", "Government platforms"]
+
+# AI Agent Integration Guidance
+ai_agent_guidance:
+  authentication_planning:
+    assessment_checklist:
+      - "Identify data sensitivity level"
+      - "Determine compliance requirements"
+      - "Assess available authentication methods"
+      - "Evaluate setup time constraints"
+      - "Consider maintenance overhead"
+      - "Plan credential management"
+    
+    selection_criteria:
+      security_first: "Choose highest available security level"
+      complexity_balanced: "Balance security with implementation complexity"
+      compliance_driven: "Select based on regulatory requirements"
+      time_constrained: "Choose fastest acceptable setup"
+    
+  implementation_workflow:
+    preparation:
+      - "Review authentication documentation"
+      - "Gather required credentials and permissions"
+      - "Set up secure credential storage"
+      - "Plan error handling and retries"
+    
+    implementation:
+      - "Implement authentication flow"
+      - "Add proper error handling"
+      - "Set up credential refresh mechanisms"
+      - "Implement security best practices"
+    
+    validation:
+      - "Test authentication flow"
+      - "Verify permission scopes"
+      - "Test error scenarios"
+      - "Validate security configuration"
+    
+  security_best_practices:
+    credential_management:
+      - "Use environment variables for secrets"
+      - "Implement credential rotation"
+      - "Use secure storage for long-term credentials"
+      - "Monitor credential usage"
+    
+    access_control:
+      - "Implement principle of least privilege"
+      - "Use scoped permissions where available"
+      - "Regular permission audits"
+      - "Monitor unusual access patterns"
+    
+    error_handling:
+      - "Handle authentication failures gracefully"
+      - "Implement proper retry logic"
+      - "Log security events appropriately"
+      - "Fail securely in error conditions"
+
+# Common Authentication Scenarios
+common_scenarios:
+  public_api_integration:
+    description: "Integrating with public APIs"
+    typical_auth: "api_key"
+    considerations: ["Rate limits", "Key security", "Usage monitoring"]
+    examples: ["Weather data", "News APIs", "Public datasets"]
+    
+  social_media_integration:
+    description: "Accessing social media platforms"
+    typical_auth: "oauth2"
+    considerations: ["User consent", "Token refresh", "Scope limitations"]
+    examples: ["Twitter API", "LinkedIn API", "Facebook Graph"]
+    
+  enterprise_system_access:
+    description: "Accessing enterprise software"
+    typical_auth: "enterprise_sso"
+    considerations: ["Compliance", "Audit trails", "Enterprise approval"]
+    examples: ["Salesforce", "Microsoft 365", "Enterprise databases"]
+    
+  financial_data_access:
+    description: "Accessing financial systems"
+    typical_auth: "certificate_based OR enhanced_oauth2"
+    considerations: ["Regulatory compliance", "Audit requirements", "High security"]
+    examples: ["Banking APIs", "Payment processors", "Financial data providers"]
+
+# Troubleshooting Common Authentication Issues
+troubleshooting_guide:
+  authentication_failures:
+    symptoms: ["401 Unauthorized", "403 Forbidden", "Invalid credentials"]
+    common_causes:
+      - "Expired or invalid credentials"
+      - "Incorrect authentication method"
+      - "Missing required permissions"
+      - "Rate limiting or quota exceeded"
+    resolution_steps:
+      - "Verify credential validity"
+      - "Check authentication method implementation"
+      - "Review required permissions and scopes"
+      - "Check rate limits and usage quotas"
+    
+  token_refresh_issues:
+    symptoms: ["Token expired errors", "Refresh token invalid"]
+    common_causes:
+      - "Refresh token expired"
+      - "Incorrect refresh flow implementation"
+      - "Clock skew issues"
+      - "Scope changes"
+    resolution_steps:
+      - "Implement proper refresh logic"
+      - "Check token expiration handling"
+      - "Verify system clock synchronization"
+      - "Re-authorize if refresh token expired"
+    
+  certificate_problems:
+    symptoms: ["SSL/TLS errors", "Certificate validation failures"]
+    common_causes:
+      - "Expired certificates"
+      - "Certificate chain issues"
+      - "Wrong certificate store"
+      - "Clock synchronization"
+    resolution_steps:
+      - "Verify certificate validity"
+      - "Check certificate chain"
+      - "Update certificate store"
+      - "Synchronize system clock"
+
+# Maintenance and Updates
+maintenance:
+  security_reviews:
+    frequency: "quarterly"
+    focus_areas:
+      - "Authentication method effectiveness"
+      - "Security vulnerability assessments"
+      - "Compliance requirement updates"
+      - "Best practice evolution"
+    
+  credential_management:
+    rotation_schedule: "regular_rotation_based_on_policy"
+    monitoring: "continuous_usage_monitoring"
+    validation: "periodic_access_testing"
+    
+  documentation_updates:
+    authentication_guides: "updated_with_new_methods"
+    security_requirements: "aligned_with_compliance_changes"
+    troubleshooting: "enhanced_with_common_issues"

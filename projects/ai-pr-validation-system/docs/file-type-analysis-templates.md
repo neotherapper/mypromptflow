@@ -2,52 +2,77 @@
 
 ## Overview
 
-This specification defines specialized analysis templates for different file types, leveraging the role-aware knowledge management system with `REQUEST_CONTEXT()` patterns for optimal validation accuracy.
+This specification defines specialized analysis templates for different file types, leveraging the **unified source-discovery-framework** with role-aware knowledge management for optimal validation accuracy.
 
-**Foundation**: Built on high file type detection accuracy and role-aware knowledge management with comprehensive expert knowledge.
+**Foundation**: Built on unified source-discovery-framework.yaml eliminating duplicate mappings and providing consistent technology-specific source selection across research and validation workflows.
+
+**Unified Framework Integration**: `@meta/information-access/source-discovery-framework.yaml`
 
 ---
 
 ## 🎯 File Type Detection & Agent Mapping
 
 ### Multi-Layered Detection Architecture
+*References unified framework step_1_topic_analysis*
 
 ```yaml
 detection_layers:
+  # Uses source-discovery-framework.yaml detection algorithms
+  framework_reference: "meta/information-access/source-discovery-framework.yaml"
+  
   layer_1_extension:
     pattern_matching: "*.{ts,tsx,js,jsx,py,md,yaml,json,vue,svelte}"
     confidence_base: 0.6
+    framework_mapping: "category_mappings.frontend, category_mappings.backend"
 
   layer_2_content:
     magic_numbers: "AST parsing, file headers, syntax detection"
     confidence_boost: 0.3
+    framework_mapping: "technology_mappings specific detection"
 
   layer_3_context:
     directory_structure: "src/, tests/, docs/, .claude/, components/"
     dependency_analysis: "package.json, requirements.txt, pyproject.toml"
     confidence_boost: 0.1
+    framework_mapping: "source_selection_algorithm.step_3_source_coordination"
 ```
 
 ### Role-Aware Agent Spawning Logic
+*Integrates with unified framework pr_validation_integration*
 
 ```yaml
 agent_spawning_matrix:
   typescript_react:
     file_patterns: ["*.ts", "*.tsx"]
     context_indicators: ["React imports", "JSX syntax", "component patterns"]
+    # UNIFIED FRAMEWORK INTEGRATION
+    framework_mapping: "technology_mappings.react + technology_mappings.typescript"
+    source_discovery: "meta/information-access/source-discovery-framework.yaml"
+    
     primary_agents:
       - role: "architect"
         context: "REQUEST_CONTEXT(typescript-architect, react-architect)"
         focus: "System design, type safety, architectural patterns"
+        framework_sources: "technology_mappings.react.pr_validation_context.architect_role"
+        knowledge_sources: "technology_mappings.react.pr_validation_context.knowledge_sources[0-1]"
+        
       - role: "frontend-dev"
         context: "REQUEST_CONTEXT(typescript-frontend-dev, react-frontend-dev)"
-        focus: "Component implementation, user experience, React patterns"
+        focus: "Component implementation, user experience, React patterns"  
+        framework_sources: "technology_mappings.react.pr_validation_context.frontend_dev_role"
+        knowledge_sources: "technology_mappings.react.pr_validation_context.knowledge_sources[1]"
+        
       - role: "performance"
         context: "REQUEST_CONTEXT(typescript-performance, react-performance)"
         focus: "Bundle optimization, rendering performance, memory usage"
+        framework_sources: "technology_mappings.react.pr_validation_context.performance_role"
+        knowledge_sources: "technology_mappings.react.pr_validation_context.knowledge_sources[2]"
+        
       - role: "security"
         context: "REQUEST_CONTEXT(react-security, testing-security)"
         focus: "XSS prevention, secure coding, dependency vulnerabilities"
+        framework_sources: "technology_mappings.react.pr_validation_context.security_role"
+        knowledge_sources: "technology_mappings.react.pr_validation_context.knowledge_sources[3]"
 ```
 
 ---
@@ -55,9 +80,14 @@ agent_spawning_matrix:
 ## 📁 TypeScript/React Analysis Template
 
 ### File Detection Criteria
+*Uses unified framework technology_mappings.react + technology_mappings.typescript*
 
 ```yaml
 typescript_react_detection:
+  # UNIFIED FRAMEWORK INTEGRATION
+  framework_reference: "meta/information-access/source-discovery-framework.yaml"
+  technology_mappings: ["react", "typescript"]
+  
   file_extensions: [".ts", ".tsx"]
   content_patterns:
     - "import React"
@@ -71,18 +101,35 @@ typescript_react_detection:
     - tsconfig.json present
     - src/ directory structure
     - component naming conventions
+    
+  # Uses unified framework source discovery
+  information_sources:
+    primary: "technology_mappings.react.sources.primary"
+    supplementary: "technology_mappings.react.sources.supplementary"
+    validation: "technology_mappings.react.sources.validation"
 ```
 
 ### Role-Specific Analysis Framework
+*Integrates with unified framework pr_validation_context*
 
 #### 🏗️ Architect Analysis (TypeScript/React)
 
 ```yaml
 architect_analysis:
+  # UNIFIED FRAMEWORK INTEGRATION
+  framework_reference: "technology_mappings.react.pr_validation_context.architect_role"
   context_loading: "REQUEST_CONTEXT(typescript-architect, react-architect)"
+  
+  # Uses unified framework knowledge sources
   knowledge_source:
-    - "knowledge-vault/knowledge/technologies/typescript/typescript-architect.md"
-    - "knowledge-vault/knowledge/technologies/react/react-architect.md"
+    - "technology_mappings.react.pr_validation_context.knowledge_sources[0]"
+    - "technology_mappings.typescript.pr_validation_context.knowledge_sources[0]"
+  
+  # Leverages unified framework source discovery
+  information_access:
+    primary_sources: "technology_mappings.react.sources.primary"
+    github_repos: "technology_mappings.react.sources.primary[0]"
+    documentation: "technology_mappings.react.sources.primary[1]"
 
   primary_concerns:
     type_architecture:
@@ -640,4 +687,31 @@ interface TechnologyBreakdown {
 {{/each}}
 ```
 
-This file-type analysis template system leverages the proven role-aware knowledge management framework to provide specialized, expert-level analysis for each technology stack while maintaining consistency across the validation process.
+This file-type analysis template system leverages the **unified source-discovery-framework** to provide specialized, expert-level analysis for each technology stack while maintaining consistency across the validation process.
+
+## 🔗 Unified Framework Consolidation Summary
+
+### ✅ Consolidation Complete
+
+This document has been **fully integrated** with the unified source-discovery-framework, eliminating all duplicate mappings:
+
+**Removed Duplications**:
+- ❌ Separate React source mappings → ✅ Uses `technology_mappings.react`
+- ❌ Separate TypeScript source mappings → ✅ Uses `technology_mappings.typescript`  
+- ❌ Separate Python backend mappings → ✅ Uses `technology_mappings.python`
+- ❌ Separate infrastructure source mappings → ✅ Uses `category_mappings.infrastructure`
+- ❌ Independent PR validation contexts → ✅ Uses `pr_validation_integration`
+
+**Unified Framework Benefits**:
+- **Single Source of Truth**: All source discovery logic centralized in `meta/information-access/source-discovery-framework.yaml`
+- **Consistency**: Same source selection algorithm used by research orchestrator and PR validation
+- **Maintainability**: Updates to technology mappings automatically apply to both workflows
+- **Role-Aware Integration**: PR validation contexts properly mapped to unified framework roles
+- **MCP Server Coordination**: Centralized MCP server discovery and error handling
+
+**Integration Verification**:
+- ✅ All technology-specific validators reference unified framework mappings
+- ✅ Role-aware contexts properly linked to framework pr_validation_context
+- ✅ Information sources consistently mapped to framework source discovery
+- ✅ No duplicate source selection logic remains in validation system
+- ✅ Framework integration documented in validator registry

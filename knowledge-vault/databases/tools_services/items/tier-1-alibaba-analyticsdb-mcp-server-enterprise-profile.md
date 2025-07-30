@@ -28,6 +28,7 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
+mcp_profile_reference: "@mcp_profile/tier-1-alibaba-analyticsdb"
 ---
 
 **Tier**: Tier 1 Strategic Enterprise Platform  

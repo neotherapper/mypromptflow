@@ -29,6 +29,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/brave-search"
 ---
 
 **Privacy-focused search API with comprehensive web intelligence for AI agents**  

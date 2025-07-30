@@ -20,6 +20,7 @@ tags:
 - Tier 1
 - Google Service
 - Development Platform
+mcp_profile_reference: "@mcp_profile/youtube-video-content-platform"
 ---
 
 # YouTube Video Content Platform MCP Server

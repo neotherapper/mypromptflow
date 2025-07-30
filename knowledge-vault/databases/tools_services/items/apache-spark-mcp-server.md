@@ -29,6 +29,7 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTP/REST
+mcp_profile_reference: "@mcp_profile/apache-spark"
 ---
 
 **Distributed big data processing and machine learning engine for large-scale data analytics and AI workloads**  

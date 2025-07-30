@@ -2,11 +2,11 @@
 # Auto-generated from validator discovery - shows coverage vs gaps
 
 file_type_coverage:
-  discovery_date: "2025-01-19"
+  discovery_date: "2025-01-28"
   total_file_types_analyzed: 15
-  covered_types: 4
-  uncovered_types: 11
-  coverage_percentage: "27%"
+  covered_types: 6
+  uncovered_types: 9
+  coverage_percentage: "40%"
 
   # WELL COVERED - Production Ready Validators Available
   covered_types:
@@ -63,14 +63,17 @@ file_type_coverage:
       priority: "CRITICAL"
       justification: "React frontend requires component validation"
       estimated_files: "50+"
-      missing_capabilities:
-        - "React component structure"
-        - "Props validation"
-        - "Hook usage validation"
-        - "JSX syntax checking"
-        - "Component testing validation"
-      recommended_validator: "typescript-frontend-validator"
-      implementation_effort: "high"
+      validator: "react-specialist"
+      location: "knowledge-vault/knowledge/technologies/react/react-subagents-patterns.md"
+      capabilities: ["React component architecture", "TypeScript integration", "hooks validation", "JSX syntax", "performance optimization"]
+      spawn_pattern: "Task tool with react-specialist agent"
+      production_ready: true
+      confidence: "high"
+      specialized_routing:
+        "performance-critical": "react-performance-specialist"
+        "security-focused": "react-security-specialist" 
+        "accessibility-focused": "react-accessibility-specialist"
+        "test-files": "react-testing-specialist"
       
     "*.py":
       description: "Python source files"
@@ -86,19 +89,18 @@ file_type_coverage:
       recommended_validator: "python-backend-validator"
       implementation_effort: "medium"
       
-    "*.test.ts, *.spec.js":
-      description: "Test files"
+    "*.test.ts, *.spec.js, *.test.tsx":
+      description: "Test files including React component tests"
       priority: "HIGH"
       justification: "Test quality validation needed"
       estimated_files: "30+"
-      missing_capabilities:
-        - "Test structure validation"
-        - "Coverage requirements"
-        - "Assertion quality"
-        - "Mock usage validation"
-        - "Test naming conventions"
-      recommended_validator: "test-validator"
-      implementation_effort: "medium"
+      validator: "react-testing-specialist"
+      location: "knowledge-vault/knowledge/technologies/react/react-subagents-patterns.md"
+      capabilities: ["Test structure validation", "React component testing", "Coverage analysis", "Mock validation", "Testing best practices"]
+      spawn_pattern: "Task tool with react-testing-specialist agent"
+      production_ready: true
+      confidence: "high"
+      fallback_validators: ["react-specialist", "general-testing-validator"]
       
     "*.yaml, *.yml":
       description: "YAML configuration files"

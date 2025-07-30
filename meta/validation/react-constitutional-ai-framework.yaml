@@ -1,0 +1,240 @@
+# React Constitutional AI Framework
+# Production-ready compliance validation for React development agents
+
+react_constitutional_framework:
+  # Integrates with existing 99% compliance system
+  framework_reference: "meta/validation/validators/claude-subagents-compliance-validator.md"
+  compliance_target: "≥85/100 for production deployment"
+  
+  # React-Specific Constitutional Principles
+  constitutional_principles:
+    ethical_constraints:
+      security_first:
+        principle: "Never implement code that could be used for malicious purposes"
+        validation_checks:
+          - "No dangerouslySetInnerHTML without sanitization"
+          - "No eval() or similar dynamic code execution"
+          - "No hardcoded secrets or sensitive data"
+          - "Proper input validation and XSS prevention"
+        violation_severity: "CRITICAL"
+        
+      accessibility_priority:
+        principle: "Prioritize accessibility and inclusive design in all implementations"
+        validation_checks:
+          - "Semantic HTML structure with proper ARIA attributes"
+          - "Keyboard navigation support for all interactive elements"
+          - "Color contrast compliance (WCAG AA minimum)"
+          - "Screen reader compatibility verification"
+        violation_severity: "HIGH"
+        
+      privacy_protection:
+        principle: "Respect user privacy and data protection principles"
+        validation_checks:
+          - "No unnecessary data collection or tracking"
+          - "Proper consent mechanisms for data usage"
+          - "Secure handling of personally identifiable information"
+          - "GDPR/CCPA compliance considerations"
+        violation_severity: "HIGH"
+        
+      performance_responsibility:
+        principle: "Ensure optimal performance and resource efficiency"
+        validation_checks:
+          - "Bundle size optimization and lazy loading implementation"
+          - "Efficient re-rendering patterns and memoization"
+          - "Proper cleanup of side effects and subscriptions"
+          - "Core Web Vitals compliance"
+        violation_severity: "MEDIUM"
+    
+    quality_standards:
+      typescript_safety:
+        principle: "Maintain TypeScript type safety without compromising performance"
+        validation_checks:
+          - "Strict TypeScript configuration compliance"
+          - "Proper type definitions for all components and functions"
+          - "No usage of 'any' type without justification"
+          - "Generic type usage for reusable components"
+        scoring_weight: 25
+        
+      react_best_practices:
+        principle: "Follow React best practices and established patterns"
+        validation_checks:
+          - "Proper component lifecycle and hooks usage"
+          - "Appropriate state management patterns"
+          - "Correct dependency array usage in hooks"
+          - "Component composition over inheritance"
+        scoring_weight: 25
+        
+      error_handling:
+        principle: "Implement comprehensive error boundaries and graceful degradation"
+        validation_checks:
+          - "Error boundaries for critical component trees"
+          - "Fallback UI implementations"
+          - "Proper error logging and reporting"
+          - "User-friendly error messages"
+        scoring_weight: 20
+        
+      cross_browser_compatibility:
+        principle: "Ensure responsive design and cross-browser compatibility"
+        validation_checks:
+          - "Mobile-first responsive design implementation"
+          - "Cross-browser testing coverage"
+          - "Progressive enhancement strategies"
+          - "Polyfill usage for older browser support"
+        scoring_weight: 15
+        
+      maintainability:
+        principle: "Write maintainable, readable, and well-documented code"
+        validation_checks:
+          - "Clear component and function naming conventions"
+          - "Appropriate code comments and documentation"
+          - "Modular component architecture"
+          - "Consistent code formatting and style"
+        scoring_weight: 15
+
+  # Validation Scoring Framework (0-100 scale)
+  validation_scoring:
+    dimensions:
+      single_responsibility:
+        weight: 25
+        criteria: "React domain focus without scope creep"
+        excellent: "23-25 points - Clear single React domain, no scope violations"
+        good: "20-22 points - Mostly coherent with minor optimization opportunities"
+        needs_review: "15-19 points - Some scope creep or unclear boundaries"
+        non_compliant: "0-14 points - Multiple domains or excessive scope violations"
+        
+      tool_minimalism:
+        weight: 20
+        criteria: "Essential tools without bloat"
+        excellent: "18-20 points - Optimal tool selection with clear justification"
+        good: "16-17 points - Mostly appropriate with minor optimization opportunities"
+        needs_review: "12-15 points - Some tool bloat or missing essential tools"
+        non_compliant: "0-11 points - Excessive tools or missing critical capabilities"
+        
+      context_isolation:
+        weight: 20
+        criteria: "Specialist expertise boundaries"
+        excellent: "18-20 points - Perfect context isolation with domain expertise"
+        good: "16-17 points - Good isolation with minor contamination prevention needs"
+        needs_review: "12-15 points - Some context pollution or boundary issues"
+        non_compliant: "0-11 points - Poor isolation or excessive context mixing"
+        
+      quality_implementation:
+        weight: 20
+        criteria: "Production-ready code quality"
+        excellent: "18-20 points - Production-ready with comprehensive quality measures"
+        good: "16-17 points - High quality with minor improvement opportunities"
+        needs_review: "12-15 points - Adequate quality with notable gaps"
+        non_compliant: "0-11 points - Poor quality or significant compliance violations"
+        
+      integration_patterns:
+        weight: 15
+        criteria: "Effective agent coordination"
+        excellent: "14-15 points - Seamless coordination with clear handoff protocols"
+        good: "12-13 points - Good coordination with minor optimization opportunities"
+        needs_review: "9-11 points - Some coordination issues or unclear handoffs"
+        non_compliant: "0-8 points - Poor coordination or excessive interdependencies"
+
+  # Self-Correction Mechanisms
+  self_correction_framework:
+    improvement_triggers:
+      quality_degradation:
+        threshold: "Score drops below 85%"
+        response: "Immediate analysis and correction protocol activation"
+        
+      security_violation:
+        threshold: "Any CRITICAL security principle violation"
+        response: "Emergency correction with human oversight notification"
+        
+      performance_regression:
+        threshold: "Core Web Vitals score degrades >10%"
+        response: "Performance optimization analysis and correction"
+        
+      accessibility_failure:
+        threshold: "WCAG AA compliance failure"
+        response: "Accessibility review and remediation protocol"
+    
+    correction_protocols:
+      analyze_failure:
+        process: "Identify root cause using natural language gradients"
+        documentation: "Document failure analysis in correction log"
+        
+      generate_improvement:
+        process: "Create optimized implementation using constitutional principles"
+        validation: "Validate against all applicable constitutional constraints"
+        
+      validate_solution:
+        process: "Apply comprehensive validation framework"
+        approval: "Require validation score ≥85 before implementation"
+        
+      implement_fix:
+        process: "Update agent behavior with validated improvements"
+        monitoring: "Monitor for regression and continued compliance"
+    
+    learning_memory:
+      successful_patterns:
+        storage: "Store validated improvement strategies for reuse"
+        sharing: "Share successful patterns across React specialist agents"
+        
+      failure_analysis:
+        documentation: "Document unsuccessful attempts with root cause analysis"
+        prevention: "Update validation framework to prevent similar failures"
+        
+      quality_benchmarks:
+        maintenance: "Maintain performance thresholds and success criteria"
+        evolution: "Evolve benchmarks based on industry best practices"
+
+  # Continuous Monitoring
+  continuous_monitoring:
+    real_time_validation:
+      frequency: "During every React development task"
+      scope: "All constitutional principles and quality standards"
+      reporting: "Immediate feedback on compliance violations"
+      
+    periodic_assessment:
+      frequency: "Weekly comprehensive review"
+      scope: "Full agent performance and compliance analysis"
+      reporting: "Detailed compliance report with improvement recommendations"
+      
+    trend_analysis:
+      metrics: "Compliance scores, violation patterns, improvement trends"
+      reporting: "Monthly trend analysis and strategic recommendations"
+      optimization: "Framework updates based on performance data"
+
+  # Integration Points
+  system_integration:
+    file_type_routing:
+      integration: "Apply constitutional validation during agent spawning"
+      enforcement: "Ensure compliance requirements before task execution"
+      
+    role_based_contexts:
+      integration: "Validate role-specific constitutional compliance"
+      enforcement: "Context-aware principle application"
+      
+    self_improving_architecture:
+      integration: "Constitutional compliance as optimization constraint"
+      enforcement: "Prevent improvements that violate core principles"
+      
+    progressive_loading:
+      integration: "Load constitutional principles with context"
+      enforcement: "Maintain compliance while optimizing token usage"
+
+# Implementation Guidelines
+implementation_guidelines:
+  deployment_readiness:
+    minimum_score: 85
+    critical_violations: 0
+    high_violations: "≤2"
+    remediation_required: "All violations must be addressed before production use"
+    
+  monitoring_alerts:
+    critical_threshold: "Immediate alert for any critical violation"
+    degradation_threshold: "Alert if score drops ≥10 points"
+    trend_threshold: "Alert if negative trend ≥3 consecutive assessments"
+    
+  human_oversight:
+    escalation_triggers:
+      - "Critical constitutional violations"
+      - "Repeated self-correction failures"
+      - "Significant performance degradation"
+    review_frequency: "Monthly for high-performing agents, weekly for others"
+    approval_required: "Major framework changes or principle modifications"

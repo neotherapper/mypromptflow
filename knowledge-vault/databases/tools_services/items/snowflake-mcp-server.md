@@ -30,6 +30,7 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTPS REST API
+mcp_profile_reference: "@mcp_profile/snowflake"
 ---
 
 **Cloud-native data platform for enterprise analytics, data engineering, and AI workloads**  

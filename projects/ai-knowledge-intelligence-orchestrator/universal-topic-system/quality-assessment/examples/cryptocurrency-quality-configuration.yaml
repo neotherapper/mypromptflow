@@ -1,0 +1,420 @@
+# Cryptocurrency Quality Configuration Example
+# Demonstrates quality assessment configuration for cryptocurrency and blockchain topic
+
+topic_quality_metadata:
+  topic_slug: "cryptocurrency"
+  topic_name: "Cryptocurrency & Blockchain"
+  quality_profile: "market"
+  last_updated: "2025-07-27"
+  configuration_version: "1.0"
+
+# Topic Characteristics for Quality Adaptation
+topic_characteristics:
+  information_volatility: "high"                # Crypto markets and news move extremely quickly
+  authority_distribution: "distributed"         # Authority spread across many entities
+  information_density: "high"                   # Massive volume of crypto content daily
+  speculation_prevalence: "high"                # High amount of speculation and rumors
+  technical_complexity: "medium"                # Technical but more accessible than pure research
+  regulatory_sensitivity: "high"                # Highly sensitive to regulatory changes
+
+# Quality Threshold Customization
+quality_thresholds:
+  source_authority:
+    minimum_threshold: 0.4                      # Lower due to distributed authority structure
+    tier_1_threshold: 0.75                      # Adjusted for crypto authority patterns
+    adjustment_factors:
+      volatility_adjustment: -0.1               # Reduction due to extreme volatility
+      authority_distribution_factor: -0.15      # Reduction for distributed authority
+      
+  content_accuracy:
+    minimum_threshold: 0.5                      # Lower due to speculation prevalence
+    verification_requirement: 0.75              # Still require verification for major claims
+    adjustment_factors:
+      speculation_penalty: -0.2                 # Heavy penalty for high speculation
+      technical_bonus: +0.1                     # Moderate bonus for technical accuracy
+      
+  relevance_alignment:
+    minimum_threshold: 0.55                     # Moderate relevance requirement
+    significance_threshold: 0.7                 # Moderate bar for significance
+    adjustment_factors:
+      density_adjustment: -0.1                  # Reduction due to very high info density
+      complexity_factor: +0.05                  # Small bonus for handling complexity
+      
+  completeness_depth:
+    minimum_threshold: 0.35                     # Lower completeness requirement
+    comprehensive_threshold: 0.75               # Moderate bar for comprehensive content
+    adjustment_factors:
+      technical_requirement: +0.1               # Modest increase for technical depth
+      practical_utility_bonus: +0.15            # High bonus for actionable content
+      
+  constitutional_compliance:
+    minimum_threshold: 0.8                      # High standard maintained
+    strict_enforcement: true
+    topic_specific_considerations: 
+      - "Financial advice disclaimers and risk warnings"
+      - "Regulatory compliance across jurisdictions"
+      - "Market manipulation prevention"
+      - "Investment risk disclosure requirements"
+
+# Topic-Specific Quality Indicators
+topic_quality_indicators:
+  primary_quality_signals:
+    regulatory_compliance:
+      name: "Regulatory Compliance and Legal Accuracy"
+      description: "Content that accurately represents regulatory requirements and legal status"
+      detection_method: "Cross-reference with official regulatory announcements and legal sources"
+      score_impact: +0.2
+      
+    market_data_accuracy:
+      name: "Market Data and Price Information Accuracy"
+      description: "Accurate market data, prices, and financial information"
+      detection_method: "Verify against multiple authoritative market data sources"
+      score_impact: +0.15
+      
+    technical_protocol_accuracy:
+      name: "Blockchain Technical Accuracy"
+      description: "Accurate description of blockchain protocols and technical implementations"
+      detection_method: "Cross-reference with official protocol documentation and code"
+      score_impact: +0.1
+      
+  secondary_quality_signals:
+    risk_disclosure:
+      name: "Investment Risk Disclosure"
+      description: "Appropriate disclosure of investment risks and volatility warnings"
+      detection_method: "Check for risk warnings and disclaimers about financial advice"
+      score_impact: +0.1
+      
+    source_transparency:
+      name: "Source and Conflict of Interest Transparency"
+      description: "Clear disclosure of financial interests, sponsorships, or conflicts"
+      detection_method: "Look for conflict disclosures and source transparency"
+      score_impact: +0.15
+      
+  quality_warning_indicators:
+    pump_and_dump_language:
+      name: "Market Manipulation Language"
+      description: "Language suggesting coordinated market manipulation or pump schemes"
+      detection_criteria: "Phrases like 'pump it', 'to the moon' without analysis, coordinated buying calls"
+      severity: "high"
+      score_penalty: -0.4
+      
+    financial_advice_without_disclaimer:
+      name: "Unlicensed Financial Advice"
+      description: "Providing specific investment advice without appropriate disclaimers"
+      detection_criteria: "Specific buy/sell recommendations without risk warnings or disclaimers"
+      severity: "high"
+      score_penalty: -0.3
+      
+    unsubstantiated_price_predictions:
+      name: "Unfounded Price Predictions"
+      description: "Price predictions without analytical basis or methodology"
+      detection_criteria: "Specific price targets without fundamental or technical analysis"
+      severity: "medium"
+      score_penalty: -0.2
+
+# Source Authority Mapping for Cryptocurrency
+source_authority_configuration:
+  tier_1_authority_indicators:
+    official_designations: 
+      - "Official blockchain project websites and foundations (Bitcoin.org, Ethereum.org)"
+      - "Major cryptocurrency exchange official announcements"
+      - "Regulatory authority statements (SEC, CFTC, European authorities)"
+      - "Central bank digital currency official communications"
+    institutional_indicators:
+      - "Major financial institutions with crypto involvement"
+      - "Government blockchain research initiatives"
+      - "Established cryptocurrency research organizations"
+    expert_credentials:
+      - "Cryptocurrency protocol developers and core contributors"
+      - "Blockchain researchers with academic credentials"
+      - "Licensed financial professionals specializing in crypto"
+      
+  tier_2_authority_indicators:
+    community_recognition:
+      - "Well-established crypto news outlets with journalistic standards"
+      - "Recognized crypto analysts with consistent track records"
+      - "Blockchain conference speakers and industry leaders"
+    expertise_demonstration:
+      - "Consistent accurate reporting on crypto developments"
+      - "Deep understanding of blockchain technology and economics"
+      - "Balanced perspective on crypto opportunities and risks"
+    professional_association:
+      - "Employment at reputable crypto companies or exchanges"
+      - "Active participation in blockchain development communities"
+      - "Contributions to cryptocurrency protocol development"
+      
+  tier_3_authority_indicators:
+    curation_quality:
+      - "Well-moderated crypto communities with quality standards"
+      - "Crypto discussion platforms with fact-checking mechanisms"
+      - "Community-driven content with peer review processes"
+    community_engagement:
+      - "Active, knowledgeable crypto community participation"
+      - "Quality discussions with technical and market insight"
+      - "Regular contributions from credible crypto experts"
+    signal_to_noise:
+      - "Effective filtering of hype, scams, and misinformation"
+      - "Focus on substantive crypto developments over speculation"
+      - "Ability to identify legitimate projects and developments"
+      
+  authority_red_flags:
+    anonymity_concerns:
+      - "Anonymous sources promoting specific cryptocurrencies"
+      - "Lack of verifiable credentials or track record"
+      - "No clear disclosure of financial interests"
+    bias_indicators:
+      - "Undisclosed financial stakes in promoted cryptocurrencies"
+      - "Consistent bias without balanced risk analysis"
+      - "Promotional content disguised as objective analysis"
+    accuracy_issues:
+      - "History of promoting failed or fraudulent projects"
+      - "Consistent inaccuracy in market predictions or technical claims"
+      - "Spreading of debunked crypto misinformation"
+
+# Content Validation Rules for Cryptocurrency
+content_validation_rules:
+  fact_checking_requirements:
+    high_impact_claims:
+      - "Claims about institutional crypto adoption"
+      - "Regulatory approval or ban announcements"
+      - "Major security breaches or protocol vulnerabilities"
+      - "Central bank digital currency developments"
+    quantitative_claims:
+      - "Market capitalization and trading volume figures"
+      - "Bitcoin mining difficulty and hashrate statistics"
+      - "Transaction fees and processing times"
+      - "Cryptocurrency price movements and technical analysis"
+    prediction_claims:
+      - "Price predictions with specific targets and timeframes"
+      - "Regulatory timeline predictions"
+      - "Technology adoption forecasts"
+      
+  cross_reference_requirements:
+    controversial_topics:
+      - "Regulatory status and legal classification of cryptocurrencies"
+      - "Environmental impact of cryptocurrency mining"
+      - "Cryptocurrency ban or approval announcements"
+    breaking_news:
+      - "Exchange hacks or security incidents"
+      - "Major cryptocurrency protocol upgrades"
+      - "Regulatory announcements affecting crypto markets"
+    technical_specifications:
+      - "Blockchain protocol technical details and upgrades"
+      - "Smart contract functionality and security features"
+      - "Cryptocurrency mining and consensus mechanisms"
+      
+  verification_methods:
+    official_verification:
+      - "Check against official exchange announcements"
+      - "Verify with blockchain explorer data and on-chain analysis"
+      - "Confirm with official regulatory agency statements"
+    expert_consultation:
+      - "Consult blockchain developers for technical claims"
+      - "Seek crypto economist input on market analysis"
+      - "Validate regulatory interpretation with legal experts"
+    community_validation:
+      - "Check consensus among crypto developer community"
+      - "Look for independent verification of technical claims"
+      - "Assess crypto expert reactions to significant announcements"
+
+# Significance Assessment for Cryptocurrency
+significance_assessment:
+  high_significance_indicators:
+    impact_indicators:
+      - "Major cryptocurrency exchange launches or failures"
+      - "Significant regulatory approvals or bans"
+      - "Large-scale institutional cryptocurrency adoption"
+      - "Major cryptocurrency protocol upgrades or forks"
+    novelty_indicators:
+      - "Novel blockchain consensus mechanisms or innovations"
+      - "First-of-kind cryptocurrency applications or use cases"
+      - "Breakthrough solutions to blockchain scalability or security"
+    urgency_indicators:
+      - "Time-sensitive security vulnerabilities or exploits"
+      - "Immediate regulatory actions requiring compliance"
+      - "Market crisis events requiring immediate attention"
+      
+  medium_significance_indicators:
+    development_indicators:
+      - "New cryptocurrency project launches with notable features"
+      - "DeFi protocol updates and new financial products"
+      - "Partnership announcements between crypto and traditional finance"
+    analysis_indicators:
+      - "Expert analysis of crypto market trends and cycles"
+      - "Technical analysis and market sentiment assessment"
+      - "Regulatory impact analysis and compliance guidance"
+    trend_indicators:
+      - "Emerging patterns in cryptocurrency adoption or usage"
+      - "Market trend analysis and cycle identification"
+      - "Technology convergence with blockchain applications"
+      
+  low_significance_indicators:
+    routine_updates:
+      - "Minor cryptocurrency wallet or exchange updates"
+      - "Regular mining difficulty adjustments"
+      - "Routine cryptocurrency conference announcements"
+    discussion_content:
+      - "General crypto discussion without new insights"
+      - "Repetitive price speculation without analysis"
+      - "Social media sentiment without substantive content"
+    historical_context:
+      - "Historical cryptocurrency price analysis"
+      - "Educational content on established crypto concepts"
+      - "Background information on well-known cryptocurrencies"
+
+# Quality Learning and Adaptation
+learning_configuration:
+  feedback_integration:
+    user_feedback_weight: 0.4                  # Higher weight due to community-driven nature
+    outcome_tracking_weight: 0.5               # Moderate weight on content utility
+    expert_validation_weight: 0.7              # Good weight on expert assessment
+    
+  adaptation_parameters:
+    threshold_adjustment_rate: 0.15             # Higher adjustment rate for volatile field
+    learning_period: "weekly"
+    minimum_sample_size: 75                     # Moderate sample size for faster adaptation
+    
+  pattern_recognition:
+    quality_pattern_tracking: true
+    cross_topic_learning: true
+    seasonal_adjustment: false                  # Crypto doesn't follow traditional seasons
+
+# Integration with Multi-Agent Framework
+agent_integration:
+  worker_agent_responsibilities:
+    extraction_quality:
+      - "Verify market data and price information accuracy"
+      - "Check regulatory compliance and legal accuracy"
+      - "Validate blockchain technical specifications"
+    format_validation:
+      - "Ensure proper financial disclaimer formatting"
+      - "Validate market data chart and graph accuracy"
+      - "Check for required risk warning disclosures"
+    basic_filtering:
+      - "Filter obvious scam projects and pump schemes"
+      - "Remove content promoting illegal activities"
+      - "Flag content lacking basic crypto relevance"
+      
+  specialist_agent_responsibilities:
+    domain_validation:
+      - "Assess market analysis using crypto economics expertise"
+      - "Evaluate blockchain technical claims and implementations"
+      - "Validate regulatory compliance and legal accuracy"
+    accuracy_assessment:
+      - "Cross-reference market claims with reliable data sources"
+      - "Verify technical blockchain specifications and features"
+      - "Check regulatory statements against official sources"
+    significance_scoring:
+      - "Assess significance within crypto market context"
+      - "Evaluate impact on cryptocurrency adoption and development"
+      - "Determine regulatory and market implications"
+      
+  architect_agent_responsibilities:
+    threshold_monitoring:
+      - "Monitor quality thresholds for crypto market volatility"
+      - "Adjust thresholds based on market cycle patterns"
+      - "Balance speculation filtering with coverage completeness"
+    pattern_analysis:
+      - "Analyze patterns in crypto news quality and market cycles"
+      - "Track emerging crypto trends and quality patterns"
+      - "Monitor hype cycles and adjust filtering accordingly"
+    resource_optimization:
+      - "Allocate resources based on market significance and volatility"
+      - "Optimize coverage during major crypto events"
+      - "Balance market coverage with regulatory monitoring"
+      
+  escalation_criteria:
+    quality_disputes:
+      - "Disagreements on market analysis accuracy"
+      - "Conflicting expert opinions on regulatory implications"
+      - "Disputes over technical blockchain claim validation"
+    framework_issues:
+      - "Quality framework inadequate for new crypto developments"
+      - "Threshold adjustments needed for market volatility"
+      - "Regulatory complexity exceeding current assessment capabilities"
+    ethical_concerns:
+      - "Market manipulation or pump scheme concerns"
+      - "Unlicensed financial advice or misleading claims"
+      - "Potential illegal activity promotion"
+
+# Performance Monitoring for Cryptocurrency
+performance_monitoring:
+  quality_metrics:
+    accuracy_tracking: true
+    user_satisfaction: true
+    expert_validation: true
+    market_impact_tracking: true               # Track impact on trading decisions
+    
+  reporting_requirements:
+    daily_quality_summary: true
+    weekly_performance_report: true
+    monthly_optimization_review: true
+    market_cycle_analysis: true                # Additional analysis during market cycles
+    
+  alert_thresholds:
+    accuracy_degradation: 0.08                 # Higher tolerance due to market volatility
+    threshold_violation: 0.25                  # Higher tolerance for threshold violations
+    processing_delays: 240                     # Moderate delay tolerance for fast-moving markets
+
+# Validation and Testing
+validation_framework:
+  testing_procedures:
+    sample_content_testing:
+      - "Test with recent major crypto announcements"
+      - "Validate with established crypto news outlet content"
+      - "Test with community-generated crypto analysis"
+    threshold_validation:
+      - "Validate thresholds with crypto community feedback"
+      - "Test threshold effectiveness during market volatility"
+      - "Compare quality assessments with market outcome accuracy"
+    cross_validation:
+      - "Cross-validate market analysis with multiple crypto experts"
+      - "Compare quality scores across similar crypto content"
+      - "Validate consistency across different crypto projects"
+      
+  calibration_requirements:
+    initial_calibration:
+      - "Calibrate with established crypto journalism standards"
+      - "Align quality assessments with regulatory compliance requirements"
+      - "Validate against expert-curated crypto content collections"
+    ongoing_calibration:
+      - "Regular calibration against market outcome accuracy"
+      - "Adjustment based on crypto community feedback"
+      - "Continuous refinement based on regulatory developments"
+    expert_calibration:
+      - "Involve crypto economists in quality standard setting"
+      - "Seek expert validation for regulatory interpretation"
+      - "Regular expert review of market analysis quality"
+      
+  quality_assurance:
+    assessment_validation:
+      - "Multi-expert validation for high-impact crypto content"
+      - "Automated cross-checking against market data sources"
+      - "Regular auditing of regulatory compliance accuracy"
+    consistency_checking:
+      - "Ensure consistent quality scoring across crypto projects"
+      - "Monitor for bias toward specific cryptocurrencies"
+      - "Validate quality consistency across market conditions"
+    bias_detection:
+      - "Monitor for bias toward specific crypto projects"
+      - "Detect financial conflicts of interest in content assessment"
+      - "Check for promotional bias in crypto project coverage"
+
+# Documentation and Compliance
+documentation_requirements:
+  quality_decision_logging: true
+  rationale_documentation: true
+  audit_trail: true
+  market_impact_tracking: true               # Track market impact of quality decisions
+  
+compliance_monitoring:
+  constitutional_ai_compliance: true
+  ethical_guidelines: true
+  quality_standards: true
+  financial_regulation_compliance: true      # Additional financial regulation compliance
+  
+reporting_and_transparency:
+  quality_transparency: true
+  methodology_documentation: true
+  performance_reporting: true
+  market_outcome_analysis: true             # Report on market prediction accuracy

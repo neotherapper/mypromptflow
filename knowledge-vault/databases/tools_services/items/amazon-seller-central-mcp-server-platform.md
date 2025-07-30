@@ -30,6 +30,7 @@ tier: Tier 1
 transport_protocols:
 - REST API
 - Reports API
+mcp_profile_reference: "@mcp_profile/amazon-seller-central"
 ---
 
 **Amazon marketplace seller analytics and management platform for e-commerce intelligence**  

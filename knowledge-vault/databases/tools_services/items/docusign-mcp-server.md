@@ -31,6 +31,7 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - SOAP API
+mcp_profile_reference: "@mcp_profile/docusign"
 ---
 
 **Leading digital signature and document management platform for legal and business workflows**  

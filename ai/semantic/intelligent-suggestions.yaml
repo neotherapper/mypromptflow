@@ -1,10 +1,10 @@
 # Intelligent Relationship Mapping System
-# Advanced suggestion algorithms for 67 document types
+# Advanced suggestion algorithms designed for research-identified 67 document types framework
 
 suggestion_system:
   version: "1.0"
   description: "AI-powered intelligent suggestion engine for document relationships"
-  total_document_types: 67
+  total_document_types_framework: 67  # Research-identified framework
   suggestion_categories: 5
   algorithm_types: 6
   

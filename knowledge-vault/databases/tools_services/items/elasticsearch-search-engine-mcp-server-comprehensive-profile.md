@@ -26,6 +26,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+mcp_profile_reference: "@mcp_profile/elasticsearch-search-engine"
 ---
 
 ## Header Classification

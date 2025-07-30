@@ -23,6 +23,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
+mcp_profile_reference: "@mcp_profile/auth0-identity"
 ---
 
 ## Header Classification

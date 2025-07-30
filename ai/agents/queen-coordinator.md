@@ -99,7 +99,7 @@ agent_selection_criteria:
     quality_architect: "Quality framework and validation"
   
   specialist_agents:
-    document_specialist: "67 document types from AI knowledge base"
+    document_specialist: "40+ document templates available from AI knowledge base"
     research_specialist: "12 research methods from orchestrator"
     validation_specialist: "Constitutional AI, self-consistency, peer review"
   

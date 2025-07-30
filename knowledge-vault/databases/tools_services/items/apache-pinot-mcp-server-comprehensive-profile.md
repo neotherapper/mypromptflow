@@ -8,14 +8,14 @@ item_type: mcp_server
 migration_date: '2025-07-26'
 name: Apache Pinot MCP Server
 original_file: backups/mcp-server-registry-backup-20250726/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
-priority: 2nd_priority
+priority: 3rd_priority
 production_readiness: 95
-quality_score: 7.7
+quality_score: 5.5
 source_database: tools_services
 status: active
 tags:
 - Database
-- Tier 2
+- Tier 3
 - Storage Service
 - MCP Server
 - API Service
@@ -23,6 +23,7 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
+mcp_profile_reference: "@mcp_profile/apache-pinot"
 ---
 
 ## Header Classification

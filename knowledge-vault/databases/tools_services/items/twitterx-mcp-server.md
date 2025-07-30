@@ -27,6 +27,7 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
+mcp_profile_reference: "@mcp_profile/twitterx"
 ---
 
 **Advanced social media monitoring, engagement analytics, and automated response systems for AI agents**  

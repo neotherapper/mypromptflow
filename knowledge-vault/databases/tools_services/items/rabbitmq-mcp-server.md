@@ -30,6 +30,7 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - WebSocket
+mcp_profile_reference: "@mcp_profile/rabbitmq"
 ---
 
 **High-performance message intermediary enabling scalable distributed system communication**  

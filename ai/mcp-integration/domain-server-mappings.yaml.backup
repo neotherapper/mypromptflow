@@ -1,0 +1,282 @@
+# MCP Server Domain Mappings Database
+# Maps AI subagent domains to relevant MCP servers with tier priorities and integration guidance
+
+version: "1.0.0"
+last_updated: "2025-01-29"
+description: "Intelligent mapping system for recommending MCP servers based on AI subagent domain expertise"
+
+# Domain mappings organized by primary technology areas
+domain_mappings:
+
+  # Cloud Infrastructure & DevOps
+  cloud_infrastructure:
+    description: "Cloud platforms, infrastructure management, DevOps automation"
+    keywords: ["aws", "azure", "gcp", "cloud", "infrastructure", "devops", "terraform", "kubernetes"]
+    primary_servers:
+      - server_id: "aws"
+        name: "AWS (Amazon Web Services)"
+        tier: 2
+        composite_score: 6.4
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/aws-server-profile.md"
+        use_cases:
+          - "Real-time AWS service information and pricing"
+          - "Infrastructure provisioning and management"
+          - "Security best practices and compliance validation"
+          - "Performance optimization recommendations"
+        integration_priority: "high"
+        setup_complexity: "high"
+        
+      - server_id: "docker"
+        name: "Docker"
+        tier: 1
+        composite_score: 8.5
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/docker-server-profile.md"
+        use_cases:
+          - "Container management and orchestration"
+          - "Docker Hub image information"
+          - "Container security scanning"
+          - "Multi-stage build optimization"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+
+  # Development Tools & Version Control
+  development_tools:
+    description: "Code repositories, CI/CD, development workflows"
+    keywords: ["github", "gitlab", "git", "repository", "code", "development", "ci", "cd", "pipeline"]
+    primary_servers:
+      - server_id: "github"
+        name: "GitHub"
+        tier: 1
+        composite_score: 8.65
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
+        use_cases:
+          - "Repository analysis and code context"
+          - "Pull request and issue management"
+          - "GitHub Actions workflow optimization"
+          - "Code security and dependency analysis"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+
+  # Database & Data Management
+  database_systems:
+    description: "Database administration, data modeling, query optimization"
+    keywords: ["database", "sql", "postgresql", "mysql", "mongodb", "redis", "data", "query", "schema"]
+    primary_servers:
+      - server_id: "postgresql"
+        name: "PostgreSQL"
+        tier: 1
+        composite_score: 8.0
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/postgresql-server-profile.md"
+        use_cases:
+          - "Database schema design and optimization"
+          - "Query performance analysis"
+          - "Migration planning and execution"
+          - "Data integrity and security"
+        integration_priority: "high"
+        setup_complexity: "moderate"
+        
+      - server_id: "redis"
+        name: "Redis"
+        tier: 1
+        composite_score: 9.18
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/redis-server-profile.md"
+        use_cases:
+          - "Cache strategy optimization"
+          - "Session management patterns"
+          - "Real-time data processing"
+          - "Performance monitoring"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+
+  # Frontend Development & UI/UX
+  frontend_development:
+    description: "React, TypeScript, UI/UX design, frontend performance"
+    keywords: ["react", "typescript", "frontend", "ui", "ux", "component", "performance", "bundle"]
+    primary_servers:
+      - server_id: "figma"
+        name: "Figma"
+        tier: 3
+        composite_score: 7.2
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/figma-server-profile.md"
+        use_cases:
+          - "Design system integration"
+          - "Component specifications"
+          - "Design-to-code conversion"
+          - "Collaborative design workflows"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+
+  # Security & Compliance
+  security_systems:
+    description: "Security analysis, vulnerability assessment, compliance"
+    keywords: ["security", "vulnerability", "owasp", "compliance", "authentication", "authorization", "encryption"]
+    primary_servers:
+      - server_id: "github"
+        name: "GitHub (Security Features)"
+        tier: 1
+        composite_score: 8.65
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
+        use_cases:
+          - "Security advisory lookup"
+          - "Dependency vulnerability scanning"
+          - "Secret scanning and prevention"
+          - "Code security analysis"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+
+  # Analytics & Data Science
+  analytics_data_science:
+    description: "Analytics, data processing, machine learning, business intelligence"
+    keywords: ["analytics", "data", "machine learning", "ml", "ai", "statistics", "metrics", "dashboard"]
+    primary_servers:
+      - server_id: "google_analytics"
+        name: "Google Analytics"
+        tier: 2
+        composite_score: 8.65
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/google-analytics-server-profile.md"
+        use_cases:
+          - "User behavior analysis"
+          - "Traffic pattern insights"
+          - "Conversion optimization"
+          - "Performance metrics tracking"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+        
+      - server_id: "qdrant"
+        name: "Qdrant Vector Database"
+        tier: 1
+        composite_score: 8.88
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/qdrant-server-profile.md"
+        use_cases:
+          - "Vector similarity search"
+          - "Semantic information retrieval"
+          - "AI/ML model integration"
+          - "Knowledge base search"
+        integration_priority: "high"
+        setup_complexity: "moderate"
+
+  # Communication & Collaboration
+  communication_tools:
+    description: "Team communication, notifications, collaboration workflows"
+    keywords: ["slack", "teams", "discord", "notification", "webhook", "communication", "collaboration"]
+    primary_servers:
+      - server_id: "slack"
+        name: "Slack"
+        tier: 2
+        composite_score: 8.0
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/slack-server-profile.md"
+        use_cases:
+          - "Automated notifications"
+          - "Workflow integration"
+          - "Team coordination"
+          - "Status updates and alerts"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+
+  # Business & CRM Systems
+  business_systems:
+    description: "CRM, marketing automation, business process management"
+    keywords: ["crm", "sales", "marketing", "customer", "business", "automation", "workflow", "hubspot", "salesforce"]
+    primary_servers:
+      - server_id: "hubspot"
+        name: "HubSpot Marketing"
+        tier: 2
+        composite_score: 8.53
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/hubspot-server-profile.md"
+        use_cases:
+          - "Customer data integration"
+          - "Marketing automation workflows"
+          - "Lead management and scoring"
+          - "Sales pipeline optimization"
+        integration_priority: "medium"
+        setup_complexity: "moderate"
+
+  # Information Retrieval & Search
+  information_retrieval:
+    description: "Search, information access, content management"
+    keywords: ["search", "information", "content", "retrieval", "fetch", "api", "data access"]
+    primary_servers:
+      - server_id: "fetch"
+        name: "Fetch"
+        tier: 1
+        composite_score: 9.65
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/fetch-server-profile.md"
+        use_cases:
+          - "Web content retrieval"
+          - "API data fetching"
+          - "Real-time information access"
+          - "Content analysis and processing"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+        
+      - server_id: "memory"
+        name: "Memory"
+        tier: 1
+        composite_score: 9.65
+        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/memory-server-profile.md"
+        use_cases:
+          - "Session state management"
+          - "Context preservation"
+          - "Information caching"
+          - "Cross-session data persistence"
+        integration_priority: "high"
+        setup_complexity: "minimal"
+
+# Cross-domain mappings for multi-technology subagents
+cross_domain_mappings:
+  fullstack_development:
+    domains: ["frontend_development", "database_systems", "cloud_infrastructure"]
+    recommended_servers: ["github", "docker", "postgresql", "redis"]
+    
+  devops_security:
+    domains: ["cloud_infrastructure", "security_systems", "development_tools"]
+    recommended_servers: ["aws", "docker", "github"]
+    
+  data_platform:
+    domains: ["database_systems", "analytics_data_science", "cloud_infrastructure"]
+    recommended_servers: ["postgresql", "redis", "qdrant", "aws"]
+
+# Tier priority system for recommendation scoring
+tier_priorities:
+  tier_1:
+    priority_score: 10
+    description: "Production-ready, immediate deployment"
+    characteristics: ["minimal_setup", "high_reliability", "comprehensive_documentation"]
+    
+  tier_2:
+    priority_score: 7
+    description: "Strategic implementation, moderate setup"
+    characteristics: ["moderate_setup", "good_reliability", "detailed_documentation"]
+    
+  tier_3:
+    priority_score: 4
+    description: "Specialized use cases, higher complexity"
+    characteristics: ["complex_setup", "niche_applications", "specialized_expertise_required"]
+
+# Quality thresholds for server recommendations
+quality_thresholds:
+  minimum_composite_score: 6.0
+  preferred_composite_score: 8.0
+  enterprise_ready_score: 8.5
+  
+# Integration patterns and best practices
+integration_patterns:
+  error_handling:
+    - "Always include fallback strategies when MCP server is unavailable"
+    - "Implement circuit breaker patterns for unreliable servers"
+    - "Provide graceful degradation with cached information"
+    
+  authentication:
+    - "Use environment variables for API keys and tokens"
+    - "Implement token rotation and refresh mechanisms"
+    - "Follow principle of least privilege for permissions"
+    
+  performance:
+    - "Implement intelligent caching strategies"
+    - "Use batch operations where supported"
+    - "Monitor and optimize API call frequency"
+    
+  monitoring:
+    - "Track MCP server response times and error rates"
+    - "Implement health checks for critical servers"
+    - "Log integration usage for optimization insights"

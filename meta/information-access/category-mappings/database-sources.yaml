@@ -1,0 +1,299 @@
+# Database Category Source Patterns
+# General database information access patterns for broad technology categories
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-27"
+  purpose: "General database category patterns for AI agents"
+  scope: "Broad categorical mappings - use when specific technology not identified"
+  hierarchy: "Category patterns are overridden by specific technology mappings"
+
+# DATABASE CATEGORY PROFILE
+database_category_profile:
+  category_definition:
+    scope: "General database access patterns for data storage, retrieval, and management"
+    coverage: "SQL, NoSQL, key-value, document, graph, time-series, vector databases"
+    decision_logic: "Use when database work detected but specific technology unclear"
+    
+  detection_criteria:
+    file_patterns:
+      sql_files:
+        - "**/*.sql"
+        - "**/migrations/**/*"
+        - "**/schema/**/*"
+        - "**/seeds/**/*"
+      
+      config_files:
+        - "**/database.yml"
+        - "**/db.json"
+        - "**/knexfile.js"
+        - "**/prisma/schema.prisma"
+        - "**/typeorm.config.ts"
+      
+      application_files:
+        - "**/models/**/*"
+        - "**/entities/**/*" 
+        - "**/repositories/**/*"
+        - "**/dao/**/*"
+    
+    content_indicators:
+      sql_patterns:
+        - "SELECT", "INSERT", "UPDATE", "DELETE"
+        - "CREATE TABLE", "ALTER TABLE", "DROP TABLE"
+        - "INDEX", "CONSTRAINT", "FOREIGN KEY"
+      
+      orm_patterns:
+        - "findOne", "findMany", "create", "update", "delete"
+        - "@Entity", "@Column", "@PrimaryKey"
+        - "Model.create", "Model.findAll", "Model.destroy"
+      
+      database_connections:
+        - "DATABASE_URL", "DB_HOST", "CONNECTION_STRING"
+        - "mongoose.connect", "Sequelize", "TypeORM"
+        - "pg", "mysql2", "sqlite3", "mongodb"
+
+# GENERAL DATABASE SOURCE PATTERNS
+general_source_patterns:
+  knowledge_vault_query:
+    primary_method: "Query @knowledge-vault/tools_services database for database-access tagged items"
+    view_usage: "information-sources-by-type.yaml with database-access filter"
+    decision_tree: "Use knowledge vault as authoritative source for database technology selection"
+    
+    query_pattern:
+      step_1: "Load @knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+      step_2: "Filter by tag:database-access AND tag:real-time-data (if real-time needed)"
+      step_3: "Apply authentication requirements filter based on project constraints"
+      step_4: "Rank by performance, reliability, and setup complexity"
+      step_5: "Select optimal MCP server for detected database technology"
+  
+  mcp_server_selection:
+    postgresql_priority:
+      mcp_server: "postgresql-mcp-server"
+      access_pattern: "mcp__MCP_DOCKER__postgresql_query"
+      confidence_threshold: 0.8
+      use_when: "SQL patterns detected, PostgreSQL config found, or no specific DB identified"
+      
+    mongodb_alternative:
+      mcp_server: "mongodb-mcp-server"
+      access_pattern: "mcp__MCP_DOCKER__mongodb_query"
+      confidence_threshold: 0.7
+      use_when: "Document store patterns, NoSQL indicators, JSON-heavy operations"
+    
+    redis_supplement:
+      mcp_server: "redis-mcp-server"
+      access_pattern: "mcp__MCP_DOCKER__redis_get"
+      confidence_threshold: 0.6
+      use_when: "Caching patterns, session storage, pub/sub requirements"
+    
+    vector_database:
+      mcp_server: "qdrant-mcp-server"
+      access_pattern: "mcp__MCP_DOCKER__qdrant_search"
+      confidence_threshold: 0.7
+      use_when: "Embedding storage, semantic search, AI application patterns"
+
+# CONDITIONAL SELECTION ALGORITHM
+conditional_selection_algorithm:
+  database_detection_scoring:
+    file_pattern_analysis:
+      sql_files: 0.4
+      config_files: 0.3
+      model_files: 0.2
+      migration_files: 0.1
+    
+    content_pattern_analysis:
+      sql_syntax: 0.3
+      orm_patterns: 0.3
+      connection_strings: 0.2
+      database_operations: 0.2
+    
+    minimum_confidence_threshold: 0.6
+  
+  technology_specific_routing:
+    high_confidence_indicators:
+      postgresql: ["pg", "postgresql://", "CREATE TABLE", "psql", ".pgsql"]
+      mongodb: ["mongodb://", "mongoose", "collection", ".findOne", "ObjectId"]
+      redis: ["redis://", "SET", "GET", "EXPIRE", "pub/sub"]
+      mysql: ["mysql://", "mysql2", "SHOW TABLES", ".my.cnf"]
+      sqlite: ["sqlite:", "sqlite3", ".db", ".sqlite"]
+    
+    routing_logic:
+      step_1: "Calculate overall database confidence score"
+      step_2: "If confidence >= 0.8, check for technology-specific indicators"
+      step_3: "If specific technology detected, route to specific MCP server"
+      step_4: "If no specific technology, use PostgreSQL as default SQL option"
+      step_5: "If NoSQL patterns detected, route to MongoDB"
+      step_6: "If caching patterns detected, include Redis"
+
+# SOURCE SELECTION DECISION TREES
+source_selection_decision_trees:
+  sql_database_pattern:
+    detection: "SQL syntax, relational patterns, schema files"
+    primary_sources:
+      - mcp_server: "postgresql-mcp-server"
+        priority: "primary"
+        tools: ["mcp__MCP_DOCKER__postgresql_query", "execute_sql", "get_schema"]
+        use_case: "General SQL operations, complex queries, ACID compliance"
+      
+      - mcp_server: "mysql-mcp-server"
+        priority: "alternative"
+        tools: ["mcp__MCP_DOCKER__mysql_query", "mysql_execute"]
+        use_case: "MySQL-specific operations, legacy system integration"
+    
+    fallback_sources:
+      - method: "WebFetch with database documentation URLs"
+        use_case: "When MCP servers unavailable"
+        documentation_sources:
+          - "https://www.postgresql.org/docs/"
+          - "https://dev.mysql.com/doc/"
+          - "https://sqlite.org/docs.html"
+  
+  nosql_database_pattern:
+    detection: "Document patterns, JSON operations, NoSQL terminology"
+    primary_sources:
+      - mcp_server: "mongodb-mcp-server"
+        priority: "primary"
+        tools: ["mcp__MCP_DOCKER__mongodb_query", "mongodb_aggregate"]
+        use_case: "Document operations, aggregation pipelines, flexible schema"
+      
+      - mcp_server: "redis-mcp-server"
+        priority: "supplementary"
+        tools: ["mcp__MCP_DOCKER__redis_get", "redis_set", "redis_stream"]
+        use_case: "Key-value operations, caching, session storage, real-time data"
+    
+    fallback_sources:
+      - method: "WebFetch with NoSQL documentation"
+        documentation_sources:
+          - "https://docs.mongodb.com/"
+          - "https://redis.io/documentation"
+          - "https://docs.couchbase.com/"
+  
+  vector_database_pattern:
+    detection: "Embedding storage, similarity search, AI application patterns"
+    primary_sources:
+      - mcp_server: "qdrant-mcp-server"
+        priority: "primary"
+        tools: ["mcp__MCP_DOCKER__qdrant_search", "qdrant_upsert"]
+        use_case: "Vector similarity search, embedding storage, RAG applications"
+      
+      - mcp_server: "pinecone-mcp-server"
+        priority: "alternative"
+        tools: ["mcp__MCP_DOCKER__pinecone_query", "pinecone_upsert"]
+        use_case: "Managed vector database, large-scale similarity search"
+    
+    fallback_sources:
+      - method: "Direct API access via WebFetch"
+        documentation_sources:
+          - "https://qdrant.tech/documentation/"
+          - "https://docs.pinecone.io/"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  knowledge_vault_coordination:
+    authoritative_source: "@knowledge-vault/databases/tools_services/"
+    view_integration: "Use existing views for database source selection"
+    tag_based_filtering: "Leverage database-access, real-time-data, authentication tags"
+    
+    decision_hierarchy:
+      level_1: "Query knowledge vault for available database MCP servers"
+      level_2: "Apply content-based detection for technology identification"
+      level_3: "Select optimal MCP server based on performance and compatibility"
+      level_4: "Fallback to general database documentation if MCP unavailable"
+  
+  validation_framework_integration:
+    database_validation_needs:
+      schema_validation: "SQL schema structure and integrity checking"
+      query_performance: "Database query optimization and performance analysis"
+      security_assessment: "SQL injection prevention, access control validation"
+      migration_safety: "Database migration script safety and rollback procedures"
+    
+    validator_coordination:
+      sql_validator: "Create database-specific validator for SQL files and migrations"
+      config_validator: "Validate database configuration files and connection strings"
+      security_validator: "Database security pattern validation and vulnerability scanning"
+
+  research_framework_enhancement:
+    research_patterns:
+      database_architecture: "Database selection and architecture design research"
+      performance_optimization: "Database performance tuning and optimization research"
+      migration_strategies: "Database migration and schema evolution research"
+      security_compliance: "Database security and compliance framework research"
+    
+    source_coordination:
+      multi_database_comparison: "Compare multiple database technologies using MCP servers"
+      performance_benchmarking: "Database performance analysis using real-time metrics"
+      migration_planning: "Database migration strategy using multiple information sources"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  database_detection_workflow:
+    step_1: "Scan files for database indicators using detection_criteria patterns"
+    step_2: "Calculate confidence score using database_detection_scoring algorithm"
+    step_3: "If confidence >= 0.6, activate database category source patterns"
+    step_4: "Check for technology-specific indicators to route to specific sources"
+    step_5: "Query knowledge vault for available database MCP servers"
+    step_6: "Select optimal source based on technology, performance, and availability"
+  
+  source_access_workflow:
+    knowledge_vault_query:
+      step_1: "Load @knowledge-vault/databases/tools_services/views/information-sources-by-type.yaml"
+      step_2: "Filter by tag:database-access for database-specific sources"
+      step_3: "Apply additional filters based on requirements (real-time, authentication)"
+      step_4: "Rank sources by performance metrics and reliability scores"
+    
+    mcp_server_access:
+      step_1: "Use selected MCP server for database operations"
+      step_2: "Apply appropriate tools based on database technology"
+      step_3: "Implement error handling and fallback procedures"
+      step_4: "Monitor performance and adjust source selection if needed"
+    
+    fallback_procedures:
+      step_1: "If MCP server unavailable, use WebFetch for documentation access"
+      step_2: "Reference official database documentation for guidance"
+      step_3: "Apply general database best practices from knowledge base"
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_selection_accuracy:
+    technology_identification: "≥90% accuracy in database technology detection"
+    mcp_server_selection: "≥95% optimal source selection for detected technologies"
+    fallback_effectiveness: "≥85% successful fallback when primary sources unavailable"
+  
+  integration_effectiveness:
+    knowledge_vault_consistency: "100% alignment with knowledge vault database sources"
+    validation_coordination: "≥90% effective coordination with database validators"
+    research_enhancement: "≥85% improved research outcomes for database topics"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct database category identification"
+    completeness: "≥90% coverage of database ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive database guidance only"
+    transparency: "Clear rationale for database source selection decisions"
+
+# COMPARISON WITH SPECIFIC MAPPINGS
+category_vs_specific_mappings:
+  when_to_use_category:
+    scenarios:
+      - "Database work detected but specific technology unclear"
+      - "Multi-database comparison or evaluation needed"
+      - "General database architecture research"
+      - "Database technology selection decision support"
+    
+    decision_logic: "Use category patterns as default, override with specific mappings when available"
+    
+  specific_mapping_override:
+    examples:
+      react_specific: "React development overrides general frontend category"
+      postgresql_specific: "If created, PostgreSQL-specific mapping overrides database category"
+      mongodb_specific: "If created, MongoDB-specific mapping overrides database category"
+    
+    hierarchy: "Specific > Category > General knowledge vault query"
+
+# SUCCESS CRITERIA
+success_criteria:
+  categorical_coverage: "Database category provides broad coverage for SQL, NoSQL, vector databases"
+  knowledge_vault_integration: "Seamless integration with existing tools_services database"
+  specific_override_ready: "Easy override by specific technology mappings when created"
+  validation_coordination: "Effective coordination with database validation requirements"
+  research_enhancement: "Improved database research through systematic source selection"
+  fallback_reliability: "Reliable fallback to documentation when MCP servers unavailable"
