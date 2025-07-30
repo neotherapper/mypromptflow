@@ -143,7 +143,7 @@ MCP servers are pre-configured. Use natural language to request actions:
 - "Create Notion database for [purpose]"
 - "Browse to [URL] and analyze content"
 
-Registry: @projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/
+Registry: @knowledge-vault/databases/tools_services/
 ```
 
 ### [9] - Research Registry Browser
