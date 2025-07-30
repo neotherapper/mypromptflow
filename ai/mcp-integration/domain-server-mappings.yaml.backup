@@ -17,7 +17,7 @@ domain_mappings:
         name: "AWS (Amazon Web Services)"
         tier: 2
         composite_score: 6.4
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/aws-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/aws-server-profile.md"
         use_cases:
           - "Real-time AWS service information and pricing"
           - "Infrastructure provisioning and management"
@@ -30,7 +30,7 @@ domain_mappings:
         name: "Docker"
         tier: 1
         composite_score: 8.5
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/docker-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/docker-server-profile.md"
         use_cases:
           - "Container management and orchestration"
           - "Docker Hub image information"
@@ -48,7 +48,7 @@ domain_mappings:
         name: "GitHub"
         tier: 1
         composite_score: 8.65
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
         use_cases:
           - "Repository analysis and code context"
           - "Pull request and issue management"
@@ -66,7 +66,7 @@ domain_mappings:
         name: "PostgreSQL"
         tier: 1
         composite_score: 8.0
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/postgresql-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/postgresql-server-profile.md"
         use_cases:
           - "Database schema design and optimization"
           - "Query performance analysis"
@@ -79,7 +79,7 @@ domain_mappings:
         name: "Redis"
         tier: 1
         composite_score: 9.18
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/redis-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/redis-server-profile.md"
         use_cases:
           - "Cache strategy optimization"
           - "Session management patterns"
@@ -97,7 +97,7 @@ domain_mappings:
         name: "Figma"
         tier: 3
         composite_score: 7.2
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/figma-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/figma-server-profile.md"
         use_cases:
           - "Design system integration"
           - "Component specifications"
@@ -115,7 +115,7 @@ domain_mappings:
         name: "GitHub (Security Features)"
         tier: 1
         composite_score: 8.65
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/github-server-profile.md"
         use_cases:
           - "Security advisory lookup"
           - "Dependency vulnerability scanning"
@@ -133,7 +133,7 @@ domain_mappings:
         name: "Google Analytics"
         tier: 2
         composite_score: 8.65
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/google-analytics-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/google-analytics-server-profile.md"
         use_cases:
           - "User behavior analysis"
           - "Traffic pattern insights"
@@ -146,7 +146,7 @@ domain_mappings:
         name: "Qdrant Vector Database"
         tier: 1
         composite_score: 8.88
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/qdrant-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/qdrant-server-profile.md"
         use_cases:
           - "Vector similarity search"
           - "Semantic information retrieval"
@@ -164,7 +164,7 @@ domain_mappings:
         name: "Slack"
         tier: 2
         composite_score: 8.0
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/slack-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/slack-server-profile.md"
         use_cases:
           - "Automated notifications"
           - "Workflow integration"
@@ -182,7 +182,7 @@ domain_mappings:
         name: "HubSpot Marketing"
         tier: 2
         composite_score: 8.53
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/hubspot-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/hubspot-server-profile.md"
         use_cases:
           - "Customer data integration"
           - "Marketing automation workflows"
@@ -200,7 +200,7 @@ domain_mappings:
         name: "Fetch"
         tier: 1
         composite_score: 9.65
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/fetch-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/fetch-server-profile.md"
         use_cases:
           - "Web content retrieval"
           - "API data fetching"
@@ -213,7 +213,7 @@ domain_mappings:
         name: "Memory"
         tier: 1
         composite_score: 9.65
-        profile_path: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/memory-server-profile.md"
+        profile_path: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/memory-server-profile.md"
         use_cases:
           - "Session state management"
           - "Context preservation"

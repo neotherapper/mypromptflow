@@ -3,11 +3,12 @@
 # FILE REFERENCES: Direct file paths for Claude to access orchestrator components
 
 metadata:
-  version: "3.0.0"
-  last_updated: "2025-01-08"
-  purpose: "Enable Claude to use YAML-based research orchestrator system with automatic research detection"
+  version: "4.0.0"
+  last_updated: "2025-07-30"
+  purpose: "Enable Claude to use YAML-based research orchestrator system with Phase 2 Claude Desktop integration"
   target: "Claude AI agents working with research framework"
   supersedes: "ai-agent-integration.yaml"
+  phase_2_integration: "Complete with intelligent method selection, memory system, context building, and citation system"
 
 # CLAUDE FILE REFERENCE PATTERNS
 orchestrator_file_references:
@@ -15,6 +16,19 @@ orchestrator_file_references:
     context_analyzer: "research/orchestrator/engines/context-analyzer.yaml"
     method_registry: "research/orchestrator/config/method-registry.yaml"
     selection_rules: "research/orchestrator/config/selection-rules.yaml"
+  
+  phase_2_engines:
+    intelligent_method_selector: "research/orchestrator/engines/intelligent-method-selector.yaml"
+    memory_system: "research/orchestrator/engines/memory-system.yaml"
+    context_builder: "research/orchestrator/engines/context-builder.yaml"
+    pattern_extraction_engine: "research/orchestrator/engines/pattern-extraction-engine.yaml"
+    engine_registry: "research/orchestrator/engines/engine-registry.yaml"
+  
+  citation_system:
+    enhanced_citation_framework: "research/orchestrator/citation-system/enhanced-citation-framework.yaml"
+    citation_validation_engine: "research/orchestrator/citation-system/citation-validation-engine.yaml"
+    source_credibility_system: "research/orchestrator/citation-system/source-credibility-system.yaml"
+    citation_compliance_integration: "research/orchestrator/integration/citation-compliance-orchestrator-integration.yaml"
   
   method_files:
     existing_methods: "research/orchestrator/methods/existing/"
@@ -24,6 +38,7 @@ orchestrator_file_references:
   integration_files:
     workflow_orchestrator: "research/orchestrator/integration/workflow-orchestrator.yaml"
     claude_integration: "research/orchestrator/integration/claude-orchestrator-integration.yaml"
+    context_building_integration: "research/orchestrator/integration/context-building-integration.yaml"
   
   claude_usage_notes:
     - "Use Read tool with these exact paths"
