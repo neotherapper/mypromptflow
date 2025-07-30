@@ -63,8 +63,10 @@ main() {
     fi
     
     # Perform parameter validation on corrected parameters
-    local validation_result=$(validate_parameters "$tool_name" "$corrected_input")
+    validate_parameters "$tool_name" "$corrected_input" > /tmp/validation_output.txt
     local validation_code=$?
+    local validation_result=$(cat /tmp/validation_output.txt)
+    rm -f /tmp/validation_output.txt
     
     case $validation_code in
         0)
@@ -122,10 +124,7 @@ validate_parameters() {
     # Load error patterns for this server
     local error_log_file="$ERROR_LOGS_DIR/${server_name}-errors.md"
     
-    if [[ ! -f "$error_log_file" ]]; then
-        echo "No error patterns available for validation"
-        return 0  # Allow if no error history
-    fi
+    # Always perform basic validation, with or without error history
     
     # Tool-specific validation
     case "$tool_name" in
@@ -352,5 +351,7 @@ get_server_name() {
     esac
 }
 
-# Execute main function with arguments
-main "$@"
+# Execute main function with arguments if called directly (not sourced)
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    main "$@"
+fi

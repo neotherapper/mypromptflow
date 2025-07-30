@@ -87,7 +87,7 @@ correct_jira_get_issue() {
         
         # Fix missing dash (e.g., "PROJ123" -> "PROJ-123")
         if [[ "$fixed_key" =~ ^[A-Z]+[0-9]+$ ]]; then
-            fixed_key=$(echo "$fixed_key" | sed 's/\([A-Z]\+\)\([0-9]\+\)/\1-\2/')
+            fixed_key=$(echo "$fixed_key" | sed 's/\([A-Z]*\)\([0-9]*\)/\1-\2/')
         fi
         
         # Apply correction if needed
@@ -96,8 +96,8 @@ correct_jira_get_issue() {
         fi
     fi
     
-    # Add commonly needed fields if missing
-    if ! echo "$corrected" | grep -q '"fields"'; then
+    # Add commonly needed fields if missing (but not for empty JSON)
+    if ! echo "$corrected" | grep -q '"fields"' && [[ "$corrected" != "{}" ]]; then
         # Add default fields based on success patterns
         corrected=$(echo "$corrected" | sed 's/}$/,"fields":"summary,status,assignee,priority,created,updated"}/')
     fi
@@ -186,7 +186,7 @@ correct_jira_update_issue() {
         
         # Fix missing dash
         if [[ "$fixed_key" =~ ^[A-Z]+[0-9]+$ ]]; then
-            fixed_key=$(echo "$fixed_key" | sed 's/\([A-Z]\+\)\([0-9]\+\)/\1-\2/')
+            fixed_key=$(echo "$fixed_key" | sed 's/\([A-Z]*\)\([0-9]*\)/\1-\2/')
         fi
         
         # Apply correction if needed
