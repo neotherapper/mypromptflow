@@ -1,0 +1,256 @@
+# Industry Practice Analysis Approach Template
+# Focus: Real-world implementations, case studies, and practical applications
+# Methodology: Analysis of successful implementations and failure case studies
+# Isolation: Industry reports, case studies, and implementation documentation only
+
+approach_identity:
+  name: "Industry Practice Analysis"
+  id: "industry-practice-analysis"
+  approach_number: 2
+  isolation_protocol: "industry_sources_only"
+  constitutional_ai_compliance: true
+
+# Methodological Framework
+methodology:
+  primary_focus: "Real-world implementations, case studies, and practical applications"
+  analytical_approach: "Analysis of successful implementations and failure case studies"
+  validation_method: "Practical relevance, real-world validation, implementation insights"
+  
+  strengths:
+    - "Practical relevance and real-world validation"
+    - "Implementation insights and lessons learned"
+    - "Scalability and deployment considerations"
+    - "Business impact and ROI measurement"
+  
+  evidence_types:
+    - "Case studies and implementation reports"
+    - "Success and failure pattern analysis"
+    - "Industry benchmarks and best practices"
+    - "Deployment metrics and outcome data"
+
+# Source Channel Isolation
+source_channels:
+  permitted_channels:
+    industry_reports:
+      - "Forrester Research technology reports"
+      - "Gartner Magic Quadrant and market analysis"
+      - "McKinsey Technology Institute publications"
+      - "Deloitte Digital transformation reports"
+      - "Accenture AI implementation studies"
+    
+    case_studies:
+      - "Company implementation documentation"
+      - "Success story publications"
+      - "Failure analysis reports"
+      - "Transformation journey documentation"
+    
+    implementation_documentation:
+      - "Technical architecture blogs"
+      - "Engineering team publications"
+      - "DevOps and deployment guides"
+      - "Integration pattern documentation"
+    
+    professional_communities:
+      - "Stack Overflow Developer Survey insights"
+      - "GitHub usage patterns and statistics"
+      - "Professional development community discussions"
+      - "Industry conference implementation presentations"
+
+  prohibited_channels:
+    academic_sources:
+      - "Peer-reviewed academic journals"
+      - "Conference research proceedings"
+      - "University research publications"
+      - "Theoretical framework papers"
+    
+    market_statistics:
+      - "Market research survey data"
+      - "Statistical performance benchmarks"
+      - "Quantitative usage analytics"
+      - "Market penetration metrics"
+    
+    expert_opinions:
+      - "Expert interview content"
+      - "Thought leadership articles"
+      - "Professional opinion pieces"
+      - "Industry expert predictions"
+    
+    innovation_tracking:
+      - "Patent analysis databases"
+      - "Startup activity monitoring"
+      - "Innovation trend reports"
+      - "Emerging technology assessments"
+
+# Research Execution Protocol
+execution_protocol:
+  phase_1_case_identification:
+    search_strategy:
+      - "Industry report systematic review"
+      - "Case study database exploration"
+      - "Company blog and documentation mining"
+      - "Professional community content analysis"
+    
+    inclusion_criteria:
+      - "Real-world Claude Code or similar AI coding assistant implementation"
+      - "Documented outcomes and measurable results"
+      - "Sufficient implementation detail for analysis"
+      - "Organizational context and scale information"
+    
+    exclusion_criteria:
+      - "Theoretical or conceptual discussions"
+      - "Academic research studies"
+      - "Marketing materials without implementation detail"
+      - "Undocumented or anecdotal claims"
+
+  phase_2_implementation_analysis:
+    analysis_dimensions:
+      implementation_success:
+        - "Deployment scale and user adoption"
+        - "Performance improvement metrics"
+        - "Integration success with existing workflows"
+        - "User satisfaction and acceptance rates"
+      
+      organizational_context:
+        - "Company size and industry sector"
+        - "Technical infrastructure characteristics"
+        - "Team structure and skill composition"
+        - "Development methodology and practices"
+      
+      outcome_measurement:
+        - "Productivity improvement quantification"
+        - "Code quality enhancement metrics"
+        - "Development time reduction analysis"
+        - "Cost-benefit analysis results"
+
+  phase_3_pattern_identification:
+    success_patterns:
+      - "Common characteristics of successful implementations"
+      - "Critical success factors identification"
+      - "Best practice pattern extraction"
+      - "Scalability factor analysis"
+    
+    failure_patterns:
+      - "Common failure modes and root causes"
+      - "Implementation challenge identification"
+      - "Organizational resistance factors"
+      - "Technical limitation impact analysis"
+    
+    contextual_factors:
+      - "Industry-specific adaptation requirements"
+      - "Organization size impact on implementation"
+      - "Technical stack compatibility considerations"
+      - "Cultural and process integration factors"
+
+  phase_4_insights_synthesis:
+    practical_insights:
+      - "Implementation roadmap pattern identification"
+      - "Change management strategy synthesis"
+      - "ROI optimization approach analysis"
+      - "Risk mitigation strategy compilation"
+    
+    applicability_assessment:
+      - "Context-dependent success factor analysis"
+      - "Generalizability constraint identification"
+      - "Adaptation requirement specification"
+      - "Implementation readiness criteria development"
+
+# Quality Assurance Framework
+quality_assurance:
+  bias_mitigation:
+    success_bias:
+      - "Explicit failure case inclusion"
+      - "Balanced success/failure representation"
+      - "Critical limitation acknowledgment"
+      - "Honest outcome reporting emphasis"
+    
+    company_size_bias:
+      - "Small, medium, large organization coverage"
+      - "Startup to enterprise spectrum inclusion"
+      - "Resource constraint consideration"
+      - "Scale-appropriate solution analysis"
+    
+    industry_sector_bias:
+      - "Cross-industry implementation coverage"
+      - "Sector-specific challenge recognition"
+      - "Domain-dependent factor analysis"
+      - "Industry context adaptation needs"
+
+  constitutional_ai_compliance:
+    accuracy_verification:
+      - "Implementation claim validation"
+      - "Outcome metric verification"
+      - "Source credibility assessment"
+      - "Timeline and scale accuracy check"
+    
+    limitation_acknowledgment:
+      - "Implementation boundary identification"
+      - "Context-specific constraint recognition"
+      - "Scalability limitation documentation"
+      - "Applicability scope definition"
+    
+    balanced_perspective:
+      - "Success and failure case inclusion"
+      - "Multiple stakeholder perspective consideration"
+      - "Cost and benefit balanced analysis"
+      - "Risk and opportunity fair assessment"
+
+# Evidence Documentation Framework
+documentation_structure:
+  source_attribution:
+    citation_format: "industry_standard_with_publication_details"
+    source_categorization: "report_case_study_documentation_community"
+    credibility_rating: "high_medium_low_with_justification"
+    implementation_scope: "pilot_production_enterprise_scale"
+  
+  findings_documentation:
+    finding_statement: "implementation_outcome_specific"
+    evidence_basis: "multiple_case_synthesis"
+    confidence_level: "real_world_validation_based"
+    limitations: "context_dependent_constraints"
+  
+  pattern_analysis:
+    success_patterns: "validated_common_characteristics"
+    failure_patterns: "documented_failure_modes"
+    contextual_factors: "environment_dependent_variables"
+    applicability_scope: "implementation_readiness_criteria"
+
+# Output Structure
+deliverables:
+  implementation_analysis:
+    sections:
+      - "successful_implementation_patterns"
+      - "failure_mode_analysis"
+      - "contextual_factor_assessment"
+      - "practical_recommendation_synthesis"
+    
+    evidence_integration:
+      - "cross_case_pattern_validation"
+      - "contradictory_outcome_analysis"
+      - "implementation_barrier_synthesis"
+      - "success_factor_prioritization"
+  
+  practical_guidance:
+    implementation_roadmap:
+      - "readiness_assessment_criteria"
+      - "phased_deployment_strategy"
+      - "risk_mitigation_planning"
+      - "success_measurement_framework"
+    
+    contextual_adaptation:
+      - "organization_size_considerations"
+      - "industry_specific_modifications"
+      - "technical_stack_compatibility"
+      - "cultural_integration_strategies"
+
+# Integration Points
+cross_validation_preparation:
+  finding_categorization: "implementation_evidence_based"
+  confidence_scoring: "real_world_validation_weighted"
+  limitation_documentation: "context_boundary_identification"
+  source_verification: "industry_authority_validated"
+
+constitutional_ai_integration:
+  compliance_verification: "implementation_accuracy_validation"
+  bias_documentation: "systematic_perspective_balance"
+  uncertainty_communication: "context_limitation_disclosure"
+  practical_validation: "real_world_outcome_verification"

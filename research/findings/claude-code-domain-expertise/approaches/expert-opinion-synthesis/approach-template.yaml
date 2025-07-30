@@ -1,0 +1,261 @@
+# Expert Opinion Synthesis Approach Template
+# Focus: Thought leaders, domain experts, and authoritative professional perspectives
+# Methodology: Expert interview synthesis, thought leadership analysis, professional consensus
+# Isolation: Expert opinions, professional publications, and thought leadership only
+
+approach_identity:
+  name: "Expert Opinion Synthesis"
+  id: "expert-opinion-synthesis"
+  approach_number: 4
+  isolation_protocol: "expert_opinion_only"
+  constitutional_ai_compliance: true
+
+# Methodological Framework
+methodology:
+  primary_focus: "Thought leaders, domain experts, and authoritative professional perspectives"
+  analytical_approach: "Expert interview synthesis, thought leadership analysis, professional consensus"
+  validation_method: "Domain expertise, professional experience, future-oriented insights"
+  
+  strengths:
+    - "Deep domain expertise and professional experience"
+    - "Forward-looking insights and trend prediction"
+    - "Practical wisdom and contextual understanding"
+    - "Industry insider knowledge and perspectives"
+  
+  evidence_types:
+    - "Expert interviews and professional commentary"
+    - "Thought leadership publications and analysis"
+    - "Conference presentations and professional talks"
+    - "Industry expert predictions and assessments"
+
+# Source Channel Isolation
+source_channels:
+  permitted_channels:
+    thought_leadership:
+      - "Industry leader technology blogs and publications"
+      - "CTO and engineering leader insights"
+      - "AI researcher professional commentary"
+      - "Software development thought leader content"
+    
+    professional_publications:
+      - "Technical articles by recognized experts"
+      - "Professional magazine expert columns"
+      - "Industry journal expert contributions"
+      - "Expert-authored technology assessments"
+    
+    conference_presentations:
+      - "Keynote presentations by industry experts"
+      - "Expert panel discussions and forums"
+      - "Professional conference expert talks"
+      - "Workshop leader insights and teachings"
+    
+    expert_interviews:
+      - "Professional interview transcripts"
+      - "Expert podcast appearances and commentary"
+      - "Webinar expert presentations"
+      - "Professional media expert quotes"
+
+  prohibited_channels:
+    academic_sources:
+      - "Peer-reviewed research publications"
+      - "Academic conference research papers"
+      - "University research studies"
+      - "Academic theoretical frameworks"
+    
+    industry_data:
+      - "Implementation case studies"
+      - "Company deployment reports"
+      - "Industry benchmark studies"
+      - "Market research implementations"
+    
+    market_statistics:
+      - "Survey data and statistical reports"
+      - "Performance benchmark data"
+      - "Usage analytics and metrics"
+      - "Quantitative market research"
+    
+    innovation_tracking:
+      - "Patent analysis databases"
+      - "Startup activity metrics"
+      - "Technology trend statistics"
+      - "Innovation measurement data"
+
+# Research Execution Protocol
+execution_protocol:
+  phase_1_expert_identification:
+    expert_selection_criteria:
+      - "Recognized domain authority in AI or software development"
+      - "Professional experience with AI coding assistance tools"
+      - "Thought leadership publication history"
+      - "Industry influence and recognition"
+    
+    expertise_validation:
+      - "Professional credentials and background verification"
+      - "Publication and contribution history analysis"
+      - "Industry recognition and award assessment"
+      - "Peer acknowledgment and citation patterns"
+    
+    diversity_considerations:
+      - "Geographic and cultural representation"
+      - "Company size and industry sector variety"
+      - "Technical specialization breadth"
+      - "Experience level and career stage diversity"
+
+  phase_2_opinion_collection:
+    content_sources:
+      - "Published expert interviews and commentary"
+      - "Conference presentation transcripts and videos"
+      - "Professional blog posts and articles"
+      - "Podcast appearances and expert discussions"
+    
+    perspective_categories:
+      technical_expertise:
+        - "AI and machine learning technical assessment"
+        - "Software engineering best practice evaluation"
+        - "Development tool and workflow insights"
+        - "Code quality and productivity perspectives"
+      
+      industry_experience:
+        - "Implementation challenge and solution insights"
+        - "Organizational adoption pattern observations"
+        - "Change management and cultural considerations"
+        - "Business impact and value proposition assessment"
+      
+      future_orientation:
+        - "Technology evolution predictions"
+        - "Market development forecasting"
+        - "Innovation trajectory assessment"
+        - "Disruptive potential evaluation"
+
+  phase_3_synthesis_analysis:
+    consensus_identification:
+      - "Common theme and perspective extraction"
+      - "Majority opinion pattern recognition"
+      - "Convergent insight identification"
+      - "Shared prediction and assessment synthesis"
+    
+    divergence_analysis:
+      - "Contrasting opinion documentation"
+      - "Disagreement source and reason analysis"
+      - "Perspective variation explanation"
+      - "Context-dependent viewpoint understanding"
+    
+    credibility_weighting:
+      - "Expert authority and track record assessment"
+      - "Prediction accuracy historical evaluation"
+      - "Domain relevance and specialization weighting"
+      - "Bias and conflict of interest consideration"
+
+  phase_4_professional_consensus:
+    consensus_building:
+      - "Weighted expert opinion aggregation"
+      - "Authority-based perspective prioritization"
+      - "Track record informed credibility scoring"
+      - "Balanced viewpoint synthesis"
+    
+    uncertainty_acknowledgment:
+      - "Expert disagreement documentation"
+      - "Prediction uncertainty explicit recognition"
+      - "Limitation and bias acknowledgment"
+      - "Future research need identification"
+
+# Quality Assurance Framework
+quality_assurance:
+  bias_mitigation:
+    authority_bias:
+      - "Multiple expert perspective inclusion"
+      - "Contrarian viewpoint explicit seeking"
+      - "Celebrity expert over-weighting prevention"
+      - "Independent validation requirement"
+    
+    confirmation_bias:
+      - "Diverse opinion spectrum inclusion"
+      - "Challenging perspective active incorporation"
+      - "Preconception questioning protocol"
+      - "Alternative interpretation consideration"
+    
+    temporal_bias:
+      - "Historical prediction accuracy assessment"
+      - "Time-sensitive opinion context consideration"
+      - "Evolution of expert views tracking"
+      - "Currency and relevance evaluation"
+
+  constitutional_ai_compliance:
+    accuracy_verification:
+      - "Expert quote and attribution accuracy"
+      - "Context preservation and interpretation fidelity"
+      - "Prediction claim accurate representation"
+      - "Opinion source credibility validation"
+    
+    limitation_acknowledgment:
+      - "Expert opinion subjectivity recognition"
+      - "Prediction uncertainty explicit documentation"
+      - "Bias potential identification and disclosure"
+      - "Scope and applicability boundary definition"
+    
+    balanced_perspective:
+      - "Multiple viewpoint inclusion requirement"
+      - "Minority opinion documentation"
+      - "Contrasting perspective fair representation"
+      - "Consensus and dissent balanced presentation"
+
+# Evidence Documentation Framework
+documentation_structure:
+  source_attribution:
+    citation_format: "expert_name_credentials_publication_date"
+    source_categorization: "interview_article_presentation_discussion"
+    credibility_rating: "high_medium_low_with_expertise_basis"
+    expertise_relevance: "direct_related_adjacent_tangential"
+  
+  findings_documentation:
+    finding_statement: "expert_consensus_with_attribution"
+    evidence_basis: "multiple_expert_perspective"
+    confidence_level: "professional_consensus_based"
+    limitations: "subjectivity_bias_uncertainty_boundaries"
+  
+  consensus_analysis:
+    majority_opinion: "predominant_expert_perspective"
+    minority_views: "contrarian_alternative_perspectives"
+    uncertainty_areas: "expert_disagreement_zones"
+    future_predictions: "forward_looking_consensus_synthesis"
+
+# Output Structure
+deliverables:
+  expert_consensus_synthesis:
+    sections:
+      - "professional_consensus_key_insights"
+      - "expert_prediction_future_scenarios"
+      - "industry_wisdom_practical_guidance"
+      - "professional_disagreement_uncertainty_areas"
+    
+    evidence_integration:
+      - "cross_expert_consistency_analysis"
+      - "contrasting_viewpoint_reconciliation"
+      - "credibility_weighted_synthesis"
+      - "practical_wisdom_distillation"
+  
+  professional_insights:
+    implementation_guidance:
+      - "expert_recommended_best_practices"
+      - "professional_success_factor_identification"
+      - "expert_identified_risk_mitigation"
+      - "industry_wisdom_practical_recommendations"
+    
+    future_orientation:
+      - "expert_consensus_future_trajectories"
+      - "professional_prediction_synthesis"
+      - "industry_evolution_expert_assessment"
+      - "disruptive_potential_expert_evaluation"
+
+# Integration Points
+cross_validation_preparation:
+  finding_categorization: "expert_consensus_based"
+  confidence_scoring: "professional_authority_weighted"
+  limitation_documentation: "subjectivity_boundary_identification"
+  source_verification: "expert_credibility_validated"
+
+constitutional_ai_integration:
+  compliance_verification: "expert_opinion_accuracy_validation"
+  bias_documentation: "systematic_perspective_bias_identification"
+  uncertainty_communication: "professional_disagreement_disclosure"
+  authority_validation: "expert_credibility_transparent_assessment"
