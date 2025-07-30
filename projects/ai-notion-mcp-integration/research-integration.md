@@ -256,7 +256,7 @@ This project builds on substantial existing research conducted through the AI kn
 - **Comprehensive Knowledge Vault Restructuring**: Successfully completed major reorganization consolidating AI instruction framework
 - **Repository Content Analysis**: Identified 400+ entities, tools, and concepts across entire codebase for knowledge vault integration
 - **Framework Validation**: Confirmed existing 6-database structure is completely sufficient for all identified content
-- **Cross-Project Synergy**: Established clear integration path with @projects/ai-knowledge-intelligence-orchestrator/
+- **Cross-Project Synergy**: Established clear integration path with @projects/universal-topic-intelligence-system/
 
 **Knowledge Vault Restructuring Completed**:
 - **CLAUDE.md Consolidated**: 628-line comprehensive AI agent instruction guide

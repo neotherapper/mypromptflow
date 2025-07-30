@@ -5,7 +5,7 @@ installation_priority: 10
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: Zendesk MCP Server
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/zendesk-server-profile.md
+original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/zendesk-server-profile.md
 priority: 2nd_priority
 production_readiness: 94
 quality_score: 7.2

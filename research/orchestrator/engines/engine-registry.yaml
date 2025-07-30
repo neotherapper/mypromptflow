@@ -3,12 +3,12 @@
 # Purpose: Centralized documentation and coordination of orchestrator engine ecosystem
 
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   last_updated: "2025-07-30"
   purpose: "Comprehensive registry of research orchestrator engines and their integration capabilities"
-  total_engines: 10
-  integration_framework: "Comprehensive engine coordination and enhancement framework"
-  critical_update: "Added pattern-extraction-engine for memory system integration"
+  total_engines: 13
+  integration_framework: "Comprehensive engine coordination and enhancement framework with MCP memory integration"
+  critical_update: "Added MCP memory integration system for distributed persistent knowledge repositories"
 
 # ENGINE ECOSYSTEM OVERVIEW
 engine_ecosystem:
@@ -33,6 +33,13 @@ engine_ecosystem:
       - memory_system
       - context_builder
       - pattern_extraction_engine
+      - mcp_memory_integration_system
+      - mcp_memory_coordinator
+  
+  deployment_engines:
+    description: "Engines for system deployment and operational management"
+    engines:
+      - mcp_memory_deployment_guide
     
   integration_patterns:
     core_integration: "All engines integrate with core engines for basic functionality"
@@ -40,6 +47,8 @@ engine_ecosystem:
     coordination_synergy: "Coordination engines work together for multi-agent orchestration"
     cross_engine_optimization: "Engines collaborate for optimized research outcomes"
     pattern_learning_integration: "Pattern extraction engine enables continuous learning across all engines"
+    mcp_distributed_integration: "MCP memory integration enables distributed persistent knowledge across 2,200+ servers"
+    cross_session_continuity: "Enhanced cross-session learning through distributed MCP server memory architecture"
 
 # ENGINE DETAILED REGISTRY
 engine_registry:

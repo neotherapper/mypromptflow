@@ -474,14 +474,14 @@ integration_points:
     cross_references: "@knowledge-vault/core/cross-reference-manager.yaml"
   
   scoring_system:
-    algorithm_reference: "@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+    algorithm_reference: "@projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
     tier_classifications: "Use enhanced tier thresholds from v3.0.0 algorithm"
     composite_scoring: "Apply 6-dimension scoring matrix consistently"
   
   existing_profiles:
     reference_examples: 
-      - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md"
-      - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md"
+      - "@projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md"
+      - "@projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md"
     consistency_validation: "Ensure new profiles maintain consistency with established high-quality examples"
     pattern_evolution: "Incorporate improvements and learnings from existing profile implementations"
 
@@ -515,5 +515,5 @@ knowledge_vault_metadata:
   cross_references:
     - "@knowledge-vault/schemas/tools-services-schema.yaml"
     - "@knowledge-vault/core/validation-engine.yaml"
-    - "@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
-    - "@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/"
+    - "@projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+    - "@projects/universal-topic-intelligence-system/docs/mcp-server-registry/"

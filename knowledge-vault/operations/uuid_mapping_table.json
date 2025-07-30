@@ -457,9 +457,9 @@
       ],
       "conversion_priority": "medium"
     },
-    "ai-knowledge-intelligence-orchestrator": {
+    "universal-topic-intelligence-system": {
       "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
-      "title": "ai-knowledge-intelligence-orchestrator",
+      "title": "universal-topic-intelligence-system",
       "needs_uuid_cleanup": true,
       "notion_uuids_found": [
         "239f8374-7088-8158-86c5-d4db7df1faf4"
@@ -923,7 +923,7 @@
       "estimated_effort": "medium"
     },
     {
-      "item": "ai-knowledge-intelligence-orchestrator",
+      "item": "universal-topic-intelligence-system",
       "local_uuid": "239f8374-7088-8158-86c5-d4db7df1faf4",
       "notion_uuids_to_replace": 1,
       "priority": "medium",

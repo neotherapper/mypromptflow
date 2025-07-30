@@ -111,7 +111,7 @@ All extractions maintain complete traceability:
 ```yaml
 migration_tracking:
   migration_date: "2025-07-27"
-  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-1/[server]-profile.md"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-1/[server]-profile.md"
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "production_ready"

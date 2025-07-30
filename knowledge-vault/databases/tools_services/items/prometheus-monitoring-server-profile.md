@@ -5,7 +5,7 @@ installation_priority: 5
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: Prometheus Monitoring MCP Server
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
+original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
 priority: 2nd_priority
 production_readiness: 98
 quality_score: 8.2

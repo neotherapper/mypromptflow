@@ -252,7 +252,7 @@ Strategic archival focusing development on core capabilities while community han
 ## Operational Registry Integration
 
 **Reference to Current Data**: For the most current server information, implementation guidance, and business analysis, see the operational registry maintained at:
-- `@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/`
+- `@projects/universal-topic-intelligence-system/mcp-registry/`
 
 **Registry Contents:**
 - **Master Database**: 1,126+ servers with current scoring

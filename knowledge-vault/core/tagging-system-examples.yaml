@@ -5,7 +5,7 @@ metadata:
   version: "1.0.0"
   created: "2025-01-24"
   purpose: "Practical examples of intelligent tagging system connecting MCP servers to knowledge-vault"
-  examples_source: "Real MCP server profiles from ai-knowledge-intelligence-orchestrator registry"
+  examples_source: "Real MCP server profiles from universal-topic-intelligence-system registry"
 
 # Example 1: Docker MCP Server
 docker_mcp_example:

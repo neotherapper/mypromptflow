@@ -93,7 +93,7 @@ scoring_metrics:
 # Migration Tracking
 migration_tracking:
   migration_date: "2025-07-28"
-  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/puppeteer-server-profile.md"
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/puppeteer-server-profile.md"
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "specialized_ready"

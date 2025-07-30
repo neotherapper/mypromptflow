@@ -73,7 +73,7 @@ This project builds on extensive existing research:
 ### Related Projects
 - **AI Knowledge Base Enhancement**: `@projects/ai-knowledge-base-enhancement/`
 - **AI Agent Instruction Design Excellence**: `@projects/ai-agent-instruction-design-excellence/`
-- **AI Knowledge Intelligence Orchestrator**: `@projects/ai-knowledge-intelligence-orchestrator/`
+- **AI Knowledge Intelligence Orchestrator**: `@projects/universal-topic-intelligence-system/`
 
 ## Contact & Support
 

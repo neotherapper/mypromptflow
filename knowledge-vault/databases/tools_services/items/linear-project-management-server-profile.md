@@ -5,7 +5,7 @@ installation_priority: 3
 item_type: mcp_server
 migration_date: '2025-07-27'
 name: Linear Project Management MCP Server
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
+original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
 priority: 2nd_priority
 production_readiness: 92
 quality_score: 8.4
