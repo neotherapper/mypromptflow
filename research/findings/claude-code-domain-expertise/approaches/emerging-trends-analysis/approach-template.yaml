@@ -1,0 +1,254 @@
+# Emerging Trends Analysis Approach Template
+# Focus: Cutting-edge developments, innovations, disruptive technologies
+# Methodology: Future scenario planning, trend extrapolation, innovation assessment
+# Isolation: Innovation tracking, patent analysis, and emerging technology sources only
+
+approach_identity:
+  name: "Emerging Trends Analysis"
+  id: "emerging-trends-analysis"
+  approach_number: 5
+  isolation_protocol: "innovation_tracking_only"
+  constitutional_ai_compliance: true
+
+# Methodological Framework
+methodology:
+  primary_focus: "Cutting-edge developments, innovations, disruptive technologies"
+  analytical_approach: "Future scenario planning, trend extrapolation, innovation assessment"
+  validation_method: "Innovation potential, market traction, technological feasibility"
+  
+  strengths:
+    - "Forward-looking perspective and innovation awareness"
+    - "Disruption anticipation and trend identification"
+    - "Technology frontier exploration"
+    - "Future scenario development and planning"
+  
+  evidence_types:
+    - "Patent analysis and intellectual property trends"
+    - "Startup activity and investment tracking"
+    - "Research breakthroughs and technology advances"
+    - "Innovation pipeline and development signals"
+
+# Source Channel Isolation
+source_channels:
+  permitted_channels:
+    patent_analysis:
+      - "USPTO patent database and filings"
+      - "International patent classification systems"
+      - "AI and software development patent trends"
+      - "Patent citation network analysis"
+    
+    startup_activity:
+      - "AI coding assistant startup funding data"
+      - "Developer tool startup activity tracking"
+      - "Venture capital investment pattern analysis"
+      - "Startup product launch and development tracking"
+    
+    innovation_tracking:
+      - "Technology innovation databases and platforms"
+      - "Research and development pipeline monitoring"
+      - "Innovation award and recognition tracking"
+      - "Technology transfer and commercialization data"
+    
+    research_breakthroughs:
+      - "Cutting-edge AI research announcements"
+      - "Technology breakthrough reporting"
+      - "Innovation lab and research center outputs"
+      - "Experimental technology development tracking"
+
+  prohibited_channels:
+    academic_literature:
+      - "Peer-reviewed research publications"
+      - "Academic conference research papers"
+      - "University theoretical research"
+      - "Academic literature reviews"
+    
+    industry_implementation:
+      - "Company case studies and implementations"
+      - "Industry best practice documentation"
+      - "Real-world deployment reports"
+      - "Implementation success stories"
+    
+    market_data:
+      - "Market research and survey data"
+      - "Statistical performance benchmarks"
+      - "Usage analytics and adoption metrics"
+      - "Market penetration statistics"
+    
+    expert_opinions:
+      - "Expert interview content"
+      - "Thought leadership commentary"
+      - "Professional opinion articles"
+      - "Industry expert predictions"
+
+# Research Execution Protocol
+execution_protocol:
+  phase_1_innovation_identification:
+    search_strategy:
+      - "Patent database systematic exploration"
+      - "Startup ecosystem monitoring and tracking"
+      - "Innovation platform comprehensive scanning"
+      - "Technology breakthrough news aggregation"
+    
+    inclusion_criteria:
+      - "Emerging technology related to AI coding assistance"
+      - "Innovation with potential disruptive impact"
+      - "Patent filings indicating new technological approaches"
+      - "Startup activity suggesting market opportunity"
+    
+    exclusion_criteria:
+      - "Mature or established technology implementations"
+      - "Academic research without commercialization potential"
+      - "Historical trend data without future implications"
+      - "Opinion-based speculation without innovation evidence"
+
+  phase_2_trend_analysis:
+    patent_analysis:
+      - "Filing frequency and trend identification"
+      - "Patent citation network and influence mapping"
+      - "Technology cluster and convergence analysis"
+      - "Innovation trajectory and evolution tracking"
+    
+    startup_ecosystem_analysis:
+      - "Funding pattern and investment trend analysis"
+      - "Product development stage and milestone tracking"
+      - "Market entry strategy and positioning assessment"
+      - "Technology focus and specialization mapping"
+    
+    innovation_pipeline_assessment:
+      - "Research lab and development center activity"
+      - "Technology transfer and commercialization tracking"
+      - "Prototype and proof-of-concept development"
+      - "Innovation maturity and readiness evaluation"
+
+  phase_3_future_scenario_development:
+    trend_extrapolation:
+      - "Current innovation trajectory projection"
+      - "Technology development timeline estimation"
+      - "Market adoption scenario modeling"
+      - "Disruption potential assessment"
+    
+    scenario_planning:
+      - "Best-case innovation scenario development"
+      - "Most-likely adoption pathway modeling"
+      - "Worst-case disruption impact assessment"
+      - "Alternative future technology landscape mapping"
+    
+    feasibility_assessment:
+      - "Technical feasibility and constraint analysis"
+      - "Market readiness and adoption barrier evaluation"
+      - "Resource requirement and availability assessment"
+      - "Regulatory and compliance consideration"
+
+  phase_4_innovation_synthesis:
+    disruptive_potential_evaluation:
+      - "Technology paradigm shift potential assessment"
+      - "Market disruption likelihood analysis"
+      - "Innovation adoption timeline prediction"
+      - "Competitive landscape transformation projection"
+    
+    strategic_implications:
+      - "Industry transformation scenario development"
+      - "Technology adoption strategy implications"
+      - "Innovation investment opportunity identification"
+      - "Future readiness requirement analysis"
+
+# Quality Assurance Framework
+quality_assurance:
+  bias_mitigation:
+    hype_cycle_bias:
+      - "Technology maturity realistic assessment"
+      - "Innovation timeline grounded estimation"
+      - "Hype vs. substance differentiation"
+      - "Market reality constraint consideration"
+    
+    novelty_bias:
+      - "Breakthrough vs. incremental improvement distinction"
+      - "Innovation significance objective evaluation"
+      - "Technology advancement context assessment"
+      - "Historical innovation pattern comparison"
+    
+    speculation_bias:
+      - "Evidence-based innovation assessment"
+      - "Feasibility constraint realistic evaluation"
+      - "Speculation vs. trend-based projection distinction"
+      - "Uncertainty acknowledgment and documentation"
+
+  constitutional_ai_compliance:
+    accuracy_verification:
+      - "Patent information accuracy validation"
+      - "Startup data and timeline verification"
+      - "Innovation claim evidence validation"
+      - "Trend projection methodology verification"
+    
+    limitation_acknowledgment:
+      - "Future prediction uncertainty explicit documentation"
+      - "Innovation timeline speculation boundary identification"
+      - "Technology feasibility constraint recognition"
+      - "Market adoption uncertainty transparent communication"
+    
+    speculation_management:
+      - "Evidence-based vs. speculative distinction"
+      - "Prediction confidence level explicit communication"
+      - "Uncertainty range documentation"
+      - "Alternative scenario consideration"
+
+# Evidence Documentation Framework
+documentation_structure:
+  source_attribution:
+    citation_format: "innovation_source_with_date_and_validation"
+    source_categorization: "patent_startup_research_innovation"
+    reliability_rating: "high_medium_low_with_feasibility_basis"
+    innovation_maturity: "concept_prototype_development_market_ready"
+  
+  findings_documentation:
+    finding_statement: "innovation_trend_with_feasibility_assessment"
+    evidence_basis: "multiple_innovation_signal_synthesis"
+    confidence_level: "innovation_potential_based"
+    limitations: "speculation_uncertainty_feasibility_constraints"
+  
+  trend_analysis:
+    innovation_trajectory: "development_timeline_with_milestones"
+    disruption_potential: "market_impact_assessment"
+    feasibility_constraints: "technical_market_regulatory_barriers"
+    adoption_scenarios: "timeline_pathway_alternative_futures"
+
+# Output Structure
+deliverables:
+  innovation_trend_analysis:
+    sections:
+      - "emerging_technology_landscape_mapping"
+      - "disruptive_innovation_potential_assessment"
+      - "future_scenario_development_planning"
+      - "innovation_adoption_timeline_projection"
+    
+    evidence_integration:
+      - "cross_innovation_signal_consistency"
+      - "contradictory_trend_reconciliation"
+      - "uncertainty_speculation_management"
+      - "feasibility_constraint_realistic_assessment"
+  
+  future_scenarios:
+    innovation_pathways:
+      - "breakthrough_technology_development_scenarios"
+      - "market_disruption_timeline_projection"
+      - "adoption_barrier_overcome_strategies"
+      - "competitive_landscape_transformation_modeling"
+    
+    strategic_implications:
+      - "industry_preparation_requirement_identification"
+      - "innovation_investment_opportunity_assessment"
+      - "future_readiness_capability_development"
+      - "disruptive_threat_mitigation_planning"
+
+# Integration Points
+cross_validation_preparation:
+  finding_categorization: "innovation_signal_based"
+  confidence_scoring: "feasibility_potential_weighted"
+  limitation_documentation: "speculation_uncertainty_identification"
+  source_verification: "innovation_evidence_validated"
+
+constitutional_ai_integration:
+  compliance_verification: "innovation_accuracy_feasibility_validation"
+  bias_documentation: "systematic_speculation_bias_identification"
+  uncertainty_communication: "future_prediction_limitation_disclosure"
+  speculation_management: "evidence_speculation_clear_distinction"

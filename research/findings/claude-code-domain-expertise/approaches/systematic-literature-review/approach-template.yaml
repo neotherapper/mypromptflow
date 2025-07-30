@@ -1,0 +1,265 @@
+# Systematic Literature Review Approach Template
+# Focus: Peer-reviewed academic sources and authoritative publications
+# Methodology: Chronological analysis of research evolution and meta-analysis
+# Isolation: Academic databases and scholarly sources only
+
+approach_identity:
+  name: "Systematic Literature Review"
+  id: "systematic-literature-review"
+  approach_number: 1
+  isolation_protocol: "academic_sources_only"
+  constitutional_ai_compliance: true
+
+# Methodological Framework
+methodology:
+  primary_focus: "Peer-reviewed academic sources and authoritative publications"
+  analytical_approach: "Chronological analysis of research evolution and meta-analysis"
+  validation_method: "Academic rigor, peer validation, theoretical foundation"
+  
+  strengths:
+    - "Academic rigor and peer validation"
+    - "Theoretical foundation and conceptual frameworks"
+    - "Systematic methodology and replicable processes"
+    - "Quality control through peer review systems"
+  
+  evidence_types:
+    - "Quantitative studies and empirical research"
+    - "Systematic reviews and meta-analyses"
+    - "Theoretical frameworks and conceptual models"
+    - "Longitudinal studies and trend analysis"
+
+# Source Channel Isolation
+source_channels:
+  permitted_channels:
+    academic_databases:
+      - "Google Scholar"
+      - "IEEE Xplore Digital Library"
+      - "ACM Digital Library"
+      - "arXiv preprint server"
+      - "Semantic Scholar"
+    
+    peer_reviewed_journals:
+      - "Software engineering journals"
+      - "Artificial intelligence research journals"
+      - "Human-computer interaction journals" 
+      - "Computer science education journals"
+    
+    conference_proceedings:
+      - "ICSE (International Conference on Software Engineering)"
+      - "ASE (Automated Software Engineering)"
+      - "AAAI (Association for Advancement of Artificial Intelligence)"
+      - "NeurIPS (Neural Information Processing Systems)"
+      - "CHI (Computer-Human Interaction)"
+    
+    university_research:
+      - "Academic institution publications"
+      - "Dissertation and thesis research"
+      - "University research center reports"
+      - "Faculty research publications"
+
+  prohibited_channels:
+    industry_sources:
+      - "Industry reports (Forrester, Gartner, McKinsey)"
+      - "Company case studies"
+      - "Implementation documentation"
+      - "Professional community discussions"
+    
+    market_data:
+      - "Market statistics and surveys"
+      - "Performance benchmarks"
+      - "Usage analytics"
+      - "Commercial research data"
+    
+    expert_opinions:
+      - "Expert interviews"
+      - "Thought leadership articles"
+      - "Professional publications"
+      - "Conference keynotes (non-peer-reviewed)"
+    
+    innovation_tracking:
+      - "Patent databases"
+      - "Startup activity tracking"
+      - "Innovation trend analysis"
+      - "Technology roadmaps"
+
+# Research Execution Protocol
+execution_protocol:
+  phase_1_literature_identification:
+    search_strategy:
+      - "Systematic keyword search across academic databases"
+      - "Citation network analysis for paper discovery"
+      - "Reference chain following for comprehensive coverage"
+      - "Temporal analysis for research evolution tracking"
+    
+    inclusion_criteria:
+      - "Peer-reviewed publications only"
+      - "AI coding assistance or software development automation focus"
+      - "Empirical studies with measurable outcomes"
+      - "Theoretical frameworks relevant to domain expertise"
+    
+    exclusion_criteria:
+      - "Non-peer-reviewed publications"
+      - "Industry reports or white papers"
+      - "Opinion pieces without empirical basis"
+      - "Conference presentations without full papers"
+
+  phase_2_quality_assessment:
+    quality_indicators:
+      publication_authority:
+        - "Journal impact factor and reputation"
+        - "Conference ranking and selectivity"
+        - "Author credentials and institutional affiliation"
+        - "Citation count and academic influence"
+      
+      methodological_rigor:
+        - "Study design appropriateness"
+        - "Sample size adequacy"
+        - "Statistical analysis quality"
+        - "Reproducibility documentation"
+      
+      relevance_assessment:
+        - "Direct relevance to Claude Code domain expertise"
+        - "Methodological applicability to research question"
+        - "Temporal relevance and currency"
+        - "Scope alignment with research objectives"
+
+  phase_3_data_extraction:
+    extraction_framework:
+      study_characteristics:
+        - "Research methodology and design"
+        - "Sample size and population"
+        - "AI system characteristics studied"
+        - "Performance metrics utilized"
+      
+      findings_synthesis:
+        - "Key conclusions and insights"
+        - "Statistical significance and effect sizes"
+        - "Limitations and boundary conditions"
+        - "Future research recommendations"
+      
+      evidence_quality:
+        - "Internal validity assessment"
+        - "External validity and generalizability"
+        - "Reliability and consistency measures"
+        - "Bias identification and mitigation"
+
+  phase_4_synthesis_analysis:
+    analytical_methods:
+      chronological_analysis:
+        - "Research evolution timeline construction"
+        - "Trend identification across time periods"
+        - "Paradigm shift recognition"
+        - "Future trajectory extrapolation"
+      
+      meta_analysis_approach:
+        - "Effect size aggregation across studies"
+        - "Heterogeneity assessment and explanation"
+        - "Publication bias evaluation"
+        - "Sensitivity analysis execution"
+      
+      theoretical_framework_synthesis:
+        - "Conceptual model integration"
+        - "Theoretical consistency evaluation"
+        - "Framework applicability assessment"
+        - "Gap identification and future needs"
+
+# Quality Assurance Framework
+quality_assurance:
+  bias_mitigation:
+    publication_bias:
+      - "Grey literature inclusion consideration"
+      - "Multiple database search strategy"
+      - "Language and geographic diversity"
+      - "Negative result identification"
+    
+    selection_bias:
+      - "Systematic inclusion/exclusion criteria"
+      - "Independent reviewer validation"
+      - "Inter-rater reliability assessment"
+      - "Transparency in selection process"
+    
+    confirmation_bias:
+      - "Predetermined search strategy"
+      - "Systematic evidence extraction"
+      - "Contradictory evidence inclusion"
+      - "Alternative interpretation consideration"
+
+  constitutional_ai_compliance:
+    accuracy_verification:
+      - "Citation accuracy validation"
+      - "Factual claim source verification"
+      - "Statistical result accuracy check"
+      - "Quote attribution verification"
+    
+    limitation_acknowledgment:
+      - "Systematic limitation identification"
+      - "Scope boundary documentation"
+      - "Uncertainty source explanation"
+      - "Generalizability constraint recognition"
+    
+    transparency_maintenance:
+      - "Complete methodology documentation"
+      - "Search strategy disclosure"
+      - "Selection criteria transparency"
+      - "Analysis method explanation"
+
+# Evidence Documentation Framework
+documentation_structure:
+  source_attribution:
+    citation_format: "academic_standard_with_doi"
+    source_categorization: "journal_conference_thesis_report"
+    quality_rating: "high_medium_low_with_justification"
+    relevance_scoring: "direct_indirect_tangential"
+  
+  findings_documentation:
+    finding_statement: "precise_academically_grounded"
+    evidence_basis: "multiple_study_synthesis"
+    confidence_level: "statistical_significance_based"
+    limitations: "explicit_boundary_conditions"
+  
+  methodology_transparency:
+    search_documentation: "complete_database_strategy"
+    selection_process: "systematic_criteria_application"
+    analysis_method: "detailed_analytical_approach"
+    bias_mitigation: "implemented_safeguard_documentation"
+
+# Output Structure
+deliverables:
+  literature_review_synthesis:
+    sections:
+      - "research_evolution_chronology"
+      - "theoretical_framework_analysis"
+      - "empirical_findings_meta_analysis"
+      - "gap_identification_future_needs"
+    
+    evidence_integration:
+      - "cross_study_consistency_analysis"
+      - "contradictory_finding_reconciliation"
+      - "limitation_synthesis"
+      - "practical_implication_derivation"
+  
+  confidence_assessment:
+    reliability_factors:
+      - "study_quality_composite_score"
+      - "evidence_convergence_degree"
+      - "methodological_diversity_strength"
+      - "temporal_consistency_validation"
+    
+    uncertainty_documentation:
+      - "knowledge_gap_identification"
+      - "methodological_limitation_impact"
+      - "generalizability_constraint_analysis"
+      - "future_research_need_prioritization"
+
+# Integration Points
+cross_validation_preparation:
+  finding_categorization: "academic_evidence_based"
+  confidence_scoring: "peer_review_validation_weighted"
+  limitation_documentation: "systematic_boundary_identification"
+  source_verification: "academic_authority_validated"
+
+constitutional_ai_integration:
+  compliance_verification: "academic_standard_adherence"
+  bias_documentation: "systematic_bias_identification"
+  uncertainty_communication: "explicit_limitation_disclosure"
+  accuracy_validation: "peer_review_quality_assurance"

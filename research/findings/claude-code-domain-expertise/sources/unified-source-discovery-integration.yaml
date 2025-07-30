@@ -1,0 +1,274 @@
+# Unified Source Discovery Integration
+# Integration with meta/information-access/source-discovery-framework.yaml
+# Cross-validation orchestrator specific source coordination
+
+integration_framework:
+  base_framework: "meta/information-access/source-discovery-framework.yaml"
+  specialization: "cross_validation_methodological_isolation"
+  topic_focus: "claude_code_domain_expertise"
+  coordination_type: "approach_specific_source_channels"
+
+# Topic Analysis and Mapping
+topic_analysis:
+  primary_technology: "AI_coding_assistance"
+  secondary_technologies: ["natural_language_processing", "code_generation", "developer_tools"]
+  domain_categories: ["software_development", "artificial_intelligence", "productivity_tools"]
+  stakeholder_groups: ["developers", "engineering_teams", "technology_organizations"]
+
+technology_mapping_integration:
+  ai_coding_assistance:
+    systematic_literature_review:
+      primary_sources:
+        - "technology_mappings.artificial_intelligence.academic_sources"
+        - "technology_mappings.software_engineering.research_databases"
+        - "category_mappings.software_development.peer_reviewed_sources"
+      
+      source_channels:
+        - "IEEE_Computer_Society_Digital_Library"
+        - "ACM_Digital_Library_software_engineering"
+        - "Google_Scholar_AI_coding_assistance"
+        - "arXiv_computer_science_AI"
+    
+    industry_practice_analysis:
+      primary_sources:
+        - "category_mappings.software_development.industry_resources"
+        - "technology_mappings.developer_tools.implementation_guides"
+        - "category_mappings.productivity_tools.case_studies"
+      
+      source_channels:
+        - "Forrester_developer_productivity_reports"
+        - "Gartner_software_development_tools_analysis"
+        - "GitHub_engineering_blog_implementations"
+        - "Stack_Overflow_professional_community"
+    
+    data_driven_investigation:
+      primary_sources:
+        - "category_mappings.software_development.survey_data"
+        - "technology_mappings.developer_tools.usage_analytics"
+        - "category_mappings.productivity_tools.performance_metrics"
+      
+      source_channels:
+        - "Stack_Overflow_Developer_Survey_annual"
+        - "GitHub_State_of_Octoverse_statistics"
+        - "JetBrains_Developer_Ecosystem_Survey"
+        - "Developer_productivity_measurement_studies"
+    
+    expert_opinion_synthesis:
+      primary_sources:
+        - "category_mappings.artificial_intelligence.thought_leadership"
+        - "category_mappings.software_development.expert_commentary"
+        - "technology_mappings.developer_tools.professional_insights"
+      
+      source_channels:
+        - "AI_researcher_professional_commentary"
+        - "CTO_engineering_leader_insights"
+        - "Developer_tool_expert_interviews"
+        - "Technology_conference_expert_presentations"
+    
+    emerging_trends_analysis:
+      primary_sources:
+        - "technology_mappings.artificial_intelligence.innovation_tracking"
+        - "category_mappings.software_development.emerging_technologies"
+        - "technology_mappings.developer_tools.patent_analysis"
+      
+      source_channels:
+        - "USPTO_AI_software_development_patents"
+        - "AI_coding_assistant_startup_activity"
+        - "Developer_tool_innovation_tracking"
+        - "Technology_breakthrough_announcements"
+
+# Source Channel Coordination
+source_coordination:
+  channel_isolation_protocol:
+    objective: "prevent_cross_approach_contamination"
+    method: "exclusive_source_channel_assignment"
+    validation: "systematic_channel_separation_verification"
+    
+  primary_source_assignment:
+    systematic_literature_review:
+      exclusive_channels:
+        - "academic_database_access"
+        - "peer_reviewed_journal_subscriptions"
+        - "research_conference_proceedings"
+        - "university_research_repositories"
+      
+      prohibited_channels:
+        - "industry_report_databases"
+        - "market_research_platforms"
+        - "expert_interview_transcripts"
+        - "patent_analysis_systems"
+    
+    industry_practice_analysis:
+      exclusive_channels:
+        - "industry_analyst_report_access"
+        - "company_case_study_databases"
+        - "professional_community_platforms"
+        - "implementation_documentation_repositories"
+      
+      prohibited_channels:
+        - "academic_research_databases"
+        - "statistical_survey_platforms"
+        - "expert_opinion_aggregators"
+        - "innovation_tracking_systems"
+    
+    data_driven_investigation:
+      exclusive_channels:
+        - "survey_data_platforms"
+        - "analytics_and_metrics_systems"  
+        - "statistical_research_databases"
+        - "performance_benchmark_repositories"
+      
+      prohibited_channels:
+        - "academic_literature_databases"
+        - "industry_case_study_platforms"
+        - "expert_commentary_sources"
+        - "patent_innovation_trackers"
+    
+    expert_opinion_synthesis:
+      exclusive_channels:
+        - "expert_interview_platforms"
+        - "thought_leadership_aggregators"
+        - "professional_conference_systems"
+        - "industry_expert_commentary_sources"
+      
+      prohibited_channels:
+        - "academic_research_platforms"
+        - "implementation_case_databases"
+        - "statistical_survey_systems"
+        - "innovation_patent_databases"
+    
+    emerging_trends_analysis:
+      exclusive_channels:
+        - "patent_analysis_platforms"
+        - "startup_activity_trackers"
+        - "innovation_monitoring_systems"
+        - "technology_breakthrough_aggregators"
+      
+      prohibited_channels:
+        - "academic_literature_sources"
+        - "industry_implementation_databases"
+        - "survey_statistical_platforms"
+        - "expert_opinion_repositories"
+
+# Error Handling and Fallback Integration
+error_handling:
+  mcp_fallback_coordination:
+    base_fallback: "meta/information-access/source-discovery-framework.yaml#fallback_systems"
+    approach_specific_fallbacks:
+      systematic_literature_review:
+        primary_fallback: "knowledge_vault.academic_sources"
+        secondary_fallback: "information_sources_by_type.research_databases"
+        tertiary_fallback: "general_search_with_academic_filter"
+      
+      industry_practice_analysis:
+        primary_fallback: "knowledge_vault.industry_resources"
+        secondary_fallback: "information_sources_by_type.professional_platforms"
+        tertiary_fallback: "general_search_with_industry_filter"
+      
+      data_driven_investigation:
+        primary_fallback: "knowledge_vault.statistical_sources"
+        secondary_fallback: "information_sources_by_type.data_platforms"
+        tertiary_fallback: "general_search_with_quantitative_filter"
+      
+      expert_opinion_synthesis:
+        primary_fallback: "knowledge_vault.expert_sources"
+        secondary_fallback: "information_sources_by_type.professional_commentary"
+        tertiary_fallback: "general_search_with_expert_filter"
+      
+      emerging_trends_analysis:
+        primary_fallback: "knowledge_vault.innovation_sources"
+        secondary_fallback: "information_sources_by_type.technology_tracking"
+        tertiary_fallback: "general_search_with_innovation_filter"
+
+  authentication_recovery:
+    approach_isolation_maintenance: "preserve_channel_separation_during_recovery"
+    credential_coordination: "approach_specific_access_management"
+    fallback_channel_isolation: "maintain_methodological_separation"
+
+# Quality Assurance Integration
+quality_assurance:
+  source_verification:
+    channel_isolation_audit:
+      - "systematic_source_channel_separation_verification"
+      - "cross_contamination_detection_prevention"
+      - "approach_specific_access_validation"
+      - "methodological_isolation_maintenance"
+    
+    constitutional_ai_compliance:
+      - "source_accuracy_verification_per_approach"
+      - "attribution_correctness_validation"
+      - "bias_mitigation_source_diversity"
+      - "transparency_source_documentation"
+
+  attribution_coordination:
+    source_tracking:
+      format: "approach_id.source_category.specific_source.access_method"
+      example: "systematic_literature_review.academic_database.ieee_xplore.direct_search"
+      validation: "cross_reference_verification_required"
+    
+    research_sources_documentation:
+      file_location: "research/findings/claude-code-domain-expertise/sources/research-sources.md"
+      update_protocol: "real_time_source_addition_with_approach_tagging"
+      attribution_standard: "complete_source_chain_documentation"
+
+# Implementation Coordination
+implementation_protocol:
+  source_discovery_execution:
+    step_1_topic_analysis:
+      - "extract_claude_code_domain_expertise_components"
+      - "map_to_unified_source_discovery_categories"
+      - "identify_approach_specific_source_requirements"
+    
+    step_2_source_coordination:
+      - "assign_exclusive_source_channels_per_approach"
+      - "configure_methodological_isolation_protocols"
+      - "establish_cross_contamination_prevention"
+    
+    step_3_access_coordination:
+      - "coordinate_mcp_server_access_per_approach"
+      - "implement_authentication_isolation"
+      - "configure_fallback_systems_with_isolation"
+    
+    step_4_quality_assurance:
+      - "validate_source_channel_separation"
+      - "verify_methodological_isolation_integrity"
+      - "document_source_attribution_per_approach"
+
+  agent_usage_integration:
+    base_guide: "meta/information-access/agent-usage-guide.md"
+    cross_validation_specialization:
+      - "approach_specific_source_channel_usage"
+      - "methodological_isolation_maintenance"
+      - "cross_contamination_prevention_protocols"
+      - "source_verification_per_approach_standards"
+
+# Monitoring and Validation
+monitoring_framework:
+  isolation_integrity_monitoring:
+    real_time_checks:
+      - "source_channel_separation_verification"
+      - "cross_approach_contamination_detection"
+      - "methodological_isolation_maintenance"
+    
+    quality_metrics:
+      - "source_channel_isolation_percentage"
+      - "cross_contamination_prevention_effectiveness"
+      - "approach_specific_source_quality_scores"
+    
+    corrective_actions:
+      - "contamination_source_quarantine"
+      - "approach_re_execution_if_necessary"
+      - "isolation_protocol_strengthening"
+
+constitutional_ai_integration:
+  compliance_verification:
+    - "source_accuracy_per_approach_validation"
+    - "attribution_transparency_maintenance"
+    - "bias_mitigation_through_source_diversity"
+    - "uncertainty_communication_source_based"
+
+  ethical_considerations:
+    - "balanced_perspective_source_inclusion"
+    - "harm_mitigation_source_selection"
+    - "responsible_source_usage_documentation"
+    - "privacy_compliance_source_access"
