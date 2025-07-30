@@ -164,7 +164,7 @@
 #### AI Knowledge Intelligence Orchestrator Registry
 
 ##### 1. Master Server Database
-- **File Path**: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/master-server-database.yaml
+- **File Path**: projects/universal-topic-intelligence-system/mcp-registry/master-server-database.yaml
 - **Access Method**: Read tool
 - **Timestamp**: 2025-07-23 11:30:00
 - **Content Type**: Comprehensive server database with scoring
@@ -173,7 +173,7 @@
 - **Key Data**: 1,126+ servers with multi-dimensional scoring and tier classification
 
 ##### 2. Detailed Server Profiles (155+ profiles)
-- **File Path**: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/
+- **File Path**: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/
 - **Access Method**: Directory analysis
 - **Timestamp**: 2025-07-23 11:45:00
 - **Content Type**: Enterprise implementation guides
@@ -182,7 +182,7 @@
 - **Key Data**: Tier-organized server profiles with ROI analysis and deployment guides
 
 ##### 3. Business Value Analysis
-- **File Path**: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml
+- **File Path**: projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml
 - **Access Method**: Read tool
 - **Timestamp**: 2025-07-23 12:00:00
 - **Content Type**: Business-aligned scoring algorithm
@@ -191,7 +191,7 @@
 - **Key Data**: Multi-dimensional scoring with maritime insurance and development focus
 
 ##### 4. Implementation Roadmaps
-- **File Path**: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/implementation/
+- **File Path**: projects/universal-topic-intelligence-system/mcp-registry/implementation/
 - **Access Method**: Directory analysis
 - **Timestamp**: 2025-07-23 12:15:00
 - **Content Type**: Technical implementation guidance
@@ -200,7 +200,7 @@
 - **Key Data**: Enterprise integration patterns, security frameworks, ROI analysis
 
 ##### 5. Research Integration Documents
-- **File Path**: projects/ai-knowledge-intelligence-orchestrator/docs/research-findings/
+- **File Path**: projects/universal-topic-intelligence-system/docs/research-findings/
 - **Access Method**: Directory analysis
 - **Timestamp**: 2025-07-23 12:30:00
 - **Content Type**: Research gap analysis and integration guidance

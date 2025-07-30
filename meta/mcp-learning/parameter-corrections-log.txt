@@ -1,0 +1,464 @@
+[2025-07-30 15:48:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 15:48:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj-123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 15:48:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ-123"invalid}...
+Corrected: {"issue_key":"PROJ-123"invalid,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 15:48:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {}...
+Corrected: {,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 15:51:35] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 15:52:05] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {}...
+Corrected: {,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 16:00:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:00:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj-123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:00:12] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:00:13] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ-123"invalid}...
+Corrected: {"issue_key":"PROJ-123"invalid,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 16:00:37] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:00:37] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj-123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:00:37] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:00:37] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ-123"invalid}...
+Corrected: {"issue_key":"PROJ-123"invalid,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 16:01:56] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:01:56] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj-123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:01:56] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:01:56] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"PROJ-123"invalid}...
+Corrected: {"issue_key":"PROJ-123"invalid,"fields":"summary,status,assignee,priority,created,updated"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:45] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"invalid-test","fields":"summary"}...
+Corrected: {"issue_key":"INVALID-TEST","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:46] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:47] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:47] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:47] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: :{"issue_key":"PROJ123","fields":"summary"}...
+Corrected: :{"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:48] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}...
+Corrected: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}},"fields":"summary,status,assignee,priority...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---
+[2025-07-30 16:22:49] PARAMETER CORRECTION
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Corrections Applied:
+- Fixed JIRA issue key format
+- Applied learned success patterns
+Original: {"issue_key":"proj123","fields":"summary"}...
+Corrected: {"issue_key":"PROJ-123","fields":"summary"}...
+---

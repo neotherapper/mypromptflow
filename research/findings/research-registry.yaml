@@ -435,7 +435,7 @@ research_sessions:
     archive_file: "research/sessions/mcp-registry-analysis-20250720.yaml"
     date: "2025-07-20"
     researcher: "Registry and Directory Specialist Agent"
-    project: "AI Knowledge Intelligence Orchestrator"
+    project: "Universal Topic Intelligence System"
     
     research_topics:
       - topic_id: "mcp-registry-systems-analysis"
@@ -444,18 +444,18 @@ research_sessions:
         quality_score: 95
         location: "research/findings/mcp-registry-analysis/"
         key_outcomes: "Three-tier registry classification with automated discovery protocols achieving 85% efficiency improvement; Quality assessment frameworks with 95% accuracy prediction; JSON-RPC 2.0 integration patterns for MCP server orchestration"
-        applications: "AI Knowledge Intelligence Orchestrator tool discovery automation, quality validation frameworks, registry-based MCP server integration"
+        applications: "Universal Topic Intelligence System tool discovery automation, quality validation frameworks, registry-based MCP server integration"
 
   enterprise_information_governance_research:
     session_id: "enterprise_governance_analysis_20250720"
     archive_file: "research/sessions/enterprise-information-governance-analysis-20250720.yaml"
     date: "2025-07-20"
     researcher: "Enterprise Intelligence Specialist Agent"
-    project: "AI Knowledge Intelligence Orchestrator Enhancement"
+    project: "Universal Topic Intelligence System Enhancement"
     
     research_topics:
       - topic_id: "enterprise-information-governance-analysis"
-        title: "Enterprise Information Governance Frameworks for AI Knowledge Intelligence Orchestrator Enhancement"
+        title: "Enterprise Information Governance Frameworks for Universal Topic Intelligence System Enhancement"
         status: "completed"
         quality_score: 96
         location: "research/findings/enterprise-information-governance-analysis/"
@@ -467,11 +467,11 @@ research_sessions:
     archive_file: "research/sessions/search-engine-quality-assessment-20250720.yaml"
     date: "2025-07-20"
     researcher: "Search Engine Quality Assessment Research Specialist"
-    project: "AI Knowledge Intelligence Orchestrator Enhancement"
+    project: "Universal Topic Intelligence System Enhancement"
     
     research_topics:
       - topic_id: "search-engine-quality-assessment"
-        title: "Search Engine Quality Assessment Systems for AI Knowledge Intelligence Orchestrator Integration"
+        title: "Search Engine Quality Assessment Systems for Universal Topic Intelligence System Integration"
         status: "completed"
         quality_score: 95
         location: "research/findings/search-engine-quality-assessment/"
@@ -483,11 +483,11 @@ research_sessions:
     archive_file: "research/sessions/academic-information-systems-20250720.yaml"
     date: "2025-07-20"
     researcher: "Claude Sonnet 4 Scientific and Academic Information Systems Research Specialist"
-    project: "AI Knowledge Intelligence Orchestrator Enhancement"
+    project: "Universal Topic Intelligence System Enhancement"
     
     research_topics:
       - topic_id: "academic-information-systems-analysis"
-        title: "Academic Information Systems and Research Quality Validation for AI Knowledge Intelligence Orchestrator Integration"
+        title: "Academic Information Systems and Research Quality Validation for Universal Topic Intelligence System Integration"
         status: "completed"
         quality_score: 96
         location: "research/findings/academic-information-systems/"
@@ -583,10 +583,10 @@ research_sessions:
           implementation_phases_established: 3
           
         cross_references:
-          operational_registry: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
-          business_scoring_algorithm: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
-          detailed_profiles: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/"
-          implementation_guides: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/implementation/"
+          operational_registry: "knowledge-vault/databases/tools_services/"
+          business_scoring_algorithm: "meta/mcp-system/blueprints/scoring-algorithm.yaml"
+          detailed_profiles: "knowledge-vault/databases/tools_services/items/"
+          implementation_guides: "meta/mcp-system/implementation/"
           
         related_research:
           - research_id: "official-mcp-servers-analysis"

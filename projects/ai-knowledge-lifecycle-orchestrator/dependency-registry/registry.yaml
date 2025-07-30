@@ -497,8 +497,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/CLAUDE.md:
-    file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/CLAUDE.md
+  ../../../mypromptflow/projects/universal-topic-intelligence-system/CLAUDE.md:
+    file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/CLAUDE.md
     file_type: claude_md
     file_hash: 9179c3c1f93733adf6deb122cd5a8a321250469bd9f9a851fbd8f63e0a24befb
     last_modified: '2025-07-24T08:48:11.020870+00:00'
@@ -8906,8 +8906,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/automated-systems-integration-strategy.md:
-    file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/automated-systems-integration-strategy.md
+  ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/automated-systems-integration-strategy.md:
+    file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/automated-systems-integration-strategy.md
     file_type: project_documentation
     file_hash: d541ee8665fb80eba8d1f404c9e4ec3b611bd25d6193641ee0503d455986f430
     last_modified: '2025-07-22T10:32:44.562876+00:00'
@@ -8974,8 +8974,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/README.md:
-    file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/README.md
+  ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/README.md:
+    file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/README.md
     file_type: project_documentation
     file_hash: d6338a4051828ffd3411b42a4b31a91149a5196a82150d6fae5bb5fed5934cba
     last_modified: '2025-07-22T10:32:44.562509+00:00'
@@ -9134,8 +9134,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/multi-mcp-coordination-analysis.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/multi-mcp-coordination-analysis.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/multi-mcp-coordination-analysis.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/multi-mcp-coordination-analysis.md
     file_type: project_documentation
     file_hash: f4af39e8782ed8d2163e1517a8d792f2d2e5a2989bad2aaa9d095f56f1ba987d
     last_modified: '2025-07-22T10:32:44.566569+00:00'
@@ -9151,8 +9151,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/research-findings/comprehensive-research-gap-analysis.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/research-findings/comprehensive-research-gap-analysis.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/research-findings/comprehensive-research-gap-analysis.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/research-findings/comprehensive-research-gap-analysis.md
     file_type: project_documentation
     file_hash: 7f4bdbbf5adff5ea82858b753b6f1d0b383e08f394fb0888c35b0d1aa35381e1
     last_modified: '2025-07-22T10:32:44.566164+00:00'
@@ -9168,8 +9168,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/implementation-plans/decision-engine/information-retrieval-decision-engine/research/priority-based-decision-engine.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/implementation-plans/decision-engine/information-retrieval-decision-engine/research/priority-based-decision-engine.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/implementation-plans/decision-engine/information-retrieval-decision-engine/research/priority-based-decision-engine.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/implementation-plans/decision-engine/information-retrieval-decision-engine/research/priority-based-decision-engine.md
     file_type: project_documentation
     file_hash: 0033b66d61952ed8545151e8e09ae5baafae05a9a99bcc6469b6d08ccd1f9018
     last_modified: '2025-07-22T10:32:44.563838+00:00'
@@ -9185,8 +9185,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/mcp-server-validation-report.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/mcp-server-validation-report.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/mcp-server-validation-report.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/mcp-server-validation-report.md
     file_type: project_documentation
     file_hash: f46bc747d14d59666d4d3f9d7eec7560a9d286b65db393c2d34e1207a8d80bcb
     last_modified: '2025-07-22T10:32:44.566422+00:00'
@@ -9232,8 +9232,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/git-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/git-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/git-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/git-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 8045aceb1b1f34e144c5362f1add4695638b7cb20aff8141962d4e3eb8a8b034
     last_modified: '2025-07-24T08:56:16.534854+00:00'
@@ -9297,8 +9297,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neon-serverless-postgres-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neon-serverless-postgres-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neon-serverless-postgres-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neon-serverless-postgres-server-profile.md
     file_type: project_documentation
     file_hash: c03cb791a3fd54bcf1b1f9d823e59025e0be2486ae044ad5fc5f670e3babcc57
     last_modified: '2025-07-24T10:52:06.307207+00:00'
@@ -9314,8 +9314,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/e2b-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/e2b-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/e2b-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/e2b-mcp-server-profile.md
     file_type: project_documentation
     file_hash: ebc9e00d2c94935068f6be8b1bb97087957b9b79646506d5c44ff4f1ecab4040
     last_modified: '2025-07-24T09:08:25.662229+00:00'
@@ -9366,8 +9366,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/rss-management-frameworks-analysis.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/testing/mcp-server-validation/research/rss-management-frameworks-analysis.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/rss-management-frameworks-analysis.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/testing/mcp-server-validation/research/rss-management-frameworks-analysis.md
     file_type: project_documentation
     file_hash: 3b15197dd54cb2713b47bd641ee6931e542e2132f2702ae5026ad275fd02a563
     last_modified: '2025-07-22T10:32:44.566911+00:00'
@@ -9383,8 +9383,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/github-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 239d97e321335bea95096a134e4486b67de173213b14f31c4d8ccb46937a3fca
     last_modified: '2025-07-24T13:42:56.446132+00:00'
@@ -9423,8 +9423,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/auth0-identity-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/auth0-identity-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/auth0-identity-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/auth0-identity-server-profile.md
     file_type: project_documentation
     file_hash: 752fa883bbb9f6a5caf8debc7c543ac9775afa83070c8326cc70e219bed6c2d3
     last_modified: '2025-07-24T16:39:30.791390+00:00'
@@ -9440,8 +9440,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neo4j-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neo4j-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neo4j-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/neo4j-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 5c72a78f0f37ec6dd7d3c5202c59fc599b88b27006584eea8f492a04ccfb71ef
     last_modified: '2025-07-24T09:05:52.424447+00:00'
@@ -9457,8 +9457,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/chronulus-ai-forecasting-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/chronulus-ai-forecasting-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/chronulus-ai-forecasting-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/chronulus-ai-forecasting-server-profile.md
     file_type: project_documentation
     file_hash: 4d4d969db3a8d15f353f91702088fd068344e37f5259046f4535c4a4d8b900f0
     last_modified: '2025-07-24T16:48:23.532570+00:00'
@@ -9474,8 +9474,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/aiven-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/aiven-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/aiven-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/aiven-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 781979a76dc78a58f7b6667e92036466e8f9f19732ade4f1360295da373a517e
     last_modified: '2025-07-24T09:00:42.517660+00:00'
@@ -9514,8 +9514,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/puppeteer-browser-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/puppeteer-browser-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/puppeteer-browser-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/puppeteer-browser-server-profile.md
     file_type: project_documentation
     file_hash: f9b123d6bb42f9ac55ea6279d87a998b0c5fadd56ce3601cbbde4e1bb5e86596
     last_modified: '2025-07-24T09:29:23.159378+00:00'
@@ -9564,8 +9564,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/logfire-opentelemetry-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/logfire-opentelemetry-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/logfire-opentelemetry-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/logfire-opentelemetry-server-profile.md
     file_type: project_documentation
     file_hash: 092398677d9e9077a6cf17dcb870961ca61e6581c0cd8ffd60d0b0b6fd7c32a3
     last_modified: '2025-07-24T16:52:15.819672+00:00'
@@ -9581,8 +9581,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sentry-official-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sentry-official-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sentry-official-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sentry-official-server-profile.md
     file_type: project_documentation
     file_hash: 4cdf33474e895ced19fab7567f79920df761c8ead65d66431117cc00fb28712d
     last_modified: '2025-07-24T09:27:50.835216+00:00'
@@ -9617,8 +9617,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/cloudflare-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/cloudflare-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/cloudflare-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/cloudflare-mcp-server-profile.md
     file_type: project_documentation
     file_hash: b66cbe73943b40cfe6f5f26c383c4b31abc2eebed144c1e24c20a943ea39579e
     last_modified: '2025-07-24T08:58:32.945211+00:00'
@@ -9634,8 +9634,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/clickhouse-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/clickhouse-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/clickhouse-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/clickhouse-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 3643158d16548a153a7c7df45f678b1864cc6e6212a1662ebe907cd80298b039
     last_modified: '2025-07-24T09:03:13.061529+00:00'
@@ -9651,8 +9651,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/linear-project-management-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/linear-project-management-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/linear-project-management-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/linear-project-management-server-profile.md
     file_type: project_documentation
     file_hash: 2efd57210bd30765f46a18a4b5dbbed43f383b206cb97044142d9c57bda8b4cc
     last_modified: '2025-07-24T09:32:17.508399+00:00'
@@ -9668,8 +9668,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/gitlab-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/gitlab-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/gitlab-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/gitlab-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 78d95f0c0c4cf5ccf8c09b87b426656dace531af3d48bafeb72701b5089865ea
     last_modified: '2025-07-24T13:44:11.532593+00:00'
@@ -9704,8 +9704,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/digitalocean-management-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/digitalocean-management-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/digitalocean-management-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/digitalocean-management-server-profile.md
     file_type: project_documentation
     file_hash: 4dc50d1d7b33981e3dc3ca32438514273038857cd0cdb5f62fcffaf5c95172a8
     last_modified: '2025-07-24T16:46:27.542150+00:00'
@@ -9751,8 +9751,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/financial-datasets-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/financial-datasets-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/financial-datasets-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/financial-datasets-server-profile.md
     file_type: project_documentation
     file_hash: 56b5b1c24677d19fc250db8e9b6a9890d21d7e7098c32db659053e12ff0c51da
     last_modified: '2025-07-24T16:50:17.357005+00:00'
@@ -9768,8 +9768,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sequelize-database-orm-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sequelize-database-orm-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sequelize-database-orm-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/sequelize-database-orm-server-profile.md
     file_type: project_documentation
     file_hash: 2037aa4ae242d5540ec21bac876ff8f54552bed0b00ad11f5f25a80150b24bfb
     last_modified: '2025-07-24T09:34:02.957672+00:00'
@@ -9802,8 +9802,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/infisical-secrets-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/infisical-secrets-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/infisical-secrets-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/infisical-secrets-server-profile.md
     file_type: project_documentation
     file_hash: 7f4968bd02b44d38d20de49344365a799267c391f099e46f3e76cbe6cdca7aa4
     last_modified: '2025-07-24T16:42:46.844381+00:00'
@@ -9855,8 +9855,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/vercel-deployment-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/vercel-deployment-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/vercel-deployment-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/vercel-deployment-server-profile.md
     file_type: project_documentation
     file_hash: b76066c0e243a78a4234b54cc340db32943e455a002ffd4a61cca4b194236288
     last_modified: '2025-07-24T16:44:44.856146+00:00'
@@ -9903,8 +9903,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/workos-b2b-auth-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/workos-b2b-auth-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/workos-b2b-auth-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/workos-b2b-auth-server-profile.md
     file_type: project_documentation
     file_hash: 2048bd95be8c47e7fd6c9a1fd8b4e96e10cfc58183741fd20c8ad1429c0ce6b6
     last_modified: '2025-07-24T16:41:07.386736+00:00'
@@ -9920,8 +9920,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/slack-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/slack-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/slack-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/slack-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 7c4df05c12938328c637365648c1ca7a698a94aa0522dab095c90d9ebfb54b5f
     last_modified: '2025-07-24T09:26:32.947451+00:00'
@@ -9956,8 +9956,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/astra-db-nosql-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/astra-db-nosql-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/astra-db-nosql-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/astra-db-nosql-server-profile.md
     file_type: project_documentation
     file_hash: 03e4f404b4afa9ea4e68853b804c79d00de9d9146873d580289b7c6e1d7609d2
     last_modified: '2025-07-24T10:48:39.170311+00:00'
@@ -9973,8 +9973,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
     file_type: project_documentation
     file_hash: 5e439db462e14fff866dbf644b86283b1559458f84eb2f0766b510b008a7bb76
     last_modified: '2025-07-24T09:48:31.740251+00:00'
@@ -10004,8 +10004,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/grafana-visualization-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/grafana-visualization-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/grafana-visualization-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/grafana-visualization-server-profile.md
     file_type: project_documentation
     file_hash: 6231323024c4df75aaab11d7a909de646ae62669b489931672e8c25603a05be4
     last_modified: '2025-07-24T09:30:47.997665+00:00'
@@ -10021,8 +10021,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/postgresql-mcp-server-profile.md
     file_type: project_documentation
     file_hash: f6f23826f0c8e82caa698e01f4c71aa93ab15117fc173087dbaee34ba781af76
     last_modified: '2025-07-24T13:44:33.764368+00:00'
@@ -10038,8 +10038,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
     file_type: project_documentation
     file_hash: c39e47ec7f5d66ec5ed18fb089d0d32040e89cc5d212fae0614e4ad2d29da036
     last_modified: '2025-07-24T10:45:54.027000+00:00'
@@ -10055,8 +10055,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/elasticsearch-search-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/elasticsearch-search-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/elasticsearch-search-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/elasticsearch-search-server-profile.md
     file_type: project_documentation
     file_hash: 41f63affb92c08fb4aedf2965642a097b60e10d284cc4f465e35314dc49f7dd4
     last_modified: '2025-07-24T10:12:43.844103+00:00'
@@ -10072,8 +10072,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
     file_type: project_documentation
     file_hash: 61d83c427b775b53b81df43cc39109a45f57f8974f927c797e7395e0a7af3a47
     last_modified: '2025-07-24T09:44:19.028037+00:00'
@@ -10089,8 +10089,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/docker-containerization-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/docker-containerization-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/docker-containerization-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/docker-containerization-server-profile.md
     file_type: project_documentation
     file_hash: 8488f3bc27e548ac9f34611ebcc652006dc8e4fce4a6fc0cfd21565848f0c35f
     last_modified: '2025-07-24T10:16:01.585592+00:00'
@@ -10173,8 +10173,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/brave-search-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/brave-search-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/brave-search-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/brave-search-server-profile.md
     file_type: project_documentation
     file_hash: 75cc6efaa7ead21cb6505256cf898864dca0b6d0cd31c4b979404affa1bc7b79
     last_modified: '2025-07-24T09:37:10.113578+00:00'
@@ -10190,8 +10190,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mysql-database-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mysql-database-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mysql-database-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mysql-database-server-profile.md
     file_type: project_documentation
     file_hash: 1c8032f756631f1f70d37b10f24acaf8eb0e1a43bf122e43dbb56f3a5c1c773d
     last_modified: '2025-07-24T10:00:06.090567+00:00'
@@ -10207,8 +10207,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mongodb-database-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mongodb-database-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mongodb-database-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/mongodb-database-server-profile.md
     file_type: project_documentation
     file_hash: 045c361d38f2a8818d9701886c1afd434489ba856f9aee42a45f42fc7bb758b9
     last_modified: '2025-07-24T10:06:29.779783+00:00'
@@ -10224,8 +10224,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
     file_type: project_documentation
     file_hash: eb59b89d7f93d4151115840cc3bb5872949053cb2f97856e9df9d01109f66669
     last_modified: '2025-07-24T09:54:04.102954+00:00'
@@ -10241,8 +10241,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/filesystem-mcp-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/filesystem-mcp-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/filesystem-mcp-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-1/filesystem-mcp-server-profile.md
     file_type: project_documentation
     file_hash: 7fa38a3cfc7ee7aa56a14cd39709b507beb643d3bebc5c747c20b2a4e500b244
     last_modified: '2025-07-24T08:53:51.252662+00:00'
@@ -10319,8 +10319,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/kubernetes-orchestration-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/kubernetes-orchestration-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/kubernetes-orchestration-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/kubernetes-orchestration-server-profile.md
     file_type: project_documentation
     file_hash: da90504e8675c567e5177e415f9d3d1876819225d8e7c1dfede86273c37b334e
     last_modified: '2025-07-24T10:03:18.294340+00:00'
@@ -10336,8 +10336,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
     file_type: project_documentation
     file_hash: 7896af7032edb839eda9ea48d52f1fc8f1b8702bc9826b819d30421bb95bbd14
     last_modified: '2025-07-24T09:35:34.033822+00:00'
@@ -10353,8 +10353,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
     file_type: project_documentation
     file_hash: e3a17c799ca7bb597657db960be110173b799a63e482f5a400b38c60a641510b
     last_modified: '2025-07-24T10:41:47.690618+00:00'
@@ -10370,8 +10370,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
     file_type: project_documentation
     file_hash: d8cbe7e6b8e7d2ec12c009c715da47257b4d3659de2a1609acbfacc4f16ab963
     last_modified: '2025-07-24T10:54:18.761572+00:00'
@@ -10387,8 +10387,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/redis-caching-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/redis-caching-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/redis-caching-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/redis-caching-server-profile.md
     file_type: project_documentation
     file_hash: 0114bd6d6b34f8bb7dfc7361d3a448a81e9caa88cffbe2fb72b48e40ae2b5fa1
     last_modified: '2025-07-24T10:09:42.238664+00:00'
@@ -10420,8 +10420,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/convex-realtime-platform-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/convex-realtime-platform-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/convex-realtime-platform-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/convex-realtime-platform-server-profile.md
     file_type: project_documentation
     file_hash: 957df7cfc1f562156bfe18418d63ba0f05abf996e5a7d1d15d31d90e15512b5c
     last_modified: '2025-07-24T10:50:14.665246+00:00'
@@ -10454,8 +10454,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
     file_type: project_documentation
     file_hash: 763ed1b70b140f1fa95767410ab7828aaf7f62c1199fb211abd417fe2961478f
     last_modified: '2025-07-24T09:40:55.347117+00:00'
@@ -10603,8 +10603,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
     file_type: project_documentation
     file_hash: f5e229323671fbadfb0285ab075f2cff0f2f1054b842447630277bdbd2086df9
     last_modified: '2025-07-24T09:56:52.496462+00:00'
@@ -10662,8 +10662,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
     file_type: project_documentation
     file_hash: 821b404c31b2b2632189f7cc7c80ae26efcc6b5406659b88286fd9e8b19166b4
     last_modified: '2025-07-24T09:39:03.453331+00:00'
@@ -10679,8 +10679,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/sentry-error-tracking-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/sentry-error-tracking-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/sentry-error-tracking-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/sentry-error-tracking-server-profile.md
     file_type: project_documentation
     file_hash: 1d15ff14d4493ebfe4d3511cba7066c401c185450881bffa99a97e5b8558fe10
     last_modified: '2025-07-24T09:50:44.623594+00:00'
@@ -10696,8 +10696,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ? ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/grafana-visualization-server-profile.md
-  : file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/grafana-visualization-server-profile.md
+  ? ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/grafana-visualization-server-profile.md
+  : file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-2/grafana-visualization-server-profile.md
     file_type: project_documentation
     file_hash: fb415ff2fd345f81f26641f31b3c260cd09d7ed689a3575566eefe8428aee586
     last_modified: '2025-07-24T09:46:32.802876+00:00'
@@ -15774,8 +15774,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/README.md:
-    file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/README.md
+  ../../../mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/README.md:
+    file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/README.md
     file_type: project_documentation
     file_hash: 0a748b1de71997de11d21213dd066b3e1cd761afd2fe0a3b2154964c7f7ff51a
     last_modified: '2025-07-23T20:18:49.700346+00:00'
@@ -15848,8 +15848,8 @@ files:
       pending_updates: []
       last_updated: null
       update_history: []
-  ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/README.md:
-    file_path: ../../../mypromptflow/projects/ai-knowledge-intelligence-orchestrator/README.md
+  ../../../mypromptflow/projects/universal-topic-intelligence-system/README.md:
+    file_path: ../../../mypromptflow/projects/universal-topic-intelligence-system/README.md
     file_type: project_documentation
     file_hash: 92dcb07fa1897dc40139f031e1730959218452333c98bb346856dd3de841ec1c
     last_modified: '2025-07-22T10:32:44.562189+00:00'

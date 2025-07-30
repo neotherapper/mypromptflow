@@ -751,7 +751,11 @@ main "$@"
         "JIRA_PROJECT_KEY": "${JIRA_PROJECT_KEY}"
       },
       "subagent_access": {
+<<<<<<< HEAD
+        "allowed_subagents": ["project-manager", "quality-assurance-specialist"],
+=======
         "allowed_subagents": ["project-manager", "task-coordinator", "quality-assurance-specialist"],
+>>>>>>> origin/master
         "permission_level": "read_write",
         "rate_limits": {
           "requests_per_minute": 60,
@@ -804,7 +808,11 @@ main "$@"
         "ENTERPRISE_REGISTRY": "${ENTERPRISE_DOCKER_REGISTRY}"
       },
       "subagent_access": {
+<<<<<<< HEAD
+        "allowed_subagents": ["infrastructure-manager", "performance-optimizer"],
+=======
         "allowed_subagents": ["deployment-coordinator", "infrastructure-manager", "performance-optimizer"],
+>>>>>>> origin/master
         "permission_level": "read_write",
         "security_context": "high",
         "rate_limits": {
@@ -2551,7 +2559,11 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
             stages: [
                 {
                     name: 'pre_deployment_validation',
+<<<<<<< HEAD
+                    subagent: 'infrastructure-manager',
+=======
                     subagent: 'deployment-coordinator',
+>>>>>>> origin/master
                     parallel: false,
                     required: true,
                     timeout: 300000,
@@ -2569,7 +2581,11 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
                 },
                 {
                     name: 'application_deployment',
+<<<<<<< HEAD
+                    subagent: 'infrastructure-manager',
+=======
                     subagent: 'deployment-coordinator',
+>>>>>>> origin/master
                     parallel: false,
                     required: true,
                     timeout: 900000,
@@ -2596,7 +2612,11 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
             rollback_strategy: {
                 enabled: true,
                 triggers: ['test_failure', 'health_check_failure'],
+<<<<<<< HEAD
+                subagent: 'infrastructure-manager',
+=======
                 subagent: 'deployment-coordinator',
+>>>>>>> origin/master
                 timeout: 300000
             }
         });
@@ -2871,6 +2891,8 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
                     performance_score: Math.floor(Math.random() * 20) + 80
                 };
                 
+<<<<<<< HEAD
+=======
             case 'deployment-coordinator':
                 return {
                     ...baseResult,
@@ -2882,6 +2904,7 @@ class AdvancedWorkflowOrchestrator extends EventEmitter {
                     },
                     deployment_status: 'successful'
                 };
+>>>>>>> origin/master
                 
             default:
                 return {

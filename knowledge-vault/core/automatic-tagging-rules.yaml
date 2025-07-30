@@ -8,7 +8,7 @@ metadata:
   dependencies:
     - "knowledge-vault/core/mcp-relationship-mappings.md"
     - "knowledge-vault/schemas/tools-services-schema.md"
-    - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+    - "projects/universal-topic-intelligence-system/mcp-registry/"
 
 # Core Tagging Algorithm
 tagging_algorithm:

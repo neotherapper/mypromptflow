@@ -186,9 +186,9 @@ related_research:
       relationship: "Registry systems analysis providing technical foundation"
 
 cross_references:
-  operational_registry: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
-  implementation_guides: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/"
-  business_scoring: "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
+  operational_registry: "projects/universal-topic-intelligence-system/mcp-registry/"
+  implementation_guides: "projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/"
+  business_scoring: "projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml"
   research_framework: "research/orchestrator/integration/claude-orchestrator-integration.yaml"
 
 discoverability:

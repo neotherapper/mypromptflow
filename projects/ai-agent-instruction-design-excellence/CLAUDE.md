@@ -21,7 +21,7 @@
 **Framework Usage**: Use `docs/README.md` for progressive documentation navigation when improving instructions
 **Quality Assessment**: Apply `knowledge/assessment/` tools when validating instruction quality  
 **Coordination Patterns**: Reference `knowledge/orchestration/` for agent hierarchy implementation
-**Validation Tools**: Use `meta/validation/validators/ai-instruction/ai-instruction-validator.md` for systematic instruction assessment
+**Validation Tools**: Use `.claude/agents/ai-instruction-validator.md` for systematic instruction assessment
 
 ## Quality Standards
 
@@ -58,4 +58,4 @@
 **For Quality Assessment**: Use framework validators in `knowledge/assessment/` for systematic evaluation
 **For Agent Coordination**: Reference `knowledge/orchestration/` for hierarchy patterns and communication protocols
 
-**Integration**: This framework integrates with the main system validation tools using focused validators (ai-instruction-validator, framework-compliance-validator, file-type-validator) for comprehensive instruction quality assurance.
+**Integration**: This framework integrates with the main system validation tools using focused validators (.claude/agents/ai-instruction-validator.md, .claude/agents/framework-compliance-validator.md) for comprehensive instruction quality assurance.

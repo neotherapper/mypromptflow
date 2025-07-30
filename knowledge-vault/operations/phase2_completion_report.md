@@ -107,7 +107,7 @@
 - **claude-code-multi-agent-orchestration-framework.md**: 7 remaining UUIDs
 - **neon.md**: 10 remaining UUIDs
 - **knowledge_vault_example_item.md**: 1 remaining UUIDs
-- **ai-knowledge-intelligence-orchestrator.md**: 3 remaining UUIDs
+- **universal-topic-intelligence-system.md**: 3 remaining UUIDs
 - **atlassian-design-system.md**: 7 remaining UUIDs
 - **pinecone.md**: 7 remaining UUIDs
 - **apache-spark.md**: 7 remaining UUIDs

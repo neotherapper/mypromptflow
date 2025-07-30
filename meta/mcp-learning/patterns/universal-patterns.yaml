@@ -1,0 +1,26 @@
+# Universal Learning Patterns
+# Patterns that apply across multiple MCP servers
+
+universal_error_patterns:
+  - Invalid parameter format
+  - Missing required fields
+  - Authentication failures
+
+universal_success_patterns:
+  - Proper field validation before API calls
+  - Consistent parameter naming conventions
+  - Appropriate timeout and retry logic
+
+cross_server_insights:
+  - "Parameter validation is critical across all MCP servers"
+  - "Success patterns often involve consistent field naming"
+  - "Error prevention is more effective than error recovery"
+  - "User input validation should be standardized"
+
+learning_rules:
+  - "Apply successful patterns from one server to similar operations on other servers"
+  - "Use error patterns to build universal validation rules"
+  - "Maintain server-specific customizations while leveraging universal insights"
+
+knowledge_transfer_score: 0.85
+last_transfer: "2025-07-30 13:29:27"

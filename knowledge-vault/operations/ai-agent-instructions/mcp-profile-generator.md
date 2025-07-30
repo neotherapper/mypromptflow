@@ -6,9 +6,9 @@ Generate comprehensive, standardized MCP server profiles using the unified bluep
 
 **System Context**:
 - **Blueprint Template**: `@knowledge-vault/operations/blueprints/mcp-server-profile-blueprint.yaml` - Master standardization template
-- **Scoring Algorithm**: `@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml` v4.0.0 - Community-driven scoring
+- **Scoring Algorithm**: `@projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml` v4.0.0 - Community-driven scoring
 - **Knowledge-Vault Schema**: `@knowledge-vault/schemas/tools-services-schema.yaml` - Data structure and tagging system
-- **Profile Examples**: `@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/` - Quality reference patterns
+- **Profile Examples**: `@projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/` - Quality reference patterns
 
 ## Core Instructions
 
@@ -650,12 +650,12 @@ Monitoring Requirements:
 
 ### Required File Access
 - `@knowledge-vault/operations/blueprints/mcp-server-profile-blueprint.yaml` - Master template
-- `@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml` - Scoring algorithm v4.0.0
+- `@projects/universal-topic-intelligence-system/mcp-registry/schemas/business-aligned-scoring-algorithm.yaml` - Scoring algorithm v4.0.0
 - `@knowledge-vault/schemas/tools-services-schema.yaml` - Data structure and validation
-- `@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/` - Quality reference examples
+- `@projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/` - Quality reference examples
 
 ### Output Locations
-- **Profile Files**: `@projects/ai-knowledge-intelligence-orchestrator/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-{n}/`
+- **Profile Files**: `@projects/universal-topic-intelligence-system/docs/mcp-server-registry/mcp-registry/detailed-profiles/tier-{n}/`
 - **Knowledge-Vault Items**: `@knowledge-vault/databases/tools_services/items/`
 - **Registry Updates**: Master database files in MCP registry structure
 - **Relationship Files**: Cross-reference and relationship mapping files

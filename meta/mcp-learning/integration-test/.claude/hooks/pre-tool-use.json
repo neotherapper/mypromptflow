@@ -1,0 +1,5 @@
+{
+  "name": "Integration Test PreToolUse Hook",
+  "matchers": ["*"],
+  "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/integration-test/test-hook.sh"
+}

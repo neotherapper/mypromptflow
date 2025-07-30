@@ -148,7 +148,7 @@ research_execution_log:
         content_used: "Method selection and orchestration patterns for research framework integration"
         cross_reference_value: "Essential for understanding research framework context and integration requirements"
         
-      - document_path: "projects/ai-knowledge-intelligence-orchestrator/CLAUDE.md"
+      - document_path: "projects/universal-topic-intelligence-system/CLAUDE.md"
         access_time: "2025-07-20T00:15:00Z"
         relevance_score: 0.85
         content_used: "Project context and integration objectives for AI orchestrator enhancement"
@@ -306,7 +306,7 @@ research_execution_log:
       access_success: true
       content_used: "Method selection criteria and orchestrator configuration for research approach"
       
-    - file_path: "projects/ai-knowledge-intelligence-orchestrator/CLAUDE.md"
+    - file_path: "projects/universal-topic-intelligence-system/CLAUDE.md"
       access_time: "2025-07-20T00:15:00Z"
       access_purpose: "context_understanding"
       access_success: true

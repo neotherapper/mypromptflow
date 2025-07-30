@@ -1,11 +1,19 @@
 # Metabase MCP Server - Enhanced Metadata Extraction
 # Phase 1: Enhanced Metadata Extraction for MCP server profiles
+<<<<<<< HEAD
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md
+=======
 # Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md
+>>>>>>> origin/master
 
 ---
 # Core Identification (Schema Compliance)
 id: "xyz45678-abc9-0123-xyza-metabase026"
 name: "Metabase MCP Server"
+<<<<<<< HEAD
+tier: "Tier 4"
+=======
+>>>>>>> origin/master
 
 # Rating System
 rating: 4  # Derived from composite score 5.3/10 = excellent
@@ -126,7 +134,11 @@ business_value:
 # Migration Tracking
 migration_tracking:
   migration_date: "2025-07-28"
+<<<<<<< HEAD
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md"
+=======
   source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md"
+>>>>>>> origin/master
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "specialized_ready"

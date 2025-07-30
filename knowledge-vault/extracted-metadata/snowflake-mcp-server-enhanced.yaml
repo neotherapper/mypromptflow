@@ -5,6 +5,10 @@
 # Core Identification (Schema Compliance)
 id: "cde90123-fgh4-5678-cdef-snowflake031"
 name: "Snowflake MCP Server"
+<<<<<<< HEAD
+tier: "Tier 3"
+=======
+>>>>>>> origin/master
 
 # Rating System
 rating: 4  # Derived from composite score 6.3/10 = excellent
@@ -91,7 +95,11 @@ scoring_metrics:
 # Migration Tracking
 migration_tracking:
   migration_date: "2025-07-28"
+<<<<<<< HEAD
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/snowflake-server-profile.md"
+=======
   source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/snowflake-server-profile.md"
+>>>>>>> origin/master
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "specialized_ready"

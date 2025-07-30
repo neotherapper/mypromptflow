@@ -64,6 +64,7 @@ implementation_complexity: 7.4
 market_demand: 6.2
 community_support: 6.0
 technical_maturity: 7.3
+>>>>>>> origin/master
 ---
 
 ## Executive Summary

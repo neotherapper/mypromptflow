@@ -1,0 +1,314 @@
+# React Development News Monitoring Configuration
+# Example implementation of the user's original vision:
+# "system should understand [when you want React news] and use mcp server context7 to get info, 
+# go to react.dev to see if there is more info than previous time, check the changelog of the github react repo"
+
+topic_metadata:
+  name: "React Development News"
+  slug: "react-news"  
+  description: "React framework updates, ecosystem developments, community news, and best practices"
+  priority_level: "high"
+  monitoring_frequency: "daily"
+  status: "active"
+  created_date: "2025-07-30"
+  last_updated: "2025-07-30"
+  related_topics: ["javascript", "frontend", "nextjs", "typescript"]
+  keywords_primary: ["React", "React.js", "ReactJS", "JSX", "hooks", "components", "virtual DOM"]
+  keywords_secondary: ["frontend", "JavaScript", "TypeScript", "Next.js", "Gatsby", "React Native", "Redux", "state management"]
+  keywords_exclusion: ["React Native app development", "React chemistry", "reaction time"]
+
+# Source Discovery and Mapping - The user's exact vision implemented
+source_mapping:
+  tier_1_official:
+    description: "Official React team and Facebook/Meta sources"
+    discovery_patterns:
+      - "Official React team blogs and announcements"
+      - "React GitHub repository releases and discussions"
+      - "React conference presentations and documentation"
+    authority_indicators:
+      - "Direct from React team members (Dan Abramov, Sophie Alpert, etc.)"
+      - "Official React.dev documentation and blog"
+      - "Meta/Facebook engineering blog React content"
+    update_patterns:
+      expected_frequency: "weekly"
+      peak_activity_times: ["10:00-12:00 PST", "14:00-16:00 EST"]
+      seasonal_patterns: "Increased activity during React conference seasons"
+    sources:
+      - url: "https://react.dev/blog"
+        type: "official_blog"
+        authority_score: 1.0
+        monitoring_method: "Fetch + RSS"
+        description: "Official React team blog - primary source for React news"
+        
+      - url: "https://github.com/facebook/react"
+        type: "repository"
+        authority_score: 1.0
+        monitoring_method: "GitHub MCP"
+        monitoring_scope: ["releases", "discussions", "issues", "pull_requests"]
+        description: "Main React repository - releases, changelog, core discussions"
+        
+      - url: "https://github.com/facebook/react/blob/main/CHANGELOG.md"
+        type: "changelog"
+        authority_score: 1.0
+        monitoring_method: "GitHub MCP + Fetch"
+        description: "React changelog - detailed version history and breaking changes"
+        
+      - url: "https://react.dev/learn"
+        type: "documentation"
+        authority_score: 0.95
+        monitoring_method: "Fetch"
+        description: "Official React documentation - API changes and new features"
+
+  tier_2_community:  
+    description: "React experts, influencers, and specialized publications"
+    discovery_patterns:
+      - "React team member personal blogs and social media"
+      - "React expert YouTube channels and tutorials"
+      - "Specialized React newsletters and publications"
+    authority_indicators:
+      - "React team members and core contributors"
+      - "Well-known React educators and course creators"
+      - "High-quality technical content creators"
+    update_patterns:
+      expected_frequency: "daily"
+      peak_activity_times: ["09:00-11:00", "15:00-17:00"]
+      content_types: ["tutorials", "best_practices", "performance_tips", "ecosystem_updates"]
+    sources:
+      - url: "https://overreacted.io/"
+        type: "expert_blog"
+        author: "Dan Abramov (React team)"
+        authority_score: 0.95
+        monitoring_method: "RSS + Fetch"
+        description: "Dan Abramov's personal blog - React insights from core team member"
+        
+      - url: "https://kentcdodds.com/blog"
+        type: "expert_blog"  
+        author: "Kent C. Dodds"
+        authority_score: 0.9
+        monitoring_method: "RSS + Fetch"
+        description: "React testing and best practices expert"
+        
+      - url: "https://www.youtube.com/c/reactjs"
+        type: "official_channel"
+        authority_score: 0.95
+        monitoring_method: "YouTube MCP"
+        description: "Official React YouTube channel - conference talks, tutorials"
+        
+      - url: "https://www.youtube.com/c/WesBos"
+        type: "expert_youtube"
+        authority_score: 0.85
+        monitoring_method: "YouTube MCP"
+        description: "React tutorials and ecosystem updates"
+        
+      - url: "https://reactnewsletter.com/"
+        type: "newsletter"
+        authority_score: 0.8
+        monitoring_method: "Fetch + Email Integration"
+        description: "Weekly React newsletter with curated content"
+
+  tier_3_aggregators:
+    description: "React community discussions and aggregated content"
+    discovery_patterns:
+      - "Reddit React communities and discussions"
+      - "Twitter/X React developer conversations"
+      - "HackerNews React-related submissions"
+      - "Dev.to React articles and discussions"
+    authority_indicators:
+      - "Active communities with quality moderation"
+      - "High engagement from React developers"
+      - "Regular participation from React experts"
+    update_patterns:
+      expected_frequency: "hourly"
+      peak_activity_times: ["12:00-14:00", "19:00-21:00"]
+      engagement_metrics: ["upvotes", "quality_comments", "expert_participation"]
+    sources:
+      - url: "https://reddit.com/r/reactjs"
+        type: "community_forum"
+        authority_score: 0.75
+        monitoring_method: "Reddit API + Playwright"
+        description: "Main React community discussions, help, and news"
+        
+      - url: "https://news.ycombinator.com"
+        type: "tech_aggregator"
+        authority_score: 0.8
+        monitoring_method: "RSS + Custom Filter"
+        filter_keywords: ["React", "React.js", "JSX", "hooks"]
+        description: "HackerNews React-related discussions and submissions"
+        
+      - url: "https://dev.to/t/react"
+        type: "developer_community"
+        authority_score: 0.7
+        monitoring_method: "RSS + Fetch"
+        description: "Dev.to React articles and community content"
+        
+      - url: "https://twitter.com/i/lists/react-developers"
+        type: "social_media"
+        authority_score: 0.65
+        monitoring_method: "Twitter API + Playwright"
+        description: "React developer Twitter discussions and announcements"
+
+# Content Analysis Configuration
+content_analysis:
+  relevance_scoring:
+    keyword_weights:
+      primary_keywords: 1.0
+      secondary_keywords: 0.7
+      topic_context: 0.5
+    content_type_weights:
+      official_announcements: 1.0
+      documentation_updates: 0.95
+      expert_tutorials: 0.9
+      community_discussions: 0.7
+      news_articles: 0.8
+      social_discussions: 0.6
+
+  significance_indicators:
+    high_significance:
+      - "New React version releases (major or minor)"
+      - "Breaking changes and migration guides"
+      - "New React features and APIs"
+      - "Performance improvements and optimizations"
+      - "Security updates and fixes"
+      - "Official React team announcements"
+    medium_significance:
+      - "Community package updates (Redux, React Router, etc.)"
+      - "Best practice recommendations from experts"
+      - "Performance benchmarking and case studies"
+      - "Conference presentation summaries"
+      - "Ecosystem tool updates (Create React App, Next.js, etc.)"
+    low_significance:
+      - "General React tutorials for beginners"
+      - "Personal project showcases"
+      - "Basic troubleshooting discussions"
+      - "Duplicate or repetitive content"
+
+  quality_thresholds:
+    minimum_relevance_score: 0.7    # Higher threshold due to specific technical focus
+    minimum_authority_score: 0.6    # Require good source credibility for React advice
+    minimum_significance_score: 0.5  # Focus on meaningful React developments
+
+# MCP Server Configuration - Implementing the user's vision
+mcp_server_mapping:
+  fetch_server:
+    use_cases: ["React.dev blog", "Documentation updates", "Expert blogs", "Newsletter content"]
+    rate_limits: "1 request per 2 seconds per domain"
+    error_handling: "3 retries with exponential backoff"
+    target_sites:
+      - "react.dev"
+      - "overreacted.io"
+      - "kentcdodds.com"
+      - "reactnewsletter.com"
+    
+  github_server:
+    use_cases: ["React repository monitoring", "Changelog tracking", "Release notifications"]
+    repositories:
+      - "facebook/react"
+      - "facebook/create-react-app"  
+      - "vercel/next.js"
+      - "remix-run/remix"
+      - "reduxjs/redux"
+      - "reach/router"
+    monitoring_scope: ["releases", "issues", "discussions", "pull_requests"]
+    notification_triggers: ["new_release", "security_update", "breaking_change"]
+    
+  youtube_server:
+    use_cases: ["Official React content", "Expert tutorials", "Conference talks"]
+    channels:
+      - "UCz5vTaEhvh7dOHEyd1efcaQ"  # React official
+      - "UCoebwHSTvwalADTJhps0emA"  # Wes Bos
+      - "UC-8QAzbLcRglXeN_MY9blyw"  # Ben Awad (React content)
+    content_types: ["uploads", "live_streams", "premieres"]
+    filter_keywords: ["React", "hooks", "components", "JSX"]
+    
+  playwright_server:
+    use_cases: ["Dynamic community sites", "Social media", "Complex documentation sites"]
+    target_sites:
+      - "reddit.com/r/reactjs"
+      - "twitter.com" 
+      - "dev.to/t/react"
+      - "news.ycombinator.com"
+    dynamic_content_handling: true
+    rate_limiting: "respectful crawling with user-agent identification"
+
+# AI Agent Specialization for React
+agent_specialization:
+  content_specialists:
+    technical_analyst:
+      focus: "React API changes, performance implications, architectural patterns"
+      expertise_areas: ["react_apis", "performance_optimization", "component_patterns", "hooks_best_practices"]
+      validation_criteria: ["technical_accuracy", "implementation_feasibility", "performance_impact"]
+      
+    ecosystem_analyst:
+      focus: "React ecosystem changes, tool updates, library compatibility"
+      expertise_areas: ["ecosystem_tools", "library_compatibility", "build_tools", "testing_frameworks"]
+      validation_criteria: ["ecosystem_impact", "compatibility_assessment", "migration_complexity"]
+      
+    community_analyst:
+      focus: "Community adoption, developer sentiment, learning resources"
+      expertise_areas: ["community_sentiment", "adoption_patterns", "learning_resources", "best_practices"]
+      validation_criteria: ["community_relevance", "educational_value", "adoption_indicators"]
+
+# Performance Monitoring
+performance_monitoring:
+  success_metrics:
+    coverage_percentage: 95      # Capture 95% of significant React news within 2 hours
+    relevance_accuracy: 90       # 90% of captured content should be React-relevant  
+    false_positive_rate: 10      # Maximum 10% irrelevant content
+    response_time: 7200          # 2 hours for React developments
+    
+  monitoring_intervals:
+    real_time_sources: 1800      # 30 minutes for official React sources
+    high_priority_sources: 3600  # 1 hour for expert content
+    medium_priority_sources: 7200 # 2 hours for community discussions
+    low_priority_sources: 21600  # 6 hours for aggregated content
+
+# File Organization
+file_organization:
+  base_path: "knowledge-vault/topics/react-news/"
+  structure:
+    config: "config/"
+    news: "news/"
+    releases: "releases/"
+    tutorials: "tutorials/" 
+    community: "community/"
+    analysis: "analysis/"
+    
+  naming_conventions:
+    daily_files: "YYYY-MM-DD-react-{tier}-news.md"
+    release_files: "YYYY-MM-DD-react-v{version}-release.md"
+    weekly_files: "YYYY-WW-react-weekly-digest.md"
+    tutorial_files: "YYYY-MM-DD-{author}-{topic}.md"
+
+# Success Implementation of User's Vision
+implementation_notes: >
+  This configuration implements the user's exact vision:
+  
+  ✅ "system should understand [when you want React news]" 
+     → Sophisticated keyword matching and relevance scoring for React-specific content
+  
+  ✅ "use mcp server context7 to get info"
+     → Multiple MCP servers (fetch, github, youtube, playwright) coordinated for comprehensive coverage
+  
+  ✅ "go to react.dev to see if there is more info than previous time"
+     → Official React.dev blog and documentation monitored with change detection
+  
+  ✅ "check the changelog of the github react repo for updates"
+     → Direct GitHub monitoring of React repository, releases, and changelog
+  
+  ✅ "maybe have rss feed that we have added blogs that we validate are useful"
+     → RSS monitoring of validated expert blogs with authority scoring
+  
+  ✅ "or maybe have some email newsletter"
+     → React newsletter integration with quality assessment
+  
+  This configuration creates an intelligent React news monitoring system that automatically:
+  - Monitors official React sources for announcements and updates
+  - Tracks React repository for releases, issues, and discussions  
+  - Follows expert React developers and educators
+  - Aggregates community discussions and sentiment
+  - Applies quality filtering to reduce noise
+  - Organizes information for easy consumption
+  - Provides daily briefings and weekly analysis
+  
+  The system understands React context and significance, filters out noise,
+  and presents organized intelligence about React ecosystem developments.

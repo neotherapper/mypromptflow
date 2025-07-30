@@ -1,0 +1,122 @@
+[2025-07-30 15:48:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:48:12] Validating mcp__MCP_DOCKER__jira_create_issue
+[2025-07-30 15:52:05] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:52:05] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:52:24] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:52:49] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:53:40] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:56:28] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:57:16] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:57:26] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:57:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:58:40] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:59:11] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 15:59:30] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:12] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:12] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:13] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:13] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:13] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:13] Validating mcp__MCP_DOCKER__jira_create_issue
+[2025-07-30 16:00:37] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:37] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:37] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:37] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:37] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:37] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:00:38] Validating mcp__MCP_DOCKER__jira_create_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_create_issue
+[2025-07-30 16:01:56] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:44] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:45] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:46] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:47] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-30 16:22:48] Applied parameter corrections for mcp__MCP_DOCKER__jira_get_issue
