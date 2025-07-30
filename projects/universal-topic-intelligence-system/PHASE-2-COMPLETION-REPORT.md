@@ -239,7 +239,7 @@ fallback_execution = {
 - **Research Orchestrator**: `research/orchestrator/integration/claude-orchestrator-integration.yaml`
 - **Knowledge-Vault Schema**: Enhanced `knowledge-vault/schemas/tools-services-schema.yaml`
 - **Agent Decision Framework**: Updated `meta/information-access/agent-decision-framework.md`
-- **MCP Registry**: Cross-references with `projects/ai-knowledge-intelligence-orchestrator/mcp-registry/`
+- **MCP Registry**: Cross-references with `projects/universal-topic-intelligence-system/mcp-registry/`
 
 ---
 
