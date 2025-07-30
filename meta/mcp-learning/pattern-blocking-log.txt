@@ -1,0 +1,234 @@
+[2025-07-30 15:48:12] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 15:48:12] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:00:12] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:00:13] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:00:37] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:00:37] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:01:56] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:01:56] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:01:56] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-456","fields":"summary,status"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:45] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[a-z]
+Parameters: {"issue_key":"invalid-test","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:46] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:47] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:47] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Critical: Issue key format violation: ^[A-Z]+[0-9]+$
+Parameters: :{"issue_key":"PROJ123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:49] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:50] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:50] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---
+[2025-07-30 16:22:50] BLOCKED CALL
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Warning: Suspicious test key: TEST-
+Parameters: {"issue_key":"TEST-123","fields":"summary"}...
+Status: Prevented potential error
+---

@@ -1,0 +1,56 @@
+# Dynamic Error Pattern Blocking Rules
+# Auto-generated from error logs and learning system
+# Format: server -> tool -> pattern -> blocking_rule
+
+blocking_rules:
+  jira:
+    mcp__MCP_DOCKER__jira_get_issue:
+      invalid_issue_keys:
+        patterns:
+          - "TEST-.*"
+          - "INVALID-.*"
+          - "DUMMY-.*"
+          - "FAKE-.*"
+        severity: "medium"
+        action: "ask"
+        reason: "Issue key appears to be a test value"
+        frequency_threshold: 2
+      malformed_keys:
+        patterns:
+          - "^[a-z].*"  # lowercase keys
+          - ".*[^A-Z0-9-].*"  # invalid characters
+          - "^[A-Z]+[0-9]+$"  # missing dash
+        severity: "high"
+        action: "deny"
+        reason: "Issue key format is invalid"
+        frequency_threshold: 1
+    mcp__MCP_DOCKER__jira_search:
+      dangerous_jql:
+        patterns:
+          - ".*DROP.*"
+          - ".*DELETE.*"
+          - ".*UPDATE.*"
+          - ".*INSERT.*"
+        severity: "critical"
+        action: "deny"
+        reason: "JQL contains SQL-like commands"
+        frequency_threshold: 1
+      syntax_errors:
+        patterns:
+          - ".*=[[:space:]]*[^\"'[:space:]][^[:space:]]*[[:space:]]*(AND|OR).*"
+        severity: "medium"
+        action: "ask"
+        reason: "Unquoted JQL values may cause syntax errors"
+        frequency_threshold: 2
+
+learning_config:
+  auto_update: true
+  frequency_analysis: true
+  confidence_threshold: 0.7
+  max_patterns_per_rule: 10
+  
+statistics:
+  last_updated: "2025-07-30"
+  total_patterns: 0
+  blocked_calls: 0
+  successful_blocks: 0

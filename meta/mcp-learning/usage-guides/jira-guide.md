@@ -271,15 +271,76 @@ You know it's working when:
 - [ ] **No permission errors** occur during authorized operations
 - [ ] **JQL queries** execute without syntax errors
 
+## Critical: Sprint vs Backlog Classification
+
+### **MANDATORY**: Always Check Sprint Field Before Classification
+
+**Field Name**: `customfield_10020` (Sprint assignment field)  
+**Critical Rule**: NEVER assume sprint assignment without field validation
+
+#### Sprint Detection Logic
+```yaml
+sprint_classification:
+  backlog_condition: "customfield_10020.value == null"
+  sprint_condition: "customfield_10020.value != null" 
+  validation_required: true
+  error_prevention: "Check field before cache placement"
+```
+
+#### Working Example - Proper Sprint Detection
+```json
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Parameters:
+{
+  "issue_key": "SCRUM-123",
+  "fields": "summary,status,customfield_10020"
+}
+
+Response Analysis:
+// BACKLOG ITEM
+{
+  "customfield_10020": {"value": null}  // → Place in backlog.json
+}
+
+// SPRINT ITEM  
+{
+  "customfield_10020": {"value": "Sprint 23"}  // → Place in current-sprint.json
+}
+```
+
+#### Classification Workflow
+```yaml
+step_1: "Query issue with customfield_10020 field"
+step_2: "Check customfield_10020.value"
+step_3: |
+  if value == null:
+    classification = "BACKLOG"
+    file_destination = "backlog.json"
+  elif value != null:
+    classification = "SPRINT_ASSIGNED"  
+    file_destination = "current-sprint.json"
+step_4: "Update appropriate cache file"
+```
+
+### **CRITICAL ERROR PATTERN**: Sprint Misclassification
+
+**Error**: Assuming newly created stories = current sprint stories  
+**Root Cause**: Not checking sprint assignment field  
+**Impact**: Wrong sprint context for AI agents  
+**Prevention**: Always validate `customfield_10020` before classification  
+
+**Documented Error**: See `@meta/mcp-learning/error-logs/jira-sprint-classification-error.md`
+
 ## Error Patterns to Watch For
 
 Based on common JIRA API issues:
 
-1. **Case Sensitivity:** Issue keys and field names are case-sensitive → Use exact casing
-2. **Project Access:** User permissions change over time → Monitor project access
-3. **JQL Complexity:** Complex queries can timeout → Simplify or paginate
-4. **Field Changes:** JIRA configuration changes affect field names → Stay updated
-5. **Rate Limiting:** Heavy usage can hit API limits → Implement throttling
+1. **Sprint Misclassification (CRITICAL):** Never assume sprint assignment → Always check `customfield_10020`
+2. **Case Sensitivity:** Issue keys and field names are case-sensitive → Use exact casing
+3. **Project Access:** User permissions change over time → Monitor project access
+4. **JQL Complexity:** Complex queries can timeout → Simplify or paginate
+5. **Field Changes:** JIRA configuration changes affect field names → Stay updated
+6. **Rate Limiting:** Heavy usage can hit API limits → Implement throttling
 
 ## Related Resources
 
