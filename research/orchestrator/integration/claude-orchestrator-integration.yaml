@@ -363,43 +363,20 @@ claude_orchestrator_workflow:
       method_access:
         multi_agent_methods: "research/orchestrator/methods/multi-agent/[method_name].md"
         sub_agent_spawner: "research/orchestrator/engines/sub-agent-spawner.yaml"
-        context_builder_integration: "research/orchestrator/engines/context-builder.yaml"
-      
-      execution_integration_framework:
-        context_builder_hooks: "Enable real-time context building during method execution"
-        progressive_synthesis: "Apply progressive context synthesis as methods complete"
-        cross_method_coordination: "Coordinate context sharing between executing methods"
-        file_structure_integration: "Integrate context building with research/findings/ file structure"
       
       execution_process:
-        pre_execution_context_preparation:
-          - "Load multi-agent method specification from methods/multi-agent/"
-          - "Apply context-builder.yaml execution_integration_hooks.pre_execution_hooks"
-          - "Prepare execution context using context_preparation_hook"
-          - "Coordinate parallel context using context_coordination_hook"
-          - "Apply information source discovery results to sub-agent specialization"
-          - "Integrate selected sources into sub-agent task prompts with context awareness"
-        
-        real_time_execution_with_context_integration:
-          - "Extract sub-agent specifications and task prompts with source coordination"
-          - "Spawn specialized sub-agents using Task tool with context-aware execution"
-          - "Enable real_time_context_update_hook during sub-agent execution"
-          - "Apply cross_method_context_sharing_hook between active sub-agents"
-          - "Coordinate parallel sub-agent execution with progressive context building"
-          - "Monitor sub-agent progress, completion, and context evolution"
-          - "Validate source accessibility and authentication across sub-agents"
-          - "Collect and validate sub-agent outputs with real-time context integration"
-        
-        progressive_synthesis_and_file_integration:
-          - "Apply context_synthesis_integration_hook as methods complete"
-          - "Trigger progressive_synthesis_hook when context thresholds reached"
-          - "Save all individual sub-agent research files with context tracking"
-          - "Update research/findings/[topic]/.meta/context-snapshots/ in real-time"
-          - "Apply method_output_coordination_integration for synthesis orchestration"
-          - "Create method-specific context files in research/findings/[topic]/research/"
-          - "Apply synthesis instructions with accumulated context integration"
-          - "Create comprehensive analysis file combining all perspectives, sources, and context"
-          - "Update context evolution logs and synthesis progress files"
+        - "Load multi-agent method specification from methods/multi-agent/"
+        - "Apply information source discovery results to sub-agent specialization"
+        - "Integrate selected sources into sub-agent task prompts"
+        - "Extract sub-agent specifications and task prompts with source coordination"
+        - "Spawn specialized sub-agents using Task tool with source-aware execution"
+        - "Coordinate parallel sub-agent execution with multi-source access"
+        - "Monitor sub-agent progress, completion, and source utilization"
+        - "Validate source accessibility and authentication across sub-agents"
+        - "Collect and validate sub-agent outputs with source attribution"
+        - "Save all individual sub-agent research files with source tracking"
+        - "Apply synthesis instructions to integrate results and source findings"
+        - "Create comprehensive analysis file combining all perspectives and sources"
       
       file_saving_requirements:
         CRITICAL_PATH_ENFORCEMENT: "RESEARCH FINDINGS MUST GO IN /research/findings/ - NEVER /docs/ OR ANY OTHER LOCATION"
@@ -563,83 +540,6 @@ claude_orchestrator_workflow:
       - "Calculate similarity scores against existing research"
       - "Validate all file paths and cross-references before completion"
       - "Do not mark research complete without both summary files"
-
-# CONTEXT BUILDER EXECUTION INTEGRATION
-context_builder_execution_integration:
-  critical_integration_requirements:
-    MANDATORY_CONTEXT_HOOKS: "MUST enable execution_integration_hooks during research execution"
-    REAL_TIME_CONTEXT_BUILDING: "MUST apply context building throughout method execution, not just at end"
-    PROGRESSIVE_SYNTHESIS: "MUST trigger synthesis as methods complete, not wait for all methods"
-    CROSS_METHOD_COORDINATION: "MUST coordinate context between simultaneously executing methods"
-    FILE_STRUCTURE_INTEGRATION: "MUST integrate context data with research/findings/ file structure"
-  
-  execution_workflow_integration:
-    step_1_context_preparation:
-      reference: "research/orchestrator/engines/context-builder.yaml execution_integration_hooks.pre_execution_hooks"
-      action: "Apply context_preparation_hook before spawning sub-agents"
-      output: "Prepared execution context with method-specific requirements and dependencies"
-      file_integration: "Create research/findings/[topic]/.meta/context-snapshots/ folder"
-    
-    step_2_real_time_execution:
-      reference: "research/orchestrator/engines/context-builder.yaml execution_integration_hooks.execution_hooks"
-      action: "Enable real_time_context_update_hook during sub-agent execution"
-      monitoring: "Track context evolution and findings accumulation during execution"
-      coordination: "Apply cross_method_context_sharing_hook between active sub-agents"
-      file_updates: "Save context snapshots with timestamps to .meta/context-snapshots/"
-    
-    step_3_progressive_synthesis:
-      reference: "research/orchestrator/engines/context-builder.yaml execution_integration_hooks.post_execution_hooks"
-      action: "Apply context_synthesis_integration_hook as each method completes"
-      triggering: "Trigger progressive_synthesis_hook when context thresholds reached"
-      file_coordination: "Update method-specific context files in research/ folder"
-      synthesis_files: "Update synthesis-progress.yaml and context-evolution-log.yaml"
-    
-    step_4_output_coordination:
-      reference: "research/orchestrator/engines/context-builder.yaml method_output_coordination_integration"
-      action: "Apply output_synthesis_coordination during final analysis creation"
-      integration: "Use progressive_output_integration for method output synthesis"
-      file_completion: "Integrate all context data with comprehensive-analysis.md"
-  
-  file_structure_coordination:
-    context_metadata_files:
-      context_snapshots: "research/findings/[topic]/.meta/context-snapshots/[timestamp].yaml"
-      synthesis_progress: "research/findings/[topic]/.meta/synthesis-progress.yaml"
-      context_evolution_log: "research/findings/[topic]/.meta/context-evolution-log.yaml"
-      context_summary: "research/findings/[topic]/.meta/context-summary.yaml"
-      cross_method_integration_map: "research/findings/[topic]/.meta/cross-method-integration-map.yaml"
-    
-    research_content_files:
-      method_context_files: "research/findings/[topic]/research/method-context-[method_id].md"
-      comprehensive_analysis_integration: "research/findings/[topic]/research/comprehensive-analysis.md"
-      individual_sub_agent_files: "research/findings/[topic]/research/perspective-X-name.md"
-  
-  quality_validation_integration:
-    context_quality_checkpoints:
-      - "Validate context preparation completeness before method execution"
-      - "Monitor context accumulation quality during real-time execution" 
-      - "Assess synthesis quality during progressive synthesis operations"
-      - "Verify context integration completeness in final comprehensive analysis"
-    
-    execution_effectiveness_metrics:
-      - "Context accumulation rate during method execution (target: 40-60% improvement)"
-      - "Cross-method context coordination effectiveness (target: 30-50% improvement)"
-      - "Progressive synthesis trigger accuracy (target: ≥80% appropriate triggering)"
-      - "File integration completeness (target: 100% context data preserved)"
-  
-  claude_code_implementation_protocol:
-    CRITICAL_EXECUTION_ORDER:
-      - "BEFORE method execution: Load context-builder.yaml and apply pre_execution_hooks"
-      - "DURING method execution: Enable real_time_context_update_hook for progressive building"
-      - "BETWEEN methods: Apply context_synthesis_integration_hook for immediate synthesis"
-      - "AFTER all methods: Use method_output_coordination_integration for final coordination"
-      - "FILE PERSISTENCE: Save all context data to research/findings/[topic]/.meta/ throughout execution"
-    
-    VALIDATION_CHECKPOINTS:
-      - "Verify execution_integration_hooks are enabled before starting research"
-      - "Confirm context snapshots are being saved during execution"
-      - "Validate progressive synthesis is triggering appropriately"
-      - "Ensure context data is integrated with comprehensive analysis"
-      - "Check all context metadata files exist in .meta/ folder before completion"
 
 # CLAUDE DECISION TREES
 claude_decision_trees:
