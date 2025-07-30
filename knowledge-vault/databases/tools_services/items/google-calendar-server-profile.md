@@ -5,7 +5,11 @@ installation_priority: 3
 item_type: mcp_server
 migration_date: '2025-07-27'
 name: Google Calendar MCP Server
+<<<<<<< HEAD
 original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/google-calendar-server-profile.md
+=======
+original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/google-calendar-server-profile.md
+>>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 85
 quality_score: 6.3

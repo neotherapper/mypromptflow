@@ -1,12 +1,19 @@
 # Grafana MCP Server - Enhanced Metadata Extraction
 # Phase 1: Enhanced Metadata Extraction for MCP server profiles
+<<<<<<< HEAD
 # Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md
+=======
+# Source: /Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md
+>>>>>>> origin/master
 
 ---
 # Core Identification (Schema Compliance)
 id: "nop45678-qrs9-0123-nopq-grafana016"
 name: "Grafana MCP Server"
+<<<<<<< HEAD
 tier: "Tier 4"
+=======
+>>>>>>> origin/master
 
 # Rating System (Extracted from embedded tables)
 rating: 4  # Derived from composite score 5.7/10 = excellent
@@ -159,7 +166,11 @@ business_value:
 # Migration Tracking
 migration_tracking:
   migration_date: "2025-07-28"
+<<<<<<< HEAD
   source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md"
+=======
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/grafana-server-profile.md"
+>>>>>>> origin/master
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "specialized_ready"

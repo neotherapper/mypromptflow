@@ -5,6 +5,7 @@ tools: Read, Grep, Glob, WebSearch, mcp__MCP_DOCKER__jira_create_issue, mcp__MCP
 priority: high
 environment: production
 team: product
+sdlc_stage: 1
 ---
 
 # Requirements Analyst - SDLC Stage 1 Specialist
@@ -242,6 +243,7 @@ stage2_preparation:
     - Data architecture and storage needs
 ```
 
+<<<<<<< HEAD
 ## JIRA Local Management System Integration
 
 ### System Overview
@@ -337,6 +339,8 @@ vanguardai_context:
 - **Data Freshness**: Check cache timestamps and refresh when needed
 - **Validation**: Ensure cache data consistency with live JIRA data
 
+=======
+>>>>>>> origin/master
 ## Execution Patterns
 
 ### Requirements Analysis Workflow

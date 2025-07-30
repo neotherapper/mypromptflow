@@ -5,7 +5,10 @@
 # Core Identification (Schema Compliance)
 id: "def01234-ghi5-6789-defg-vmware-vsphere032"
 name: "VMware vSphere MCP Server"
+<<<<<<< HEAD
 tier: "Tier 4"
+=======
+>>>>>>> origin/master
 
 # Rating System
 rating: 3  # Derived from composite score 4.7/10 = good
@@ -91,7 +94,11 @@ scoring_metrics:
 # Migration Tracking
 migration_tracking:
   migration_date: "2025-07-28"
+<<<<<<< HEAD
   source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-3/vmware-vsphere-server-profile.md"
+=======
+  source_file: "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-3/vmware-vsphere-server-profile.md"
+>>>>>>> origin/master
   extraction_version: "1.0.0"
   schema_compliance: true
   validation_status: "specialized_ready"

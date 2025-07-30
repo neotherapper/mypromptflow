@@ -46,6 +46,7 @@ Execute comprehensive knowledge-vault operations including database management, 
 - **Technology Tracking**: Technology evolution and capability mapping
 - **Tools Services**: MCP server ecosystem intelligence with 195+ comprehensive profiles and tier-based navigation
 - **Training Vault**: Learning resources and skill development materials
+- **Maritime Intelligence**: Domain-specific maritime industry knowledge
 - **Platforms Sites**: Platform evaluations and integration patterns
 - **Notes Ideas**: Unstructured insights and conceptual development
 
@@ -54,7 +55,6 @@ Execute comprehensive knowledge-vault operations including database management, 
 - **Source Tracking**: `@meta/mcp-system/intelligence/source-tracking.yaml` (completion progress)
 - **Profile Templates**: `@meta/mcp-system/blueprints/` (tier-based standardization)
 - **Discovery Automation**: `@meta/mcp-system/discovery/` (automated workflows)
-
 ### Schema Management
 ```yaml
 schema_operations:
@@ -77,7 +77,6 @@ mcp_server_operations:
 - **Systematic Profile Generation**: Create tier-based profiles using mcp-server-profile-blueprint.yaml
 - **Progress Tracking Updates**: Maintain completion percentages and gap analysis metrics
 - **Discovery Workflow Execution**: Follow AI-AGENT-DISCOVERY-WORKFLOW.md for systematic expansion
-
 ### Migration Coordination
 - **Phase-Based Execution**: Structured migration with validation checkpoints
 - **UUID Management**: Automated UUID generation and mapping
@@ -91,8 +90,12 @@ mcp_server_operations:
 - **Performance Analytics**: Comprehensive performance monitoring and reporting
 
 ### Integration Management
+<<<<<<< HEAD
 - **Meta MCP System Synchronization**: Bidirectional updates between ecosystem intelligence and knowledge-vault
 - **MCP Server Profile Integration**: Seamless profile creation and tier-based organization
+=======
+- **MCP Server Integration**: Seamless integration with MCP server ecosystem
+>>>>>>> origin/master
 - **Notion Synchronization**: Bidirectional sync with Notion databases
 - **API Coordination**: External API integration and data synchronization
 - **Change Event Processing**: Real-time change detection and propagation
@@ -111,6 +114,7 @@ mcp_server_operations:
 - **Recovery Procedures**: Systematic error recovery and remediation
 - **Quality Reporting**: Detailed quality assessment and improvement recommendations
 
+<<<<<<< HEAD
 ## MCP Server Ecosystem Operations
 
 ### Discovery Intelligence Workflows
@@ -156,6 +160,8 @@ profile_creation_workflow:
 - **Discovery Gap Analysis**: Identify specific servers missing from each source
 - **Velocity Tracking**: Measure profile creation rates and quality improvements
 
+=======
+>>>>>>> origin/master
 ## Context Isolation Benefits
 
 ### Independent Operations
@@ -184,6 +190,7 @@ profile_creation_workflow:
 - **Optimization Engine**: Continuous performance improvement
 - **Intelligence Integration**: AI-powered decision making for operations
 
+<<<<<<< HEAD
 ## Key Enhanced Capabilities (Post Meta MCP System Integration)
 
 ### MCP Server Ecosystem Mastery
@@ -198,3 +205,6 @@ profile_creation_workflow:
 - **Blueprint Integration**: Apply standardized templates for consistent, high-quality profile generation
 
 This agent provides specialized knowledge management expertise with complete isolation from other activities, ensuring efficient and reliable knowledge operations without disrupting main project workflows. Now enhanced with comprehensive MCP server ecosystem intelligence and automated discovery capabilities.
+=======
+This agent provides specialized knowledge management expertise with complete isolation from other activities, ensuring efficient and reliable knowledge operations without disrupting main project workflows.
+>>>>>>> origin/master

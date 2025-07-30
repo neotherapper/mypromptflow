@@ -5,7 +5,11 @@ installation_priority: 3
 item_type: mcp_server
 migration_date: '2025-07-28'
 name: Obsidian Knowledge MCP Server
+<<<<<<< HEAD
 original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
+=======
+original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/obsidian-knowledge-server-profile.md
+>>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 88
 quality_score: 7.2

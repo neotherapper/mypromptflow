@@ -173,7 +173,11 @@ Implement using selected mechanism:
 
 ### System Integration
 - **Research Framework**: Integrated with `@research/orchestrator/integration/`
+<<<<<<< HEAD
 - **Project Workflows**: Referenced in `@projects/universal-topic-intelligence-system/`
+=======
+- **Project Workflows**: Referenced in `@projects/ai-knowledge-intelligence-orchestrator/`
+>>>>>>> origin/master
 - **MCP Learning**: Error patterns and troubleshooting in `@meta/mcp-learning/`
 
 ## 🚀 Advanced Usage Patterns
@@ -261,7 +265,12 @@ system_integration:
 ---
 
 **Framework Version**: 1.0.0  
+<<<<<<< HEAD
 **Last Updated**: 2025-07-30  
 **Maintained By**: Universal Topic Intelligence System Project
+=======
+**Last Updated**: 2025-07-27  
+**Maintained By**: AI Knowledge Intelligence Orchestrator Project
+>>>>>>> origin/master
 
 This framework enables systematic, efficient, and secure information access for AI agents across the comprehensive MCP server infrastructure.
