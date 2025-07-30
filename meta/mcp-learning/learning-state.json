@@ -1,0 +1,28 @@
+{
+  "learning_system": {
+    "version": "2.0",
+    "status": "active",
+    "last_evolution": "2025-07-30",
+    "evolution_cycle": 2,
+    "confidence_threshold": 0.7,
+    "adaptation_rate": "moderate"
+  },
+  "servers": {
+    "jira": {
+      "learning_confidence": 0.8,
+      "pattern_stability": "high",
+      "evolution_needed": false,
+      "last_updated": "2025-07-30"
+    }
+  },
+  "global_patterns": {
+    "cross_server_patterns": [],
+    "universal_corrections": [],
+    "adaptive_rules": []
+  },
+  "performance_metrics": {
+    "overall_effectiveness": 0.91,
+    "error_reduction_rate": 0.75,
+    "learning_velocity": "optimal"
+  }
+}

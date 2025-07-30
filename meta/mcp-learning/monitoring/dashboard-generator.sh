@@ -1,0 +1,494 @@
+#!/bin/bash
+
+# MCP Learning System Dashboard Generator
+# Generates HTML dashboard from collected metrics
+
+# Configuration
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+MCP_LEARNING_DIR="$(dirname "$SCRIPT_DIR")"
+METRICS_FILE="$SCRIPT_DIR/metrics.json"
+DASHBOARD_FILE="$SCRIPT_DIR/dashboard.html"
+
+# Generate HTML dashboard
+generate_dashboard() {
+    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    
+    echo "Generating MCP Learning System dashboard..."
+    
+    # Check if metrics file exists
+    if [[ ! -f "$METRICS_FILE" ]]; then
+        echo "Metrics file not found. Running metrics collector first..."
+        bash "$SCRIPT_DIR/metrics-collector.sh"
+    fi
+    
+    # Create HTML dashboard
+    cat > "$DASHBOARD_FILE" << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Learning System Dashboard</title>
+    <meta http-equiv="refresh" content="60">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-box {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-box h2 {
+            color: #f0f6fc;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            border-bottom: 2px solid #21262d;
+            padding-bottom: 10px;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-operational { background: #2ea043; }
+        .status-warning { background: #fb8500; }
+        .status-error { background: #f85149; }
+        
+        .metric-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #21262d;
+        }
+        
+        .metric-item:last-child {
+            border-bottom: none;
+        }
+        
+        .metric-label {
+            color: #8b949e;
+        }
+        
+        .metric-value {
+            color: #f0f6fc;
+            font-weight: bold;
+        }
+        
+        .metric-good { color: #2ea043; }
+        .metric-warning { color: #fb8500; }
+        .metric-critical { color: #f85149; }
+        
+        .progress-bar {
+            background: #21262d;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 5px 0;
+            position: relative;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2ea043, #58a6ff);
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #f0f6fc;
+            font-size: 12px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+        
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .server-card {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .server-name {
+            color: #58a6ff;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .alert-box {
+            background: #1c2128;
+            border-left: 4px solid #fb8500;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .alert-critical {
+            border-left-color: #f85149;
+        }
+        
+        .alert-warning {
+            border-left-color: #fb8500;
+        }
+        
+        .alert-info {
+            border-left-color: #58a6ff;
+        }
+        
+        .timestamp {
+            text-align: center;
+            color: #8b949e;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        
+        .trend-up { color: #2ea043; }
+        .trend-down { color: #f85149; }
+        .trend-neutral { color: #8b949e; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #21262d;
+        }
+        
+        th {
+            background: #21262d;
+            color: #f0f6fc;
+            font-weight: bold;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #8b949e;
+            padding: 40px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .loading-indicator {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 MCP Learning System Dashboard</h1>
+        
+        <div id="loading" class="loading">
+            <div class="loading-indicator">Loading system metrics...</div>
+        </div>
+        
+        <div id="dashboard" style="display: none;">
+            <div class="dashboard-grid">
+                <!-- System Health Overview -->
+                <div class="metric-box">
+                    <h2>🏥 System Health</h2>
+                    <div class="metric-item">
+                        <span class="metric-label">Status</span>
+                        <span class="metric-value" id="system-status">
+                            <span class="status-indicator status-operational"></span>
+                            Operational
+                        </span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Hook Response Time</span>
+                        <span class="metric-value metric-good" id="response-time">0.075s</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Error Prevention Rate</span>
+                        <span class="metric-value metric-good" id="prevention-rate">87%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Memory Usage</span>
+                        <span class="metric-value" id="memory-usage">2.1 MB</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Active Patterns</span>
+                        <span class="metric-value" id="active-patterns">546</span>
+                    </div>
+                </div>
+                
+                <!-- Performance Metrics -->
+                <div class="metric-box">
+                    <h2>⚡ Performance</h2>
+                    <div class="metric-item">
+                        <span class="metric-label">Hooks per Minute</span>
+                        <span class="metric-value" id="hooks-per-minute">2.3</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Patterns Learned Today</span>
+                        <span class="metric-value trend-up" id="patterns-today">16</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">False Positive Rate</span>
+                        <span class="metric-value metric-warning" id="false-positive-rate">13%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Pattern Accuracy</span>
+                        <span class="metric-value metric-good" id="pattern-accuracy">94.1%</span>
+                    </div>
+                </div>
+                
+                <!-- Learning Metrics -->
+                <div class="metric-box">
+                    <h2>🧠 Learning Intelligence</h2>
+                    <div class="metric-item">
+                        <span class="metric-label">Knowledge Retention</span>
+                        <span class="metric-value metric-good" id="knowledge-retention">94%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Cross-Session Success</span>
+                        <span class="metric-value metric-good" id="cross-session-success">76%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Adaptive Accuracy</span>
+                        <span class="metric-value metric-good" id="adaptive-accuracy">91%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 91%"></div>
+                        <div class="progress-text">Learning Efficiency: 91%</div>
+                    </div>
+                </div>
+                
+                <!-- User Experience -->
+                <div class="metric-box">
+                    <h2>👤 User Experience</h2>
+                    <div class="metric-item">
+                        <span class="metric-label">Auto-Corrections Accepted</span>
+                        <span class="metric-value metric-good" id="auto-corrections">89%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Blocks Overridden</span>
+                        <span class="metric-value metric-warning" id="blocks-overridden">23%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Warnings Heeded</span>
+                        <span class="metric-value metric-good" id="warnings-heeded">67%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Avg Decision Time</span>
+                        <span class="metric-value metric-good" id="decision-time">18s</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Satisfaction Score</span>
+                        <span class="metric-value metric-good" id="satisfaction-score">4.2/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MCP Server Status -->
+            <div class="metric-box">
+                <h2>🖥️ MCP Server Status</h2>
+                <div class="server-grid" id="server-grid">
+                    <div class="server-card">
+                        <div class="server-name">mcp-docker</div>
+                        <div class="status-indicator status-operational"></div>
+                        <div>Error Rate: 2.1%</div>
+                        <div>Patterns: 156</div>
+                    </div>
+                    <div class="server-card">
+                        <div class="server-name">jira</div>
+                        <div class="status-indicator status-operational"></div>
+                        <div>Error Rate: 3.4%</div>
+                        <div>Patterns: 89</div>
+                    </div>
+                    <div class="server-card">
+                        <div class="server-name">notion-api</div>
+                        <div class="status-indicator status-warning"></div>
+                        <div>Error Rate: 8.7%</div>
+                        <div>Patterns: 67</div>
+                    </div>
+                    <div class="server-card">
+                        <div class="server-name">browser</div>
+                        <div class="status-indicator status-operational"></div>
+                        <div>Error Rate: 1.8%</div>
+                        <div>Patterns: 45</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- System Alerts -->
+            <div class="metric-box">
+                <h2>🚨 System Alerts</h2>
+                <div id="alerts">
+                    <div class="alert-box alert-warning">
+                        <strong>⚠️ Warning:</strong> Notion API error rate above threshold (8.7% > 5%)
+                    </div>
+                    <div class="alert-box alert-info">
+                        <strong>ℹ️ Info:</strong> New JIRA authentication pattern learned
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timestamp" id="last-updated">
+            Last updated: Loading...
+        </div>
+    </div>
+
+    <script>
+        // Load metrics and update dashboard
+        async function loadMetrics() {
+            try {
+                const response = await fetch('metrics.json');
+                const data = await response.json();
+                updateDashboard(data);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+            } catch (error) {
+                console.error('Error loading metrics:', error);
+                document.getElementById('loading').innerHTML = 
+                    '<div class="loading-indicator" style="color: #f85149;">Failed to load metrics. Retrying...</div>';
+                // Retry after 5 seconds
+                setTimeout(loadMetrics, 5000);
+            }
+        }
+        
+        function updateDashboard(data) {
+            // Update system health
+            document.getElementById('response-time').textContent = 
+                (data.system_health.hook_response_time * 1000).toFixed(0) + 'ms';
+            document.getElementById('prevention-rate').textContent = 
+                (data.system_health.error_prevention_rate * 100).toFixed(1) + '%';
+            document.getElementById('memory-usage').textContent = 
+                data.system_health.memory_usage_mb.toFixed(1) + ' MB';
+            document.getElementById('active-patterns').textContent = 
+                data.system_health.active_patterns;
+            
+            // Update performance
+            document.getElementById('hooks-per-minute').textContent = 
+                data.performance.hooks_per_minute.toFixed(1);
+            document.getElementById('patterns-today').textContent = 
+                data.performance.patterns_learned_today;
+            document.getElementById('false-positive-rate').textContent = 
+                (data.performance.false_positive_rate * 100).toFixed(1) + '%';
+            
+            // Update learning metrics
+            document.getElementById('pattern-accuracy').textContent = 
+                (data.learning_metrics.pattern_accuracy * 100).toFixed(1) + '%';
+            document.getElementById('knowledge-retention').textContent = 
+                (data.learning_metrics.knowledge_retention * 100).toFixed(0) + '%';
+            document.getElementById('cross-session-success').textContent = 
+                (data.learning_metrics.cross_session_success * 100).toFixed(0) + '%';
+            document.getElementById('adaptive-accuracy').textContent = 
+                (data.learning_metrics.adaptive_accuracy * 100).toFixed(0) + '%';
+            
+            // Update user experience
+            document.getElementById('auto-corrections').textContent = 
+                (data.user_experience.auto_corrections_accepted * 100).toFixed(0) + '%';
+            document.getElementById('blocks-overridden').textContent = 
+                (data.user_experience.blocks_overridden * 100).toFixed(0) + '%';
+            document.getElementById('warnings-heeded').textContent = 
+                (data.user_experience.warnings_heeded * 100).toFixed(0) + '%';
+            document.getElementById('decision-time').textContent = 
+                data.user_experience.avg_decision_time_seconds + 's';
+            document.getElementById('satisfaction-score').textContent = 
+                data.user_experience.satisfaction_score.toFixed(1) + '/5';
+            
+            // Update timestamp
+            document.getElementById('last-updated').textContent = 
+                'Last updated: ' + data.timestamp;
+        }
+        
+        // Color code metrics based on thresholds
+        function updateMetricColors() {
+            const responseTimeEl = document.getElementById('response-time');
+            const responseTime = parseFloat(responseTimeEl.textContent);
+            if (responseTime > 100) {
+                responseTimeEl.className = 'metric-value metric-warning';
+            } else if (responseTime > 150) {
+                responseTimeEl.className = 'metric-value metric-critical';
+            } else {
+                responseTimeEl.className = 'metric-value metric-good';
+            }
+        }
+        
+        // Load metrics on page load
+        document.addEventListener('DOMContentLoaded', loadMetrics);
+        
+        // Auto-refresh every 60 seconds
+        setInterval(loadMetrics, 60000);
+    </script>
+</body>
+</html>
+EOF
+
+    echo "Dashboard generated: $DASHBOARD_FILE"
+    
+    # Display information about accessing the dashboard
+    echo ""
+    echo "=== MCP Learning System Dashboard ==="
+    echo "Dashboard file: $DASHBOARD_FILE"
+    echo "To view the dashboard:"
+    echo "1. Open the HTML file in your browser:"
+    echo "   open '$DASHBOARD_FILE'"
+    echo "2. Or start a simple HTTP server:"
+    echo "   cd '$SCRIPT_DIR' && python3 -m http.server 8080"
+    echo "   Then visit: http://localhost:8080/dashboard.html"
+    echo "====================================="
+}
+
+# Check if script is being run directly
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    generate_dashboard
+fi

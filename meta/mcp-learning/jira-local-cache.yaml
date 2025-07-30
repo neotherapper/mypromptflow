@@ -1,0 +1,61 @@
+# JIRA Local Cache - VanguardAI Project Stories
+# Maintains local tracking of JIRA stories created through MCP integration
+# Updated: 2025-07-30
+
+project_info:
+  project_key: "SCRUM"
+  project_name: "VanguardAI"
+  project_url: "https://vanguard-tech-athens.atlassian.net/projects/SCRUM"
+  
+created_stories:
+  - issue_key: "SCRUM-86"
+    issue_id: "10236"
+    summary: "AI Agent Knowledge Management System Implementation"
+    issue_type: "Story"
+    status: "To Do"
+    priority: "Medium"
+    created_date: "2025-07-30T15:36:50.755+0300"
+    created_by: "Georgios Pilitsoglou"
+    assignee: "Unassigned"
+    url: "https://vanguard-tech-athens.atlassian.net/rest/api/2/issue/10236"
+    
+    # Requirements Analysis Details
+    business_context: "Implement comprehensive AI agent knowledge management system with MCP learning framework integration"
+    user_persona: "VanguardAI platform administrator"
+    business_value: "Enhanced AI agent intelligence for maritime insurance operations"
+    
+    # Technical Details
+    components:
+      - "Backend (FastAPI endpoints)"
+      - "Frontend (React visualization)"
+      - "Database (Agent knowledge schema)"
+      - "MCP Integration (Learning framework)"
+    
+    performance_requirements:
+      - "Knowledge retrieval within 100ms"
+      - "Concurrent agent learning support"
+      - "Persistent storage with versioning"
+    
+    domain_specific:
+      - "Maritime insurance intelligence capture"
+      - "Regulatory compliance patterns"
+      - "Risk assessment insights"
+    
+    # Workflow Integration
+    created_via: "Requirements Analyst - SDLC Stage 1 Specialist"
+    follows_framework: "Requirements Analysis Framework"
+    validation_status: "Story created successfully via MCP tools"
+    
+    # Next Steps
+    pending_actions:
+      - "Assign to development team"
+      - "Break down into technical tasks"
+      - "Create Epic for knowledge system"
+      - "Link with MCP learning framework dependencies"
+
+cache_metadata:
+  last_updated: "2025-07-30T15:36:51.000+0300"
+  total_stories: 1
+  sync_status: "SUCCESS"
+  mcp_server: "jira (via MCP Docker)"
+  validation_method: "MCP tool response verification"

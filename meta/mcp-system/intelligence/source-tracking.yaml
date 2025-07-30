@@ -1,0 +1,253 @@
+# MCP Server Source Tracking System
+# Tracks progress across all MCP server discovery sources
+# Enables AI agents to understand completion status and identify gaps
+
+tracking_metadata:
+  version: "1.0.0"
+  created: "2025-07-30"
+  purpose: "Enable systematic MCP server discovery progress tracking"
+  update_frequency: "weekly"
+  
+# Source Progress Tracking
+source_progress:
+  
+  awesome_mcp_servers:
+    source_url: "https://github.com/appcypher/awesome-mcp-servers"
+    source_type: "community_curated"
+    total_servers_discovered: 120
+    detailed_profiles_created: 45
+    completion_percentage: 37.5
+    status: "active_processing"
+    priority: "high"
+    quality_level: "community_validated"
+    last_scan: "2025-07-28"
+    notes: "Primary community-curated source with high-quality servers"
+    
+  mcp_servers_org:
+    source_url: "https://github.com/orgs/mcp-servers"
+    source_type: "official_organization"
+    total_servers_discovered: 18
+    detailed_profiles_created: 18
+    completion_percentage: 100.0
+    status: "complete"
+    priority: "highest"
+    quality_level: "official_maintained"
+    last_scan: "2025-07-25"
+    notes: "Complete - all official MCP servers profiled"
+    
+  docker_hub_mcp:
+    source_url: "https://hub.docker.com/search?q=mcp-server"
+    source_type: "container_registry"
+    total_servers_discovered: 85
+    detailed_profiles_created: 23
+    completion_percentage: 27.1
+    status: "active_processing"
+    priority: "medium"
+    quality_level: "mixed_quality"
+    last_scan: "2025-07-26"
+    notes: "Container-focused servers with varying documentation quality"
+    
+  github_topic_mcp:
+    source_url: "https://github.com/topics/mcp-server"
+    source_type: "github_topic"
+    total_servers_discovered: 340
+    detailed_profiles_created: 52
+    completion_percentage: 15.3
+    status: "active_processing"  
+    priority: "medium"
+    quality_level: "variable_quality"
+    last_scan: "2025-07-27"
+    notes: "Largest source but requires quality filtering"
+    
+  anthropic_examples:
+    source_url: "https://github.com/anthropics/mcp-examples"
+    source_type: "official_examples"
+    total_servers_discovered: 12
+    detailed_profiles_created: 12
+    completion_percentage: 100.0
+    status: "complete"
+    priority: "highest"
+    quality_level: "reference_implementation"
+    last_scan: "2025-07-24"
+    notes: "Complete - all reference implementations profiled"
+    
+  modelcontextprotocol_servers:
+    source_url: "https://github.com/orgs/modelcontextprotocol"
+    source_type: "protocol_organization"
+    total_servers_discovered: 25
+    detailed_profiles_created: 25
+    completion_percentage: 100.0
+    status: "complete"
+    priority: "highest"
+    quality_level: "protocol_reference"
+    last_scan: "2025-07-25"
+    notes: "Complete - all protocol reference servers profiled"
+
+# Overall Progress Summary
+overall_progress:
+  total_sources: 6
+  sources_complete: 3
+  sources_active: 3
+  total_servers_discovered: 600
+  total_profiles_created: 175
+  overall_completion_percentage: 29.2
+  knowledge_vault_integration_percentage: 95.4
+  
+# Discovery Gaps Analysis
+discovery_gaps:
+  
+  priority_gaps:
+    - source: "awesome_mcp_servers"
+      gap_size: 75
+      gap_percentage: 62.5
+      priority: "high"
+      estimated_effort: "4-6 weeks"
+      
+    - source: "docker_hub_mcp"
+      gap_size: 62
+      gap_percentage: 72.9
+      priority: "medium"
+      estimated_effort: "3-4 weeks"
+      
+    - source: "github_topic_mcp"
+      gap_size: 288
+      gap_percentage: 84.7
+      priority: "medium"
+      estimated_effort: "8-12 weeks"
+      
+  recommended_next_actions:
+    1:
+      action: "Complete awesome_mcp_servers profiling"
+      rationale: "High-quality community-curated servers with proven value"
+      expected_profiles: 75
+      timeline: "4-6 weeks"
+      
+    2:
+      action: "Prioritize Docker Hub enterprise servers"
+      rationale: "Container-ready servers ideal for production deployment"
+      expected_profiles: 35
+      timeline: "2-3 weeks"
+      
+    3:
+      action: "Quality filter GitHub topic servers"
+      rationale: "Large source requiring selective profiling of active projects"
+      expected_profiles: 50
+      timeline: "6-8 weeks"
+
+# Quality Standards by Source Type
+quality_standards:
+  
+  official_maintained:
+    minimum_score_threshold: 8.0
+    documentation_requirement: "comprehensive"
+    testing_requirement: "validated"
+    maintenance_requirement: "active_commits_30_days"
+    
+  community_validated:
+    minimum_score_threshold: 6.0
+    documentation_requirement: "good"
+    testing_requirement: "basic_validation"
+    maintenance_requirement: "active_commits_90_days"
+    
+  container_registry:
+    minimum_score_threshold: 5.0
+    documentation_requirement: "basic"
+    testing_requirement: "deployment_verified"
+    maintenance_requirement: "image_updated_180_days"
+    
+  variable_quality:
+    minimum_score_threshold: 4.0
+    documentation_requirement: "minimal"
+    testing_requirement: "functionality_verified"
+    maintenance_requirement: "repository_active_365_days"
+
+# AI Agent Discovery Workflow
+ai_agent_workflow:
+  
+  discovery_query_pattern:
+    step_1: "Read @meta/mcp-system/intelligence/source-tracking.yaml"
+    step_2: "Identify sources with lowest completion_percentage and high priority"
+    step_3: "Check quality_level requirements for source type"
+    step_4: "Query @knowledge-vault/databases/tools_services/ for existing profiles"
+    step_5: "Generate discovery tasks for gap closure"
+    
+  expansion_priority_algorithm:
+    factors:
+      - "completion_percentage (lower = higher priority)"
+      - "quality_level (official > community > variable)"
+      - "total_servers_discovered (larger sources get medium priority)"
+      - "last_scan recency (older scans need updates)"
+    
+    scoring_formula: |
+      priority_score = (100 - completion_percentage) * quality_weight * discovery_size_factor
+      
+      quality_weights:
+        official_maintained: 1.0
+        community_validated: 0.8
+        container_registry: 0.6
+        variable_quality: 0.4
+        
+      discovery_size_factors:
+        < 50 servers: 0.8
+        50-150 servers: 1.0  
+        > 150 servers: 0.9
+
+# Integration Points
+integration_points:
+  
+  knowledge_vault_connection:
+    database: "@knowledge-vault/databases/tools_services/"
+    relationship_type: "discovery_feeds_profiles"
+    sync_frequency: "weekly"
+    validation_required: true
+    
+  meta_information_access:
+    framework: "@meta/information-access/source-discovery-framework.yaml"
+    integration_type: "mcp_server_specific_mapping"
+    category_mappings: "technology_mappings.mcp_servers"
+    
+  discovery_automation:
+    github_scanner: "@meta/mcp-system/discovery/github-scanner.yaml"
+    profile_generator: "@meta/mcp-system/discovery/profile-generators.yaml"
+    validation_engine: "@meta/mcp-system/discovery/source-validators.yaml"
+
+# Progress Tracking Metrics
+tracking_metrics:
+  
+  weekly_targets:
+    new_profiles_created: 10
+    source_scanning_frequency: "2 sources per week"
+    quality_validation_percentage: 95
+    knowledge_vault_sync_percentage: 98
+    
+  monthly_goals:
+    completion_percentage_increase: 15
+    new_source_discovery: 1
+    quality_standard_compliance: 90
+    gap_analysis_accuracy: 85
+    
+  success_indicators:
+    ecosystem_coverage: ">80%"
+    profile_quality_score: ">7.5 average"
+    knowledge_vault_integration: ">95%"
+    ai_agent_discoverability: ">90%"
+
+# Historical Progress Log
+progress_history:
+  
+  "2025-07-30":
+    event: "Migration to meta framework"
+    profiles_created: 175
+    completion_percentage: 29.2
+    sources_active: 3
+    
+  "2025-07-24":
+    event: "Industry neutrality compliance completed"
+    profiles_updated: 7
+    quality_improvements: "maritime language removal"
+    
+  "2025-07-21":
+    event: "Comprehensive ecosystem discovery completed"
+    servers_discovered: 2200
+    sources_researched: 5
+    baseline_established: true

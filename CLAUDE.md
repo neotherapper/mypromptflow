@@ -6,7 +6,7 @@
 
 - Follow task completion protocol when completing tasks: `ai/workflows/task-management/CLAUDE.md`
 - Apply development protocols when doing development work: `development/CLAUDE.md`
-- Validate using focused validators: `ai-instruction-validator`, `framework-compliance-validator`, `file-type-validator`
+- Validate using focused validators: `.claude/agents/ai-instruction-validator.md`, `.claude/agents/framework-compliance-validator.md`, `file-type-validator`
 
 ## Essential Constraints
 
@@ -66,7 +66,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 - `development/CLAUDE.md` - When doing development work
 - `ai/workflows/task-management/CLAUDE.md` - When managing tasks
 - `research/orchestrator/integration/claude-orchestrator-integration.yaml` - When conducting research
-- `meta/validation/validators/ai-instruction/` - When validation issues arise
+- `.claude/agents/ai-instruction-validator.md` - When AI instruction validation issues arise
 
 **Usage Pattern**: Reference files using conditional format: "Use `file/path.md` when [specific condition]" rather than immediate @ loading to optimize context efficiency.
 
@@ -125,8 +125,8 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 - Tasks: `ai/workflows/task-management/CLAUDE.md`
 - Development: `development/CLAUDE.md`
-- Validation: `ai-instruction-validator.md`, `framework-compliance-validator.md`, `file-type-validator.md`
-- Task Coordination: `task-coordinator.md`, `project-manager.md`
+- Validation: `.claude/agents/ai-instruction-validator.md`, `.claude/agents/framework-compliance-validator.md`, `file-type-validator.md`
+- Task Coordination: `ai/workflows/task-management/CLAUDE.md`, `task-coordinator.md`, `project-manager.md`
 - Commands: `.claude/commands/*`
 - Information Access: `meta/information-access/agent-usage-guide.md`
 
@@ -134,7 +134,8 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 - Design Excellence: `projects/ai-agent-instruction-design-excellence/CLAUDE.md`
 - Claude Capabilities: `projects/ai-knowledge-base-enhancement/docs/claude-comprehensive-capabilities.md`
-- MCP Registry: `projects/ai-knowledge-intelligence-orchestrator/mcp-registry/`
+- Universal Topic Intelligence: `projects/universal-topic-intelligence-system/CLAUDE.md`
+- MCP Registry: `knowledge-vault/databases/tools_services/`
 - Task Lists: `projects/*/task-list.md`
 - Progress: `projects/*/progress.md`
 
@@ -147,7 +148,7 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 
 **System Configuration** (Reference when needed):
 
-- AI Context: `ai/context/` (dependencies.yaml, document-registry.yaml, feature-registry.yaml, tier-configuration.yaml)
+- AI Context: `ai/context/` (document-registry.yaml, feature-registry.yaml, tier-configuration.yaml, dependency-validation-rules.yaml)
 - Knowledge Vault: `knowledge-vault/` (schemas/, shared/, operations/)
 - Research: `research/` (findings/, orchestrator/, sessions/)
 - Information Access: `meta/information-access/` (source-discovery-framework.yaml, agent-usage-guide.md, topic-mappings/, category-mappings/)

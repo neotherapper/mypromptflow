@@ -85,7 +85,7 @@
 10. **mcp-ecosystem-comprehensive-analysis/** - Multi-phase ecosystem research
 
 **Operational Registry Sources**:
-- `@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/master-server-database.yaml`
+- `@projects/universal-topic-intelligence-system/mcp-registry/master-server-database.yaml`
 - Detailed server profiles across tier classifications
 - Business value analysis and ROI calculations
 - Implementation roadmaps and technical specifications
@@ -166,7 +166,7 @@ research/findings/mcp-servers-2025/
 **Estimated Execution Time**: 4-6 hours
 **Resource Requirements**:
 - Access to all existing research findings in `research/findings/`
-- Access to operational registry in `@projects/ai-knowledge-intelligence-orchestrator/`
+- Access to operational registry in `@projects/universal-topic-intelligence-system/`
 - Research framework templates and validation tools
 - Write access for consolidation and archival operations
 

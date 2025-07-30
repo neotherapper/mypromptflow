@@ -1,0 +1,330 @@
+# MCP Server Profile Generation System
+# Automated generation of comprehensive MCP server profiles from discovery data
+
+generator_metadata:
+  version: "1.0.0"
+  created: "2025-07-30"
+  purpose: "Generate standardized MCP server profiles from discovery intelligence"
+  integration_target: "@knowledge-vault/databases/tools_services/"
+
+# Profile Generation Templates
+generation_templates:
+  
+  tier_1_comprehensive:
+    score_threshold: 8.0
+    template_source: "@meta/mcp-system/blueprints/mcp-server-profile-blueprint.yaml"
+    sections_required:
+      - "basic_information (complete)"
+      - "quality_scoring_metrics (full analysis)"
+      - "technical_specifications (comprehensive)"
+      - "setup_configuration (all 5 methods)"
+      - "business_value_analysis (ROI assessment)"
+      - "implementation_strategy (phased approach)"
+      - "risk_assessment (enterprise-grade)"
+      - "success_metrics (measurable KPIs)"
+    
+    quality_standards:
+      min_word_count: 2500
+      required_code_examples: 8
+      business_value_depth: "strategic_analysis"
+      technical_detail_level: "implementation_ready"
+      
+  tier_2_standard:
+    score_threshold: 6.0
+    template_source: "@meta/mcp-system/blueprints/mcp-server-profile-blueprint.yaml"
+    sections_required:
+      - "basic_information (complete)"
+      - "quality_scoring_metrics (standard analysis)"
+      - "technical_specifications (core details)"
+      - "setup_configuration (Docker + Claude methods)"
+      - "business_value_analysis (value proposition)"
+      - "implementation_guidance (best practices)"
+    
+    quality_standards:
+      min_word_count: 1500
+      required_code_examples: 5
+      business_value_depth: "practical_benefits"
+      technical_detail_level: "deployment_ready"
+      
+  tier_3_basic:
+    score_threshold: 4.0
+    template_source: "@meta/mcp-system/blueprints/mcp-server-profile-blueprint.yaml"
+    sections_required:
+      - "basic_information (essential fields)"
+      - "quality_scoring_metrics (basic scoring)"
+      - "technical_specifications (minimal)"
+      - "setup_configuration (Docker method)"
+      - "use_cases (practical examples)"
+    
+    quality_standards:
+      min_word_count: 800
+      required_code_examples: 3
+      business_value_depth: "use_case_focused"
+      technical_detail_level: "functional_overview"
+
+# Data Extraction and Analysis
+data_extraction:
+  
+  repository_analysis:
+    readme_parsing:
+      extraction_targets:
+        - "server description and capabilities"
+        - "installation instructions"
+        - "configuration examples"
+        - "usage examples and API documentation"
+        - "authentication requirements"
+        - "dependencies and system requirements"
+        
+      parsing_patterns:
+        capabilities_section: "## Features|## Capabilities|## What it does"
+        installation_section: "## Installation|## Setup|## Getting Started"
+        usage_section: "## Usage|## Examples|## Quick Start"
+        config_section: "## Configuration|## Config|## Settings"
+        
+    package_analysis:
+      package_json_extraction:
+        - "name, description, version"
+        - "dependencies (MCP libraries)"
+        - "scripts (build, start, test)"
+        - "keywords and repository links"
+        
+      pyproject_toml_extraction:
+        - "project metadata"
+        - "dependencies and optional-dependencies"
+        - "build-system requirements"
+        - "tool configurations"
+        
+    code_structure_analysis:
+      file_patterns:
+        - "src/ or lib/ structure"
+        - "server.ts|py|js main entry point"
+        - "tools/ or handlers/ implementation"
+        - "types/ or schemas/ definitions"
+        
+      implementation_indicators:
+        - "MCP library imports"
+        - "Server class implementations"
+        - "Tool/resource definitions"
+        - "Error handling patterns"
+
+# Business Value Assessment
+business_value_assessment:
+  
+  scoring_algorithm:
+    source: "@meta/mcp-system/blueprints/scoring-algorithm.yaml"
+    dimensions:
+      business_domain_relevance: 0.32
+      technical_development_value: 0.26
+      production_readiness: 0.18
+      setup_complexity: 0.12
+      maintenance_status: 0.08
+      documentation_quality: 0.04
+      
+  value_proposition_generation:
+    analysis_framework:
+      - "problem_solved: What business problem does this address?"
+      - "efficiency_gains: How does this improve productivity?"
+      - "integration_value: How does this enhance existing workflows?"
+      - "competitive_advantage: What unique capabilities does this provide?"
+      - "roi_factors: What are the quantifiable benefits?"
+      
+    industry_neutrality:
+      forbidden_terms: ["maritime", "insurance", "vessel", "flag state", "IMO", "P&I Club"]
+      preferred_terms: ["business", "enterprise", "commercial", "organization", "platform"]
+      example_transformations:
+        "vessel management" -> "asset management"
+        "maritime compliance" -> "regulatory compliance"
+        "insurance claims" -> "claims processing"
+
+# Quality Validation and Enhancement
+quality_validation:
+  
+  automated_validation:
+    schema_compliance:
+      validator: "@knowledge-vault/core/validation-engine.yaml"
+      required_fields: "all YAML frontmatter fields"
+      format_validation: "UUID, status, tags compliance"
+      
+    content_quality:
+      readability_score: ">= 60 (Flesch-Kincaid)"
+      technical_accuracy: "code examples syntax validation"
+      completeness_score: ">= 80% template sections populated"
+      cross_reference_integrity: "all @references must be valid"
+      
+    industry_neutrality:
+      terminology_scan: "detect and flag industry-specific terms"
+      example_validation: "ensure generic business examples"
+      language_assessment: "professional business communication style"
+      
+  human_review_triggers:
+    high_priority_criteria:
+      - "composite_score >= 8.0 (Tier 1 candidate)"
+      - "official_organization_source == true"
+      - "novel_capabilities_detected == true"
+      - "complex_authentication_required == true"
+      - "enterprise_features_available == true"
+      
+    quality_concerns:
+      - "incomplete_documentation_detected"
+      - "code_examples_validation_failed"
+      - "industry_specific_language_detected"
+      - "business_value_assessment_low_confidence"
+
+# Profile Generation Workflow
+generation_workflow:
+  
+  preprocessing:
+    step_1_data_validation:
+      input: "discovered_server_metadata.yaml"
+      validation: "required fields completeness check"
+      output: "validated_server_data.yaml"
+      
+    step_2_template_selection:
+      input: "validated_server_data.yaml"
+      logic: "score-based template selection"
+      output: "template_assignment.yaml"
+      
+    step_3_content_extraction:
+      input: "template_assignment.yaml"
+      process: "repository analysis and data extraction"
+      output: "extracted_content.yaml"
+      
+  generation_process:
+    step_4_profile_generation:
+      input: "extracted_content.yaml"
+      template: "selected template from blueprints/"
+      process: "populate template with extracted data"
+      output: "generated_profile.md"
+      
+    step_5_quality_enhancement:
+      input: "generated_profile.md"
+      enhancements:
+        - "business value narrative generation"
+        - "technical specification completion"
+        - "code example validation and improvement"
+        - "cross-reference generation"
+      output: "enhanced_profile.md"
+      
+    step_6_validation:
+      input: "enhanced_profile.md"
+      validation_suite:
+        - "schema compliance check"
+        - "content quality assessment"
+        - "industry neutrality validation"
+        - "cross-reference integrity test"
+      output: "validated_profile.yaml"
+      
+  postprocessing:
+    step_7_knowledge_vault_integration:
+      input: "validated_profile.yaml"
+      target: "@knowledge-vault/databases/tools_services/items/"
+      filename_format: "{server_name}-mcp-server-profile.md"
+      metadata_update: "ecosystem registry and source tracking"
+      
+    step_8_quality_reporting:
+      input: "integration results"
+      report_generation:
+        - "profile quality scores"
+        - "validation pass/fail statistics"
+        - "human review queue additions"
+        - "knowledge vault integration status"
+
+# Advanced Generation Features
+advanced_features:
+  
+  ai_enhanced_content:
+    business_narrative_generation:
+      prompt_template: |
+        Generate a compelling business value narrative for the {server_name} MCP Server.
+        Key capabilities: {capabilities_list}
+        Target use cases: {use_cases}
+        Technical benefits: {technical_benefits}
+        
+        Requirements:
+        - Industry-neutral language (avoid maritime, insurance specifics)
+        - Focus on productivity and efficiency gains
+        - Include quantifiable benefits where possible
+        - Professional business communication style
+        
+    technical_specification_enhancement:
+      code_example_generation: "create working examples from API documentation"
+      configuration_template_creation: "generate practical configuration examples"
+      troubleshooting_guide_synthesis: "compile common issues and solutions"
+      
+  relationship_discovery:
+    complementary_servers:
+      analysis: "identify servers that work well together"
+      criteria: "similar use cases, compatible data formats, workflow integration"
+      
+    dependency_mapping:
+      technical_dependencies: "required services and libraries"
+      workflow_dependencies: "servers that enhance this server's value"
+      
+    cross_reference_generation:
+      knowledge_vault_links: "relevant technologies and frameworks"
+      implementation_guides: "applicable setup and deployment guides"
+
+# Error Handling and Quality Assurance
+error_handling:
+  
+  generation_failures:
+    incomplete_source_data:
+      strategy: "graceful degradation to lower tier template"
+      fallback: "basic profile with human review flag"
+      
+    validation_failures:
+      strategy: "iterative improvement with specific error fixing"
+      max_iterations: 3
+      fallback: "human review queue addition"
+      
+    integration_failures:
+      strategy: "staged rollback with error logging"
+      recovery: "manual integration with support documentation"
+      
+  quality_assurance:
+    automated_testing:
+      - "template rendering validation"
+      - "markdown syntax verification"
+      - "YAML frontmatter compliance"
+      - "cross-reference link validation"
+      
+    human_validation_sampling:
+      frequency: "10% random sampling of generated profiles"
+      criteria: "quality, accuracy, completeness assessment"
+      feedback_integration: "continuous improvement of generation algorithms"
+
+# Integration and Output Management
+integration_management:
+  
+  knowledge_vault_integration:
+    file_placement: "@knowledge-vault/databases/tools_services/items/"
+    naming_convention: "{server_name_slug}-mcp-server-profile.md"
+    metadata_requirements: "complete YAML frontmatter with UUID and relationships"
+    
+  ecosystem_registry_updates:
+    profile_creation_tracking: "increment detailed_profiles_created counter"
+    source_completion_updates: "update completion percentages"
+    quality_metrics_updates: "average scores and tier distributions"
+    
+  human_review_queue:
+    queue_file: "@meta/mcp-system/discovery/human-review-queue.yaml"
+    priority_ordering: "score DESC, complexity ASC, official_source weight"
+    review_assignment: "automatic assignment based on expertise areas"
+
+# Performance and Scalability
+performance_optimization:
+  
+  batch_processing:
+    batch_size: 10  # profiles per batch
+    processing_timeout: 300  # seconds per profile
+    memory_management: "clear intermediate data between batches"
+    
+  caching_strategy:
+    repository_analysis_cache: "7 days"
+    template_rendering_cache: "24 hours"
+    validation_results_cache: "1 hour"
+    
+  resource_management:
+    max_concurrent_generations: 3
+    api_rate_limiting: "respect GitHub API limits"
+    disk_space_monitoring: "alert at 80% capacity"

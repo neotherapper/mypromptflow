@@ -1,0 +1,261 @@
+# GitHub MCP Server Discovery Scanner
+# Automated discovery and quality assessment of MCP servers across GitHub
+
+scanner_metadata:
+  version: "1.0.0"
+  created: "2025-07-30"
+  purpose: "Automate discovery of new MCP servers from GitHub sources"
+  update_frequency: "weekly"
+
+# GitHub Sources Configuration
+github_sources:
+  
+  topic_based_search:
+    search_queries:
+      - "topic:mcp-server"
+      - "topic:model-context-protocol"
+      - "mcp server in:readme"
+      - "model context protocol in:description"
+    
+    filters:
+      - "language:typescript OR language:python OR language:javascript"
+      - "pushed:>2024-01-01"  # Active projects only
+      - "stars:>=1"  # At least some community interest
+      - "NOT archived:true"  # Exclude archived repositories
+    
+    quality_indicators:
+      - "has_readme: true"
+      - "has_license: true"
+      - "commit_activity: last_30_days"
+      - "issues_resolved_ratio: >0.5"
+  
+  organization_scanning:
+    target_organizations:
+      - "mcp-servers"
+      - "modelcontextprotocol"
+      - "anthropics"
+    
+    scan_criteria:
+      - "repository_type: public"
+      - "contains_mcp_config: true"
+      - "has_package_json OR has_pyproject_toml OR has_cargo_toml"
+    
+    prioritization:
+      official_repos: 1.0
+      community_repos: 0.8
+      experimental_repos: 0.6
+
+# Discovery Automation Workflow
+discovery_workflow:
+  
+  scanning_schedule:
+    frequency: "weekly"
+    day: "sunday"
+    time: "02:00 UTC"
+    timeout: "4 hours"
+    
+  processing_pipeline:
+    step_1_discovery:
+      action: "Execute GitHub API searches"
+      output: "raw_repository_list.json"
+      validation: "minimum 5 new repositories per scan"
+      
+    step_2_filtering:
+      action: "Apply quality filters and deduplication"
+      input: "raw_repository_list.json"
+      output: "filtered_candidates.json"
+      criteria: "quality_indicators + existing_database_check"
+      
+    step_3_analysis:
+      action: "Extract repository metadata and assess quality"
+      input: "filtered_candidates.json"
+      output: "analyzed_servers.yaml"
+      analysis_points:
+        - "README quality and completeness"
+        - "Package configuration analysis"
+        - "Code structure assessment"
+        - "Documentation availability"
+        - "Community activity metrics"
+        
+    step_4_scoring:
+      action: "Apply business-aligned scoring algorithm"
+      input: "analyzed_servers.yaml"
+      output: "scored_servers.yaml"
+      algorithm: "@meta/mcp-system/blueprints/scoring-algorithm.yaml"
+      
+    step_5_integration:
+      action: "Update ecosystem registry and create profile candidates"
+      input: "scored_servers.yaml"
+      outputs:
+        - "updated ecosystem-registry.yaml"
+        - "profile_generation_queue.yaml"
+        - "human_review_required.yaml"
+
+# Quality Assessment Criteria
+quality_assessment:
+  
+  repository_health:
+    commit_frequency:
+      excellent: ">= 1 commit per week"
+      good: ">= 1 commit per month"
+      acceptable: ">= 1 commit per quarter"
+      poor: "< 1 commit per quarter"
+      
+    issue_management:
+      excellent: "90%+ issues resolved"
+      good: "70-89% issues resolved"
+      acceptable: "50-69% issues resolved"
+      poor: "< 50% issues resolved"
+      
+    documentation_quality:
+      excellent: "Comprehensive README + API docs + examples"
+      good: "Good README + basic API docs"
+      acceptable: "Basic README with usage examples"
+      poor: "Minimal or missing documentation"
+  
+  mcp_compliance:
+    protocol_implementation:
+      required_files:
+        - "package.json OR pyproject.toml OR cargo.toml"
+        - "mcp configuration OR server implementation"
+        - "README.md with MCP references"
+        
+      code_indicators:
+        - "imports/uses MCP libraries"
+        - "implements MCP server interface"
+        - "defines MCP tools/resources"
+        
+      configuration_validation:
+        - "valid MCP server configuration"
+        - "proper tool/resource definitions"
+        - "authentication handling (if required)"
+
+# Automated Profile Generation
+profile_generation:
+  
+  auto_generation_criteria:
+    minimum_score: 6.0
+    required_documentation: "basic"
+    community_validation: ">=5 stars OR official organization"
+    
+  generation_process:
+    template_selection:
+      official_servers: "comprehensive_enterprise_template"
+      community_servers: "standard_community_template"
+      experimental_servers: "basic_experimental_template"
+      
+    data_extraction:
+      repository_analysis:
+        - "README parsing for capabilities"
+        - "Package.json/pyproject.toml analysis"
+        - "Code structure assessment"
+        - "Dependencies analysis"
+        
+      metadata_generation:
+        - "Business value assessment"
+        - "Technical complexity scoring"
+        - "Integration requirements"
+        - "Use case identification"
+        
+    quality_validation:
+      automated_checks:
+        - "Template completeness validation"
+        - "Cross-reference integrity"
+        - "Scoring algorithm compliance"
+        - "Industry neutrality compliance"
+        
+      human_review_triggers:
+        - "Score >= 8.0 (Tier 1 candidate)"
+        - "Official organization source"
+        - "Complex authentication requirements"
+        - "Novel or specialized capabilities"
+
+# Integration with Meta Framework
+meta_integration:
+  
+  source_tracking_updates:
+    file: "@meta/mcp-system/intelligence/source-tracking.yaml"
+    update_fields:
+      - "total_servers_discovered"
+      - "last_scan date"
+      - "completion_percentage"
+      - "discovery_gaps analysis"
+      
+  ecosystem_registry_updates:
+    file: "@meta/mcp-system/intelligence/ecosystem-registry.yaml"
+    update_sections:
+      - "servers database entries"
+      - "metadata.last_updated"
+      - "research_sources statistics"
+      
+  knowledge_vault_integration:
+    target: "@knowledge-vault/databases/tools_services/"
+    process: "automated profile creation for qualifying servers"
+    validation: "schema compliance verification"
+    
+# Error Handling and Recovery
+error_handling:
+  
+  api_rate_limiting:
+    strategy: "exponential_backoff"
+    max_retries: 3
+    base_delay: 60  # seconds
+    max_delay: 1800  # seconds
+    
+  network_failures:
+    retry_strategy: "circuit_breaker"
+    failure_threshold: 5
+    recovery_timeout: 300  # seconds
+    
+  data_corruption:
+    backup_strategy: "pre_scan_snapshot"
+    validation_strategy: "rollback_on_corruption"
+    recovery_strategy: "restore_from_last_known_good"
+    
+# Monitoring and Reporting
+monitoring:
+  
+  scan_metrics:
+    - "repositories_discovered_per_scan"
+    - "quality_filter_pass_rate"
+    - "auto_generation_success_rate"
+    - "human_review_queue_size"
+    
+  quality_metrics:
+    - "average_server_score"
+    - "tier_distribution"
+    - "documentation_quality_improvement"
+    - "ecosystem_coverage_percentage"
+    
+  performance_metrics:
+    - "scan_execution_time"
+    - "api_calls_per_scan"
+    - "error_rate"
+    - "success_rate"
+    
+# Output Formats
+output_specifications:
+  
+  discovered_servers_format:
+    format: "YAML"
+    structure: |
+      discovered_servers:
+        - repository_url: "https://github.com/org/repo"
+          name: "Server Name"
+          description: "Server description"
+          language: "typescript"
+          stars: 25
+          last_commit: "2025-07-28"
+          quality_score: 7.2
+          mcp_compliance: true
+          auto_profile_eligible: true
+          
+  human_review_queue_format:
+    format: "YAML"
+    criteria: "servers requiring manual review"
+    priority_order: "score_desc"
+    
+  integration_updates_format:
+    format: "YAML patches"
+    validation: "schema_compliance_required"
+    backup: "automatic_pre_update_snapshot"

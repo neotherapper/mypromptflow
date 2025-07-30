@@ -1,0 +1,190 @@
+[2025-07-30 15:59:11] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 15:59:31] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:00:12] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:00:13] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:00:37] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:00:38] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:01:56] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:01:56] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:45] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:46] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:46] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Invalid issue key format: 'INVALID-TEST'. Expected format: PROJECT-123
+Parameters: {"issue_key":"invalid-test","fields":"summary"}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:47] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---
+[2025-07-30 16:22:48] PREVENTED ERROR
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Reason: Missing required parameter: issue_key
+Parameters: {"project_key":"PROJ","summary":"Test","issue_type":"Task","additional_fields":{"priority":{"name":"High"}}}
+---

@@ -390,7 +390,7 @@ notion_database_schemas:
         type: "title"
         description: "Unique identifier and idea name"
         required: true
-        example: "ai-knowledge-intelligence-orchestrator"
+        example: "universal-topic-intelligence-system"
         
       Name:
         type: "rich_text"

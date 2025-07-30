@@ -87,7 +87,7 @@
 3. **Enterprise Information Governance** - research/findings/enterprise-information-governance-analysis/ (2025-07-20T02:00:00Z)
    - Quality frameworks and compliance patterns
 
-4. **Project Context** - projects/ai-knowledge-intelligence-orchestrator/CLAUDE.md (2025-07-20T00:15:00Z)
+4. **Project Context** - projects/universal-topic-intelligence-system/CLAUDE.md (2025-07-20T00:15:00Z)
    - Integration requirements and objectives
 
 5. **Research Metadata Schema** - research/metadata-schema.yaml (2025-07-20T06:00:00Z)

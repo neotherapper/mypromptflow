@@ -8,7 +8,7 @@ metadata:
   description: "Defines relationship patterns, automatic tagging rules, and cross-reference generation for MCP server profiles"
   integration_points:
     - "knowledge-vault/schemas/tools-services-schema.md"
-    - "projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+    - "projects/universal-topic-intelligence-system/mcp-registry/"
     - "knowledge-vault/databases/tools_services/"
 
 # MCP Server Type Classifications (Enhanced from user examples)

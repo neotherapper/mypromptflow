@@ -5,7 +5,11 @@ installation_priority: 3
 item_type: mcp_server
 migration_date: '2025-07-27'
 name: MotherDuck Analytics Platform MCP Server
+<<<<<<< HEAD
+original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
+=======
 original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
+>>>>>>> origin/master
 priority: 3rd_priority
 production_readiness: 88
 quality_score: 5.4

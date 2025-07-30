@@ -40,20 +40,22 @@ sub_agent_specifications:
       3. Analyze trends and patterns in the data
       4. Provide evidence-based conclusions with statistical validation
       
-      INTELLIGENT SOURCE COORDINATION:
-      Apply unified source discovery framework from meta/information-access/source-discovery-framework.yaml:
+      INTELLIGENT MCP SERVER COORDINATION:
+      Apply domain-aware server selection from @knowledge-vault/knowledge/ai-systems/frameworks/mcp-research-intelligence.md:
       
-      PRIMARY SOURCES (Technology-Specific if detected):
-      - technology_mappings: "Use React/TypeScript/Python/Database mappings if topic involves specific technologies"
-      - category_mappings: "Use frontend/backend/infrastructure mappings for broader domains"
-      - mcp_servers: "GitHub repositories, technical documentation, code examples"
+      QUANTITATIVE SPECIALIZED SERVERS:
+      - bright_data: "Professional web scraping for market data and competitive intelligence"
+      - redis: "High-performance data access for real-time metrics and caching"
+      - arxiv: "Academic research papers with statistical analysis and quantitative methods"
+      - semantic_scholar: "AI-powered academic insights with citation metrics"
+      - fetch: "Real-time web content for current market data and statistics"
+      - memory: "Persistent knowledge storage for quantitative findings integration"
       
-      QUANTITATIVE FOCUS SOURCES:
-      - Academic research papers with statistical analysis
-      - Industry reports with quantitative data and benchmarks
-      - Government statistics and performance datasets
-      - Survey results and polling data with statistical validation
-      - Financial and performance metrics from authoritative sources
+      SERVER COORDINATION STRATEGY:
+      - Primary quantitative coordination: bright_data + redis + fetch + memory
+      - Academic enhancement: arxiv + semantic_scholar (if research domain detected)
+      - Fallback sequence: bright_data unavailable → fetch + memory intensive search
+      - Data validation: Cross-validate metrics across multiple server sources
       
       SOURCE COORDINATION STRATEGY:
       - Apply parallel source access for comprehensive data gathering
@@ -111,20 +113,22 @@ sub_agent_specifications:
       3. Explore narrative themes and qualitative patterns
       4. Provide rich, nuanced understanding of the topic
       
-      INTELLIGENT SOURCE COORDINATION:
-      Apply unified source discovery framework for qualitative perspectives:
+      INTELLIGENT MCP SERVER COORDINATION:
+      Apply qualitative-focused server selection for contextual insights:
       
-      PRIMARY SOURCES (Technology-Specific if detected):
-      - technology_mappings: "User experience insights, community discussions, developer testimonials"
-      - category_mappings: "Domain-specific qualitative research and case studies"
-      - mcp_servers: "GitHub discussions, documentation narratives, community insights"
+      QUALITATIVE SPECIALIZED SERVERS:
+      - slack_mcp: "Team communication data and workplace collaboration insights"
+      - linear: "Modern project management data and development workflow insights"
+      - github: "Community discussions, issue narratives, and developer testimonials"
+      - atlassian: "Enterprise documentation and project management perspectives"
+      - fetch: "Qualitative web content, case studies, and expert commentary"
+      - memory: "Persistent storage for stakeholder perspectives and thematic insights"
       
-      QUALITATIVE FOCUS SOURCES:
-      - Case studies and narrative accounts with rich contextual detail
-      - Interview transcripts, testimonials, and user experience reports
-      - Ethnographic research and observational studies
-      - Qualitative academic research with thematic analysis
-      - Expert opinions, commentary, and thought leadership content
+      SERVER COORDINATION STRATEGY:
+      - Primary qualitative coordination: slack_mcp + linear + github + memory
+      - Enterprise enhancement: atlassian (if business/enterprise domain detected)
+      - Fallback sequence: slack_mcp unavailable → github + fetch intensive search
+      - Perspective validation: Cross-validate stakeholder insights across communication platforms
       
       SOURCE COORDINATION STRATEGY:
       - Use sequential access for in-depth contextual analysis
@@ -183,20 +187,22 @@ sub_agent_specifications:
       3. Examine case studies and real-world applications
       4. Provide practical, actionable recommendations
       
-      INTELLIGENT SOURCE COORDINATION:
-      Apply unified source discovery framework for industry practices:
+      INTELLIGENT MCP SERVER COORDINATION:
+      Apply industry-practice focused server selection for real-world implementation insights:
       
-      PRIMARY SOURCES (Technology-Specific if detected):
-      - technology_mappings: "Production implementations, enterprise case studies, technical best practices"
-      - category_mappings: "Industry-specific practices and domain standards"
-      - mcp_servers: "GitHub Enterprise repos, industry documentation, implementation guides"
+      INDUSTRY PRACTICE SPECIALIZED SERVERS:
+      - atlassian: "Enterprise project management and documentation best practices"
+      - linear: "Modern development workflow and issue tracking practices"
+      - github: "Production code repositories, enterprise implementations, and technical best practices"
+      - sentry: "Error tracking and performance monitoring industry standards"
+      - fetch: "Industry reports, whitepapers, and authoritative practice documentation"
+      - memory: "Persistent storage for implementation patterns and best practices"
       
-      INDUSTRY PRACTICE FOCUS SOURCES:
-      - Industry reports and whitepapers from authoritative organizations
-      - Company case studies and implementation guides with measurable outcomes
-      - Best practice documentation from recognized industry leaders
-      - Practitioner blogs and professional forums with validated experiences
-      - Standards and certification documentation from official bodies
+      SERVER COORDINATION STRATEGY:
+      - Primary industry coordination: atlassian + linear + github + memory
+      - Monitoring enhancement: sentry (if technical implementation domain detected)
+      - Fallback sequence: atlassian unavailable → github + fetch intensive search
+      - Practice validation: Cross-validate implementations across multiple enterprise sources
       
       SOURCE COORDINATION STRATEGY:
       - Prioritize authoritative industry sources and recognized standards bodies
@@ -255,20 +261,22 @@ sub_agent_specifications:
       3. Examine disruptive forces and potential impacts
       4. Provide forward-looking strategic recommendations
       
-      INTELLIGENT SOURCE COORDINATION:
-      Apply unified source discovery framework for future trends analysis:
+      INTELLIGENT MCP SERVER COORDINATION:
+      Apply strategic trends focused server selection for future-oriented insights:
       
-      PRIMARY SOURCES (Technology-Specific if detected):
-      - technology_mappings: "Emerging tech developments, future roadmaps, innovation patterns"
-      - category_mappings: "Strategic industry evolution and emerging domain trends"
-      - mcp_servers: "GitHub trending repos, cutting-edge research, innovation showcases"
+      FUTURE TRENDS SPECIALIZED SERVERS:
+      - arxiv: "Cutting-edge academic research and emerging technology developments"
+      - semantic_scholar: "AI-powered academic insights with research trend analysis"
+      - github: "Trending repositories, emerging frameworks, and innovation showcases"
+      - bright_data: "Market trend data and competitive intelligence for future forecasting"
+      - fetch: "Technology trend reports, strategic analyses, and expert predictions"
+      - memory: "Persistent storage for trend patterns and strategic forecasting insights"
       
-      FUTURE TRENDS FOCUS SOURCES:
-      - Technology trend reports and forecasts from reputable research organizations
-      - Strategic consulting analyses with future scenario modeling
-      - Innovation research, patent analysis, and emerging technology assessments
-      - Expert predictions and thought leadership from recognized industry visionaries
-      - Venture capital and investment trend reports indicating market directions
+      SERVER COORDINATION STRATEGY:
+      - Primary trends coordination: arxiv + semantic_scholar + github + memory
+      - Market intelligence enhancement: bright_data (if business/market domain detected)
+      - Fallback sequence: arxiv unavailable → github + fetch intensive search
+      - Trend validation: Cross-validate predictions across academic and market intelligence sources
       
       SOURCE COORDINATION STRATEGY:
       - Prioritize forward-looking sources with predictive analytics

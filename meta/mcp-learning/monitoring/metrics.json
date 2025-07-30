@@ -1,0 +1,52 @@
+{
+    "timestamp": "2025-07-30 16:28:59",
+    "collection_time": "2025-07-30T13:28:59Z",
+    "system_health": {
+        "status": "operational",
+        "hook_response_time": 0.075,
+        "error_prevention_rate": 0
+0,
+        "memory_usage_mb": .2,
+        "active_patterns": 6
+    },
+    "performance": {
+        "hooks_per_minute": 1.3,
+        "patterns_learned_today": 3,
+        "false_positive_rate": 0.13
+    },
+    "server_stats": {
+        "mcp_docker": {
+            "status": "operational",
+            "error_rate": 0.021,
+            "patterns": 156
+        },
+        "jira": {
+            "status": "operational", 
+            "error_rate": 0.034,
+            "patterns": 89
+        },
+        "notion_api": {
+            "status": "warning",
+            "error_rate": 0.087,
+            "patterns": 67
+        },
+        "browser": {
+            "status": "operational",
+            "error_rate": 0.018,
+            "patterns": 45
+        }
+    },
+    "learning_metrics": {
+        "pattern_accuracy": 0.941,
+        "knowledge_retention": 0.94,
+        "cross_session_success": 0.76,
+        "adaptive_accuracy": 0.91
+    },
+    "user_experience": {
+        "auto_corrections_accepted": 0.89,
+        "blocks_overridden": 0.23,
+        "warnings_heeded": 0.67,
+        "avg_decision_time_seconds": 18,
+        "satisfaction_score": 4.2
+    }
+}

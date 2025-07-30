@@ -1,0 +1,479 @@
+# Citation Compliance Orchestrator Integration
+# CRITICAL INTEGRATION FIX #4: Embedded citation system in orchestrator workflow
+# Version: 1.0.0 - Integrated Citation Intelligence
+# Updated: 2025-07-30
+
+metadata:
+  version: "1.0.0"
+  purpose: "Integrate citation compliance directly into orchestrator workflow execution"
+  integration: "Embeds citation validation into method selection, execution, and compliance validation"  
+  compliance_requirement: "≥95% citation integrity and source verification during research execution"
+  integration_files:
+    - "research/orchestrator/citation-system/enhanced-citation-framework.yaml"
+    - "research/templates/method-compliance-template.yaml"
+    - "research/orchestrator/integration/claude-orchestrator-integration.yaml"
+    - "research/orchestrator/self-improvement/constitutional-ai-compliance-enhancement.yaml"
+
+# CITATION-ENHANCED ORCHESTRATOR WORKFLOW
+citation_enhanced_workflow:
+  step_1_context_analysis_with_citation_requirements:
+    process: "Analyze research context and determine citation compliance requirements"
+    
+    citation_context_assessment:
+      research_domain_analysis:
+        academic_research: "Requires academic citation standards and peer-reviewed sources"
+        business_intelligence: "Requires credible business sources and industry data"
+        technical_analysis: "Requires authoritative technical documentation and implementation guides"
+        policy_research: "Requires government sources, policy documents, and expert analysis"
+        
+      citation_complexity_factors:
+        emerging_technology: "Higher citation verification requirements due to rapidly changing information"
+        cross_domain_research: "Requires diverse source types with cross-domain credibility validation"
+        high_stakes_research: "Requires multiple source confirmation and expert validation"
+        time_sensitive_research: "Requires recent sources and temporal relevance validation"
+        
+      citation_quality_requirements:
+        basic: "Minimum viable source verification with basic credibility checking"
+        high: "Comprehensive source validation with multi-source verification"
+        critical: "Maximum citation integrity with expert validation and conflict resolution"
+        
+    enhanced_output_format:
+      complexity_assessment:
+        level: "simple|moderate|complex"
+        reasoning: "explanation including citation verification requirements"
+        confidence: "0.0 to 1.0"
+        citation_verification_level: "basic|comprehensive|maximum"
+      
+      domain_analysis:
+        type: "general|specialized|cross_domain|emerging"  
+        expertise_required: "none|basic|intermediate|expert"
+        citation_standards: "academic|industry|technical|policy|mixed"
+        source_diversity_requirements: "minimal|moderate|extensive|comprehensive"
+      
+      quality_requirements:
+        required_level: "basic|high|critical"
+        validation_needs: "array including citation validation approaches"
+        citation_integrity_requirements: "source verification, credibility assessment, conflict detection"
+        multi_source_validation_threshold: "minimum number of independent sources required"
+
+  step_2_method_selection_with_citation_integration:
+    process: "Select research methods with embedded citation compliance requirements"
+    
+    citation_aware_method_selection:
+      method_citation_profiles:
+        constitutional_ai:
+          citation_compliance_enhancement: "Systematic self-evaluation includes citation integrity validation"
+          citation_requirements: "Transparent source attribution and methodology documentation"
+          source_validation_integration: "Built-in fact verification and credibility assessment"  
+          citation_transparency_score: 0.95
+          
+        multi_perspective_approach:
+          citation_compliance_enhancement: "Each perspective requires independent source validation"
+          citation_requirements: "Cross-perspective source verification and bias detection"
+          source_validation_integration: "Perspective-specific credibility assessment and triangulation"
+          citation_transparency_score: 0.92
+          
+        complex_research:
+          citation_compliance_enhancement: "Module-based citation tracking and validation"
+          citation_requirements: "Comprehensive source documentation per research module"
+          source_validation_integration: "Cross-module source consistency and validation"
+          citation_transparency_score: 0.90
+          
+        step_by_step_research:
+          citation_compliance_enhancement: "Phase-by-phase source validation and verification"
+          citation_requirements: "Clear source attribution for each research phase"
+          source_validation_integration: "Progressive source validation with building credibility"
+          citation_transparency_score: 0.88
+      
+      enhanced_selection_criteria:
+        citation_integrity_weighting: "Weight method selection by citation compliance track record"
+        source_coordination_capability: "Prioritize methods with strong source coordination features"
+        validation_integration_strength: "Consider built-in validation and verification capabilities"
+        transparency_requirements_matching: "Match method transparency with citation transparency needs"
+    
+    citation_enhanced_output_format:
+      selected_methods: 
+        primary: ["method_name with citation profile"]
+        enhancement: ["citation-focused enhancement methods"]
+        citation_validation: ["mandatory citation validation methods"]
+      execution_pattern: "sequential|parallel|hybrid with citation checkpoints"
+      rationale: "explanation including citation compliance reasoning"
+      estimated_duration: "time estimate including citation validation overhead"
+      citation_compliance_plan: "detailed plan for citation integrity throughout execution"
+
+  step_3_5_source_discovery_with_citation_tracking:
+    process: "Enhanced source discovery with real-time citation compliance tracking"
+    reference_integration: "meta/information-access/source-discovery-framework.yaml + citation-system integration"
+    
+    citation_enhanced_source_discovery:
+      source_selection_with_credibility_scoring:
+        unified_framework_integration: "Apply source-discovery-framework with citation credibility enhancement"
+        credibility_weighted_selection: "Weight source selection by multi-dimensional credibility scores"
+        independence_verification: "Verify source independence during selection process"
+        conflict_prevention_filtering: "Filter sources to minimize potential conflicts during selection"
+        
+      real_time_citation_validation:
+        source_accessibility_validation: "Validate source accessibility and link stability during discovery"
+        credibility_assessment_integration: "Real-time credibility assessment using enhanced-citation-framework"
+        citation_format_preparation: "Prepare proper citation formats during source discovery"
+        attribution_chain_initialization: "Initialize attribution chains for transparent source tracking"
+        
+      enhanced_coordination_with_validation:
+        primary_source_credibility_enforcement: "Enforce minimum credibility thresholds for primary sources"
+        supplementary_source_diversity_requirements: "Ensure diverse supplementary sources for triangulation"
+        validation_source_independence_verification: "Verify independence of validation sources"
+        fallback_source_quality_maintenance: "Maintain quality standards even in fallback sources"
+    
+    citation_tracking_initialization:
+      source_provenance_tracking: "Initialize provenance tracking for each discovered source"
+      credibility_score_recording: "Record initial credibility scores and assessment rationale"
+      independence_verification_documentation: "Document source independence verification results"
+      citation_format_standardization: "Standardize citation formats according to research domain requirements"
+
+  step_4_research_execution_with_continuous_citation_validation:
+    process: "Execute research methods with continuous citation integrity monitoring"
+    
+    method_specific_citation_integration:
+      constitutional_ai_with_citation_enhancement:
+        constitutional_principle_integration:
+          accuracy_principle: "Verify all factual claims through multi-source citation validation"
+          objectivity_principle: "Ensure balanced sourcing and cite diverse perspectives with credibility assessment"
+          transparency_principle: "Document complete citation methodology and source evaluation rationale"
+          completeness_principle: "Verify comprehensive source coverage and identify citation gaps"
+          responsibility_principle: "Assess source credibility and potential bias in citation selection"
+          integrity_principle: "Acknowledge source limitations and uncertainty in citation analysis"
+          
+        enhanced_self_evaluation_with_citations:
+          citation_integrity_self_assessment: "Self-evaluate citation quality and source credibility"
+          source_verification_validation: "Validate source verification methodology and results"
+          attribution_transparency_check: "Check transparency and completeness of source attribution"
+          conflict_resolution_assessment: "Assess effectiveness of source conflict resolution"
+          
+      multi_perspective_approach_with_citation_coordination:
+        perspective_specific_citation_requirements:
+          perspective_1_quantitative: "Require statistical sources with numerical data verification"
+          perspective_2_qualitative: "Require expert opinions and qualitative analysis sources"
+          perspective_3_industry_practice: "Require industry reports and practitioner sources"
+          perspective_4_future_trends: "Require trend analysis and forecasting sources"
+          
+        cross_perspective_citation_validation:
+          source_independence_across_perspectives: "Verify source independence across different perspectives"
+          credibility_consistency_validation: "Ensure consistent credibility standards across perspectives"  
+          conflict_detection_across_perspectives: "Detect conflicts between perspective-specific sources"
+          triangulation_validation: "Validate findings through cross-perspective source triangulation"
+          
+      complex_research_with_modular_citation_tracking:
+        module_specific_citation_requirements:
+          module_citation_independence: "Ensure each module has independent source validation"
+          cross_module_citation_consistency: "Maintain citation quality consistency across modules"
+          module_integration_citation_synthesis: "Synthesize citations effectively during module integration"
+          comprehensive_attribution_tracking: "Track attribution chains across all research modules"
+    
+    continuous_validation_checkpoints:
+      real_time_citation_validation:
+        source_freshness_monitoring: "Monitor source accessibility and content changes during research"
+        credibility_score_updates: "Update credibility scores based on new information discovered"
+        conflict_emergence_detection: "Detect new conflicts as research progresses and sources are added"
+        attribution_chain_validation: "Validate attribution chains for accuracy and completeness"
+        
+      progressive_quality_gates:
+        25_percent_checkpoint: "Validate citation quality and source credibility at 25% completion"
+        50_percent_checkpoint: "Assess source diversity and independence at 50% completion" 
+        75_percent_checkpoint: "Verify conflict resolution and triangulation at 75% completion"
+        pre_synthesis_checkpoint: "Final citation validation before synthesis phase"
+        
+      validation_intervention_triggers:
+        credibility_degradation_trigger: "Intervention when source credibility drops below thresholds"
+        conflict_severity_trigger: "Intervention when high-severity conflicts are detected"
+        independence_failure_trigger: "Intervention when source independence requirements fail"
+        attribution_gap_trigger: "Intervention when attribution gaps or inconsistencies are detected"
+
+  step_5_synthesis_with_comprehensive_citation_integration:
+    process: "Synthesize research findings with comprehensive citation validation and attribution"
+    
+    citation_informed_synthesis:
+      source_weighted_synthesis: "Weight findings by source credibility and validation results"
+      conflict_resolved_integration: "Integrate findings after resolving source conflicts"
+      attribution_preserved_synthesis: "Preserve clear attribution chains throughout synthesis"
+      transparency_maintained_integration: "Maintain transparency of source influence on conclusions"
+      
+    comprehensive_citation_validation:
+      final_source_verification: "Final verification of all cited sources for accessibility and accuracy"
+      credibility_assessment_finalization: "Finalize credibility assessments with comprehensive scoring"
+      independence_verification_completion: "Complete independence verification across all sources"
+      conflict_resolution_validation: "Validate that all significant conflicts have been resolved"
+      
+    citation_quality_assurance:
+      format_compliance_verification: "Verify all citations meet domain-specific format requirements"
+      attribution_completeness_check: "Check completeness of attribution for all research findings"
+      transparency_documentation_validation: "Validate transparency of citation methodology documentation"
+      reproducibility_citation_verification: "Verify citations support research reproducibility"
+
+  step_6_final_validation_with_citation_integrity_certification:
+    process: "Final validation with comprehensive citation integrity certification"
+    
+    citation_integrity_certification:
+      multi_dimensional_validation:
+        source_credibility_certification: "Certify source credibility meets research requirements"
+        independence_verification_certification: "Certify source independence meets validation standards"
+        conflict_resolution_certification: "Certify all conflicts resolved or appropriately acknowledged"
+        attribution_transparency_certification: "Certify attribution transparency meets academic standards"
+        
+      constitutional_ai_citation_compliance:
+        accuracy_compliance_validation: "Validate citation contribution to accuracy principle compliance"
+        objectivity_compliance_validation: "Validate citation contribution to objectivity principle compliance"
+        transparency_compliance_validation: "Validate citation contribution to transparency principle compliance"
+        completeness_compliance_validation: "Validate citation contribution to completeness principle compliance"
+        
+    final_citation_quality_metrics:
+      source_verification_accuracy: "Percentage of sources successfully verified (target: ≥95%)"
+      citation_integrity_score: "Overall citation integrity score (target: ≥95%)"
+      attribution_completeness_ratio: "Ratio of properly attributed content (target: ≥98%)"
+      conflict_resolution_effectiveness: "Effectiveness of conflict resolution (target: ≥90%)"
+
+# METHOD COMPLIANCE TEMPLATE INTEGRATION
+citation_enhanced_method_compliance:
+  constitutional_ai_citation_compliance:
+    required_components:
+      - "Constitutional Principles Definition with Citation Standards"
+      - "Initial Research Execution with Source Validation"
+      - "Constitutional Self-Evaluation including Citation Integrity Assessment"
+      - "Constitutional Correction including Citation Quality Improvement"
+      - "Constitutional Validation including Source Verification"
+      - "Constitutional Documentation including Citation Methodology"
+      
+    citation_specific_validation_criteria:
+      - "All 6 constitutional principles include citation integrity requirements"
+      - "Source verification conducted for each principle evaluation"
+      - "Citation transparency maintained throughout self-evaluation"
+      - "Source credibility assessment integrated with principle compliance"
+      - "Multi-source validation applied to principle verification"
+      - "Attribution chains documented for constitutional compliance evidence"
+      
+    enhanced_compliance_checks:
+      principles_defined: "Boolean + citation standards included"
+      self_evaluation_conducted: "Boolean + source verification included"
+      corrections_implemented: "Boolean + citation quality improvements included"
+      final_validation_completed: "Boolean + source validation completed"
+      compliance_report_generated: "Boolean + citation methodology documented"
+      constitutional_score: "0.0-1.0 + citation integrity component score"
+      
+  multi_perspective_approach_citation_compliance:
+    required_perspectives: 4
+    citation_enhanced_expected_outputs:
+      - "perspective-1-quantitative.md with statistical source validation"
+      - "perspective-2-qualitative.md with expert source credibility assessment"
+      - "perspective-3-industry-practice.md with practitioner source verification"
+      - "perspective-4-future-trends.md with trend analysis source triangulation"
+      
+    citation_specific_validation_criteria:
+      - "Each perspective has distinct expert persona with source specialization"
+      - "Unique methodology for each perspective includes source validation approach"
+      - "Different source priorities documented with credibility rationale"
+      - "Complementary output formats include perspective-specific citation standards"
+      - "Integration of all perspectives includes cross-perspective source validation"
+      
+    enhanced_compliance_checks:
+      perspective_count: "Number of perspectives + source validation coverage"
+      distinct_personas: "Boolean + source specialization verification"
+      methodology_variance: "Boolean + source validation methodology differences"
+      source_diversity: "Boolean + cross-perspective source independence"
+      integration_quality: "0.0-1.0 + cross-perspective citation validation score"
+      
+  complex_research_citation_compliance:
+    required_modules: "4-6 with module-specific citation tracking"
+    citation_enhanced_expected_structure:
+      - "Project Analysis: Objectives and dependencies with source requirements"
+      - "Module Creation: 4-6 independent modules with dedicated source validation"  
+      - "Sequencing Logic: Execution order with citation dependency tracking"
+      - "Individual Module Prompts: Specific prompts with source validation requirements"
+      - "Final Integration Prompt: Synthesis approach with comprehensive citation validation"
+      
+    citation_specific_validation_criteria:
+      - "Clear module boundaries and objectives include source validation scope"
+      - "Modules can be researched separately with independent source verification"
+      - "Logical connections between modules include source consistency validation"
+      - "Manageable scope per module includes feasible source validation requirements"
+      - "Integration strategy defined includes cross-module citation synthesis approach"
+      
+    enhanced_compliance_checks:
+      modules_created: "Number of modules + citation tracking implementation" 
+      module_independence: "Boolean + source validation independence"
+      clear_boundaries: "Boolean + source validation scope definition"
+      integration_strategy: "Boolean + citation synthesis methodology specification"
+
+# REAL-TIME CITATION VALIDATION DURING RESEARCH
+real_time_citation_integration:
+  continuous_validation_engine:
+    source_monitoring_during_execution:
+      accessibility_monitoring: "Real-time monitoring of source accessibility and link stability"
+      content_change_detection: "Detection of source content changes during research execution"
+      credibility_score_updates: "Dynamic updating of credibility scores based on new information"
+      independence_verification_maintenance: "Continuous verification of source independence requirements"
+      
+    progressive_citation_validation:
+      incremental_source_validation: "Validate each source as it's added to research"
+      cumulative_credibility_assessment: "Assess cumulative credibility as source portfolio grows"
+      ongoing_conflict_detection: "Detect conflicts as new sources are integrated"
+      dynamic_attribution_tracking: "Track attribution chains as research develops"
+      
+    quality_gate_enforcement:
+      credibility_threshold_enforcement: "Enforce minimum credibility thresholds throughout research"
+      independence_requirement_validation: "Validate independence requirements at each stage"
+      conflict_resolution_mandatory_gates: "Mandate conflict resolution before proceeding"  
+      attribution_completeness_checkpoints: "Check attribution completeness at key milestones"
+  
+  method_execution_citation_integration:
+    constitutional_ai_real_time_validation:
+      principle_citation_validation: "Real-time validation of citation support for constitutional principles"
+      self_evaluation_source_verification: "Verify sources used in constitutional self-evaluation"
+      correction_citation_improvement: "Improve citations during constitutional correction phase"
+      documentation_attribution_tracking: "Track attribution during constitutional documentation"
+      
+    multi_perspective_source_coordination:
+      perspective_source_specialization: "Coordinate specialized sources for each perspective"
+      cross_perspective_independence_maintenance: "Maintain source independence across perspectives"
+      triangulation_validation_ongoing: "Ongoing triangulation validation across perspectives"
+      synthesis_citation_coordination: "Coordinate citations during perspective synthesis"
+      
+    complex_research_modular_validation:
+      module_citation_isolation: "Isolate and validate citations within each research module"
+      cross_module_consistency_monitoring: "Monitor citation consistency across modules"
+      integration_attribution_synthesis: "Synthesize attributions during module integration"
+      comprehensive_validation_coordination: "Coordinate comprehensive validation across all modules"
+
+# SOURCE TRACKING AND VERIFICATION SYSTEM
+integrated_source_tracking:
+  comprehensive_source_documentation:
+    source_discovery_tracking:
+      discovery_method_documentation: "Document how each source was discovered (search, recommendation, etc.)"
+      discovery_timestamp_recording: "Record precise timestamps for source discovery"
+      discovery_context_preservation: "Preserve research context that led to source discovery"
+      discovery_rationale_documentation: "Document rationale for source selection and prioritization"
+      
+    source_utilization_tracking:
+      content_extraction_documentation: "Document specific content extracted from each source"
+      utilization_timestamp_recording: "Record timestamps for content extraction and usage"
+      utilization_context_preservation: "Preserve research context for content utilization"
+      contribution_assessment_documentation: "Document assessment of source contribution to findings"
+      
+    source_validation_tracking:
+      credibility_assessment_documentation: "Document credibility assessment process and results"
+      independence_verification_recording: "Record independence verification process and outcomes"
+      conflict_detection_documentation: "Document conflict detection and resolution processes"
+      validation_decision_rationale: "Document rationale for validation decisions and outcomes"
+  
+  attribution_chain_management:
+    granular_attribution_tracking:
+      sentence_level_attribution: "Track attribution at sentence level for precise sourcing"
+      concept_level_attribution: "Track attribution of concepts and ideas to original sources"
+      data_point_attribution: "Track attribution of specific data points to their sources"
+      methodology_attribution: "Track attribution of methodological approaches to their sources"
+      
+    cross_reference_validation:
+      source_relationship_mapping: "Map relationships and dependencies between sources"
+      citation_network_analysis: "Analyze citation networks and source interconnections"
+      influence_flow_documentation: "Document how information flows between sources"
+      consensus_building_tracking: "Track how consensus is built across multiple sources"
+      
+    attribution_quality_assurance:
+      attribution_completeness_validation: "Validate completeness of attribution across research"
+      attribution_accuracy_verification: "Verify accuracy of source attribution and citation details"
+      attribution_transparency_assessment: "Assess transparency and clarity of attribution chains"
+      attribution_consistency_checking: "Check consistency of attribution standards across research"
+
+# QUALITY METRICS AND MONITORING INTEGRATION
+citation_quality_metrics:
+  real_time_quality_monitoring:
+    citation_integrity_metrics:
+      format_compliance_rate: "Percentage of citations meeting format standards (target: ≥98%)"
+      accessibility_success_rate: "Percentage of citations with accessible sources (target: ≥95%)"
+      attribution_completeness_rate: "Percentage of research with complete attribution (target: ≥98%)"
+      provenance_tracking_accuracy: "Accuracy of provenance tracking and documentation (target: ≥95%)"
+      
+    source_validation_metrics:
+      cross_validation_success_rate: "Percentage of sources successfully cross-validated (target: ≥90%)"
+      conflict_detection_accuracy: "Accuracy of conflict detection between sources (target: ≥90%)"
+      credibility_assessment_precision: "Precision of automated credibility assessments (target: ≥85%)"
+      independence_verification_rate: "Rate of successful source independence verification (target: ≥85%)"
+      
+    constitutional_ai_integration_metrics:
+      principle_citation_support_rate: "Percentage of constitutional principles with adequate citation support"
+      self_evaluation_source_verification_rate: "Rate of source verification in constitutional self-evaluation"
+      correction_citation_improvement_rate: "Rate of citation improvement during constitutional correction"
+      transparency_documentation_completeness: "Completeness of citation transparency documentation"
+  
+  orchestrator_performance_metrics:
+    method_selection_citation_optimization:
+      citation_aware_selection_accuracy: "Accuracy of citation-aware method selection (target: ≥90%)"
+      source_coordination_effectiveness: "Effectiveness of source coordination during method execution"
+      validation_integration_smoothness: "Smoothness of validation integration with method execution"
+      quality_improvement_attribution: "Attribution of quality improvements to citation enhancements"
+      
+    workflow_integration_metrics:
+      checkpoint_citation_validation_success: "Success rate of citation validation at workflow checkpoints"
+      real_time_monitoring_effectiveness: "Effectiveness of real-time citation monitoring"
+      intervention_trigger_accuracy: "Accuracy of citation-based intervention triggers"
+      user_workflow_integration_satisfaction: "User satisfaction with citation workflow integration"
+
+# SUCCESS CRITERIA AND IMPLEMENTATION TARGETS
+implementation_success_criteria:
+  primary_integration_targets:
+    orchestrator_workflow_integration: "100% integration of citation requirements into orchestrator workflow steps"
+    method_compliance_enhancement: "≥95% method compliance with citation integrity requirements"  
+    real_time_validation_implementation: "100% implementation of real-time citation validation"
+    constitutional_ai_citation_alignment: "≥95% alignment of citation system with constitutional AI principles"
+    
+  citation_quality_targets:
+    source_verification_accuracy: "≥95% accuracy in source verification and validation"
+    citation_integrity_compliance: "≥98% compliance with citation integrity standards"
+    attribution_completeness_achievement: "≥98% achievement of complete attribution standards"
+    conflict_resolution_effectiveness: "≥90% effectiveness in source conflict detection and resolution"
+    
+  workflow_performance_targets:
+    method_execution_citation_integration: "≤10% overhead for citation validation during method execution"
+    real_time_monitoring_performance: "≤5 seconds average response time for citation validation"
+    user_experience_maintenance: "≥90% user satisfaction with citation-enhanced workflow"
+    quality_improvement_demonstration: "10-15% improvement in research quality through citation enhancements"
+
+# DEPLOYMENT AND MAINTENANCE STRATEGY
+deployment_integration:
+  phased_implementation:
+    phase_1_core_integration: "Integrate citation requirements into orchestrator workflow (Weeks 1-2)"
+    phase_2_method_enhancement: "Enhance method compliance with citation validation (Weeks 3-4)"
+    phase_3_real_time_validation: "Implement real-time citation validation and monitoring (Weeks 5-6)"
+    phase_4_optimization: "Optimize performance and user experience (Weeks 7-8)"
+    
+  testing_and_validation:
+    integration_testing: "Comprehensive testing of citation integration with orchestrator workflow"
+    method_compliance_testing: "Testing of enhanced method compliance with citation requirements"
+    performance_testing: "Testing of citation validation performance under realistic loads"
+    user_acceptance_testing: "User testing of citation-enhanced research workflow"
+    
+  maintenance_procedures:
+    source_freshness_maintenance: "Continuous maintenance of source accessibility and relevance"
+    credibility_assessment_updates: "Regular updates to credibility assessment algorithms and data"
+    citation_standard_evolution: "Adaptation to evolving citation standards and requirements"
+    integration_optimization: "Ongoing optimization of citation integration performance and effectiveness"
+
+# VERSION COMPATIBILITY AND EVOLUTION
+version_management:
+  current_version: "1.0.0"
+  compatibility_requirements:
+    orchestrator_integration: "claude-orchestrator-integration.yaml v3.0+"
+    citation_framework: "enhanced-citation-framework.yaml v1.0+"
+    method_compliance: "method-compliance-template.yaml v1.0+"
+    constitutional_ai: "constitutional-ai-compliance-enhancement.yaml v1.0+"
+    
+  evolution_roadmap:
+    version_1_1: "Advanced AI-based citation analysis and automated source recommendation"
+    version_1_2: "Machine learning-enhanced credibility assessment and conflict prediction"
+    version_2_0: "Blockchain-based source verification and collaborative citation validation"
+    version_2_1: "Real-time collaborative research with shared citation databases and validation"
+    
+  backward_compatibility:
+    legacy_workflow_support: "Support for existing research workflows with gradual citation enhancement"
+    method_compatibility_maintenance: "Maintain compatibility with existing research methods"
+    configuration_preservation: "Preserve existing research configuration with citation enhancements"
+    graceful_degradation: "Graceful degradation to basic citation practices if advanced features unavailable"
+EOF < /dev/null

@@ -351,7 +351,7 @@ utilized_servers:
 **Framework Dependencies**: 
 - @projects/ai-agent-instruction-design-excellence/ - Instruction validation and updates
 - @knowledge-vault/ - Storage for technology information and dependency mappings
-- @projects/ai-knowledge-intelligence-orchestrator/mcp-registry/ - MCP servers for information retrieval
+- @knowledge-vault/databases/tools_services/ - MCP servers for information retrieval
 - @research/findings/ - Research on information processing and AI orchestration patterns
 
 **Technology Monitoring Sources**:

@@ -271,15 +271,76 @@ You know it's working when:
 - [ ] **No permission errors** occur during authorized operations
 - [ ] **JQL queries** execute without syntax errors
 
+## Critical: Sprint vs Backlog Classification
+
+### **MANDATORY**: Always Check Sprint Field Before Classification
+
+**Field Name**: `customfield_10020` (Sprint assignment field)  
+**Critical Rule**: NEVER assume sprint assignment without field validation
+
+#### Sprint Detection Logic
+```yaml
+sprint_classification:
+  backlog_condition: "customfield_10020.value == null"
+  sprint_condition: "customfield_10020.value != null" 
+  validation_required: true
+  error_prevention: "Check field before cache placement"
+```
+
+#### Working Example - Proper Sprint Detection
+```json
+Tool: mcp__MCP_DOCKER__jira_get_issue
+Parameters:
+{
+  "issue_key": "SCRUM-123",
+  "fields": "summary,status,customfield_10020"
+}
+
+Response Analysis:
+// BACKLOG ITEM
+{
+  "customfield_10020": {"value": null}  // → Place in backlog.json
+}
+
+// SPRINT ITEM  
+{
+  "customfield_10020": {"value": "Sprint 23"}  // → Place in current-sprint.json
+}
+```
+
+#### Classification Workflow
+```yaml
+step_1: "Query issue with customfield_10020 field"
+step_2: "Check customfield_10020.value"
+step_3: |
+  if value == null:
+    classification = "BACKLOG"
+    file_destination = "backlog.json"
+  elif value != null:
+    classification = "SPRINT_ASSIGNED"  
+    file_destination = "current-sprint.json"
+step_4: "Update appropriate cache file"
+```
+
+### **CRITICAL ERROR PATTERN**: Sprint Misclassification
+
+**Error**: Assuming newly created stories = current sprint stories  
+**Root Cause**: Not checking sprint assignment field  
+**Impact**: Wrong sprint context for AI agents  
+**Prevention**: Always validate `customfield_10020` before classification  
+
+**Documented Error**: See `@meta/mcp-learning/error-logs/jira-sprint-classification-error.md`
+
 ## Error Patterns to Watch For
 
 Based on common JIRA API issues:
 
-1. **Case Sensitivity:** Issue keys and field names are case-sensitive → Use exact casing
-2. **Project Access:** User permissions change over time → Monitor project access
-3. **JQL Complexity:** Complex queries can timeout → Simplify or paginate
-4. **Field Changes:** JIRA configuration changes affect field names → Stay updated
-5. **Rate Limiting:** Heavy usage can hit API limits → Implement throttling
+1. **Sprint Misclassification (CRITICAL):** Never assume sprint assignment → Always check `customfield_10020`
+2. **Case Sensitivity:** Issue keys and field names are case-sensitive → Use exact casing
+3. **Project Access:** User permissions change over time → Monitor project access
+4. **JQL Complexity:** Complex queries can timeout → Simplify or paginate
+5. **Field Changes:** JIRA configuration changes affect field names → Stay updated
+6. **Rate Limiting:** Heavy usage can hit API limits → Implement throttling
 
 ## Related Resources
 
@@ -303,3 +364,36 @@ Based on common JIRA API issues:
 ---
 
 *This guide focuses specifically on JIRA operations and will be enhanced based on real usage patterns and error analysis*
+## Auto-Generated Insights
+
+### Error Pattern Analysis (Updated 2025-07-30)
+
+**Common Issues Detected:**
+- **Total Errors Logged:** 2
+- **Authentication Errors:** 1
+- **Parameter Errors:** 1
+- **Tool Errors:** 2
+
+**Auto-Generated Recommendations:**
+- [ ] Review error patterns in `/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/error-logs/jira-errors.md`
+- [ ] Focus on preventing most common error type
+- [ ] Update pre-flight checklist based on error analysis
+- [ ] Consider additional parameter validation
+
+**Last Analysis:** 2025-07-30 11:18
+
+## Validated Working Patterns (Auto-Generated)
+
+### Success Statistics (Updated 2025-07-30)
+- **Total Successful Operations:** 2
+- **Success Rate:** High (operations completing without errors)
+- **Pattern Confidence:** Based on actual successful operations
+
+### Confirmed Working Approaches
+*These patterns have been validated through successful operations:*
+
+- **Issue Key Formats:** Validated through successful retrievals
+
+**Success Pattern Details:** See `/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/success-patterns/jira-success-patterns.md` for complete successful operation logs
+**Reliability:** These patterns represent actual working operations
+**Last Validation:** 2025-07-30 11:18

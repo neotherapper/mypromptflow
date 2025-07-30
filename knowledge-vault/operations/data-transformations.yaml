@@ -1061,7 +1061,7 @@ relationship_resolution:
     examples:
       - "@knowledge_vault/meta-prompting-frameworks"
       - "@tools_services/claude-code-max"
-      - "@business_ideas/ai-knowledge-intelligence-orchestrator"
+      - "@business_ideas/universal-topic-intelligence-system"
       - "@training_vault/claude-code-mastery-program"
       - "@platforms_sites/github-marketplace"
       - "@notes_ideas/token-reduction-discoveries"

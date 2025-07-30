@@ -244,7 +244,7 @@ integration_architecture:
   mcp_server_registry_integration:
     purpose: "Leverage existing MCP server infrastructure for information retrieval"
     integration_points:
-      server_registry: "../../../projects/ai-knowledge-intelligence-orchestrator/mcp-registry/"
+      server_registry: "../../../projects/universal-topic-intelligence-system/mcp-registry/"
       server_profiles: "Detailed capability and performance information"
       integration_patterns: "Proven patterns for reliable server usage"
       

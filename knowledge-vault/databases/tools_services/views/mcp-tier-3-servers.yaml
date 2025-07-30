@@ -1,0 +1,515 @@
+# MCP Tier 3 Servers View
+# Specialized workflow servers for extended capabilities
+# Development tools and specialized platforms for specific use cases
+
+view_info:
+  name: "MCP Tier 3 Servers"
+  description: "Specialized workflow MCP servers for extended capabilities and specific use cases"
+  database: "tools_services"
+  version: "1.0.0"
+  created: "2025-07-30"
+  purpose: "Enable specialized workflow integration and development tool deployment for specific business needs"
+  last_updated: "2025-07-30"
+  total_servers: 22
+
+# View Configuration
+view_config:
+  primary_grouping: "specialized_category"
+  secondary_sort: "composite_score_desc"
+  include_inactive: false
+  max_results: 100
+
+# Tier 3 Criteria and Categories
+tier_3_criteria:
+  composite_score_range: "3.5-5.9"
+  business_alignment: "specialized"
+  production_readiness: ">=70%"
+  installation_priority: [3, 4, 5]
+  implementation_complexity: "moderate_to_high"
+
+# ACTUAL TIER 3 SERVERS BY SPECIALIZED CATEGORY
+
+devops_cicd:
+  description: "DevOps, CI/CD, and build automation platforms"
+  servers:
+    - name: "CircleCI MCP Server"
+      composite_score: 5.8
+      category: "DevOps & CI/CD"
+      file_path: "knowledge-vault/databases/tools_services/items/circleci-mcp-server.md"
+      production_readiness: 85
+      business_value: "Continuous integration and deployment automation"
+      setup_complexity: "Moderate"
+      provider: "CircleCI"
+      
+    - name: "Jenkins MCP Server"
+      composite_score: 5.6
+      category: "CI/CD & Build Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/jenkins-mcp-server.md"
+      production_readiness: 84
+      business_value: "Enterprise build automation and deployment pipelines"
+      setup_complexity: "High"
+      provider: "Jenkins"
+
+analytics_platforms:
+  description: "Data analytics and business intelligence platforms"
+  servers:
+    - name: "Databricks MCP Server"
+      composite_score: 5.75
+      category: "Analytics Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/databricks-mcp-server-platform.md"
+      production_readiness: 84
+      business_value: "Unified analytics platform for big data and machine learning"
+      setup_complexity: "High"
+      provider: "Databricks"
+      
+    - name: "Axiom Analytics Platform MCP Server"
+      composite_score: 5.3
+      category: "Analytics Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/axiom-analytics-platform-mcp-server-comprehensive-profile.md"
+      production_readiness: 82
+      business_value: "Real-time log analytics and observability platform"
+      setup_complexity: "Moderate"
+      provider: "Axiom"
+      
+    - name: "Snowflake MCP Server"
+      composite_score: 4.3
+      category: "Data Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/snowflake-mcp-server.md"
+      production_readiness: 78
+      business_value: "Cloud data warehouse and analytics platform"
+      setup_complexity: "High"
+      provider: "Snowflake"
+      
+    - name: "BigQuery MCP Server"
+      composite_score: 4.2
+      category: "Data Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/bigquery-mcp-server.md"
+      production_readiness: 78
+      business_value: "Google Cloud data warehouse and analytics"
+      setup_complexity: "Moderate"
+      provider: "Google Cloud"
+      
+    - name: "Metabase MCP Server"
+      composite_score: 3.7
+      category: "Business Intelligence & Self-Service Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/metabase-mcp-server-service.md"
+      production_readiness: 75
+      business_value: "Open source business intelligence and dashboards"
+      setup_complexity: "Moderate"
+      provider: "Metabase"
+      
+    - name: "dbt MCP Server"
+      composite_score: 3.6
+      category: "Data Transformation & Analytics Engineering"
+      file_path: "knowledge-vault/databases/tools_services/items/dbt-mcp-server.md"
+      production_readiness: 75
+      business_value: "Data transformation and analytics engineering"
+      setup_complexity: "Moderate"
+      provider: "dbt Labs"
+
+event_streaming_pipelines:
+  description: "Event streaming and data pipeline platforms"
+  servers:
+    - name: "Apache Kafka MCP Server"
+      composite_score: 5.3
+      category: "Event Streaming & Data Pipelines"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-kafka-mcp-server.md"
+      production_readiness: 94
+      business_value: "Distributed event streaming and real-time data processing"
+      setup_complexity: "High"
+      provider: "Apache Foundation"
+      
+    - name: "Apache Beam MCP Server"
+      composite_score: 4.8
+      category: "Big Data Processing"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-beam-mcp-server.md"
+      production_readiness: 91
+      business_value: "Unified batch and stream processing engine"
+      setup_complexity: "High"
+      provider: "Apache Foundation"
+      
+    - name: "RabbitMQ MCP Server"
+      composite_score: 4.6
+      category: "Message Queue System"
+      file_path: "knowledge-vault/databases/tools_services/items/rabbitmq-mcp-server.md"
+      production_readiness: 89
+      business_value: "Message queuing and asynchronous communication"
+      setup_complexity: "Moderate"
+      provider: "VMware"
+      
+    - name: "Apache Spark MCP Server"
+      composite_score: 4.0
+      category: "Big Data Processing & Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-spark-mcp-server.md"
+      production_readiness: 97
+      business_value: "Large-scale data processing and machine learning"
+      setup_complexity: "High"
+      provider: "Apache Foundation"
+
+design_development_tools:
+  description: "Design and development workflow tools"
+  servers:
+    - name: "Figma MCP Server"
+      composite_score: 5.1
+      category: "Design & Development Tools"
+      file_path: "knowledge-vault/databases/tools_services/items/figma-mcp-server.md"
+      production_readiness: 83
+      business_value: "Design collaboration and prototyping workflows"
+      setup_complexity: "Low"
+      provider: "Figma"
+
+cloud_deployment_platforms:
+  description: "Cloud deployment and hosting platforms"
+  servers:
+    - name: "Vercel MCP Server"
+      composite_score: 4.9
+      category: "Cloud Platform & Deployment"
+      file_path: "knowledge-vault/databases/tools_services/items/vercel-mcp-server-platform.md"
+      production_readiness: 82
+      business_value: "Frontend deployment and edge computing platform"
+      setup_complexity: "Low"
+      provider: "Vercel"
+      
+    - name: "Netlify MCP Server"
+      composite_score: 4.8
+      category: "JAMstack & Edge Computing"
+      file_path: "knowledge-vault/databases/tools_services/items/netlify-mcp-server.md"
+      production_readiness: 81
+      business_value: "JAMstack deployment and edge functions"
+      setup_complexity: "Low"
+      provider: "Netlify"
+
+infrastructure_as_code:
+  description: "Infrastructure as code and service mesh platforms"
+  servers:
+    - name: "Pulumi MCP Server"
+      composite_score: 4.9
+      category: "Infrastructure as Code"
+      file_path: "knowledge-vault/databases/tools_services/items/pulumi-mcp-server.md"
+      production_readiness: 82
+      business_value: "Modern infrastructure as code with multiple languages"
+      setup_complexity: "High"
+      provider: "Pulumi"
+      
+    - name: "HashiCorp Consul MCP Server"
+      composite_score: 4.7
+      category: "Service Mesh & Discovery"
+      file_path: "knowledge-vault/databases/tools_services/items/hashicorp-consul-mcp-server-service.md"
+      production_readiness: 80
+      business_value: "Service discovery and configuration management"
+      setup_complexity: "High"
+      provider: "HashiCorp"
+
+backend_as_a_service:
+  description: "Backend-as-a-Service and database platforms"
+  servers:
+    - name: "Firebase MCP Server"
+      composite_score: 4.7
+      category: "Backend-as-a-Service (BaaS)"
+      file_path: "knowledge-vault/databases/tools_services/items/firebase-mcp-server-service.md"
+      production_readiness: 80
+      business_value: "Google's mobile and web application development platform"
+      setup_complexity: "Moderate"
+      provider: "Google Firebase"
+      
+    - name: "Supabase MCP Server"
+      composite_score: 4.6
+      category: "Open-Source Backend-as-a-Service"
+      file_path: "knowledge-vault/databases/tools_services/items/supabase-mcp-server-service.md"
+      production_readiness: 80
+      business_value: "Open source Firebase alternative with PostgreSQL"
+      setup_complexity: "Moderate"
+      provider: "Supabase"
+
+specialized_databases:
+  description: "Specialized database systems for specific use cases"
+  servers:
+    - name: "Apache Cassandra MCP Server"
+      composite_score: 4.4
+      category: "Distributed NoSQL Database"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-cassandra-mcp-server-database.md"
+      production_readiness: 94
+      business_value: "Distributed database for handling large amounts of data"
+      setup_complexity: "High"
+      provider: "Apache Foundation"
+      
+    - name: "InfluxDB MCP Server"
+      composite_score: 3.8
+      category: "Time Series Database & IoT Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/influxdb-mcp-server-database.md"
+      production_readiness: 76
+      business_value: "Time series database for IoT and monitoring data"
+      setup_complexity: "Moderate"
+      provider: "InfluxData"
+
+workflow_orchestration:
+  description: "Workflow orchestration and automation platforms"
+  servers:
+    - name: "Apache Airflow MCP Server"
+      composite_score: 4.1
+      category: "Workflow Orchestration"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-airflow-mcp-server.md"
+      production_readiness: 88
+      business_value: "Data pipeline orchestration and workflow automation"
+      setup_complexity: "High"
+      provider: "Apache Foundation"
+
+# Implementation Strategy
+implementation_strategy:
+  phase_1_devops_foundation:
+    description: "Phase 1: DevOps and CI/CD foundation"
+    timeline: "Week 1-4"
+    servers:
+      - "CircleCI MCP Server"
+      - "Jenkins MCP Server"
+      - "Figma MCP Server"
+    success_criteria:
+      - "CI/CD pipelines operational"
+      - "Build automation functional"
+      - "Design workflow integration active"
+      
+  phase_2_analytics_data:
+    description: "Phase 2: Analytics and data platform integration"
+    timeline: "Week 5-8"
+    servers:
+      - "Databricks MCP Server"
+      - "Apache Kafka MCP Server"
+      - "Axiom Analytics Platform MCP Server"
+    success_criteria:
+      - "Data analytics platform functional"
+      - "Event streaming operational"
+      - "Real-time analytics active"
+      
+  phase_3_cloud_deployment:
+    description: "Phase 3: Cloud deployment and infrastructure"
+    timeline: "Week 9-12"
+    servers:
+      - "Vercel MCP Server"
+      - "Netlify MCP Server"
+      - "Pulumi MCP Server"
+    success_criteria:
+      - "Frontend deployment automation operational"
+      - "JAMstack workflows functional"
+      - "Infrastructure as code active"
+      
+  phase_4_specialized_services:
+    description: "Phase 4: Specialized databases and backend services"
+    timeline: "Week 13-16"
+    servers:
+      - "Firebase MCP Server"
+      - "Supabase MCP Server"
+      - "Apache Cassandra MCP Server"
+      - "Apache Airflow MCP Server"
+    success_criteria:
+      - "Backend-as-a-Service operational"
+      - "Specialized databases functional"
+      - "Workflow orchestration active"
+
+# Quality Metrics and Monitoring
+quality_metrics:
+  tier_3_requirements:
+    min_composite_score: 3.5
+    min_business_alignment: 5.0
+    min_production_readiness: 70
+    max_setup_complexity: 8
+    min_reliability_score: 6.0
+    
+  monitoring_kpis:
+    - "Deployment success rate >=75%"
+    - "Time to production <=6 weeks"
+    - "Business value realization >=60%"
+    - "User adoption rate >=50%"
+    - "System uptime >=98.5%"
+
+# Business Value Assessment
+business_value_factors:
+  workflow_automation:
+    weight: 0.25
+    description: "Specialized workflow automation and orchestration"
+    measurement: "Workflow efficiency improvement and automation coverage"
+    
+  data_analytics:
+    weight: 0.20
+    description: "Advanced data analytics and business intelligence"
+    measurement: "Data processing capability and insight generation"
+    
+  development_tools:
+    weight: 0.20
+    description: "Specialized development and design tools"
+    measurement: "Development productivity and tool integration"
+    
+  infrastructure_automation:
+    weight: 0.15
+    description: "Infrastructure provisioning and management automation"
+    measurement: "Infrastructure deployment efficiency and reliability"
+    
+  platform_integration:
+    weight: 0.10
+    description: "Platform-specific integrations and capabilities"
+    measurement: "Platform utilization and feature adoption"
+    
+  specialized_capability:
+    weight: 0.10
+    description: "Specialized capabilities for niche use cases"
+    measurement: "Use case coverage and specialized feature utilization"
+
+# Usage Patterns for AI Agents
+usage_patterns:
+  specialized_deployment:
+    description: "Deploy servers for specific specialized use cases"
+    query_format: "tier:Tier_3 AND category:{specialized_category} ORDER BY composite_score DESC"
+    example: "Get Tier 3 analytics platforms for data processing workflows"
+    
+  complexity_managed_integration:
+    description: "Deploy based on complexity management capabilities"
+    query_format: "tier:Tier_3 AND setup_complexity:<=Moderate ORDER BY business_value DESC"
+    example: "Tier 3 servers with manageable complexity for specialized needs"
+    
+  capability_focused_selection:
+    description: "Select servers based on specific capability requirements"
+    query_format: "tier:Tier_3 AND specialized_category:{category}"
+    example: "Find Tier 3 servers for DevOps and CI/CD workflows"
+    
+  production_ready_specialized:
+    description: "Identify production-ready specialized servers"
+    query_format: "tier:Tier_3 AND production_readiness:>=80"
+    example: "Get production-ready Tier 3 servers for specialized deployments"
+
+# Filter Configurations for Specialized Integration
+filter_presets:
+  devops_ready:
+    description: "DevOps and CI/CD servers ready for deployment"
+    filters:
+      - "tier: Tier 3"
+      - "specialized_category: devops_cicd"
+      - "production_readiness: >=80"
+      - "composite_score: >=5.0"
+    expected_results: ["CircleCI MCP Server", "Jenkins MCP Server"]
+    
+  analytics_platforms:
+    description: "Data analytics and BI platforms"
+    filters:
+      - "tier: Tier 3"
+      - "specialized_category: analytics_platforms"
+      - "composite_score: >=4.0"
+      - "production_readiness: >=75"
+    expected_results: ["Databricks MCP Server", "Axiom Analytics Platform MCP Server", "Snowflake MCP Server", "BigQuery MCP Server"]
+    
+  low_complexity_specialized:
+    description: "Specialized servers with lower setup complexity"
+    filters:
+      - "tier: Tier 3"
+      - "setup_complexity: Low OR Moderate"
+      - "production_readiness: >=80"
+    expected_results: ["Figma MCP Server", "Vercel MCP Server", "Netlify MCP Server"]
+    
+  event_streaming_ready:
+    description: "Event streaming and data pipeline platforms"
+    filters:
+      - "tier: Tier 3"
+      - "specialized_category: event_streaming_pipelines"
+      - "production_readiness: >=85"
+    expected_results: ["Apache Kafka MCP Server", "Apache Beam MCP Server", "RabbitMQ MCP Server"]
+    
+  cloud_deployment_platforms:
+    description: "Cloud deployment and hosting solutions"
+    filters:
+      - "tier: Tier 3"
+      - "specialized_category: cloud_deployment_platforms"
+      - "setup_complexity: Low OR Moderate"
+    expected_results: ["Vercel MCP Server", "Netlify MCP Server"]
+
+# AI Agent Integration Instructions
+ai_agent_instructions:
+  view_access:
+    - "Use Read tool with path: knowledge-vault/databases/tools_services/views/mcp-tier-3-servers.yaml"
+    - "Reference tier_3_criteria for understanding specialized qualification standards"
+    - "Apply filter_presets based on specific specialized integration needs"
+    
+  specialized_planning:
+    - "Follow implementation_strategy phases for systematic specialized integration"
+    - "Use specialized_deployment pattern for capability-focused selection"
+    - "Monitor quality_metrics throughout specialized integration process"
+    - "Assess business_value_factors for specialized use case alignment"
+    
+  deployment_workflow:
+    - "Query view to identify specialized category servers"
+    - "Review detailed profiles in tools_services/items/ for technical specifications"
+    - "Validate specialized requirements and integration capabilities"
+    - "Execute phased integration following specialized implementation strategy"
+
+# Cross-Reference Integration
+cross_references:
+  related_views:
+    - "mcp-tier-2-servers.yaml: Higher priority servers for foundational capabilities"
+    - "mcp-tier-4-servers.yaml: Experimental and niche servers for specific scenarios"
+    - "information-sources-by-type.yaml: Capability-based server discovery"
+    
+  specialized_integration_guides:
+    - "DevOps and CI/CD integration best practices"
+    - "Data analytics platform deployment strategies"
+    - "Event streaming architecture design"
+    - "Infrastructure as code implementation patterns"
+
+# Example Queries for Common Use Cases
+example_queries:
+  devops_cicd_deployment:
+    tier: "Tier 3"
+    filter_preset: "devops_ready"
+    capabilities: ["continuous_integration", "deployment_automation", "build_management"]
+    expected_results: ["CircleCI MCP Server", "Jenkins MCP Server"]
+    
+  data_analytics_platform:
+    tier: "Tier 3"
+    filter_preset: "analytics_platforms"
+    capabilities: ["data_analytics", "business_intelligence", "data_warehouse"]
+    expected_results: ["Databricks MCP Server", "Axiom Analytics Platform MCP Server", "Snowflake MCP Server"]
+    
+  event_streaming_architecture:
+    tier: "Tier 3"
+    filter_preset: "event_streaming_ready"
+    capabilities: ["event_streaming", "message_queuing", "real_time_processing"]
+    expected_results: ["Apache Kafka MCP Server", "Apache Beam MCP Server", "RabbitMQ MCP Server"]
+    
+  quick_deployment_specialized:
+    tier: "Tier 3"
+    filter_preset: "low_complexity_specialized"
+    sort_criteria: ["composite_score DESC", "setup_complexity ASC"]
+    expected_results: ["Figma MCP Server", "Vercel MCP Server", "Netlify MCP Server"]
+
+# Success Metrics and KPIs
+success_metrics:
+  deployment_success:
+    target: ">=75%"
+    measurement: "Percentage of successful specialized server deployments"
+    timeline: "Within 6 weeks of initiation"
+    
+  business_value_realization:
+    target: ">=60%"
+    measurement: "Percentage of expected specialized business value achieved"
+    timeline: "Within 10 weeks of deployment"
+    
+  user_adoption:
+    target: ">=50%"
+    measurement: "Percentage of target users actively using specialized servers"
+    timeline: "Within 8 weeks of deployment"
+    
+  system_reliability:
+    target: ">=98.5%"
+    measurement: "System uptime and availability for specialized services"
+    timeline: "Continuous monitoring"
+
+# Maintenance and Updates
+maintenance:
+  update_frequency: "monthly"
+  review_criteria:
+    - "Specialized server performance and use case validation"
+    - "Changes to composite scores affecting tier classification"
+    - "Updates to specialized category classifications"
+    - "Integration success metrics and specialized workflow optimization"
+    
+  quality_assurance:
+    - "Validation of tier_3_criteria compliance for specialized servers"
+    - "Specialized business value assessment accuracy"
+    - "Integration complexity evaluation for specialized use cases"
+    - "ROI measurement for specialized capability deployment"

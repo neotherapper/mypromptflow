@@ -262,7 +262,7 @@ This enhanced analysis consolidates unique discoveries from comprehensive resear
 
 **Operational Registry Alignment:**
 All discoveries and insights from this enhanced analysis have been integrated into the operational registry at:
-- `@projects/ai-knowledge-intelligence-orchestrator/mcp-registry/`
+- `@projects/universal-topic-intelligence-system/mcp-registry/`
 
 **Registry Enhancement Contributions:**
 - **Server Count Expansion**: From 302 to 1,126+ servers in master database
