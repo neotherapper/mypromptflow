@@ -1,0 +1,409 @@
+# MCP Server Coordination Framework
+# Unified error handling and coordination patterns for MCP server integration
+# Version: 1.0 - Phase 3 Enhanced
+# Updated: 2025-07-29
+
+metadata:
+  version: "1.0.0"
+  purpose: "Comprehensive MCP server coordination with unified error handling"
+  integration: "Coordinates with source-discovery-framework.yaml for intelligent MCP usage"
+  supersedes: "Individual MCP server error handling approaches"
+
+# MCP SERVER REGISTRY AND COORDINATION
+mcp_server_registry:
+  available_servers:
+    tier_1_primary:
+      - name: "github"
+        server_id: "mcp__MCP_DOCKER__"
+        tools: ["search_repositories", "get_file_contents", "search_code", "list_commits"]
+        authentication: "required"
+        rate_limits: "5000_requests_per_hour"
+        reliability_score: 9.5
+        primary_domains: ["development", "code_repositories", "collaboration"]
+        
+      - name: "notion"
+        server_id: "mcp__MCP_DOCKER__API-"
+        tools: ["retrieve-a-page", "post-page", "patch-page", "post-database-query"]
+        authentication: "oauth_required"
+        rate_limits: "1000_requests_per_hour"
+        reliability_score: 9.0
+        primary_domains: ["documentation", "knowledge_management", "productivity"]
+        
+      - name: "jira"
+        server_id: "mcp__MCP_DOCKER__jira_"
+        tools: ["get_issue", "create_issue", "search", "add_comment"]
+        authentication: "required"
+        rate_limits: "10000_requests_per_hour"
+        reliability_score: 8.5
+        primary_domains: ["project_management", "issue_tracking", "workflow"]
+
+    tier_2_strategic:
+      - name: "docker"
+        server_id: "mcp__MCP_DOCKER__docker"
+        tools: ["docker"]
+        authentication: "local_daemon"
+        rate_limits: "unlimited_local"
+        reliability_score: 8.0
+        primary_domains: ["containerization", "infrastructure", "deployment"]
+        
+      - name: "browser"
+        server_id: "mcp__MCP_DOCKER__browser_"
+        tools: ["navigate", "click", "type", "snapshot", "take_screenshot"]
+        authentication: "none"
+        rate_limits: "session_based"
+        reliability_score: 7.5
+        primary_domains: ["web_automation", "testing", "scraping"]
+
+    tier_3_specialized:
+      - name: "youtube"
+        server_id: "mcp__MCP_DOCKER__get_transcript"
+        tools: ["get_transcript"]
+        authentication: "none"
+        rate_limits: "moderate"
+        reliability_score: 7.0
+        primary_domains: ["content_analysis", "transcription", "media"]
+        
+      - name: "wikipedia"
+        server_id: "mcp__MCP_DOCKER__"
+        tools: ["search_wikipedia", "get_article", "get_summary"]
+        authentication: "none"
+        rate_limits: "moderate"
+        reliability_score: 8.0
+        primary_domains: ["knowledge_base", "research", "factual_information"]
+
+# UNIFIED ERROR HANDLING FRAMEWORK
+error_handling_framework:
+  error_categories:
+    connectivity_errors:
+      patterns: ["connection_refused", "timeout", "network_unreachable"]
+      severity: "high"
+      immediate_action: "switch_to_fallback_source"
+      retry_strategy: "exponential_backoff"
+      max_retries: 3
+      base_delay: 1.0  # seconds
+      max_delay: 30.0  # seconds
+      
+    authentication_errors:
+      patterns: ["unauthorized", "forbidden", "invalid_token", "expired_credentials"]
+      severity: "high"
+      immediate_action: "attempt_token_refresh"
+      fallback_action: "use_non_authenticated_alternative"
+      user_notification: "authentication_required"
+      retry_strategy: "progressive_delay"
+      max_retries: 2
+      
+    rate_limiting_errors:
+      patterns: ["rate_limit_exceeded", "too_many_requests", "quota_exceeded"]
+      severity: "medium"
+      immediate_action: "implement_intelligent_backoff"
+      coordination_strategy: "distribute_across_servers"
+      retry_strategy: "intelligent_spacing"
+      backoff_multiplier: 2.0
+      jitter: true
+      
+    server_unavailable:
+      patterns: ["service_unavailable", "internal_server_error", "maintenance_mode"]
+      severity: "high"
+      immediate_action: "switch_to_tier_fallback"
+      fallback_hierarchy: ["tier_1", "tier_2", "websearch", "webfetch"]
+      retry_after: 300  # seconds
+      
+    data_errors:
+      patterns: ["invalid_response", "malformed_data", "empty_result"]
+      severity: "medium"
+      immediate_action: "validate_and_retry"
+      fallback_action: "alternative_source_coordination"
+      max_retries: 2
+
+# INTELLIGENT COORDINATION PATTERNS
+coordination_patterns:
+  parallel_mcp_execution:
+    description: "Execute multiple MCP server tools simultaneously for comprehensive coverage"
+    implementation:
+      batch_size: 5  # maximum parallel MCP calls
+      timeout_per_call: 30  # seconds
+      result_aggregation: "merge_and_deduplicate"
+      error_isolation: "continue_on_partial_failure"
+    
+    example_pattern:
+      github_search: "mcp__MCP_DOCKER__search_repositories"
+      notion_query: "mcp__MCP_DOCKER__API-post-database-query"
+      jira_search: "mcp__MCP_DOCKER__jira_search"
+      execution_mode: "parallel"
+      result_coordination: "aggregate_all_sources"
+      
+  sequential_mcp_coordination:
+    description: "Chain MCP server calls with dependency management"
+    implementation:
+      dependency_tracking: "maintain_call_sequence"
+      intermediate_validation: "validate_each_step"
+      rollback_capability: "undo_on_failure"
+      progress_tracking: "step_by_step_logging"
+    
+    example_pattern:
+      step_1: "GitHub repository discovery"
+      step_2: "Notion documentation retrieval (uses GitHub results)"
+      step_3: "JIRA issue creation (uses combined context)"
+      execution_mode: "sequential"
+      
+  adaptive_mcp_routing:
+    description: "Dynamic MCP server selection based on availability and performance"
+    implementation:
+      availability_monitoring: "real_time_health_checks"
+      performance_tracking: "response_time_metrics"
+      intelligent_routing: "best_available_server"
+      fallback_chaining: "tier_based_degradation"
+    
+    routing_algorithm:
+      primary_selection: "highest_reliability_score + lowest_latency"
+      fallback_logic: "tier_1 → tier_2 → tier_3 → web_alternatives"
+      circuit_breaker: "temporary_server_exclusion_on_repeated_failures"
+      recovery_testing: "periodic_availability_probes"
+
+# ERROR RECOVERY AND FALLBACK STRATEGIES
+recovery_strategies:
+  graceful_degradation:
+    mcp_to_web_fallback:
+      github_unavailable:
+        fallback: "WebSearch with site:github.com"
+        query_transformation: "convert MCP query to web search syntax"
+        result_parsing: "extract repository information from web results"
+        
+      notion_unavailable:
+        fallback: "WebFetch for direct page access"
+        alternative: "Local knowledge-vault documentation"
+        result_transformation: "parse web content to structured data"
+        
+      jira_unavailable:
+        fallback: "Manual issue tracking notification"
+        alternative: "GitHub Issues creation as backup"
+        user_notification: "JIRA integration temporarily unavailable"
+    
+    tier_based_fallback:
+      tier_1_failure:
+        action: "Immediately try tier_2 alternatives"
+        example: "GitHub MCP failure → Docker registry search"
+        
+      tier_2_failure:
+        action: "Resort to tier_3 or web alternatives"
+        example: "Docker MCP failure → WebSearch for container documentation"
+        
+      complete_mcp_failure:
+        action: "Full web-based research mode"
+        coordination: "Use WebSearch + WebFetch exclusively"
+        notification: "MCP services temporarily unavailable"
+
+  intelligent_retry_mechanisms:
+    exponential_backoff:
+      base_delay: 1.0
+      max_delay: 60.0
+      multiplier: 2.0
+      jitter: 0.1  # random factor to prevent thundering herd
+      
+    circuit_breaker_pattern:
+      failure_threshold: 5  # failures before opening circuit
+      timeout: 300  # seconds before testing recovery
+      success_threshold: 2  # successes needed to close circuit
+      
+    adaptive_timeout:
+      initial_timeout: 30  # seconds
+      max_timeout: 120  # seconds
+      adjustment_factor: 1.5  # timeout increase on failure
+
+# PERFORMANCE OPTIMIZATION
+performance_optimization:
+  connection_pooling:
+    enabled: true
+    max_connections_per_server: 10
+    connection_timeout: 30  # seconds
+    idle_timeout: 300  # seconds
+    
+  request_batching:
+    enabled: true
+    batch_size: 5  # requests per batch
+    batch_timeout: 10  # seconds
+    batch_aggregation: "merge_responses"
+    
+  caching_strategy:
+    enabled: true
+    cache_duration: 3600  # seconds (1 hour)
+    cache_scope: "session_based"
+    cache_invalidation: "time_based"
+    
+  rate_limit_coordination:
+    global_rate_limiting: true
+    per_server_limits: "use_server_specific_limits"
+    intelligent_distribution: "spread_requests_across_servers"
+    burst_handling: "queue_with_priority"
+
+# MONITORING AND OBSERVABILITY
+monitoring_framework:
+  health_checks:
+    frequency: 60  # seconds
+    timeout: 10  # seconds
+    endpoints: "server_specific_health_endpoints"
+    failure_threshold: 3  # consecutive failures before marking unhealthy
+    
+  performance_metrics:
+    response_time_tracking: true
+    success_rate_monitoring: true
+    error_rate_analysis: true
+    resource_utilization: true
+    
+  alerting:
+    error_rate_threshold: 0.05  # 5% error rate triggers alert
+    response_time_threshold: 5000  # milliseconds
+    availability_threshold: 0.95  # 95% availability required
+    
+  logging:
+    log_level: "INFO"
+    structured_logging: true
+    correlation_ids: true
+    performance_logging: true
+    error_detail_logging: true
+
+# SECURITY AND COMPLIANCE
+security_framework:
+  authentication_management:
+    token_storage: "secure_environment_variables"
+    token_rotation: "automatic_refresh"
+    permission_validation: "least_privilege_principle"
+    
+  data_protection:
+    encryption_in_transit: true
+    sensitive_data_masking: true
+    audit_logging: true
+    compliance_validation: true
+    
+  access_control:
+    role_based_access: true
+    server_permission_mapping: "domain_specific_access"
+    audit_trail: "complete_access_logging"
+
+# INTEGRATION WITH SOURCE DISCOVERY FRAMEWORK
+framework_integration:
+  source_mapping_coordination:
+    technology_specific_mcp:
+      react_development:
+        primary_mcp: "github"
+        tools: ["search_repositories", "get_file_contents"]
+        query_patterns: ["language:JavaScript,TypeScript react"]
+        fallback: "WebSearch for React documentation"
+        
+      database_management:
+        primary_mcp: "docker"  # for database containers
+        secondary_mcp: "github"  # for database tools
+        tools: ["docker", "search_repositories"]
+        fallback: "WebSearch for database documentation"
+        
+      project_management:
+        primary_mcp: "jira"
+        secondary_mcp: "notion"
+        tools: ["jira_search", "API-post-database-query"]
+        fallback: "GitHub Issues integration"
+    
+    error_coordination:
+      mcp_failure_reporting:
+        update_source_discovery: "mark_mcp_source_unavailable"
+        trigger_fallback: "activate_web_based_alternatives"
+        restore_coordination: "re_enable_when_healthy"
+        
+      quality_impact_assessment:
+        source_diversity_maintenance: "ensure_minimum_3_source_types"
+        coverage_preservation: "maintain_comprehensive_information_access"
+        attribution_accuracy: "track_fallback_source_usage"
+
+# USAGE PATTERNS AND BEST PRACTICES
+usage_patterns:
+  domain_specific_coordination:
+    development_workflows:
+      mcp_sequence: ["github", "docker", "notion"]
+      parallel_execution: true
+      fallback_chain: "github → websearch, docker → local, notion → webfetch"
+      
+    research_workflows:
+      mcp_sequence: ["github", "wikipedia", "notion"]
+      information_aggregation: "comprehensive_source_combination"
+      quality_validation: "cross_source_verification"
+      
+    project_management:
+      mcp_sequence: ["jira", "notion", "github"]
+      workflow_integration: "issue_tracking_coordination"
+      automation_patterns: "status_synchronization"
+  
+  error_handling_best_practices:
+    preemptive_validation:
+      - "Test MCP server connectivity before bulk operations"
+      - "Validate authentication tokens before authenticated calls"
+      - "Check rate limits before high-volume requests"
+      
+    reactive_error_handling:  
+      - "Implement circuit breaker for repeated failures"
+      - "Use exponential backoff for transient errors"
+      - "Provide meaningful user feedback on service issues"
+      
+    recovery_optimization:
+      - "Cache successful configurations for quick recovery"
+      - "Maintain alternative source mappings for each MCP server"
+      - "Log error patterns for proactive issue resolution"
+
+# QUALITY METRICS AND VALIDATION
+quality_metrics:
+  mcp_coordination_effectiveness:
+    success_rate_target: 0.95  # 95% successful MCP operations
+    average_response_time_target: 2000  # milliseconds
+    fallback_activation_rate: 0.05  # 5% fallback usage acceptable
+    
+  error_handling_performance:
+    error_recovery_time_target: 30  # seconds
+    fallback_success_rate_target: 0.90  # 90% fallback success
+    user_impact_minimization: "seamless_degradation"
+    
+  integration_quality:
+    source_diversity_maintenance: 1.0  # 100% diversity preservation
+    information_completeness: 0.95  # 95% information coverage
+    attribution_accuracy: 1.0  # 100% accurate source tracking
+
+# CONFIGURATION TEMPLATES
+configuration_templates:
+  basic_mcp_coordination:
+    pattern: "single_server_with_fallback"
+    implementation: "primary_mcp → web_fallback"
+    use_case: "Simple information retrieval"
+    
+  advanced_mcp_orchestration:
+    pattern: "multi_server_parallel_execution"
+    implementation: "parallel_mcp_calls → result_aggregation → error_recovery"
+    use_case: "Comprehensive research or validation workflows"
+    
+  enterprise_mcp_management:
+    pattern: "full_monitoring_and_compliance"
+    implementation: "health_monitoring → performance_tracking → security_validation"
+    use_case: "Production deployment with SLA requirements"
+
+# DEPLOYMENT AND MAINTENANCE
+deployment_considerations:
+  environment_setup:
+    required_environment_variables:
+      - "MCP_SERVER_ENDPOINTS"
+      - "AUTHENTICATION_TOKENS"
+      - "RATE_LIMIT_CONFIGURATIONS"
+      - "FALLBACK_ENDPOINTS"
+      
+  maintenance_procedures:
+    health_monitoring: "continuous_server_availability_tracking"
+    performance_optimization: "regular_response_time_analysis"
+    configuration_updates: "version_controlled_server_mappings"
+    
+  scaling_considerations:
+    horizontal_scaling: "distribute_load_across_server_instances"
+    vertical_scaling: "optimize_connection_pooling_and_caching"
+    geographic_distribution: "region_aware_server_selection"
+
+# VERSION COMPATIBILITY
+version_compatibility:
+  current_version: "1.0.0"
+  compatible_frameworks: ["source-discovery-framework.yaml v2.0+"]
+  breaking_changes: "none"
+  migration_path: "direct_implementation"
+  deprecation_timeline: "n/a"

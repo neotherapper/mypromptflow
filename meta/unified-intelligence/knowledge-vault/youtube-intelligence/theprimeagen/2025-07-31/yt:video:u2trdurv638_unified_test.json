@@ -1,0 +1,25 @@
+{
+  "video_url": "https://www.youtube.com/shorts/u2trdurv638",
+  "video_id": "yt:video:u2trdurv638",
+  "title": "Imposter Syndrome",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "queued_at": "2025-07-31T10:05:59.625749",
+  "status": "completed_test",
+  "transcript": null,
+  "insights": null,
+  "processed_at": null,
+  "error": null,
+  "transcript_summary": "Perfect! Now I can analyze the transcript content.\n\n## Content Analysis\n\n### 1. Key Programming Concepts Mentioned\n- **Recursion** - Specifically mentioned as a challenging programming concept that was learned\n- **Classes** - Object-oriented programming fundamental\n- **Functions** - Core programming building blocks\n- **Database connections** - Data persistence and backend development\n- **HTTP** - Web communication protocol\n\n### 2. Tools or Technologies Discussed\n- **Programming languages** (impl...",
+  "unified_score": 1.0,
+  "processed_with": "unified-intelligence-framework",
+  "framework_version": "1.0.0",
+  "processing_timestamp": "2025-07-31T08:39:53.994844+00:00"
+}
