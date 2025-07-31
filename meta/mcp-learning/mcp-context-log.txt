@@ -1,0 +1,5 @@
+# MCP Context Log
+# Captures user intent, task context, and system state for MCP operations
+# Format: [TIMESTAMP] [LEVEL] [CONTEXT_TYPE] - [DATA]
+
+[2025-07-31 00:13:28] [INFO] [MCP_OPERATION] - jira::jira_get_issue - Get test issue

@@ -1,0 +1,23 @@
+# YouTube RSS Monitoring System Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core RSS and web scraping
+feedparser==6.0.10
+requests==2.31.0
+
+# Date and time handling
+python-dateutil==2.8.2
+
+# Optional: Enhanced web scraping (if needed)
+beautifulsoup4==4.12.2
+lxml==4.9.3
+
+# Optional: Data analysis and processing
+pandas==2.1.4
+
+# Development and testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Logging and monitoring
+colorlog==6.8.0

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Channel Monitoring Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #718096;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: #f7fafc;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .channel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .channel-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        .channel-card:hover {
+            border-color: #667eea;
+        }
+        
+        .channel-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .rating {
+            color: #f6ad55;
+        }
+        
+        .priority {
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .priority.high {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        
+        .priority.medium {
+            background: #fef5e7;
+            color: #dd6b20;
+        }
+        
+        .priority.low {
+            background: #e6fffa;
+            color: #319795;
+        }
+        
+        .topics {
+            margin-top: 0.5rem;
+        }
+        
+        .topic-tag {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin: 0.1rem;
+        }
+        
+        .video-list {
+            list-style: none;
+        }
+        
+        .video-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .video-item:last-child {
+            border-bottom: none;
+        }
+        
+        .video-thumbnail {
+            width: 120px;
+            height: 68px;
+            background: #edf2f7;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0aec0;
+            font-size: 0.8rem;
+        }
+        
+        .video-info {
+            flex: 1;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .video-meta {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        .status {
+            padding: 0.3rem 0.8rem;
+            border-radius: 16px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status.pending {
+            background: #fef5e7;
+            color: #dd6b20;
+        }
+        
+        .status.processing {
+            background: #e6fffa;
+            color: #319795;
+        }
+        
+        .status.completed {
+            background: #f0fff4;
+            color: #38a169;
+        }
+        
+        .status.failed {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+            margin-bottom: 2rem;
+        }
+        
+        .refresh-btn:hover {
+            background: #5a67d8;
+        }
+        
+        .last-updated {
+            text-align: center;
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .video-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📺 YouTube Channel Monitor</h1>
+        <p>Universal Topic Intelligence System - Programming Channel Monitoring</p>
+    </div>
+    
+    <div class="container">
+        <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Data</button>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalChannels">23</div>
+                <div class="stat-label">Monitored Channels</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="newVideos">-</div>
+                <div class="stat-label">New Videos Today</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="processedVideos">-</div>
+                <div class="stat-label">Processed Videos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgRelevance">-</div>
+                <div class="stat-label">Avg Relevance Score</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                📊 Channel Overview
+            </div>
+            <div class="section-content">
+                <div class="channel-grid" id="channelGrid">
+                    <!-- Channels will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                🎬 Recent Videos
+            </div>
+            <div class="section-content">
+                <ul class="video-list" id="videoList">
+                    <!-- Videos will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-header">
+                ⚡ Processing Queue
+            </div>
+            <div class="section-content">
+                <ul class="video-list" id="processingQueue">
+                    <!-- Processing queue will be populated by JavaScript -->
+                </ul>
+            </div>
+        </div>
+        
+        <div class="last-updated" id="lastUpdated">
+            Last updated: Loading...
+        </div>
+    </div>
+    
+    <script>
+        // Sample data structure (would be loaded from actual files in production)
+        const dashboardData = {
+            channels: [
+                {
+                    name: "ThePrimeagen",
+                    rating: 5,
+                    priority: "high",
+                    topics: ["software-engineering", "vim", "programming"],
+                    uploadFrequency: "weekly",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                },
+                {
+                    name: "Fireship",
+                    rating: 5,
+                    priority: "high", 
+                    topics: ["programming", "web-development", "tutorials"],
+                    uploadFrequency: "weekly",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                },
+                {
+                    name: "Theo - t3․gg",
+                    rating: 5,
+                    priority: "high",
+                    topics: ["typescript", "react", "t3-stack"],
+                    uploadFrequency: "frequent",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                },
+                {
+                    name: "Learn With Jason",
+                    rating: 5,
+                    priority: "high",
+                    topics: ["web-development", "live-coding", "javascript"],
+                    uploadFrequency: "weekly",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                },
+                {
+                    name: "James Q Quick",
+                    rating: 4,
+                    priority: "medium",
+                    topics: ["javascript", "react", "career-advice"],
+                    uploadFrequency: "bi-weekly",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                },
+                {
+                    name: "UI.dev",
+                    rating: 4,
+                    priority: "medium",
+                    topics: ["javascript", "frontend", "tutorials"],
+                    uploadFrequency: "weekly",
+                    lastChecked: "2025-01-31T10:30:00Z"
+                }
+            ],
+            recentVideos: [
+                {
+                    title: "Why I Switched to Neovim (And You Should Too)",
+                    channel: "ThePrimeagen",
+                    publishedAt: "2025-01-31T08:00:00Z",
+                    status: "completed",
+                    relevanceScore: 0.92,
+                    url: "https://youtube.com/watch?v=example1"
+                },
+                {
+                    title: "React 19 is Finally Here - What Changed?",
+                    channel: "Fireship",
+                    publishedAt: "2025-01-30T15:30:00Z",
+                    status: "processing",
+                    relevanceScore: 0.88,
+                    url: "https://youtube.com/watch?v=example2"
+                },
+                {
+                    title: "T3 Stack Tutorial - Build a Full Stack App",
+                    channel: "Theo - t3․gg",
+                    publishedAt: "2025-01-30T12:00:00Z",
+                    status: "pending",
+                    relevanceScore: null,
+                    url: "https://youtube.com/watch?v=example3"
+                }
+            ],
+            stats: {
+                newVideosToday: 3,
+                processedVideos: 1,
+                avgRelevanceScore: 0.90
+            }
+        };
+        
+        function renderChannels() {
+            const channelGrid = document.getElementById('channelGrid');
+            channelGrid.innerHTML = '';
+            
+            dashboardData.channels.forEach(channel => {
+                const channelCard = document.createElement('div');
+                channelCard.className = 'channel-card';
+                
+                const ratingStars = '⭐'.repeat(channel.rating);
+                const topicTags = channel.topics.map(topic => 
+                    `<span class="topic-tag">${topic}</span>`
+                ).join('');
+                
+                channelCard.innerHTML = `
+                    <div class="channel-name">
+                        ${channel.name}
+                        <span class="rating">${ratingStars}</span>
+                        <span class="priority ${channel.priority}">${channel.priority}</span>
+                    </div>
+                    <div style="color: #718096; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                        Upload frequency: ${channel.uploadFrequency}
+                    </div>
+                    <div class="topics">${topicTags}</div>
+                `;
+                
+                channelGrid.appendChild(channelCard);
+            });
+        }
+        
+        function renderRecentVideos() {
+            const videoList = document.getElementById('videoList');
+            videoList.innerHTML = '';
+            
+            dashboardData.recentVideos.forEach(video => {
+                const videoItem = document.createElement('li');
+                videoItem.className = 'video-item';
+                
+                const relevanceText = video.relevanceScore ? 
+                    `Relevance: ${video.relevanceScore.toFixed(2)}` : 
+                    'Relevance: Pending';
+                
+                videoItem.innerHTML = `
+                    <div class="video-thumbnail">📺</div>
+                    <div class="video-info">
+                        <div class="video-title">${video.title}</div>
+                        <div class="video-meta">
+                            ${video.channel} • ${new Date(video.publishedAt).toLocaleDateString()} • ${relevanceText}
+                        </div>
+                    </div>
+                    <div class="status ${video.status}">${video.status}</div>
+                `;
+                
+                videoList.appendChild(videoItem);
+            });
+        }
+        
+        function renderProcessingQueue() {
+            const processingQueue = document.getElementById('processingQueue');
+            const pendingVideos = dashboardData.recentVideos.filter(v => v.status === 'pending' || v.status === 'processing');
+            
+            if (pendingVideos.length === 0) {
+                processingQueue.innerHTML = '<li style="padding: 2rem; text-align: center; color: #718096;">No videos in processing queue</li>';
+                return;
+            }
+            
+            processingQueue.innerHTML = '';
+            pendingVideos.forEach(video => {
+                const videoItem = document.createElement('li');
+                videoItem.className = 'video-item';
+                
+                videoItem.innerHTML = `
+                    <div class="video-thumbnail">⏳</div>
+                    <div class="video-info">
+                        <div class="video-title">${video.title}</div>
+                        <div class="video-meta">
+                            ${video.channel} • Queued at ${new Date(video.publishedAt).toLocaleString()}
+                        </div>
+                    </div>
+                    <div class="status ${video.status}">${video.status}</div>
+                `;
+                
+                processingQueue.appendChild(videoItem);
+            });
+        }
+        
+        function updateStats() {
+            document.getElementById('newVideos').textContent = dashboardData.stats.newVideosToday;
+            document.getElementById('processedVideos').textContent = dashboardData.stats.processedVideos;
+            document.getElementById('avgRelevance').textContent = dashboardData.stats.avgRelevanceScore.toFixed(2);
+        }
+        
+        function refreshData() {
+            document.getElementById('lastUpdated').textContent = `Last updated: ${new Date().toLocaleString()}`;
+            
+            // In a real implementation, this would fetch fresh data from the monitoring system
+            console.log('Refreshing data from monitoring system...');
+            
+            // Simulate data refresh
+            setTimeout(() => {
+                renderChannels();
+                renderRecentVideos();
+                renderProcessingQueue();
+                updateStats();
+            }, 500);
+        }
+        
+        // Initial render
+        document.addEventListener('DOMContentLoaded', function() {
+            renderChannels();
+            renderRecentVideos();
+            renderProcessingQueue();
+            updateStats();
+            refreshData();
+            
+            // Auto-refresh every 5 minutes
+            setInterval(refreshData, 5 * 60 * 1000);
+        });
+    </script>
+</body>
+</html>
