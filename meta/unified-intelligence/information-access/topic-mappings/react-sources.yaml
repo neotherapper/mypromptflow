@@ -1,0 +1,267 @@
+# React-Specific Information Source Mappings
+# Integration with AI-PR Validation System and Information Access Framework
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-27"
+  purpose: "React-specific information source mappings for AI agents"
+  integration: "AI-PR validation system, typescript-frontend-validator, knowledge-vault"
+  authority: "Specific technology mappings override general categorical patterns"
+
+# REACT TECHNOLOGY PROFILE
+react_technology_profile:
+  primary_sources:
+    github_repositories:
+      source_type: "version_control"
+      priority: "primary"
+      mcp_server: "github-mcp-server-platform"
+      access_pattern: "mcp__MCP_DOCKER__get_file_contents"
+      authentication: "github_pat"
+      
+      recommended_repositories:
+        official_react:
+          - "facebook/react"
+          - "facebook/create-react-app" 
+          - "vercel/next.js"
+          - "vitejs/vite"
+        
+        ecosystem_tools:
+          - "facebook/react-router"
+          - "reduxjs/redux-toolkit"
+          - "tannerlinsley/react-query"
+          - "react-hook-form/react-hook-form"
+          - "chakra-ui/chakra-ui"
+          - "mui/material-ui"
+        
+        testing_libraries:
+          - "testing-library/react-testing-library"
+          - "facebook/jest"
+          - "microsoft/playwright"
+      
+      integration_patterns:
+        ai_pr_validation: "Used by typescript-frontend-validator for React pattern validation"
+        file_detection: "Triggered by .tsx files and React dependencies in package.json"
+        knowledge_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+    
+    documentation_sources:
+      context7_library_docs:
+        source_type: "structured_data"
+        priority: "primary"
+        mcp_server: "context7-mcp-server"
+        access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+        authentication: "none"
+        
+        library_mappings:
+          react_core: "/facebook/react"
+          react_router: "/remix-run/react-router"
+          next_js: "/vercel/next.js"
+          typescript_react: "/DefinitelyTyped/DefinitelyTyped/types/react"
+        
+        usage_patterns:
+          topic_resolution: "Always call resolve-library-id first to get exact Context7 ID"
+          documentation_access: "Use get-library-docs with resolved library ID"
+          topic_filtering: "Use topic parameter for specific areas (hooks, performance, routing)"
+          version_specific: "Request specific versions when compatibility matters"
+        
+        integration_with_validation:
+          typescript_frontend: "Reference for React TypeScript patterns and best practices"
+          component_architecture: "Validate against official React documentation patterns"
+          performance_optimization: "Cross-reference React.memo, hooks optimization"
+    
+    package_ecosystem:
+      npm_registry:
+        source_type: "structured_data"
+        priority: "secondary"
+        access_pattern: "WebFetch"
+        base_urls:
+          - "https://registry.npmjs.org/"
+          - "https://www.npmjs.com/package/"
+        
+        react_packages:
+          core: ["react", "react-dom", "@types/react", "@types/react-dom"]
+          routing: ["react-router-dom", "@reach/router", "next/router"]
+          state_management: ["redux", "@reduxjs/toolkit", "zustand", "jotai", "recoil"]
+          ui_libraries: ["@mui/material", "@chakra-ui/react", "antd", "react-bootstrap"]
+          testing: ["@testing-library/react", "@testing-library/jest-dom", "@testing-library/user-event"]
+          build_tools: ["vite", "webpack", "create-react-app", "next"]
+        
+        validation_integration:
+          dependency_analysis: "Check package.json for React ecosystem dependencies"
+          version_compatibility: "Validate React version compatibility across packages"
+          security_assessment: "Cross-reference with security-validator for vulnerability scanning"
+
+# CONDITIONAL SOURCE SELECTION LOGIC
+conditional_selection:
+  react_detection_triggers:
+    file_patterns:
+      - "**/*.tsx"
+      - "**/components/**/*.ts"
+      - "**/pages/**/*.tsx"
+      - "**/app/**/*.tsx"
+    
+    dependency_indicators:
+      package_json_dependencies:
+        - "react"
+        - "react-dom" 
+        - "next"
+        - "@types/react"
+      
+      config_files:
+        - "next.config.js"
+        - "vite.config.ts"
+        - "react-scripts"
+        - "tsconfig.json with jsx"
+    
+    content_analysis:
+      import_patterns:
+        - "import React from"
+        - "import { useState, useEffect }"
+        - "import type { FC }"
+        - "export default function"
+      
+      jsx_syntax:
+        - "return <"
+        - "className="
+        - "onClick="
+        - "<Component"
+
+  source_selection_algorithm:
+    step_1_detection:
+      confidence_scoring:
+        file_patterns: 0.4
+        dependencies: 0.3
+        config_files: 0.2
+        content_analysis: 0.1
+      minimum_confidence: 0.7
+    
+    step_2_source_prioritization:
+      primary_sources:
+        condition: "confidence >= 0.8"
+        sources: ["github_repositories", "context7_library_docs", "npm_registry"]
+      
+      supplementary_sources:
+        condition: "0.7 <= confidence < 0.8"
+        sources: ["context7_library_docs", "npm_registry"]
+      
+      fallback_sources:
+        condition: "confidence < 0.7"
+        sources: ["general_frontend_patterns"]
+    
+    step_3_integration_coordination:
+      ai_pr_validation:
+        typescript_frontend_validator: "Use React-specific validation patterns"
+        component_architecture: "Reference official React documentation"
+        performance_assessment: "Apply React performance optimization patterns"
+      
+      knowledge_vault_integration:
+        knowledge_source: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+        context_loading: "REQUEST_CONTEXT(react-frontend-dev)"
+        role_assignment: "frontend-dev specialist agent"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  ai_pr_validation_system:
+    validation_enhancement:
+      typescript_frontend_validator:
+        react_patterns: "Enhanced with React-specific TypeScript patterns"
+        component_validation: "Component architecture validation using official sources"
+        hook_validation: "Custom hook validation against React documentation"
+        performance_patterns: "React.memo, useCallback, useMemo validation"
+      
+      file_detection_system:
+        multi_layered_detection: "Extension + content + React dependency analysis"
+        confidence_scoring: "React-specific confidence calculation"
+        agent_spawning: "Role-aware React frontend specialist spawning"
+      
+      knowledge_context_loading:
+        progressive_loading: "Load React context only when React files detected"
+        role_specialization: "frontend-dev role with React expertise"
+        unlimited_context: "Full React implementation knowledge without token limits"
+    
+    orchestration_integration:
+      conditional_activation: "React sources activated when React files detected in PR"
+      parallel_validation: "React validation runs parallel with security and performance"
+      result_aggregation: "React validation results integrated into comprehensive PR report"
+      fallback_handling: "Graceful degradation to general frontend patterns if React detection fails"
+
+  research_framework_integration:
+    source_discovery:
+      step_2_7_integration: "Add React source discovery to research orchestrator workflow"
+      topic_specific_routing: "React research requests route to React-specific sources"
+      multi_source_coordination: "Coordinate GitHub, Context7, and npm sources for React research"
+    
+    method_enhancement:
+      domain_adaptive: "Enhanced with React-specific domain adaptation patterns"
+      multi_perspective: "React perspectives include core, ecosystem, testing, performance"
+      constitutional_ai: "React validation includes ethical framework usage assessment"
+
+  knowledge_vault_coordination:
+    authoritative_sources:
+      react_frontend_dev: "@knowledge-vault/knowledge/technologies/react/react-frontend-dev.md"
+      react_performance: "@knowledge-vault/knowledge/technologies/react/react-performance.md"
+      testing_frontend: "@knowledge-vault/knowledge/technologies/testing/testing-frontend-dev.md"
+    
+    cross_reference_validation:
+      source_consistency: "Ensure React mappings align with knowledge vault content"
+      update_coordination: "Knowledge vault updates trigger React mapping reviews"
+      bidirectional_sync: "React source discoveries update knowledge vault"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  react_detection_workflow:
+    step_1: "Scan PR files for React indicators using conditional_selection logic"
+    step_2: "Calculate confidence score based on file patterns, dependencies, content"
+    step_3: "If confidence >= 0.7, activate React-specific source mappings"
+    step_4: "Load React knowledge context using REQUEST_CONTEXT(react-frontend-dev)"
+    step_5: "Spawn frontend-dev specialist agent with React expertise"
+    step_6: "Coordinate React validation with security and performance validators"
+  
+  source_access_workflow:
+    github_analysis:
+      step_1: "Use mcp__MCP_DOCKER__get_file_contents for React repository analysis"
+      step_2: "Focus on component patterns, hooks usage, and architectural decisions"
+      step_3: "Reference official React repositories for validation patterns"
+    
+    context7_documentation:
+      step_1: "Call mcp__MCP_DOCKER__resolve-library-id with 'react' to get Context7 ID"
+      step_2: "Use mcp__MCP_DOCKER__get-library-docs with resolved React library ID"
+      step_3: "Apply topic filtering for specific React areas (hooks, performance, etc.)"
+    
+    npm_ecosystem:
+      step_1: "Analyze package.json for React ecosystem dependencies"
+      step_2: "Use WebFetch for npm registry queries when version compatibility needed"
+      step_3: "Cross-reference with security scanning for vulnerability assessment"
+  
+  validation_coordination:
+    typescript_integration: "Enhance TypeScript validation with React-specific patterns"
+    security_assessment: "Include React-specific security patterns (XSS, JSX sanitization)"
+    performance_analysis: "Apply React performance optimization validation"
+    accessibility_compliance: "React accessibility patterns and ARIA implementation"
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_accuracy:
+    github_repositories: "Use only official and well-maintained React repositories"
+    documentation_currency: "Prefer latest stable React documentation versions"
+    ecosystem_completeness: "Cover core React, routing, state management, UI libraries"
+  
+  integration_effectiveness:
+    ai_pr_validation: "≥95% accuracy in React pattern detection and validation"
+    research_coordination: "≥90% relevant source selection for React research topics"
+    knowledge_consistency: "100% alignment with knowledge vault React content"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct React technology identification"
+    completeness: "≥90% coverage of React ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive React development guidance only"
+    transparency: "Clear rationale for React source selection decisions"
+
+# SUCCESS CRITERIA
+success_criteria:
+  react_specificity: "React development gets dedicated GitHub, Context7, npm sources"
+  ai_pr_integration: "Seamless integration with typescript-frontend-validator"
+  research_enhancement: "React research requests automatically use optimized sources"
+  knowledge_consistency: "React mappings align with knowledge vault structure"
+  performance_optimization: "React-specific context loading only when needed"
+  validation_accuracy: "≥95% accuracy in React development information retrieval"

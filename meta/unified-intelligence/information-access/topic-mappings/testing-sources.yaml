@@ -1,0 +1,335 @@
+# Testing-Specific Information Source Mappings
+# Integration with AI-PR Validation System and Information Access Framework
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-28"
+  purpose: "Testing-specific information source mappings for AI agents"
+  integration: "AI-PR validation system, test-validator, knowledge-vault"
+  authority: "Specific technology mappings override general categorical patterns"
+
+# TESTING TECHNOLOGY PROFILE
+testing_technology_profile:
+  primary_sources:
+    github_repositories:
+      source_type: "version_control"
+      priority: "primary"
+      mcp_server: "github-mcp-server-platform"
+      access_pattern: "mcp__MCP_DOCKER__get_file_contents"
+      authentication: "github_pat"
+      
+      recommended_repositories:
+        javascript_testing:
+          - "jestjs/jest"
+          - "vitest-dev/vitest"  
+          - "mochajs/mocha"
+          - "qunitjs/qunit"
+          - "jasmine/jasmine"
+        
+        react_testing:
+          - "testing-library/react-testing-library"
+          - "testing-library/jest-dom"
+          - "testing-library/user-event"
+          - "enzymejs/enzyme"
+        
+        python_testing:
+          - "pytest-dev/pytest"
+          - "python/cpython" # unittest
+          - "spulec/freezegun"
+          - "kevin1024/vcrpy"
+          - "gabrielfalcao/HTTPretty"
+        
+        end_to_end_testing:
+          - "microsoft/playwright"
+          - "cypress-io/cypress"
+          - "puppeteer/puppeteer"
+          - "SeleniumHQ/selenium"
+        
+        performance_testing:
+          - "locustio/locust"
+          - "loadimpact/k6"
+          - "Artillery/artillery"
+          - "hapijs/lab"
+        
+        testing_utilities:
+          - "faker-js/faker"
+          - "marak/Faker.js"
+          - "testdouble/testdouble.js"
+          - "sinonjs/sinon"
+      
+      integration_patterns:
+        ai_pr_validation: "Used by test-validator for testing pattern validation"
+        file_detection: "Triggered by test files and testing dependencies"
+        knowledge_source: "knowledge-vault/knowledge/technologies/testing/testing-frontend-dev.md"
+    
+    documentation_sources:
+      context7_library_docs:
+        source_type: "structured_data"
+        priority: "primary"
+        mcp_server: "context7-mcp-server"
+        access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+        authentication: "none"
+        
+        library_mappings:
+          jest: "/jestjs/jest"
+          vitest: "/vitest-dev/vitest"
+          playwright: "/microsoft/playwright"
+          cypress: "/cypress-io/cypress"
+          pytest: "/pytest-dev/pytest"
+          testing_library: "/testing-library/react-testing-library"
+        
+        usage_patterns:
+          topic_resolution: "Always call resolve-library-id first to get exact Context7 ID"
+          documentation_access: "Use get-library-docs with resolved library ID"
+          topic_filtering: "Use topic parameter for specific areas (unit, integration, e2e)"
+          version_specific: "Request specific versions when compatibility matters"
+        
+        integration_with_validation:
+          test_validator: "Reference for testing patterns and best practices"
+          test_strategy_validation: "Validate against official testing documentation patterns"
+          coverage_optimization: "Cross-reference test coverage and quality metrics"
+    
+    testing_methodologies:
+      testing_practices:
+        source_type: "web_content"
+        priority: "secondary"
+        access_pattern: "WebSearch"
+        
+        search_patterns:
+          unit_testing: "unit testing best practices patterns"
+          integration_testing: "integration testing strategies"
+          e2e_testing: "end-to-end testing automation"
+          tdd_bdd: "test-driven development behavior-driven development"
+          testing_pyramid: "testing pyramid strategy"
+        
+        validation_integration:
+          methodology_assessment: "Check testing methodology adherence"
+          coverage_analysis: "Validate test coverage strategies"
+          quality_metrics: "Cross-reference with quality assessment patterns"
+
+# CONDITIONAL SOURCE SELECTION LOGIC
+conditional_selection:
+  testing_detection_triggers:
+    file_patterns:
+      - "**/*.test.js"
+      - "**/*.test.ts"
+      - "**/*.spec.js"
+      - "**/*.spec.ts"
+      - "**/test_*.py"
+      - "**/*_test.py"
+      - "**/tests/**/*.py"
+      - "**/__tests__/**/*"
+      - "**/cypress/**/*.js"
+      - "**/e2e/**/*.spec.*"
+    
+    dependency_indicators:
+      javascript_test_deps:
+        - "jest"
+        - "vitest"
+        - "mocha"
+        - "jasmine"
+        - "cypress"
+        - "playwright"
+        - "@testing-library/react"
+      
+      python_test_deps:
+        - "pytest"
+        - "unittest"
+        - "nose2"
+        - "mock"
+        - "coverage"
+      
+      config_files:
+        - "jest.config.js"
+        - "vitest.config.ts"
+        - "cypress.config.js"
+        - "playwright.config.ts"
+        - "pytest.ini"
+        - "tox.ini"
+    
+    content_analysis:
+      test_patterns:
+        - "describe("
+        - "it("
+        - "test("
+        - "expect("
+        - "assert"
+        - "def test_"
+        - "class Test"
+      
+      testing_utilities:
+        - "beforeEach"
+        - "afterEach"
+        - "setUp"
+        - "tearDown"
+        - "mock"
+        - "spy"
+
+  source_selection_algorithm:
+    step_1_detection:
+      confidence_scoring:
+        file_patterns: 0.5
+        dependencies: 0.3
+        config_files: 0.1
+        content_analysis: 0.1
+      minimum_confidence: 0.6
+    
+    step_2_source_prioritization:
+      primary_sources:
+        condition: "confidence >= 0.8"
+        sources: ["github_repositories", "context7_library_docs", "testing_methodologies"]
+      
+      supplementary_sources:
+        condition: "0.6 <= confidence < 0.8"
+        sources: ["context7_library_docs", "testing_methodologies"]
+      
+      fallback_sources:
+        condition: "confidence < 0.6"
+        sources: ["general_testing_patterns"]
+    
+    step_3_integration_coordination:
+      ai_pr_validation:
+        test_validator: "Use testing-specific validation patterns"
+        coverage_validation: "Reference official testing coverage documentation"
+        quality_assessment: "Apply testing quality best practices"
+      
+      knowledge_vault_integration:
+        knowledge_source: "knowledge-vault/knowledge/technologies/testing/testing-frontend-dev.md"
+        context_loading: "REQUEST_CONTEXT(testing-frontend-dev)"
+        role_assignment: "test specialist agent"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  ai_pr_validation_system:
+    validation_enhancement:
+      test_validator:
+        test_patterns: "Enhanced with testing-specific patterns"
+        coverage_validation: "Test coverage validation using official sources"
+        quality_validation: "Test quality pattern validation"
+        strategy_validation: "Testing strategy and methodology validation"
+      
+      file_detection_system:
+        multi_layered_detection: "Extension + content + testing framework analysis"
+        confidence_scoring: "Testing-specific confidence calculation"
+        agent_spawning: "Role-aware test specialist spawning"
+      
+      knowledge_context_loading:
+        progressive_loading: "Load testing context only when test files detected"
+        role_specialization: "test-specialist role with testing expertise"
+        unlimited_context: "Full testing implementation knowledge without token limits"
+    
+    orchestration_integration:
+      conditional_activation: "Testing sources activated when test files detected in PR"
+      parallel_validation: "Testing validation runs parallel with code quality and security"
+      result_aggregation: "Testing validation results integrated into comprehensive PR report"
+      fallback_handling: "Graceful degradation to general quality patterns if testing detection fails"
+
+  research_framework_integration:
+    source_discovery:
+      step_2_7_integration: "Add testing source discovery to research orchestrator workflow"
+      topic_specific_routing: "Testing research requests route to testing-specific sources"
+      multi_source_coordination: "Coordinate GitHub, Context7, and methodology sources for testing research"
+    
+    method_enhancement:
+      domain_adaptive: "Enhanced with testing-specific domain adaptation patterns"
+      multi_perspective: "Testing perspectives include unit, integration, e2e, performance"
+      constitutional_ai: "Testing validation includes ethical testing practice assessment"
+
+  knowledge_vault_coordination:
+    authoritative_sources:
+      testing_frontend_dev: "knowledge-vault/knowledge/technologies/testing/testing-frontend-dev.md"
+      testing_performance: "knowledge-vault/knowledge/technologies/testing/testing-performance.md"
+      testing_security: "knowledge-vault/knowledge/technologies/testing/testing-security.md"
+      testing_architect: "knowledge-vault/knowledge/technologies/testing/testing-architect.md"
+    
+    cross_reference_validation:
+      source_consistency: "Ensure testing mappings align with knowledge vault content"
+      update_coordination: "Knowledge vault updates trigger testing mapping reviews"
+      bidirectional_sync: "Testing source discoveries update knowledge vault"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  testing_detection_workflow:
+    step_1: "Scan PR files for testing indicators using conditional_selection logic"
+    step_2: "Calculate confidence score based on file patterns, dependencies, content"
+    step_3: "If confidence >= 0.6, activate testing-specific source mappings"
+    step_4: "Load testing knowledge context using REQUEST_CONTEXT(testing-frontend-dev)"
+    step_5: "Spawn test specialist agent with testing expertise"
+    step_6: "Coordinate testing validation with code quality and security validators"
+  
+  source_access_workflow:
+    github_analysis:
+      step_1: "Use mcp__MCP_DOCKER__get_file_contents for testing repository analysis"
+      step_2: "Focus on test patterns, coverage strategies, and quality metrics"
+      step_3: "Reference official testing framework repositories for validation patterns"
+    
+    context7_documentation:
+      step_1: "Call mcp__MCP_DOCKER__resolve-library-id with testing framework name to get Context7 ID"
+      step_2: "Use mcp__MCP_DOCKER__get-library-docs with resolved testing library ID"
+      step_3: "Apply topic filtering for specific testing areas (unit, integration, e2e)"
+    
+    methodology_validation:
+      step_1: "Use WebSearch for testing methodology and best practice validation"
+      step_2: "Cross-reference testing strategies and patterns"
+      step_3: "Apply quality metrics from testing best practices documentation"
+  
+  validation_coordination:
+    strategy_validation: "Enhance code validation with testing-specific strategy patterns"
+    coverage_assessment: "Include testing-specific coverage and quality patterns"
+    methodology_compliance: "Apply testing methodology and best practice validation"
+    framework_integration: "Testing framework patterns and tooling integration"
+
+# TESTING FRAMEWORK CONTEXTS
+framework_contexts:
+  javascript_testing:
+    frameworks: ["jest", "vitest", "mocha", "jasmine"]
+    file_patterns: ["**/*.test.js", "**/*.spec.js", "**/__tests__/**"]
+    validation_focus: ["unit tests", "mocking", "async testing"]
+  
+  react_testing:
+    frameworks: ["@testing-library/react", "enzyme", "jest"]
+    file_patterns: ["**/*.test.tsx", "**/*.test.jsx"]
+    validation_focus: ["component testing", "user interactions", "accessibility"]
+  
+  python_testing:
+    frameworks: ["pytest", "unittest", "nose2"]
+    file_patterns: ["**/test_*.py", "**/*_test.py", "**/tests/**"]
+    validation_focus: ["unit tests", "fixtures", "parametrization"]
+  
+  end_to_end_testing:
+    frameworks: ["playwright", "cypress", "selenium"]
+    file_patterns: ["**/e2e/**", "**/cypress/**", "**/*.e2e.*"]
+    validation_focus: ["user workflows", "browser automation", "integration"]
+  
+  performance_testing:
+    frameworks: ["k6", "locust", "artillery"]
+    file_patterns: ["**/load/**", "**/performance/**"]
+    validation_focus: ["load testing", "stress testing", "benchmarking"]
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_accuracy:
+    github_repositories: "Use only official and well-maintained testing framework repositories"
+    documentation_currency: "Prefer latest stable testing framework documentation versions"
+    ecosystem_completeness: "Cover unit, integration, e2e, performance testing frameworks"
+  
+  integration_effectiveness:
+    ai_pr_validation: "≥95% accuracy in testing pattern detection and validation"
+    research_coordination: "≥90% relevant source selection for testing research topics"
+    knowledge_consistency: "100% alignment with knowledge vault testing content"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct testing technology identification"
+    completeness: "≥90% coverage of testing ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive testing practice guidance only"
+    transparency: "Clear rationale for testing source selection decisions"
+
+# SUCCESS CRITERIA
+success_criteria:
+  testing_specificity: "Testing gets dedicated GitHub, Context7, methodology sources"
+  ai_pr_integration: "Seamless integration with test-validator"
+  research_enhancement: "Testing research requests automatically use optimized sources"
+  knowledge_consistency: "Testing mappings align with knowledge vault structure"
+  performance_optimization: "Testing-specific context loading only when needed"
+  validation_accuracy: "≥95% accuracy in testing information retrieval"

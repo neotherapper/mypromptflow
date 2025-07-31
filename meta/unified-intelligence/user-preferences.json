@@ -1,0 +1,176 @@
+{
+  "system_metadata": {
+    "version": "1.0.0",
+    "created": "2025-07-31",
+    "purpose": "System-wide user preference learning and adaptation",
+    "scope": "All projects, all topics, all platforms"
+  },
+  
+  "stated_preferences": {
+    "theprimegen_channel": {
+      "preference_score": 5.0,
+      "topics": ["software-engineering", "vim", "programming", "development-workflow"],
+      "reasoning": "Explicitly stated high preference",
+      "authority_boost": 0.2
+    },
+    "theo_t3gg_channel": {
+      "preference_score": 5.0, 
+      "topics": ["typescript", "react", "trpc", "t3-stack", "modern-web-dev"],
+      "reasoning": "Explicitly stated high preference",
+      "authority_boost": 0.2
+    },
+    "official_sources": {
+      "preference_score": 1.0,
+      "source_types": ["github_official_repos", "official_documentation", "project_homepages"],
+      "reasoning": "Maximum priority for official sources",
+      "authority_boost": 0.3
+    },
+    "github_changelogs": {
+      "preference_score": 1.0,
+      "source_types": ["release_notes", "changelogs", "version_updates"],
+      "reasoning": "Essential tracking for tool updates",
+      "authority_boost": 0.3
+    }
+  },
+  
+  "learned_preferences": {
+    "content_patterns": {
+      "technical_depth": {
+        "preference_score": 0.8,
+        "indicators": ["code examples", "implementation details", "architecture discussion"],
+        "learned_from": "engagement patterns"
+      },
+      "tutorial_format": {
+        "preference_score": 0.7,
+        "indicators": ["step-by-step", "hands-on", "practical examples"],
+        "learned_from": "content interaction time"
+      },
+      "industry_insights": {
+        "preference_score": 0.6,
+        "indicators": ["trend analysis", "tool comparisons", "expert opinions"],
+        "learned_from": "save and share actions"
+      }
+    },
+    
+    "source_patterns": {
+      "established_creators": {
+        "preference_score": 0.8,
+        "indicators": ["consistent upload schedule", "high subscriber count", "community engagement"],
+        "learned_from": "repeated engagement"
+      },
+      "official_announcements": {
+        "preference_score": 0.9,
+        "indicators": ["direct from maintainers", "release announcements", "roadmap updates"],
+        "learned_from": "high engagement on official content"
+      }
+    }
+  },
+  
+  "topic_preferences": {
+    "react": {
+      "interest_level": 0.9,
+      "preferred_content_types": ["performance optimization", "new features", "best practices"],
+      "preferred_sources": ["official documentation", "expert creators", "community discussions"]
+    },
+    "typescript": {
+      "interest_level": 0.9,
+      "preferred_content_types": ["type system updates", "tooling improvements", "migration guides"],
+      "preferred_sources": ["official handbook", "expert creators", "ecosystem updates"]
+    },
+    "software_engineering": {
+      "interest_level": 0.8,
+      "preferred_content_types": ["architecture patterns", "best practices", "tooling"],
+      "preferred_sources": ["expert practitioners", "case studies", "community discussions"]
+    },
+    "web_development": {
+      "interest_level": 0.8,
+      "preferred_content_types": ["modern frameworks", "performance", "developer experience"],
+      "preferred_sources": ["framework maintainers", "expert creators", "community feedback"]
+    }
+  },
+  
+  "engagement_tracking": {
+    "metrics": {
+      "time_spent": {
+        "weight": 0.3,
+        "threshold_high": 300,
+        "threshold_medium": 120,
+        "threshold_low": 30
+      },
+      "explicit_feedback": {
+        "weight": 0.4,
+        "like": 1.0,
+        "neutral": 0.0,
+        "dislike": -1.0
+      },
+      "action_taken": {
+        "weight": 0.2,
+        "save": 0.8,
+        "share": 0.9,
+        "follow_link": 0.6,
+        "bookmark": 0.7
+      },
+      "source_credibility_rating": {
+        "weight": 0.1,
+        "promote_source": 0.5,
+        "demote_source": -0.5
+      }
+    }
+  },
+  
+  "learning_algorithm": {
+    "adaptation_rate": 0.1,
+    "decay_factor": 0.05,
+    "minimum_data_points": 5,
+    "confidence_threshold": 0.7,
+    
+    "preference_update_rules": {
+      "positive_engagement": "Increase preference score by (engagement_score * adaptation_rate)",
+      "negative_engagement": "Decrease preference score by (abs(engagement_score) * adaptation_rate)",
+      "source_promotion": "Increase source authority by 0.1",
+      "source_demotion": "Decrease source authority by 0.1",
+      "decay_rule": "All learned preferences decay by decay_factor weekly unless reinforced"
+    }
+  },
+  
+  "cross_project_learning": {
+    "enabled": true,
+    "data_sharing": "Preferences learned in one project apply system-wide",
+    "context_adaptation": "Preferences weighted by project context relevance",
+    "privacy_preservation": "User preference data remains local to system"
+  },
+  
+  "personalization_effects": {
+    "content_scoring": {
+      "base_formula": "source_authority * content_relevance * user_preference_multiplier",
+      "user_preference_multiplier_range": [0.5, 2.0],
+      "minimum_threshold": 0.3
+    },
+    
+    "source_discovery": {
+      "bias_toward_preferred_patterns": true,
+      "discovery_diversity_requirement": 0.3,
+      "serendipity_factor": 0.1
+    },
+    
+    "daily_digest_curation": {
+      "personalization_weight": 0.6,
+      "objective_quality_weight": 0.4,
+      "diversity_requirement": "Include content from at least 3 different source types"
+    }
+  },
+  
+  "quality_assurance": {
+    "preference_validation": {
+      "cross_reference_preferences": "Validate learned preferences against stated preferences",
+      "consistency_check": "Flag conflicting preference patterns for review",
+      "bias_detection": "Monitor for over-optimization toward narrow preferences"
+    },
+    
+    "learning_oversight": {
+      "preference_drift_monitoring": "Track significant changes in preference patterns",
+      "feedback_loop_quality": "Ensure feedback mechanisms provide clear signals",
+      "diversity_preservation": "Maintain exposure to diverse content types"
+    }
+  }
+}
