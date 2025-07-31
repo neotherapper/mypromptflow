@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: 33b82efb-6c33-4afe-b618-553d34c7dddd
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: ClickHouse MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/clickhouse-server-profile.md
 priority: 1st_priority
 quality_score: 8.4
 source_database: tools_services
@@ -21,7 +19,6 @@ tags:
 - Analytics
 - Monitoring
 - Cloud Platform
-mcp_profile_reference: "@mcp_profile/clickhouse"
 ---
 
 ## Header Classification

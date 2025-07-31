@@ -6,9 +6,7 @@ description: Cypress MCP Server provides comprehensive end-to-end testing capabi
 id: ebf20d08-6d13-43da-886f-17d5b1d3e70b
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Cypress MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/cypress-server-profile.md
 priority: 1st_priority
 quality_score: 8.55
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/cypress"
 ---
 
 **Tier**: Tier 1 Immediate  

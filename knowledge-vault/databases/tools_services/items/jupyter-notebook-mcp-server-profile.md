@@ -3,7 +3,6 @@ description: 'Jupyter Notebook MCP Server - Tier 3 Interactive Computing and Dat
 id: d2a5c8f1-7e3b-4d9a-a6c2-8f1e5b3d7a9c
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'Jupyter Notebook MCP Server'
 priority: 3rd_priority
 production_readiness: 91
@@ -19,7 +18,6 @@ tags:
 - Machine Learning
 - Data Analysis
 - Research Platform
-mcp_profile_reference: "@mcp_profile/jupyter-notebook"
 information_capabilities:
   access_patterns:
     - interactive_code_execution

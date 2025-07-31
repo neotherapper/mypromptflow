@@ -13,9 +13,7 @@ estimated_setup_time: 30-45 minutes
 id: 4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Google Sheets MCP Server
-original_file: community-mcp-servers/google-sheets-server-profile.md
 priority: 2nd_priority
 production_readiness: 90
 provider: Community/Third-party
@@ -70,7 +68,6 @@ information_capabilities:
   - "Generate automated reports and data visualizations"
   - "Manage inventory, financial records, and operational data"
   - "Collaborate on data-driven projects with real-time spreadsheet updates"
-mcp_profile_reference: "@mcp_profile/google-sheets"
 ---
 
 **Community-maintained Google Sheets integration server for comprehensive spreadsheet management and data automation through MCP**

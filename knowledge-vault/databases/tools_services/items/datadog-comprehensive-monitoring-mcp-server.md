@@ -3,9 +3,7 @@ description: "Comprehensive infrastructure and application monitoring platform w
 id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Datadog Comprehensive Monitoring MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/monitoring-datadog-comprehensive-mcp-server.md
 priority: 1st_priority
 quality_score: 87.0
 source_database: tools_services
@@ -19,7 +17,6 @@ tags:
 - API Service
 - Tier 1
 - Development Platform
-mcp_profile_reference: "@mcp_profile/datadog-comprehensive-monitoring"
 ---
 
 # Datadog Comprehensive Monitoring MCP Server

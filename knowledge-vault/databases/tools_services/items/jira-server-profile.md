@@ -3,12 +3,9 @@ description: 'Enterprise project management and issue tracking platform with com
 id: f3e968a0-0424-4ce0-863f-319360fb319d
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: JIRA MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/jira-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/jira-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 90
@@ -26,7 +23,6 @@ tags:
 - Workflow Automation
 - Team Collaboration
 - Enterprise Ready
-mcp_profile_reference: "@mcp_profile/jira"
 information_capabilities:
   access_methods:
     - method: "JIRA REST API v3"

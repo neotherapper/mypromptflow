@@ -6,9 +6,7 @@ description: Event streaming and data pipeline management for real-time data pro
 id: ab0b879b-591d-4c86-8414-ae43ae94efd6
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Kafka MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/apache-kafka-server-profile.md
 priority: 3rd_priority
 production_readiness: 94
 provider: Community/Third-party
@@ -29,7 +27,6 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTP
-mcp_profile_reference: "@mcp_profile/apache-kafka"
 ---
 
 **Event streaming and data pipeline management for real-time data processing and AI-driven analytics**  

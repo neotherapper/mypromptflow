@@ -12,10 +12,8 @@ description: Discord MCP server providing comprehensive Discord bot integration,
 estimated_setup_time: 25-40 minutes
 id: 9a1b2c3d-4e5f-6g7h-8i9j-0k1l2m3n4o5p
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-28'
-name: Discord MCP Server
-original_file: community-mcp-servers/discord-server-profile.md
+item_type: service
+name: Discord
 priority: 3rd_priority
 production_readiness: 85
 provider: Community/Third-party
@@ -69,7 +67,6 @@ information_capabilities:
   - "Track server metrics and member activity patterns"
   - "Integrate Discord with external services and workflows"
   - "Handle community events and announcement systems"
-mcp_profile_reference: "@mcp_profile/discord-server"
 ---
 
 **Community-maintained Discord integration server for chat platform management and community automation through MCP**

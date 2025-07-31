@@ -4,9 +4,7 @@ description: AWS Lambda Tool MCP Server for serverless function integration with
 id: '91135d40-6e41-4682-8aa4-0a11e0f498c6'
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: 'AWS Lambda Tool MCP Server'
-original_file: aws-lambda-serverless-server-profile
 priority: 1st_priority
 quality_score: 8.85
 source_database: tools_services
@@ -28,7 +26,6 @@ tags:
 - Event-Driven Architecture
 - Microservices
 tier: Tier 1
-mcp_profile_reference: '@mcp_profile/lambda-tool'
 ---
 
 # AWS Lambda MCP Server - Detailed Implementation Profile
@@ -348,12 +345,10 @@ type: 'mcp_server'
 tier: 'Tier 2'
 priority: '2nd_priority'
 quality_score: 7.8
-migration_date: '2025-07-28'
 last_updated: '2025-07-28'
 source: 'AWS Labs Official Repository'
 repository_url: 'https://github.com/awslabs/mcp'
 documentation_url: 'https://awslabs.github.io/mcp/servers/lambda-tool-mcp-server/'
-mcp_profile_reference: '@mcp_profile/lambda-tool'
 tags:
   - AWS
   - Serverless Computing

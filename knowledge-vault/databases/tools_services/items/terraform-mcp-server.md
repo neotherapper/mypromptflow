@@ -6,9 +6,7 @@ description: Enterprise Infrastructure as Code automation platform for multi-clo
 id: 1780f403-2bb0-4497-96b5-e68db94b9567
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Terraform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/terraform-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: HashiCorp (Community-Maintained MCP Server)
@@ -29,7 +27,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS API
-mcp_profile_reference: "@mcp_profile/terraform"
 ---
 
 **Enterprise Infrastructure as Code automation platform for multi-cloud resource management and DevOps orchestration**  

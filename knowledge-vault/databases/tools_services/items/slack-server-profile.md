@@ -3,12 +3,9 @@ description: 'Enterprise-grade team communication platform integration with auto
 id: a8d5e2f9-6c3b-4e8a-9f7d-3b6c9a2e5f8b
 installation_priority: 8
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Slack MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/slack-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/slack-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 95
@@ -26,7 +23,6 @@ tags:
 - Real-time Messaging
 - Channel Management
 - Slack API
-mcp_profile_reference: "@mcp_profile/slack"
 information_capabilities:
   access_methods:
     - method: "Slack Web API"

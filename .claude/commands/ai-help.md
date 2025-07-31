@@ -11,6 +11,7 @@ Display this interactive menu to the user:
 │ [3] Knowledge Base Validation [7] System Improvement │
 │ [4] Generate Tier Documents [8] Browse All Commands │
 │ [9] Browse Research History [0] Quick Research Analysis │
+│ [J] JIRA Integration - VanguardAI Project Access │
 ├─────────────────────────────────────────────────────────────────────┤
 │ 🧠 ADVANCED FRAMEWORKS - Production-Ready Orchestrators │
 ├─────────────────────────────────────────────────────────────────────┤
@@ -26,8 +27,8 @@ Display this interactive menu to the user:
 └─────────────────────────────────────────────────────────────────────┘
 
 💬 **How to Use:**
-• **Menu Code + Request:** "R blockchain adoption analysis"
-• **Natural Language:** "I want to research blockchain for my company"
+• **Menu Code + Request:** "R blockchain adoption analysis" or "J 2" (current sprint)
+• **Natural Language:** "I want to research blockchain for my company" or "Show me JIRA tasks"
 • **Menu Code Only:** "1" (I'll ask for specifics)
 • **Full Description:** "Help me validate pull request 23 for scope creep"
 
@@ -53,6 +54,7 @@ Display this interactive menu to the user:
 - **[8]** → Show complete command reference from `.claude/commands/`
 - **[9]** → Display research registry with all completed research organized by category and quality scores
 - **[0] + [topic]** → Analyze research registry for similarity to proposed topic and provide recommendations
+- **[J] + [option]** → Execute `/jira [option]` for VanguardAI project access via symlink
 
 ### 🧠 Advanced Frameworks Routing
 
@@ -76,6 +78,7 @@ Display this interactive menu to the user:
 - **Research Detection**: Apply `research_intention_triggers` → Route to `/research [extracted_topic]`
 - **Creation Detection**: Apply `creation_intention_triggers` → Route to appropriate creation command  
 - **Validation Detection**: Apply `validation_intention_triggers` → Route to validation framework
+- **JIRA Detection**: Apply `jira_intention_triggers` → Route to `/jira [extracted_context]`
 - **Context Analysis**: Use `complexity_indicators` and `quality_requirements` for intelligent routing
 - **Command Routing**: Apply `command_routing_patterns` with natural language processing backup
 
@@ -260,6 +263,7 @@ When user provides [0] + [topic], execute:
 /generate-tier-documents [tier]  - Bulk document generation
 /improve-claude                  - System improvement
 /gh-issue [issue]               - GitHub CLI integration
+/jira [option]                  - JIRA integration for VanguardAI project access
 ```
 
 **Repository Knowledge Integration:**

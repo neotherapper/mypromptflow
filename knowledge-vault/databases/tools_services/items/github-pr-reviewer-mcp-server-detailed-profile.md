@@ -6,9 +6,7 @@ description: GitHub PR Reviewer MCP Server delivers automated pull request analy
 id: 7795e5fb-8453-4cd7-8467-9d3b10cfff6f
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: GitHub PR Reviewer MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/github-pr-reviewer-server-profile.md
 priority: 1st_priority
 quality_score: 8.75
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/github-pr-reviewer"
 ---
 
 **Tier**: Tier 1 Immediate  

@@ -6,9 +6,7 @@ description: Healthcare interoperability standard for secure health data exchang
 id: 093ca0a6-f190-48c2-8b70-f9b7172fb3d0
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: FHIR MCP Server
-original_file: mcp-registry/detailed-profiles/tier-4/fhir-server-profile.md
 priority: 4th_priority
 production_readiness: 90
 provider: HL7 International
@@ -29,7 +27,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - REST API
-mcp_profile_reference: "@mcp_profile/fhir"
 ---
 
 **Healthcare interoperability standard for secure health data exchange and clinical intelligence**  

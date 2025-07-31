@@ -3,9 +3,7 @@ description: "Video content management and analytics platform with MCP integrati
 id: 8d3e9f2a-7c4b-4a1d-9e6f-3b8c5d2e7f9a
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: YouTube Video Content Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/youtube-video-content-platform-profile.md
 priority: 1st_priority
 quality_score: 86.5
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Tier 1
 - Google Service
 - Development Platform
-mcp_profile_reference: "@mcp_profile/youtube-video-content-platform"
 ---
 
 # YouTube Video Content Platform MCP Server

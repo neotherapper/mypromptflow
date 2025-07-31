@@ -14,7 +14,6 @@ estimated_setup_time: 60-90 minutes
 id: 4c8e9f73-5d7a-4b92-9e6f-2a5d8c9b7e4f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: AgentCare MCP (Kartha-AI)
 original_source: https://github.com/Kartha-AI/agentcare-mcp
 priority: 4th_priority
@@ -74,7 +73,6 @@ information_capabilities:
   - "Generate clinical reports and analytics for healthcare quality improvement"
   - "Enable healthcare interoperability between different EMR platforms"
   - "Support clinical research with de-identified patient data access"
-mcp_profile_reference: "@mcp_profile/agentcare-kartha-ai"
 ---
 
 **Advanced EMR integration server providing FHIR-compliant healthcare data access with AI-powered clinical workflows**

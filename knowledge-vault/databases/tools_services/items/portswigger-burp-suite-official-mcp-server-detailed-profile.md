@@ -7,9 +7,7 @@ description: PortSwigger Burp Suite Official MCP Server provides professional pe
 id: 228e7af7-8115-415c-8996-aaec61f4728b
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: PortSwigger Burp Suite Official MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/portswigger-burp-official-server-profile.md
 priority: 1st_priority
 quality_score: 9.5
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/portswigger-burp-suite-official"
 ---
 
 **Tier**: Tier 1 Immediate  

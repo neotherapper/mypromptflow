@@ -6,9 +6,7 @@ description: Open-source workflow orchestration platform for programmatically au
 id: 74e86db3-80a6-4013-8fc1-4c54b8a71653
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Airflow MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/apache-airflow-server-profile.md
 priority: 3rd_priority
 production_readiness: 88
 provider: Apache/Community
@@ -27,7 +25,6 @@ tags:
 - Tier 3
 - Development Platform
 tier: Tier 3
-mcp_profile_reference: "@mcp_profile/apache-airflow"
 ---
 
 **Open-source workflow orchestration platform for programmatically authoring, scheduling, and monitoring data pipelines**  

@@ -6,9 +6,7 @@ description: Enterprise cloud infrastructure management and DevOps automation fo
 id: 8cba3d9d-008a-477a-b33e-44401ec372f1
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: AWS MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/aws-server-profile.md
 priority: 1st_priority
 production_readiness: 78
 provider: Community/Third-party
@@ -31,7 +29,6 @@ transport_protocols:
 - HTTPS REST APIs
 - WebSocket
 - gRPC
-mcp_profile_reference: "@mcp_profile/aws"
 ---
 
 **Enterprise cloud infrastructure management and DevOps automation for AI-powered development workflows**  

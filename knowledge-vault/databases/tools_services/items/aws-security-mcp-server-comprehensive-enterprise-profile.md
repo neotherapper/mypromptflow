@@ -6,9 +6,7 @@ description: The AWS Security MCP server represents a transformative enterprise 
 id: a77b2778-b86b-4177-aee4-177818a78b9a
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: AWS Security MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/aws-security-server-profile.md
 priority: 1st_priority
 quality_score: 9.5
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/aws-security"
 ---
 
 **Tier**: Tier 1 Elite  

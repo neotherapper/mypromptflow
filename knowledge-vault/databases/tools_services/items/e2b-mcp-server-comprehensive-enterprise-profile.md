@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: f3182c0e-27f7-43c4-abf0-9b82dc16b510
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: E2B MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/e2b-server-profile.md
 priority: 1st_priority
 quality_score: 8.2
 source_database: tools_services
@@ -19,7 +17,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/e2b"
 ---
 
 ## Header Classification

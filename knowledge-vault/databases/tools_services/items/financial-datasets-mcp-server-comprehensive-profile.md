@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Financial Market
 id: 2bfc01a8-7c58-4711-8547-e45d55470783
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Financial Datasets MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/financial-datasets-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 8.7
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/financial-datasets"
 ---
 
 ## Header Classification

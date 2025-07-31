@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Open-Source Back
 id: b796c99a-6839-43ed-958e-f4af7269e804
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Supabase Backend MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/supabase-backend-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 9.5
@@ -25,7 +23,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/supabase-backend-as-a-service"
 ---
 
 ## Header Classification

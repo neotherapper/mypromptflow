@@ -14,9 +14,7 @@ estimated_setup_time: 45-60 minutes
 id: e5b7c2d1-8f4a-4c91-b6e3-2d5f8a1c3e7b
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: PostgreSQL MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/postgresql-server-profile.md
 priority: 1st_priority
 production_readiness: 90
 provider: Community/PostgreSQL Foundation
@@ -70,7 +68,6 @@ information_capabilities:
   - "Implement data validation and integrity constraints"
   - "Generate analytical reports from structured business data"
   - "Manage user permissions and database security policies"
-mcp_profile_reference: "@mcp_profile/postgresql-server"
 ---
 
 **Enterprise-grade PostgreSQL database integration for comprehensive database operations and management through MCP**

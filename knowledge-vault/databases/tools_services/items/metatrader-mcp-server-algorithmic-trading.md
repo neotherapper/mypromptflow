@@ -14,7 +14,6 @@ estimated_setup_time: 50-70 minutes
 id: 6f9e8d73-4a7b-4c92-9e6f-3d8c9b7a5e2f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: MetaTrader MCP Server
 original_source: Community developed
 priority: 2nd_priority
@@ -75,7 +74,6 @@ information_capabilities:
   - "Implement custom technical indicators and trading signal generation"
   - "Execute complex multi-asset trading strategies with correlation analysis"
   - "Generate comprehensive trading reports and regulatory compliance documentation"
-mcp_profile_reference: "@mcp_profile/metatrader-server"
 ---
 
 **Algorithmic trading automation server providing comprehensive MetaTrader 4/5 integration for forex and CFD markets**

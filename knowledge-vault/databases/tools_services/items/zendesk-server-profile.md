@@ -3,12 +3,9 @@ description: 'Enterprise customer service and support platform with comprehensiv
 id: c7a4f1b8-9e5d-4c6f-8a7b-5d8f2c7e9b4a
 installation_priority: 10
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Zendesk MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/zendesk-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/zendesk-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 94
@@ -26,7 +23,6 @@ tags:
 - Customer Analytics
 - Workforce Management
 - Enterprise CX
-mcp_profile_reference: "@mcp_profile/zendesk"
 information_capabilities:
   access_methods:
     - method: "Zendesk REST API v2"

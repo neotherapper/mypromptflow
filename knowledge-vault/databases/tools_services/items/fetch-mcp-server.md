@@ -6,9 +6,7 @@ estimated_setup_time: 5-15 minutes
 id: 0b387d71-9cc1-454a-a2eb-4a579d150ef9
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Fetch MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/fetch-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: Anthropic
@@ -51,7 +49,6 @@ information_capabilities:
   - "Monitor web pages for content changes"
   - "Access real-time web data and news feeds"
   - "Process HTML content and extract structured data"
-mcp_profile_reference: "@mcp_profile/fetch"
 ---
 
 **Official Anthropic server for real-time web content retrieval and processing**  

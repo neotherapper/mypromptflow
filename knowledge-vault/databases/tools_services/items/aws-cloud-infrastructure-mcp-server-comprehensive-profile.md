@@ -13,9 +13,7 @@ estimated_setup_time: 2-4 hours
 id: 8a5e7f3c-2d9b-4f8e-a6c1-3b7d9e4f2a8c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: AWS Cloud Infrastructure MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/aws-server-profile.md
 priority: 2nd_priority
 production_readiness: 78
 provider: Community/AWS
@@ -70,7 +68,6 @@ information_capabilities:
   - "Deploy and manage serverless functions at scale"
   - "Configure enterprise security and compliance policies"
   - "Manage data pipelines and analytics workflows"
-mcp_profile_reference: "@mcp_profile/aws-cloud-infrastructure"
 ---
 
 **Enterprise cloud infrastructure management and DevOps automation for AI-powered development workflows with premier scalability and orchestration capabilities**

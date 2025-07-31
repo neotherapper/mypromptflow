@@ -7,9 +7,7 @@ description: The Apache Pinot Real-Time Analytics MCP server represents a cuttin
 id: aee441c6-63d7-4ba4-abcd-1e9d85b8a3aa
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Pinot Real MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/apache-pinot-analytics-server-profile.md
 priority: 1st_priority
 quality_score: 94.0
 source_database: tools_services

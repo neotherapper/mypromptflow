@@ -6,9 +6,7 @@ description: CI/CD pipeline automation and build management for comprehensive De
 id: 78933fa7-2abf-4baa-8025-15bf40730287
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Jenkins MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/jenkins-server-profile.md
 priority: 3rd_priority
 production_readiness: 88
 provider: Community/Third-party
@@ -30,7 +28,6 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS REST API
 - WebSocket
-mcp_profile_reference: "@mcp_profile/jenkins"
 ---
 
 **CI/CD pipeline automation and build management for comprehensive DevOps workflow orchestration**  

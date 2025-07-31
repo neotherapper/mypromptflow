@@ -144,7 +144,7 @@ enterprise_integration:
     - name: "Tier 1: Alibaba AnalyticsDB MCP Server"
       composite_score: 9.25
       category: "Enterprise Analytics"
-      file_path: "knowledge-vault/databases/tools_services/items/tier-1-alibaba-analyticsdb-mcp-server-enterprise-profile.md"
+      file_path: "knowledge-vault/databases/tools_services/items/alibaba-analyticsdb-mcp-server-enterprise-profile.md"
       production_readiness: 94
       business_value: "Enterprise-grade analytics and data warehouse"
       
@@ -233,7 +233,7 @@ ai_development_tools:
     - name: "Anthropic Claude API MCP Server"
       composite_score: 9.65
       category: "AI & Machine Learning"
-      file_path: "knowledge-vault/databases/tools_services/items/anthropic-claude-api-mcp-server-comprehensive-profile.md"
+      file_path: "knowledge-vault/databases/tools_services/items/anthropic-claude-mcp-server-comprehensive-profile.md"
       production_readiness: 96
       business_value: "Advanced AI integration for text generation and analysis"
       technology_alignment: 10

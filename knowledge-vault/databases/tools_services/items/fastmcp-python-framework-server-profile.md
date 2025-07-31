@@ -3,7 +3,6 @@ description: 'FastMCP 2.0 Complete Ecosystem Toolkit - Tier 1 Rapid MCP Developm
 id: 92a5e4b7-1c8f-4e29-b3a2-6d7f8e9c0a1b
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'FastMCP 2.0 Complete Ecosystem Toolkit MCP Server'
 priority: 1st_priority
 production_readiness: 93
@@ -22,7 +21,6 @@ tags:
 - Complete Ecosystem
 - Rapid Prototyping
 - Framework Enhancement
-mcp_profile_reference: "@mcp_profile/fastmcp"
 ---
 
 ## 📋 Basic Information

@@ -3,9 +3,7 @@ description: "Official Alibaba Cloud monitoring and observability platform with 
 id: 4f2a8c9e-6b3d-4e7a-9c5f-2a7b8d3e6f1a
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Alibaba Cloud Observability MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/monitoring-alibaba-observability-mcp-server.md
 priority: 1st_priority
 quality_score: 85.0
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Tier 1
 - Alibaba Cloud
 - Development Platform
-mcp_profile_reference: "@mcp_profile/alibaba-cloud-observability"
 ---
 
 # Alibaba Cloud Observability MCP Server

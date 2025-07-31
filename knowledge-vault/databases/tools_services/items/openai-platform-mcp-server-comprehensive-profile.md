@@ -6,9 +6,7 @@ estimated_setup_time: 5-15 minutes
 id: 2b6ac465-5f41-4eba-b24e-ee2d65b0d5ea
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: OpenAI Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/openai-platform-server-profile.md
 priority: 1st_priority
 quality_score: 9.8
 setup_complexity: Simple
@@ -27,7 +25,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/openai-platform"
 ---
 
 ## Header Classification

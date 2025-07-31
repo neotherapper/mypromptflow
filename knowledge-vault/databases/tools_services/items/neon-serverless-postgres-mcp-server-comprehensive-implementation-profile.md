@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: 5b19cc81-5d10-4d67-9991-6db6231ae633
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Neon Serverless Postgres MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/neon-serverless-postgres-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -21,7 +19,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/neon-serverless-postgres"
 ---
 
 ## Header Classification

@@ -8,9 +8,7 @@ description: Enterprise collaboration platform with comprehensive communication 
 id: 2190fea9-67d2-41f1-a03f-ad84dca5018c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Microsoft Teams MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/microsoft-teams-server-profile.md
 priority: 1st_priority
 production_readiness: 91
 provider: Enterprise (Microsoft)
@@ -32,7 +30,6 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSockets
-mcp_profile_reference: "@mcp_profile/microsoft-teams"
 ---
 
 **Enterprise collaboration platform with comprehensive communication APIs and workflow integration**  

@@ -3,13 +3,11 @@ description: Algolia MCP Server provides enterprise-grade search infrastructure 
   enabling rapid development of sophisticated search experiences with minimal setup
   complexity. The platform offers advanced search algorithms, real-time indexing,
   and comprehensive analytics, making it essential for applications requiring high-performance
-  content discovery and
+  content discovery and information retrieval systems.
 id: 68e13abd-2dc7-4a83-9000-8a7396725c0e
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Algolia Enterprise Search MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/algolia-enterprise-search-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -24,7 +22,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/algolia-enterprise-search"
 ---
 
 ## Server Identity

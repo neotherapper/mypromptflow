@@ -7,9 +7,7 @@ description: The Qdrant Vector Database MCP server represents a cutting-edge sem
 id: 47385bd7-5424-40f7-83b8-75ff00024fce
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Qdrant Vector Database MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/qdrant-vector-database-server-profile.md
 priority: 1st_priority
 quality_score: 93.0
 source_database: tools_services

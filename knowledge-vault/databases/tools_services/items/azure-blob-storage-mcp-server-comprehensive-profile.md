@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 2 (Medium Priority - Cloud Storage 
 id: 08d148fb-5c5b-4549-b39d-7777e0480d73
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Azure Blob Storage MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
 priority: 2nd_priority
 production_readiness: 99
 quality_score: 8.2
@@ -25,7 +23,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/azure-blob-storage"
 ---
 
 ## Header Classification

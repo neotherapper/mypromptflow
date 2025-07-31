@@ -7,9 +7,7 @@ description: The WorkOS B2B Authentication Server represents a comprehensive ent
 id: a8996f1a-2c48-476b-b2a9-05537d95bcac
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: WorkOS B2B Authentication MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/workos-b2b-authentication-server-profile.md
 priority: 1st_priority
 quality_score: 92.0
 source_database: tools_services

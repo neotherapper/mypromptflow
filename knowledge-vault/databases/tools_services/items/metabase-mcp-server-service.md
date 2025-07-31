@@ -6,9 +6,7 @@ description: Open-source business intelligence and self-service analytics platfo
 id: fc23371d-5571-4e1b-b7f0-7c1533dc9380
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Metabase MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/metabase-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 provider: Community/Third-party
@@ -31,7 +29,6 @@ transport_protocols:
 - HTTP/HTTPS
 - WebSocket
 - REST API
-mcp_profile_reference: "@mcp_profile/metabase"
 ---
 
 **Open-source business intelligence and self-service analytics platform for data democratization**  

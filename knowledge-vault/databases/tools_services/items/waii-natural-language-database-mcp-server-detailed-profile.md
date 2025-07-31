@@ -7,9 +7,7 @@ description: WAII Natural Language Database MCP Server transforms database inter
 id: de10b435-91b6-4ec1-9ae4-6d05c100e4a2
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: WAII Natural Language Database MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/waii-database-nl-server-profile.md
 priority: 1st_priority
 quality_score: 8.5
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/waii-natural-language-database"
 ---
 
 **Tier**: Tier 1 Immediate  

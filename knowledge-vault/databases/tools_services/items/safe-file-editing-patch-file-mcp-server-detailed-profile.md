@@ -7,9 +7,7 @@ description: Safe File Editing MCP Server (patch-file-mcp) provides AI-safe prec
 id: 45cc794c-b841-41ff-afd4-e3d85fde1d52
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Safe File Editing (Patch MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/safe-file-editing-server-profile.md
 priority: 1st_priority
 quality_score: 9.0
 source_database: tools_services
@@ -23,7 +21,6 @@ tags:
 - Monitoring
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/safe-file-editing-patch-file"
 ---
 
 **Tier**: Tier 1 Immediate  

@@ -129,7 +129,7 @@ Return only the transcript text, no additional formatting or commentary.
             processor = YouTubeTranscriptProcessor()
             
             # Calculate relevance score
-            relevance_score = processor.calculate_relevance_score(transcript, job.channel_rating)
+            relevance_score = processor._calculate_relevance_score(transcript, {"channel_rating": job.channel_rating})
             
             if relevance_score < 0.5:
                 return {

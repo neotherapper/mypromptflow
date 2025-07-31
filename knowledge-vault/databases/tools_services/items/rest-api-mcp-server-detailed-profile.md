@@ -6,9 +6,7 @@ description: REST API MCP Server provides the foundational architecture pattern 
 id: d8d00857-c46d-40f9-a35f-ae01aa936010
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: REST API MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/rest-api-server-profile.md
 priority: 1st_priority
 quality_score: 9.25
 source_database: tools_services
@@ -22,7 +20,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/rest-api"
 ---
 
 **Tier**: Tier 1 Immediate  

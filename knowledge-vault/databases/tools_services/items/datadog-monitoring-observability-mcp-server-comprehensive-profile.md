@@ -12,9 +12,7 @@ estimated_setup_time: 60-90 minutes
 id: 9e6f8a4c-3b7d-4e2f-8c5a-6f9e7a3c4b8d
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Datadog Monitoring & Observability MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/datadog-server-profile.md
 priority: 2nd_priority
 production_readiness: 96
 provider: Community/Datadog
@@ -69,7 +67,6 @@ information_capabilities:
   - "Implement security monitoring and threat detection"
   - "Track user experience with synthetic monitoring"
   - "Perform root cause analysis with distributed tracing"
-mcp_profile_reference: "@mcp_profile/datadog-monitoring-observability"
 ---
 
 **Infrastructure monitoring and observability platform for comprehensive system intelligence, application performance monitoring, and AI-powered analytics**

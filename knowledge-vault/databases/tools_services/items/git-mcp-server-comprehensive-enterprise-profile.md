@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: 7b59b57b-07c9-4766-ab8e-85489ab7e0b0
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Git MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/git-server-profile.md
 priority: 1st_priority
 quality_score: 8.8
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/git"
 ---
 
 ## Header Classification

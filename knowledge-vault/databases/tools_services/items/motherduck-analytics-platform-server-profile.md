@@ -3,12 +3,9 @@ description: 'Cloud-native analytics platform built on DuckDB with serverless da
 id: b8b99a06-7bb7-407e-94aa-31716d965b88
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: MotherDuck Analytics Platform MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/motherduck-analytics-platform-server-profile.md
 >>>>>>> origin/master
 priority: 3rd_priority
 production_readiness: 88
@@ -26,7 +23,6 @@ tags:
 - Data Science
 - Business Intelligence
 - Serverless Computing
-mcp_profile_reference: "@mcp_profile/motherduck-analytics-platform"
 information_capabilities:
   access_methods:
     - method: "MotherDuck REST API"

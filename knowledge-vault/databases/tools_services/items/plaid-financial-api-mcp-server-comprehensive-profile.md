@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Industry-Standar
 id: ddf82eb1-7040-4df1-b31e-a2cc38f79498
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Plaid Financial API MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/plaid-financial-api-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 8.7
@@ -23,7 +21,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/plaid-financial-api"
 ---
 
 ## Header Classification

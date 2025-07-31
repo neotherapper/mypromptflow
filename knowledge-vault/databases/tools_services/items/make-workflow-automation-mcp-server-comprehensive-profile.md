@@ -7,9 +7,7 @@ description: Make MCP Server provides enterprise-grade workflow automation capab
 id: f9db7256-8ec8-4f61-bc74-e702bff86da3
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Make Workflow Automation MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/make-workflow-automation-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/make-workflow-automation"
 ---
 
 ## Server Identity

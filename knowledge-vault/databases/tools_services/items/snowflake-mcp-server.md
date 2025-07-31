@@ -6,9 +6,7 @@ description: Cloud-native data platform for enterprise analytics, data engineeri
 id: e4867d29-2865-4462-aba4-cf201fa34e0f
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Snowflake MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/snowflake-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 provider: Community/Enterprise
@@ -30,7 +28,6 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTPS REST API
-mcp_profile_reference: "@mcp_profile/snowflake"
 ---
 
 **Cloud-native data platform for enterprise analytics, data engineering, and AI workloads**  

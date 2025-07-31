@@ -1,0 +1,25 @@
+{
+  "video_url": "https://www.youtube.com/shorts/D9q5wnX2_DY",
+  "video_id": "yt:video:D9q5wnX2_DY",
+  "title": "AI Scuffed Programming",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "queued_at": "2025-07-31T10:05:59.625750",
+  "status": "completed_test",
+  "transcript": null,
+  "insights": null,
+  "processed_at": null,
+  "error": null,
+  "transcript_summary": "Perfect! Now I can analyze the transcript content.\n\n## Transcript Analysis\n\n### 1. Key Programming Concepts Mentioned:\n- **Statistical models in AI** - Discussion of AI as statistical distribution models\n- **Code distribution patterns** - Analysis of code quality distribution in software development\n- **Alpha/beta distributions and normal distributions** - Statistical concepts applied to AI behavior\n- **Input-output relationships** - How AI models map inputs to outputs based on training data\n- *...",
+  "unified_score": 1.0,
+  "processed_with": "unified-intelligence-framework",
+  "framework_version": "1.0.0",
+  "processing_timestamp": "2025-07-31T10:34:14.229787+00:00"
+}

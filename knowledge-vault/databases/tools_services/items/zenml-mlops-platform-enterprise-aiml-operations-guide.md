@@ -2,9 +2,7 @@
 id: dac2d76e-b475-4b55-b3a5-67b22f7ae018
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: ZenML MLOps Platform - Enterprise AI/ML Operations Guide MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/zenml-mlops-platform-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active

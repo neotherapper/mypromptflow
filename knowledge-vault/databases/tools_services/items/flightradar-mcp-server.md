@@ -13,7 +13,6 @@ estimated_setup_time: 25-35 minutes
 id: 5b8f9e72-3a6d-4c81-9f2e-7d4b8a9c6e3f
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: FlightRadar MCP Server
 original_source: Community developed
 priority: 4th_priority
@@ -74,7 +73,6 @@ information_capabilities:
   - "Generate aviation industry reports and market analysis"
   - "Coordinate emergency response and search-and-rescue operations"
   - "Optimize supply chain logistics based on cargo flight tracking"
-mcp_profile_reference: "@mcp_profile/flightradar-server"
 ---
 
 **Real-time aviation intelligence server providing comprehensive flight tracking and aviation analytics through FlightRadar24 integration**

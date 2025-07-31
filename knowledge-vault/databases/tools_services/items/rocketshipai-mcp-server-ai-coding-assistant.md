@@ -14,7 +14,6 @@ estimated_setup_time: 20-30 minutes
 id: 3e7f9d82-5c4a-4b91-8e2f-4d9c8b7a6e5f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: RocketShip AI MCP Server
 original_source: https://www.npmjs.com/package/@rocketshipai/mcp-server
 priority: 2nd_priority
@@ -75,7 +74,6 @@ information_capabilities:
   - "Analyze code quality metrics and provide improvement recommendations"
   - "Integrate AI coding assistance into development workflows and IDE environments"
   - "Accelerate development productivity with intelligent code completion and suggestions"
-mcp_profile_reference: "@mcp_profile/rocketshipai-server"
 ---
 
 **AI-powered coding assistance server providing intelligent code generation, review, and optimization capabilities for development workflows**

@@ -6,9 +6,7 @@ description: GitHub PR Creator MCP Server revolutionizes development workflow th
 id: bc869768-290d-4707-a6c8-9672dd911c40
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: GitHub PR Creator MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/github-pr-creator-server-profile.md
 priority: 1st_priority
 quality_score: 8.75
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/github-pr-creator"
 ---
 
 **Tier**: Tier 1 Immediate  

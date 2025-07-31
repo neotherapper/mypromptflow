@@ -7,9 +7,7 @@ description: The MCPX Gateway represents a revolutionary enterprise MCP server m
 id: d0b37221-03b0-4d7d-9017-cf8e0ba041f0
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: MCPX Gateway MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/mcpx-gateway-server-profile.md
 priority: 1st_priority
 quality_score: 96.0
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/mcpx-gateway"
 ---
 
 ## Executive Summary
