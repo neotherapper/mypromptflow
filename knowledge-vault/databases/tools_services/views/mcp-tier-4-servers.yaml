@@ -4,13 +4,14 @@
 
 view_info:
   name: "MCP Tier 4 Servers"
-  description: "Community and experimental MCP servers for niche use cases and specialized interests"
+  description: "Community, experimental, and domain-misaligned MCP servers for niche use cases"
   database: "tools_services"
-  version: "1.0.0"
+  version: "2.0.0"
   created: "2025-07-30"
-  purpose: "Enable discovery of community-driven servers for experimental projects and specialized interests"
-  last_updated: "2025-07-30"
-  total_servers: 5
+  purpose: "Enable discovery of community-driven servers and domain-misaligned tools for experimental projects"
+  last_updated: "2025-07-31"
+  total_servers: 8
+  scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
 view_config:
@@ -19,13 +20,15 @@ view_config:
   include_inactive: true
   max_results: 150
 
-# Tier 4 Criteria and Categories
+# Tier 4 Criteria and Categories (Repository-Aligned Scoring v6.0.0)
 tier_4_criteria:
   composite_score_range: "1.0-4.9"
   business_alignment: "limited_to_niche"
   production_readiness: "30-85%"
   installation_priority: [4, 5]
   implementation_complexity: "variable"
+  technology_stack_alignment: "1.0-4.0/10.0"
+  business_domain_relevance: "1.0-5.0/10.0"
 
 # ACTUAL TIER 4 SERVERS BY COMMUNITY CATEGORY
 
@@ -90,6 +93,51 @@ social_communication:
       community_interest: "High"
       use_cases: ["Community automation", "Server management", "Communication workflows"]
 
+blockchain_cryptocurrency:
+  description: "Blockchain and cryptocurrency platforms demoted due to technology stack misalignment"
+  servers:
+    - name: "WalletMCP Solana Blockchain Server"
+      composite_score: 3.25
+      category: "Blockchain Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/walletmcp-solana-blockchain-server-comprehensive-profile.md"
+      production_readiness: 89
+      business_value: "Blockchain integration (not aligned with current technology stack)"
+      setup_complexity: "Complex"
+      provider: "Solana Community"
+      technology_alignment: 2
+      business_relevance: 3
+      demotion_reason: "Blockchain technology not in current tech stack"
+
+healthcare_medical:
+  description: "Healthcare and medical systems with poor business domain alignment"
+  servers:
+    - name: "AgentCare Healthcare MCP Server"
+      composite_score: 3.9
+      category: "Healthcare Systems"
+      file_path: "knowledge-vault/databases/tools_services/items/agentcare-healthcare-mcp-server.md"
+      production_readiness: 82
+      business_value: "Healthcare management (not aligned with maritime insurance focus)"
+      setup_complexity: "High"
+      provider: "Healthcare Community"
+      technology_alignment: 2
+      business_relevance: 4
+      demotion_reason: "Healthcare domain not relevant to maritime insurance business"
+
+aviation_transportation:
+  description: "Aviation and transportation platforms with poor business domain alignment"
+  servers:
+    - name: "FlightRadar Aviation MCP Server"
+      composite_score: 3.3
+      category: "Aviation & Transportation"
+      file_path: "knowledge-vault/databases/tools_services/items/flightradar-mcp-server.md"
+      production_readiness: 88
+      business_value: "Aviation tracking (not aligned with maritime insurance focus)"
+      setup_complexity: "Moderate"
+      provider: "FlightRadar Community"
+      technology_alignment: 2
+      business_relevance: 3
+      demotion_reason: "Aviation domain not relevant to maritime insurance business"
+
 # Implementation Strategy
 implementation_strategy:
   phase_1_high_value_entertainment:
@@ -102,6 +150,18 @@ implementation_strategy:
       - "Music streaming integration functional"
       - "Community communication automation active"
       - "Basic entertainment workflows operational"
+      
+  phase_3_domain_misaligned:
+    description: "Phase 3: Domain-misaligned servers for experimental use only"
+    timeline: "Week 5-6 (experimental only)"
+    servers:
+      - "WalletMCP Solana Blockchain Server"
+      - "AgentCare Healthcare MCP Server"
+      - "FlightRadar Aviation MCP Server"
+    success_criteria:
+      - "Limited experimental integration for research purposes"
+      - "Technology evaluation and learning objectives met"
+      - "Clear documentation of limitations and misalignment reasons"
       
   phase_2_experimental_features:
     description: "Phase 2: Experimental and community-driven servers"

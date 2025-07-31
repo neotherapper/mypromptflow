@@ -72,6 +72,7 @@ correct_parameters() {
     
     # Apply learned corrections from mcp-parameter-corrector.sh
     if [ -f "$SCRIPT_DIR/mcp-parameter-corrector.sh" ]; then
+        # Pass tool_input via stdin to the corrector script
         echo "$tool_input" | bash "$SCRIPT_DIR/mcp-parameter-corrector.sh" "$tool_name"
     else
         echo "$tool_input"
@@ -83,7 +84,25 @@ main() {
     local corrected_input
     corrected_input=$(correct_parameters "$TOOL_NAME" "$TOOL_INPUT")
     
-    # Validate corrected parameters using file-based approach to preserve exit codes
+    # Step 1: Check pattern blocking rules first
+    local pattern_blocker_script="$SCRIPT_DIR/mcp-pattern-blocker.sh"
+    if [ -f "$pattern_blocker_script" ]; then
+        local blocking_result
+        blocking_result=$(bash "$pattern_blocker_script" "$TOOL_NAME" "$corrected_input" 2>/dev/null)
+        
+        # Parse blocking decision
+        if echo "$blocking_result" | grep -q '"should_block": true'; then
+            local block_action=$(echo "$blocking_result" | grep -o '"action": "[^"]*"' | cut -d'"' -f4)
+            local block_reason=$(echo "$blocking_result" | grep -o '"reason": "[^"]*"' | cut -d'"' -f4)
+            
+            # Return blocking decision
+            echo "{\"action\": \"$block_action\", \"reason\": \"Pattern blocker: $block_reason\"}"
+            echo "[$(date '+%Y-%m-%d %H:%M:%S')] BLOCKED: $TOOL_NAME - $block_reason" >> "$VALIDATION_LOG"
+            return
+        fi
+    fi
+    
+    # Step 2: Validate corrected parameters using file-based approach to preserve exit codes
     validate_parameters "$TOOL_NAME" "$corrected_input" > /tmp/validation_output.txt
     local validation_code=$?
     local validation_result=$(cat /tmp/validation_output.txt)

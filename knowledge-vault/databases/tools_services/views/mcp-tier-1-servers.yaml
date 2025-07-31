@@ -6,11 +6,12 @@ view_info:
   name: "MCP Tier 1 Servers"
   description: "Production-ready MCP servers with critical business value for immediate implementation"
   database: "tools_services"
-  version: "1.0.0"
+  version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
-  last_updated: "2025-07-30"
-  total_servers: 49
+  last_updated: "2025-07-31"
+  total_servers: 52
+  scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
 view_config:
@@ -19,13 +20,15 @@ view_config:
   include_inactive: false
   max_results: 50
 
-# Tier 1 Criteria and Categories
+# Tier 1 Criteria and Categories (Repository-Aligned Scoring v6.0.0)
 tier_1_criteria:
   composite_score_range: "8.0-10.0"
   business_alignment: "critical"
-  production_readiness: ">=90%"
+  production_readiness: ">=88%"
   installation_priority: [1, 2, 3]
   implementation_complexity: "low_to_moderate"
+  technology_stack_alignment: ">=8.0/10.0"
+  business_domain_relevance: ">=7.0/10.0"
 
 # ACTUAL TIER 1 SERVERS BY BUSINESS VALUE CATEGORY
 
@@ -56,11 +59,13 @@ development_infrastructure:
       
     # Version Control & Repository Management
     - name: "GitHub MCP Server"
-      composite_score: 9.4
+      composite_score: 9.8
       category: "Development Platform"
       file_path: "knowledge-vault/databases/tools_services/items/github-mcp-server.md"
-      production_readiness: 94
+      production_readiness: 98
       business_value: "Core repository management and development workflow"
+      technology_alignment: 10
+      business_relevance: 9
       
     - name: "GitHub Actions MCP Server"
       composite_score: 9.15
@@ -85,11 +90,13 @@ development_infrastructure:
 
     # Database Operations
     - name: "PostgreSQL MCP Server"
-      composite_score: 9.0
+      composite_score: 8.95
       category: "Database"
       file_path: "knowledge-vault/databases/tools_services/items/postgresql-mcp-server-enhanced.md"
       production_readiness: 93
       business_value: "Enterprise database operations and management"
+      technology_alignment: 10
+      business_relevance: 8
       
     - name: "SQLite MCP Server"
       composite_score: 8.9
@@ -116,12 +123,23 @@ enterprise_integration:
   description: "Business-critical enterprise service integrations"
   servers:
     # Cloud Infrastructure
+    - name: "AWS MCP Server"
+      composite_score: 9.5
+      category: "Cloud Infrastructure"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-mcp-server.md"
+      production_readiness: 95
+      business_value: "Comprehensive AWS cloud service integration and management"
+      technology_alignment: 10
+      business_relevance: 9
+      
     - name: "AWS Security MCP Server"
       composite_score: 9.5
       category: "Cloud Security"
       file_path: "knowledge-vault/databases/tools_services/items/aws-security-mcp-server-comprehensive-enterprise-profile.md"
       production_readiness: 95
       business_value: "Critical cloud security and compliance management"
+      technology_alignment: 10
+      business_relevance: 9
       
     - name: "Tier 1: Alibaba AnalyticsDB MCP Server"
       composite_score: 9.25
@@ -171,6 +189,14 @@ enterprise_integration:
       file_path: "knowledge-vault/databases/tools_services/items/aws-knowledge-mcp-server-comprehensive-profile.md"
       production_readiness: 90
       business_value: "Enterprise knowledge base and documentation"
+      
+    # Enterprise Infrastructure & Governance
+    - name: "TrueFoundry MCP Registry"
+      composite_score: 9.1
+      category: "Enterprise Registry"
+      file_path: "knowledge-vault/databases/tools_services/items/truefoundry-mcp-registry-enterprise-server-profile.md"
+      production_readiness: 93
+      business_value: "Enterprise MCP server governance and compliance management"
 
     # Enterprise Applications
     - name: "Salesforce CRM MCP Server"
@@ -205,11 +231,13 @@ ai_development_tools:
   description: "AI-powered development enhancement and automation"
   servers:
     - name: "Anthropic Claude API MCP Server"
-      composite_score: 9.5
+      composite_score: 9.65
       category: "AI & Machine Learning"
       file_path: "knowledge-vault/databases/tools_services/items/anthropic-claude-api-mcp-server-comprehensive-profile.md"
-      production_readiness: 95
+      production_readiness: 96
       business_value: "Advanced AI integration for text generation and analysis"
+      technology_alignment: 10
+      business_relevance: 10
 
 security_compliance:
   description: "Security tools and compliance automation"
@@ -407,6 +435,7 @@ implementation_strategy:
       - "Filesystem MCP Server"
       - "GitHub MCP Server"
       - "PostgreSQL MCP Server"
+      - "AWS MCP Server"
       - "Memory MCP Server"
       - "Fetch MCP Server"
     success_criteria:
@@ -456,6 +485,8 @@ quality_metrics:
     min_production_readiness: 88
     max_setup_complexity: 6
     min_reliability_score: 8.5
+    min_technology_alignment: 8.0
+    min_business_relevance: 7.0
     
   monitoring_kpis:
     - "Deployment success rate >=95%"

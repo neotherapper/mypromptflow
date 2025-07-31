@@ -6,11 +6,12 @@ view_info:
   name: "MCP Tier 3 Servers"
   description: "Specialized workflow MCP servers for extended capabilities and specific use cases"
   database: "tools_services"
-  version: "1.0.0"
+  version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable specialized workflow integration and development tool deployment for specific business needs"
-  last_updated: "2025-07-30"
+  last_updated: "2025-07-31"
   total_servers: 22
+  scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
 view_config:
@@ -19,13 +20,15 @@ view_config:
   include_inactive: false
   max_results: 100
 
-# Tier 3 Criteria and Categories
+# Tier 3 Criteria and Categories (Repository-Aligned Scoring v6.0.0)
 tier_3_criteria:
   composite_score_range: "3.5-5.9"
   business_alignment: "specialized"
   production_readiness: ">=70%"
   installation_priority: [3, 4, 5]
   implementation_complexity: "moderate_to_high"
+  technology_stack_alignment: "4.0-6.0/10.0"
+  business_domain_relevance: "4.0-7.0/10.0"
 
 # ACTUAL TIER 3 SERVERS BY SPECIALIZED CATEGORY
 

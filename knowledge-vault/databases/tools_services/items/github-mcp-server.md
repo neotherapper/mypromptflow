@@ -19,7 +19,7 @@ original_file: mcp-registry/detailed-profiles/tier-1/github-server-profile.md
 priority: 1st_priority
 production_readiness: 94
 provider: GitHub/Community
-quality_score: 9.4
+quality_score: 9.8
 repository_url: https://github.com/modelcontextprotocol/servers/tree/main/src/github
 setup_complexity: Moderate
 source_database: tools_services

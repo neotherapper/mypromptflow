@@ -3,9 +3,15 @@
 # MCP Parameter Corrector
 # Applies learned corrections to MCP tool parameters
 
-# Read tool input from stdin
-read -r tool_input
+# Handle input - either from stdin or as second argument
 TOOL_NAME="$1"
+if [ -n "$2" ]; then
+    # Input provided as argument
+    tool_input="$2"
+else
+    # Read tool input from stdin
+    read -r tool_input
+fi
 
 # Apply corrections based on tool type and learned patterns
 case "$TOOL_NAME" in

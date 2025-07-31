@@ -20,7 +20,7 @@ original_file: mcp-registry/detailed-profiles/tier-1/postgresql-server-profile.m
 priority: 1st_priority
 production_readiness: 90
 provider: Community/PostgreSQL Foundation
-quality_score: 9.0
+quality_score: 8.95
 repository_url: https://github.com/modelcontextprotocol/servers/tree/main/src/postgresql
 setup_complexity: Moderate
 source_database: tools_services
