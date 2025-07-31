@@ -1,0 +1,313 @@
+# YouTube Channel Monitoring Configuration
+# Universal Topic Intelligence System - YouTube Source Integration
+
+topic_metadata:
+  name: "YouTube Programming & Web Development Channels"
+  slug: "youtube-programming"
+  description: "Comprehensive monitoring of curated YouTube channels for web development, JavaScript, React, and programming education content"
+  priority_level: "high"
+  monitoring_frequency: "daily"
+  quality_threshold: 0.85
+  coverage_target: 95
+
+# Source Categories
+source_mapping:
+  tier_1_premium_educators:
+    description: "Top-rated channels with extensive knowledge base integration"
+    quality_weight: 1.0
+    sources:
+      - name: "ThePrimeagen"
+        url: "https://www.youtube.com/@ThePrimeagen"
+        channel_handle: "ThePrimeagen"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw"
+        description: "Random software engineering content and vim memes"
+        rating: 5
+        knowledge_vault_items: 25
+        topics: ["software-engineering", "vim", "programming", "development-workflow"]
+        upload_frequency: "weekly"
+        transcript_priority: "high"
+        
+      - name: "Theo - t3․gg"
+        url: "https://www.youtube.com/@t3dotgg"
+        channel_handle: "TheoBrowne1017"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7K3iGDFa6OlnshFLrr2_Mw"
+        description: "TypeScript, React, tRPC, and T3 stack content"
+        rating: 5
+        knowledge_vault_items: 4
+        topics: ["typescript", "react", "trpc", "t3-stack", "modern-web-dev"]
+        upload_frequency: "frequent"
+        transcript_priority: "high"
+        
+      - name: "Learn With Jason"
+        url: "https://www.youtube.com/@learnwithjason"
+        channel_handle: "LearnWithJason"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCnty0z0pNRDgnuoirYXnC5A"
+        description: "90-minute live coding sessions with special guests"
+        rating: 5
+        knowledge_vault_items: 4
+        topics: ["web-development", "live-coding", "javascript", "community"]
+        upload_frequency: "weekly"
+        transcript_priority: "high"
+        
+      - name: "Fireship"
+        url: "https://www.youtube.com/@Fireship"
+        channel_handle: "Fireship"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA"
+        description: "Quick programming tutorials and industry insights"
+        rating: 5
+        knowledge_vault_items: 25
+        topics: ["programming", "web-development", "tech-trends", "tutorials"]
+        upload_frequency: "weekly"
+        transcript_priority: "high"
+
+  tier_2_specialized_educators:
+    description: "High-quality specialized channels"
+    quality_weight: 0.9
+    sources:
+      - name: "James Q Quick"
+        url: "https://www.youtube.com/@JamesQQuick"
+        channel_handle: "JamesQQuick"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UC-T8W79DN6PBnzomelvqJYw"
+        description: "JavaScript, React, and Web Development Career Advice"
+        rating: 4
+        topics: ["javascript", "react", "career-advice", "web-development"]
+        upload_frequency: "bi-weekly"
+        
+      - name: "UI.dev"
+        url: "https://www.youtube.com/@uidotdev"
+        channel_handle: "uidotdev"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsKsymTY_4BYR-wytLjex7A"
+        description: "JavaScript ecosystem education"
+        rating: 4
+        topics: ["javascript", "frontend", "ecosystem", "tutorials"]
+        upload_frequency: "weekly"
+        
+      - name: "Lee Robinson"
+        url: "https://www.youtube.com/@leerob"
+        channel_handle: "LeeRobinson"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZMli3czZnd1uoc1ShTouQw"
+        description: "Building the future of the web"
+        rating: 4
+        topics: ["next.js", "react", "web-development", "vercel"]
+        upload_frequency: "monthly"
+        
+      - name: "James Perkins"
+        url: "https://www.youtube.com/@james-perkins"
+        channel_handle: "JamesPerkins"
+        description: "Latest technologies and development tutorials"
+        rating: 4
+        topics: ["web-development", "tutorials", "modern-tech"]
+        upload_frequency: "weekly"
+
+  tier_3_niche_specialists:
+    description: "Specialized content for specific technologies"
+    quality_weight: 0.8
+    sources:
+      - name: "Ryan Carniato"
+        url: "https://www.youtube.com/@ryansolid"
+        channel_handle: "ryansolid"
+        description: "SolidJS creator and reactive programming expert"
+        rating: 4
+        topics: ["solidjs", "reactive-programming", "javascript-frameworks"]
+        
+      - name: "Prisma"
+        url: "https://www.youtube.com/@PrismaData"
+        channel_handle: "PrismaData"
+        description: "Database ORM and development tools"
+        rating: 4
+        topics: ["database", "orm", "prisma", "backend"]
+        
+      - name: "Payload CMS"
+        url: "https://www.youtube.com/@PayloadCMS"
+        channel_handle: "PayloadCMS"
+        description: "Headless CMS and backend solutions"
+        rating: 4
+        topics: ["cms", "headless", "backend", "content-management"]
+
+# MCP Server Integration
+mcp_server_mapping:
+  youtube_transcript_server:
+    tool: "mcp__MCP_DOCKER__get_transcript"
+    use_cases:
+      - "Extract full transcripts from new videos"
+      - "Process educational content for key insights"
+      - "Generate searchable content database"
+    parameters:
+      - "url: YouTube video URL"
+      - "lang: preferred language (default: en)"
+    
+  web_fetch_server:
+    tool: "mcp__MCP_DOCKER__fetch"
+    use_cases:
+      - "Monitor RSS feeds for new video uploads"
+      - "Extract video metadata and descriptions"
+      - "Check channel upload schedules"
+    parameters:
+      - "url: RSS feed or channel URL"
+      - "max_length: content length limit"
+
+# Monitoring Strategy
+monitoring_configuration:
+  rss_feed_checking:
+    frequency: "every_6_hours"
+    peak_hours: ["09:00", "15:00", "21:00"]  # UTC times
+    batch_size: 5  # channels per batch to avoid rate limits
+    
+  video_processing:
+    new_video_detection:
+      - "Compare RSS feed with last known video list"
+      - "Extract video metadata (title, description, upload date)"
+      - "Queue for transcript processing if relevant"
+    
+    transcript_extraction:
+      priority_channels: ["ThePrimeagen", "Theo - t3․gg", "Learn With Jason", "Fireship"]
+      content_filtering:
+        - "Skip videos < 5 minutes (likely promotional)"
+        - "Skip videos > 3 hours (likely livestreams)"
+        - "Prioritize videos with programming/development keywords"
+    
+    quality_assessment:
+      relevance_scoring:
+        - "Programming/development keywords: +0.3"
+        - "Tutorial/educational format: +0.2"
+        - "Channel rating multiplier: ×0.8-1.2"
+        - "Transcript coherence check: +0.1"
+
+# Content Analysis Framework
+content_processing:
+  transcript_analysis:
+    key_extraction:
+      - "Code examples and snippets"
+      - "Tool recommendations and reviews"
+      - "Best practices and patterns"
+      - "Industry insights and trends"
+      - "Learning resources mentioned"
+    
+    categorization:
+      - "Tutorial: Step-by-step instructional content"
+      - "Review: Tool/technology evaluation"
+      - "Discussion: Industry trends and opinions"
+      - "Live-coding: Real-time development sessions"
+      - "News: Latest updates and announcements"
+    
+    insight_generation:
+      - "Summarize key takeaways (max 500 words)"
+      - "Extract actionable items and recommendations"
+      - "Identify mentioned tools, libraries, and resources"
+      - "Note timestamp markers for important sections"
+
+# Integration with Universal Topic Intelligence
+cross_topic_intelligence:
+  related_topics:
+    - "react-ecosystem-updates"
+    - "javascript-trends"
+    - "web-development-tools"
+    - "programming-career-advice"
+    - "ai-development-tools"
+  
+  sharing_patterns:
+    - "Tool mentions shared across programming topics"
+    - "Career advice relevant to multiple domains"
+    - "Industry trends affecting all development areas"
+    - "Educational techniques applicable to any topic"
+
+# Quality Thresholds
+quality_engine_configuration:
+  content_quality:
+    source_authority: 0.85  # Channel rating and knowledge base integration
+    content_accuracy: 0.80   # Transcript coherence and technical correctness
+    relevance_alignment: 0.75 # Match with programming/development topics
+    completeness_depth: 0.70  # Comprehensive coverage of topic
+    constitutional_compliance: 0.95 # Ethical content and learning focus
+  
+  processing_rules:
+    minimum_quality_threshold: 0.75
+    auto_approve_threshold: 0.90
+    manual_review_threshold: 0.60
+    rejection_threshold: 0.50
+
+# Storage and Organization
+knowledge_vault_integration:
+  storage_structure:
+    base_path: "knowledge-vault/youtube-content/"
+    organization:
+      - "by_channel/{channel_name}/{date}/"
+      - "by_topic/{topic_slug}/{date}/"
+      - "transcripts/{video_id}.md"
+      - "insights/{video_id}_analysis.md"
+      - "metadata/{video_id}_meta.yaml"
+  
+  indexing:
+    - "Full-text search on transcripts"
+    - "Tag-based categorization"
+    - "Channel-based browsing"
+    - "Date-based timelines"
+    - "Topic cross-references"
+
+# Performance Metrics
+success_metrics:
+  coverage_targets:
+    - "95% of new videos detected within 6 hours"
+    - "90% of priority channel content processed within 24 hours"
+    - "85% relevance accuracy in content filtering"
+    - "80% user satisfaction with content recommendations"
+  
+  processing_efficiency:
+    - "Average transcript processing time: <5 minutes"
+    - "RSS feed checking reliability: >99%"
+    - "Content quality scoring accuracy: >85%"
+    - "Cross-topic intelligence discovery: >10 connections/week"
+
+# Automation Workflows
+automated_workflows:
+  daily_digest:
+    - "Generate summary of new educational content"
+    - "Highlight trending topics across channels"
+    - "Recommend high-quality videos for immediate attention"
+    - "Update topic trend analysis"
+  
+  weekly_analysis:
+    - "Channel performance and upload pattern analysis"
+    - "Cross-channel topic trend identification"
+    - "Quality threshold adjustment recommendations"
+    - "Knowledge vault integration health check"
+  
+  alert_triggers:
+    - "New video from priority channels (immediate)"
+    - "Trending topic emergence across multiple channels"
+    - "High-quality content above 0.90 threshold"
+    - "Channel upload pattern changes"
+
+# Error Handling and Learning
+error_handling:
+  rss_feed_failures:
+    - "Retry with exponential backoff"
+    - "Fall back to direct channel page scraping"
+    - "Log patterns for MCP learning system"
+  
+  transcript_extraction_failures:
+    - "Retry with different language parameters"
+    - "Queue for manual review if high-priority channel"
+    - "Log video characteristics for pattern analysis"
+  
+  quality_assessment_errors:
+    - "Default to manual review queue"
+    - "Apply conservative quality scoring"
+    - "Learn from user feedback corrections"
+
+# Future Enhancements
+roadmap:
+  short_term:
+    - "Add support for YouTube Shorts monitoring"
+    - "Implement comment analysis for community insights"
+    - "Create channel comparison and benchmarking"
+  
+  medium_term:
+    - "Advanced natural language processing for better insights"
+    - "Predictive analysis for trending topics"
+    - "Integration with other video platforms (Twitch, Vimeo)"
+  
+  long_term:
+    - "AI-powered content summarization"
+    - "Automatic knowledge base article generation"
+    - "Community-driven channel discovery and rating"
