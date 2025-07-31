@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading Enterpri
 id: 138df9f5-8c31-4315-8f8e-61bf610aaf43
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Elasticsearch Search Engine MCP Server
-original_file: backups/mcp-server-registry-backup-20250726/mcp-registry/detailed-profiles/tier-1/elasticsearch-search-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 8.8
@@ -26,7 +24,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/elasticsearch-search-engine"
 ---
 
 ## Header Classification

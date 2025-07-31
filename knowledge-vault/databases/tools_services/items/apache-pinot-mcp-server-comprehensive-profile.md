@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 2 (Medium Priority - Real-Time Anal
 id: fa33af26-284b-4ab6-857c-875ffd590545
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Pinot MCP Server
-original_file: backups/mcp-server-registry-backup-20250726/mcp-registry/detailed-profiles/tier-2/apache-pinot-analytics-server-profile.md
 priority: 3rd_priority
 production_readiness: 95
 quality_score: 5.5
@@ -23,7 +21,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/apache-pinot"
 ---
 
 ## Header Classification

@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 2 (Medium Priority - AI-Powered Con
 id: 1bb93a69-f61e-436e-9edf-85d575a332fd
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: EverArt MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
 priority: 2nd_priority
 production_readiness: 85
 quality_score: 7.0
@@ -23,7 +21,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/everart"
 ---
 
 ## Header Classification

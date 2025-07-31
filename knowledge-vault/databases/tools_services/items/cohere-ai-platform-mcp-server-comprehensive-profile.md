@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading Enterpri
 id: ff0019bd-be32-46c0-87f2-0d0afc1d8ff2
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Cohere AI Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/cohere-ai-platform-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 9.5
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/cohere-ai-platform"
 ---
 
 ## Header Classification

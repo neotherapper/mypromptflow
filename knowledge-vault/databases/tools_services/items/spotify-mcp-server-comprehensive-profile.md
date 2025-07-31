@@ -11,10 +11,8 @@ description: Spotify MCP server providing comprehensive music streaming data acc
 estimated_setup_time: 20-30 minutes
 id: 8f2a3b1c-4d5e-6f7g-8h9i-0j1k2l3m4n5o
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-28'
-name: Spotify MCP Server
-original_file: community-mcp-servers/spotify-server-profile.md
+item_type: service
+name: Spotify
 priority: 3rd_priority
 production_readiness: 88
 provider: Community/Third-party
@@ -66,7 +64,6 @@ information_capabilities:
   - "Integrate music data with other applications and workflows"
   - "Create and manage playlists programmatically"
   - "Analyze music trends and popularity metrics"
-mcp_profile_reference: "@mcp_profile/spotify-server"
 ---
 
 **Community-maintained Spotify integration server for music streaming data access and playlist management through MCP**

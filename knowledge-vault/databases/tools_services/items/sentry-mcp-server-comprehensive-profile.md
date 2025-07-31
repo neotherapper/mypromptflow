@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Error Tracking &
 id: e7b1dbc4-0ca1-4ccd-85fe-39ccd7bbacba
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Sentry MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/sentry-official-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 8.7
@@ -22,7 +20,6 @@ tags:
 - Tier 1
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/sentry"
 ---
 
 ## Header Classification

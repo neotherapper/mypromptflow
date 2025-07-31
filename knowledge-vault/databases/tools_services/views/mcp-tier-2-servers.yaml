@@ -107,7 +107,7 @@ search_information_retrieval:
     - name: "Brave Search MCP Server"
       composite_score: 7.6
       category: "Search & Information Retrieval"
-      file_path: "knowledge-vault/databases/tools_services/items/brave-search-mcp-server.md"
+      file_path: "knowledge-vault/databases/tools_services/items/brave-search-privacy-focused-mcp-server-comprehensive-profile.md"
       production_readiness: 86
       business_value: "Alternative search engine with privacy features"
       setup_complexity: "Low"

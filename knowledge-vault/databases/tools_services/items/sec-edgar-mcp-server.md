@@ -6,9 +6,7 @@ description: Official SEC database access for public company filings and financi
 id: 7ec3f001-767c-48a1-bb5c-86bc6faa36bb
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: SEC EDGAR MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/sec-edgar-server-profile.md
 priority: 1st_priority
 production_readiness: 90
 provider: Government (SEC)
@@ -28,7 +26,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS REST API
-mcp_profile_reference: "@mcp_profile/sec-edgar"
 ---
 
 **Official SEC database access for public company filings and financial regulatory data**  

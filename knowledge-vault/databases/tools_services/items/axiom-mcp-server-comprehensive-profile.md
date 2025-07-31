@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 2 (Medium Priority - Event Processi
 id: f14d3b26-e012-460a-8a80-fffe444ddbb6
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Axiom MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 quality_score: 5.3
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/axiom"
 ---
 
 ## Header Classification

@@ -3,7 +3,6 @@ description: 'ArXiv Research MCP Server - Tier 3 Academic Research Paper Discove
 id: a8f3b2e7-9c4d-4a1e-b6f5-7e2d9a8c3b1f
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'ArXiv Research MCP Server'
 priority: 3rd_priority
 production_readiness: 88
@@ -19,7 +18,6 @@ tags:
 - Academic Papers
 - Scientific Analysis
 - Research Platform
-mcp_profile_reference: "@mcp_profile/arxiv-research"
 information_capabilities:
   access_patterns:
     - real_time_research_discovery

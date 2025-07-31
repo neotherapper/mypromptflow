@@ -7,9 +7,7 @@ description: '## Header Classification Tier: 1 (High Priority - Modern Frontend 
 id: 96ac98f9-17bc-45b6-92db-7016d3f08aae
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Vercel Deployment Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/vercel-deployment-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 8.1
@@ -27,7 +25,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/vercel-deployment-platform"
 ---
 
 ## Header Classification

@@ -7,9 +7,7 @@ description: The Continue IDE Integration represents a cutting-edge AI-powered d
 id: fd7bb2fa-72a5-49c4-8de5-978e2c5ae33e
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Continue IDE Integration MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/continue-ide-integration-server-profile.md
 priority: 1st_priority
 quality_score: 91.0
 source_database: tools_services

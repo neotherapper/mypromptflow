@@ -9,9 +9,7 @@ estimated_setup_time: 5-15 minutes
 id: f8a3b9c2-e7d4-4a1f-9b6e-3c8f2d5a7e9b
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: AWS Knowledge MCP Server
-original_file: aws-labs-knowledge-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: AWS Labs
@@ -70,7 +68,6 @@ information_capabilities:
   - "Query architectural patterns and design recommendations"
   - "Access Builder Center guidance and implementation examples"
   - "Retrieve blog posts and technical content for specific AWS services"
-mcp_profile_reference: "@mcp_profile/aws-knowledge"
 ---
 
 **Premier fully-managed AWS documentation and knowledge retrieval platform delivering real-time access to comprehensive AWS resources with enterprise-grade reliability and advanced search capabilities**

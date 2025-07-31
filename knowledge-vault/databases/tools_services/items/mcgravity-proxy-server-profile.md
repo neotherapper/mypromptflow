@@ -7,9 +7,7 @@ description: The mcgravity Proxy represents a sophisticated load balancing and p
 id: a1449dac-40b5-4b1a-9ee1-af9852429146
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: mcgravity Proxy MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/mcgravity-proxy-server-profile.md
 priority: 1st_priority
 quality_score: 94.0
 source_database: tools_services

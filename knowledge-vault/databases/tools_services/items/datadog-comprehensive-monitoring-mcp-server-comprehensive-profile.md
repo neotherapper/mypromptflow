@@ -7,9 +7,7 @@ description: '## Header Classification Tier: 1 (High Priority - Enterprise-Grade
 id: b7a2457b-dd6c-4d33-a57d-b776a1d9c31d
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Datadog Comprehensive Monitoring MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/datadog-monitoring-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 9.1
@@ -27,7 +25,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/datadog-comprehensive-monitoring"
 ---
 
 ## Header Classification

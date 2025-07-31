@@ -6,10 +6,8 @@ description: Enterprise e-commerce platform integration for comprehensive sales 
   intelligence workflows
 id: 97eeae6a-a312-4619-8f6a-313f5ec739cb
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: Shopify MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/shopify-server-profile.md
+item_type: platform
+name: Shopify
 priority: 1st_priority
 production_readiness: 90
 provider: Shopify (Enterprise)
@@ -31,7 +29,6 @@ transport_protocols:
 - REST API
 - GraphQL API
 - Partner API
-mcp_profile_reference: "@mcp_profile/shopify"
 ---
 
 **Enterprise e-commerce platform integration for comprehensive sales analytics and customer intelligence**  

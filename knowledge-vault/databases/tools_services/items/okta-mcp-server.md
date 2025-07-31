@@ -7,9 +7,7 @@ description: Enterprise identity and access management platform with comprehensi
 id: 0251dba0-1ffe-4653-a030-4a5896a4e927
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Okta MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/okta-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: Enterprise (Okta Inc.)
@@ -30,7 +28,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS REST API
-mcp_profile_reference: "@mcp_profile/okta"
 ---
 
 **Enterprise identity and access management platform with comprehensive SSO and user lifecycle management**  

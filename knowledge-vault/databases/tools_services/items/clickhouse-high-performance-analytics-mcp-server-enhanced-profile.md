@@ -6,9 +6,7 @@ description: ClickHouse MCP Server delivers enterprise-grade high-performance an
 id: 63d1191c-de1f-4cf7-bab5-1804b3c30ea0
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: ClickHouse High MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/clickhouse-high-performance-analytics-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -23,7 +21,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/clickhouse"
 ---
 
 ## Server Identity

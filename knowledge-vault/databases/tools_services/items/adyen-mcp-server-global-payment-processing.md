@@ -14,7 +14,6 @@ estimated_setup_time: 40-60 minutes
 id: 7b4f8e93-6c5a-4d92-9e3f-5a8d9c7b6e4f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: Adyen MCP Server
 original_source: Payment processing platform
 priority: 2nd_priority
@@ -75,7 +74,6 @@ information_capabilities:
   - "Generate comprehensive payment analytics and regulatory compliance reports"
   - "Integrate advanced payment features like tokenization and one-click checkout"
   - "Coordinate complex payment workflows with dispute management and reconciliation"
-mcp_profile_reference: "@mcp_profile/adyen-server"
 ---
 
 **Global payment processing server providing comprehensive Adyen integration for multi-currency transactions and enterprise payment workflows**

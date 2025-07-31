@@ -6,9 +6,7 @@ description: Service discovery, configuration, and mesh networking platform for 
 id: 59f078b3-3978-4b50-abb5-1edc00ad7b5d
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: HashiCorp Consul MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/hashicorp-consul-server-profile.md
 priority: 3rd_priority
 production_readiness: 94
 provider: Community/Third-party
@@ -29,7 +27,6 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - gRPC
-mcp_profile_reference: "@mcp_profile/hashicorp-consul"
 ---
 
 **Service discovery, configuration, and mesh networking platform for distributed systems**  

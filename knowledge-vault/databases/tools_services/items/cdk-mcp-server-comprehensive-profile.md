@@ -4,9 +4,7 @@ description: AWS Cloud Development Kit (CDK) Infrastructure as Code platform for
 id: f3e9a8d2-4c7b-1f8e-6d9a-2b5c8f1a7e3d
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: 'AWS CDK MCP Server'
-original_file: aws-cdk-infrastructure-server-profile
 priority: 1st_priority
 quality_score: 8.95
 =======
@@ -18,9 +16,7 @@ description: The AWS CDK MCP Server represents a critical Tier 1 infrastructure 
 id: f3e9a8d2-4c7b-1f8e-6d9a-2b5c8f1a7e3d
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'AWS CDK MCP Server - Infrastructure as Code Development Platform'
-original_file: aws-labs-mcp-repository-official
 priority: 1st_priority
 quality_score: 8.05
 >>>>>>> origin/master
@@ -42,7 +38,6 @@ tags:
 - Cloud Development
 - Well-Architected Framework
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/cdk"
 ---
 
 <<<<<<< HEAD

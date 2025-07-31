@@ -7,9 +7,7 @@ description: Postman MCP Server provides comprehensive API development and testi
 id: 202f10b2-e11d-4c5c-a270-064a5dacb4c4
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Postman MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/postman-server-profile.md
 priority: 1st_priority
 quality_score: 8.8
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/postman"
 ---
 
 **Tier**: Tier 1 Immediate  

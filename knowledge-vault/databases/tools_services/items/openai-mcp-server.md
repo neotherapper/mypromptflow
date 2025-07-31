@@ -6,9 +6,7 @@ description: GPT and DALL-E API access for versatile AI content generation and m
 id: 5037ad03-d5da-4cee-b16e-5fc4077c534c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: OpenAI MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/openai-server-profile.md
 priority: 1st_priority
 production_readiness: 85
 provider: Community
@@ -31,7 +29,6 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
-mcp_profile_reference: "@mcp_profile/openai"
 ---
 
 **GPT and DALL-E API access for versatile AI content generation and multimodal workflows**  

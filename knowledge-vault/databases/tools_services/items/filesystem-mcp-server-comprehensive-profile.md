@@ -12,9 +12,7 @@ estimated_setup_time: 10-20 minutes
 id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Filesystem MCP Server
-original_file: official-mcp-servers/filesystem-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 provider: MCP Official/Community
@@ -69,7 +67,6 @@ information_capabilities:
   - "Handle document uploads, downloads, and file transformations"
   - "Implement backup and synchronization workflows"
   - "Manage temporary files and cache directories"
-mcp_profile_reference: "@mcp_profile/filesystem"
 ---
 
 **Official filesystem integration server for comprehensive local file system access and management through MCP**

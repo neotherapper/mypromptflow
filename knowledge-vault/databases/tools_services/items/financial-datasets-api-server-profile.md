@@ -7,9 +7,7 @@ description: The Financial Datasets API MCP server provides comprehensive real-t
 id: 67cb09d0-9fc7-4f29-86e1-52acf6dbe80c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Financial Datasets API MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/financial-datasets-api-server-profile.md
 priority: 1st_priority
 quality_score: 83.0
 source_database: tools_services

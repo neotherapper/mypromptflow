@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Advanced Applica
 id: e7fa3fe9-c5a8-4383-88aa-080b632ac830
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Logfire OpenTelemetry MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/logfire-opentelemetry-server-profile.md
 priority: 1st_priority
 production_readiness: 97
 quality_score: 8.8
@@ -24,7 +22,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/logfire-opentelemetry"
 ---
 
 ## Header Classification

@@ -6,9 +6,7 @@ description: Modern Infrastructure as Code platform using familiar programming l
 id: 7f0fbd0a-eff5-4123-8ccb-a03182bede01
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Pulumi MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/pulumi-server-profile.md
 priority: 3rd_priority
 production_readiness: 93
 provider: Community/Third-party
@@ -30,7 +28,6 @@ transport_protocols:
 - HTTPS/REST
 - gRPC
 - WebSocket
-mcp_profile_reference: "@mcp_profile/pulumi"
 ---
 
 **Modern Infrastructure as Code platform using familiar programming languages**  

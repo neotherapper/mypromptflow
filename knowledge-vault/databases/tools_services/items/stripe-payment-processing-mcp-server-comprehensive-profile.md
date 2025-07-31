@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading Payment 
 id: 7093094c-a84c-42a4-bb1a-a8467ad247f8
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Stripe Payment Processing MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/stripe-payments-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 9.7
@@ -22,7 +20,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/stripe-payment-processing"
 ---
 
 ## Header Classification

@@ -6,9 +6,7 @@ description: The Apache NiFi MCP Server provides comprehensive integration betwe
 id: 08390f75-d078-450a-a560-e562f1795b9c
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache NiFi MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/apache-nifi-server-profile.md
 priority: 3rd_priority
 source_database: tools_services
 status: active
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Tier 3
 - Development Platform
-mcp_profile_reference: "@mcp_profile/apache-nifi-mcp"
 ---
 
 ---

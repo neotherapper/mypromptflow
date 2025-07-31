@@ -3,7 +3,6 @@ description: 'EVM Multi-Chain Server - Tier 1 Universal Ethereum-Compatible Netw
 id: b7d9e3f1-8c2a-4b65-9e7f-3a1c5d8b0e4f
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'EVM Multi-Chain Server Universal Integration Platform'
 priority: 1st_priority
 production_readiness: 90
@@ -19,7 +18,6 @@ tags:
 - Cross-Chain
 - Universal Platform
 - Enterprise Integration
-mcp_profile_reference: "@mcp_profile/evm-multi-chain"
 ---
 
 ## 📋 Basic Information

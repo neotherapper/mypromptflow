@@ -1,11 +1,9 @@
 ---
-description: "Enterprise identity and access management platform with MCP integration"
+description: "Enterprise payment processing platform with comprehensive API integration for modern business applications"
 id: 0b3b1643-e7d9-433d-bb06-2f7eb01614f8
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: Stripe MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/stripe-server-profile.md
+item_type: service
+name: Stripe
 priority: 3rd_priority
 source_database: tools_services
 status: active
@@ -15,14 +13,13 @@ tags:
 - MCP Server
 - Tier 3
 - Development Platform
-mcp_profile_reference: "@mcp_profile/stripe"
 ---
 
 ## Enterprise Use Cases
 
 ### Insurance Premium Processing
 
-- **Multi-Currency Premium Collections**: Process insurance premiums in various currencies for international business clients and policyholders
+- **Multi-Currency Payment Processing**: Process payments in various currencies for international business clients and customers
 - **Installment Premium Management**: Handle quarterly and semi-annual premium payment schedules common in insurance policies across industries
 - **Automatic Premium Renewals**: Recurring billing for annual insurance policy renewals with pro-rated adjustments across business sectors
 - **Industry Market Premium Processing**: Support for insurance market premium collections and cooperative accounting arrangements

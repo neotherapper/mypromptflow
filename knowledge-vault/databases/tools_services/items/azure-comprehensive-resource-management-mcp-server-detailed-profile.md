@@ -7,9 +7,7 @@ description: Azure Comprehensive MCP Server (blue-bridge) provides official Micr
 id: 868c65fc-8eb2-48cd-b914-922fd105ec39
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Azure Comprehensive Resource Management MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/azure-comprehensive-server-profile.md
 priority: 1st_priority
 quality_score: 9.75
 source_database: tools_services
@@ -26,7 +24,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/azure-comprehensive-resource-management"
 ---
 
 **Tier**: Tier 1 Immediate  

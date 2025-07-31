@@ -4,9 +4,7 @@ description: Amazon DynamoDB NoSQL database operations platform for enterprise-g
 id: f4d8b2c9-6e1a-4f3b-9d7c-2a8e5b3f9d1e
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: 'AWS DynamoDB MCP Server'
-original_file: aws-dynamodb-nosql-server-profile
 priority: 1st_priority
 quality_score: 8.75
 =======
@@ -14,9 +12,7 @@ description: The DynamoDB MCP Server represents a critical Tier 1 NoSQL database
 id: f4d8b2c9-6e1a-4f3b-9d7c-2a8e5b3f9d1e
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'DynamoDB MCP Server - Enterprise NoSQL Database Operations Platform'
-original_file: aws-labs-mcp-repository-official
 priority: 1st_priority
 quality_score: 8.3
 >>>>>>> origin/master
@@ -36,7 +32,6 @@ tags:
 - Scalable Infrastructure
 - Real-time Operations
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/dynamodb"
 ---
 
 <<<<<<< HEAD

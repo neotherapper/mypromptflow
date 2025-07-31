@@ -3,7 +3,6 @@ description: 'Magg Meta-Server Universal MCP Aggregation Hub - Tier 1 Enterprise
 id: a3f7b9d2-5e8c-4f17-9a6b-2e4d8c7f1a9e
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'Magg Meta-Server Universal MCP Aggregation Hub'
 priority: 1st_priority
 production_readiness: 94
@@ -19,7 +18,6 @@ tags:
 - Server Management
 - Orchestration
 - Universal Integration
-mcp_profile_reference: "@mcp_profile/magg-meta-server"
 ---
 
 ## 📋 Basic Information

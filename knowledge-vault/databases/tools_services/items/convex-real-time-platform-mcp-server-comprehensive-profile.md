@@ -12,9 +12,7 @@ estimated_setup_time: 45-60 minutes
 id: 3a9c5e7f-8d2b-4e6f-9c1a-7e4d8f3c5b9a
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Convex Real-Time Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/convex-realtime-platform-server-profile.md
 priority: 2nd_priority
 production_readiness: 80
 provider: Community/Convex
@@ -69,7 +67,6 @@ information_capabilities:
   - "Build multiplayer games with real-time state synchronization"
   - "Implement real-time notifications and event systems"
   - "Create collaborative editing and document sharing platforms"
-mcp_profile_reference: "@mcp_profile/convex-real-time-platform"
 ---
 
 **Full-stack real-time application development platform for comprehensive backend-as-a-service workflows and live data synchronization**

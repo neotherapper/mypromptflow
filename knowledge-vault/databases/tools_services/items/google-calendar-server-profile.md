@@ -3,12 +3,9 @@ description: 'Advanced scheduling automation, time management intelligence, and 
 id: 24d4150e-4596-4d55-8867-cc48c326df4e
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Google Calendar MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/google-calendar-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/google-calendar-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 85
@@ -26,7 +23,6 @@ tags:
 - Scheduling Automation
 - Time Analytics
 - Enterprise Ready
-mcp_profile_reference: "@mcp_profile/google-calendar"
 information_capabilities:
   access_methods:
     - method: "Google Calendar API"

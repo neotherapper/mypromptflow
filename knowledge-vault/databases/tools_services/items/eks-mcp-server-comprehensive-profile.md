@@ -4,9 +4,7 @@ description: Amazon Elastic Kubernetes Service (EKS) managed container orchestra
 id: f4a8b2c6-9d3e-4f7a-8c5b-2e1d7f9a6b3c
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: 'AWS EKS MCP Server'
-original_file: aws-eks-kubernetes-server-profile
 priority: 1st_priority
 quality_score: 8.65
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Tier 1
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/eks"
 ---
 
 # AWS EKS MCP Server - Detailed Implementation Profile
@@ -49,9 +46,7 @@ estimated_setup_time: 3-6 hours
 id: f4a8b2c6-9d3e-4f7a-8c5b-2e1d7f9a6b3c
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: EKS MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/eks-server-profile.md
 priority: 2nd_priority
 production_readiness: 89
 provider: AWS Labs
@@ -115,7 +110,6 @@ information_capabilities:
   - "Monitor cluster health and application performance metrics"
   - "Manage secrets and configurations with AWS Secrets Manager"
   - "Implement GitOps workflows with automated CI/CD pipelines"
-mcp_profile_reference: "@mcp_profile/eks"
 ---
 
 **Amazon Elastic Kubernetes Service (EKS) managed platform for enterprise container orchestration with simplified cluster management and comprehensive AWS ecosystem integration**

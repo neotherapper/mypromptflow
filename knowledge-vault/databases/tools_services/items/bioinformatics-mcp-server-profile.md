@@ -3,7 +3,6 @@ description: 'Bioinformatics MCP Server - Tier 3 Biological Data Analysis and Ge
 id: e9f4b1c8-2d7a-4e6f-b3c5-9a8e7f2b4d1c
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'Bioinformatics MCP Server'
 priority: 3rd_priority
 production_readiness: 89
@@ -19,7 +18,6 @@ tags:
 - Life Sciences
 - Research Analytics
 - Computational Biology
-mcp_profile_reference: "@mcp_profile/bioinformatics"
 information_capabilities:
   access_patterns:
     - genomic_data_analysis

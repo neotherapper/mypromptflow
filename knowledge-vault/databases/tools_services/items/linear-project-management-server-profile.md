@@ -3,12 +3,9 @@ description: 'Modern issue tracking and project management platform with streaml
 id: 7e30e977-7c74-493d-b713-d49cca08538b
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Linear Project Management MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/linear-project-management-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 92
@@ -26,7 +23,6 @@ tags:
 - Team Collaboration
 - High Performance
 - Developer Tools
-mcp_profile_reference: "@mcp_profile/linear-project-management"
 information_capabilities:
   access_methods:
     - method: "Linear GraphQL API"

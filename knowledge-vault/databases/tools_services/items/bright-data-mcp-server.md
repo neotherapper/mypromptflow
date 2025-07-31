@@ -5,9 +5,7 @@ description: Commercial-grade web scraping and data extraction infrastructure En
 id: 2aa0bc18-2574-45c9-960c-407c1222f622
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Bright Data MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/bright-data-server-profile.md
 priority: 1st_priority
 production_readiness: 85
 provider: Bright Data (Sponsored/Commercial)
@@ -29,7 +27,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - HTTPS API
-mcp_profile_reference: "@mcp_profile/bright-data"
 ---
 
 **Commercial-grade web scraping and data extraction infrastructure**  

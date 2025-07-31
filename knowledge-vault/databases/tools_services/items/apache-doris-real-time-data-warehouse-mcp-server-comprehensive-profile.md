@@ -7,9 +7,7 @@ description: Apache Doris MCP Server provides enterprise-grade real-time data wa
 id: 4f749851-3b34-4b10-8314-fa2d56ddfa98
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Doris Real MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/apache-doris-realtime-warehouse-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -25,7 +23,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/apache-doris"
 ---
 
 ## Server Identity

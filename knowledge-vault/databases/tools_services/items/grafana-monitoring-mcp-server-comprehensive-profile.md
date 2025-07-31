@@ -7,9 +7,7 @@ description: '## Header Classification Tier: 1 (High Priority - Industry-Standar
 id: a43a9c87-310f-4578-947d-6d636682307f
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Grafana Monitoring MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/grafana-monitoring-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 8.3
@@ -27,7 +25,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/grafana-monitoring"
 ---
 
 ## Header Classification

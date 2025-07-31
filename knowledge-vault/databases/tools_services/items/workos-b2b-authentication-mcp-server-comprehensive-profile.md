@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - B2B Identity Man
 id: b757a1d3-c6e0-47fc-ad42-e7138288099d
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: WorkOS B2B Authentication MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/workos-b2b-auth-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 8.3
@@ -22,7 +20,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/workos-b2b-authentication"
 ---
 
 ## Header Classification

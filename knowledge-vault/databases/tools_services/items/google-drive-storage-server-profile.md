@@ -3,12 +3,9 @@ description: 'Cloud storage and document management platform with enhanced enter
 id: 2c3122e7-d92f-4e6b-8de5-febd1a872dee
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Google Drive Storage MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/google-drive-storage-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 88
@@ -26,7 +23,6 @@ tags:
 - Collaboration Platform
 - File Operations
 - Real-time Sync
-mcp_profile_reference: "@mcp_profile/google-drive-storage"
 information_capabilities:
   access_methods:
     - method: "Google Drive API v3"

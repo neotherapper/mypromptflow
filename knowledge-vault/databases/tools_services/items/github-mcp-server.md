@@ -13,9 +13,7 @@ estimated_setup_time: 30-45 minutes
 id: 44d864f1-5a77-4ec2-b186-baa3fb771fcb
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: GitHub MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/github-server-profile.md
 priority: 1st_priority
 production_readiness: 94
 provider: GitHub/Community
@@ -68,7 +66,6 @@ information_capabilities:
   - "Extract code documentation and project information"
   - "Automate security scanning and compliance reporting"
   - "Coordinate team collaboration and code review processes"
-mcp_profile_reference: "@mcp_profile/github-server"
 ---
 
 **Official GitHub integration server for comprehensive repository management and development workflow automation through MCP**

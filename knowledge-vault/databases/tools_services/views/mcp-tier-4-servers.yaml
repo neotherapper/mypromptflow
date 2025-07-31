@@ -49,7 +49,7 @@ entertainment_media:
     - name: "Tier 4: Spotify MCP Server"
       composite_score: 4.25
       category: "Entertainment & Media"
-      file_path: "knowledge-vault/databases/tools_services/items/tier-4-spotify-mcp-server-detailed-profile.md"
+      file_path: "knowledge-vault/databases/tools_services/items/spotify-mcp-server-detailed-profile.md"
       production_readiness: 75
       business_value: "Music platform automation and content discovery"
       setup_complexity: "Moderate"
@@ -60,7 +60,7 @@ entertainment_media:
     - name: "Tier 4: YouTube MCP Server"
       composite_score: 4.75
       category: "Video Platform"
-      file_path: "knowledge-vault/databases/tools_services/items/tier-4-youtube-mcp-server-detailed-profile.md"
+      file_path: "knowledge-vault/databases/tools_services/items/youtube-mcp-server-detailed-profile.md"
       production_readiness: 78
       business_value: "Video content management and automation"
       setup_complexity: "Moderate"
@@ -85,7 +85,7 @@ social_communication:
     - name: "Tier 4: Discord MCP Server"
       composite_score: 4.35
       category: "Community Communication"
-      file_path: "knowledge-vault/databases/tools_services/items/tier-4-discord-mcp-server-detailed-profile.md"
+      file_path: "knowledge-vault/databases/tools_services/items/discord-mcp-server-detailed-profile.md"
       production_readiness: 76
       business_value: "Community platform integration and automation"
       setup_complexity: "Moderate"

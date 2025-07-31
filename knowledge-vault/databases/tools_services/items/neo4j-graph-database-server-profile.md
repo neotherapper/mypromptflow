@@ -9,9 +9,7 @@ description: The Neo4j Graph Database MCP server represents a revolutionary rela
 id: aad6ce4f-570f-4185-8c53-920ac2413778
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Neo4j Graph Database MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/neo4j-graph-database-server-profile.md
 priority: 1st_priority
 quality_score: 95.0
 source_database: tools_services

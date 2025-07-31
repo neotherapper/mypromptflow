@@ -6,9 +6,7 @@ description: Privacy-focused search engine API integration with comprehensive se
 id: ca79387a-903d-4709-b3fc-510cf7a26123
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: DuckDuckGo MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/duckduckgo-server-profile.md
 priority: 1st_priority
 production_readiness: 92
 provider: Search Engine
@@ -31,7 +29,6 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSocket
-mcp_profile_reference: "@mcp_profile/duckduckgo"
 ---
 
 **Privacy-focused search engine API integration with comprehensive search capabilities**  

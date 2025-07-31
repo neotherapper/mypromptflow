@@ -9,10 +9,8 @@ description: Frontend deployment and serverless platform automation for modern w
   application development
 id: 6f337a82-8af1-4109-a0dc-8c82e6e80e1c
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: Vercel MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/vercel-server-profile.md
+item_type: platform
+name: Vercel
 priority: 3rd_priority
 production_readiness: 94
 provider: Community/Third-party
@@ -34,7 +32,6 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
-mcp_profile_reference: "@mcp_profile/vercel"
 ---
 
 **Frontend deployment and serverless platform automation for modern web applications**  

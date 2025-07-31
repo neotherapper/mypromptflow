@@ -14,7 +14,6 @@ estimated_setup_time: 60-90 minutes
 id: 9c6f8e74-7d5a-4b93-9e2f-4a8d7c9b6e3f
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: MCP-Slicer
 original_source: Community developed
 priority: 3rd_priority
@@ -74,7 +73,6 @@ information_capabilities:
   - "Enable radiologist collaboration through shared 3D visualization tools"
   - "Automate medical image analysis for research and clinical trials"
   - "Provide real-time image processing for surgical planning and navigation"
-mcp_profile_reference: "@mcp_profile/mcp-slicer"
 ---
 
 **Advanced 3D medical image processing server enabling natural language queries for clinical workflow integration**

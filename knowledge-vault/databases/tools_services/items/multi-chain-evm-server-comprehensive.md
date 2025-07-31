@@ -14,7 +14,6 @@ estimated_setup_time: 45-60 minutes
 id: 8d3f7e92-4b6a-4c89-9e2f-5a8d9c7b6e4f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: Multi-Chain EVM Server
 original_source: Community developed
 priority: 2nd_priority
@@ -75,7 +74,6 @@ information_capabilities:
   - "Deploy and manage smart contracts across multiple blockchain networks"
   - "Analyze blockchain data patterns for investment and trading strategies"
   - "Coordinate complex multi-chain transactions with bridge integrations"
-mcp_profile_reference: "@mcp_profile/multi-chain-evm-server"
 ---
 
 **Unified multi-chain Ethereum Virtual Machine server providing comprehensive smart contract interactions across 30+ EVM-compatible networks**

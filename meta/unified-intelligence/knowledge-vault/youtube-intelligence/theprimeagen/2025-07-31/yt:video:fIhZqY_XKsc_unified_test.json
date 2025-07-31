@@ -1,0 +1,25 @@
+{
+  "video_url": "https://www.youtube.com/shorts/fIhZqY_XKsc",
+  "video_id": "yt:video:fIhZqY_XKsc",
+  "title": "You Have Time...",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "queued_at": "2025-07-31T10:05:59.625750",
+  "status": "completed_test",
+  "transcript": null,
+  "insights": null,
+  "processed_at": null,
+  "error": null,
+  "transcript_summary": "Now I'll analyze the transcript content:\n\n## Transcript Analysis\n\n### 1. Key Programming Concepts Mentioned\n- **None explicitly mentioned** - This is a motivational/life advice video rather than technical content\n\n### 2. Tools or Technologies Discussed\n- **None mentioned** - No specific programming tools, languages, or technologies are referenced\n\n### 3. Main Learning Points\n- **Time perspective**: Emphasizes that young people (18-27) have significant time ahead of them\n- **Continuous learning**...",
+  "unified_score": 1.0,
+  "processed_with": "unified-intelligence-framework",
+  "framework_version": "1.0.0",
+  "processing_timestamp": "2025-07-31T10:31:53.279373+00:00"
+}

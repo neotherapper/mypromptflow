@@ -13,7 +13,6 @@ estimated_setup_time: 15-25 minutes
 id: 2f7e9d84-6b3c-4a91-8e5f-3d9c7b8a6e4f
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-30'
 name: MCP Framework (NPM)
 original_source: https://www.npmjs.com/package/mcp-framework
 priority: 1st_priority
@@ -72,7 +71,6 @@ information_capabilities:
   - "Accelerate development workflows with integrated testing and deployment tools"
   - "Build standardized MCP server ecosystems with consistent patterns"
   - "Create custom MCP server templates for organizational development standards"
-mcp_profile_reference: "@mcp_profile/mcp-framework-npm"
 ---
 
 **Comprehensive TypeScript framework for Model Context Protocol development enabling rapid MCP server creation and community ecosystem building**

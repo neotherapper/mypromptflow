@@ -7,9 +7,7 @@ description: Infrastructure monitoring and observability platform integration fo
 id: 750d3fba-ef08-4ba5-b11c-540bc366c56f
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Datadog MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/datadog-server-profile.md
 priority: 2nd_priority
 production_readiness: 96
 provider: Community/Third-party
@@ -27,7 +25,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 2
-mcp_profile_reference: "@mcp_profile/datadog"
 ---
 
 **Infrastructure monitoring and observability platform integration for comprehensive system intelligence**  

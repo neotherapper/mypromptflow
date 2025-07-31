@@ -7,9 +7,7 @@ description: Selenium MCP Server provides industry-standard web browser automati
 id: 313703f2-b66f-4dc9-a736-c274394ca2fb
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Selenium MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/selenium-server-profile.md
 priority: 1st_priority
 quality_score: 8.25
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/selenium"
 ---
 
 **Tier**: Tier 1 Immediate  

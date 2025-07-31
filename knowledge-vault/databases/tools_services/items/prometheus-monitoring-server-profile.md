@@ -3,12 +3,9 @@ description: 'Comprehensive monitoring and metrics collection platform with time
 id: d4a7b8c5-9e2f-4d6a-8b5e-3c7f1a9e2b4d
 installation_priority: 5
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Prometheus Monitoring MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/prometheus-monitoring-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 98
@@ -26,7 +23,6 @@ tags:
 - Alerting
 - Performance Analytics
 - DevOps Tools
-mcp_profile_reference: "@mcp_profile/prometheus-monitoring"
 information_capabilities:
   access_methods:
     - method: "Prometheus HTTP API"

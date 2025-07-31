@@ -7,9 +7,7 @@ description: Zapier MCP Server provides enterprise-grade business process automa
 id: e9d6d82d-d676-4346-b7db-f5a10cc57dc5
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Zapier Business Process Automation MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/zapier-business-automation-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -25,7 +23,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/zapier-business-process-automation"
 ---
 
 ## Server Identity

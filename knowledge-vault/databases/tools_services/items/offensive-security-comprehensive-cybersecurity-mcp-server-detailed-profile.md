@@ -7,9 +7,7 @@ description: Offensive Security Comprehensive Cybersecurity MCP Server (Offensiv
 id: 991e2c50-d954-4889-9f8d-277eb8726eb4
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Offensive Security Comprehensive Cybersecurity MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/offensive-security-server-profile.md
 priority: 1st_priority
 quality_score: 9.0
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/offensive-security-comprehensive-cybersecurity"
 ---
 
 **Tier**: Tier 1 Immediate  

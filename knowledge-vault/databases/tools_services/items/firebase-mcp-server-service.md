@@ -5,10 +5,8 @@ description: Backend-as-a-Service and real-time application development platform
   application backend server for rapid development and real-time data synchronization
 id: 622f152e-6359-4ff4-9937-1195e3b858e0
 installation_priority: 3
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: Firebase MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/firebase-server-profile.md
+item_type: service
+name: Firebase
 priority: 3rd_priority
 production_readiness: 95
 provider: Google Cloud/Community
@@ -18,20 +16,18 @@ status: active
 tags:
 - Database
 - Storage Service
-- MCP Server
 - API Service
-- Search Engine
 - Security Tool
 - Analytics
 - Monitoring
 - Cloud Platform
 - Tier 3
 - Development Platform
+- Backend-as-a-Service
 tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
-mcp_profile_reference: "@mcp_profile/firebase"
 ---
 
 **Backend-as-a-Service and real-time application development platform**  

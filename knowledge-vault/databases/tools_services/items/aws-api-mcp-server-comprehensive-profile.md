@@ -6,9 +6,7 @@ description: The AWS API MCP Server represents a critical Tier 1 infrastructure 
 id: a8f9d2e5-7c3b-4f1a-9e8d-1b5c3f7a2d9e
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'AWS API MCP Server - Comprehensive AWS Infrastructure Management'
-original_file: aws-labs-mcp-repository-official
 priority: 1st_priority
 quality_score: 8.75
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Command Line Interface
 - Enterprise Grade
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/aws-api"
 ---
 
 ## Executive Summary

@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Developer-Friend
 id: 77548f7e-dd79-42af-aa3c-02c0b9426e70
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: DigitalOcean Cloud Management MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/digitalocean-management-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 8.2
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/digitalocean-cloud-management"
 ---
 
 ## Header Classification

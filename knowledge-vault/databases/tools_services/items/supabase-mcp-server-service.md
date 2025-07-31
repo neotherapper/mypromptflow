@@ -5,9 +5,7 @@ description: Open-source Firebase alternative with PostgreSQL and real-time capa
 id: f6b990b1-2641-4538-aa69-b24ce5ee95a2
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Supabase MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/supabase-server-profile.md
 priority: 3rd_priority
 production_readiness: 89
 provider: Community/Third-party
@@ -30,7 +28,6 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
-mcp_profile_reference: "@mcp_profile/supabase"
 ---
 
 **Open-source Firebase alternative with PostgreSQL and real-time capabilities**  

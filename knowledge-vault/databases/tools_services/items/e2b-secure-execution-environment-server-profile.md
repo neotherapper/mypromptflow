@@ -6,9 +6,7 @@ description: The E2B Secure Execution Environment represents a revolutionary sec
 id: b2106768-5d3c-484c-aa0e-071eb0c952ff
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: E2B Secure Execution Environment MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/e2b-secure-execution-server-profile.md
 priority: 1st_priority
 quality_score: 93.0
 source_database: tools_services

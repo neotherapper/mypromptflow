@@ -6,9 +6,7 @@ description: Distributed big data processing and machine learning engine for lar
 id: 5fbd8b6e-18e4-4d79-8671-e98664c4a86d
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Spark MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/apache-spark-server-profile.md
 priority: 3rd_priority
 production_readiness: 97
 provider: Community/Third-party
@@ -29,7 +27,6 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTP/REST
-mcp_profile_reference: "@mcp_profile/apache-spark"
 ---
 
 **Distributed big data processing and machine learning engine for large-scale data analytics and AI workloads**  

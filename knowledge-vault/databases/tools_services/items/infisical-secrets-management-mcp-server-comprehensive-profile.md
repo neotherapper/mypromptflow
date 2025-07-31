@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Enterprise Secre
 id: af94411b-c787-4143-984f-3de98f36ba95
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Infisical Secrets Management MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/infisical-secrets-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 quality_score: 8.4
@@ -23,7 +21,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/infisical-secrets-management"
 ---
 
 ## Header Classification

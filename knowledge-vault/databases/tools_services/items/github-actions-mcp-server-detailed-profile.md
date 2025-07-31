@@ -5,10 +5,8 @@ description: GitHub Actions MCP Server provides the industry's most comprehensiv
   and DevOps excellence across enterprise development teams.
 id: b7af6efa-b73a-46cc-83ae-d24176101ffd
 installation_priority: 4
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: GitHub Actions MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/github-actions-server-profile.md
+item_type: platform
+name: GitHub Actions
 priority: 1st_priority
 quality_score: 9.15
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/github-actions"
 ---
 
 **Tier**: Tier 1 Immediate  

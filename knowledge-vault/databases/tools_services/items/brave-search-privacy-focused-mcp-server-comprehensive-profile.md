@@ -10,9 +10,7 @@ estimated_setup_time: 15-20 minutes
 id: 7b4e9f2a-5c8d-4e7f-a9b2-6d3e8f7a4c9b
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Brave Search Privacy-Focused MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/brave-search-server-profile.md
 priority: 2nd_priority
 production_readiness: 80
 provider: Community
@@ -65,7 +63,6 @@ information_capabilities:
   - "Access trending topics and popular search queries"
   - "Implement secure search functionality in applications"
   - "Gather web intelligence while maintaining user privacy"
-mcp_profile_reference: "@mcp_profile/brave-search-privacy-focused"
 ---
 
 **Privacy-focused search API with comprehensive web intelligence for AI agents and secure information retrieval**

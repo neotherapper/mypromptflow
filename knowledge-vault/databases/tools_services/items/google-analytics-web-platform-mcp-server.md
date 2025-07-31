@@ -3,9 +3,7 @@ description: "Enterprise web analytics and user behavior intelligence platform w
 id: 2e8a7b9c-3f1d-4e5a-8b2c-9d6e4f7a8b3c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Google Analytics Web Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/google-analytics-web-platform-profile.md
 priority: 1st_priority
 quality_score: 86.5
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Tier 1
 - Google Service
 - Development Platform
-mcp_profile_reference: "@mcp_profile/google-analytics-web-platform"
 ---
 
 # Google Analytics Web Platform MCP Server

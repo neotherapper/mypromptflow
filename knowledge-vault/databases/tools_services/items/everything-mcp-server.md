@@ -5,9 +5,7 @@ description: Official Anthropic demo server for comprehensive MCP protocol devel
 id: 5daea2b8-06ca-4735-8067-d849c82d3d9c
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Everything MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/everything-server-profile.md
 priority: 1st_priority
 production_readiness: 85
 provider: Anthropic
@@ -25,7 +23,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP
-mcp_profile_reference: "@mcp_profile/everything"
 ---
 
 **Official Anthropic demo server for comprehensive MCP protocol development and testing**  

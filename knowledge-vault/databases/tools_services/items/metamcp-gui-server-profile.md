@@ -7,9 +7,7 @@ description: The MetaMCP GUI represents a revolutionary graphical interface for 
 id: 93a4f52a-9559-46ad-98db-b4b9d80fe63d
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: MetaMCP GUI MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/metamcp-gui-server-profile.md
 priority: 1st_priority
 quality_score: 94.0
 source_database: tools_services
@@ -26,7 +24,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/metamcp-gui"
 ---
 
 ## Executive Summary

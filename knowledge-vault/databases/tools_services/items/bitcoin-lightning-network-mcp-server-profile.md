@@ -3,7 +3,6 @@ description: 'Bitcoin & Lightning Network MCP Server - Tier 1 Enterprise Cryptoc
 id: c8e9f2a3-6d5b-4c7a-8e1f-9b0c2d4e6f8a
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'Bitcoin & Lightning Network MCP Server'
 priority: 1st_priority
 production_readiness: 91
@@ -19,7 +18,6 @@ tags:
 - Lightning Network
 - Enterprise Platform
 - Financial Technology
-mcp_profile_reference: "@mcp_profile/bitcoin-lightning"
 ---
 
 ## 📋 Basic Information

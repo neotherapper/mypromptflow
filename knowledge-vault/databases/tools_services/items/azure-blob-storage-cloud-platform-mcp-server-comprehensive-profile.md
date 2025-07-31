@@ -13,9 +13,7 @@ estimated_setup_time: 45-60 minutes
 id: 4f9a2d7e-6c8b-4e1f-9a3c-7b5d8e2f6a9c
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Azure Blob Storage Cloud Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/azure-blob-storage-server-profile.md
 priority: 2nd_priority
 production_readiness: 99
 provider: Microsoft
@@ -70,7 +68,6 @@ information_capabilities:
   - "Set up disaster recovery and geo-redundant storage"
   - "Optimize storage costs with intelligent tiering"
   - "Integrate with Azure services for comprehensive workflows"
-mcp_profile_reference: "@mcp_profile/azure-blob-storage-platform"
 ---
 
 **Cloud storage and data management platform for comprehensive enterprise storage, backup solutions, and global content distribution through MCP**

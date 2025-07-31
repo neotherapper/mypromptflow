@@ -3,7 +3,6 @@ description: 'Base Blockchain Coinbase MCP Server - Tier 1 Enterprise Layer-2 Et
 id: f5d8c2a9-3e7b-4f19-a1c6-8b9e0d2f4a6c
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: 'Base Blockchain Coinbase MCP Server'
 priority: 1st_priority
 production_readiness: 92
@@ -19,7 +18,6 @@ tags:
 - Base Network
 - Coinbase
 - Enterprise Platform
-mcp_profile_reference: "@mcp_profile/base-blockchain"
 ---
 
 ## 📋 Basic Information

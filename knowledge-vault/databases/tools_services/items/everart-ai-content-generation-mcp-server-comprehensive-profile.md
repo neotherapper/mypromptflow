@@ -11,9 +11,7 @@ estimated_setup_time: 20-30 minutes
 id: 8b5c9e2f-6a7d-4e8f-9b4c-7e5d8b2f9c6a
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: EverArt AI Content Generation MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/everart-ai-content-server-profile.md
 priority: 2nd_priority
 production_readiness: 85
 provider: Community/EverArt
@@ -67,7 +65,6 @@ information_capabilities:
   - "Generate product imagery and e-commerce visuals"
   - "Create social media content with brand-specific styling"
   - "Implement AI-powered creative asset management systems"
-mcp_profile_reference: "@mcp_profile/everart-ai-content-generation"
 ---
 
 **AI-powered content generation platform for comprehensive creative workflows, marketing automation, and brand-specific visual content creation**

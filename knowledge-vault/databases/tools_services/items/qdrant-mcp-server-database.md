@@ -5,9 +5,7 @@ description: Official Qdrant server for high-performance vector search and AI me
 id: 4be51c8f-440a-4dfe-bdef-669306b6f0df
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Qdrant MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/qdrant-server-profile.md
 priority: 1st_priority
 production_readiness: 90
 provider: Qdrant (Official third-party)
@@ -31,7 +29,6 @@ tier: Tier 1
 transport_protocols:
 - HTTP REST API
 - gRPC
-mcp_profile_reference: "@mcp_profile/qdrant"
 ---
 
 **Official Qdrant server for high-performance vector search and AI memory systems**  
