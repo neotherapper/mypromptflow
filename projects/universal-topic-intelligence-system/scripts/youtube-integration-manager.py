@@ -95,7 +95,7 @@ Return only the transcript text, no additional formatting or commentary.
             # Use Claude Code to process the transcript extraction
             result = subprocess.run([
                 'claude',
-                '--prompt', prompt
+                '--print', prompt
             ], capture_output=True, text=True, timeout=300)  # 5-minute timeout
             
             if result.returncode == 0:
