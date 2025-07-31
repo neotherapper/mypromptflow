@@ -1,0 +1,24 @@
+{
+  "video_id": "yt:video:SEVD2nI4Bis",
+  "video_url": "https://www.youtube.com/shorts/SEVD2nI4Bis",
+  "title": "Why Do I Suck At Programming?",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "processing_date": null,
+  "relevance_score": 0.0,
+  "tools_mentioned": [],
+  "key_takeaways_count": 0,
+  "code_examples_count": 0,
+  "file_paths": {
+    "transcript": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/why_do_i_suck_at_programming_transcript.md",
+    "insights": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/why_do_i_suck_at_programming_insights.md",
+    "metadata": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/why_do_i_suck_at_programming_metadata.json"
+  }
+}
