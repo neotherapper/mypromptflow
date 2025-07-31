@@ -92,10 +92,12 @@ Please use the mcp__MCP_DOCKER__get_transcript tool to extract the full transcri
 Return only the transcript text, no additional formatting or commentary.
 '''
             
-            # Use Claude Code to process the transcript extraction
+            # Use Claude Code to process the transcript extraction with bypassed permissions
             result = subprocess.run([
                 'claude',
-                '--print', prompt
+                '--print',
+                '--permission-mode', 'bypassPermissions',
+                prompt
             ], capture_output=True, text=True, timeout=300)  # 5-minute timeout
             
             if result.returncode == 0:

@@ -123,3 +123,37 @@
 [2025-07-31 00:13:28] [INFO] [jira] [jira_get_issue] [issue_key_format] - Valid format: TEST-123
 [2025-07-31 00:13:28] [WARN] [jira] [jira_get_issue] [sprint_field] - Missing sprint field in fields parameter
 [2025-07-31 00:13:28] [INFO] [universal] [jira_get_issue] [json_format] - Valid JSON parameters
+[2025-07-31 00:19:43] [INFO] [jira] [jira_get_issue] [issue_key_format] - Valid format: TEST-123
+[2025-07-31 00:19:43] [WARN] [jira] [jira_get_issue] [sprint_field] - Missing sprint field in fields parameter
+[2025-07-31 00:19:43] [INFO] [universal] [jira_get_issue] [json_format] - Valid JSON parameters
+[2025-07-31 00:26:05] [INFO] [jira] [jira_search] [jql_syntax] - Basic syntax check passed
+[2025-07-31 00:26:05] [INFO] [universal] [jira_search] [json_format] - Valid JSON parameters
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 00:29:33] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 00:29:33] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 00:29:33] Validating regular_tool
+[2025-07-31 00:29:33] ALLOWED: regular_tool - Valid: Unknown tool - allowing
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 00:29:33] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_create_issue
+[2025-07-31 00:29:33] ALLOWED: mcp__MCP_DOCKER__jira_create_issue - Valid: Required parameters found
+[2025-07-31 00:29:33] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 00:29:33] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 09:24:29] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:29] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 09:24:29] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:29] BLOCKED: mcp__MCP_DOCKER__jira_get_issue - Issue key format is invalid and will cause API error
+[2025-07-31 09:24:29] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:29] BLOCKED: mcp__MCP_DOCKER__jira_get_issue - Issue key appears to be a test value - confirm this is intentional
+[2025-07-31 09:24:30] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:30] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 09:34:18] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found
+[2025-07-31 09:34:18] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] BLOCKED: mcp__MCP_DOCKER__jira_get_issue - Issue key format is invalid and will cause API error
+[2025-07-31 09:34:18] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] BLOCKED: mcp__MCP_DOCKER__jira_get_issue - Issue key appears to be a test value - confirm this is intentional
+[2025-07-31 09:34:18] Validating mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] ALLOWED: mcp__MCP_DOCKER__jira_get_issue - Valid: issue_key parameter found

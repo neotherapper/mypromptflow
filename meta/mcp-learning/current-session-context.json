@@ -1,0 +1,32 @@
+{
+  "session_id": "session_20250731_002219",
+  "session_start": "2025-07-31 00:22:19",
+  "user_task_goal": "Testing MCP learning integration workflow",
+  "workflow_stage": "beginning",
+  "user_expertise_level": "intermediate",
+  "related_operations": [
+    {
+      "timestamp": "2025-07-31 00:26:05",
+      "server": "jira",
+      "tool": "jira_search",
+      "objective": "Find open test issues",
+      "expected_outcome": "List of open issues in TEST project",
+      "parameters_summary": {
+        "jql": "project = TEST AND status = Open",
+        "fields": "summary,status,assignee",
+        "limit": 10
+      }
+    }
+  ],
+  "time_context": "normal",
+  "system_state": "normal",
+  "previous_errors": [],
+  "success_history": [
+    {
+      "timestamp": "2025-07-31 00:26:17",
+      "server": "jira",
+      "tool": "jira_search",
+      "outcome": "Found 8 open issues in TEST project"
+    }
+  ]
+}

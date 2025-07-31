@@ -1,10 +1,10 @@
 # SDLC Subagent Registry
 # Comprehensive catalog of specialized AI subagents for 6-stage SDLC workflow
 
-registry_version: "1.4.0"
+registry_version: "1.5.0"
 created_date: "2025-01-28"
-last_updated: "2025-01-29"
-total_subagents: 13
+last_updated: "2025-07-31"
+total_subagents: 14
 
 # Registry Overview
 overview:
@@ -502,6 +502,38 @@ subagents:
       - "Error detection accuracy ≥90%"
       - "Recovery protocol effectiveness ≥85%"
 
+  jira-maritime-intelligence-specialist:
+    name: "JIRA Maritime Intelligence Specialist"
+    file: "jira-maritime-intelligence-specialist.md"
+    category: "maritime-operations"
+    priority: "high"
+    environment: "production"
+    team: "maritime-operations"
+    
+    description: "Advanced JIRA operations specialist with error prevention, success pattern application, maritime insurance project context awareness, and local JIRA memory system integration for enhanced intelligence and critical sprint classification accuracy. Use when handling complex JIRA workflows, maritime insurance domain story creation, sprint classification operations, or integrating with local JIRA cache systems for comprehensive project intelligence."
+    
+    core_capabilities:
+      - "Local JIRA memory system integration with comprehensive cache management and Requirements Analysis Framework coordination"
+      - "Critical sprint classification intelligence with mandatory customfield_10020 validation and accurate backlog/sprint detection"
+      - "Maritime insurance domain operations with regulatory compliance, vessel management, and risk assessment workflow intelligence"
+      - "Advanced error prevention protocol with pre-flight validation, success pattern application, and systematic error logging"
+      - "Complex JIRA operations management with validated parameter formats, workflow transitions, and comprehensive project coordination"
+      - "Quality assurance and validation with maritime domain expertise, technical architecture context, and operational excellence standards"
+    
+    tools: ["mcp__MCP_DOCKER__jira_get_issue", "mcp__MCP_DOCKER__jira_create_issue", "mcp__MCP_DOCKER__jira_update_issue", "mcp__MCP_DOCKER__jira_search", "mcp__MCP_DOCKER__jira_transition_issue", "mcp__MCP_DOCKER__jira_get_transitions", "mcp__MCP_DOCKER__jira_add_comment", "mcp__MCP_DOCKER__jira_link_to_epic", "mcp__MCP_DOCKER__jira_create_issue_link", "mcp__MCP_DOCKER__jira_get_project_issues", "mcp__MCP_DOCKER__jira_get_agile_boards", "mcp__MCP_DOCKER__jira_get_board_issues", "mcp__MCP_DOCKER__jira_get_sprints_from_board", "mcp__MCP_DOCKER__jira_get_sprint_issues", "mcp__MCP_DOCKER__jira_create_sprint", "mcp__MCP_DOCKER__jira_update_sprint", "mcp__MCP_DOCKER__jira_get_worklog", "mcp__MCP_DOCKER__jira_add_worklog", "Read", "Grep", "Glob"]
+    
+    integration_patterns:
+      - "Local JIRA cache system synchronization with comprehensive story tracking and metadata preservation"
+      - "Maritime insurance domain intelligence with regulatory compliance and technical architecture integration"
+      - "MCP error learning protocol with immediate logging, pattern recognition, and prevention strategy enhancement"
+      - "Critical sprint classification with field validation, accurate detection logic, and cache file coordination"
+    
+    success_metrics:
+      - "Sprint classification accuracy ≥99% through field validation"
+      - "JIRA operation success rate ≥95% using validated patterns"
+      - "Maritime domain story quality score ≥4.5/5.0"
+      - "Error prevention effectiveness ≥90% through pattern application"
+
 # Cross-Stage Integration Patterns
 cross_stage_integration:
   stage_1_to_2:
@@ -714,3 +746,14 @@ version_history:
       - "Integration Health Monitor: Comprehensive MCP server health monitoring across 15+ servers with API reliability tracking"
       - "Completed gap analysis ensuring all new agents provide unique, non-overlapping functionality"
       - "Final registry consolidation with comprehensive documentation and success metrics"
+  
+  v1.5.0:
+    date: "2025-07-31"
+    changes:
+      - "Added JIRA Maritime Intelligence Specialist for advanced JIRA operations (total: 14 subagents)"
+      - "Comprehensive JIRA MCP tool integration with all 18 available JIRA operations"
+      - "Local JIRA memory system integration with cache management and Requirements Analysis Framework"
+      - "Critical sprint classification intelligence with mandatory customfield_10020 validation"
+      - "Maritime insurance domain expertise with regulatory compliance and vessel management intelligence"
+      - "Advanced error prevention protocol with success pattern application and systematic logging"
+      - "Enhanced maritime operations team capabilities with specialized JIRA workflow intelligence"

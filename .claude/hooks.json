@@ -2,12 +2,24 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "*",
+        "matcher": "mcp__*",
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/integration-test/test-hook.sh",
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/scripts/mcp-parameter-validator.sh",
             "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/scripts/mcp-error-detector.sh",
+            "timeout": 15
           }
         ]
       }

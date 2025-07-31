@@ -9,15 +9,15 @@ item_type: mcp_server
 migration_date: '2025-07-26'
 name: AWS MCP Server
 original_file: mcp-registry/detailed-profiles/tier-2/aws-server-profile.md
-priority: 2nd_priority
+priority: 1st_priority
 production_readiness: 78
 provider: Community/Third-party
-quality_score: 6.4
+quality_score: 9.5
 source_database: tools_services
 status: active
 tags:
 - Database
-- Tier 2
+- Tier 1
 - Storage Service
 - MCP Server
 - API Service
@@ -26,7 +26,7 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-tier: Tier 2
+tier: Tier 1
 transport_protocols:
 - HTTPS REST APIs
 - WebSocket
@@ -54,21 +54,22 @@ mcp_profile_reference: "@mcp_profile/aws"
 
 ## 🎯 Quality & Scoring Metrics
 
-### Overall Assessment
-- **Composite Score**: 6.4/10
-- **Tier**: Tier 2 Strategic
-- **Priority Rank**: #3 Development Tools
+### Repository-Aligned Scoring v6.0.0 Assessment
+- **Composite Score**: 9.5/10
+- **Tier**: Tier 1 Essential Stack
+- **Priority Rank**: #1 Core Infrastructure
 - **Production Readiness**: 78%
 
-### Detailed Scoring
-| Metric | Score | Rationale |
-|--------|-------|-----------|
-| **Information Retrieval Relevance** | 7/10 | Good for infrastructure intelligence and monitoring |
-| **Setup Complexity** | 4/10 | High complexity - requires IAM, VPC, service configuration |
-| **Maintenance Status** | 9/10 | Actively maintained by AWS with excellent stability |
-| **Documentation Quality** | 8/10 | Comprehensive AWS documentation with extensive examples |
-| **Community Adoption** | 8/10 | Dominant enterprise cloud platform adoption |
-| **Integration Potential** | 9/10 | Comprehensive service ecosystem with rich APIs |
+### Repository-Aligned Detailed Scoring
+| Metric | Score | Weight | Contribution | Rationale |
+|--------|-------|--------|--------------|-----------|
+| **Technology Stack Alignment** | 10/10 | 40% | 4.0 | Perfect AWS cloud infrastructure match - core stack alignment |
+| **Business Domain Relevance** | 9/10 | 25% | 2.25 | AI development infrastructure + enterprise development support |
+| **MCP Ecosystem Integration** | 9/10 | 20% | 1.8 | Cloud service integration enabling MCP deployment with auto-scaling |
+| **Production Readiness** | 10/10 | 10% | 1.0 | Enterprise-grade managed services with industry-leading reliability |
+| **Maintenance Status** | 9/10 | 5% | 0.45 | Official AWS vendor support with comprehensive service ecosystem |
+
+**Algorithm**: composite_score = (10×0.40) + (9×0.25) + (9×0.20) + (10×0.10) + (9×0.05) = **9.5/10**
 
 ### Production Readiness Breakdown
 - **Stability Score**: 90% - Industry-leading uptime and service reliability

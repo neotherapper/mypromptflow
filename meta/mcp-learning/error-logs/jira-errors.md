@@ -234,3 +234,273 @@ No error - successful operation
 **Last Occurrence:** 2025-07-30 10:07
 **Status:** Unresolved - Requires Manual Investigation
 
+
+## Error #3 - 2025-07-31 09:24
+
+### Context & Intent
+**What I was trying to do:** MCP tool execution (auto-detected)
+**User request:** Claude Code MCP tool operation
+**Expected outcome:** Successful MCP tool execution
+
+### Technical Details
+**MCP Server:** jira
+**Tool Used:** mcp__MCP_DOCKER__jira_get_issue
+**Parameters Used:**
+```json
+{
+  "note": "Parameters not captured by hook - requires manual investigation"
+}
+```
+
+### Error Information
+**Error Message:** 
+```
+Error: 401 Unauthorized - Invalid credentials
+```
+
+**Error Type:** Authentication Error
+**Severity:** Medium (Auto-detected)
+
+### Analysis
+**Root Cause:** Auto-detected via pattern matching in tool output
+**Missing Information:** Full context and parameters require manual review
+**Parameter Issues:** To be investigated through usage guides and patterns
+
+### Resolution Attempts
+1. **Automatic Detection:** Error detected and logged by hook → Success
+2. **Manual Investigation Required:** Check jira-guide.md for troubleshooting
+3. **Final Resolution:** To be updated after manual troubleshooting
+
+### Lessons Learned
+**For Future Use:**
+- [ ] Review similar patterns in error logs
+- [ ] Check usage guide for known solutions
+- [ ] Update prevention strategies if pattern emerges
+
+**Prevention:**
+- [ ] Check `meta/mcp-learning/usage-guides/jira-guide.md` before using tool
+- [ ] Apply known working patterns from previous successes
+- [ ] Validate parameters against common error patterns
+
+### Frequency Tracking
+**First Occurrence:** 2025-07-31 09:24
+**Frequency:** 1 time (auto-detected)
+**Last Occurrence:** 2025-07-31 09:24
+**Status:** Unresolved - Requires Manual Investigation
+
+
+## Error #4 - 2025-07-31 09:24
+
+### Context & Intent
+**What I was trying to do:** MCP tool execution (auto-detected)
+**User request:** Claude Code MCP tool operation
+**Expected outcome:** Successful MCP tool execution
+
+### Technical Details
+**MCP Server:** jira
+**Tool Used:** mcp__MCP_DOCKER__jira_get_issue
+**Parameters Used:**
+```json
+{
+  "note": "Parameters not captured by hook - requires manual investigation"
+}
+```
+
+### Error Information
+**Error Message:** 
+```
+Issue does not exist or you do not have permission to see it
+```
+
+**Error Type:** JIRA Resource Error
+**Severity:** Medium (Auto-detected)
+
+### Analysis
+**Root Cause:** Auto-detected via pattern matching in tool output
+**Missing Information:** Full context and parameters require manual review
+**Parameter Issues:** To be investigated through usage guides and patterns
+
+### Resolution Attempts
+1. **Automatic Detection:** Error detected and logged by hook → Success
+2. **Manual Investigation Required:** Check jira-guide.md for troubleshooting
+3. **Final Resolution:** To be updated after manual troubleshooting
+
+### Lessons Learned
+**For Future Use:**
+- [ ] Review similar patterns in error logs
+- [ ] Check usage guide for known solutions
+- [ ] Update prevention strategies if pattern emerges
+
+**Prevention:**
+- [ ] Check `meta/mcp-learning/usage-guides/jira-guide.md` before using tool
+- [ ] Apply known working patterns from previous successes
+- [ ] Validate parameters against common error patterns
+
+### Frequency Tracking
+**First Occurrence:** 2025-07-31 09:24
+**Frequency:** 1 time (auto-detected)
+**Last Occurrence:** 2025-07-31 09:24
+**Status:** Unresolved - Requires Manual Investigation
+
+
+## Error #5 - 2025-07-31 09:24
+
+### Context & Intent
+**What I was trying to do:** MCP tool execution (auto-detected)
+**User request:** Claude Code MCP tool operation
+**Expected outcome:** Successful MCP tool execution
+
+### Technical Details
+**MCP Server:** jira
+**Tool Used:** mcp__MCP_DOCKER__jira_get_issue
+**Parameters Used:**
+```json
+{
+  "note": "Parameters not captured by hook - requires manual investigation"
+}
+```
+
+### Error Information
+**Error Message:** 
+```
+Error: 401 Unauthorized - Invalid credentials
+```
+
+**Error Type:** Authentication Error
+**Severity:** Medium (Auto-detected)
+
+### Analysis
+**Root Cause:** Auto-detected via pattern matching in tool output
+**Missing Information:** Full context and parameters require manual review
+**Parameter Issues:** To be investigated through usage guides and patterns
+
+### Resolution Attempts
+1. **Automatic Detection:** Error detected and logged by hook → Success
+2. **Manual Investigation Required:** Check jira-guide.md for troubleshooting
+3. **Final Resolution:** To be updated after manual troubleshooting
+
+### Lessons Learned
+**For Future Use:**
+- [ ] Review similar patterns in error logs
+- [ ] Check usage guide for known solutions
+- [ ] Update prevention strategies if pattern emerges
+
+**Prevention:**
+- [ ] Check `meta/mcp-learning/usage-guides/jira-guide.md` before using tool
+- [ ] Apply known working patterns from previous successes
+- [ ] Validate parameters against common error patterns
+
+### Frequency Tracking
+**First Occurrence:** 2025-07-31 09:24
+**Frequency:** 1 time (auto-detected)
+**Last Occurrence:** 2025-07-31 09:24
+**Status:** Unresolved - Requires Manual Investigation
+
+
+## Error #6 - 2025-07-31 09:34
+
+### Context & Intent
+**What I was trying to do:** MCP tool execution (auto-detected)
+**User request:** Claude Code MCP tool operation
+**Expected outcome:** Successful MCP tool execution
+
+### Technical Details
+**MCP Server:** jira
+**Tool Used:** mcp__MCP_DOCKER__jira_get_issue
+**Parameters Used:**
+```json
+{
+  "note": "Parameters not captured by hook - requires manual investigation"
+}
+```
+
+### Error Information
+**Error Message:** 
+```
+Error: 401 Unauthorized - Invalid credentials
+```
+
+**Error Type:** Authentication Error
+**Severity:** Medium (Auto-detected)
+
+### Analysis
+**Root Cause:** Auto-detected via pattern matching in tool output
+**Missing Information:** Full context and parameters require manual review
+**Parameter Issues:** To be investigated through usage guides and patterns
+
+### Resolution Attempts
+1. **Automatic Detection:** Error detected and logged by hook → Success
+2. **Manual Investigation Required:** Check jira-guide.md for troubleshooting
+3. **Final Resolution:** To be updated after manual troubleshooting
+
+### Lessons Learned
+**For Future Use:**
+- [ ] Review similar patterns in error logs
+- [ ] Check usage guide for known solutions
+- [ ] Update prevention strategies if pattern emerges
+
+**Prevention:**
+- [ ] Check `meta/mcp-learning/usage-guides/jira-guide.md` before using tool
+- [ ] Apply known working patterns from previous successes
+- [ ] Validate parameters against common error patterns
+
+### Frequency Tracking
+**First Occurrence:** 2025-07-31 09:34
+**Frequency:** 1 time (auto-detected)
+**Last Occurrence:** 2025-07-31 09:34
+**Status:** Unresolved - Requires Manual Investigation
+
+
+## Error #7 - 2025-07-31 09:34
+
+### Context & Intent
+**What I was trying to do:** MCP tool execution (auto-detected)
+**User request:** Claude Code MCP tool operation
+**Expected outcome:** Successful MCP tool execution
+
+### Technical Details
+**MCP Server:** jira
+**Tool Used:** mcp__MCP_DOCKER__jira_get_issue
+**Parameters Used:**
+```json
+{
+  "note": "Parameters not captured by hook - requires manual investigation"
+}
+```
+
+### Error Information
+**Error Message:** 
+```
+Issue does not exist or you do not have permission to see it
+```
+
+**Error Type:** JIRA Resource Error
+**Severity:** Medium (Auto-detected)
+
+### Analysis
+**Root Cause:** Auto-detected via pattern matching in tool output
+**Missing Information:** Full context and parameters require manual review
+**Parameter Issues:** To be investigated through usage guides and patterns
+
+### Resolution Attempts
+1. **Automatic Detection:** Error detected and logged by hook → Success
+2. **Manual Investigation Required:** Check jira-guide.md for troubleshooting
+3. **Final Resolution:** To be updated after manual troubleshooting
+
+### Lessons Learned
+**For Future Use:**
+- [ ] Review similar patterns in error logs
+- [ ] Check usage guide for known solutions
+- [ ] Update prevention strategies if pattern emerges
+
+**Prevention:**
+- [ ] Check `meta/mcp-learning/usage-guides/jira-guide.md` before using tool
+- [ ] Apply known working patterns from previous successes
+- [ ] Validate parameters against common error patterns
+
+### Frequency Tracking
+**First Occurrence:** 2025-07-31 09:34
+**Frequency:** 1 time (auto-detected)
+**Last Occurrence:** 2025-07-31 09:34
+**Status:** Unresolved - Requires Manual Investigation
+
