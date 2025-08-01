@@ -2,11 +2,21 @@
   "hooks": {
     "PreToolUse": [
       {
+        "matcher": "mcp__MCP_DOCKER__jira_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "../../work/vanguardAI/.jira/learning/scripts/jira-parameter-validator.sh",
+            "timeout": 30
+          }
+        ]
+      },
+      {
         "matcher": "mcp__*",
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/scripts/mcp-parameter-validator.sh",
+            "command": "meta/mcp-learning/scripts/mcp-parameter-validator.sh",
             "timeout": 30
           }
         ]
@@ -14,11 +24,21 @@
     ],
     "PostToolUse": [
       {
+        "matcher": "mcp__MCP_DOCKER__jira_*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "../../work/vanguardAI/.jira/learning/scripts/jira-error-detector.sh",
+            "timeout": 15
+          }
+        ]
+      },
+      {
         "matcher": "mcp__*",
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/mcp-learning/scripts/mcp-error-detector.sh",
+            "command": "meta/mcp-learning/scripts/mcp-error-detector.sh",
             "timeout": 15
           }
         ]
