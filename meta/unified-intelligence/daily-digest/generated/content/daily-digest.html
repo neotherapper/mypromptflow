@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📰 Daily Content Digest - 2025-08-01</title>
+    <link rel="stylesheet" href="/static/css/design-system.css">
+    <style>
+        /* Daily Digest specific overrides */
+        .digest-header {
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+            padding: var(--spacing-2xl) 0;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .digest-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="200" cy="200" r="100" fill="url(%23a)"/><circle cx="800" cy="300" r="80" fill="url(%23a)"/></svg>') no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        
+        .digest-header h1 {
+            font-size: var(--text-5xl);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .digest-header p {
+            font-size: var(--text-lg);
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .topic-card {
+            border-top: 4px solid var(--status-active);
+        }
+        
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .topic-name {
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            text-transform: capitalize;
+        }
+        
+        .topic-count {
+            background: var(--success-gradient);
+            color: var(--text-primary);
+            padding: var(--spacing-xs) var(--spacing-md);
+            border-radius: var(--radius-pill);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-semibold);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .content-item {
+            background: var(--glass-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-md);
+            border-left: 3px solid var(--glass-border);
+            transition: all var(--transition-normal);
+            backdrop-filter: blur(10px);
+        }
+        
+        .content-item:hover {
+            border-left-color: var(--primary-gradient);
+            transform: translateX(2px);
+            background: var(--glass-lighter);
+        }
+        
+        .content-title {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-xs);
+            font-size: var(--text-base);
+        }
+        
+        .content-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .content-title a:hover {
+            color: #4f46e5;
+            text-decoration: underline;
+        }
+        
+        .content-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+        
+        .content-source {
+            font-weight: var(--font-weight-medium);
+            color: var(--text-secondary);
+        }
+        
+        .content-score {
+            background: var(--warning-gradient);
+            color: var(--text-primary);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-pill);
+            font-weight: var(--font-weight-semibold);
+            font-size: var(--text-xs);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .content-age {
+            font-style: italic;
+            color: var(--text-muted);
+        }
+        
+        .platform-title {
+            font-size: var(--text-xl);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .platform-icon {
+            font-size: 1.2em;
+        }
+        
+        .recommendations {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: var(--text-primary);
+            padding: var(--spacing-2xl);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .recommendations h2 {
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--text-2xl);
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .recommendations ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .recommendations li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-xl);
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .recommendations li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+            top: var(--spacing-sm);
+        }
+        
+        .priority-badge {
+            background: var(--danger-gradient);
+            color: var(--text-primary);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-pill);
+            font-size: var(--text-xs);
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+            box-shadow: var(--shadow-sm);
+            margin-left: var(--spacing-sm);
+        }
+        
+        .source-badge {
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-pill);
+            font-size: var(--text-xs);
+            font-weight: var(--font-weight-semibold);
+            margin-left: var(--spacing-sm);
+            display: inline-block;
+        }
+        
+        .source-badge.discovered {
+            background: var(--success-gradient);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .source-badge.subscribed {
+            background: var(--info-gradient);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-value {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: var(--font-weight-medium);
+        }
+        
+        /* Search and Filter Controls */
+        .search-controls {
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .search-input {
+            width: 100%;
+            background: var(--glass-lighter);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-pill);
+            padding: var(--spacing-md) var(--spacing-lg);
+            color: var(--text-primary);
+            font-size: var(--text-base);
+            outline: none;
+            transition: all var(--transition-normal);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .search-input:focus {
+            background: var(--glass-hover);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+        }
+        
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+        
+        .filter-button {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-pill);
+            padding: var(--spacing-xs) var(--spacing-md);
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            text-transform: capitalize;
+        }
+        
+        .filter-button:hover {
+            background: var(--glass-lighter);
+            color: var(--text-primary);
+        }
+        
+        .filter-button.active {
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            border-color: transparent;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .clear-filters {
+            background: transparent;
+            border: 1px solid var(--status-error);
+            color: var(--status-error);
+        }
+        
+        .clear-filters:hover {
+            background: var(--status-error);
+            color: var(--text-primary);
+        }
+        
+        .results-count {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin-left: auto;
+            font-style: italic;
+        }
+        
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-md) var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: var(--text-sm);
+        }
+        
+        .breadcrumb-item {
+            color: var(--text-tertiary);
+        }
+        
+        .breadcrumb-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .breadcrumb-item a:hover {
+            color: var(--text-primary);
+        }
+        
+        .breadcrumb-item.active {
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+        
+        /* Hidden content for filtering */
+        .content-item.hidden {
+            display: none;
+        }
+        
+        .topic-card.hidden {
+            display: none;
+        }
+        
+        /* No results message */
+        .no-results {
+            text-align: center;
+            color: var(--text-muted);
+            font-style: italic;
+            padding: var(--spacing-2xl);
+            background: var(--glass-light);
+            border-radius: var(--radius-xl);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        /* Pagination Controls */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin: var(--spacing-xl) 0;
+            flex-wrap: wrap;
+        }
+        
+        .pagination-button {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-sm) var(--spacing-md);
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .pagination-button:hover:not(.disabled) {
+            background: var(--glass-lighter);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+        
+        .pagination-button.active {
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            border-color: transparent;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .pagination-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination-info {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin: 0 var(--spacing-md);
+            white-space: nowrap;
+        }
+        
+        .page-size-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin: var(--spacing-lg) 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .page-size-label {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+        }
+        
+        .page-size-button {
+            background: var(--glass-light);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-pill);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            color: var(--text-secondary);
+            font-size: var(--text-xs);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            min-width: 32px;
+            text-align: center;
+        }
+        
+        .page-size-button:hover {
+            background: var(--glass-lighter);
+            color: var(--text-primary);
+        }
+        
+        .page-size-button.active {
+            background: var(--success-gradient);
+            color: var(--text-primary);
+            border-color: transparent;
+        }
+        
+        /* New Videos Section Styles */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .new-videos-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-left: 4px solid var(--status-success);
+        }
+        
+        .grid-auto-fit-sm {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--spacing-md);
+        }
+        
+        .text-success {
+            color: var(--status-success);
+        }
+        
+        .text-warning {
+            color: var(--status-warning);
+        }
+        
+        .text-info {
+            color: var(--status-info);
+        }
+        
+        .new-videos-item {
+            background: var(--glass-lighter);
+            border-left: 3px solid var(--status-success);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+        }
+        
+        .continue-watching-item {
+            background: var(--glass-lighter);
+            border-left: 3px solid var(--status-warning);
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+        }
+        
+        .new-badge {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            background: var(--status-success);
+            color: white;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-pill);
+            font-size: var(--text-xs);
+            font-weight: var(--font-weight-semibold);
+            text-transform: uppercase;
+        }
+        
+        /* Analytics Dashboard Styles */
+        .analytics-card {
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .analytics-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .analytics-change {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            margin-top: var(--spacing-xs);
+            font-style: italic;
+        }
+        
+        .analytics-details .grid-two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .analytics-details .grid-two-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .goal-item {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .goal-label {
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-medium);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .goal-progress {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        
+        .goal-progress .progress-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--glass-border);
+            border-radius: var(--radius-pill);
+            overflow: hidden;
+        }
+        
+        .goal-progress .progress-fill {
+            height: 100%;
+            background: var(--success-gradient);
+            border-radius: inherit;
+            transition: width var(--transition-normal);
+        }
+        
+        .goal-text {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        
+        .goal-value {
+            font-size: var(--text-lg);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-xs) 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-icon {
+            font-size: var(--text-sm);
+            width: 20px;
+            text-align: center;
+        }
+        
+        .activity-text {
+            flex: 1;
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+        }
+        
+        .activity-time {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+        }
+        
+        .text-primary {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="container">
+        <div class="breadcrumb">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="/templates/dashboard.html">🏠 Command Center</a>
+                </li>
+                <li class="breadcrumb-separator">›</li>
+                <li class="breadcrumb-item active">📰 Daily Content Digest</li>
+            </ol>
+        </div>
+    </nav>
+    
+    <!-- Header -->
+    <div class="digest-header">
+        <h1>📰 Daily Content Digest</h1>
+        <p>Generated: <span data-timestamp="2025-08-01T08:28:40.859315+00:00" data-format="display">2025-08-01T08:28:40.859315+00:00</span> | Priority Topics: Claude, React, TypeScript, Meta-Prompting, Next.js</p>
+    </div>
+
+    <div class="container">
+        <!-- Search and Filter Controls -->
+        <div class="search-controls">
+            <input type="text" 
+                   class="search-input" 
+                   id="content-search"
+                   placeholder="🔍 Search content by title, source, or topic...">
+            
+            <div class="filter-controls">
+                <span class="text-small text-muted">Filter by:</span>
+                <button class="filter-button active" data-filter="all">All Content</button>
+                <button class="filter-button" data-filter="priority">Priority Only</button>
+                <button class="filter-button" data-filter="claude">Claude</button>
+                <button class="filter-button" data-filter="react">React</button>
+                <button class="filter-button" data-filter="typescript">TypeScript</button>
+                <button class="filter-button" data-filter="nextjs">Next.js</button>
+                <button class="filter-button clear-filters" data-filter="clear">Clear Filters</button>
+                <span class="results-count" id="results-count">29 items shown</span>
+            </div>
+        </div>
+
+        <!-- New Videos Since Last Visit -->
+        <section class="glass-card mb-xl" id="new-videos-section" style="display: none;">
+            <h2 class="heading-2 mb-lg">🆕 New Since Your Last Visit</h2>
+            <div class="new-videos-message">
+                <div class="text-center text-muted">
+                    <div class="mb-sm">🔄 Checking for new content...</div>
+                    <div class="loading-spinner" style="display: inline-block; width: 20px; height: 20px; border: 2px solid var(--glass-border); border-top: 2px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                </div>
+            </div>
+            <div class="new-videos-content" style="display: none;">
+                <div class="new-videos-summary mb-lg">
+                    <div class="grid grid-auto-fit-sm">
+                        <div class="glass-card text-center">
+                            <div class="stat-value text-success" id="new-videos-count">0</div>
+                            <div class="stat-label">New Videos</div>
+                        </div>
+                        <div class="glass-card text-center">
+                            <div class="stat-value text-warning" id="continue-watching-count">0</div>
+                            <div class="stat-label">Continue Watching</div>
+                        </div>
+                        <div class="glass-card text-center">
+                            <div class="stat-value text-info" id="last-visit-time">-</div>
+                            <div class="stat-label">Last Visit</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-videos-list">
+                    <!-- New videos will be populated here -->
+                </div>
+                <div class="continue-watching-section" style="display: none;">
+                    <h3 class="heading-3 mb-md">▶ Continue Watching</h3>
+                    <div class="continue-watching-list">
+                        <!-- Continue watching videos will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Analytics Dashboard -->
+        <section class="glass-card mb-xl" id="personal-analytics-section" style="display: none;">
+            <h2 class="heading-2 mb-lg">📊 Your Learning Analytics</h2>
+            <div class="analytics-loading">
+                <div class="text-center text-muted">
+                    <div class="mb-sm">📈 Loading your analytics...</div>
+                    <div class="loading-spinner" style="display: inline-block; width: 20px; height: 20px; border: 2px solid var(--glass-border); border-top: 2px solid var(--primary-color); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                </div>
+            </div>
+            <div class="analytics-content" style="display: none;">
+                <div class="analytics-summary mb-lg">
+                    <div class="grid grid-auto-fit-sm">
+                        <div class="glass-card text-center analytics-card">
+                            <div class="stat-value text-success" id="total-completed">0</div>
+                            <div class="stat-label">Completed</div>
+                            <div class="analytics-change" id="completed-change">+0 this week</div>
+                        </div>
+                        <div class="glass-card text-center analytics-card">
+                            <div class="stat-value text-warning" id="in-progress">0</div>
+                            <div class="stat-label">In Progress</div>
+                            <div class="analytics-change" id="progress-change">Active learning</div>
+                        </div>
+                        <div class="glass-card text-center analytics-card">
+                            <div class="stat-value text-info" id="total-watch-time">0h</div>
+                            <div class="stat-label">Watch Time</div>
+                            <div class="analytics-change" id="time-change">This session</div>
+                        </div>
+                        <div class="glass-card text-center analytics-card">
+                            <div class="stat-value text-primary" id="completion-rate">0%</div>
+                            <div class="stat-label">Completion Rate</div>
+                            <div class="analytics-change" id="rate-change">Overall</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-details">
+                    <div class="grid grid-two-columns">
+                        <div class="glass-card">
+                            <h3 class="heading-3 mb-md">🎯 Learning Goals</h3>
+                            <div class="learning-goals-content">
+                                <div class="goal-item">
+                                    <div class="goal-label">Daily Goal (30 min)</div>
+                                    <div class="goal-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" id="daily-goal-progress" style="width: 0%"></div>
+                                        </div>
+                                        <span class="goal-text" id="daily-goal-text">0 / 30 min</span>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-label">Weekly Streak</div>
+                                    <div class="goal-value" id="weekly-streak">0 days</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card">
+                            <h3 class="heading-3 mb-md">📚 Recent Activity</h3>
+                            <div class="recent-activity-content" id="recent-activity-list">
+                                <div class="text-muted">No recent activity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Statistics -->
+        <div class="grid grid-auto-fit mb-xl">
+            <div class="glass-card text-center">
+                <div class="stat-value">29</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-value">0</div>
+                <div class="stat-label">High Quality</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-value">0.015</div>
+                <div class="stat-label">Average Score</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-value">10</div>
+                <div class="stat-label">Priority Topics</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-value">13</div>
+                <div class="stat-label">📺 Subscribed</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-value">2</div>
+                <div class="stat-label">🔍 Discovered</div>
+            </div>
+        </div>
+
+        <!-- Priority Topics Section -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">🎯 Priority Topics Detected</h2>
+            <div class="grid grid-auto-fit">
+                    
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">claude</div>
+                    <div class="topic-count">4 items</div>
+                </div>
+                
+                <div class="content-item video-content" data-video-id="m2OHmyyDTdQ" data-video-title="Warp vs Claude Code for Daily Coding..." data-channel="Codevolution">
+                    <div class="video-watch-status" data-status="unwatched">
+                        <span class="status-indicator">◯</span>
+                        <span class="status-text">Unwatched</span>
+                    </div>
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                    </div>
+                    <div class="video-progress-container" style="display: none;">
+                        <div class="video-progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% watched</span>
+                    </div>
+                    <div class="video-rating" style="display: none;">
+                        <span class="rating-label">Your Rating:</span>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                    <div class="video-actions">
+                        <button class="video-action-btn mark-watched" title="Mark as Watched">
+                            ✓ Watched
+                        </button>
+                        <button class="video-action-btn add-to-queue" title="Add to Watch Later">
+                            + Queue
+                        </button>
+                        <button class="video-action-btn start-watching" title="Start Watching">
+                            ▶ Watch
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=-w53i6Ae-YM" target="_blank">
+                            Alibaba is coming for Claude......
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Fireship</span>
+                        <span class="content-score">1.1%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">claude-code</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">meta-prompting</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">react</div>
+                    <div class="topic-count">3 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=sample_video_2" target="_blank">
+                            React TypeScript Best Practices...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">React Experts</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">376 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">nextjs</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="glass-card topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">typescript</div>
+                    <div class="topic-count">5 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=6P-2urhScwk" target="_blank">
+                            Zod VS Valibot: JS/TS Validator Battle!...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Jack Herrington</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">3 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=Ycu0wlPf5KA" target="_blank">
+                            Designing Custom Layouts in Figma for MCP - SideBling...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">DesignCourse</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">3 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            </div>
+            </div>
+        </section>
+
+        <!-- All Content by Platform -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">📊 Content by Platform</h2>
+            
+            <div class="glass-card">
+                <h3 class="platform-title">
+                    <span class="platform-icon">📺</span>
+                    Youtube (15 items)
+                </h3>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=lM9K9D0IZvA" target="_blank">
+                            From Figma to Browser with MCP in Minutes (No Coding)...
+                        </a>
+                        
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">DesignCourse</span>
+                        <span class="content-score">1.2%</span>
+                        <span class="content-age">18 hours ago</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Pagination Controls -->
+        <div class="page-size-controls">
+            <span class="page-size-label">Items per page:</span>
+            <button class="page-size-button" data-page-size="10">10</button>
+            <button class="page-size-button active" data-page-size="20">20</button>
+            <button class="page-size-button" data-page-size="50">50</button>
+            <button class="page-size-button" data-page-size="all">All</button>
+        </div>
+        
+        <nav class="pagination" id="pagination-container">
+            <!-- Pagination buttons will be generated here -->
+        </nav>
+
+        <!-- Recommendations -->
+        <div class="recommendations">
+            <h2>💡 Today's Recommendations</h2>
+            <ul>
+                <li>🌟 Priority: "Warp vs Claude Code for Daily Coding..." from Codevolution</li><li>🎯 10 items match your priority topics - focus on these first</li><li>🔍 2 new discoveries found through dynamic search - explore fresh content sources</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center mt-xl">
+        <p class="text-small text-muted">
+            Generated by Unified Intelligence System | Priority Topic Scoring Active
+        </p>
+    </div>
+
+    <script src="/static/js/time-formatter.js"></script>
+    <script>
+        class ContentFilter {
+            constructor() {
+                this.searchInput = document.getElementById('content-search');
+                this.filterButtons = document.querySelectorAll('.filter-button');
+                this.resultsCounter = document.getElementById('results-count');
+                this.contentItems = document.querySelectorAll('.content-item');
+                this.topicCards = document.querySelectorAll('.topic-card');
+                this.allContent = document.querySelectorAll('.content-item, .topic-card');
+                this.paginationContainer = document.getElementById('pagination-container');
+                this.pageSizeButtons = document.querySelectorAll('.page-size-button');
+                
+                this.activeFilters = new Set(['all']);
+                this.searchTerm = '';
+                this.currentPage = 1;
+                this.pageSize = 20;
+                this.filteredItems = [];
+                
+                this.initializeEventListeners();
+                this.collectFilteredItems();
+                this.updateDisplay();
+            }
+            
+            initializeEventListeners() {
+                // Search input
+                this.searchInput.addEventListener('input', (e) => {
+                    this.searchTerm = e.target.value.toLowerCase().trim();
+                    this.currentPage = 1; // Reset to first page on search
+                    this.applyFilters();
+                });
+                
+                // Filter buttons
+                this.filterButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const filter = e.target.dataset.filter;
+                        this.handleFilterClick(filter, e.target);
+                    });
+                });
+                
+                // Page size buttons
+                this.pageSizeButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        const newSize = e.target.dataset.pageSize;
+                        this.handlePageSizeChange(newSize, e.target);
+                    });
+                });
+            }
+            
+            handleFilterClick(filter, button) {
+                if (filter === 'clear') {
+                    this.clearAllFilters();
+                    return;
+                }
+                
+                if (filter === 'all') {
+                    this.activeFilters.clear();
+                    this.activeFilters.add('all');
+                    this.updateFilterButtons();
+                } else {
+                    this.activeFilters.delete('all');
+                    
+                    if (this.activeFilters.has(filter)) {
+                        this.activeFilters.delete(filter);
+                    } else {
+                        this.activeFilters.add(filter);
+                    }
+                    
+                    if (this.activeFilters.size === 0) {
+                        this.activeFilters.add('all');
+                    }
+                    
+                    this.updateFilterButtons();
+                }
+                
+                this.currentPage = 1; // Reset to first page on filter change
+                this.applyFilters();
+            }
+            
+            handlePageSizeChange(newSize, button) {
+                this.pageSizeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                this.pageSize = newSize === 'all' ? Infinity : parseInt(newSize);
+                this.currentPage = 1; // Reset to first page
+                this.updateDisplay();
+            }
+            
+            handlePageChange(newPage) {
+                this.currentPage = newPage;
+                this.updateDisplay();
+                
+                // Scroll to top of content
+                document.querySelector('.search-controls').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            
+            clearAllFilters() {
+                this.activeFilters.clear();
+                this.activeFilters.add('all');
+                this.searchInput.value = '';
+                this.searchTerm = '';
+                this.currentPage = 1;
+                this.updateFilterButtons();
+                this.applyFilters();
+            }
+            
+            updateFilterButtons() {
+                this.filterButtons.forEach(button => {
+                    const filter = button.dataset.filter;
+                    if (filter === 'clear') return;
+                    
+                    if (this.activeFilters.has(filter)) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                });
+            }
+            
+            applyFilters() {
+                this.collectFilteredItems();
+                this.updateDisplay();
+            }
+            
+            collectFilteredItems() {
+                this.filteredItems = Array.from(this.contentItems).filter(item => 
+                    this.shouldShowItem(item)
+                );
+            }
+            
+            updateDisplay() {
+                // Hide all items first
+                this.contentItems.forEach(item => item.classList.add('hidden'));
+                this.topicCards.forEach(card => card.classList.add('hidden'));
+                
+                if (this.filteredItems.length === 0) {
+                    this.showNoResultsMessage(true);
+                    this.updateResultsCount(0);
+                    this.renderPagination(0, 1);
+                    return;
+                }
+                
+                this.showNoResultsMessage(false);
+                
+                // Calculate pagination
+                const totalItems = this.filteredItems.length;
+                const totalPages = Math.ceil(totalItems / this.pageSize);
+                const startIndex = (this.currentPage - 1) * this.pageSize;
+                const endIndex = Math.min(startIndex + this.pageSize, totalItems);
+                
+                // Show items for current page
+                const pageItems = this.filteredItems.slice(startIndex, endIndex);
+                pageItems.forEach(item => item.classList.remove('hidden'));
+                
+                // Show topic cards that have visible items and update counts
+                const visibleTopics = new Map();
+                pageItems.forEach(item => {
+                    const topicCard = item.closest('.topic-card');
+                    if (topicCard) {
+                        if (!visibleTopics.has(topicCard)) {
+                            visibleTopics.set(topicCard, 0);
+                        }
+                        visibleTopics.set(topicCard, visibleTopics.get(topicCard) + 1);
+                    }
+                });
+                
+                visibleTopics.forEach((count, card) => {
+                    card.classList.remove('hidden');
+                    const countElement = card.querySelector('.topic-count');
+                    if (countElement) {
+                        countElement.textContent = `${count} items`;
+                    }
+                });
+                
+                this.updateResultsCount(totalItems, startIndex + 1, endIndex);
+                this.renderPagination(totalItems, totalPages);
+            }
+            
+            shouldShowItem(item) {
+                // Check search term
+                if (this.searchTerm) {
+                    const title = item.querySelector('.content-title')?.textContent.toLowerCase() || '';
+                    const source = item.querySelector('.content-source')?.textContent.toLowerCase() || '';
+                    const parentTopic = item.closest('.topic-card')?.querySelector('.topic-name')?.textContent.toLowerCase() || '';
+                    
+                    const searchableText = `${title} ${source} ${parentTopic}`;
+                    if (!searchableText.includes(this.searchTerm)) {
+                        return false;
+                    }
+                }
+                
+                // Check filters
+                if (this.activeFilters.has('all')) {
+                    return true;
+                }
+                
+                if (this.activeFilters.has('priority')) {
+                    const hasPriorityBadge = item.querySelector('.priority-badge');
+                    if (!hasPriorityBadge) return false;
+                }
+                
+                // Check topic filters
+                const parentTopic = item.closest('.topic-card')?.querySelector('.topic-name')?.textContent.toLowerCase() || '';
+                const topicFilters = Array.from(this.activeFilters).filter(f => f !== 'priority');
+                
+                if (topicFilters.length > 0) {
+                    const matchesTopic = topicFilters.some(filter => 
+                        parentTopic.includes(filter.toLowerCase()) || 
+                        parentTopic.replace('-', '').includes(filter.toLowerCase())
+                    );
+                    if (!matchesTopic) return false;
+                }
+                
+                return true;
+            }
+            
+            updateResultsCount(totalCount, startIndex, endIndex) {
+                if (totalCount === 0) {
+                    this.resultsCounter.textContent = 'No items found';
+                    return;
+                }
+                
+                if (this.pageSize === Infinity) {
+                    const suffix = totalCount === 1 ? 'item' : 'items';
+                    this.resultsCounter.textContent = `${totalCount} ${suffix} shown`;
+                } else {
+                    this.resultsCounter.textContent = `${startIndex}-${endIndex} of ${totalCount} items`;
+                }
+            }
+            
+            renderPagination(totalItems, totalPages) {
+                if (totalPages <= 1 || this.pageSize === Infinity) {
+                    this.paginationContainer.innerHTML = '';
+                    return;
+                }
+                
+                const pagination = [];
+                
+                // Previous button
+                pagination.push(`
+                    <button class="pagination-button ${this.currentPage === 1 ? 'disabled' : ''}" 
+                            onclick="contentFilter.handlePageChange(${this.currentPage - 1})"
+                            ${this.currentPage === 1 ? 'disabled' : ''}>
+                        ‹ Previous
+                    </button>
+                `);
+                
+                // Page numbers
+                const maxVisiblePages = 5;
+                let startPage = Math.max(1, this.currentPage - Math.floor(maxVisiblePages / 2));
+                let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+                
+                // Adjust if we're near the end
+                if (endPage - startPage + 1 < maxVisiblePages) {
+                    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+                }
+                
+                // First page and ellipsis
+                if (startPage > 1) {
+                    pagination.push(`
+                        <button class="pagination-button" onclick="contentFilter.handlePageChange(1)">1</button>
+                    `);
+                    if (startPage > 2) {
+                        pagination.push('<span class="pagination-info">...</span>');
+                    }
+                }
+                
+                // Page numbers
+                for (let i = startPage; i <= endPage; i++) {
+                    pagination.push(`
+                        <button class="pagination-button ${i === this.currentPage ? 'active' : ''}" 
+                                onclick="contentFilter.handlePageChange(${i})">
+                            ${i}
+                        </button>
+                    `);
+                }
+                
+                // Last page and ellipsis
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) {
+                        pagination.push('<span class="pagination-info">...</span>');
+                    }
+                    pagination.push(`
+                        <button class="pagination-button" onclick="contentFilter.handlePageChange(${totalPages})">${totalPages}</button>
+                    `);
+                }
+                
+                // Next button
+                pagination.push(`
+                    <button class="pagination-button ${this.currentPage === totalPages ? 'disabled' : ''}" 
+                            onclick="contentFilter.handlePageChange(${this.currentPage + 1})"
+                            ${this.currentPage === totalPages ? 'disabled' : ''}>
+                        Next ›
+                    </button>
+                `);
+                
+                // Page info
+                pagination.push(`
+                    <span class="pagination-info">
+                        Page ${this.currentPage} of ${totalPages}
+                    </span>
+                `);
+                
+                this.paginationContainer.innerHTML = pagination.join('');
+            }
+            
+            showNoResultsMessage(show) {
+                let noResultsElement = document.querySelector('.no-results');
+                
+                if (show && !noResultsElement) {
+                    noResultsElement = document.createElement('div');
+                    noResultsElement.className = 'no-results';
+                    noResultsElement.innerHTML = `
+                        <h3>🔍 No content found</h3>
+                        <p>Try adjusting your search terms or filters</p>
+                        <button class="btn btn-secondary" onclick="contentFilter.clearAllFilters()">
+                            Clear All Filters
+                        </button>
+                    `;
+                    
+                    // Insert after search controls
+                    const searchControls = document.querySelector('.search-controls');
+                    searchControls.insertAdjacentElement('afterend', noResultsElement);
+                } else if (!show && noResultsElement) {
+                    noResultsElement.remove();
+                }
+            }
+        }
+        
+        // Video State Management System
+        class VideoStateManager {
+            constructor() {
+                this.apiBaseUrl = 'http://localhost:8080/api';
+                this.videoElements = new Map();
+                this.sessionId = null;
+                
+                this.initializeVideoElements();
+                this.startSession();
+                this.loadVideoStates();
+                this.loadNewVideosSection();
+                this.loadPersonalAnalytics();
+            }
+            
+            initializeVideoElements() {
+                const videoItems = document.querySelectorAll('.content-item');
+                
+                videoItems.forEach(item => {
+                    const link = item.querySelector('a[href*="youtube.com/watch"]');
+                    if (!link) return;
+                    
+                    // Extract video ID from YouTube URL
+                    const url = new URL(link.href);
+                    const videoId = url.searchParams.get('v');
+                    if (!videoId) return;
+                    
+                    // Add video state attributes if not already present
+                    if (!item.hasAttribute('data-video-id')) {
+                        const title = link.textContent.trim();
+                        const channelElement = item.querySelector('.content-source');
+                        const channel = channelElement ? channelElement.textContent.trim() : 'Unknown Channel';
+                        
+                        item.classList.add('video-content');
+                        item.setAttribute('data-video-id', videoId);
+                        item.setAttribute('data-video-title', title);
+                        item.setAttribute('data-channel', channel);
+                        
+                        // Add video state UI components if not present
+                        if (!item.querySelector('.video-watch-status')) {
+                            this.addVideoStateUI(item, videoId, title, channel);
+                        }
+                    }
+                    
+                    this.videoElements.set(videoId, item);
+                    this.setupEventListeners(item, videoId);
+                });
+            }
+            
+            addVideoStateUI(item, videoId, title, channel) {
+                const contentTitle = item.querySelector('.content-title');
+                
+                // Add watch status indicator
+                const statusElement = document.createElement('div');
+                statusElement.className = 'video-watch-status';
+                statusElement.setAttribute('data-status', 'unwatched');
+                statusElement.innerHTML = `
+                    <span class="status-indicator">◯</span>
+                    <span class="status-text">Unwatched</span>
+                `;
+                item.insertBefore(statusElement, contentTitle);
+                
+                // Add progress container
+                const progressContainer = document.createElement('div');
+                progressContainer.className = 'video-progress-container';
+                progressContainer.style.display = 'none';
+                progressContainer.innerHTML = `
+                    <div class="video-progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">0% watched</span>
+                `;
+                contentTitle.insertAdjacentElement('afterend', progressContainer);
+                
+                // Add rating container
+                const ratingContainer = document.createElement('div');
+                ratingContainer.className = 'video-rating';
+                ratingContainer.style.display = 'none';
+                ratingContainer.innerHTML = `
+                    <span class="rating-label">Your Rating:</span>
+                    <div class="star-rating">
+                        <span class="star" data-rating="1">★</span>
+                        <span class="star" data-rating="2">★</span>
+                        <span class="star" data-rating="3">★</span>
+                        <span class="star" data-rating="4">★</span>
+                        <span class="star" data-rating="5">★</span>
+                    </div>
+                `;
+                progressContainer.insertAdjacentElement('afterend', ratingContainer);
+                
+                // Add action buttons
+                const actionsContainer = document.createElement('div');
+                actionsContainer.className = 'video-actions';
+                actionsContainer.innerHTML = `
+                    <button class="video-action-btn mark-watched" title="Mark as Watched">
+                        ✓ Watched
+                    </button>
+                    <button class="video-action-btn add-to-queue" title="Add to Watch Later">
+                        + Queue
+                    </button>
+                    <button class="video-action-btn start-watching" title="Start Watching">
+                        ▶ Watch
+                    </button>
+                `;
+                item.appendChild(actionsContainer);
+            }
+            
+            setupEventListeners(item, videoId) {
+                // Mark as watched button
+                const markWatchedBtn = item.querySelector('.mark-watched');
+                if (markWatchedBtn) {
+                    markWatchedBtn.addEventListener('click', () => {
+                        this.markAsWatched(videoId);
+                    });
+                }
+                
+                // Add to queue button
+                const addToQueueBtn = item.querySelector('.add-to-queue');
+                if (addToQueueBtn) {
+                    addToQueueBtn.addEventListener('click', () => {
+                        this.addToWatchLater(videoId);
+                    });
+                }
+                
+                // Start watching button
+                const startWatchingBtn = item.querySelector('.start-watching');
+                if (startWatchingBtn) {
+                    startWatchingBtn.addEventListener('click', () => {
+                        this.startWatching(videoId);
+                    });
+                }
+                
+                // Star rating clicks
+                const stars = item.querySelectorAll('.star');
+                stars.forEach(star => {
+                    star.addEventListener('click', () => {
+                        const rating = parseInt(star.dataset.rating);
+                        this.setRating(videoId, rating);
+                    });
+                });
+            }
+            
+            async startSession() {
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/session/start`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                    const data = await response.json();
+                    this.sessionId = data.session_id;
+                } catch (error) {
+                    console.warn('Failed to start session:', error);
+                }
+            }
+            
+            async loadVideoStates() {
+                for (const [videoId, element] of this.videoElements) {
+                    try {
+                        await this.loadVideoState(videoId);
+                    } catch (error) {
+                        console.warn(`Failed to load state for video ${videoId}:`, error);
+                    }
+                }
+            }
+            
+            async loadVideoState(videoId) {
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/video/${videoId}/state`);
+                    const data = await response.json();
+                    
+                    if (data.state) {
+                        this.updateVideoUI(videoId, data.state);
+                    }
+                } catch (error) {
+                    console.warn(`Failed to load video state for ${videoId}:`, error);
+                }
+            }
+            
+            updateVideoUI(videoId, state) {
+                const element = this.videoElements.get(videoId);
+                if (!element) return;
+                
+                // Update watch status
+                const statusElement = element.querySelector('.video-watch-status');
+                if (statusElement) {
+                    statusElement.setAttribute('data-status', state.watch_status);
+                    const indicator = statusElement.querySelector('.status-indicator');
+                    const text = statusElement.querySelector('.status-text');
+                    
+                    switch (state.watch_status) {
+                        case 'unwatched':
+                            indicator.textContent = '◯';
+                            text.textContent = 'Unwatched';
+                            break;
+                        case 'watching':
+                            indicator.textContent = '▶';
+                            text.textContent = 'Watching';
+                            break;
+                        case 'completed':
+                            indicator.textContent = '✓';
+                            text.textContent = 'Completed';
+                            break;
+                        case 'skipped':
+                            indicator.textContent = '⏭';
+                            text.textContent = 'Skipped';
+                            break;
+                    }
+                }
+                
+                // Update progress bar
+                const progressContainer = element.querySelector('.video-progress-container');
+                if (progressContainer && state.watch_progress > 0) {
+                    progressContainer.style.display = 'block';
+                    const progressFill = progressContainer.querySelector('.progress-fill');
+                    const progressText = progressContainer.querySelector('.progress-text');
+                    
+                    const progressPercent = Math.round(state.watch_progress * 100);
+                    progressFill.style.width = `${progressPercent}%`;
+                    progressText.textContent = `${progressPercent}% watched`;
+                }
+                
+                // Update rating
+                const ratingContainer = element.querySelector('.video-rating');
+                if (ratingContainer && state.personal_rating) {
+                    ratingContainer.style.display = 'block';
+                    const stars = ratingContainer.querySelectorAll('.star');
+                    stars.forEach((star, index) => {
+                        if (index < state.personal_rating) {
+                            star.classList.add('rated');
+                        }
+                    });
+                }
+            }
+            
+            async markAsWatched(videoId) {
+                const element = this.videoElements.get(videoId);
+                if (!element) return;
+                
+                const videoData = {
+                    video_title: element.dataset.videoTitle,
+                    channel_name: element.dataset.channel,
+                    watch_status: 'completed',
+                    watch_progress: 1.0,
+                    context: {
+                        added_from: 'daily_digest'
+                    }
+                };
+                
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/video/${videoId}/state`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(videoData)
+                    });
+                    
+                    if (response.ok) {
+                        this.updateVideoUI(videoId, { 
+                            watch_status: 'completed', 
+                            watch_progress: 1.0 
+                        });
+                        this.showNotification('✓ Marked as watched!');
+                    }
+                } catch (error) {
+                    console.error('Failed to mark as watched:', error);
+                    this.showNotification('❌ Failed to save state');
+                }
+            }
+            
+            async addToWatchLater(videoId) {
+                const element = this.videoElements.get(videoId);
+                if (!element) return;
+                
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/queues/watch_later/videos`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            video_id: videoId,
+                            priority: 5,
+                            notes: `Added from daily digest: ${element.dataset.videoTitle}`
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        this.showNotification('+ Added to Watch Later!');
+                    }
+                } catch (error) {
+                    console.error('Failed to add to queue:', error);
+                    this.showNotification('❌ Failed to add to queue');
+                }
+            }
+            
+            async startWatching(videoId) {
+                const element = this.videoElements.get(videoId);
+                if (!element) return;
+                
+                const videoData = {
+                    video_title: element.dataset.videoTitle,
+                    channel_name: element.dataset.channel,
+                    watch_status: 'watching',
+                    watch_progress: 0.0,
+                    context: {
+                        added_from: 'daily_digest'
+                    }
+                };
+                
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/video/${videoId}/state`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(videoData)
+                    });
+                    
+                    if (response.ok) {
+                        this.updateVideoUI(videoId, { 
+                            watch_status: 'watching', 
+                            watch_progress: 0.0 
+                        });
+                        this.showNotification('▶ Started watching!');
+                        
+                        // Open video in new tab
+                        const link = element.querySelector('a[href*="youtube.com"]');
+                        if (link) {
+                            window.open(link.href, '_blank');
+                        }
+                    }
+                } catch (error) {
+                    console.error('Failed to start watching:', error);
+                    this.showNotification('❌ Failed to save state');
+                }
+            }
+            
+            async setRating(videoId, rating) {
+                const element = this.videoElements.get(videoId);
+                if (!element) return;
+                
+                try {
+                    const response = await fetch(`${this.apiBaseUrl}/user/video/${videoId}/state`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            video_title: element.dataset.videoTitle,
+                            channel_name: element.dataset.channel,
+                            personal_rating: rating
+                        })
+                    });
+                    
+                    if (response.ok) {
+                        // Update star display
+                        const stars = element.querySelectorAll('.star');
+                        stars.forEach((star, index) => {
+                            if (index < rating) {
+                                star.classList.add('rated');
+                            } else {
+                                star.classList.remove('rated');
+                            }
+                        });
+                        
+                        this.showNotification(`⭐ Rated ${rating} stars!`);
+                    }
+                } catch (error) {
+                    console.error('Failed to set rating:', error);
+                    this.showNotification('❌ Failed to save rating');
+                }
+            }
+            
+            showNotification(message) {
+                // Create temporary notification
+                const notification = document.createElement('div');
+                notification.className = 'video-notification';
+                notification.textContent = message;
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--glass-light);
+                    color: var(--text-primary);
+                    padding: var(--spacing-md);
+                    border-radius: var(--radius-lg);
+                    backdrop-filter: blur(10px);
+                    z-index: 10000;
+                    font-size: var(--text-sm);
+                    font-weight: var(--font-weight-medium);
+                    box-shadow: var(--shadow-lg);
+                    transform: translateX(100%);
+                    transition: transform var(--transition-normal);
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Animate in
+                requestAnimationFrame(() => {
+                    notification.style.transform = 'translateX(0)';
+                });
+                
+                // Remove after 3 seconds
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(100%)';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            notification.parentNode.removeChild(notification);
+                        }
+                    }, 300);
+                }, 3000);
+            }
+            
+            async loadNewVideosSection() {
+                const newVideosSection = document.getElementById('new-videos-section');
+                if (!newVideosSection) return;
+                
+                newVideosSection.style.display = 'block';
+                
+                try {
+                    // Get all current videos for comparison
+                    const allVideos = this.extractAllVideosFromPage();
+                    
+                    // Get new videos since last visit
+                    const newVideosResponse = await fetch(`${this.apiBaseUrl}/user/videos/new-since-last-visit`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ videos: allVideos })
+                    });
+                    
+                    // Get continue watching videos
+                    const continueWatchingResponse = await fetch(`${this.apiBaseUrl}/user/videos/by-status/watching`);
+                    
+                    let newVideos = [];
+                    let continueWatching = [];
+                    
+                    if (newVideosResponse.ok) {
+                        const newVideosData = await newVideosResponse.json();
+                        newVideos = newVideosData.new_videos || [];
+                    }
+                    
+                    if (continueWatchingResponse.ok) {
+                        const continueWatchingData = await continueWatchingResponse.json();
+                        continueWatching = continueWatchingData.videos || [];
+                    }
+                    
+                    this.displayNewVideosSection(newVideos, continueWatching);
+                    
+                } catch (error) {
+                    console.error('Failed to load new videos section:', error);
+                    this.hideNewVideosSection();
+                }
+            }
+            
+            extractAllVideosFromPage() {
+                const videos = [];
+                const videoItems = document.querySelectorAll('.content-item a[href*="youtube.com/watch"]');
+                
+                videoItems.forEach(link => {
+                    try {
+                        const url = new URL(link.href);
+                        const videoId = url.searchParams.get('v');
+                        if (videoId) {
+                            const contentItem = link.closest('.content-item');
+                            const title = link.textContent.trim();
+                            const channelElement = contentItem.querySelector('.content-source');
+                            const channel = channelElement ? channelElement.textContent.trim() : 'Unknown Channel';
+                            
+                            // Try to extract publish date from age text
+                            const ageElement = contentItem.querySelector('.content-age');
+                            const ageText = ageElement ? ageElement.textContent.trim() : '';
+                            const publishedAt = this.estimatePublishDate(ageText);
+                            
+                            videos.push({
+                                video_id: videoId,
+                                video_title: title,
+                                channel_name: channel,
+                                published_at: publishedAt,
+                                url: link.href
+                            });
+                        }
+                    } catch (e) {
+                        console.warn('Failed to parse video URL:', link.href);
+                    }
+                });
+                
+                return videos;
+            }
+            
+            estimatePublishDate(ageText) {
+                const now = new Date();
+                const ageMatch = ageText.match(/(\d+)\s*(second|minute|hour|day|week|month|year)s?\s*ago/i);
+                
+                if (!ageMatch) {
+                    return now.toISOString();
+                }
+                
+                const amount = parseInt(ageMatch[1]);
+                const unit = ageMatch[2].toLowerCase();
+                
+                switch (unit) {
+                    case 'second':
+                        now.setSeconds(now.getSeconds() - amount);
+                        break;
+                    case 'minute':
+                        now.setMinutes(now.getMinutes() - amount);
+                        break;
+                    case 'hour':
+                        now.setHours(now.getHours() - amount);
+                        break;
+                    case 'day':
+                        now.setDate(now.getDate() - amount);
+                        break;
+                    case 'week':
+                        now.setDate(now.getDate() - (amount * 7));
+                        break;
+                    case 'month':
+                        now.setMonth(now.getMonth() - amount);
+                        break;
+                    case 'year':
+                        now.setFullYear(now.getFullYear() - amount);
+                        break;
+                }
+                
+                return now.toISOString();
+            }
+            
+            displayNewVideosSection(newVideos, continueWatching) {
+                const newVideosSection = document.getElementById('new-videos-section');
+                const messageDiv = newVideosSection.querySelector('.new-videos-message');
+                const contentDiv = newVideosSection.querySelector('.new-videos-content');
+                
+                // Hide loading message
+                messageDiv.style.display = 'none';
+                contentDiv.style.display = 'block';
+                
+                // Update counters
+                document.getElementById('new-videos-count').textContent = newVideos.length;
+                document.getElementById('continue-watching-count').textContent = continueWatching.length;
+                
+                // Update last visit time
+                this.updateLastVisitTime();
+                
+                // Display new videos
+                this.displayNewVideosList(newVideos);
+                
+                // Display continue watching videos
+                this.displayContinueWatchingList(continueWatching);
+                
+                // Hide section if no content
+                if (newVideos.length === 0 && continueWatching.length === 0) {
+                    this.hideNewVideosSection();
+                }
+            }
+            
+            displayNewVideosList(newVideos) {
+                const listContainer = document.querySelector('.new-videos-list');
+                
+                if (newVideos.length === 0) {
+                    listContainer.innerHTML = '<div class="text-center text-muted">No new videos since your last visit 🎉</div>';
+                    return;
+                }
+                
+                const videosHtml = newVideos.map(video => `
+                    <div class="content-item new-videos-item video-content" data-video-id="${video.video_id}" data-video-title="${video.video_title}" data-channel="${video.channel_name}">
+                        <div class="new-badge">NEW</div>
+                        <div class="video-watch-status" data-status="unwatched">
+                            <span class="status-indicator">◯</span>
+                            <span class="status-text">Unwatched</span>
+                        </div>
+                        <div class="content-title">
+                            <a href="${video.url}" target="_blank">
+                                ${video.video_title}
+                            </a>
+                        </div>
+                        <div class="content-meta">
+                            <span class="content-source">${video.channel_name}</span>
+                            <span class="content-age">New</span>
+                        </div>
+                        <div class="video-actions">
+                            <button class="video-action-btn mark-watched" title="Mark as Watched">
+                                ✓ Watched
+                            </button>
+                            <button class="video-action-btn add-to-queue" title="Add to Watch Later">
+                                + Queue
+                            </button>
+                            <button class="video-action-btn start-watching" title="Start Watching">
+                                ▶ Watch
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                listContainer.innerHTML = videosHtml;
+                
+                // Setup event listeners for new video items
+                listContainer.querySelectorAll('.video-content').forEach(item => {
+                    const videoId = item.dataset.videoId;
+                    this.videoElements.set(videoId, item);
+                    this.setupEventListeners(item, videoId);
+                });
+            }
+            
+            displayContinueWatchingList(continueWatching) {
+                const sectionContainer = document.querySelector('.continue-watching-section');
+                const listContainer = document.querySelector('.continue-watching-list');
+                
+                if (continueWatching.length === 0) {
+                    sectionContainer.style.display = 'none';
+                    return;
+                }
+                
+                sectionContainer.style.display = 'block';
+                
+                const videosHtml = continueWatching.map(video => `
+                    <div class="content-item continue-watching-item video-content" data-video-id="${video.video_id}" data-video-title="${video.video_title}" data-channel="${video.channel_name}">
+                        <div class="video-watch-status" data-status="watching">
+                            <span class="status-indicator">▶</span>
+                            <span class="status-text">Watching</span>
+                        </div>
+                        <div class="content-title">
+                            <a href="https://www.youtube.com/watch?v=${video.video_id}" target="_blank">
+                                ${video.video_title}
+                            </a>
+                        </div>
+                        <div class="video-progress-container">
+                            <div class="video-progress-bar">
+                                <div class="progress-fill" style="width: ${Math.round(video.watch_progress * 100)}%"></div>
+                            </div>
+                            <span class="progress-text">${Math.round(video.watch_progress * 100)}% watched</span>
+                        </div>
+                        <div class="content-meta">
+                            <span class="content-source">${video.channel_name}</span>
+                            <span class="content-age">In Progress</span>
+                        </div>
+                        <div class="video-actions">
+                            <button class="video-action-btn mark-watched" title="Mark as Watched">
+                                ✓ Watched
+                            </button>
+                            <button class="video-action-btn start-watching" title="Continue Watching">
+                                ▶ Continue
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+                
+                listContainer.innerHTML = videosHtml;
+                
+                // Setup event listeners for continue watching items
+                listContainer.querySelectorAll('.video-content').forEach(item => {
+                    const videoId = item.dataset.videoId;
+                    this.videoElements.set(videoId, item);
+                    this.setupEventListeners(item, videoId);
+                });
+            }
+            
+            async updateLastVisitTime() {
+                try {
+                    // Get user sessions to find last visit time
+                    const response = await fetch(`${this.apiBaseUrl}/user/activity`, {
+                        method: 'GET',
+                        headers: { 'Content-Type': 'application/json' }
+                    });
+                    
+                    // For now, just show relative time based on session
+                    const lastVisitElement = document.getElementById('last-visit-time');
+                    const now = new Date();
+                    const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                    lastVisitElement.textContent = timeString;
+                    
+                } catch (error) {
+                    console.warn('Failed to update last visit time:', error);
+                    document.getElementById('last-visit-time').textContent = 'Unknown';
+                }
+            }
+            
+            hideNewVideosSection() {
+                const newVideosSection = document.getElementById('new-videos-section');
+                if (newVideosSection) {
+                    newVideosSection.style.display = 'none';
+                }
+            }
+            
+            async loadPersonalAnalytics() {
+                const analyticsSection = document.getElementById('personal-analytics-section');
+                if (!analyticsSection) return;
+                
+                analyticsSection.style.display = 'block';
+                
+                try {
+                    // Get analytics summary
+                    const analyticsResponse = await fetch(`${this.apiBaseUrl}/user/analytics/summary`);
+                    
+                    // Get recently watched videos for activity feed
+                    const recentlyWatchedResponse = await fetch(`${this.apiBaseUrl}/user/videos/recently-watched?limit=5`);
+                    
+                    let analyticsData = {};
+                    let recentActivity = [];
+                    
+                    if (analyticsResponse.ok) {
+                        analyticsData = await analyticsResponse.json();
+                    }
+                    
+                    if (recentlyWatchedResponse.ok) {
+                        const recentData = await recentlyWatchedResponse.json();
+                        recentActivity = recentData.videos || [];
+                    }
+                    
+                    this.displayPersonalAnalytics(analyticsData, recentActivity);
+                    
+                } catch (error) {
+                    console.error('Failed to load personal analytics:', error);
+                    this.hideAnalyticsSection();
+                }
+            }
+            
+            displayPersonalAnalytics(analyticsData, recentActivity) {
+                const analyticsSection = document.getElementById('personal-analytics-section');
+                const loadingDiv = analyticsSection.querySelector('.analytics-loading');
+                const contentDiv = analyticsSection.querySelector('.analytics-content');
+                
+                // Hide loading message
+                loadingDiv.style.display = 'none';
+                contentDiv.style.display = 'block';
+                
+                // Update main statistics
+                document.getElementById('total-completed').textContent = analyticsData.total_videos_completed || 0;
+                document.getElementById('in-progress').textContent = analyticsData.videos_in_progress || 0;
+                
+                // Format watch time
+                const watchTimeHours = Math.round((analyticsData.total_watch_time_minutes || 0) / 60 * 10) / 10;
+                document.getElementById('total-watch-time').textContent = `${watchTimeHours}h`;
+                
+                // Format completion rate
+                const completionRate = Math.round((analyticsData.completion_rate || 0) * 100);
+                document.getElementById('completion-rate').textContent = `${completionRate}%`;
+                
+                // Update change indicators
+                document.getElementById('completed-change').textContent = `${analyticsData.recently_watched || 0} recently watched`;
+                document.getElementById('progress-change').textContent = analyticsData.videos_in_progress > 0 ? 'Keep learning!' : 'Start watching videos';
+                document.getElementById('time-change').textContent = `${Math.round(analyticsData.total_watch_time_minutes || 0)} minutes total`;
+                document.getElementById('rate-change').textContent = completionRate >= 80 ? 'Excellent!' : completionRate >= 60 ? 'Good progress' : 'Keep going!';
+                
+                // Update learning goals
+                this.updateLearningGoals(analyticsData);
+                
+                // Update recent activity
+                this.displayRecentActivity(recentActivity);
+                
+                // Show section
+                analyticsSection.style.display = 'block';
+            }
+            
+            updateLearningGoals(analyticsData) {
+                const dailyGoalMinutes = 30; // Default daily goal
+                const todayWatchTime = Math.min(analyticsData.total_watch_time_minutes || 0, dailyGoalMinutes * 7); // Limit to reasonable amount
+                
+                // Update daily goal progress
+                const dailyProgress = Math.min((todayWatchTime / dailyGoalMinutes) * 100, 100);
+                document.getElementById('daily-goal-progress').style.width = `${dailyProgress}%`;
+                document.getElementById('daily-goal-text').textContent = `${Math.round(todayWatchTime)} / ${dailyGoalMinutes} min`;
+                
+                // Calculate learning streak (simplified)
+                const completedVideos = analyticsData.total_videos_completed || 0;
+                const streakDays = Math.min(Math.floor(completedVideos / 2), 7); // Rough estimate: 2 videos per day
+                document.getElementById('weekly-streak').textContent = `${streakDays} days`;
+            }
+            
+            displayRecentActivity(recentActivity) {
+                const activityContainer = document.getElementById('recent-activity-list');
+                
+                if (recentActivity.length === 0) {
+                    activityContainer.innerHTML = '<div class="text-muted">No recent activity</div>';
+                    return;
+                }
+                
+                const activitiesHtml = recentActivity.map(activity => {
+                    const timeAgo = this.formatTimeAgo(activity.last_watched_at);
+                    const icon = this.getActivityIcon(activity.watch_status);
+                    
+                    return `
+                        <div class="activity-item">
+                            <div class="activity-icon">${icon}</div>
+                            <div class="activity-text">
+                                ${activity.video_title}
+                            </div>
+                            <div class="activity-time">${timeAgo}</div>
+                        </div>
+                    `;
+                }).join('');
+                
+                activityContainer.innerHTML = activitiesHtml;
+            }
+            
+            getActivityIcon(watchStatus) {
+                switch (watchStatus) {
+                    case 'completed': return '✅';
+                    case 'watching': return '▶️';
+                    case 'skipped': return '⏭️';
+                    default: return '👁️';
+                }
+            }
+            
+            formatTimeAgo(timestamp) {
+                if (!timestamp) return 'Recently';
+                
+                try {
+                    const date = new Date(timestamp);
+                    const now = new Date();
+                    const diffMs = now - date;
+                    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+                    const diffDays = Math.floor(diffHours / 24);
+                    
+                    if (diffDays > 0) {
+                        return `${diffDays}d ago`;
+                    } else if (diffHours > 0) {
+                        return `${diffHours}h ago`;
+                    } else {
+                        const diffMinutes = Math.floor(diffMs / (1000 * 60));
+                        return diffMinutes > 0 ? `${diffMinutes}m ago` : 'Just now';
+                    }
+                } catch (e) {
+                    return 'Recently';
+                }
+            }
+            
+            hideAnalyticsSection() {
+                const analyticsSection = document.getElementById('personal-analytics-section');
+                if (analyticsSection) {
+                    analyticsSection.style.display = 'none';
+                }
+            }
+        }
+
+        // Initialize content filtering and video states when page loads
+        let contentFilter;
+        let videoStateManager;
+        document.addEventListener('DOMContentLoaded', () => {
+            contentFilter = new ContentFilter();
+            videoStateManager = new VideoStateManager();
+        });
+    </script>
+</body>
+</html>
