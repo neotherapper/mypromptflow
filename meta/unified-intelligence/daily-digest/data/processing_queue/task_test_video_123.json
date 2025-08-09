@@ -1,0 +1,20 @@
+{
+  "video_id": "test_video_123",
+  "title": "Advanced React TypeScript Patterns with Claude AI",
+  "channel_name": "Test Channel",
+  "importance_score": 0.85,
+  "priority_topics": [
+    "react",
+    "typescript",
+    "claude"
+  ],
+  "priority": "medium",
+  "queued_at": "2025-08-01T08:22:51.645242+00:00",
+  "attempts": 0,
+  "max_attempts": 3,
+  "status": "pending",
+  "error": null,
+  "processed_at": null,
+  "transcript_length": null,
+  "analysis_summary": null
+}

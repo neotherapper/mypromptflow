@@ -1,0 +1,798 @@
+{
+  "collection_metadata": {
+    "started_at": "2025-08-01T07:51:59.464538+00:00",
+    "total_channels": 23,
+    "successful_channels": 17,
+    "failed_channels": 6,
+    "total_items_collected": 21,
+    "completed_at": "2025-08-01T07:52:20.898893+00:00",
+    "duration_seconds": 21.43
+  },
+  "channel_results": {
+    "theprimeagen": {
+      "channel_id": "theprimeagen",
+      "channel_name": "ThePrimeagen",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:51:59.464554+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "fireship": {
+      "channel_id": "fireship",
+      "channel_name": "Fireship",
+      "success": true,
+      "items": [
+        {
+          "id": "miTpJmMt7uo",
+          "title": "The dating app that doxxed 72,000 women...",
+          "url": "https://www.youtube.com/watch?v=miTpJmMt7uo",
+          "published_date": "2025-07-30T14:56:15+00:00",
+          "updated_date": "2025-08-01T03:00:30+00:00",
+          "author": "Fireship",
+          "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+          "channel_name": "Fireship",
+          "description": "",
+          "source_channel": "fireship",
+          "platform": "youtube",
+          "priority_score": 5.0,
+          "quality_rating": 4.9,
+          "priority_topics": [
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "categories": [
+            "programming",
+            "web-development",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:51:59.738067+00:00",
+          "content_hash": "9b7451be7d3d91d91de25c84ba9cebe2",
+          "content_age_days": 1.705378914571759
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:51:59.705156+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 1
+    },
+    "webdevsimplified": {
+      "channel_id": "webdevsimplified",
+      "channel_name": "Web Dev Simplified",
+      "success": true,
+      "items": [
+        {
+          "id": "qcDpJ2ptlMs",
+          "title": "What Is MCP Explained In 3 Minutes",
+          "url": "https://www.youtube.com/shorts/qcDpJ2ptlMs",
+          "published_date": "2025-07-31T16:01:27+00:00",
+          "updated_date": "2025-07-31T16:01:27+00:00",
+          "author": "Web Dev Simplified",
+          "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+          "channel_name": "Web Dev Simplified",
+          "description": "",
+          "source_channel": "webdevsimplified",
+          "platform": "youtube",
+          "priority_score": 4.5,
+          "quality_rating": 4.7,
+          "priority_topics": [
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "categories": [
+            "web-development",
+            "react",
+            "javascript"
+          ],
+          "collected_at": "2025-08-01T07:51:59.891789+00:00",
+          "content_hash": "405375502653a622e3e59c761c57bf4b",
+          "content_age_days": 0.6601029160069445
+        },
+        {
+          "id": "vmbqrOBrYIo",
+          "title": "CSS Style Queries Have So Much Potential",
+          "url": "https://www.youtube.com/watch?v=vmbqrOBrYIo",
+          "published_date": "2025-07-29T16:01:25+00:00",
+          "updated_date": "2025-07-31T22:00:30+00:00",
+          "author": "Web Dev Simplified",
+          "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+          "channel_name": "Web Dev Simplified",
+          "description": "",
+          "source_channel": "webdevsimplified",
+          "platform": "youtube",
+          "priority_score": 4.5,
+          "quality_rating": 4.7,
+          "priority_topics": [
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "categories": [
+            "web-development",
+            "react",
+            "javascript"
+          ],
+          "collected_at": "2025-08-01T07:51:59.891812+00:00",
+          "content_hash": "0a26a93f99bbe93a0ecc122f969eb612",
+          "content_age_days": 2.6601260642013886
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:51:59.738861+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 2
+    },
+    "programmingwithmosh": {
+      "channel_id": "programmingwithmosh",
+      "channel_name": "Programming with Mosh",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:51:59.892475+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "codevolution": {
+      "channel_id": "codevolution",
+      "channel_name": "Codevolution",
+      "success": true,
+      "items": [
+        {
+          "id": "m2OHmyyDTdQ",
+          "title": "Warp vs Claude Code for Daily Coding",
+          "url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+          "published_date": "2025-07-30T10:30:28+00:00",
+          "updated_date": "2025-07-31T21:39:29+00:00",
+          "author": "Codevolution",
+          "channel_id": "UC80PWRj_ZU8Zu0HSMNVwKWw",
+          "channel_name": "Codevolution",
+          "description": "",
+          "source_channel": "codevolution",
+          "platform": "youtube",
+          "priority_score": 4.2,
+          "quality_rating": 4.5,
+          "priority_topics": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "categories": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "collected_at": "2025-08-01T07:51:59.966409+00:00",
+          "content_hash": "6a1ec97d94c0c176d5e61dacaf751c13",
+          "content_age_days": 1.8899533166435183
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:51:59.933661+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 1
+    },
+    "anthopicai": {
+      "channel_id": "anthopicai",
+      "channel_name": "Anthropic",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:51:59.967205+00:00"
+    },
+    "ai-explained": {
+      "channel_id": "ai-explained",
+      "channel_name": "AI Explained",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:03.278334+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "mattvidpro": {
+      "channel_id": "mattvidpro",
+      "channel_name": "Matt Wolfe",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:52:03.324022+00:00"
+    },
+    "developedbyed": {
+      "channel_id": "developedbyed",
+      "channel_name": "developedByEd",
+      "success": true,
+      "items": [
+        {
+          "id": "YRTwK0-B-Yc",
+          "title": "INCREASING THE DIFFICULTY | Leetcode Hash and Maps",
+          "url": "https://www.youtube.com/watch?v=YRTwK0-B-Yc",
+          "published_date": "2025-07-26T19:31:24+00:00",
+          "updated_date": "2025-07-28T20:24:23+00:00",
+          "author": "developedbyed",
+          "channel_id": "UClb90NQQcskPUGDIXsQEz5Q",
+          "channel_name": "developedByEd",
+          "description": "",
+          "source_channel": "developedbyed",
+          "platform": "youtube",
+          "priority_score": 4.0,
+          "quality_rating": 4.4,
+          "priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "categories": [
+            "web-development",
+            "react",
+            "design"
+          ],
+          "collected_at": "2025-08-01T07:52:06.678137+00:00",
+          "content_hash": "a5d19975346b32f4d58f31a8ca0bc5ba",
+          "content_age_days": 5.514382850555555
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.635666+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 1
+    },
+    "jackherrington": {
+      "channel_id": "jackherrington",
+      "channel_name": "Jack Herrington",
+      "success": true,
+      "items": [
+        {
+          "id": "6P-2urhScwk",
+          "title": "Zod VS Valibot: JS/TS Validator Battle!",
+          "url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+          "published_date": "2025-07-28T13:49:50+00:00",
+          "updated_date": "2025-07-31T01:29:26+00:00",
+          "author": "Jack Herrington",
+          "channel_id": "UC6vRUjYqDuoUsYsku86Lrsw",
+          "channel_name": "Jack Herrington",
+          "description": "",
+          "source_channel": "jackherrington",
+          "platform": "youtube",
+          "priority_score": 4.6,
+          "quality_rating": 4.7,
+          "priority_topics": [
+            "typescript",
+            "react",
+            "nextjs"
+          ],
+          "categories": [
+            "typescript",
+            "react",
+            "nextjs"
+          ],
+          "collected_at": "2025-08-01T07:52:06.735116+00:00",
+          "content_hash": "56d357b695f562d999330a05cc7facbc",
+          "content_age_days": 3.751582584039352
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.678797+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 1
+    },
+    "leerob": {
+      "channel_id": "leerob",
+      "channel_name": "Lee Robinson",
+      "success": true,
+      "items": [
+        {
+          "id": "ySKR3Efttvk",
+          "title": "Build an AI agent in 175 lines of Python",
+          "url": "https://www.youtube.com/watch?v=ySKR3Efttvk",
+          "published_date": "2025-07-31T00:21:20+00:00",
+          "updated_date": "2025-07-31T11:19:39+00:00",
+          "author": "leerob",
+          "channel_id": "UCZMli3czZnd1uoc1ShTouQw",
+          "channel_name": "Lee Robinson",
+          "description": "",
+          "source_channel": "leerob",
+          "platform": "youtube",
+          "priority_score": 4.8,
+          "quality_rating": 4.8,
+          "priority_topics": [
+            "nextjs",
+            "react"
+          ],
+          "categories": [
+            "nextjs",
+            "react",
+            "web-development"
+          ],
+          "collected_at": "2025-08-01T07:52:06.872700+00:00",
+          "content_hash": "7cb830a8d59d85f739dc12e17f61386a",
+          "content_age_days": 1.313042509872685
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.735756+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 1
+    },
+    "netwininjas": {
+      "channel_id": "netwininjas",
+      "channel_name": "The Net Ninja",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.873379+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "benawad": {
+      "channel_id": "benawad",
+      "channel_name": "Ben Awad",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.907733+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "bytebybyte": {
+      "channel_id": "bytebybyte",
+      "channel_name": "Byte by Byte",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:06.948223+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "techwithtim": {
+      "channel_id": "techwithtim",
+      "channel_name": "Tech With Tim",
+      "success": true,
+      "items": [
+        {
+          "id": "uG8P7TCy-m8",
+          "title": "Every software engineer MUST master THIS!!",
+          "url": "https://www.youtube.com/shorts/uG8P7TCy-m8",
+          "published_date": "2025-07-31T01:00:48+00:00",
+          "updated_date": "2025-08-01T00:46:44+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097286+00:00",
+          "content_hash": "c490878ccc44f2d2a10839198992a45a",
+          "content_age_days": 1.2856377019212963
+        },
+        {
+          "id": "CLAwSVysy5g",
+          "title": "Did you know about THIS in Python?",
+          "url": "https://www.youtube.com/shorts/CLAwSVysy5g",
+          "published_date": "2025-07-30T15:00:32+00:00",
+          "updated_date": "2025-07-31T06:52:22+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097313+00:00",
+          "content_hash": "e5c4e0082eee122993f3ce15bfa6f78a",
+          "content_age_days": 1.7024895538194444
+        },
+        {
+          "id": "hDKBREokidU",
+          "title": "Python AI Voice Agent Tutorial - Full Developer Guide (Deepgram, Twilio, Function Calling)",
+          "url": "https://www.youtube.com/watch?v=hDKBREokidU",
+          "published_date": "2025-07-30T14:10:24+00:00",
+          "updated_date": "2025-08-01T01:09:22+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097323+00:00",
+          "content_hash": "3dfaa5feaeb4d4312043ccbbbf76f3a6",
+          "content_age_days": 1.7373043686458334
+        },
+        {
+          "id": "bRT_xnB9jQ8",
+          "title": "Non Tech MUST have skills for every developer",
+          "url": "https://www.youtube.com/shorts/bRT_xnB9jQ8",
+          "published_date": "2025-07-30T08:24:31+00:00",
+          "updated_date": "2025-07-31T07:45:36+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097332+00:00",
+          "content_hash": "48b02cd34f8b31c006b54b50a5455372",
+          "content_age_days": 1.9775011279050927
+        },
+        {
+          "id": "CbPwbtC_0Uc",
+          "title": "99% of junior devs don't know about THIS in Python!!",
+          "url": "https://www.youtube.com/shorts/CbPwbtC_0Uc",
+          "published_date": "2025-07-28T06:00:08+00:00",
+          "updated_date": "2025-07-29T11:08:16+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097340+00:00",
+          "content_hash": "8a137d298d7434aadeb500d2e18310bf",
+          "content_age_days": 4.077767331631945
+        },
+        {
+          "id": "1yVSbNuJt-w",
+          "title": "Wanna land your dream internship  as a coding student in 2025? Do THIS NOW",
+          "url": "https://www.youtube.com/shorts/1yVSbNuJt-w",
+          "published_date": "2025-07-27T14:30:02+00:00",
+          "updated_date": "2025-07-29T01:49:24+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097351+00:00",
+          "content_hash": "2852269eb49a051726bcae219e4f5dea",
+          "content_age_days": 4.723670109421296
+        },
+        {
+          "id": "MX3OKpnsoLM",
+          "title": "The Fastest Way to Build AI Agents With Your Data (MindsDB Walkthrough)",
+          "url": "https://www.youtube.com/watch?v=MX3OKpnsoLM",
+          "published_date": "2025-07-27T14:18:54+00:00",
+          "updated_date": "2025-07-30T00:37:44+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097359+00:00",
+          "content_hash": "f6c24a52a81c14e9824f02e292ed8404",
+          "content_age_days": 4.731401590902777
+        },
+        {
+          "id": "EhClqSVKQ8U",
+          "title": "If you can solve THIS you can work at Microsoft",
+          "url": "https://www.youtube.com/shorts/EhClqSVKQ8U",
+          "published_date": "2025-07-27T10:13:16+00:00",
+          "updated_date": "2025-07-29T19:50:31+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097366+00:00",
+          "content_hash": "d2aa09dd961188e12475f71fedfbc482",
+          "content_age_days": 4.901980294618055
+        },
+        {
+          "id": "M657SIxKJj8",
+          "title": "if you can solve this you can work at snapchat",
+          "url": "https://www.youtube.com/shorts/M657SIxKJj8",
+          "published_date": "2025-07-27T10:03:57+00:00",
+          "updated_date": "2025-07-30T04:37:59+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097374+00:00",
+          "content_hash": "8bd414a16628e6548e7e17157b398f80",
+          "content_age_days": 4.908450202037037
+        },
+        {
+          "id": "j5f2EQf5hkw",
+          "title": "Build ANYTHING With an Advanced MCP Server (Python, Authentication, Databases & More)",
+          "url": "https://www.youtube.com/watch?v=j5f2EQf5hkw",
+          "published_date": "2025-07-25T14:01:13+00:00",
+          "updated_date": "2025-07-27T10:18:05+00:00",
+          "author": "Tech With Tim",
+          "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+          "channel_name": "Tech With Tim",
+          "description": "",
+          "source_channel": "techwithtim",
+          "platform": "youtube",
+          "priority_score": 3.9,
+          "quality_rating": 4.3,
+          "priority_topics": [
+            "development"
+          ],
+          "categories": [
+            "programming",
+            "python",
+            "tutorials"
+          ],
+          "collected_at": "2025-08-01T07:52:07.097383+00:00",
+          "content_hash": "f0e3f809d351347a3bb87af0b4732e11",
+          "content_age_days": 6.7436816835300935
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:07.065122+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 10
+    },
+    "designcourse": {
+      "channel_id": "designcourse",
+      "channel_name": "DesignCourse",
+      "success": true,
+      "items": [
+        {
+          "id": "lM9K9D0IZvA",
+          "title": "From Figma to Browser with MCP in Minutes (No Coding)",
+          "url": "https://www.youtube.com/watch?v=lM9K9D0IZvA",
+          "published_date": "2025-07-31T13:15:09+00:00",
+          "updated_date": "2025-08-01T07:14:57+00:00",
+          "author": "DesignCourse",
+          "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+          "channel_name": "DesignCourse",
+          "description": "",
+          "source_channel": "designcourse",
+          "platform": "youtube",
+          "priority_score": 3.7,
+          "quality_rating": 4.1,
+          "priority_topics": [
+            "react"
+          ],
+          "categories": [
+            "web-design",
+            "frontend",
+            "react"
+          ],
+          "collected_at": "2025-08-01T07:52:07.324508+00:00",
+          "content_hash": "bbd61c770fdcb36530c278911769dcc1",
+          "content_age_days": 0.7756750539236111
+        },
+        {
+          "id": "RR3NHbpDais",
+          "title": "Webflow and Framer have an AI Problem",
+          "url": "https://www.youtube.com/watch?v=RR3NHbpDais",
+          "published_date": "2025-07-30T14:14:48+00:00",
+          "updated_date": "2025-07-31T07:56:47+00:00",
+          "author": "DesignCourse",
+          "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+          "channel_name": "DesignCourse",
+          "description": "",
+          "source_channel": "designcourse",
+          "platform": "youtube",
+          "priority_score": 3.7,
+          "quality_rating": 4.1,
+          "priority_topics": [
+            "react"
+          ],
+          "categories": [
+            "web-design",
+            "frontend",
+            "react"
+          ],
+          "collected_at": "2025-08-01T07:52:07.324530+00:00",
+          "content_hash": "3a2533be432cd8fd70353e173f7254a1",
+          "content_age_days": 1.7342514428587963
+        },
+        {
+          "id": "iK1ilPEkoek",
+          "title": "Microsoft's NEW Vibe Coding Platform: GitHub Spark",
+          "url": "https://www.youtube.com/watch?v=iK1ilPEkoek",
+          "published_date": "2025-07-29T15:24:05+00:00",
+          "updated_date": "2025-07-31T01:12:29+00:00",
+          "author": "DesignCourse",
+          "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+          "channel_name": "DesignCourse",
+          "description": "",
+          "source_channel": "designcourse",
+          "platform": "youtube",
+          "priority_score": 3.7,
+          "quality_rating": 4.1,
+          "priority_topics": [
+            "react"
+          ],
+          "categories": [
+            "web-design",
+            "frontend",
+            "react"
+          ],
+          "collected_at": "2025-08-01T07:52:07.324539+00:00",
+          "content_hash": "0da91cfe242d30691a31c2b0fa06c136",
+          "content_age_days": 2.6861380169444447
+        },
+        {
+          "id": "Ycu0wlPf5KA",
+          "title": "Designing Custom Layouts in Figma for MCP - SideBling",
+          "url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+          "published_date": "2025-07-28T13:50:15+00:00",
+          "updated_date": "2025-07-31T01:44:03+00:00",
+          "author": "DesignCourse",
+          "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+          "channel_name": "DesignCourse",
+          "description": "",
+          "source_channel": "designcourse",
+          "platform": "youtube",
+          "priority_score": 3.7,
+          "quality_rating": 4.1,
+          "priority_topics": [
+            "react"
+          ],
+          "categories": [
+            "web-design",
+            "frontend",
+            "react"
+          ],
+          "collected_at": "2025-08-01T07:52:07.324547+00:00",
+          "content_hash": "413d8380bb007eaba1a1e5689ea701fe",
+          "content_age_days": 3.7513000539814816
+        }
+      ],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:07.098521+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 4
+    },
+    "cleverprogrammer": {
+      "channel_id": "cleverprogrammer",
+      "channel_name": "Clever Programmer",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:07.325330+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "academind": {
+      "channel_id": "academind",
+      "channel_name": "Academind",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:07.444862+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "codewithleon": {
+      "channel_id": "codewithleon",
+      "channel_name": "Code with Leon",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:52:07.478197+00:00"
+    },
+    "javascriptmastery": {
+      "channel_id": "javascriptmastery",
+      "channel_name": "JavaScript Mastery",
+      "success": true,
+      "items": [],
+      "error": null,
+      "collected_at": "2025-08-01T07:52:10.763985+00:00",
+      "total_items_found": 15,
+      "items_after_filtering": 0
+    },
+    "codingwithlewis": {
+      "channel_id": "codingwithlewis",
+      "channel_name": "Coding with Lewis",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:52:10.812564+00:00"
+    },
+    "aiadvantage": {
+      "channel_id": "aiadvantage",
+      "channel_name": "AI Advantage",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:52:14.153897+00:00"
+    },
+    "harkirat": {
+      "channel_id": "harkirat",
+      "channel_name": "Harkirat Singh",
+      "success": false,
+      "items": [],
+      "error": "XML parsing error: not well-formed (invalid token): line 2, column 11",
+      "collected_at": "2025-08-01T07:52:17.527195+00:00"
+    }
+  },
+  "errors": []
+}

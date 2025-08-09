@@ -1,0 +1,35 @@
+{
+  "channel_id": "codevolution",
+  "collected_at": "2025-08-01T07:51:59.966731+00:00",
+  "item_count": 1,
+  "items": [
+    {
+      "id": "m2OHmyyDTdQ",
+      "title": "Warp vs Claude Code for Daily Coding",
+      "url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+      "published_date": "2025-07-30T10:30:28+00:00",
+      "updated_date": "2025-07-31T21:39:29+00:00",
+      "author": "Codevolution",
+      "channel_id": "UC80PWRj_ZU8Zu0HSMNVwKWw",
+      "channel_name": "Codevolution",
+      "description": "",
+      "source_channel": "codevolution",
+      "platform": "youtube",
+      "priority_score": 4.2,
+      "quality_rating": 4.5,
+      "priority_topics": [
+        "react",
+        "nextjs",
+        "typescript"
+      ],
+      "categories": [
+        "react",
+        "nextjs",
+        "typescript"
+      ],
+      "collected_at": "2025-08-01T07:51:59.966409+00:00",
+      "content_hash": "6a1ec97d94c0c176d5e61dacaf751c13",
+      "content_age_days": 1.8899533166435183
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unified Intelligence Command Center</title>
+    <link rel="stylesheet" href="/static/css/design-system.css">
+    <style>
+        /* Dashboard-specific overrides */
+        .dashboard-specific {
+            /* Custom styles only for dashboard if needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="glass-card text-center mb-xl">
+            <h1 class="heading-1">🚀 Unified Intelligence Command Center</h1>
+            <p class="text-body mb-lg">Centralized monitoring and control for all intelligence systems</p>
+            
+            <div class="flex flex-center flex-wrap gap-lg">
+                <div class="glass-card p-lg text-center" style="min-width: 150px;">
+                    <h3 id="active-count" class="heading-3 mb-sm">-</h3>
+                    <p class="text-small text-muted">Active Systems</p>
+                </div>
+                <div class="glass-card p-lg text-center" style="min-width: 150px;">
+                    <h3 id="total-count" class="heading-3 mb-sm">-</h3>
+                    <p class="text-small text-muted">Total Systems</p>
+                </div>
+                <div class="glass-card p-lg text-center" style="min-width: 150px;">
+                    <h3 id="health-percentage" class="heading-3 mb-sm">-</h3>
+                    <p class="text-small text-muted">Overall Health</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Systems Grid -->
+        <div class="grid grid-auto-fit mb-xl" id="systems-grid">
+            <!-- Systems will be loaded here -->
+        </div>
+
+        <!-- AI Assistant -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">🤖 AI Assistant</h2>
+            <div class="flex gap-md mb-lg touch-spacing">
+                <input type="text" 
+                       class="input" 
+                       id="ai-input"
+                       placeholder="Ask me to add channels, check status, or generate reports...">
+                <button class="btn btn-primary" id="ai-send">Send</button>
+            </div>
+            <div class="glass-card p-lg hidden" id="ai-response"></div>
+        </section>
+
+        <!-- Navigation Panel -->
+        <section class="glass-card">
+            <h2 class="heading-2 text-center mb-lg">📊 Quick Navigation</h2>
+            <div class="grid grid-auto-fill touch-spacing">
+                <a href="/dashboard/latest_dashboard.html" class="glass-card text-center hover-lift transition" target="_blank">
+                    <h3 class="heading-3 mb-sm">📈 Live Dashboard</h3>
+                    <p class="text-body hide-on-mobile">Real-time intelligence monitoring</p>
+                    <p class="text-small show-on-mobile">Live monitoring</p>
+                </a>
+                <a href="/reports/latest_intelligence_report.html" class="glass-card text-center hover-lift transition" target="_blank">
+                    <h3 class="heading-3 mb-sm">📋 Latest Report</h3>
+                    <p class="text-body hide-on-mobile">Channel intelligence analysis</p>
+                    <p class="text-small show-on-mobile">Intelligence report</p>
+                </a>
+                <a href="/trends/latest_trend_analysis.json" class="glass-card text-center hover-lift transition" target="_blank">
+                    <h3 class="heading-3 mb-sm">📊 Trend Analysis</h3>
+                    <p class="text-body hide-on-mobile">Historical performance trends</p>
+                    <p class="text-small show-on-mobile">Performance trends</p>
+                </a>
+                <a href="/generated/content/daily-digest.html" class="glass-card text-center hover-lift transition" target="_blank">
+                    <h3 class="heading-3 mb-sm">📰 Content Digest</h3>
+                    <p class="text-body hide-on-mobile">Latest content from all sources</p>
+                    <p class="text-small show-on-mobile">Latest content</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="text-center mt-xl">
+            <p class="text-small text-muted" id="last-updated" data-timestamp="" data-format="relative">
+                Last updated: Loading...
+            </p>
+        </div>
+    </div>
+
+    <!-- Refresh Button -->
+    <button class="btn btn-primary" 
+            id="refresh-btn" 
+            title="Refresh Status"
+            style="position: fixed; bottom: 30px; right: 30px; border-radius: 50%; width: 60px; height: 60px; padding: 0; font-size: 1.5rem; z-index: 1000;">
+        🔄
+    </button>
+
+    <script src="/static/js/time-formatter.js"></script>
+    <script>
+        class UnifiedDashboard {
+            constructor() {
+                this.statusCache = null;
+                this.lastUpdate = null;
+                this.refreshInterval = null;
+                
+                this.initializeEventListeners();
+                this.loadSystemStatus();
+                this.startAutoRefresh();
+            }
+
+            initializeEventListeners() {
+                // Refresh button
+                document.getElementById('refresh-btn').addEventListener('click', () => {
+                    this.loadSystemStatus(true);
+                });
+
+                // AI Assistant
+                document.getElementById('ai-send').addEventListener('click', () => {
+                    this.sendAIMessage();
+                });
+
+                document.getElementById('ai-input').addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.sendAIMessage();
+                    }
+                });
+            }
+
+            async loadSystemStatus(forceRefresh = false) {
+                try {
+                    const refreshBtn = document.getElementById('refresh-btn');
+                    refreshBtn.innerHTML = '<div class="loading-spinner"></div>';
+
+                    const response = await fetch('/api/status');
+                    const data = await response.json();
+
+                    this.statusCache = data;
+                    this.lastUpdate = new Date(data.timestamp);
+                    
+                    this.renderSystems(data.systems);
+                    this.updateOverallStatus(data.systems);
+                    this.updateTimestamp();
+
+                    // Refresh all timestamps using the time formatter
+                    if (window.timeFormatter) {
+                        window.timeFormatter.updateAllTimestamps();
+                    }
+
+                    refreshBtn.innerHTML = '🔄';
+                } catch (error) {
+                    console.error('Failed to load system status:', error);
+                    this.showError('Failed to load system status');
+                    refreshBtn.innerHTML = '🔄';
+                }
+            }
+
+            renderSystems(systems) {
+                const grid = document.getElementById('systems-grid');
+                grid.innerHTML = '';
+
+                for (const [systemId, status] of Object.entries(systems)) {
+                    const card = this.createSystemCard(systemId, status);
+                    grid.appendChild(card);
+                }
+            }
+
+            createSystemCard(systemId, status) {
+                const card = document.createElement('div');
+                card.className = `glass-card ${status.status}`;
+                
+                const healthPercentage = (status.health_score * 100).toFixed(1);
+                const freshnessClass = this.getFreshnessClass(status.last_update);
+                
+                card.innerHTML = `
+                    <div class="flex flex-between mb-md">
+                        <h3 class="heading-3">${status.name}</h3>
+                        <span class="status-badge status-${status.status}">${status.status}</span>
+                    </div>
+                    
+                    <p class="text-body mb-lg">${status.description}</p>
+                    
+                    <div class="grid grid-2 gap-md mb-lg">
+                        <div class="glass-card p-md">
+                            <div class="text-small text-muted mb-xs">Last Update</div>
+                            <div class="time-display ${freshnessClass}" 
+                                 data-timestamp="${status.last_update}" 
+                                 data-format="relative">${window.timeFormatter.formatRelativeTime(status.last_update)}</div>
+                        </div>
+                        <div class="glass-card p-md">
+                            <div class="text-small text-muted mb-xs">Health Score</div>
+                            <div class="text-body font-weight-medium">${healthPercentage}%</div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-bar mb-lg">
+                        <div class="progress-fill progress-${this.getHealthColor(status.health_score)}" 
+                             style="width: ${healthPercentage}%"></div>
+                    </div>
+                    
+                    <div class="flex gap-sm flex-wrap">
+                        ${status.quick_actions.map(action => 
+                            `<button class="btn btn-small btn-secondary" onclick="dashboard.handleQuickAction('${action}')">${this.formatActionName(action)}</button>`
+                        ).join('')}
+                    </div>
+                `;
+                
+                return card;
+            }
+
+            updateOverallStatus(systems) {
+                const systemsArray = Object.values(systems);
+                const activeCount = systemsArray.filter(s => s.status === 'active').length;
+                const totalCount = systemsArray.length;
+                const avgHealth = systemsArray.reduce((sum, s) => sum + s.health_score, 0) / totalCount;
+                
+                document.getElementById('active-count').textContent = activeCount;
+                document.getElementById('total-count').textContent = totalCount;
+                document.getElementById('health-percentage').textContent = `${(avgHealth * 100).toFixed(0)}%`;
+            }
+
+            updateTimestamp() {
+                const timestamp = document.getElementById('last-updated');
+                if (this.lastUpdate) {
+                    timestamp.setAttribute('data-timestamp', this.lastUpdate.toISOString());
+                    timestamp.textContent = `Last updated: ${window.timeFormatter.formatRelativeTime(this.lastUpdate.toISOString())}`;
+                }
+            }
+
+            getFreshnessClass(timestamp) {
+                if (!window.timeFormatter) return 'time-old';
+                
+                const freshness = window.timeFormatter.calculateFreshness(timestamp);
+                if (freshness >= 0.8) return 'time-fresh';
+                if (freshness >= 0.5) return 'time-relative';
+                return 'time-stale';
+            }
+
+            getHealthColor(healthScore) {
+                if (healthScore >= 0.8) return 'success';
+                if (healthScore >= 0.5) return 'warning';
+                return 'danger';
+            }
+
+            formatTimestamp(timestamp) {
+                if (!window.timeFormatter) {
+                    return timestamp || 'unknown';
+                }
+                return window.timeFormatter.formatRelativeTime(timestamp);
+            }
+
+            formatActionName(action) {
+                return action.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            }
+
+            async handleQuickAction(action) {
+                try {
+                    const response = await fetch(`/api/quick-action/${action}`);
+                    const data = await response.json();
+                    
+                    if (data.success) {
+                        if (data.redirect) {
+                            window.open(data.redirect, '_blank');
+                        } else {
+                            this.showAIResponse(data.message);
+                        }
+                    } else {
+                        this.showError(data.message);
+                    }
+                } catch (error) {
+                    console.error('Quick action failed:', error);
+                    this.showError('Action failed');
+                }
+            }
+
+            async sendAIMessage() {
+                const input = document.getElementById('ai-input');
+                const message = input.value.trim();
+                
+                if (!message) return;
+
+                try {
+                    const sendBtn = document.getElementById('ai-send');
+                    sendBtn.innerHTML = '<div class="loading-spinner"></div>';
+                    sendBtn.disabled = true;
+
+                    const response = await fetch('/api/assistant', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ message: message })
+                    });
+
+                    const data = await response.json();
+                    
+                    this.showAIResponse(data.message);
+                    input.value = '';
+
+                    sendBtn.innerHTML = 'Send';
+                    sendBtn.disabled = false;
+                } catch (error) {
+                    console.error('AI request failed:', error);
+                    this.showError('AI assistant is temporarily unavailable');
+                    
+                    const sendBtn = document.getElementById('ai-send');
+                    sendBtn.innerHTML = 'Send';
+                    sendBtn.disabled = false;
+                }
+            }
+
+            showAIResponse(message) {
+                const responseDiv = document.getElementById('ai-response');
+                responseDiv.innerHTML = message.replace(/\n/g, '<br>');
+                responseDiv.classList.remove('hidden');
+                
+                // Auto-hide after 30 seconds
+                setTimeout(() => {
+                    responseDiv.classList.add('hidden');
+                }, 30000);
+            }
+
+            showError(message) {
+                this.showAIResponse(`❌ Error: ${message}`);
+            }
+
+            startAutoRefresh() {
+                // Refresh every 2 minutes
+                this.refreshInterval = setInterval(() => {
+                    this.loadSystemStatus();
+                }, 120000);
+            }
+
+            stopAutoRefresh() {
+                if (this.refreshInterval) {
+                    clearInterval(this.refreshInterval);
+                    this.refreshInterval = null;
+                }
+            }
+        }
+
+        // Initialize dashboard when page loads
+        let dashboard;
+        document.addEventListener('DOMContentLoaded', () => {
+            dashboard = new UnifiedDashboard();
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', () => {
+            if (dashboard) {
+                dashboard.stopAutoRefresh();
+            }
+        });
+    </script>
+</body>
+</html>
