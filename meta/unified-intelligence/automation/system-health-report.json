@@ -1,5 +1,5 @@
 {
-  "report_timestamp": "2025-07-31T10:44:52.782405+00:00",
+  "report_timestamp": "2025-07-31T11:31:09.292120+00:00",
   "system_components": {
     "youtube_queue": {
       "name": "YouTube Processing Queue",
@@ -25,9 +25,9 @@
       "health": {
         "status": "healthy",
         "metrics": {
-          "youtube_content_files": 6,
+          "youtube_content_files": 0,
           "vault_exists": true,
-          "youtube_vault_exists": true
+          "youtube_vault_exists": false
         }
       }
     },
@@ -36,7 +36,7 @@
       "health": {
         "status": "healthy",
         "metrics": {
-          "total_json_digests": 5,
+          "total_json_digests": 7,
           "total_md_digests": 1,
           "latest_json_exists": true,
           "latest_md_exists": true,
@@ -44,7 +44,7 @@
             "total_items": 6,
             "high_quality_items": 6,
             "average_score": 1.0,
-            "generated_at": "2025-07-31T10:44:37.653377+00:00"
+            "generated_at": "2025-07-31T11:30:43.229508+00:00"
           }
         }
       }

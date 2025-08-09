@@ -1,0 +1,163 @@
+{
+  "processing_summary": {
+    "timestamp": "2025-08-01T05:12:12.251826+00:00",
+    "total_videos": 3,
+    "successful_processing": 3,
+    "failed_processing": 0,
+    "average_unified_score": 0.578,
+    "high_value_videos": 0,
+    "processor_version": "1.0.0"
+  },
+  "top_performing_videos": [
+    {
+      "title": "Advanced Claude Prompt Engineering",
+      "channel": "AI Development",
+      "unified_score": 0.6599999999999999,
+      "priority_topics": [
+        "claude",
+        "typescript",
+        "meta-prompting"
+      ],
+      "concept_count": 12
+    },
+    {
+      "title": "Next.js Tutorial - Build a Portfolio",
+      "channel": "Web Dev Simplified",
+      "unified_score": 0.6000000000000001,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "concept_count": 12
+    },
+    {
+      "title": "React TypeScript Tutorial for Beginners",
+      "channel": "Programming with Mosh",
+      "unified_score": 0.47333333333333333,
+      "priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "concept_count": 12
+    }
+  ],
+  "topic_analysis": {
+    "most_common_topics": [
+      [
+        "typescript",
+        3
+      ],
+      [
+        "react",
+        2
+      ],
+      [
+        "nextjs",
+        1
+      ],
+      [
+        "claude",
+        1
+      ],
+      [
+        "meta-prompting",
+        1
+      ]
+    ],
+    "unique_topics_discovered": 5,
+    "topic_distribution": {
+      "react": 2,
+      "typescript": 3,
+      "nextjs": 1,
+      "claude": 1,
+      "meta-prompting": 1
+    }
+  },
+  "concept_analysis": {
+    "most_common_concepts": [
+      [
+        "authentication",
+        3
+      ],
+      [
+        "authorization",
+        3
+      ],
+      [
+        "optimization",
+        3
+      ],
+      [
+        "performance",
+        3
+      ],
+      [
+        "component",
+        3
+      ],
+      [
+        "debugging",
+        3
+      ],
+      [
+        "database",
+        3
+      ],
+      [
+        "testing",
+        3
+      ],
+      [
+        "api",
+        3
+      ],
+      [
+        "git",
+        3
+      ],
+      [
+        "sql",
+        3
+      ],
+      [
+        "go",
+        3
+      ]
+    ],
+    "unique_concepts_discovered": 12,
+    "concept_categories": {
+      "concepts": [
+        "authentication",
+        "authorization",
+        "debugging",
+        "database",
+        "testing",
+        "api",
+        "sql"
+      ],
+      "patterns": [
+        "optimization",
+        "performance",
+        "component"
+      ],
+      "tools": [
+        "git"
+      ],
+      "languages": [
+        "go"
+      ]
+    }
+  },
+  "quality_metrics": {
+    "videos_with_transcripts": 3,
+    "videos_with_multiple_topics": 3,
+    "videos_with_rich_concepts": 3,
+    "technical_depth_distribution": {
+      "low": 0,
+      "medium": 3,
+      "high": 0
+    }
+  },
+  "failed_processing": []
+}

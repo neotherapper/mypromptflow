@@ -1,0 +1,136 @@
+{
+  "max_concurrent_tasks": 3,
+  "resource_limits": {
+    "max_cpu_percent": 80,
+    "max_memory_mb": 2048,
+    "max_memory_percent": 85,
+    "max_disk_percent": 90,
+    "max_disk_io_mb": 100,
+    "max_network_requests_per_minute": 60
+  },
+  "scheduling_intervals": {
+    "youtube_search": "daily",
+    "reddit_discovery": "weekly",
+    "mcp_youtube_processing": "daily", 
+    "content_digest": "daily",
+    "system_health": "hourly",
+    "cleanup": "daily"
+  },
+  "quality_thresholds": {
+    "min_content_score": 0.7,
+    "max_duplicate_percentage": 0.1,
+    "min_source_credibility": 0.8,
+    "min_engagement_threshold": 100,
+    "min_upvote_ratio": 0.7,
+    "max_age_days": 7
+  },
+  "retry_policies": {
+    "max_retries": 3,
+    "retry_delay_minutes": 5,
+    "exponential_backoff": true,
+    "permanent_failure_keywords": ["authentication", "permission", "not found", "invalid", "quota exceeded"]
+  },
+  "monitoring_settings": {
+    "health_check_interval": 300,
+    "metrics_retention_days": 30,
+    "log_retention_days": 14,
+    "alert_thresholds": {
+      "error_rate": 0.2,
+      "cpu_usage": 90,
+      "memory_usage": 90,
+      "disk_usage": 95,
+      "consecutive_failures": 3
+    },
+    "performance_tracking": {
+      "track_execution_times": true,
+      "track_resource_usage": true,
+      "track_success_rates": true
+    }
+  },
+  "output_organization": {
+    "base_storage_path": "orchestrator-outputs",
+    "organize_by_date": true,
+    "organize_by_task": true,
+    "compress_old_data": true,
+    "retention_days": 90,
+    "archive_threshold_days": 30,
+    "backup_enabled": true,
+    "backup_interval_hours": 24
+  },
+  "discovery_coordination": {
+    "avoid_duplicate_processing": true,
+    "cross_platform_deduplication": true,
+    "priority_boost_factors": {
+      "claude_content": 1.5,
+      "claude_code_content": 1.6,
+      "meta_prompting_content": 1.4,
+      "official_sources": 1.3
+    },
+    "content_freshness_weights": {
+      "0-6_hours": 1.0,
+      "6-24_hours": 0.9,
+      "1-3_days": 0.7,
+      "3-7_days": 0.5,
+      "7-30_days": 0.3,
+      "30+_days": 0.1
+    }
+  },
+  "integration_settings": {
+    "youtube_api": {
+      "rate_limit_per_day": 10000,
+      "rate_limit_per_hour": 1000,
+      "max_results_per_search": 50,
+      "search_order": "relevance"
+    },
+    "reddit_api": {
+      "rate_limit_per_minute": 60,
+      "max_results_per_search": 100,
+      "search_time_filter": "week"
+    },
+    "mcp_servers": {
+      "youtube": {
+        "enabled": true,
+        "timeout_seconds": 300,
+        "max_retries": 3
+      }
+    },
+    "knowledge_vault": {
+      "auto_sync": true,
+      "sync_interval_hours": 6,
+      "backup_before_sync": true
+    }
+  },
+  "notification_settings": {
+    "enable_notifications": true,
+    "notification_channels": ["log", "file"],
+    "alert_conditions": {
+      "high_error_rate": true,
+      "resource_exhaustion": true,
+      "task_timeout": true,
+      "system_degradation": true
+    },
+    "daily_summary": {
+      "enabled": true,
+      "time": "08:00",
+      "include_metrics": true,
+      "include_failures": true
+    }
+  },
+  "advanced_features": {
+    "adaptive_scheduling": {
+      "enabled": true,
+      "learn_from_performance": true,
+      "adjust_intervals_based_on_content_volume": true
+    },
+    "intelligent_prioritization": {
+      "enabled": true,
+      "use_topic_scoring": true,
+      "dynamic_priority_adjustment": true
+    },
+    "predictive_resource_management": {
+      "enabled": true,
+      "forecast_resource_needs": true,
+      "preemptive_task_scheduling": true
+    }
+  }
+}

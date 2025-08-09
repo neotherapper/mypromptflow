@@ -18,8 +18,16 @@ current_dir = Path(__file__).parent
 sys.path.append(str(current_dir))
 
 # Import existing functionality
-from youtube_integration_manager import YouTubeIntegrationManager
-from youtube_transcript_processor import ProcessedInsights, process_transcript_with_claude
+import importlib.util
+import sys
+
+# Import YouTubeIntegrationManager from hyphenated filename
+spec = importlib.util.spec_from_file_location("youtube_integration_manager", "youtube-integration-manager.py")
+youtube_manager_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(youtube_manager_module)
+YouTubeIntegrationManager = youtube_manager_module.YouTubeIntegrationManager
+
+from youtube_transcript_processor import ProcessedInsights
 
 @dataclass
 class UnifiedIntelligenceConfig:
@@ -44,12 +52,14 @@ class UnifiedYouTubeIntegration:
         
     def _load_unified_config(self) -> UnifiedIntelligenceConfig:
         """Load unified intelligence configuration"""
+        # Updated paths to use main knowledge-vault structure
+        main_knowledge_vault = self.base_path.parent.parent / "knowledge-vault" / "databases" / "knowledge_vault" / "content-intelligence"
         return UnifiedIntelligenceConfig(
             meta_base_path=str(self.base_path),
             source_registry_path=str(self.base_path / "source-registry.yaml"),
-            user_preferences_path=str(self.base_path / "user-preferences.json"),
+            user_preferences_path=str(main_knowledge_vault / "user-preferences.json"),
             discovery_framework_path=str(self.base_path / "discovery-framework.yaml"),
-            knowledge_vault_path=str(self.base_path / "knowledge-vault")
+            knowledge_vault_path=str(main_knowledge_vault / "youtube-intelligence")
         )
     
     def _load_source_registry(self) -> Dict[str, Any]:

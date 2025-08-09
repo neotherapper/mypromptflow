@@ -261,6 +261,19 @@ Route natural language queries intelligently:
 
 ### Error Handling Strategy
 
+**Integrated Learning System:**
+```
+🧠 Domain-Specific Error Learning
+═══════════════════════════════════
+
+Learning Source: VanguardAI .jira/learning/ system
+Error Analysis: AI research context with cross-project coordination
+Success Patterns: Documented in jira-usage-patterns.md
+Recovery Procedures: Detailed in jira-error-recovery.md
+
+Hooks Integration: Automatic error capture and pattern learning
+```
+
 **Symlink Issues:**
 ```
 ❌ Symlink Error Detected
@@ -273,6 +286,7 @@ Solution:
 3. Verify permissions on target directory
 
 Fallback: Use MCP tools for live data (slower but functional)
+Learning: Automatically logged to vanguardAI .jira/learning/jira-error-recovery.md
 ```
 
 **Cache Issues:**

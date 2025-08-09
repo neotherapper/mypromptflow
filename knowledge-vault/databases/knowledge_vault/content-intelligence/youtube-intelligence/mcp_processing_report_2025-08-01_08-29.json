@@ -1,0 +1,165 @@
+{
+  "processing_summary": {
+    "timestamp": "2025-08-01T05:29:40.072984+00:00",
+    "total_videos": 2,
+    "successful_processing": 2,
+    "failed_processing": 0,
+    "average_unified_score": 0.57,
+    "high_value_videos": 0,
+    "processor_version": "1.0.0"
+  },
+  "top_performing_videos": [
+    {
+      "title": "Alibaba is coming for Claude...",
+      "channel": "Fireship",
+      "unified_score": 0.6399999999999999,
+      "priority_topics": [
+        "claude",
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "concept_count": 16
+    },
+    {
+      "title": "The dating app that doxxed 72,000 women...",
+      "channel": "Fireship",
+      "unified_score": 0.5,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "concept_count": 16
+    }
+  ],
+  "topic_analysis": {
+    "most_common_topics": [
+      [
+        "react",
+        2
+      ],
+      [
+        "typescript",
+        2
+      ],
+      [
+        "nextjs",
+        2
+      ],
+      [
+        "claude",
+        1
+      ]
+    ],
+    "unique_topics_discovered": 4,
+    "topic_distribution": {
+      "react": 2,
+      "typescript": 2,
+      "nextjs": 2,
+      "claude": 1
+    }
+  },
+  "concept_analysis": {
+    "most_common_concepts": [
+      [
+        "optimization",
+        2
+      ],
+      [
+        "performance",
+        2
+      ],
+      [
+        "deployment",
+        2
+      ],
+      [
+        "component",
+        2
+      ],
+      [
+        "angular",
+        2
+      ],
+      [
+        "netlify",
+        2
+      ],
+      [
+        "testing",
+        2
+      ],
+      [
+        "devops",
+        2
+      ],
+      [
+        "vercel",
+        2
+      ],
+      [
+        "ci/cd",
+        2
+      ],
+      [
+        "react",
+        2
+      ],
+      [
+        "redux",
+        2
+      ],
+      [
+        "state",
+        2
+      ],
+      [
+        "api",
+        2
+      ],
+      [
+        "aws",
+        2
+      ]
+    ],
+    "unique_concepts_discovered": 16,
+    "concept_categories": {
+      "patterns": [
+        "optimization",
+        "performance",
+        "component",
+        "redux",
+        "state"
+      ],
+      "concepts": [
+        "deployment",
+        "testing",
+        "devops",
+        "ci/cd",
+        "api"
+      ],
+      "languages": [
+        "angular",
+        "react",
+        "vue"
+      ],
+      "tools": [
+        "netlify",
+        "vercel",
+        "aws"
+      ]
+    }
+  },
+  "quality_metrics": {
+    "videos_with_transcripts": 2,
+    "videos_with_multiple_topics": 2,
+    "videos_with_rich_concepts": 2,
+    "technical_depth_distribution": {
+      "low": 0,
+      "medium": 1,
+      "high": 1
+    }
+  },
+  "failed_processing": []
+}

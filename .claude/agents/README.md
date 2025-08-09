@@ -545,4 +545,82 @@ The SDLC Subagent System provides comprehensive maritime insurance platform deve
 
 By following the documented patterns and best practices, teams can achieve optimal development efficiency, quality assurance, and regulatory compliance throughout the complete software development lifecycle with enhanced AI-powered intelligence and domain-specific expertise.
 
+## Agent Creation Guidelines & Lessons Learned (2025-07-31)
+
+### 🔍 **Critical Requirement: Always Check Existing Agents First**
+
+**Before creating any new subagent, you MUST:**
+1. **Review current registry** - Check `registry.yaml` for existing agents with similar capabilities
+2. **Search agent descriptions** - Use grep to find overlapping functionality across all `.md` files
+3. **Validate against optimization** - Remember the system was optimized from 27→17 agents (37% reduction)
+4. **Check knowledge-vault integration** - Verify if existing agents already handle your use case
+
+### ⚠️ **Case Study: Intelligence Digest Duplication (July 2025)**
+
+**What Happened:**
+- Attempted to create `daily-intelligence-digest` and `youtube-content-processor` agents
+- Failed to check existing registry, causing duplicate with existing `daily-intelligence-digest` agent (line 201-214)
+- Created separate knowledge-vault structure instead of using main `/knowledge-vault/` system
+- Violated the v2.0.0 optimization principle of zero redundancy
+
+**Impact:**
+- Created duplicate functionality that already existed in registry
+- Built separate knowledge-vault system duplicating main database structure  
+- Contradicted system optimization efforts (would have increased agents from 17→19)
+
+**Resolution:**
+- Removed duplicate agents and integrated with existing `daily-intelligence-digest` agent
+- Migrated data to main knowledge-vault database structure following proper schemas
+- Updated documentation with these guidelines to prevent future duplication
+
+### ✅ **Proper Agent Creation Process**
+
+1. **Discovery Phase:**
+   ```bash
+   # Search for existing functionality
+   grep -r "your_functionality" .claude/agents/
+   grep -r "your_domain" .claude/agents/registry.yaml
+   ```
+
+2. **Registry Analysis:**
+   ```bash
+   # Check current agent count and categories
+   cat .claude/agents/registry.yaml | grep "total_subagents"
+   cat .claude/agents/registry.yaml | grep -A 5 -B 5 "your_category"
+   ```
+
+3. **Enhancement vs Creation Decision:**
+   - **If similar agent exists:** Enhance existing agent capabilities rather than creating new one
+   - **If functionality gap:** Create new agent but ensure no overlap with existing agents
+   - **If replacing deprecated:** Follow proper deprecation and migration process
+
+4. **Integration Requirements:**
+   - Must integrate with existing knowledge-vault database structure (`/knowledge-vault/databases/`)
+   - Must follow established MCP integration patterns
+   - Must maintain system optimization gains (don't increase agent count unnecessarily)
+
+### 📊 **System Health Monitoring**
+
+**Current Status (Post-Optimization):**
+- **Total Agents:** 17 (target maintained)
+- **Redundancy Level:** 0% (zero overlapping responsibilities)
+- **Knowledge Integration:** Unified through main knowledge-vault system
+- **Optimization Compliance:** 100% (no regression from v2.0.0 gains)
+
+### 🎯 **Future Agent Development**
+
+**Guidelines for New Agents:**
+- Justify need against existing 17 agents
+- Demonstrate unique capability gap
+- Follow consolidation principles from v2.0.0
+- Integrate with established knowledge-vault and MCP patterns
+- Maintain zero redundancy principle
+
+**Red Flags (Prevent These):**
+- Creating agents without checking registry
+- Duplicating existing functionality
+- Building separate infrastructure (knowledge-vaults, databases)
+- Ignoring system optimization principles
+- Increasing agent count without strong justification
+
 For detailed technical specifications, refer to individual subagent files and the comprehensive registry configuration at [registry.yaml](./registry.yaml).

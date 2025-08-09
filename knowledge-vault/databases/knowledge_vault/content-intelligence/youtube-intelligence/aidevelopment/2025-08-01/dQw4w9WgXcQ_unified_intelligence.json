@@ -1,0 +1,66 @@
+{
+  "video_id": "dQw4w9WgXcQ",
+  "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "title": "Advanced Claude Prompt Engineering",
+  "channel": "AI Development",
+  "programming_concepts": [
+    "authentication",
+    "authorization",
+    "optimization",
+    "performance",
+    "component",
+    "debugging",
+    "database",
+    "testing",
+    "api",
+    "git",
+    "sql",
+    "go"
+  ],
+  "priority_topics": [
+    "claude",
+    "typescript",
+    "meta-prompting"
+  ],
+  "topic_scores": {
+    "claude": 0.26,
+    "typescript": 0.8,
+    "meta-prompting": 0.25
+  },
+  "unified_score": 0.6599999999999999,
+  "content_summary": "## Analysis of \"Advanced Claude Prompt Engineering\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+  "insights": {
+    "concept_count": 12,
+    "transcript_length": 4156,
+    "topic_diversity": 3,
+    "technical_depth": 2,
+    "content_quality_indicators": {
+      "has_code_examples": true,
+      "has_explanations": true,
+      "has_best_practices": true,
+      "has_troubleshooting": true
+    },
+    "topic_score_breakdown": {
+      "claude": 0.26,
+      "typescript": 0.8,
+      "meta-prompting": 0.25
+    },
+    "top_concepts": [
+      "authentication",
+      "authorization",
+      "optimization",
+      "performance",
+      "component",
+      "debugging",
+      "database",
+      "testing",
+      "api",
+      "git"
+    ]
+  },
+  "processing_timestamp": "2025-08-01T05:12:12.251274+00:00",
+  "processed_with": "mcp-youtube-processor",
+  "framework_version": "1.0.0",
+  "transcript_available": true,
+  "error": null
+}

@@ -82,9 +82,20 @@
   - ✅ All stages defined with clear processes
   - ✅ Decision documented in `decisions/sdlc-stages-decision.md`
 
-- [x] **Document decision agreements and history** [Priority: Medium] [Type: Documentation] (Completed: 2025-07-14)
+- [x] **Select monorepo architecture** [Priority: High] [Type: Decision] (Completed: 2025-01-31)
+  - ✅ User confirmed: Nx Monorepo with AI Integration
+  - ✅ 714% ROI analysis validated migration investment
+  - ✅ Decision documented in `decisions/monorepo-architecture-decision.md`
+
+- [x] **Define folder structure organization** [Priority: High] [Type: Decision] (Completed: 2025-01-31)
+  - ✅ User selected: Domain-Driven Architecture for long-term maintainability
+  - ✅ Maritime-specific domain organization (vessels, quotes, coverage, brokers, policies, customers)
+  - ✅ Decision documented in `decisions/nx-monorepo-folder-structure-decision.md`
+
+- [x] **Document decision agreements and history** [Priority: Medium] [Type: Documentation] (Completed: 2025-01-31)
   - ✅ All decisions recorded with dates and rationale
   - ✅ User confirmations documented
+  - ✅ Maritime PRD v2.0 requirements integrated
 
 ## Phase 4: Blueprint Creation - ✅ COMPLETED (100% Complete)
 

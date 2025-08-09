@@ -66,9 +66,9 @@ def check_unified_intelligence_status():
                 except Exception as e:
                     print(f"      ❌ Error reading queue: {e}")
     
-    # Check user preferences
+    # Check user preferences (updated path to main knowledge-vault)
     print("\n👤 User Preferences Status:")
-    prefs_path = base_path / "user-preferences.json"
+    prefs_path = base_path.parent.parent / "knowledge-vault" / "databases" / "knowledge_vault" / "content-intelligence" / "user-preferences.json"
     if prefs_path.exists():
         try:
             with open(prefs_path, 'r') as f:

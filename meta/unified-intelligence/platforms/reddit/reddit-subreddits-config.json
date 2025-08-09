@@ -1,0 +1,168 @@
+[
+  {
+    "name": "programming",
+    "rss_url": "https://www.reddit.com/r/programming/.rss",
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "quality_threshold": 20
+  },
+  {
+    "name": "javascript",
+    "rss_url": "https://www.reddit.com/r/javascript/.rss",
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "quality_threshold": 15
+  },
+  {
+    "name": "reactjs",
+    "rss_url": "https://www.reddit.com/r/reactjs/.rss",
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "quality_threshold": 15
+  },
+  {
+    "name": "Python",
+    "rss_url": "https://www.reddit.com/r/Python/.rss",
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "quality_threshold": 20
+  },
+  {
+    "name": "webdev",
+    "rss_url": "https://www.reddit.com/r/webdev/.rss",
+    "topics": [
+      "web-development",
+      "frontend",
+      "backend",
+      "full-stack"
+    ],
+    "priority": "high",
+    "quality_threshold": 15
+  },
+  {
+    "name": "MachineLearning",
+    "rss_url": "https://www.reddit.com/r/MachineLearning/.rss",
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "quality_threshold": 25
+  },
+  {
+    "name": "devops",
+    "rss_url": "https://www.reddit.com/r/devops/.rss",
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "quality_threshold": 10
+  },
+  {
+    "name": "selfhosted",
+    "rss_url": "https://www.reddit.com/r/selfhosted/.rss",
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "quality_threshold": 15
+  },
+  {
+    "name": "Claude",
+    "rss_url": "https://www.reddit.com/r/Claude/.rss",
+    "topics": [
+      "claude",
+      "anthropic",
+      "ai",
+      "conversational-ai",
+      "claude-code"
+    ],
+    "priority": "highest",
+    "quality_threshold": 5,
+    "priority_topic": true
+  },
+  {
+    "name": "typescript",
+    "rss_url": "https://www.reddit.com/r/typescript/.rss",
+    "topics": [
+      "typescript",
+      "javascript",
+      "type-safety",
+      "programming",
+      "web-development"
+    ],
+    "priority": "highest",
+    "quality_threshold": 10,
+    "priority_topic": true
+  },
+  {
+    "name": "PromptEngineering",
+    "rss_url": "https://www.reddit.com/r/PromptEngineering/.rss",
+    "topics": [
+      "meta-prompting",
+      "prompt-engineering",
+      "ai",
+      "language-models",
+      "ai-prompting"
+    ],
+    "priority": "highest",
+    "quality_threshold": 5,
+    "priority_topic": true
+  },
+  {
+    "name": "AnthropicAI",
+    "rss_url": "https://www.reddit.com/r/AnthropicAI/.rss",
+    "topics": [
+      "claude",
+      "anthropic",
+      "ai-safety",
+      "constitutional-ai",
+      "ai-research"
+    ],
+    "priority": "highest",
+    "quality_threshold": 5,
+    "priority_topic": true
+  },
+  {
+    "name": "ChatGPTCoding",
+    "rss_url": "https://www.reddit.com/r/ChatGPTCoding/.rss",
+    "topics": [
+      "ai-coding",
+      "claude-code",
+      "programming",
+      "ai-development",
+      "code-generation"
+    ],
+    "priority": "high",
+    "quality_threshold": 8,
+    "priority_topic": true
+  }
+]

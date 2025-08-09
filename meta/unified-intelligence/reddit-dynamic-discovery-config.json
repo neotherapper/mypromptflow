@@ -1,0 +1,73 @@
+{
+  "priority_subreddits": [
+    "Claude",
+    "AnthropicAI", 
+    "typescript",
+    "reactjs",
+    "PromptEngineering",
+    "programming",
+    "ChatGPTCoding",
+    "MachineLearning",
+    "artificial",
+    "LocalLLaMA"
+  ],
+  "search_queries": [
+    {
+      "terms": ["claude", "claude ai", "anthropic", "claude code", "claude.ai"],
+      "priority_topics": ["claude", "claude-code"],
+      "subreddits": ["programming", "MachineLearning", "artificial", "ChatGPT", "LocalLLaMA", "singularity", "ArtificialIntelligence"],
+      "time_filter": "week",
+      "min_score": 50,
+      "max_results": 25
+    },
+    {
+      "terms": ["react", "reactjs", "react hooks", "react components", "jsx"],
+      "priority_topics": ["react"],
+      "subreddits": ["webdev", "javascript", "Frontend", "webdevelopment", "node", "nextjs"],
+      "time_filter": "week",
+      "min_score": 50,
+      "max_results": 25
+    },
+    {
+      "terms": ["typescript", "ts config", "type safety", "typescript language"],
+      "priority_topics": ["typescript"],
+      "subreddits": ["javascript", "webdev", "programming", "Frontend", "node"],
+      "time_filter": "week",
+      "min_score": 50,
+      "max_results": 25
+    },
+    {
+      "terms": ["meta prompting", "prompt engineering", "chain of thought", "few shot", "prompt design"],
+      "priority_topics": ["meta-prompting"],
+      "subreddits": ["MachineLearning", "artificial", "ChatGPT", "LocalLLaMA", "singularity", "ArtificialIntelligence"],
+      "time_filter": "week",
+      "min_score": 50,
+      "max_results": 25
+    },
+    {
+      "terms": ["next.js", "nextjs", "app router", "server components"],
+      "priority_topics": ["nextjs"],
+      "subreddits": ["webdev", "javascript", "Frontend", "reactjs", "nextjs"],
+      "time_filter": "week",
+      "min_score": 50,
+      "max_results": 20
+    }
+  ],
+  "quality_thresholds": {
+    "min_upvotes": 50,
+    "min_upvote_ratio": 0.7,
+    "min_comments": 5,
+    "max_age_days": 7,
+    "min_content_length": 100
+  },
+  "rate_limits": {
+    "requests_per_minute": 30,
+    "burst_limit": 10
+  },
+  "storage_path": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/reddit-intelligence/dynamic-discovery/",
+  "reddit_api_config": {
+    "client_id": "",
+    "client_secret": "",
+    "user_agent": "Universal Topic Intelligence System 1.0 by Educational Research"
+  }
+}
