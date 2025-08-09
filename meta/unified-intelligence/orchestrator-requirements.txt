@@ -1,0 +1,38 @@
+# Automated Discovery Orchestrator Requirements
+# Core scheduling and system monitoring
+schedule>=1.2.0
+psutil>=5.9.0
+
+# HTTP requests and API integration
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Reddit integration
+praw>=7.6.0
+feedparser>=6.0.10
+
+# Data handling and utilities
+python-dateutil>=2.8.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Dashboard and web interface (optional)
+flask>=2.3.0
+flask-socketio>=5.3.0
+
+# Enhanced logging and monitoring
+colorlog>=6.7.0
+
+# Configuration management
+configparser>=5.3.0
+
+# Process management
+supervisor>=4.2.0
+
+# Optional: Enhanced error tracking
+sentry-sdk>=1.0.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-asyncio>=0.21.0

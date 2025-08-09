@@ -1,0 +1,187 @@
+[
+  {
+    "name": "front_page",
+    "rss_url": "https://hnrss.org/frontpage",
+    "topics": [
+      "technology",
+      "startups",
+      "programming",
+      "innovation"
+    ],
+    "priority": "high",
+    "min_score": 100,
+    "min_comments": 20,
+    "category": "front_page"
+  },
+  {
+    "name": "new_stories",
+    "rss_url": "https://hnrss.org/newest",
+    "topics": [
+      "technology",
+      "programming",
+      "startups"
+    ],
+    "priority": "medium",
+    "min_score": 50,
+    "min_comments": 10,
+    "category": "new"
+  },
+  {
+    "name": "best_stories",
+    "rss_url": "https://hnrss.org/best",
+    "topics": [
+      "technology",
+      "innovation",
+      "programming"
+    ],
+    "priority": "high",
+    "min_score": 200,
+    "min_comments": 50,
+    "category": "best"
+  },
+  {
+    "name": "ask_hn",
+    "rss_url": "https://hnrss.org/ask",
+    "topics": [
+      "discussion",
+      "advice",
+      "community",
+      "career"
+    ],
+    "priority": "medium",
+    "min_score": 30,
+    "min_comments": 15,
+    "category": "ask"
+  },
+  {
+    "name": "show_hn",
+    "rss_url": "https://hnrss.org/show",
+    "topics": [
+      "projects",
+      "demos",
+      "open-source",
+      "innovation"
+    ],
+    "priority": "high",
+    "min_score": 50,
+    "min_comments": 10,
+    "category": "show"
+  },
+  {
+    "name": "programming",
+    "rss_url": "https://hnrss.org/frontpage?q=programming",
+    "topics": [
+      "programming",
+      "software-development",
+      "coding"
+    ],
+    "priority": "high",
+    "min_score": 50,
+    "min_comments": 15,
+    "category": "programming"
+  },
+  {
+    "name": "ai_ml",
+    "rss_url": "https://hnrss.org/frontpage?q=AI+OR+machine+learning+OR+artificial+intelligence",
+    "topics": [
+      "artificial-intelligence",
+      "machine-learning",
+      "ai"
+    ],
+    "priority": "high",
+    "min_score": 75,
+    "min_comments": 20,
+    "category": "ai"
+  },
+  {
+    "name": "claude_anthropic",
+    "rss_url": "https://hnrss.org/frontpage?q=Claude+OR+Anthropic+OR+\"Claude+AI\"",
+    "topics": [
+      "claude",
+      "anthropic",
+      "conversational-ai",
+      "ai-safety"
+    ],
+    "priority": "highest",
+    "min_score": 10,
+    "min_comments": 5,
+    "category": "claude",
+    "priority_topic": true
+  },
+  {
+    "name": "claude_code",
+    "rss_url": "https://hnrss.org/frontpage?q=\"Claude+Code\"+OR+\"claude.ai/code\"+OR+\"AI+coding\"",
+    "topics": [
+      "claude-code",
+      "ai-coding",
+      "development-tools",
+      "anthropic"
+    ],
+    "priority": "highest",
+    "min_score": 10,
+    "min_comments": 5,
+    "category": "claude-code",
+    "priority_topic": true
+  },
+  {
+    "name": "react_development",
+    "rss_url": "https://hnrss.org/frontpage?q=React+OR+ReactJS+OR+\"React.js\"",
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "highest",
+    "min_score": 30,
+    "min_comments": 10,
+    "category": "react",
+    "priority_topic": true
+  },
+  {
+    "name": "typescript_development",
+    "rss_url": "https://hnrss.org/frontpage?q=TypeScript+OR+\"type+safety\"+OR+tsc",
+    "topics": [
+      "typescript",
+      "javascript",
+      "programming",
+      "type-safety"
+    ],
+    "priority": "highest",
+    "min_score": 25,
+    "min_comments": 8,
+    "category": "typescript",
+    "priority_topic": true
+  },
+  {
+    "name": "prompt_engineering",
+    "rss_url": "https://hnrss.org/frontpage?q=\"prompt+engineering\"+OR+\"meta+prompting\"+OR+\"AI+prompting\"",
+    "topics": [
+      "meta-prompting",
+      "prompt-engineering",
+      "ai",
+      "language-models"
+    ],
+    "priority": "highest",
+    "min_score": 15,
+    "min_comments": 5,
+    "category": "meta-prompting",
+    "priority_topic": true
+  },
+  {
+    "name": "react_typescript",
+    "rss_url": "https://hnrss.org/frontpage?q=React+AND+TypeScript",
+    "topics": [
+      "react",
+      "typescript",
+      "web-development",
+      "frontend"
+    ],
+    "priority": "highest",
+    "min_score": 20,
+    "min_comments": 8,
+    "category": "react-typescript",
+    "priority_topic": true,
+    "topic_combination": true
+  }
+]

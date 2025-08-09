@@ -364,7 +364,7 @@ class YouTubeRSSMonitor:
         return all_new_videos
     
     def queue_for_transcript_processing(self, videos: Dict[str, List[VideoEntry]]) -> List[Dict[str, Any]]:
-        """Queue new videos for transcript processing"""
+        """Queue new videos for transcript processing with published dates"""
         processing_queue = []
         
         for channel_name, channel_videos in videos.items():
@@ -379,6 +379,7 @@ class YouTubeRSSMonitor:
                     "channel_rating": channel_config.rating if channel_config else 3.0,
                     "topics": channel_config.topics if channel_config else [],
                     "priority": channel_config.priority if channel_config else "medium",
+                    "published_date": video.published,  # Add published date from RSS feed
                     "queued_at": datetime.now().isoformat(),
                     "status": "pending"
                 }

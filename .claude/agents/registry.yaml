@@ -1,10 +1,10 @@
 # SDLC Subagent Registry
 # Streamlined catalog of specialized AI subagents for comprehensive development workflow
 
-registry_version: "2.0.0"
+registry_version: "2.0.1"
 created_date: "2025-01-28"
-last_updated: "2025-07-31"
-total_subagents: 16
+last_updated: "2025-08-01"
+total_subagents: 19
 
 # Registry Overview
 overview:
@@ -54,7 +54,7 @@ sdlc_stages:
     primary_subagent: "system-architect"
     supporting_subagents: []
 
-# Active Subagent Catalog (16 Total)
+# Active Subagent Catalog (18 Total)
 subagents:
   # Core SDLC Agents (Enhanced - 3 agents)
   implementation-lead:
@@ -197,7 +197,22 @@ subagents:
       - "RESTful API design with OpenAPI standards and error tracking"
     tools: ["Read", "Write", "Bash", "WebSearch"]
 
-  # AI Framework & Systems (7 agents)
+  # AI Framework & Systems (9 agents)
+  daily-intelligence-digest:
+    name: "Daily Intelligence Digest Generator"
+    file: "daily-intelligence-digest.md"
+    category: "ai-systems"
+    priority: "high"
+    environment: "production"
+    team: "ai-systems"
+    description: "Daily content intelligence specialist: priority topic scoring (claude, react, typescript), automated HTML dashboards, browser integration"
+    core_capabilities:
+      - "Content collection from knowledge-vault/youtube-intelligence/ with quality threshold filtering"
+      - "User preference integration with sophisticated scoring multipliers and personalization"
+      - "Intelligent analysis with trending topics, learning pathways, and content clustering"
+      - "Multi-format output generation with JSON and Markdown compatibility"
+    tools: ["Read", "Write", "Bash", "mcp__MCP_DOCKER__browser_navigate"]
+
   ai-agent-creator:
     name: "AI Agent Creator"
     file: "ai-agent-creator.md"
@@ -303,6 +318,36 @@ subagents:
       - "Security compliance validation with enterprise feature compatibility"
     tools: ["Read", "Grep", "Glob", "Edit", "WebSearch"]
 
+  system-monitor:
+    name: "System Monitor"
+    file: "system-monitor.md"
+    category: "ai-systems"
+    priority: "high"
+    environment: "production"
+    team: "ai-systems"
+    description: "AI agent that generates system health and monitoring reports for the unified intelligence system with comprehensive component health monitoring, performance metrics collection, and professional HTML dashboard generation."
+    core_capabilities:
+      - "System health monitoring with component status tracking and operational metrics"
+      - "Performance metrics collection including processing speeds, success rates, and resource utilization"
+      - "Professional HTML dashboard generation with real-time system status indicators"
+      - "Source monitoring across multiple platforms with health classification and response time tracking"
+    tools: ["Read", "Write", "Bash", "Glob"]
+
+  vanguardai-task-generator:
+    name: "VanguardAI Task Generator"
+    file: "vanguardai-task-generator.md"
+    category: "ai-systems"
+    priority: "high"
+    environment: "production"
+    team: "ai-systems"
+    description: "Generate structured, executable task documents for VanguardAI maritime insurance platform development with Domain-Driven Design patterns, React/FastAPI/PostgreSQL stack integration, HRA detection context, and cross-project AI agent coordination workflows."
+    core_capabilities:
+      - "VanguardAI task document generation with React/FastAPI/PostgreSQL stack integration"
+      - "Maritime insurance domain context with HRA detection and dual-broker model expertise"
+      - "Cross-project communication with structured task formatting and technical specifications"
+      - "Domain-Driven Design integration with vertical slicing patterns and quality validation"
+    tools: ["Read", "Write", "Grep", "Glob", "WebSearch"]
+
 # Archive Information
 archived_agents:
   description: "Agents moved to archive/ directory to eliminate redundancy while preserving reference capability"
@@ -324,9 +369,9 @@ archived_agents:
 # System Optimization Summary
 optimization_results:
   before: 27
-  after: 16
-  reduction: 11
-  efficiency_gain: "41% reduction in agent count"
+  after: 19
+  reduction: 8
+  efficiency_gain: "30% reduction in agent count"
   functionality_preserved: "100% through capability consolidation"
   redundancy_eliminated: "Complete removal of overlapping responsibilities"
   focus_areas:
@@ -357,6 +402,6 @@ version_history:
       - "MAJOR OPTIMIZATION: Reduced from 27 to 16 agents (41% reduction)"
       - "Eliminated redundancy through capability consolidation"
       - "Enhanced core agents with merged capabilities from archived agents"
-      - "Streamlined architecture: Core SDLC (3) + Maritime Specialists (6) + AI Framework (7)"
+      - "Streamlined architecture: Core SDLC (3) + Maritime Specialists (6) + AI Framework (9)"
       - "Archived 11 redundant agents while preserving 100% functionality"
       - "Optimized for dual-purpose: maritime app development + AI knowledge management"

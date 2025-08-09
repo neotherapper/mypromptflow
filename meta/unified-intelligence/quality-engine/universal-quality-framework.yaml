@@ -105,6 +105,94 @@ quality_dimensions:
       transparency: "Clear about limitations and sources"
       harm_prevention: "Avoids content that could cause harm"
 
+# TOPIC-SPECIFIC QUALITY ENHANCEMENTS
+topic_specific_enhancements:
+  claude_ai_content:
+    weight_multiplier: 1.3  # High priority for Claude-related content
+    description: "Enhanced scoring for Claude AI and Anthropic content"
+    
+    authority_bonuses:
+      anthropic_official: +0.4  # Maximum bonus for official Anthropic sources
+      claude_team_verified: +0.3  # Bonus for verified Anthropic team members
+      claude_community_leaders: +0.2  # Bonus for recognized Claude community contributors
+      anthropic_research_papers: +0.3  # Bonus for official research publications
+    
+    accuracy_indicators:
+      constitutional_ai_principles: +0.2  # Content demonstrating Constitutional AI understanding
+      claude_api_examples: +0.15  # Working Claude API integration examples
+      anthropic_best_practices: +0.15  # Content following Anthropic's recommended practices
+      safety_considerations: +0.1  # Content addressing AI safety and responsible use
+    
+    relevance_keywords:
+      primary: ["claude", "anthropic", "constitutional ai", "claude api", "claude code", "claude.ai"]
+      secondary: ["ai assistant", "conversational ai", "ai safety", "helpful ai", "harmless ai", "honest ai"]
+      advanced: ["meta-prompting", "prompt engineering", "ai coordination", "claude workflows"]
+    
+    quality_signals:
+      meta_prompting_examples: +0.2  # Bonus for practical meta-prompting techniques
+      claude_code_workflows: +0.25  # High bonus for Claude Code development workflows
+      anthropic_policy_compliance: +0.15  # Bonus for content that follows Anthropic policies
+      claude_integration_patterns: +0.15  # Bonus for integration architecture examples
+
+  claude_code_development:
+    weight_multiplier: 1.4  # Highest priority for Claude Code development content
+    description: "Specialized scoring for Claude Code IDE and development practices"
+    
+    authority_bonuses:
+      claude_code_official: +0.4  # Official Claude Code documentation and examples
+      experienced_claude_users: +0.25  # Users with demonstrated Claude Code expertise
+      ai_development_experts: +0.2  # Recognized experts in AI-assisted development
+    
+    accuracy_indicators:
+      working_claude_examples: +0.3  # Verified working Claude Code workflows
+      best_practice_adherence: +0.2  # Following Claude Code best practices
+      practical_implementation: +0.25  # Real-world implementation examples
+      performance_optimization: +0.15  # Content about optimizing Claude Code usage
+    
+    completeness_factors:
+      end_to_end_workflows: +0.2  # Complete development workflow examples
+      troubleshooting_guidance: +0.15  # Includes common issues and solutions
+      integration_examples: +0.2  # Shows integration with other tools/systems
+      productivity_metrics: +0.1  # Includes measurable productivity improvements
+    
+    special_categories:
+      ai_assisted_architecture: +0.3  # System architecture with AI assistance
+      automated_development: +0.25  # Automated development workflow patterns
+      claude_team_collaboration: +0.2  # Team collaboration using Claude Code
+      claude_code_extensions: +0.15  # Custom extensions and configurations
+
+  meta_prompting_techniques:
+    weight_multiplier: 1.25
+    description: "Enhanced scoring for meta-prompting and advanced AI interaction"
+    
+    technique_bonuses:
+      chain_of_thought: +0.2  # Chain of reasoning examples
+      few_shot_prompting: +0.15  # Few-shot learning demonstrations
+      prompt_optimization: +0.25  # Prompt engineering optimization techniques
+      constitutional_prompting: +0.2  # Constitutional AI prompting methods
+    
+    practical_application:
+      workflow_automation: +0.2  # Automating tasks with advanced prompting
+      multi_step_reasoning: +0.25  # Complex multi-step problem solving
+      domain_expertise: +0.15  # Domain-specific prompting strategies
+      error_handling: +0.1  # Robust error handling in prompts
+
+  ai_development_workflows:
+    weight_multiplier: 1.2
+    description: "General AI-assisted development and productivity content"
+    
+    workflow_categories:
+      code_generation: +0.15  # AI-assisted code generation techniques
+      documentation_automation: +0.1  # Automated documentation workflows
+      testing_assistance: +0.15  # AI-assisted testing strategies
+      refactoring_guidance: +0.1  # AI-guided refactoring approaches
+    
+    productivity_indicators:
+      time_savings_quantified: +0.15  # Measurable productivity improvements
+      quality_improvements: +0.1  # Demonstrable code quality enhancements
+      learning_acceleration: +0.1  # Accelerated skill development
+      collaboration_enhancement: +0.1  # Improved team collaboration
+
 # PLATFORM-SPECIFIC QUALITY ADAPTATIONS
 platform_adaptations:
   youtube:
@@ -175,13 +263,29 @@ scoring_algorithm:
     formula: "(source_authority * 0.25) + (content_accuracy * 0.30) + (relevance_alignment * 0.20) + (completeness_depth * 0.15) + (constitutional_compliance * 0.10)"
     range: [0.0, 1.0]
   
+  topic_enhancement:
+    formula: "base_score * topic_weight_multiplier + topic_specific_bonuses"
+    topic_detection:
+      claude_ai_patterns: ["claude", "anthropic", "constitutional ai", "claude api", "claude code"]
+      claude_code_patterns: ["claude code", "claude.ai/code", "ai coding", "automated development"]
+      meta_prompting_patterns: ["meta-prompting", "prompt engineering", "chain of thought", "few shot"]
+      ai_workflow_patterns: ["ai assistant", "ai development", "automated workflow", "ai productivity"]
+    constraints: "Topic bonuses capped at +0.4 maximum per content item"
+  
   preference_adjustment:
-    formula: "base_score * user_preference_multiplier"
+    formula: "topic_enhanced_score * user_preference_multiplier"
     constraints: "Final score capped at 1.0"
   
   platform_adjustment:
     formula: "preference_adjusted_score + platform_bonuses - platform_penalties"
     constraints: "Final score clamped to [0.0, 1.0] range"
+  
+  final_calculation_steps:
+    step_1: "Calculate base quality score using 5 dimensions"
+    step_2: "Apply topic-specific weight multipliers and bonuses"
+    step_3: "Apply user preference adjustments"
+    step_4: "Apply platform-specific bonuses and penalties"
+    step_5: "Clamp final score to valid range [0.0, 1.0]"
 
 # QUALITY THRESHOLDS
 quality_thresholds:
@@ -191,12 +295,31 @@ quality_thresholds:
   review_required: 0.40
   auto_reject: 0.30
   
+  # Topic-specific threshold adjustments
+  topic_specific_thresholds:
+    claude_content:
+      priority_boost: "Claude content at 0.75+ treated as high_quality"
+      auto_approve_threshold: 0.85  # Slightly lower threshold for Claude content
+      knowledge_vault_priority: "high"
+    
+    claude_code_content:
+      priority_boost: "Claude Code content at 0.70+ treated as high_quality"
+      auto_approve_threshold: 0.80  # Even lower threshold for Claude Code content
+      knowledge_vault_priority: "highest"
+      special_tagging: ["claude-code", "ai-development", "workflow"]
+    
+    meta_prompting_content:
+      priority_boost: "Meta-prompting content at 0.75+ treated as high_quality"
+      auto_approve_threshold: 0.85
+      knowledge_vault_priority: "high"
+      special_tagging: ["meta-prompting", "ai-techniques"]
+  
   threshold_actions:
-    auto_approve: "Include in high-priority digest, save to knowledge vault"
-    high_quality: "Include in daily digest, save to knowledge vault"
-    medium_quality: "Include in weekly digest, conditional save"
-    review_required: "Flag for manual review before inclusion"
-    auto_reject: "Exclude from all digests, log for pattern analysis"
+    auto_approve: "Include in high-priority digest, save to knowledge vault with topic tags"
+    high_quality: "Include in daily digest, save to knowledge vault with relevance scoring"
+    medium_quality: "Include in weekly digest, conditional save based on topic priority"
+    review_required: "Flag for manual review before inclusion, topic-aware routing"
+    auto_reject: "Exclude from all digests, log for pattern analysis with topic context"
 
 # ADAPTIVE QUALITY LEARNING
 adaptive_learning:

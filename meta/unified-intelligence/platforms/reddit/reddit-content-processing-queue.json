@@ -1,0 +1,2320 @@
+[
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mczr5u/i_know_when_youre_vibe_coding/",
+    "post_id": "i_know_when_youre_vibe_coding",
+    "title": "I Know When You're Vibe Coding",
+    "subreddit": "programming",
+    "author": "/u/kondv",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T07:00:36+00:00",
+    "queued_at": "2025-07-31T15:58:32.612259",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdi3p7/the_math_is_haunted_overreacted/",
+    "post_id": "the_math_is_haunted_overreacted",
+    "title": "The Math Is Haunted \u2014 overreacted",
+    "subreddit": "programming",
+    "author": "/u/gaearon",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T20:50:14+00:00",
+    "queued_at": "2025-07-31T15:58:32.612264",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdva67/analyzing_duckdbs_performance_optimization/",
+    "post_id": "analyzing_duckdbs_performance_optimization",
+    "title": "Analyzing DuckDB\u2019s Performance Optimization through TOPN and COUNT DISTINCT Operations",
+    "subreddit": "programming",
+    "author": "/u/Vast_Lab8278",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T07:38:27+00:00",
+    "queued_at": "2025-07-31T15:58:32.612265",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdzzfi/simple_checklist_what_are_rest_apis/",
+    "post_id": "simple_checklist_what_are_rest_apis",
+    "title": "Simple Checklist: What are REST APIs?",
+    "subreddit": "programming",
+    "author": "/u/trolleid",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T12:17:21+00:00",
+    "queued_at": "2025-07-31T15:58:32.612267",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdywbz/fanout_in_1_diagram_and_178_words/",
+    "post_id": "fanout_in_1_diagram_and_178_words",
+    "title": "Fan-out in 1 diagram and 178 words",
+    "subreddit": "programming",
+    "author": "/u/stmoreau",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:22:21+00:00",
+    "queued_at": "2025-07-31T15:58:32.612268",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdv5u7/on_optimizing_meteor_publications/",
+    "post_id": "on_optimizing_meteor_publications",
+    "title": "On Optimizing Meteor Publications",
+    "subreddit": "programming",
+    "author": "/u/radekmie",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T07:30:15+00:00",
+    "queued_at": "2025-07-31T15:58:32.612269",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdyjvw/how_do_you_usually_handle_public_api/",
+    "post_id": "how_do_you_usually_handle_public_api",
+    "title": "How do you usually handle public API documentation (outside of Swagger locally)?",
+    "subreddit": "programming",
+    "author": "/u/AGI-01",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:03:42+00:00",
+    "queued_at": "2025-07-31T15:58:32.612270",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdxuuq/pompelmi_file_upload_protection_toolkit/",
+    "post_id": "pompelmi_file_upload_protection_toolkit",
+    "title": "pompelmi: File Upload Protection Toolkit",
+    "subreddit": "programming",
+    "author": "/u/No-Pea5632",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T10:23:55+00:00",
+    "queued_at": "2025-07-31T15:58:32.612271",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1md5bjs/documented_my_journey_from_monolith_hell_to/",
+    "post_id": "documented_my_journey_from_monolith_hell_to",
+    "title": "Documented my journey from monolith hell to event-driven bliss (with actual code, not just pretty diagrams)",
+    "subreddit": "programming",
+    "author": "/u/ilyachase",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T12:30:57+00:00",
+    "queued_at": "2025-07-31T15:58:32.612272",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdv6rf/development_with_genai_boardroom_vs_reality/",
+    "post_id": "development_with_genai_boardroom_vs_reality",
+    "title": "Development with GenAI: Boardroom vs reality",
+    "subreddit": "programming",
+    "author": "/u/pdolega",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T07:32:01+00:00",
+    "queued_at": "2025-07-31T15:58:32.612273",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdumk1/whats_new_in_jakarta_rest_40/",
+    "post_id": "whats_new_in_jakarta_rest_40",
+    "title": "What\u2019s New in Jakarta REST 4.0",
+    "subreddit": "programming",
+    "author": "/u/congolomera",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T06:55:26+00:00",
+    "queued_at": "2025-07-31T15:58:32.612274",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdmpo5/github_isenexrpn_the_extended_rpn_programming/",
+    "post_id": "github_isenexrpn_the_extended_rpn_programming",
+    "title": "GitHub - isene/xrpn: The eXtended RPN programming language",
+    "subreddit": "programming",
+    "author": "/u/isene",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T00:02:14+00:00",
+    "queued_at": "2025-07-31T15:58:32.612275",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/programming/comments/1mdz73x/building_ai_flag_cleanup/",
+    "post_id": "building_ai_flag_cleanup",
+    "title": "Building AI flag cleanup",
+    "subreddit": "programming",
+    "author": "/u/GarethX",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "programming",
+      "software-development",
+      "computer-science",
+      "algorithms"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:38:27+00:00",
+    "queued_at": "2025-07-31T15:58:32.612276",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1m9mu97/showoff_saturday_july_26_2025/",
+    "post_id": "showoff_saturday_july_26_2025",
+    "title": "Showoff Saturday (July 26, 2025)",
+    "subreddit": "javascript",
+    "author": "/u/AutoModerator",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-26T07:00:20+00:00",
+    "queued_at": "2025-07-31T15:58:32.612278",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mbb8q2/your_rjavascript_recap_for_the_week_of_july_21/",
+    "post_id": "your_rjavascript_recap_for_the_week_of_july_21",
+    "title": "Your /r/javascript recap for the week of July 21 - July 27, 2025",
+    "subreddit": "javascript",
+    "author": "/u/subredditsummarybot",
+    "score": null,
+    "comments": 7,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T09:05:40+00:00",
+    "queued_at": "2025-07-31T15:58:32.612279",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mdym29/a_faster_js_markdown_parser_powered_by_wasmrust/",
+    "post_id": "a_faster_js_markdown_parser_powered_by_wasmrust",
+    "title": "A faster js markdown parser powered by Wasm/Rust",
+    "subreddit": "javascript",
+    "author": "/u/FullCry1021",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:07:01+00:00",
+    "queued_at": "2025-07-31T15:58:32.612280",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mdxt94/pompelmi_file_upload_security_scanner/",
+    "post_id": "pompelmi_file_upload_security_scanner",
+    "title": "pompelmi: File Upload Security Scanner",
+    "subreddit": "javascript",
+    "author": "/u/No-Pea5632",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T10:21:12+00:00",
+    "queued_at": "2025-07-31T15:58:32.612281",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mdfrd8/askjs_javascript_on_job_sector_for_university/",
+    "post_id": "askjs_javascript_on_job_sector_for_university",
+    "title": "[AskJS] JavaScript on Job Sector for University student",
+    "subreddit": "javascript",
+    "author": "/u/DanielMoon2244",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T19:19:23+00:00",
+    "queued_at": "2025-07-31T15:58:32.612282",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1md156l/askjs_where_do_you_keep_documentation_for_backend/",
+    "post_id": "askjs_where_do_you_keep_documentation_for_backend",
+    "title": "[AskJS] Where do you keep documentation for backend APIs?",
+    "subreddit": "javascript",
+    "author": "/u/redchili93",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T08:32:21+00:00",
+    "queued_at": "2025-07-31T15:58:32.612282",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mdhzay/the_math_is_haunted/",
+    "post_id": "the_math_is_haunted",
+    "title": "The Math Is Haunted",
+    "subreddit": "javascript",
+    "author": "/u/feross",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T20:45:24+00:00",
+    "queued_at": "2025-07-31T15:58:32.612283",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mcv1ew/askjs_monorepo_vs_separate_repos_for_client_and/",
+    "post_id": "askjs_monorepo_vs_separate_repos_for_client_and",
+    "title": "[AskJS] Monorepo vs Separate Repos for Client and Api-Server \u2013 What\u2019s Worked Best for You?",
+    "subreddit": "javascript",
+    "author": "/u/BrangJa",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T02:37:40+00:00",
+    "queued_at": "2025-07-31T15:58:32.612284",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mc5w1f/new_features_in_ecmascript_2025/",
+    "post_id": "new_features_in_ecmascript_2025",
+    "title": "New features in ECMAScript 2025",
+    "subreddit": "javascript",
+    "author": "/u/Late-Satisfaction668",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T08:23:34+00:00",
+    "queued_at": "2025-07-31T15:58:32.612285",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mc7w2m/the_useless_usecallback/",
+    "post_id": "the_useless_usecallback",
+    "title": "The Useless useCallback",
+    "subreddit": "javascript",
+    "author": "/u/Xaneris47",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T10:32:03+00:00",
+    "queued_at": "2025-07-31T15:58:32.612286",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mclrey/askjs_do_you_find_logging_isnt_enough/",
+    "post_id": "askjs_do_you_find_logging_isnt_enough",
+    "title": "[AskJS] Do you find logging isn't enough?",
+    "subreddit": "javascript",
+    "author": "/u/yumgummy",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T19:57:57+00:00",
+    "queued_at": "2025-07-31T15:58:32.612287",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mc817g/pompelmi_a_plugandplay_upload_scanner_for_node/",
+    "post_id": "pompelmi_a_plugandplay_upload_scanner_for_node",
+    "title": "Pompelmi \u2014 a plug\u2011and\u2011play upload scanner for Node frameworks (TS, local, YARA-capable)",
+    "subreddit": "javascript",
+    "author": "/u/Extension-Count-2412",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T10:40:25+00:00",
+    "queued_at": "2025-07-31T15:58:32.612288",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mba05e/designing_functional_components_for_a/",
+    "post_id": "designing_functional_components_for_a",
+    "title": "Designing Functional Components for a Multi-Threaded World",
+    "subreddit": "javascript",
+    "author": "/u/TobiasUhlig",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T07:43:31+00:00",
+    "queued_at": "2025-07-31T15:58:32.612288",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mc2s9w/i_built_a_chess_engine_that_you_can_give/",
+    "post_id": "i_built_a_chess_engine_that_you_can_give",
+    "title": "I built a chess engine that you can give personality to using LLMs, but I'm stuck on Stockfish 10. How can I upgrade to Stockfish 17 while keeping it runnable in an online executor?",
+    "subreddit": "javascript",
+    "author": "/u/DinnerUnlucky4661",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T05:07:53+00:00",
+    "queued_at": "2025-07-31T15:58:32.612289",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mbpm3x/metrodragon_live_tiles_and_combobox/",
+    "post_id": "metrodragon_live_tiles_and_combobox",
+    "title": "MetroDragon live tiles and combobox",
+    "subreddit": "javascript",
+    "author": "/u/GlitteringSample5228",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T19:21:00+00:00",
+    "queued_at": "2025-07-31T15:58:32.612290",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mb7gry/built_a_zerodependency_library_for_crosstab_and/",
+    "post_id": "built_a_zerodependency_library_for_crosstab_and",
+    "title": "Built a zero-dependency library for cross-tab and micro frontend state sync",
+    "subreddit": "javascript",
+    "author": "/u/Diligent-Ad6810",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T05:04:27+00:00",
+    "queued_at": "2025-07-31T15:58:32.612291",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mbbryv/github_pompelmipompelmi_lightweight_file_scanner/",
+    "post_id": "github_pompelmipompelmi_lightweight_file_scanner",
+    "title": "GitHub - pompelmi/pompelmi: Light-weight file scanner with optional YARA integration. Works out-of-the-box in Node.js; supports browser via an HTTP remote engine.",
+    "subreddit": "javascript",
+    "author": "/u/Extension-Count-2412",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T09:39:52+00:00",
+    "queued_at": "2025-07-31T15:58:32.612292",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mbeqxr/any_one_interested_in_development_of_code_editor/",
+    "post_id": "any_one_interested_in_development_of_code_editor",
+    "title": "Any one Interested in Development of Code editor Web Based & Android app? See details in body!",
+    "subreddit": "javascript",
+    "author": "/u/GladJellyfish9752",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T12:24:23+00:00",
+    "queued_at": "2025-07-31T15:58:32.612292",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1mb9dmk/yet_another_dev_thinking_hes_a_cybersecurity/",
+    "post_id": "yet_another_dev_thinking_hes_a_cybersecurity",
+    "title": "Yet another dev thinking he's a cybersecurity expert",
+    "subreddit": "javascript",
+    "author": "/u/Extension-Count-2412",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T07:02:35+00:00",
+    "queued_at": "2025-07-31T15:58:32.612293",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/javascript/comments/1ma31c3/github_kasimlyeedotenvgad_environment_variable/",
+    "post_id": "github_kasimlyeedotenvgad_environment_variable",
+    "title": "GitHub - kasimlyee/dotenv-gad: Environment variable validation and type safety for Node.js and modern JavaScript applications",
+    "subreddit": "javascript",
+    "author": "/u/Individual-Wave7980",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "javascript",
+      "web-development",
+      "frontend",
+      "node.js"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-26T20:11:02+00:00",
+    "queued_at": "2025-07-31T15:58:32.612294",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1lpzu66/code_questions_beginners_thread_july_2025/",
+    "post_id": "code_questions_beginners_thread_july_2025",
+    "title": "Code Questions / Beginner's Thread (July 2025)",
+    "subreddit": "reactjs",
+    "author": "/u/acemarke",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-02T16:07:40+00:00",
+    "queued_at": "2025-07-31T15:58:32.612295",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1m5pmyl/new_comprehensive_react_compiler_docs_released/",
+    "post_id": "new_comprehensive_react_compiler_docs_released",
+    "title": "New comprehensive React Compiler docs released!",
+    "subreddit": "reactjs",
+    "author": "/u/acemarke",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-21T17:44:04+00:00",
+    "queued_at": "2025-07-31T15:58:32.612296",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdnx3m/any_github_repos_with_clean_professional_react/",
+    "post_id": "any_github_repos_with_clean_professional_react",
+    "title": "Any GitHub repos with clean, professional React patterns? (Beyond YouTube-style tutorials)",
+    "subreddit": "reactjs",
+    "author": "/u/Significant_Chest_11",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T00:58:43+00:00",
+    "queued_at": "2025-07-31T15:58:32.612297",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdv9us/this_week_in_react_245_tanstack_react_core_nextjs/",
+    "post_id": "this_week_in_react_245_tanstack_react_core_nextjs",
+    "title": "This Week In React 245: TanStack, React Core, Next.js MCP, RSC, memo, Remix, Base UI, React Aria | Precompiled iOS, Rozenite, AI, Perf, Nitro, BottomSheet, Tinybase | TC39, TypeScript, Runtimes, Mocks",
+    "subreddit": "reactjs",
+    "author": "/u/sebastienlorber",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T07:37:49+00:00",
+    "queued_at": "2025-07-31T15:58:32.612298",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdxdtv/how_to_create_interactive_code_blocks/",
+    "post_id": "how_to_create_interactive_code_blocks",
+    "title": "How to create interactive code blocks",
+    "subreddit": "reactjs",
+    "author": "/u/moys22",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T09:55:28+00:00",
+    "queued_at": "2025-07-31T15:58:32.612299",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdrx8u/virtualized_list_height_calculation_issues_with/",
+    "post_id": "virtualized_list_height_calculation_issues_with",
+    "title": "Virtualized List Height Calculation Issues with Special Characters in @tanstack/virtual",
+    "subreddit": "reactjs",
+    "author": "/u/Humble-Cloud2500",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T04:15:20+00:00",
+    "queued_at": "2025-07-31T15:58:32.612300",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdyjn6/text_overlay_workflow_whats_your_process/",
+    "post_id": "text_overlay_workflow_whats_your_process",
+    "title": "Text overlay workflow - what's your process?",
+    "subreddit": "reactjs",
+    "author": "/u/Life_Recording_8938",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:03:23+00:00",
+    "queued_at": "2025-07-31T15:58:32.612300",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdpjn6/thoughts_on_immer/",
+    "post_id": "thoughts_on_immer",
+    "title": "Thoughts on Immer?",
+    "subreddit": "reactjs",
+    "author": "/u/coolAppl3__",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T02:16:15+00:00",
+    "queued_at": "2025-07-31T15:58:32.612301",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1md8h5r/im_going_insane_with_collaboration_in_a_text/",
+    "post_id": "im_going_insane_with_collaboration_in_a_text",
+    "title": "im going insane with collaboration in a text editor",
+    "subreddit": "reactjs",
+    "author": "/u/Even-Channel-2084",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T14:44:28+00:00",
+    "queued_at": "2025-07-31T15:58:32.612302",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1md4vjg/is_there_a_ui_library_for_finance_apps/",
+    "post_id": "is_there_a_ui_library_for_finance_apps",
+    "title": "Is there a UI library for finance apps?",
+    "subreddit": "reactjs",
+    "author": "/u/HostLopsided6696",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T12:10:01+00:00",
+    "queued_at": "2025-07-31T15:58:32.612303",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mcwux1/how_much_javascript_should_i_know_before_starting/",
+    "post_id": "how_much_javascript_should_i_know_before_starting",
+    "title": "How much JavaScript should I know before starting React?",
+    "subreddit": "reactjs",
+    "author": "/u/Mohi_tt",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T04:10:02+00:00",
+    "queued_at": "2025-07-31T15:58:32.612304",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mdhuzy/what_is_the_best_way_to_learn_react_i_would/",
+    "post_id": "what_is_the_best_way_to_learn_react_i_would",
+    "title": "What is the best way to learn React? I would prefer a course.",
+    "subreddit": "reactjs",
+    "author": "/u/Quiet_Bus_6404",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T20:40:49+00:00",
+    "queued_at": "2025-07-31T15:58:32.612305",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mcxecz/what_the_heck_are_these_user_flairs/",
+    "post_id": "what_the_heck_are_these_user_flairs",
+    "title": "What the heck are these user flairs?",
+    "subreddit": "reactjs",
+    "author": "/u/Brahminmeat",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T04:39:49+00:00",
+    "queued_at": "2025-07-31T15:58:32.612306",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1md15g3/react_testing_course_recommendation/",
+    "post_id": "react_testing_course_recommendation",
+    "title": "React Testing Course recommendation",
+    "subreddit": "reactjs",
+    "author": "/u/mohamed_yasser2722",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T08:32:49+00:00",
+    "queued_at": "2025-07-31T15:58:32.612307",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1md6gdd/built_a_devfriendly_i18n_framework_for_react_apps/",
+    "post_id": "built_a_devfriendly_i18n_framework_for_react_apps",
+    "title": "Built a dev-friendly i18n framework for React apps, would love feedback from those who\u2019ve struggled with i18next",
+    "subreddit": "reactjs",
+    "author": "/u/AdmirableJackfruit59",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T13:21:38+00:00",
+    "queued_at": "2025-07-31T15:58:32.612307",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mc8hmx/psa_if_you_are_looking_for_input_masking_library/",
+    "post_id": "psa_if_you_are_looking_for_input_masking_library",
+    "title": "PSA If you are looking for input masking library, look no further than maskito.dev",
+    "subreddit": "reactjs",
+    "author": "/u/punkpeye",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T11:06:31+00:00",
+    "queued_at": "2025-07-31T15:58:32.612308",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mcodw3/react_router_7_supabase_and_auth/",
+    "post_id": "react_router_7_supabase_and_auth",
+    "title": "React Router 7, Supabase and Auth",
+    "subreddit": "reactjs",
+    "author": "/u/mikef80",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T21:38:42+00:00",
+    "queued_at": "2025-07-31T15:58:32.612309",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/reactjs/comments/1mcaaat/using_react_hydration_on_a_java_server/",
+    "post_id": "using_react_hydration_on_a_java_server",
+    "title": "Using React Hydration on a Java Server",
+    "subreddit": "reactjs",
+    "author": "/u/Ok_General7617",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "react",
+      "frontend",
+      "javascript",
+      "web-development"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T12:37:37+00:00",
+    "queued_at": "2025-07-31T15:58:32.612310",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1ma85ub/sunday_daily_thread_whats_everyone_working_on/",
+    "post_id": "sunday_daily_thread_whats_everyone_working_on",
+    "title": "Sunday Daily Thread: What's everyone working on this week?",
+    "subreddit": "Python",
+    "author": "/u/AutoModerator",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-27T00:00:32+00:00",
+    "queued_at": "2025-07-31T15:58:32.612311",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdmo51/thursday_daily_thread_python_careers_courses_and/",
+    "post_id": "thursday_daily_thread_python_careers_courses_and",
+    "title": "Thursday Daily Thread: Python Careers, Courses, and Furthering Education!",
+    "subreddit": "Python",
+    "author": "/u/AutoModerator",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T00:00:29+00:00",
+    "queued_at": "2025-07-31T15:58:32.612312",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdi14s/granian_25_is_out/",
+    "post_id": "granian_25_is_out",
+    "title": "Granian 2.5 is out",
+    "subreddit": "Python",
+    "author": "/u/gi0baro",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T20:47:21+00:00",
+    "queued_at": "2025-07-31T15:58:32.612313",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdzcyf/datatrees_xdatatrees_release_improved_forward/",
+    "post_id": "datatrees_xdatatrees_release_improved_forward",
+    "title": "datatrees & xdatatrees Release: Improved Forward Reference Handling and New XML Field Types",
+    "subreddit": "Python",
+    "author": "/u/GianniMariani",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T11:46:57+00:00",
+    "queued_at": "2025-07-31T15:58:32.612314",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdq489/proxy_for_using_lsp_in_a_docker_container/",
+    "post_id": "proxy_for_using_lsp_in_a_docker_container",
+    "title": "Proxy for using LSP in a Docker container",
+    "subreddit": "Python",
+    "author": "/u/RichardHapb",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T02:43:35+00:00",
+    "queued_at": "2025-07-31T15:58:32.612315",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdkmvd/stepbystep_guide_to_deploy_your_fastapi_app_using/",
+    "post_id": "stepbystep_guide_to_deploy_your_fastapi_app_using",
+    "title": "Step-by-step guide to deploy your FastAPI app using Railway, Dokku on a VPS, or AWS EC2 \u2014 with real",
+    "subreddit": "Python",
+    "author": "/u/Holiday_Serve9696",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T22:32:11+00:00",
+    "queued_at": "2025-07-31T15:58:32.612315",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1md030c/python_data_engineers_meet_elusion_v3125_rust/",
+    "post_id": "python_data_engineers_meet_elusion_v3125_rust",
+    "title": "Python Data Engineers: Meet Elusion v3.12.5 - Rust DataFrame Library with Familiar Syntax",
+    "subreddit": "Python",
+    "author": "/u/DataBora",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T07:21:32+00:00",
+    "queued_at": "2025-07-31T15:58:32.612316",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdvynt/realworld_ml_course_with_personalized_gamified/",
+    "post_id": "realworld_ml_course_with_personalized_gamified",
+    "title": "Real\u2011world ML course with personalized gamified challenges\u2014feedback wanted on structure & format! \ud83c\udf93",
+    "subreddit": "Python",
+    "author": "/u/ps948",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T08:22:28+00:00",
+    "queued_at": "2025-07-31T15:58:32.612317",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mct7ds/is_flask_still_one_of_the_best_options_for/",
+    "post_id": "is_flask_still_one_of_the_best_options_for",
+    "title": "Is Flask still one of the best options for integrating APIs for AI models?",
+    "subreddit": "Python",
+    "author": "/u/faton2004",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T01:10:43+00:00",
+    "queued_at": "2025-07-31T15:58:32.612318",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdag10/tokenize_a_tip_and_a_trap/",
+    "post_id": "tokenize_a_tip_and_a_trap",
+    "title": "`tokenize`: a tip and a trap",
+    "subreddit": "Python",
+    "author": "/u/HommeMusical",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T16:00:09+00:00",
+    "queued_at": "2025-07-31T15:58:32.612319",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mczicz/azure_interactions/",
+    "post_id": "azure_interactions",
+    "title": "Azure interactions",
+    "subreddit": "Python",
+    "author": "/u/Unlucky252",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T06:45:11+00:00",
+    "queued_at": "2025-07-31T15:58:32.612319",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1md88uh/resources_to_improve_python_skills/",
+    "post_id": "resources_to_improve_python_skills",
+    "title": "Resources to improve Python skills",
+    "subreddit": "Python",
+    "author": "/u/Bulky_Meaning7655",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T14:35:19+00:00",
+    "queued_at": "2025-07-31T15:58:32.612320",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mdfeh3/cli_tool_for_quickly_navigating_your_file_system/",
+    "post_id": "cli_tool_for_quickly_navigating_your_file_system",
+    "title": "CLI Tool For Quickly Navigating Your File System (Arch Linux)",
+    "subreddit": "Python",
+    "author": "/u/BravestCheetah",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T19:05:44+00:00",
+    "queued_at": "2025-07-31T15:58:32.612321",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mcrerl/archivey_unified_interface_for_zip_tar_rar_7z_and/",
+    "post_id": "archivey_unified_interface_for_zip_tar_rar_7z_and",
+    "title": "Archivey - unified interface for ZIP, TAR, RAR, 7z and more",
+    "subreddit": "Python",
+    "author": "/u/parafusosaltitante",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T23:46:48+00:00",
+    "queued_at": "2025-07-31T15:58:32.612322",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1md7brl/introduction_to_mcp_servers_and_writing_one_in/",
+    "post_id": "introduction_to_mcp_servers_and_writing_one_in",
+    "title": "Introduction to MCP Servers and writing one in Python",
+    "subreddit": "Python",
+    "author": "/u/MetonymyQT",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T13:58:41+00:00",
+    "queued_at": "2025-07-31T15:58:32.612323",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mcnjtz/what_name_do_you_prefer_when_importing/",
+    "post_id": "what_name_do_you_prefer_when_importing",
+    "title": "What name do you prefer when importing pyspark.sql.functions?",
+    "subreddit": "Python",
+    "author": "/u/rghthndsd",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T21:05:45+00:00",
+    "queued_at": "2025-07-31T15:58:32.612324",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mcjr34/copyparty_local_content_sharing_ftpsftpsmb_etc/",
+    "post_id": "copyparty_local_content_sharing_ftpsftpsmb_etc",
+    "title": "Copyparty - local content sharing / FTP/SFTP/SMB etc",
+    "subreddit": "Python",
+    "author": "/u/vectorx25",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T18:42:30+00:00",
+    "queued_at": "2025-07-31T15:58:32.612325",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mcmfhp/tutorial_recommendation_building_an_mcp_server_in/",
+    "post_id": "tutorial_recommendation_building_an_mcp_server_in",
+    "title": "Tutorial Recommendation: Building an MCP Server in Python, full stack (auth, databases, etc...)",
+    "subreddit": "Python",
+    "author": "/u/SemiOfficialEng",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T20:23:04+00:00",
+    "queued_at": "2025-07-31T15:58:32.612325",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1md70te/aipowered_dynamic_rocket_trajectory_planner/",
+    "post_id": "aipowered_dynamic_rocket_trajectory_planner",
+    "title": "AI-Powered Dynamic Rocket Trajectory Planner \u2014 Ongoing Open Source Project!",
+    "subreddit": "Python",
+    "author": "/u/The948k",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T13:45:59+00:00",
+    "queued_at": "2025-07-31T15:58:32.612326",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mcrj71/training_a_tab_tab_code_completion_model_for/",
+    "post_id": "training_a_tab_tab_code_completion_model_for",
+    "title": "Training a \"Tab Tab\" Code Completion Model for Marimo Notebooks",
+    "subreddit": "Python",
+    "author": "/u/FallMindless3563",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T23:52:15+00:00",
+    "queued_at": "2025-07-31T15:58:32.612327",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mbopcc/be_careful_on_suspicious_projects_like_this/",
+    "post_id": "be_careful_on_suspicious_projects_like_this",
+    "title": "Be careful on suspicious projects like this",
+    "subreddit": "Python",
+    "author": "/u/sausix",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-28T18:47:33+00:00",
+    "queued_at": "2025-07-31T15:58:32.612328",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1md79td/dpncy_one_environment_install_run_infinite/",
+    "post_id": "dpncy_one_environment_install_run_infinite",
+    "title": "dpncy \u2013 One environment. Install & run infinite packages/versions with zero conflicts.",
+    "subreddit": "Python",
+    "author": "/u/patrickryankenneth",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T13:56:24+00:00",
+    "queued_at": "2025-07-31T15:58:32.612329",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/Python/comments/1mco5mk/throttlekit_a_simple_async_rate_limiter_for_python/",
+    "post_id": "throttlekit_a_simple_async_rate_limiter_for_python",
+    "title": "throttlekit \u2013 A Simple Async Rate Limiter for Python",
+    "subreddit": "Python",
+    "author": "/u/roudra",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "python",
+      "programming",
+      "data-science",
+      "machine-learning"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-29T21:29:41+00:00",
+    "queued_at": "2025-07-31T15:58:32.612330",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/webdev/comments/1lozssg/monthly_getting_started_web_dev_career_thread/",
+    "post_id": "monthly_getting_started_web_dev_career_thread",
+    "title": "Monthly Getting Started / Web Dev Career Thread",
+    "subreddit": "webdev",
+    "author": "/u/AutoModerator",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "web-development",
+      "frontend",
+      "backend",
+      "full-stack"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-01T12:00:44+00:00",
+    "queued_at": "2025-07-31T15:58:32.612331",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/webdev/comments/1mdx6yh/connecting_a_facebook_app/",
+    "post_id": "connecting_a_facebook_app",
+    "title": "Connecting a facebook app",
+    "subreddit": "webdev",
+    "author": "/u/AppealSame4367",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "web-development",
+      "frontend",
+      "backend",
+      "full-stack"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T09:43:11+00:00",
+    "queued_at": "2025-07-31T15:58:32.612332",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/webdev/comments/1mdqp2k/should_i_use_extensions_or_not_when_learning_java/",
+    "post_id": "should_i_use_extensions_or_not_when_learning_java",
+    "title": "Should I use extensions or not when learning java from core?",
+    "subreddit": "webdev",
+    "author": "/u/nitin_is_me",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "web-development",
+      "frontend",
+      "backend",
+      "full-stack"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-31T03:11:59+00:00",
+    "queued_at": "2025-07-31T15:58:32.612333",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/webdev/comments/1mcyp2j/is_it_just_me_or_does_nextjs_really_suck/",
+    "post_id": "is_it_just_me_or_does_nextjs_really_suck",
+    "title": "Is it just me, or does Next.js really suck?",
+    "subreddit": "webdev",
+    "author": "/u/saintpetejackboy",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "web-development",
+      "frontend",
+      "backend",
+      "full-stack"
+    ],
+    "priority": "high",
+    "published_date": "2025-07-30T05:55:04+00:00",
+    "queued_at": "2025-07-31T15:58:32.612334",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mdyqaw/d_how_to_fairly_compare_ai_training_methods_when/",
+    "post_id": "d_how_to_fairly_compare_ai_training_methods_when",
+    "title": "[D] How to fairly compare AI training methods when they produce different population sizes?",
+    "subreddit": "MachineLearning",
+    "author": "/u/Hot_Letter5239",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T11:13:16+00:00",
+    "queued_at": "2025-07-31T15:58:32.612335",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mdtk5y/r_how_llms_are_transforming_recommender_systems/",
+    "post_id": "r_how_llms_are_transforming_recommender_systems",
+    "title": "[R] How LLMs Are Transforming Recommender Systems \u2014 New Paper",
+    "subreddit": "MachineLearning",
+    "author": "/u/Downtown_Ambition662",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T05:49:56+00:00",
+    "queued_at": "2025-07-31T15:58:32.612336",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mcsa9j/d_math_book_recommendations_for_nn_theory/",
+    "post_id": "d_math_book_recommendations_for_nn_theory",
+    "title": "[D] Math book recommendations for NN theory",
+    "subreddit": "MachineLearning",
+    "author": "/u/EternaI_Sorrow",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T00:27:22+00:00",
+    "queued_at": "2025-07-31T15:58:32.612342",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mctmau/p_finetuning_a_fast_local_tab_tab_code_completion/",
+    "post_id": "p_finetuning_a_fast_local_tab_tab_code_completion",
+    "title": "[P] Fine-tuning a fast, local \u201ctab tab\u201d code completion model for Marimo notebooks",
+    "subreddit": "MachineLearning",
+    "author": "/u/FallMindless3563",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T01:30:16+00:00",
+    "queued_at": "2025-07-31T15:58:32.612343",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mc8pn4/d_first_research_project_feedback_on_ano_a_new/",
+    "post_id": "d_first_research_project_feedback_on_ano_a_new",
+    "title": "[D] First research project \u2013 feedback on \"Ano\", a new optimizer designed for noisy deep RL (also looking for arXiv endorsement)",
+    "subreddit": "MachineLearning",
+    "author": "/u/Adrienkgz",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T11:19:02+00:00",
+    "queued_at": "2025-07-31T15:58:32.612343",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mcff31/r_are_aucroc_curves_black_box_metrics/",
+    "post_id": "r_are_aucroc_curves_black_box_metrics",
+    "title": "[R] Are AUC/ROC curves \"black box\" metrics?",
+    "subreddit": "MachineLearning",
+    "author": "/u/Pure_Landscape8863",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T16:03:41+00:00",
+    "queued_at": "2025-07-31T15:58:32.612344",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mc664h/r_multiview_contrastive_learning_principled/",
+    "post_id": "r_multiview_contrastive_learning_principled",
+    "title": "[R] Multi-View Contrastive Learning: Principled Framework for 3+ Views and Modalities",
+    "subreddit": "MachineLearning",
+    "author": "/u/nai_alla",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T08:42:17+00:00",
+    "queued_at": "2025-07-31T15:58:32.612345",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mcxbo2/d_why_is_computational_complexity_is_underrated/",
+    "post_id": "d_why_is_computational_complexity_is_underrated",
+    "title": "[D] Why is computational complexity is underrated in ML community ?",
+    "subreddit": "MachineLearning",
+    "author": "/u/al3arabcoreleone",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T04:35:39+00:00",
+    "queued_at": "2025-07-31T15:58:32.612346",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mc2lk8/r_introducing_snacdb_a_new_opensource_resource/",
+    "post_id": "r_introducing_snacdb_a_new_opensource_resource",
+    "title": "[R] Introducing SNAC-DB: A New Open-Source Resource for Antibody & NANOBODY\u00ae VHH\u2013Antigen Modeling",
+    "subreddit": "MachineLearning",
+    "author": "/u/playa_aikido",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T04:57:37+00:00",
+    "queued_at": "2025-07-31T15:58:32.612347",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/MachineLearning/comments/1mc094y/p_standalone_implementation_of_deepseeks_native/",
+    "post_id": "p_standalone_implementation_of_deepseeks_native",
+    "title": "[P] Stand-alone implementation of DeepSeek's Native Sparse Attention in PyTorch",
+    "subreddit": "MachineLearning",
+    "author": "/u/Southern-Whereas3911",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "machine-learning",
+      "artificial-intelligence",
+      "data-science",
+      "deep-learning"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T02:54:08+00:00",
+    "queued_at": "2025-07-31T15:58:32.612348",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/yjdscp/getting_into_devops/",
+    "post_id": "getting_into_devops",
+    "title": "'Getting into DevOps'",
+    "subreddit": "devops",
+    "author": "/u/mthode",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2022-11-01T16:45:29+00:00",
+    "queued_at": "2025-07-31T15:58:32.612349",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/14n6ghq/how_should_this_sub_respond_to_reddits_api/",
+    "post_id": "how_should_this_sub_respond_to_reddits_api",
+    "title": "How should this sub respond to reddit's api changes, part 2",
+    "subreddit": "devops",
+    "author": "/u/mthode",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2023-06-30T17:21:43+00:00",
+    "queued_at": "2025-07-31T15:58:32.612350",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdhs0a/soc2_auditor_wants_us_to_log_literally_everything/",
+    "post_id": "soc2_auditor_wants_us_to_log_literally_everything",
+    "title": "SOC2 auditor wants us to log literally everything",
+    "subreddit": "devops",
+    "author": "/u/GroundOld5635",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T20:37:32+00:00",
+    "queued_at": "2025-07-31T15:58:32.612351",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdbkh1/have_you_ever_done_any_contributions_to_open/",
+    "post_id": "have_you_ever_done_any_contributions_to_open",
+    "title": "\"Have you ever done any contributions to open source projects?\"",
+    "subreddit": "devops",
+    "author": "/u/CarpenterLanky8861",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T16:42:16+00:00",
+    "queued_at": "2025-07-31T15:58:32.612352",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdojld/serverless_architecture_or_a_simple_ec2/",
+    "post_id": "serverless_architecture_or_a_simple_ec2",
+    "title": "Serverless architecture or a simple EC2?",
+    "subreddit": "devops",
+    "author": "/u/Vyrh_",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T01:28:43+00:00",
+    "queued_at": "2025-07-31T15:58:32.612352",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdd3ex/what_enterprise_firewall_would_you_go_with/",
+    "post_id": "what_enterprise_firewall_would_you_go_with",
+    "title": "What enterprise firewall would you go with?",
+    "subreddit": "devops",
+    "author": "/u/Negative_Plan_8021",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T17:39:21+00:00",
+    "queued_at": "2025-07-31T15:58:32.612353",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdxkyo/looking_for_advice_about_cloud_setup_for_start/",
+    "post_id": "looking_for_advice_about_cloud_setup_for_start",
+    "title": "Looking for advice about cloud setup for start",
+    "subreddit": "devops",
+    "author": "/u/UnderstandingOnly470",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T10:07:14+00:00",
+    "queued_at": "2025-07-31T15:58:32.612354",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdy9pl/have_you_ever_tried_running_ethereum_validators/",
+    "post_id": "have_you_ever_tried_running_ethereum_validators",
+    "title": "Have you ever tried running Ethereum validators on a testnet (testing environment) or on the mainnet (production environment)?",
+    "subreddit": "devops",
+    "author": "/u/satBalwyn",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T10:48:17+00:00",
+    "queued_at": "2025-07-31T15:58:32.612355",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdom12/what_are_the_most_useful_wslg_applications_you/",
+    "post_id": "what_are_the_most_useful_wslg_applications_you",
+    "title": "What are the most useful WSLg applications you use at work?",
+    "subreddit": "devops",
+    "author": "/u/LargeSinkholesInNYC",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T01:31:53+00:00",
+    "queued_at": "2025-07-31T15:58:32.612356",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdmlxw/prototyping_a_tool_to_simplify_deploying_to_cloud/",
+    "post_id": "prototyping_a_tool_to_simplify_deploying_to_cloud",
+    "title": "Prototyping a tool to simplify deploying to cloud and deliver apps globally with high availability",
+    "subreddit": "devops",
+    "author": "/u/jsiwks",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T23:57:54+00:00",
+    "queued_at": "2025-07-31T15:58:32.612357",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdktb2/spectral_the_api_linting_tool_you_need_in_your/",
+    "post_id": "spectral_the_api_linting_tool_you_need_in_your",
+    "title": "Spectral: The API Linting Tool You Need in Your Workflow (Blog + Free GitHub Demo)",
+    "subreddit": "devops",
+    "author": "/u/RiosEngineer",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T22:39:34+00:00",
+    "queued_at": "2025-07-31T15:58:32.612357",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mczb0a/using_vector_search_for_log_monitoring_incident/",
+    "post_id": "using_vector_search_for_log_monitoring_incident",
+    "title": "Using Vector search for Log monitoring / incident report management?",
+    "subreddit": "devops",
+    "author": "/u/Creepy-Row970",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T06:31:57+00:00",
+    "queued_at": "2025-07-31T15:58:32.612358",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1md8u5p/cicd_pipeline_testing_with_file_uploads_how_do/",
+    "post_id": "cicd_pipeline_testing_with_file_uploads_how_do",
+    "title": "CI/CD pipeline testing with file uploads - how do you generate consistent test data?",
+    "subreddit": "devops",
+    "author": "/u/humast",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T14:58:41+00:00",
+    "queued_at": "2025-07-31T15:58:32.612359",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mcheuv/farewell_to_my_dad/",
+    "post_id": "farewell_to_my_dad",
+    "title": "Farewell to my dad",
+    "subreddit": "devops",
+    "author": "/u/MrMattyboy",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T17:16:35+00:00",
+    "queued_at": "2025-07-31T15:58:32.612360",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mdqsmj/buying_kodkloud_subscription/",
+    "post_id": "buying_kodkloud_subscription",
+    "title": "Buying Kodkloud Subscription",
+    "subreddit": "devops",
+    "author": "/u/Specialist_Pride7293",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T03:16:57+00:00",
+    "queued_at": "2025-07-31T15:58:32.612361",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1md57ix/managing_alpine_linux_with_sparrow_automation_tool/",
+    "post_id": "managing_alpine_linux_with_sparrow_automation_tool",
+    "title": "Managing Alpine Linux with Sparrow automation tool",
+    "subreddit": "devops",
+    "author": "/u/melezhik",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T12:25:40+00:00",
+    "queued_at": "2025-07-31T15:58:32.612362",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1md2gw1/why_git_branching_strategy_matters_in_database/",
+    "post_id": "why_git_branching_strategy_matters_in_database",
+    "title": "Why Git Branching Strategy Matters in Database DevOps?",
+    "subreddit": "devops",
+    "author": "/u/sonichigo-1219",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T09:57:32+00:00",
+    "queued_at": "2025-07-31T15:58:32.612362",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mcynfo/building_a_game/",
+    "post_id": "building_a_game",
+    "title": "Building a Game",
+    "subreddit": "devops",
+    "author": "/u/Dr__PampersMuFFiN",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T05:52:13+00:00",
+    "queued_at": "2025-07-31T15:58:32.612363",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mbvbz4/optimising_docker_images_a_super_simple_guide/",
+    "post_id": "optimising_docker_images_a_super_simple_guide",
+    "title": "Optimising Docker Images: A super simple guide",
+    "subreddit": "devops",
+    "author": "/u/TheoTMTM",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-28T23:05:42+00:00",
+    "queued_at": "2025-07-31T15:58:32.612364",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/devops/comments/1mczyji/project_n1netails/",
+    "post_id": "project_n1netails",
+    "title": "Project N1netails",
+    "subreddit": "devops",
+    "author": "/u/cielNoirr",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "devops",
+      "infrastructure",
+      "deployment",
+      "automation"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T07:13:35+00:00",
+    "queued_at": "2025-07-31T15:58:32.612365",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1m67csm/summer_update_2025_ai_flair_and_mods/",
+    "post_id": "summer_update_2025_ai_flair_and_mods",
+    "title": "Summer Update - 2025 | AI, Flair, and Mods!",
+    "subreddit": "selfhosted",
+    "author": "/u/kmisterk",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-22T07:07:35+00:00",
+    "queued_at": "2025-07-31T15:58:32.612366",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdwrsv/personal_wiki_documentation_of_your_own_setup/",
+    "post_id": "personal_wiki_documentation_of_your_own_setup",
+    "title": "Personal wiki / documentation of your own setup?",
+    "subreddit": "selfhosted",
+    "author": "/u/bambibol",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T09:15:13+00:00",
+    "queued_at": "2025-07-31T15:58:32.612367",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdgw55/selfhost_chrony_fully_rootless_distroless_and_13x/",
+    "post_id": "selfhost_chrony_fully_rootless_distroless_and_13x",
+    "title": "Selfhost chrony, fully rootless, distroless and 13x smaller than the most used image!",
+    "subreddit": "selfhosted",
+    "author": "/u/ElevenNotes",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T20:02:59+00:00",
+    "queued_at": "2025-07-31T15:58:32.612367",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdw7uj/bring_integration_for_local_only_mealie_instances/",
+    "post_id": "bring_integration_for_local_only_mealie_instances",
+    "title": "Bring integration for local only Mealie instances",
+    "subreddit": "selfhosted",
+    "author": "/u/Trysupe",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-31T08:39:03+00:00",
+    "queued_at": "2025-07-31T15:58:32.612368",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdd09a/fail2banreport/",
+    "post_id": "fail2banreport",
+    "title": "Fail2Ban-Report",
+    "subreddit": "selfhosted",
+    "author": "/u/su_ble",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T17:36:08+00:00",
+    "queued_at": "2025-07-31T15:58:32.612369",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1md0oiw/a_clearer_view_of_your_traffic_traefik_log/",
+    "post_id": "a_clearer_view_of_your_traffic_traefik_log",
+    "title": "A Clearer View of Your Traffic: Traefik Log Dashboard V1.0.0 for Pangolin and All Traefik Users",
+    "subreddit": "selfhosted",
+    "author": "/u/hhftechtips",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T08:01:27+00:00",
+    "queued_at": "2025-07-31T15:58:32.612370",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdmlqb/plexlastfm_api_scrobbler_includes_now_playing/",
+    "post_id": "plexlastfm_api_scrobbler_includes_now_playing",
+    "title": "PlexLastFM API Scrobbler (Includes Now Playing Support / Instant Updating)",
+    "subreddit": "selfhosted",
+    "author": "/u/Comfortable-Gap-808",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T23:57:39+00:00",
+    "queued_at": "2025-07-31T15:58:32.612371",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdgdpf/couldnt_find_a_way_to_track_clone_view_stats_for/",
+    "post_id": "couldnt_find_a_way_to_track_clone_view_stats_for",
+    "title": "Couldn't find a way to track clone & view stats for my git repos past 14 days so I created one - free, open source & MIT",
+    "subreddit": "selfhosted",
+    "author": "/u/taylorwilsdon",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T19:43:06+00:00",
+    "queued_at": "2025-07-31T15:58:32.612371",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdiezb/memos_public_proxy_a_sharing_proxy_for_the_memos/",
+    "post_id": "memos_public_proxy_a_sharing_proxy_for_the_memos",
+    "title": "Memos Public Proxy (a sharing proxy for the memos app)",
+    "subreddit": "selfhosted",
+    "author": "/u/cholz",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T21:02:26+00:00",
+    "queued_at": "2025-07-31T15:58:32.612372",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mdinx0/spacepad_v14_google_caldav_support_adhoc_booking/",
+    "post_id": "spacepad_v14_google_caldav_support_adhoc_booking",
+    "title": "Spacepad v1.4: Google & CalDAV support, ad-hoc booking, customizable titles, ARM64 Docker builds and more \ud83c\udf89",
+    "subreddit": "selfhosted",
+    "author": "/u/Successful_Yak8845",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-30T21:12:27+00:00",
+    "queued_at": "2025-07-31T15:58:32.612373",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mcke6j/booklore_progress_update_magic_shelves_bookdrop/",
+    "post_id": "booklore_progress_update_magic_shelves_bookdrop",
+    "title": "\ud83d\udcda BookLore Progress Update: Magic Shelves, Bookdrop, Metadata Review & More!",
+    "subreddit": "selfhosted",
+    "author": "/u/WorldTraveller101",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T19:06:12+00:00",
+    "queued_at": "2025-07-31T15:58:32.612374",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mcc3lc/termix_10_release_it_combines_confix_and_tunnelix/",
+    "post_id": "termix_10_release_it_combines_confix_and_tunnelix",
+    "title": "Termix 1.0 Release! It combines Confix and Tunnelix into one glorified tool for server management (SSH terminal, reverse-ssh tunnels, and ssh config editing)!",
+    "subreddit": "selfhosted",
+    "author": "/u/VizeKarma",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T13:55:33+00:00",
+    "queued_at": "2025-07-31T15:58:32.612374",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mc9zfw/release_anytype_local_and_collaborative_wiki/",
+    "post_id": "release_anytype_local_and_collaborative_wiki",
+    "title": "Release: Anytype - local and collaborative wiki shipped API and MCP server (+ better markdown export/import)",
+    "subreddit": "selfhosted",
+    "author": "/u/sharipova",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T12:23:42+00:00",
+    "queued_at": "2025-07-31T15:58:32.612376",
+    "status": "pending"
+  },
+  {
+    "post_url": "https://www.reddit.com/r/selfhosted/comments/1mc5qz9/uptimerobot_killing_legacy_plans_wants_to_charge/",
+    "post_id": "uptimerobot_killing_legacy_plans_wants_to_charge",
+    "title": "UptimeRobot killing legacy plans - wants to charge me 425% more - what are alternatives?",
+    "subreddit": "selfhosted",
+    "author": "/u/Big_Stingman",
+    "score": null,
+    "comments": null,
+    "topics": [
+      "self-hosting",
+      "homelab",
+      "servers",
+      "infrastructure"
+    ],
+    "priority": "medium",
+    "published_date": "2025-07-29T08:14:04+00:00",
+    "queued_at": "2025-07-31T15:58:32.612377",
+    "status": "pending"
+  }
+]

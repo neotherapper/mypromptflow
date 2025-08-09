@@ -71,6 +71,101 @@ mcp_server_registry:
         reliability_score: 8.0
         primary_domains: ["knowledge_base", "research", "factual_information"]
 
+  # AWS MCP SERVERS - HIGH-VALUE INTELLIGENCE INTEGRATIONS
+  # Status: Planned for future implementation pending AWS Bedrock access
+  aws_tier_1_intelligence_planned:
+    - name: "git-repo-research"
+      server_id: "awslabs.git-repo-research-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "bedrock_access", "titan_embeddings_model"]
+      tools: ["create_research_repository", "search_research_repository", "search_repos_on_github", "access_file", "delete_research_repository"]
+      authentication: "aws_credentials_required"
+      rate_limits: "aws_bedrock_limits"
+      reliability_score: 9.5
+      primary_domains: ["semantic_search", "repository_analysis", "intelligent_research", "code_discovery"]
+      unique_capabilities: ["amazon_bedrock_embeddings", "faiss_indexing", "semantic_code_search"]
+      integration_priority: "critical_when_aws_available"
+      fallback_server: "mcp__MCP_DOCKER__search_repositories"
+      
+    - name: "aws-knowledge-managed"
+      server_id: "aws-knowledge-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_account", "managed_service_access"]
+      tools: ["search_docs", "get_api_reference", "query_whats_new", "access_builder_center"]
+      authentication: "managed_by_aws"
+      rate_limits: "enterprise_tier"
+      reliability_score: 9.8
+      primary_domains: ["aws_documentation", "api_references", "latest_features", "technical_guidance"]
+      unique_capabilities: ["real_time_updates", "authoritative_content", "global_cdn"]
+      integration_priority: "critical_when_aws_available"
+      fallback_server: "mcp__MCP_DOCKER__fetch"
+      
+    - name: "bedrock-kb-retrieval"
+      server_id: "awslabs.bedrock-kb-retrieval-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "bedrock_access", "knowledge_base_setup"]
+      tools: ["query_knowledge_base", "retrieve_with_citations", "search_enterprise_content"]
+      authentication: "aws_credentials_required"
+      rate_limits: "bedrock_knowledge_base_limits"
+      reliability_score: 9.6
+      primary_domains: ["enterprise_knowledge", "rag_workflows", "citation_tracking", "compliance_research"]
+      unique_capabilities: ["enterprise_knowledge_bases", "citation_support", "audit_trails"]
+      integration_priority: "critical_when_aws_available"
+      fallback_server: "local_knowledge_vault"
+      
+    - name: "code-doc-generation"
+      server_id: "awslabs.code-doc-gen-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "code_analysis_permissions"]
+      tools: ["analyze_repository", "generate_documentation", "create_cross_references", "validate_documentation"]
+      authentication: "aws_credentials_required"
+      rate_limits: "moderate"
+      reliability_score: 9.2
+      primary_domains: ["documentation_automation", "code_analysis", "project_documentation", "technical_writing"]
+      unique_capabilities: ["automated_doc_generation", "cross_reference_linking", "quality_metrics"]
+      integration_priority: "high_when_aws_available"
+      fallback_server: "manual_documentation_tools"
+
+  aws_tier_2_strategic_planned:
+    - name: "core-orchestration"
+      server_id: "awslabs.core-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "orchestration_permissions"]
+      tools: ["orchestrate_servers", "intelligent_routing", "load_balance", "service_discovery"]
+      authentication: "aws_credentials_required"
+      rate_limits: "enterprise"
+      reliability_score: 8.8
+      primary_domains: ["mcp_orchestration", "intelligent_coordination", "service_management", "load_balancing"]
+      unique_capabilities: ["meta_orchestration", "intelligent_planning", "multi_server_coordination"]
+      integration_priority: "strategic_when_aws_available"
+      fallback_server: "manual_mcp_coordination"
+      
+    - name: "aws-api-comprehensive"
+      server_id: "awslabs.aws-api-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "iam_permissions", "comprehensive_api_access"]
+      tools: ["execute_aws_command", "validate_security", "manage_resources", "optimize_costs"]
+      authentication: "aws_iam_required"
+      rate_limits: "aws_api_limits"
+      reliability_score: 9.1
+      primary_domains: ["aws_infrastructure", "resource_management", "security_validation", "cost_optimization"]
+      unique_capabilities: ["comprehensive_aws_apis", "security_controls", "compliance_monitoring"]
+      integration_priority: "strategic_when_aws_available"
+      fallback_server: "aws_cli_manual"
+      
+    - name: "cdk-enhanced"
+      server_id: "awslabs.cdk-mcp-server"
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "cdk_toolkit_access"]
+      tools: ["develop_cdk", "validate_security", "enforce_best_practices", "deploy_infrastructure"]
+      authentication: "aws_credentials_required"
+      rate_limits: "moderate"
+      reliability_score: 8.9
+      primary_domains: ["infrastructure_as_code", "security_compliance", "best_practices", "deployment_automation"]
+      unique_capabilities: ["security_validation", "compliance_checking", "best_practice_enforcement"]
+      integration_priority: "strategic_when_aws_available"
+      fallback_server: "manual_cdk_development"
+
 # UNIFIED ERROR HANDLING FRAMEWORK
 error_handling_framework:
   error_categories:
@@ -82,6 +177,23 @@ error_handling_framework:
       max_retries: 3
       base_delay: 1.0  # seconds
       max_delay: 30.0  # seconds
+      
+    aws_credentials_errors:
+      patterns: ["unable_to_locate_credentials", "access_denied", "invalid_credentials"]
+      severity: "high"
+      immediate_action: "switch_to_non_aws_fallback"
+      fallback_actions:
+        git_repo_research_failure: "use_traditional_github_search"
+        aws_knowledge_failure: "use_webfetch_aws_docs"
+        bedrock_kb_failure: "use_local_knowledge_vault"
+      user_notification: "AWS credentials required for enhanced features"
+      
+    bedrock_access_errors:
+      patterns: ["bedrock_access_denied", "model_not_available", "bedrock_quota_exceeded"]
+      severity: "high"
+      immediate_action: "disable_semantic_search_fallback_to_keyword"
+      fallback_strategy: "traditional_search_methods"
+      retry_after: 3600  # 1 hour
       
     authentication_errors:
       patterns: ["unauthorized", "forbidden", "invalid_token", "expired_credentials"]
@@ -178,6 +290,34 @@ recovery_strategies:
         fallback: "Manual issue tracking notification"
         alternative: "GitHub Issues creation as backup"
         user_notification: "JIRA integration temporarily unavailable"
+    
+    aws_mcp_fallback:
+      git_repo_research_unavailable:
+        fallback: "Traditional GitHub search via MCP_DOCKER"
+        query_transformation: "convert semantic query to keyword search"
+        result_parsing: "basic repository analysis without semantic indexing"
+        degradation_level: "moderate"
+        user_notification: "Using keyword search instead of semantic analysis"
+        
+      aws_knowledge_unavailable:
+        fallback: "WebFetch AWS documentation pages"
+        alternative: "Local AWS documentation cache"
+        query_transformation: "convert to AWS docs search URL"
+        degradation_level: "low"
+        user_notification: "Using web-based AWS documentation access"
+        
+      bedrock_kb_unavailable:
+        fallback: "Local knowledge-vault search"
+        alternative: "WebSearch for enterprise content"
+        query_transformation: "search local knowledge base"
+        degradation_level: "moderate"
+        user_notification: "Using local knowledge base instead of Bedrock KB"
+        
+      aws_credentials_missing:
+        fallback: "Disable all AWS MCP servers gracefully"
+        alternative: "Use existing MCP_DOCKER tools exclusively"
+        user_notification: "AWS features disabled - configure credentials to enable"
+        degradation_level: "high"
     
     tier_based_fallback:
       tier_1_failure:

@@ -1,0 +1,384 @@
+{
+  "processing_summary": {
+    "timestamp": "2025-08-01T06:38:24.668189+00:00",
+    "total_videos_processed": 4,
+    "processing_date": "2025-08-01",
+    "average_unified_score": 0.39,
+    "average_quality_score": 0.961,
+    "high_quality_videos": 3,
+    "exceptional_videos": 3,
+    "processor_framework_version": "unified-intelligence-1.2.0"
+  },
+  "videos_analyzed": [
+    {
+      "title": "React JS Crash Course - Build a Complete Task Tracker App with Hooks, Router & JSON Server",
+      "channel": "Traversy Media",
+      "video_url": "https://www.youtube.com/watch?v=w7ejDZ8SWv8",
+      "video_id": "w7ejDZ8SWv8",
+      "unified_score": 0.41333333333333333,
+      "quality_score": 1.0,
+      "priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "concept_count": 25,
+      "transcript_length": 14548,
+      "tutorial_type": "comprehensive_crash_course",
+      "comprehensive_rating": "high",
+      "processing_timestamp": "2025-08-01T05:45:02.140009+00:00",
+      "high_value_indicators": {
+        "crash_course": true,
+        "project_based": true,
+        "comprehensive": true,
+        "beginner_friendly": true,
+        "industry_relevant": true
+      }
+    },
+    {
+      "title": "I Tried Every AI Coding Assistant! Here's What I Think\u2026 (2024 Updated)",
+      "channel": "Tech Creator/Developer Channel",
+      "video_url": "https://www.youtube.com/watch?v=cJlM3AIFMaw",
+      "video_id": "cJlM3AIFMaw",
+      "unified_score": 0.2275,
+      "quality_score": 1.0,
+      "priority_topics": [
+        "claude-code",
+        "react",
+        "typescript"
+      ],
+      "concept_count": 0,
+      "transcript_length": 34963,
+      "tutorial_type": "comprehensive_comparison_analysis",
+      "comprehensive_rating": "high",
+      "processing_timestamp": "2025-08-01T06:34:08.204764+00:00",
+      "high_value_indicators": {
+        "ai_coding_focus": true,
+        "comparison_analysis": true,
+        "real_world_testing": true,
+        "comprehensive": false,
+        "practical_focus": true,
+        "industry_relevant": true,
+        "current_content": true
+      }
+    },
+    {
+      "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+      "channel": "Code with Mosh",
+      "video_url": "https://www.youtube.com/watch?v=ZVnjOPwW4ZA",
+      "video_id": "ZVnjOPwW4ZA",
+      "unified_score": 0.625,
+      "quality_score": 1.0,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "concept_count": 30,
+      "transcript_length": 22498,
+      "tutorial_type": "comprehensive_beginner_course",
+      "comprehensive_rating": "medium",
+      "processing_timestamp": "2025-08-01T06:22:11.995679+00:00",
+      "high_value_indicators": {
+        "modern_nextjs": true,
+        "comprehensive_course": true,
+        "beginner_friendly": true,
+        "practical_focus": true,
+        "authority_instructor": true,
+        "up_to_date": true
+      }
+    },
+    {
+      "title": "Introduction to TypeScript with React - Complete Tutorial 2024",
+      "channel": "Programming Tutorial Channel",
+      "video_url": "https://www.youtube.com/watch?v=KmYoJmZs3sY",
+      "video_id": "KmYoJmZs3sY",
+      "unified_score": 0.29333333333333333,
+      "quality_score": 0.8433333333333334,
+      "priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "concept_count": 12,
+      "transcript_length": 20218,
+      "tutorial_type": "standard",
+      "comprehensive_rating": "medium",
+      "processing_timestamp": "2025-08-01T05:40:05.513619+00:00",
+      "high_value_indicators": {}
+    }
+  ],
+  "topic_analysis": {
+    "priority_topics_discovered": {
+      "react": [
+        {
+          "video_id": "w7ejDZ8SWv8",
+          "title": "React JS Crash Course - Build a Complete Task Tracker App with Hooks, Router & JSON Server",
+          "score": 1.305
+        },
+        {
+          "video_id": "cJlM3AIFMaw",
+          "title": "I Tried Every AI Coding Assistant! Here's What I Think\u2026 (2024 Updated)",
+          "score": 0.05850000000000001
+        },
+        {
+          "video_id": "ZVnjOPwW4ZA",
+          "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+          "score": 1.2149999999999999
+        },
+        {
+          "video_id": "KmYoJmZs3sY",
+          "title": "Introduction to TypeScript with React - Complete Tutorial 2024",
+          "score": 0.9
+        }
+      ],
+      "typescript": [
+        {
+          "video_id": "w7ejDZ8SWv8",
+          "title": "React JS Crash Course - Build a Complete Task Tracker App with Hooks, Router & JSON Server",
+          "score": 1.16
+        },
+        {
+          "video_id": "cJlM3AIFMaw",
+          "title": "I Tried Every AI Coding Assistant! Here's What I Think\u2026 (2024 Updated)",
+          "score": 1.04
+        },
+        {
+          "video_id": "ZVnjOPwW4ZA",
+          "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+          "score": 1.0799999999999998
+        },
+        {
+          "video_id": "KmYoJmZs3sY",
+          "title": "Introduction to TypeScript with React - Complete Tutorial 2024",
+          "score": 0.8
+        }
+      ],
+      "claude-code": [
+        {
+          "video_id": "cJlM3AIFMaw",
+          "title": "I Tried Every AI Coding Assistant! Here's What I Think\u2026 (2024 Updated)",
+          "score": 0.11199999999999999
+        }
+      ],
+      "nextjs": [
+        {
+          "video_id": "ZVnjOPwW4ZA",
+          "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+          "score": 1.4849999999999999
+        }
+      ]
+    },
+    "unique_topics": [
+      "claude-code",
+      "nextjs",
+      "react",
+      "typescript"
+    ],
+    "topic_distribution": {
+      "react": 4,
+      "typescript": 4,
+      "claude-code": 1,
+      "nextjs": 1
+    },
+    "cross_video_topics": {
+      "react": {
+        "video_count": 4,
+        "average_score": 0.87,
+        "videos": [
+          {
+            "id": "w7ejDZ8SWv8",
+            "title": "React JS Crash Course - Build a Complete Task Trac..."
+          },
+          {
+            "id": "cJlM3AIFMaw",
+            "title": "I Tried Every AI Coding Assistant! Here's What I T..."
+          },
+          {
+            "id": "ZVnjOPwW4ZA",
+            "title": "Next js Tutorial for Beginners | Nextjs 13 (App Ro..."
+          },
+          {
+            "id": "KmYoJmZs3sY",
+            "title": "Introduction to TypeScript with React - Complete T..."
+          }
+        ]
+      },
+      "typescript": {
+        "video_count": 4,
+        "average_score": 1.02,
+        "videos": [
+          {
+            "id": "w7ejDZ8SWv8",
+            "title": "React JS Crash Course - Build a Complete Task Trac..."
+          },
+          {
+            "id": "cJlM3AIFMaw",
+            "title": "I Tried Every AI Coding Assistant! Here's What I T..."
+          },
+          {
+            "id": "ZVnjOPwW4ZA",
+            "title": "Next js Tutorial for Beginners | Nextjs 13 (App Ro..."
+          },
+          {
+            "id": "KmYoJmZs3sY",
+            "title": "Introduction to TypeScript with React - Complete T..."
+          }
+        ]
+      }
+    }
+  },
+  "concept_analysis": {
+    "top_programming_concepts": {
+      "react": 3,
+      "component": 3,
+      "api": 3,
+      "state": 2,
+      "javascript": 2,
+      "build": 2,
+      "html": 2,
+      "hook": 2,
+      "npm": 2,
+      "props": 2,
+      "type": 2,
+      "typescript": 2,
+      "interface": 2,
+      "framework": 1,
+      "angular": 1,
+      "library": 1,
+      "routing": 1,
+      "render": 1,
+      "cli": 1,
+      "php": 1
+    },
+    "unique_concepts_discovered": [
+      "angular",
+      "api",
+      "app router",
+      "browser",
+      "build",
+      "bundle",
+      "cli",
+      "client",
+      "client components",
+      "component",
+      "create next app",
+      "create react app",
+      "css",
+      "database",
+      "dynamic",
+      "dynamic rendering",
+      "express",
+      "fast",
+      "fetch",
+      "framework",
+      "full stack",
+      "go",
+      "hook",
+      "html",
+      "interface",
+      "javascript",
+      "json",
+      "jsx",
+      "library",
+      "npm",
+      "npx",
+      "pages router",
+      "php",
+      "props",
+      "react",
+      "react query",
+      "render",
+      "rest",
+      "routing",
+      "runtime",
+      "server",
+      "server components",
+      "ssr",
+      "state",
+      "static",
+      "tailwind",
+      "tsx",
+      "type",
+      "typescript",
+      "vs code",
+      "yarn"
+    ],
+    "concept_frequency_across_videos": {
+      "react": 3,
+      "component": 3,
+      "state": 2,
+      "javascript": 2,
+      "build": 2,
+      "framework": 1,
+      "html": 2,
+      "api": 3,
+      "angular": 1,
+      "library": 1,
+      "routing": 1,
+      "hook": 2,
+      "render": 1,
+      "npm": 2,
+      "cli": 1,
+      "php": 1,
+      "full stack": 1,
+      "express": 1,
+      "props": 2,
+      "fetch": 1,
+      "json": 1,
+      "jsx": 1,
+      "npx": 1,
+      "create react app": 1,
+      "database": 1,
+      "client": 1,
+      "server": 1,
+      "type": 2,
+      "browser": 1,
+      "typescript": 2,
+      "runtime": 1,
+      "css": 1,
+      "bundle": 1,
+      "fast": 1,
+      "app router": 1,
+      "server components": 1,
+      "tsx": 1,
+      "client components": 1,
+      "tailwind": 1,
+      "vs code": 1,
+      "pages router": 1,
+      "static": 1,
+      "interface": 2,
+      "dynamic": 1,
+      "rest": 1,
+      "ssr": 1,
+      "dynamic rendering": 1,
+      "create next app": 1,
+      "react query": 1,
+      "yarn": 1,
+      "go": 1
+    }
+  },
+  "content_quality_metrics": {
+    "videos_with_code_examples": 4,
+    "videos_with_practical_demos": 4,
+    "comprehensive_tutorials": 2,
+    "beginner_friendly_content": 4,
+    "industry_relevant_content": 3,
+    "project_based_tutorials": 1,
+    "comparison_analyses": 1
+  },
+  "platform_insights": {
+    "channels_analyzed": [
+      "Code with Mosh",
+      "Programming Tutorial Channel",
+      "Tech Creator/Developer Channel",
+      "Traversy Media"
+    ],
+    "content_types": {
+      "comprehensive_crash_course": 1,
+      "comprehensive_comparison_analysis": 1,
+      "comprehensive_beginner_course": 1,
+      "standard": 1
+    },
+    "estimated_total_duration": "2h 48m",
+    "total_transcript_length": 92227
+  }
+}

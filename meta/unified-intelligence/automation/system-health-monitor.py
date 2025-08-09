@@ -77,7 +77,8 @@ class SystemHealthMonitor:
     def check_knowledge_vault_health(self) -> Dict[str, Any]:
         """Check knowledge vault health and content"""
         try:
-            vault_path = self.base_path / "knowledge-vault"
+            # Updated path to use main knowledge-vault structure
+            vault_path = self.base_path.parent.parent / "knowledge-vault" / "databases" / "knowledge_vault" / "content-intelligence" / "youtube-intelligence"
             
             if not vault_path.exists():
                 return {"status": "error", "message": "Knowledge vault missing"}

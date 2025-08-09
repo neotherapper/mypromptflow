@@ -49,7 +49,7 @@ Display this interactive menu to the user:
 - **[3]** → Execute `/validate-knowledge-base` for comprehensive health check
 - **[4] + [tier]** → Execute `/generate-tier-documents [tier]` for bulk generation
 - **[5] + [document]** → Execute `/analyse-dependencies [document]` for dependency analysis
-- **[6]** → Execute `/knowledge-status` for interactive system navigation
+- **[6]** → Execute `/knowledge-status` for interactive system navigation OR `/system-status` for system health monitoring
 - **[7]** → Execute `/improve-claude` for system improvement suggestions
 - **[8]** → Show complete command reference from `.claude/commands/`
 - **[9]** → Display research registry with all completed research organized by category and quality scores
@@ -257,6 +257,8 @@ When user provides [0] + [topic], execute:
 /validation-framework [file]     - Framework validation
 /fix-github-issue [issue]        - GitHub issue resolution
 /knowledge-status                - Interactive system navigation
+/system-status                   - System health monitoring dashboard
+/daily-digest                    - Content intelligence digest with priority topics
 /ai-sdlc-assistant              - Role-based workflows
 /analyse-dependencies [document] - Dependency analysis
 /orchestrate-agents [target]     - Multi-agent coordination
@@ -299,6 +301,29 @@ When user provides [0] + [topic], execute:
 - Command reference: Type "8" or "Browse Commands"
 - System status: Type "6" for health check and navigation
 - Issues: Use "2" for GitHub issue resolution
+
+## Intelligence System Commands
+
+### System Health Monitoring
+- **`/system-status`** - Generate comprehensive system health dashboard
+  - Monitor all system components (processing pipeline, topic scoring, knowledge vault)
+  - Track performance metrics (CPU, memory, processing speeds, success rates)
+  - Beautiful HTML dashboard with component status, alerts, and source monitoring
+  - **Output**: `meta/unified-intelligence/daily-digest/generated/system/system-status.html`
+
+### Content Intelligence Digest  
+- **`/daily-digest`** - Generate content-focused intelligence digest with priority topics
+  - Priority topic scoring for claude, claude-code, react, typescript, meta-prompting
+  - Multi-factor scoring: Base Score × Freshness × Relevance × Priority Boost
+  - Beautiful HTML dashboard with topic cards, platform breakdown, recommendations
+  - **Output**: `meta/unified-intelligence/daily-digest/generated/content/daily-digest.html`
+  - **Options**: `today`, `yesterday`, `last_3_days`, `week`, `force`
+
+### Separated Architecture Benefits
+- **Pure Focus**: `/system-status` for system health only, `/daily-digest` for content only
+- **No Information Mixing**: Clean separation prevents operational data mixing with content
+- **Professional Dashboards**: Each command generates beautiful HTML with appropriate focus
+- **Duplicate Prevention**: Intelligent detection prevents regenerating existing reports
 
 **Ready to help! What would you like to do?**
 

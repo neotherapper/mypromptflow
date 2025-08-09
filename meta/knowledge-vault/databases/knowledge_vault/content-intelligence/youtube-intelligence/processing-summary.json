@@ -1,0 +1,85 @@
+{
+  "processing_summary": {
+    "timestamp": "2025-08-01T04:55:26.369205+00:00",
+    "framework_version": "1.0.0",
+    "videos_processed": 21,
+    "average_unified_score": 0.976,
+    "high_value_videos": 21,
+    "channels_processed": [
+      "ThePrimeagen",
+      "Fireship",
+      "Learn With Jason",
+      "James Q Quick"
+    ]
+  },
+  "top_videos": [
+    {
+      "title": "Imposter Syndrome",
+      "channel": "ThePrimeagen",
+      "score": 1.0
+    },
+    {
+      "title": "You Have Time...",
+      "channel": "ThePrimeagen",
+      "score": 1.0
+    },
+    {
+      "title": "AI Scuffed Programming",
+      "channel": "ThePrimeagen",
+      "score": 1.0
+    },
+    {
+      "title": "1000 Players - One Game of Doom",
+      "channel": "ThePrimeagen",
+      "score": 1.0
+    },
+    {
+      "title": "The dating app that doxxed 72,000 women...",
+      "channel": "Fireship",
+      "score": 1.0
+    },
+    {
+      "title": "Alibaba is coming for Claude...",
+      "channel": "Fireship",
+      "score": 1.0
+    },
+    {
+      "title": "When being over-employed goes wrong...",
+      "channel": "Fireship",
+      "score": 1.0
+    },
+    {
+      "title": "That time Google Cloud Platform bricked the Internet\u2026",
+      "channel": "Fireship",
+      "score": 1.0
+    },
+    {
+      "title": "When bad C code puts you behind bars...",
+      "channel": "Fireship",
+      "score": 1.0
+    },
+    {
+      "title": "Microsoft just opened the flood gates\u2026",
+      "channel": "Fireship",
+      "score": 1.0
+    }
+  ],
+  "channel_performance": {
+    "ThePrimeagen": {
+      "videos": 4,
+      "avg_score": 1.0
+    },
+    "Fireship": {
+      "videos": 7,
+      "avg_score": 1.0
+    },
+    "Learn With Jason": {
+      "videos": 5,
+      "avg_score": 1.0
+    },
+    "James Q Quick": {
+      "videos": 5,
+      "avg_score": 0.9
+    }
+  }
+}

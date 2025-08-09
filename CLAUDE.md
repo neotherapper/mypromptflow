@@ -17,11 +17,18 @@
 
 **Always**:
 
-- Use MCP JIRA tools (mcp**MCP_DOCKER**jira\_\*)
+- Use MCP JIRA tools (mcp**MCP_DOCKER**jira\_\*) with domain-specific learning integration
 - Execute parallel tool operations for efficiency
 - Mark TodoWrite complete with timestamps
 - Validate @file_path cross-references
 - Apply unified source discovery framework for research and validation tasks
+
+## JIRA Integration
+
+**Cross-Project JIRA Access**: Access VanguardAI Maritime JIRA system via symlinked `.jira/` directory
+**Command Interface**: Use `/jira [option]` command for comprehensive JIRA operations
+**Learning System**: Domain-specific error learning and pattern optimization via VanguardAI `.jira/learning/`
+**Context**: AI research coordination with constitutional AI validation and cross-project knowledge integration
 
 ## System Overview
 
@@ -99,6 +106,10 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 5. Validate @file_path cross-references
 6. Verify completion criteria
 
+## Task Reflection and Quality Assurance
+
+- After each time you complete a task think if you have missed anything
+
 ### AI Instruction Standards
 
 - Eliminate human documentation artifacts (Purpose, Overview, Usage sections forbidden)
@@ -156,3 +167,5 @@ Self-sufficient system using 4-level agent hierarchy (Queen→Architect→Specia
 ## Command Integration
 
 **Basic Workflows**: Use `development/CLAUDE.md` for complete development commands and workflows
+
+```

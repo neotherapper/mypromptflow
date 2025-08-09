@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "nx-mcp": {
+      "type": "http",
+      "url": "http://localhost:9136/mcp"
+    },
+    "playwright-local": {
+      "type": "http",
+      "url": "http://localhost:3000"
+    }
+  }
+}

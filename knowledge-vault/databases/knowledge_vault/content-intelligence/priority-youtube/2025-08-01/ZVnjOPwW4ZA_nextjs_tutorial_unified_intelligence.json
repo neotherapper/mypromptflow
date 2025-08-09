@@ -1,0 +1,165 @@
+{
+  "video_id": "ZVnjOPwW4ZA",
+  "video_url": "https://www.youtube.com/watch?v=ZVnjOPwW4ZA",
+  "title": "Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript",
+  "channel": "Code with Mosh",
+  "tutorial_type": "comprehensive_beginner_course",
+  "nextjs_version": "Next.js 13",
+  "estimated_duration": "1h+",
+  "instructor_authority": "high",
+  "modern_features_covered": true,
+  "programming_concepts": [
+    "component",
+    "client",
+    "server",
+    "react",
+    "build",
+    "type",
+    "browser",
+    "typescript",
+    "runtime",
+    "css",
+    "javascript",
+    "bundle",
+    "fast",
+    "app router",
+    "server components",
+    "tsx",
+    "client components",
+    "tailwind",
+    "vs code",
+    "html",
+    "pages router",
+    "static",
+    "api",
+    "interface",
+    "dynamic",
+    "rest",
+    "ssr",
+    "dynamic rendering",
+    "create next app",
+    "react query"
+  ],
+  "priority_topics": [
+    "react",
+    "typescript",
+    "nextjs"
+  ],
+  "topic_scores": {
+    "react": 1.2149999999999999,
+    "typescript": 1.0799999999999998,
+    "nextjs": 1.4849999999999999
+  },
+  "unified_score": 0.625,
+  "quality_score": 1.0,
+  "content_summary": "## Comprehensive Next.js Tutorial Analysis: \"Next js Tutorial for Beginners | Nextjs 13 (App Router) with TypeScript\"\n\n**Channel:** Code with Mosh\n**Tutorial Type:** Comprehensive Beginner Course\n**Estimated Duration:** 1h+\n**Instructor Authority:** High\n**Modern Features Coverage:** Yes\n\n### Next.js & Related Technologies Covered\n\n**React Integration:**\n- component\n- react\n- tsx\n\n**Web Fundamentals:**\n- client\n- server\n- browser\n- runtime\n- css\n- javascript\n- bundle\n\n**Development Tools:**\n- build\n- vs code\n\n**Typescript Features:**\n- type\n- typescript\n- interface\n\n**Performance:**\n- fast\n- static\n- dynamic\n\n**Nextjs Core:**\n- app router\n- server components\n- client components\n- pages router\n\n### Key Tutorial Insights\n\n1. [Music] foreign welcome to the ultimate nexjs course in this course you will learn everything you need to know about nexjs from the basics to more advanced concepts so by the end of the course you'll be able to confidently build fast and scalable applications with the xjs if you have been searching for a comprehensive easy to follow well-organized and practical course that takes you from Zero to Hero this is the right next\n2. js to get started everything you need is right here so you won't need to jump back and forth between random tutorials but here's the catch unlike other courses we're not just building a dummy app we'll be building a beautiful full stack production grade app for tracking issues an app complete with all the features and UI patterns you would expect in modern applications on the home page we have this beautiful dashboard that displays the latest issues and their status and all of this data is stored in a mySQL database we can go to the issues page we can filter issues sort them and go to different pages we can click on an issue to see more details we can assign an issue to a user so here we have full authentication and authorization we can edit an issue and here we have this beautiful markdown editor we can also delete an issue and here we get this confirmation dialog box we'll be building this application using a Cutting Edge stack next she has 13 Tailwind Radix UI Prisma react query reactbook forms Zod and more and don't worry if some of these tools are alien to you just like my other courses I will walk you through each one explaining the what the why and the how so if you follow along you will master nexjs and we'll be able to build full stack applications with confidence a software engineer with over 20 years of experience and I've taught Millions how to code and become professional software Engineers through my YouTube channel and online school codewitmarsh\n3. js because I'm going to teach you everything from the ground up however you need to have basic familiarity with react and typescript because next\n4. js is a react framework and if you don't know react you are not really the right student for this course now if you want to learn react I have a great tutorial on my YouTube channel the link is below this video I also have a comprehensive course that goes way beyond that it teaches you everything you need to know to build modern applications with react 18 and typescript the full course is 14 hours divided into two parts so you can easily finish each part in this course you will learn how to build this beautiful application for discovering video games here we have all the common UI patterns you see in real applications like filtering sorting infinite Scrolls and so on again in case you are interested the link is below this video welcome back to our next chess course in this section we'll be talking about the fundamentals of nexjs first I will explain what exactly next\n5. js project from there we'll talk about some foundational Concepts such as client and server components data fetching caching as well as static and dynamic rendering this section is a great introduction to next\n6. js is an incredibly powerful framework for building fast and search engine friendly applications it's built on top of react so everything you have learned about react is still relevant but nexjs takes web development to the next level wild react is just a library for creating interactive user interfaces next\n7. js includes its own routing Library so we don't need to use a separate Library like react router in terms of tooling it comes with a compiler for transforming and minifying our JavaScript code a command line interface for building and starting our application and a node\n8. js runtime now you might wonder what exactly is a node\n9. js runtime well there are two main ways we can execute JavaScript code within a web browser on the client side or within a node\n\n### Next.js Tutorial Structure\n\n\u2713 **Introduction & Setup** - Covered\n\u2713 **Core Concepts** - Covered\n\u2713 **TypeScript Integration** - Covered\n\u2713 **Styling Solutions** - Covered\n\u2713 **Data Fetching** - Covered\n\u2713 **Full Stack Development** - Covered\n\u2713 **Performance & Optimization** - Covered\n",
+  "insights": {
+    "priority_video": true,
+    "tutorial_type": "comprehensive_beginner_course",
+    "nextjs_version": "Next.js 13",
+    "modern_features_covered": true,
+    "instructor_authority": "high",
+    "expected_topics_covered": {
+      "expected": [
+        "nextjs",
+        "react",
+        "typescript"
+      ],
+      "found": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "covered": [
+        "nextjs",
+        "react",
+        "typescript"
+      ],
+      "missing": [],
+      "coverage_percentage": 100.0
+    },
+    "concept_count": 30,
+    "transcript_length": 22498,
+    "topic_diversity": 3,
+    "technical_depth": 3,
+    "content_quality_indicators": {
+      "has_code_examples": true,
+      "has_explanations": true,
+      "has_best_practices": true,
+      "has_troubleshooting": true,
+      "has_step_by_step": true,
+      "has_practical_demo": true,
+      "covers_modern_nextjs": true,
+      "covers_full_stack": true,
+      "covers_deployment": true,
+      "covers_styling": true
+    },
+    "learning_value_indicators": {
+      "beginner_friendly": true,
+      "advanced_concepts": true,
+      "comprehensive_coverage": true,
+      "practical_focus": true,
+      "industry_relevant": true,
+      "up_to_date": true,
+      "instructor_credibility": true,
+      "complete_course": true
+    },
+    "topic_score_breakdown": {
+      "react": 1.2149999999999999,
+      "typescript": 1.0799999999999998,
+      "nextjs": 1.4849999999999999
+    },
+    "top_concepts": [
+      "component",
+      "client",
+      "server",
+      "react",
+      "build",
+      "type",
+      "browser",
+      "typescript",
+      "runtime",
+      "css",
+      "javascript",
+      "bundle",
+      "fast",
+      "app router",
+      "server components"
+    ],
+    "nextjs_specific_metrics": {
+      "covers_app_router": true,
+      "covers_server_components": true,
+      "typescript_integration": true,
+      "modern_nextjs_features": 8,
+      "full_stack_coverage": true,
+      "production_ready": true
+    },
+    "tutorial_completeness": {
+      "estimated_duration": "1h+",
+      "channel_authority": "Code with Mosh",
+      "beginner_friendly": true,
+      "practical_focus": true,
+      "up_to_date": true
+    },
+    "transcript_analysis": {
+      "word_count": 4167,
+      "unique_technical_terms": 30,
+      "nextjs_mentions": 20,
+      "code_examples": 87,
+      "explanation_quality": 6
+    }
+  },
+  "processing_timestamp": "2025-08-01T06:22:11.995679+00:00",
+  "processed_with": "nextjs-tutorial-processor",
+  "framework_version": "1.2.0",
+  "content_type": "comprehensive_nextjs_tutorial",
+  "transcript_available": true,
+  "high_value_indicators": {
+    "modern_nextjs": true,
+    "comprehensive_course": true,
+    "beginner_friendly": true,
+    "practical_focus": true,
+    "authority_instructor": true,
+    "up_to_date": true
+  }
+}

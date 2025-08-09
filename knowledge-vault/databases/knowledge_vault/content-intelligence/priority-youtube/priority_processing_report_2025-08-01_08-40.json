@@ -1,0 +1,108 @@
+{
+  "priority_processing_summary": {
+    "timestamp": "2025-08-01T05:40:05.513974+00:00",
+    "total_priority_videos": 1,
+    "average_unified_score": 0.293,
+    "average_quality_score": 0.843,
+    "high_value_videos": 0,
+    "exceptional_quality_videos": 0,
+    "processor_version": "direct-1.0.0"
+  },
+  "priority_videos_analyzed": [
+    {
+      "title": "Introduction to TypeScript with React - Complete Tutorial 2024",
+      "channel": "Programming Tutorial Channel",
+      "video_url": "https://www.youtube.com/watch?v=KmYoJmZs3sY",
+      "unified_score": 0.29333333333333333,
+      "quality_score": 0.8433333333333334,
+      "priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "concept_count": 12,
+      "learning_indicators": {
+        "beginner_friendly": true,
+        "advanced_concepts": false,
+        "comprehensive_coverage": false,
+        "practical_focus": true
+      },
+      "expected_coverage": 100.0
+    }
+  ],
+  "topic_analysis": {
+    "priority_topics_discovered": [
+      [
+        "react",
+        0.9
+      ],
+      [
+        "typescript",
+        0.8
+      ]
+    ],
+    "unique_topics": 2,
+    "topic_distribution": {
+      "react": 0.9,
+      "typescript": 0.8
+    }
+  },
+  "concept_analysis": {
+    "top_programming_concepts": [
+      [
+        "typescript",
+        1
+      ],
+      [
+        "component",
+        1
+      ],
+      [
+        "interface",
+        1
+      ],
+      [
+        "props",
+        1
+      ],
+      [
+        "react",
+        1
+      ],
+      [
+        "state",
+        1
+      ],
+      [
+        "hook",
+        1
+      ],
+      [
+        "type",
+        1
+      ],
+      [
+        "yarn",
+        1
+      ],
+      [
+        "api",
+        1
+      ],
+      [
+        "npm",
+        1
+      ],
+      [
+        "go",
+        1
+      ]
+    ],
+    "unique_concepts_discovered": 12
+  },
+  "content_quality_metrics": {
+    "videos_with_code_examples": 1,
+    "videos_with_practical_demos": 1,
+    "comprehensive_tutorials": 0,
+    "beginner_friendly_content": 1
+  }
+}
