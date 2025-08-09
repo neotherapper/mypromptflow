@@ -7,23 +7,49 @@ Generates personalized daily intelligence digests across all platforms
 import json
 import os
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from typing import Dict, Any, List, Optional
 import sys
+import importlib.util
 
 # Add parent paths for imports
 sys.path.append(str(Path(__file__).parent.parent))
+
+# Import the topic scoring engine
+try:
+    # Import with proper file name (hyphenated)
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("topic_scoring_engine", 
+                                                str(Path(__file__).parent.parent / "topic-scoring-engine.py"))
+    topic_scoring_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(topic_scoring_module)
+    TopicScoringEngine = topic_scoring_module.TopicScoringEngine
+    TOPIC_SCORING_AVAILABLE = True
+    print("✅ Topic scoring engine imported successfully")
+except Exception as e:
+    print(f"⚠️  Topic scoring engine not available - using fallback scoring: {e}")
+    TOPIC_SCORING_AVAILABLE = False
+    TopicScoringEngine = None
 
 class IntelligenceDigestGenerator:
     """Generates personalized intelligence digests"""
     
     def __init__(self, base_path: Optional[Path] = None):
         self.base_path = base_path or Path(__file__).parent.parent
-        self.knowledge_vault = self.base_path / "knowledge-vault"
-        self.preferences_file = self.base_path / "user-preferences.json"
+        # Updated paths to use main knowledge-vault structure
+        self.knowledge_vault = Path(__file__).parent.parent.parent.parent / "knowledge-vault" / "databases" / "knowledge_vault" / "content-intelligence"
+        self.preferences_file = Path(__file__).parent.parent.parent.parent / "knowledge-vault" / "databases" / "knowledge_vault" / "content-intelligence" / "user-preferences.json"
         
         # Load user preferences
         self.user_preferences = self._load_user_preferences()
+        
+        # Initialize priority topic scoring engine
+        if TOPIC_SCORING_AVAILABLE:
+            priority_config_path = self.base_path / "priority-topics.json"
+            self.topic_scorer = TopicScoringEngine(str(priority_config_path))
+            print("✅ Priority topic scoring engine initialized")
+        else:
+            self.topic_scorer = None
         
     def _load_user_preferences(self) -> Dict[str, Any]:
         """Load user preferences for personalization"""
@@ -32,13 +58,13 @@ class IntelligenceDigestGenerator:
                 return json.load(f)
         return {}
     
-    def generate_daily_digest(self, digest_type: str = "system_wide") -> Dict[str, Any]:
-        """Generate daily intelligence digest"""
+    def generate_daily_digest(self, digest_type: str = "system_wide", date_range: str = "today") -> Dict[str, Any]:
+        """Generate daily intelligence digest with flexible date range"""
         
-        print(f"📰 Generating {digest_type} intelligence digest...")
+        print(f"📰 Generating {digest_type} intelligence digest for {date_range}...")
         
-        # Collect content from all platforms
-        content_items = self._collect_recent_content()
+        # Collect content from all platforms with date filtering
+        content_items = self._collect_recent_content(date_range=date_range)
         
         # Score and rank content
         scored_content = self._score_and_rank_content(content_items)
@@ -47,6 +73,7 @@ class IntelligenceDigestGenerator:
         digest = {
             "metadata": {
                 "digest_type": digest_type,
+                "date_range": date_range,
                 "generated_at": datetime.now(timezone.utc).isoformat(),
                 "framework_version": "1.0.0",
                 "total_items_considered": len(content_items),
@@ -57,18 +84,18 @@ class IntelligenceDigestGenerator:
             "recommendations": self._create_recommendations(scored_content)
         }
         
-        # Save digest
-        self._save_digest(digest, digest_type)
+        # Save digest with date range in filename
+        self._save_digest(digest, f"{digest_type}_{date_range}")
         
         return digest
     
-    def _collect_recent_content(self) -> List[Dict[str, Any]]:
-        """Collect recent content from all platforms"""
+    def _collect_recent_content(self, date_range: str = "today") -> List[Dict[str, Any]]:
+        """Collect recent content from all platforms with date filtering"""
         
         content_items = []
         
-        # Collect YouTube content
-        youtube_content = self._collect_youtube_content()
+        # Collect YouTube content with date range
+        youtube_content = self._collect_youtube_content(date_range=date_range)
         content_items.extend(youtube_content)
         
         # Collect GitHub content (placeholder for now)
@@ -77,12 +104,12 @@ class IntelligenceDigestGenerator:
         
         # Additional platforms would be added here
         
-        print(f"   📊 Collected {len(content_items)} items from all platforms")
+        print(f"   📊 Collected {len(content_items)} items from all platforms ({date_range})")
         
         return content_items
     
-    def _collect_youtube_content(self) -> List[Dict[str, Any]]:
-        """Collect recent YouTube content"""
+    def _collect_youtube_content(self, date_range: str = "today") -> List[Dict[str, Any]]:
+        """Collect recent YouTube content with flexible date range logic"""
         
         youtube_content = []
         
@@ -92,25 +119,100 @@ class IntelligenceDigestGenerator:
         if not youtube_vault.exists():
             return youtube_content
         
-        # Get recent content from various channels
+        # Parse date range and determine date window
+        target_dates = self._parse_date_range(date_range)
+        
+        print(f"   📅 Collecting content from date range: {target_dates[0]} to {target_dates[-1]} ({len(target_dates)} days)")
+        
+        # Get content from various channels across date range
         for channel_dir in youtube_vault.iterdir():
             if channel_dir.is_dir():
-                # Get today's content
-                today = datetime.now().strftime('%Y-%m-%d')
-                today_dir = channel_dir / today
-                
-                if today_dir.exists():
-                    for content_file in today_dir.glob("*_unified_*.json"):
-                        try:
-                            with open(content_file, 'r') as f:
-                                content = json.load(f)
-                                content['platform'] = 'youtube'
-                                content['content_file'] = str(content_file)
-                                youtube_content.append(content)
-                        except Exception as e:
-                            print(f"   ❌ Error reading {content_file}: {e}")
+                for date_str in target_dates:
+                    date_dir = channel_dir / date_str
+                    
+                    if date_dir.exists():
+                        for content_file in date_dir.glob("*_unified_*.json"):
+                            try:
+                                with open(content_file, 'r') as f:
+                                    content = json.load(f)
+                                    content['platform'] = 'youtube'
+                                    content['content_file'] = str(content_file)
+                                    
+                                    # Add content age calculation
+                                    content['content_age_days'] = self._calculate_content_age(content)
+                                    
+                                    youtube_content.append(content)
+                            except Exception as e:
+                                print(f"   ❌ Error reading {content_file}: {e}")
         
         return youtube_content
+    
+    def _parse_date_range(self, date_range: str) -> List[str]:
+        """Parse date range string and return list of date strings"""
+        
+        now = datetime.now()
+        
+        if date_range == "today":
+            return [now.strftime('%Y-%m-%d')]
+        elif date_range == "yesterday":
+            yesterday = now - timedelta(days=1)
+            return [yesterday.strftime('%Y-%m-%d')]
+        elif date_range == "last_3_days":
+            dates = []
+            for i in range(3):
+                date_str = (now - timedelta(days=i)).strftime('%Y-%m-%d')
+                dates.append(date_str)
+            return dates
+        elif date_range == "last_week" or date_range == "week":
+            dates = []
+            for i in range(7):
+                date_str = (now - timedelta(days=i)).strftime('%Y-%m-%d')
+                dates.append(date_str)
+            return dates
+        elif date_range == "last_2_weeks":
+            dates = []
+            for i in range(14):
+                date_str = (now - timedelta(days=i)).strftime('%Y-%m-%d')
+                dates.append(date_str)
+            return dates
+        else:
+            # Default to last 7 days for any unrecognized range
+            dates = []
+            for i in range(7):
+                date_str = (now - timedelta(days=i)).strftime('%Y-%m-%d')
+                dates.append(date_str)
+            return dates
+    
+    def _calculate_content_age(self, content: Dict[str, Any]) -> float:
+        """Calculate content age in days from published date"""
+        
+        # Try to get published date from different possible fields
+        published_date_str = content.get('published_date') or content.get('published') or content.get('queued_at')
+        
+        if not published_date_str:
+            # If no date available, assume very old (low priority)
+            return 999.0
+        
+        try:
+            # Parse the date string (handle various formats)
+            if published_date_str.endswith('Z'):
+                published_date = datetime.fromisoformat(published_date_str.replace('Z', '+00:00'))
+            elif '+' in published_date_str or published_date_str.endswith('00:00'):
+                published_date = datetime.fromisoformat(published_date_str)
+            else:
+                # Fallback: assume UTC if no timezone info
+                published_date = datetime.fromisoformat(published_date_str).replace(tzinfo=timezone.utc)
+            
+            # Calculate age in days
+            now = datetime.now(timezone.utc)
+            age_delta = now - published_date.replace(tzinfo=timezone.utc)
+            age_days = age_delta.total_seconds() / (24 * 3600)  # Convert to days
+            
+            return max(0.0, age_days)  # Ensure non-negative
+            
+        except (ValueError, AttributeError) as e:
+            print(f"   ⚠️ Error parsing date '{published_date_str}': {e}")
+            return 999.0  # Treat as very old if parsing fails
     
     def _collect_github_content(self) -> List[Dict[str, Any]]:
         """Collect recent GitHub content (placeholder)"""
@@ -120,17 +222,46 @@ class IntelligenceDigestGenerator:
         return []
     
     def _score_and_rank_content(self, content_items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Score and rank content based on user preferences and quality"""
+        """Score and rank content based on priority topics and quality"""
         
-        scored_items = []
-        
-        for item in content_items:
-            score = self._calculate_content_score(item)
-            item['intelligence_score'] = score
-            scored_items.append(item)
-        
-        # Sort by score descending
-        return sorted(scored_items, key=lambda x: x.get('intelligence_score', 0), reverse=True)
+        if self.topic_scorer and TOPIC_SCORING_AVAILABLE:
+            print("🎯 Using priority topic scoring engine")
+            
+            # Use the advanced topic scoring engine
+            scored_objects = self.topic_scorer.score_content_batch(content_items)
+            
+            # Convert back to dict format with enhanced scoring
+            scored_items = []
+            for scored_obj in scored_objects:
+                # Find original item
+                original_item = None
+                for item in content_items:
+                    if (item.get('title', '') == scored_obj.title and 
+                        item.get('url', '') == scored_obj.url):
+                        original_item = item
+                        break
+                
+                if original_item:
+                    # Add priority scoring data to original item
+                    original_item['intelligence_score'] = scored_obj.final_score
+                    original_item['priority_score'] = scored_obj.priority_score
+                    original_item['detected_priority_topics'] = scored_obj.detected_priority_topics
+                    original_item['score_breakdown'] = scored_obj.score_breakdown
+                    scored_items.append(original_item)
+            
+            print(f"   📊 Scored {len(scored_items)} items with priority topic weighting")
+            return scored_items
+        else:
+            print("⚠️  Using fallback scoring (no priority topics)")
+            
+            # Fallback to original scoring
+            scored_items = []
+            for item in content_items:
+                score = self._calculate_content_score(item)
+                item['intelligence_score'] = score
+                scored_items.append(item)
+            
+            return sorted(scored_items, key=lambda x: x.get('intelligence_score', 0), reverse=True)
     
     def _calculate_content_score(self, item: Dict[str, Any]) -> float:
         """Calculate intelligence score for content item"""
@@ -213,16 +344,29 @@ class IntelligenceDigestGenerator:
         return max(0.5, min(2.0, multiplier))  # Clamp to reasonable range
     
     def _calculate_recency_bonus(self, item: Dict[str, Any]) -> float:
-        """Calculate recency bonus for content"""
+        """Calculate recency bonus based on content age"""
         
-        # For now, give small bonus to all items (they're all recent by definition)
-        return 0.05
+        content_age = item.get('content_age_days', 999.0)
+        
+        # Fresh content (≤1 day) gets maximum bonus
+        if content_age <= 1.0:
+            return 0.2
+        # Recent content (≤3 days) gets good bonus  
+        elif content_age <= 3.0:
+            return 0.1
+        # Week-old content (≤7 days) gets small bonus
+        elif content_age <= 7.0:
+            return 0.05
+        # Older content gets no bonus
+        else:
+            return 0.0
     
     def _create_digest_sections(self, scored_content: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Create structured digest sections"""
+        """Create structured digest sections with priority topic highlighting"""
         
         sections = {
             "top_priority": [],
+            "priority_topics": {},
             "by_platform": {},
             "by_topic": {},
             "recommended_actions": []
@@ -235,11 +379,44 @@ class IntelligenceDigestGenerator:
                 "source": item.get('channel') or item.get('source_name', 'Unknown'),
                 "platform": item.get('platform', 'unknown'),
                 "score": item.get('intelligence_score', 0),
+                "priority_score": item.get('priority_score', 0),
+                "detected_priority_topics": item.get('detected_priority_topics', []),
                 "url": item.get('video_url') or item.get('url', ''),
-                "topics": item.get('topics', [])
+                "topics": item.get('topics', []),
+                "content_age_days": item.get('content_age_days', 999.0)
             }
             for item in scored_content if item.get('intelligence_score', 0) > 0.8
         ]
+        
+        # Group by detected priority topics
+        if self.topic_scorer and TOPIC_SCORING_AVAILABLE:
+            priority_topic_groups = {}
+            for item in scored_content:
+                detected_topics = item.get('detected_priority_topics', [])
+                for topic in detected_topics:
+                    if topic not in priority_topic_groups:
+                        priority_topic_groups[topic] = []
+                    priority_topic_groups[topic].append(item)
+            
+            # Create priority topic sections
+            for topic, items in priority_topic_groups.items():
+                # Sort by priority score
+                items_sorted = sorted(items, key=lambda x: x.get('priority_score', 0), reverse=True)
+                sections["priority_topics"][topic] = {
+                    "count": len(items),
+                    "avg_priority_score": sum(item.get('priority_score', 0) for item in items) / len(items),
+                    "top_items": [
+                        {
+                            "title": item.get('title', 'Unknown Title')[:60] + "...",
+                            "source": item.get('channel') or item.get('source_name', 'Unknown'),
+                            "platform": item.get('platform', 'unknown'),
+                            "priority_score": item.get('priority_score', 0),
+                            "url": item.get('video_url') or item.get('url', ''),
+                            "content_age_days": item.get('content_age_days', 999.0)
+                        }
+                        for item in items_sorted[:5]  # Top 5 per priority topic
+                    ]
+                }
         
         # Group by platform
         for item in scored_content:
@@ -250,10 +427,12 @@ class IntelligenceDigestGenerator:
             sections["by_platform"][platform].append({
                 "title": item.get('title', 'Unknown Title')[:60] + "...",
                 "source": item.get('channel') or item.get('source_name', 'Unknown'),
-                "score": item.get('intelligence_score', 0)
+                "score": item.get('intelligence_score', 0),
+                "priority_score": item.get('priority_score', 0),
+                "detected_priority_topics": item.get('detected_priority_topics', [])
             })
         
-        # Group by topic
+        # Group by topic (general topics, not priority topics)
         topic_counts = {}
         for item in scored_content:
             topics = item.get('topics', [])
@@ -269,10 +448,12 @@ class IntelligenceDigestGenerator:
             sections["by_topic"][topic] = {
                 "count": len(items),
                 "avg_score": sum(item.get('intelligence_score', 0) for item in items) / len(items),
+                "priority_items_count": len([item for item in items if item.get('detected_priority_topics', [])]),
                 "top_items": [
                     {
                         "title": item.get('title', 'Unknown Title')[:50] + "...",
-                        "source": item.get('channel') or item.get('source_name', 'Unknown')
+                        "source": item.get('channel') or item.get('source_name', 'Unknown'),
+                        "detected_priority_topics": item.get('detected_priority_topics', [])
                     }
                     for item in sorted(items, key=lambda x: x.get('intelligence_score', 0), reverse=True)[:3]
                 ]
@@ -353,11 +534,15 @@ class IntelligenceDigestGenerator:
         return recommendations
     
     def _save_digest(self, digest: Dict[str, Any], digest_type: str) -> None:
-        """Save digest to file"""
+        """Save digest to file with history tracking"""
         
         # Create digest directory
         digest_dir = self.base_path / "daily-digest" / "generated"
         digest_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create history directory
+        history_dir = digest_dir / "history"
+        history_dir.mkdir(parents=True, exist_ok=True)
         
         # Save with timestamp
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
@@ -371,7 +556,150 @@ class IntelligenceDigestGenerator:
         with open(latest_file, 'w') as f:
             json.dump(digest, f, indent=2)
         
+        # Update digest history index
+        self._update_digest_history(digest, digest_type, timestamp)
+        
         print(f"💾 Digest saved to: {digest_file}")
+    
+    def _update_digest_history(self, digest: Dict[str, Any], digest_type: str, timestamp: str) -> None:
+        """Update digest history index for day-over-day comparisons"""
+        
+        history_dir = self.base_path / "daily-digest" / "generated" / "history"
+        history_index_file = history_dir / "digest_history.json"
+        
+        # Load existing history
+        if history_index_file.exists():
+            with open(history_index_file, 'r') as f:
+                history_index = json.load(f)
+        else:
+            history_index = {"digests": []}
+        
+        # Extract key metrics for history tracking
+        metadata = digest.get('metadata', {})
+        summary = digest.get('summary', {})
+        
+        history_entry = {
+            "timestamp": timestamp,
+            "digest_type": digest_type,
+            "date_range": metadata.get('date_range', 'unknown'),
+            "generated_at": metadata.get('generated_at'),
+            "total_items": summary.get('total_items', 0),
+            "high_quality_items": summary.get('high_quality_items', 0),
+            "average_score": summary.get('average_quality_score', 0),
+            "recommendation": summary.get('recommendation', ''),
+            "top_sources": summary.get('top_sources', []),
+            "file_path": f"{digest_type}_{timestamp}.json"
+        }
+        
+        # Add to history (keep last 90 days)
+        history_index["digests"].append(history_entry)
+        
+        # Sort by timestamp and keep last 90 entries
+        history_index["digests"].sort(key=lambda x: x["timestamp"], reverse=True)
+        history_index["digests"] = history_index["digests"][:90]
+        
+        # Update metadata
+        history_index["last_updated"] = datetime.now(timezone.utc).isoformat()
+        history_index["total_digests"] = len(history_index["digests"])
+        
+        # Save updated history
+        with open(history_index_file, 'w') as f:
+            json.dump(history_index, f, indent=2)
+        
+        print(f"📈 History updated: {len(history_index['digests'])} digests tracked")
+    
+    def get_digest_history(self, days: int = 7) -> List[Dict[str, Any]]:
+        """Get digest history for the last N days"""
+        
+        history_dir = self.base_path / "daily-digest" / "generated" / "history"
+        history_index_file = history_dir / "digest_history.json"
+        
+        if not history_index_file.exists():
+            return []
+        
+        with open(history_index_file, 'r') as f:
+            history_index = json.load(f)
+        
+        # Filter to last N days
+        cutoff_date = datetime.now() - timedelta(days=days)
+        cutoff_timestamp = cutoff_date.strftime('%Y-%m-%d')
+        
+        recent_digests = [
+            entry for entry in history_index.get("digests", [])
+            if entry["timestamp"] >= cutoff_timestamp
+        ]
+        
+        return recent_digests
+    
+    def compare_with_yesterday(self) -> Dict[str, Any]:
+        """Compare today's digest with yesterday's for trends"""
+        
+        history = self.get_digest_history(days=2)
+        
+        if len(history) < 2:
+            return {"comparison": "insufficient_data", "message": "Need at least 2 days of data for comparison"}
+        
+        # Get today's and yesterday's digests (system_wide, today)
+        today_digests = [d for d in history if d["date_range"] == "today" and d["digest_type"] == "system_wide"]
+        
+        if len(today_digests) < 2:
+            return {"comparison": "insufficient_data", "message": "Need today and yesterday system_wide digests"}
+        
+        today = today_digests[0]  # Most recent
+        yesterday = today_digests[1]  # Previous
+        
+        # Calculate trends
+        item_trend = today["total_items"] - yesterday["total_items"]
+        quality_trend = today["high_quality_items"] - yesterday["high_quality_items"]
+        score_trend = today["average_score"] - yesterday["average_score"]
+        
+        comparison = {
+            "comparison": "success",
+            "today": {
+                "total_items": today["total_items"],
+                "high_quality_items": today["high_quality_items"],
+                "average_score": today["average_score"]
+            },
+            "yesterday": {
+                "total_items": yesterday["total_items"],
+                "high_quality_items": yesterday["high_quality_items"],
+                "average_score": yesterday["average_score"]
+            },
+            "trends": {
+                "item_change": item_trend,
+                "quality_change": quality_trend,
+                "score_change": round(score_trend, 3),
+                "trend_summary": self._generate_trend_summary(item_trend, quality_trend, score_trend)
+            },
+            "generated_at": datetime.now(timezone.utc).isoformat()
+        }
+        
+        return comparison
+    
+    def _generate_trend_summary(self, item_trend: int, quality_trend: int, score_trend: float) -> str:
+        """Generate human-readable trend summary"""
+        
+        trends = []
+        
+        if item_trend > 0:
+            trends.append(f"+{item_trend} more items")
+        elif item_trend < 0:
+            trends.append(f"{item_trend} fewer items")
+        
+        if quality_trend > 0:
+            trends.append(f"+{quality_trend} more high-quality")
+        elif quality_trend < 0:
+            trends.append(f"{quality_trend} fewer high-quality")
+        
+        if score_trend > 0.05:
+            trends.append(f"quality up {score_trend:.2f}")
+        elif score_trend < -0.05:
+            trends.append(f"quality down {abs(score_trend):.2f}")
+        
+        if not trends:
+            return "Similar to yesterday"
+        
+        return "; ".join(trends)
     
     def generate_markdown_digest(self, digest: Dict[str, Any]) -> str:
         """Generate markdown version of digest"""
@@ -424,41 +752,66 @@ class IntelligenceDigestGenerator:
         return md_content
 
 def main():
-    """Generate and display daily digest"""
+    """Generate and display daily digest with flexible date ranges and history tracking"""
     generator = IntelligenceDigestGenerator()
     
-    print("📰 Daily Intelligence Digest Generator")
-    print("=" * 50)
+    print("📰 Enhanced Daily Intelligence Digest Generator v2.0")
+    print("=" * 60)
     
-    # Generate digest
-    digest = generator.generate_daily_digest("system_wide")
+    # Test multiple date ranges to demonstrate new functionality
+    test_ranges = ["today", "yesterday", "last_3_days"]
     
-    # Display summary
-    summary = digest.get('summary', {})
-    sections = digest.get('sections', {})
+    for date_range in test_ranges:
+        print(f"\n🔍 Testing {date_range} digest...")
+        
+        # Generate digest for this date range
+        digest = generator.generate_daily_digest("system_wide", date_range=date_range)
+        
+        # Display summary
+        summary = digest.get('summary', {})
+        sections = digest.get('sections', {})
+        metadata = digest.get('metadata', {})
+        
+        print(f"\n📊 {date_range.title()} Digest Summary:")
+        print(f"   Date range: {metadata.get('date_range', 'unknown')}")
+        print(f"   Total items: {summary.get('total_items', 0)}")
+        print(f"   High quality: {summary.get('high_quality_items', 0)}")
+        print(f"   Average score: {summary.get('average_quality_score', 0):.3f}")
+        print(f"   {summary.get('recommendation', 'No recommendation')}")
+        
+        # Show top priority with content age
+        top_priority = sections.get('top_priority', [])
+        if top_priority:
+            print(f"\n🌟 Top Priority Items ({date_range}):")
+            for item in top_priority[:2]:  # Show top 2 for brevity
+                age = item.get('content_age_days', 'unknown')
+                if isinstance(age, (int, float)):
+                    age_str = f"{age:.1f}d"
+                else:
+                    age_str = str(age)
+                print(f"   • {item['title'][:40]}... ({item['source']}) - Score: {item['score']:.3f}, Age: {age_str}")
+        
+        print("-" * 60)
     
-    print(f"\n📊 Digest Summary:")
-    print(f"   Total items: {summary.get('total_items', 0)}")
-    print(f"   High quality: {summary.get('high_quality_items', 0)}")
-    print(f"   Average score: {summary.get('average_quality_score', 0):.3f}")
-    print(f"   {summary.get('recommendation', 'No recommendation')}")
+    # Test history tracking
+    print(f"\n📈 Testing History Tracking:")
+    history = generator.get_digest_history(days=7)
+    print(f"   Found {len(history)} digest entries in last 7 days")
     
-    # Show top priority
-    top_priority = sections.get('top_priority', [])
-    if top_priority:
-        print(f"\n🌟 Top Priority Items:")
-        for item in top_priority[:3]:
-            print(f"   • {item['title'][:50]}... ({item['source']}) - {item['score']:.3f}")
+    # Test day-over-day comparison
+    comparison = generator.compare_with_yesterday()
+    if comparison.get("comparison") == "success":
+        print(f"\n📊 Day-over-Day Comparison:")
+        trends = comparison["trends"]
+        print(f"   Today: {comparison['today']['total_items']} items, {comparison['today']['high_quality_items']} high-quality")
+        print(f"   Yesterday: {comparison['yesterday']['total_items']} items, {comparison['yesterday']['high_quality_items']} high-quality") 
+        print(f"   Trend: {trends['trend_summary']}")
+    else:
+        print(f"\n📊 Day-over-Day Comparison: {comparison.get('message', 'No comparison available')}")
     
-    # Show platform breakdown
-    by_platform = sections.get('by_platform', {})
-    if by_platform:
-        print(f"\n📊 Platform Breakdown:")
-        for platform, items in by_platform.items():
-            print(f"   {platform}: {len(items)} items")
-    
-    # Generate markdown version
-    markdown = generator.generate_markdown_digest(digest)
+    # Generate latest digest (today's) for markdown
+    latest_digest = generator.generate_daily_digest("system_wide", date_range="today")
+    markdown = generator.generate_markdown_digest(latest_digest)
     
     # Save markdown
     md_file = Path(__file__).parent / "generated" / "latest_digest.md"
@@ -467,8 +820,15 @@ def main():
     with open(md_file, 'w') as f:
         f.write(markdown)
     
-    print(f"\n📝 Markdown digest saved to: {md_file}")
-    print(f"\n✅ Daily digest generation complete!")
+    print(f"\n📝 Latest digest markdown saved to: {md_file}")
+    print(f"\n✅ Enhanced daily digest generation complete!")
+    print(f"\n💡 New capabilities:")
+    print(f"   • Flexible date ranges (today, yesterday, last_3_days, week)")
+    print(f"   • Content age scoring and prioritization") 
+    print(f"   • Published date extraction from RSS feeds")
+    print(f"   • Historical digest access and comparison")
+    print(f"   • Digest history tracking (90-day retention)")
+    print(f"   • Day-over-day trend analysis")
 
 if __name__ == "__main__":
     main()

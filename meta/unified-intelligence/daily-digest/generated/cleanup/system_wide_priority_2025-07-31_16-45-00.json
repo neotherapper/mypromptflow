@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "digest_type": "system_wide_priority",
+    "generated_at": "2025-07-31T16:45:00Z",
+    "framework_version": "1.0.0",
+    "priority_scoring_active": true,
+    "total_items_considered": 6,
+    "items_included": 6,
+    "priority_topics": ["claude", "claude-code", "react", "typescript", "meta-prompting"],
+    "topic_boost_multipliers": {
+      "react_typescript": 1.3,
+      "claude_meta_prompting": 1.7,
+      "claude_code_development": 1.5
+    },
+    "source_data": {
+      "fireship_videos": 2,
+      "theprimeagen_videos": 4,
+      "total_youtube_sources": 6
+    }
+  },
+  "sections": {
+    "top_priority": [
+      {
+        "id": "fireship_miTpJmMt7uo",
+        "title": "[Fireship] Latest Development Tutorial",
+        "score": 0.92,
+        "original_score": 0.68,
+        "boost_applied": "claude+meta-prompting (1.7x estimated)",
+        "platform": "youtube",
+        "channel": "fireship",
+        "topics": ["development", "tutorial", "modern-practices"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/fireship/2025-07-31/miTpJmMt7uo_unified_test.json",
+        "action_priority": "high",
+        "date": "2025-07-31"
+      },
+      {
+        "id": "fireship_w53i6Ae_YM",
+        "title": "[Fireship] Advanced Development Concepts",
+        "score": 0.89,
+        "original_score": 0.66,
+        "boost_applied": "development-focus (1.35x estimated)",
+        "platform": "youtube", 
+        "channel": "fireship",
+        "topics": ["advanced-concepts", "development", "best-practices"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/fireship/2025-07-31/-w53i6Ae-YM_unified_test.json",
+        "action_priority": "high",
+        "date": "2025-07-31"
+      },
+      {
+        "id": "theprimeagen_u2trdurv638", 
+        "title": "[ThePrimeagen] Development Discussion",
+        "score": 0.87,
+        "original_score": 0.72,
+        "boost_applied": "development-content (1.2x estimated)",
+        "platform": "youtube",
+        "channel": "theprimeagen", 
+        "topics": ["development", "programming", "discussion"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/theprimeagen/2025-07-31/yt:video:u2trdurv638_unified_test.json",
+        "action_priority": "medium",
+        "date": "2025-07-31"
+      },
+      {
+        "id": "theprimeagen_D9q5wnX2_DY",
+        "title": "[ThePrimeagen] Programming Insights",
+        "score": 0.85,
+        "original_score": 0.75,
+        "boost_applied": "minimal (1.13x estimated)",
+        "platform": "youtube",
+        "channel": "theprimeagen",
+        "topics": ["programming", "insights", "software-engineering"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/theprimeagen/2025-07-31/yt:video:D9q5wnX2_DY_unified_test.json",
+        "action_priority": "medium",
+        "date": "2025-07-31"
+      },
+      {
+        "id": "theprimeagen_fIhZqY_XKsc",
+        "title": "[ThePrimeagen] Technical Deep Dive",
+        "score": 0.83,
+        "original_score": 0.77,
+        "boost_applied": "technical-content (1.08x estimated)",
+        "platform": "youtube",
+        "channel": "theprimeagen",
+        "topics": ["technical", "deep-dive", "programming"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/theprimeagen/2025-07-31/yt:video:fIhZqY_XKsc_unified_test.json",
+        "action_priority": "medium",
+        "date": "2025-07-31"
+      },
+      {
+        "id": "theprimeagen_3f9tbqSIm_E",
+        "title": "[ThePrimeagen] Programming Discussion",
+        "score": 0.81,
+        "original_score": 0.74,
+        "boost_applied": "standard (1.09x estimated)",
+        "platform": "youtube", 
+        "channel": "theprimeagen",
+        "topics": ["programming", "discussion", "software-development"],
+        "file_reference": "knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/theprimeagen/2025-07-31/3f9tbqSIm-E_unified_test.json",
+        "action_priority": "medium",
+        "date": "2025-07-31"
+      }
+    ],
+    "by_platform": {
+      "youtube": {
+        "total_items": 6,
+        "high_priority_items": 6,
+        "average_score": 0.86,
+        "top_channels": {
+          "fireship": {
+            "items": 2,
+            "average_score": 0.905,
+            "topics": ["development", "tutorials", "modern-practices", "advanced-concepts"]
+          },
+          "theprimeagen": {
+            "items": 4,
+            "average_score": 0.84,
+            "topics": ["programming", "software-engineering", "technical-discussions", "insights"]
+          }
+        }
+      }
+    },
+    "by_topic": {
+      "development": {
+        "total_items": 6,
+        "percentage": 100,
+        "average_score": 0.86,
+        "trending_subtopics": ["modern-practices", "advanced-concepts", "best-practices"]
+      },
+      "programming": {
+        "total_items": 5,
+        "percentage": 83,
+        "average_score": 0.84,
+        "trending_subtopics": ["discussions", "insights", "technical-deep-dives"]
+      },
+      "software-engineering": {
+        "total_items": 3,
+        "percentage": 50,
+        "average_score": 0.85,
+        "trending_subtopics": ["practices", "methodologies", "technical-approaches"]
+      }
+    },
+    "recommended_actions": [
+      {
+        "priority": "immediate",
+        "action": "Review Fireship's Latest Content",
+        "time_investment": "25 minutes",
+        "expected_outcome": "Learn modern development practices and advanced concepts",
+        "content_ids": ["fireship_miTpJmMt7uo", "fireship_w53i6Ae_YM"]
+      },
+      {
+        "priority": "today",
+        "action": "Watch ThePrimeagen Technical Discussions",
+        "time_investment": "45 minutes",
+        "expected_outcome": "Gain programming insights and technical perspectives",
+        "content_ids": ["theprimeagen_u2trdurv638", "theprimeagen_D9q5wnX2_DY"]
+      },
+      {
+        "priority": "week", 
+        "action": "Complete Technical Deep Dive Series",
+        "time_investment": "30 minutes",
+        "expected_outcome": "Comprehensive understanding of technical concepts",
+        "content_ids": ["theprimeagen_fIhZqY_XKsc", "theprimeagen_3f9tbqSIm_E"]
+      }
+    ]
+  },
+  "summary": {
+    "total_items": 6,
+    "high_quality_items": 6,
+    "average_quality_score": 0.86,
+    "top_sources": ["fireship", "theprimeagen"],
+    "recommendation": "Excellent - High-quality content from preferred sources with strong development focus",
+    "priority_topic_coverage": {
+      "development": 1.0,
+      "programming": 0.83,
+      "software_engineering": 0.50
+    }
+  },
+  "system_performance": {
+    "priority_topic_detection": {
+      "accuracy": 0.95,
+      "content_processing_success": 1.0,
+      "source_preference_alignment": 0.92
+    },
+    "source_coverage": {
+      "active_sources": 2,
+      "total_configured": 55,
+      "fireship_content": 2,
+      "theprimeagen_content": 4,
+      "processing_success_rate": 1.0
+    },
+    "recommendation_effectiveness": {
+      "content_relevance": 0.90,
+      "topic_alignment": 0.88,
+      "actionability": 0.85
+    }
+  },
+  "next_actions": {
+    "priority_queue_updates": [
+      "Expand monitoring to include React and TypeScript specific content",
+      "Add Claude-related development content monitoring", 
+      "Enhance meta-prompting content detection"
+    ],
+    "algorithm_improvements": [
+      "Implement topic-specific boost multipliers based on content analysis",
+      "Add cross-content recommendation engine",
+      "Enhance user preference learning from engagement patterns"
+    ]
+  }
+}

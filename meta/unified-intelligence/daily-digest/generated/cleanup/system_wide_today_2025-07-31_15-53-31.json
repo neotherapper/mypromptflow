@@ -1,0 +1,242 @@
+{
+  "metadata": {
+    "digest_type": "system_wide",
+    "date_range": "today",
+    "generated_at": "2025-07-31T12:53:31.684242+00:00",
+    "framework_version": "1.0.0",
+    "total_items_considered": 6,
+    "items_included": 6
+  },
+  "sections": {
+    "top_priority": [
+      {
+        "title": "The dating app that doxxed 72,000 women...",
+        "source": "Fireship",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/watch?v=miTpJmMt7uo",
+        "topics": [
+          "programming",
+          "web-development",
+          "tech-trends",
+          "tutorials"
+        ],
+        "content_age_days": 0.11634326780092594
+      },
+      {
+        "title": "Alibaba is coming for Claude...",
+        "source": "Fireship",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/watch?v=-w53i6Ae-YM",
+        "topics": [
+          "programming",
+          "web-development",
+          "tech-trends",
+          "tutorials"
+        ],
+        "content_age_days": 0.1163432680787037
+      },
+      {
+        "title": "Imposter Syndrome",
+        "source": "ThePrimeagen",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/shorts/u2trdurv638",
+        "topics": [
+          "software-engineering",
+          "vim",
+          "programming",
+          "development-workflow"
+        ],
+        "content_age_days": 0.11634326868055554
+      },
+      {
+        "title": "AI Scuffed Programming",
+        "source": "ThePrimeagen",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/shorts/D9q5wnX2_DY",
+        "topics": [
+          "software-engineering",
+          "vim",
+          "programming",
+          "development-workflow"
+        ],
+        "content_age_days": 0.11634326888888889
+      },
+      {
+        "title": "You Have Time...",
+        "source": "ThePrimeagen",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/shorts/fIhZqY_XKsc",
+        "topics": [
+          "software-engineering",
+          "vim",
+          "programming",
+          "development-workflow"
+        ],
+        "content_age_days": 0.11634326917824073
+      },
+      {
+        "title": "1000 Players - One Game of Doom",
+        "source": "ThePrimeagen",
+        "platform": "youtube",
+        "score": 1.0,
+        "url": "https://www.youtube.com/watch?v=3f9tbqSIm-E",
+        "topics": [
+          "software-engineering",
+          "vim",
+          "programming",
+          "development-workflow"
+        ],
+        "content_age_days": 0.1163432694212963
+      }
+    ],
+    "by_platform": {
+      "youtube": [
+        {
+          "title": "The dating app that doxxed 72,000 women......",
+          "source": "Fireship",
+          "score": 1.0
+        },
+        {
+          "title": "Alibaba is coming for Claude......",
+          "source": "Fireship",
+          "score": 1.0
+        },
+        {
+          "title": "Imposter Syndrome...",
+          "source": "ThePrimeagen",
+          "score": 1.0
+        },
+        {
+          "title": "AI Scuffed Programming...",
+          "source": "ThePrimeagen",
+          "score": 1.0
+        },
+        {
+          "title": "You Have Time......",
+          "source": "ThePrimeagen",
+          "score": 1.0
+        },
+        {
+          "title": "1000 Players - One Game of Doom...",
+          "source": "ThePrimeagen",
+          "score": 1.0
+        }
+      ]
+    },
+    "by_topic": {
+      "programming": {
+        "count": 6,
+        "avg_score": 1.0,
+        "top_items": [
+          {
+            "title": "The dating app that doxxed 72,000 women......",
+            "source": "Fireship"
+          },
+          {
+            "title": "Alibaba is coming for Claude......",
+            "source": "Fireship"
+          },
+          {
+            "title": "Imposter Syndrome...",
+            "source": "ThePrimeagen"
+          }
+        ]
+      },
+      "software-engineering": {
+        "count": 4,
+        "avg_score": 1.0,
+        "top_items": [
+          {
+            "title": "Imposter Syndrome...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "AI Scuffed Programming...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "You Have Time......",
+            "source": "ThePrimeagen"
+          }
+        ]
+      },
+      "vim": {
+        "count": 4,
+        "avg_score": 1.0,
+        "top_items": [
+          {
+            "title": "Imposter Syndrome...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "AI Scuffed Programming...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "You Have Time......",
+            "source": "ThePrimeagen"
+          }
+        ]
+      },
+      "development-workflow": {
+        "count": 4,
+        "avg_score": 1.0,
+        "top_items": [
+          {
+            "title": "Imposter Syndrome...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "AI Scuffed Programming...",
+            "source": "ThePrimeagen"
+          },
+          {
+            "title": "You Have Time......",
+            "source": "ThePrimeagen"
+          }
+        ]
+      },
+      "web-development": {
+        "count": 2,
+        "avg_score": 1.0,
+        "top_items": [
+          {
+            "title": "The dating app that doxxed 72,000 women......",
+            "source": "Fireship"
+          },
+          {
+            "title": "Alibaba is coming for Claude......",
+            "source": "Fireship"
+          }
+        ]
+      }
+    },
+    "recommended_actions": []
+  },
+  "summary": {
+    "total_items": 6,
+    "high_quality_items": 6,
+    "average_quality_score": 1.0,
+    "top_sources": [
+      {
+        "source": "ThePrimeagen",
+        "items": 4
+      },
+      {
+        "source": "Fireship",
+        "items": 2
+      }
+    ],
+    "recommendation": "Excellent day for learning! Multiple high-quality items available."
+  },
+  "recommendations": [
+    "\ud83c\udf1f Priority: 'The dating app that doxxed 72,000 women......' from Fireship",
+    "\ud83d\udcda 6 high-quality items available for deep learning",
+    "\ud83c\udfaf Strong focus on programming today (6 items)"
+  ]
+}

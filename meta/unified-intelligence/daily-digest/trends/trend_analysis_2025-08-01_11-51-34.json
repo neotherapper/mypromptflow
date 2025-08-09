@@ -1,0 +1,154 @@
+{
+  "generated_at": "2025-08-01T08:51:34.233436+00:00",
+  "analysis_period_days": 30,
+  "reports_analyzed": 2,
+  "date_range": {
+    "start": "2025-08-01T08:48:21.596983+00:00",
+    "end": "2025-08-01T08:51:29.472449+00:00"
+  },
+  "channel_trends": [
+    {
+      "channel_id": "fireship",
+      "channel_name": "Fireship",
+      "performance_trend": "stable",
+      "key_metrics": {
+        "quality_score": {
+          "metric_name": "quality_score",
+          "current_value": 0.325,
+          "previous_value": 0.325,
+          "change_percentage": 0.0,
+          "trend_direction": "stable",
+          "confidence_level": 0.0,
+          "time_period": "historical_comparison"
+        },
+        "high_value_videos": {
+          "metric_name": "high_value_videos",
+          "current_value": 0,
+          "previous_value": 0,
+          "change_percentage": 0.0,
+          "trend_direction": "stable",
+          "confidence_level": 0.0,
+          "time_period": "historical_comparison"
+        },
+        "content_frequency": {
+          "metric_name": "content_frequency",
+          "current_value": 1.4,
+          "previous_value": 1.4,
+          "change_percentage": 0.0,
+          "trend_direction": "stable",
+          "confidence_level": 0.0,
+          "time_period": "historical_comparison"
+        }
+      },
+      "content_trends": [],
+      "strategic_recommendations": [
+        "Lower quality threshold temporarily to capture more content",
+        "Review priority topic alignments"
+      ],
+      "priority_level": "low"
+    }
+  ],
+  "content_trends": [
+    {
+      "topic": "ai",
+      "frequency": 1,
+      "growth_rate": 0.0,
+      "engagement_score": 0.0,
+      "quality_score": 0.0,
+      "channels_covering": [
+        "Fireship"
+      ],
+      "trend_strength": "weak",
+      "recommendation": "Stable trend - maintain current monitoring level for 'ai'"
+    }
+  ],
+  "system_trends": {
+    "total_videos_tracked": {
+      "metric_name": "total_videos_tracked",
+      "current_value": 15,
+      "previous_value": 15,
+      "change_percentage": 0.0,
+      "trend_direction": "stable",
+      "confidence_level": 0.0,
+      "time_period": "historical_comparison"
+    },
+    "total_high_value_videos": {
+      "metric_name": "total_high_value_videos",
+      "current_value": 0,
+      "previous_value": 0,
+      "change_percentage": 0.0,
+      "trend_direction": "stable",
+      "confidence_level": 0.0,
+      "time_period": "historical_comparison"
+    },
+    "high_value_percentage": {
+      "metric_name": "high_value_percentage",
+      "current_value": 0.0,
+      "previous_value": 0.0,
+      "change_percentage": 0.0,
+      "trend_direction": "stable",
+      "confidence_level": 0.0,
+      "time_period": "historical_comparison"
+    },
+    "average_quality_score": {
+      "metric_name": "average_quality_score",
+      "current_value": 0.325,
+      "previous_value": 0.325,
+      "change_percentage": 0.0,
+      "trend_direction": "stable",
+      "confidence_level": 0.0,
+      "time_period": "historical_comparison"
+    },
+    "channels_with_high_value_content": {
+      "metric_name": "channels_with_high_value_content",
+      "current_value": 0,
+      "previous_value": 0,
+      "change_percentage": 0.0,
+      "trend_direction": "stable",
+      "confidence_level": 0.0,
+      "time_period": "historical_comparison"
+    },
+    "overall_health": {
+      "status": "declining",
+      "score": 0.0,
+      "positive_trends": 0,
+      "total_trends": 5
+    }
+  },
+  "strategic_recommendations": [
+    {
+      "category": "system_health",
+      "priority": "critical",
+      "title": "Address System Performance Decline",
+      "description": "Overall system health declining (0.0% positive trends)",
+      "action_items": [
+        "Review and update quality scoring algorithms",
+        "Audit channel configurations for accuracy",
+        "Consider expanding data collection sources"
+      ],
+      "expected_impact": "System-wide performance improvement"
+    }
+  ],
+  "trend_summary": {
+    "channel_trends": {
+      "total_channels_analyzed": 1,
+      "improving_channels": 0,
+      "declining_channels": 0,
+      "stable_channels": 1,
+      "improvement_rate": 0.0
+    },
+    "content_trends": {
+      "total_topics_tracked": 1,
+      "growing_topics": 0,
+      "strong_trends": 0,
+      "top_growing_topic": "ai",
+      "average_growth_rate": 0.0
+    },
+    "system_health": {
+      "status": "declining",
+      "health_score": 0.0,
+      "positive_trends": 0,
+      "total_metrics": 5
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "digest_type": "system_wide",
+    "generated_at": "2025-07-31T11:30:15.271989+00:00",
+    "framework_version": "1.0.0",
+    "total_items_considered": 0,
+    "items_included": 0
+  },
+  "sections": {
+    "top_priority": [],
+    "by_platform": {},
+    "by_topic": {},
+    "recommended_actions": []
+  },
+  "summary": {
+    "message": "No content available for today's digest"
+  },
+  "recommendations": [
+    "Run discovery algorithms to find new content sources"
+  ]
+}

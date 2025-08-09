@@ -1,0 +1,21 @@
+{
+  "generated_at": "2025-08-01T08:48:07.433208+00:00",
+  "analysis_time_seconds": 0.0,
+  "total_channels_configured": 23,
+  "channels_analyzed": 1,
+  "channels_with_data": 1,
+  "aggregate_metrics": {
+    "total_videos_tracked": 15,
+    "total_high_value_videos": 0,
+    "high_value_percentage": 0.0,
+    "total_views": 0,
+    "total_engagement": 0,
+    "average_importance_score": 0.638,
+    "average_quality_score": 0.325,
+    "average_content_frequency": 1.4,
+    "channels_with_high_value_content": 0,
+    "most_active_channel": "Fireship",
+    "highest_quality_channel": "Fireship"
+  },
+  "aggregate_insights": [
+    

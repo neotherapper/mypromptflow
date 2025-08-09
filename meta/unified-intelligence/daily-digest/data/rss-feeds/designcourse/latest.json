@@ -1,0 +1,111 @@
+{
+  "channel_id": "designcourse",
+  "collected_at": "2025-08-01T07:52:07.324782+00:00",
+  "item_count": 4,
+  "items": [
+    {
+      "id": "lM9K9D0IZvA",
+      "title": "From Figma to Browser with MCP in Minutes (No Coding)",
+      "url": "https://www.youtube.com/watch?v=lM9K9D0IZvA",
+      "published_date": "2025-07-31T13:15:09+00:00",
+      "updated_date": "2025-08-01T07:14:57+00:00",
+      "author": "DesignCourse",
+      "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "channel_name": "DesignCourse",
+      "description": "",
+      "source_channel": "designcourse",
+      "platform": "youtube",
+      "priority_score": 3.7,
+      "quality_rating": 4.1,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "collected_at": "2025-08-01T07:52:07.324508+00:00",
+      "content_hash": "bbd61c770fdcb36530c278911769dcc1",
+      "content_age_days": 0.7756750539236111
+    },
+    {
+      "id": "RR3NHbpDais",
+      "title": "Webflow and Framer have an AI Problem",
+      "url": "https://www.youtube.com/watch?v=RR3NHbpDais",
+      "published_date": "2025-07-30T14:14:48+00:00",
+      "updated_date": "2025-07-31T07:56:47+00:00",
+      "author": "DesignCourse",
+      "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "channel_name": "DesignCourse",
+      "description": "",
+      "source_channel": "designcourse",
+      "platform": "youtube",
+      "priority_score": 3.7,
+      "quality_rating": 4.1,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "collected_at": "2025-08-01T07:52:07.324530+00:00",
+      "content_hash": "3a2533be432cd8fd70353e173f7254a1",
+      "content_age_days": 1.7342514428587963
+    },
+    {
+      "id": "iK1ilPEkoek",
+      "title": "Microsoft's NEW Vibe Coding Platform: GitHub Spark",
+      "url": "https://www.youtube.com/watch?v=iK1ilPEkoek",
+      "published_date": "2025-07-29T15:24:05+00:00",
+      "updated_date": "2025-07-31T01:12:29+00:00",
+      "author": "DesignCourse",
+      "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "channel_name": "DesignCourse",
+      "description": "",
+      "source_channel": "designcourse",
+      "platform": "youtube",
+      "priority_score": 3.7,
+      "quality_rating": 4.1,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "collected_at": "2025-08-01T07:52:07.324539+00:00",
+      "content_hash": "0da91cfe242d30691a31c2b0fa06c136",
+      "content_age_days": 2.6861380169444447
+    },
+    {
+      "id": "Ycu0wlPf5KA",
+      "title": "Designing Custom Layouts in Figma for MCP - SideBling",
+      "url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+      "published_date": "2025-07-28T13:50:15+00:00",
+      "updated_date": "2025-07-31T01:44:03+00:00",
+      "author": "DesignCourse",
+      "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "channel_name": "DesignCourse",
+      "description": "",
+      "source_channel": "designcourse",
+      "platform": "youtube",
+      "priority_score": 3.7,
+      "quality_rating": 4.1,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "collected_at": "2025-08-01T07:52:07.324547+00:00",
+      "content_hash": "413d8380bb007eaba1a1e5689ea701fe",
+      "content_age_days": 3.7513000539814816
+    }
+  ]
+}

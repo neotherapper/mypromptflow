@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "user_id": "default_user",
+    "last_updated": "2025-08-09T19:42:53.977694+00:00",
+    "total_videos_tracked": 1
+  },
+  "video_states": {
+    "test123": {
+      "video_id": "test123",
+      "video_title": "Test Video",
+      "channel_name": "Test Channel",
+      "watch_status": "unwatched",
+      "watch_progress": 0.0,
+      "personal_rating": null,
+      "personal_notes": "",
+      "tags": [],
+      "added_to_states_at": "2025-08-09T19:42:53.977094+00:00",
+      "last_watched_at": null,
+      "completed_at": null,
+      "estimated_watch_time_minutes": null,
+      "actual_watch_time_minutes": 0.0,
+      "watch_sessions": [],
+      "context": {
+        "added_from": "daily_digest",
+        "learning_goal": "",
+        "project_context": "",
+        "difficulty_perception": null
+      }
+    }
+  }
+}
