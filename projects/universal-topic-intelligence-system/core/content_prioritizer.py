@@ -379,7 +379,9 @@ class DefaultPriorityStrategy(PriorityStrategy):
         
         # Content recency
         if content.published_date:
-            age_hours = (datetime.now() - content.published_date).total_seconds() / 3600
+            # Handle both timezone-aware and naive datetimes
+            now = datetime.now(content.published_date.tzinfo) if content.published_date.tzinfo else datetime.now()
+            age_hours = (now - content.published_date).total_seconds() / 3600
             half_life = context["config"]["recency_decay"]["half_life_hours"]
             content_recency = 0.5 ** (age_hours / half_life)
         else:
@@ -422,7 +424,9 @@ class NewsPriorityStrategy(PriorityStrategy):
         
         # News values recency much higher
         if content.published_date:
-            age_hours = (datetime.now() - content.published_date).total_seconds() / 3600
+            # Handle both timezone-aware and naive datetimes
+            now = datetime.now(content.published_date.tzinfo) if content.published_date.tzinfo else datetime.now()
+            age_hours = (now - content.published_date).total_seconds() / 3600
             if age_hours < 1:  # Breaking news
                 content_recency = 1.0
             elif age_hours < 6:  # Very recent
@@ -484,7 +488,9 @@ class TechnicalContentStrategy(PriorityStrategy):
         
         # Technical content doesn't decay as quickly
         if content.published_date:
-            age_days = (datetime.now() - content.published_date).days
+            # Handle both timezone-aware and naive datetimes
+            now = datetime.now(content.published_date.tzinfo) if content.published_date.tzinfo else datetime.now()
+            age_days = (now - content.published_date).days
             content_recency = max(0.3, 1.0 - (age_days / 90))  # 3-month decay
         else:
             content_recency = 0.4
