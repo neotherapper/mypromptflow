@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-08-11T01:36:33.217114",
+  "system_status": {
+    "timestamp": "2025-08-11T01:36:17.494550",
+    "components": {
+      "rss_monitor": "ready",
+      "integration_manager": "ready",
+      "queue": {
+        "status": "ready",
+        "pending_videos": 0,
+        "total_videos": 21
+      },
+      "knowledge_vault": {
+        "status": "ready",
+        "channels": 7
+      }
+    }
+  },
+  "rss_monitoring": {
+    "status": "success",
+    "output": "YouTube RSS Monitoring System\n========================================\nConfigured channels: 6\nHigh priority channels: 4\n\n=== YouTube Channel Monitoring Report ===\nMonitoring run completed at: 2025-08-11 01:36:29\nChannels monitored: 6\nNew videos found: 2\n\n\ud83c\udfa5 Fireship (5.0\u2b50, high priority):\n   Found 1 new videos:\n   \u2022 GPT-5 is here... Can it win back programmers?\n     https://www.youtube.com/watch?v=8tx2viHpgA8\n\n\ud83c\udfa5 Learn With Jason (5.0\u2b50, high priority):\n   Found 1 new videos:\n   \u2022 Not even Mark is safe from the spice in the finale \u00b7 Leet Heat S1.E12\n     https://www.youtube.com/watch?v=5ZYLt17wlCk\n\n\u2705 Monitoring cycle completed successfully\n\ud83d\udccb 2 videos queued for transcript processing\n\nNext steps:\n1. Run transcript extraction for queued videos\n2. Process content through Universal Topic Intelligence System\n3. Update knowledge vault with new insights\n"
+  },
+  "processing": {
+    "status": "success",
+    "processed": 2
+  },
+  "report": {
+    "date": "2025-08-11",
+    "timestamp": "2025-08-11T01:36:33.216537",
+    "channels_monitored": 3,
+    "new_videos_found": 2,
+    "videos_processed": 2,
+    "storage_used": 0
+  }
+}

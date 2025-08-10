@@ -1,0 +1,37 @@
+{
+  "video_id": "test1",
+  "timestamp": "2025-08-11T01:45:25.864018",
+  "relevance_score": 0.7833333333333332,
+  "key_topics": [
+    "Performance Optimization"
+  ],
+  "programming_concepts": [
+    "react",
+    "performance",
+    "optimization"
+  ],
+  "tools_mentioned": [
+    "react devtools",
+    "lighthouse"
+  ],
+  "learning_outcomes": [
+    "Understanding react, performance, optimization",
+    "Using react devtools, lighthouse effectively",
+    "Mastering Performance Optimization"
+  ],
+  "summary": "Video 'React Performance Optimization Guide' by TestChannel covers Performance Optimization. Key concepts include react, performance, optimization.",
+  "actionable_insights": [
+    "Apply React optimization techniques to current projects",
+    "Explore react devtools for improved development workflow"
+  ],
+  "cross_platform_connections": {
+    "documentation": [
+      "React official docs for detailed API",
+      "MDN for JavaScript fundamentals"
+    ],
+    "reddit": [
+      "r/programming discussions on Performance Optimization",
+      "Community best practices and experiences"
+    ]
+  }
+}

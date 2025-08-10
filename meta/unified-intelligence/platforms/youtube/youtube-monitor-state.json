@@ -1,54 +1,56 @@
 {
-  "last_run": "2025-07-31T10:58:49.485866",
+  "last_run": "2025-08-11T01:36:29.196605",
   "channel_states": {
     "ThePrimeagen": {
-      "last_checked": "2025-07-31T10:58:35.737075",
-      "last_video_id": "taoAAcS5PSw"
+      "last_checked": "2025-08-11T01:36:17.740229",
+      "last_video_id": "yt:video:4zJHs_L-GOc"
     },
     "Fireship": {
-      "last_checked": "2025-07-31T10:58:36.068946",
-      "last_video_id": "miTpJmMt7uo"
+      "last_checked": "2025-08-11T01:36:17.928670",
+      "last_video_id": "8tx2viHpgA8"
     },
     "Learn With Jason": {
-      "last_checked": "2025-07-31T10:58:48.902171",
-      "last_video_id": "yt:video:6aVUA5bIvoY"
+      "last_checked": "2025-08-11T01:36:28.750984",
+      "last_video_id": "yt:video:4GxALcvDcQA"
     },
     "James Q Quick": {
-      "last_checked": "2025-07-31T10:58:49.214688",
-      "last_video_id": "RQrnXE8JyVI"
+      "last_checked": "2025-08-11T01:36:28.984918",
+      "last_video_id": "33Otl8dxHfo"
     },
     "UI.dev": {
-      "last_checked": "2025-07-31T10:58:49.485843",
-      "last_video_id": "gEKbDCCkbBw"
+      "last_checked": "2025-08-11T01:36:29.196586",
+      "last_video_id": "b4CXJbiHh6E"
     }
   },
   "processed_videos": [
-    "miTpJmMt7uo",
-    "rvr-xOwrY70",
-    "kL4Tp8RmJwo",
-    "I4SBLMGzDss",
-    "-_6dHIPVoTM",
-    "ekQ7t6_MvOQ",
-    "yt:video:_ebVsYQou8A",
-    "rUCOwCJDh8o",
-    "-w53i6Ae-YM",
-    "yt:video:c3yRbrYIUeo",
-    "NIgrGqmoeHs",
-    "yt:video:SEVD2nI4Bis",
-    "FtbvREA8RD4",
-    "vGclr9p1oqg",
-    "jCTvblRXnzg",
-    "yt:video:dhuX9t2j5Hc",
-    "OTgGpovffNY",
-    "ZH3iKbEiks0",
-    "yt:video:fIhZqY_XKsc",
-    "yt:video:u2trdurv638",
-    "TSW0Ybxs_bE",
-    "3f9tbqSIm-E",
     "cNywlNWan9o",
-    "taoAAcS5PSw",
-    "yt:video:OEXI8uVFw3A",
+    "rvr-xOwrY70",
+    "TSW0Ybxs_bE",
+    "-w53i6Ae-YM",
+    "ZH3iKbEiks0",
+    "vGclr9p1oqg",
+    "5ZYLt17wlCk",
+    "yt:video:SEVD2nI4Bis",
+    "3f9tbqSIm-E",
+    "yt:video:c3yRbrYIUeo",
+    "ekQ7t6_MvOQ",
+    "I4SBLMGzDss",
     "_NEjH2vIOso",
-    "yt:video:D9q5wnX2_DY"
+    "yt:video:D9q5wnX2_DY",
+    "jCTvblRXnzg",
+    "-_6dHIPVoTM",
+    "miTpJmMt7uo",
+    "FtbvREA8RD4",
+    "NIgrGqmoeHs",
+    "yt:video:u2trdurv638",
+    "kL4Tp8RmJwo",
+    "8tx2viHpgA8",
+    "yt:video:dhuX9t2j5Hc",
+    "yt:video:OEXI8uVFw3A",
+    "rUCOwCJDh8o",
+    "OTgGpovffNY",
+    "yt:video:fIhZqY_XKsc",
+    "taoAAcS5PSw",
+    "yt:video:_ebVsYQou8A"
   ]
 }
