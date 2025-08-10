@@ -502,5 +502,41 @@
     "processed_with": "unified-intelligence-framework",
     "framework_version": "1.0.0",
     "processing_timestamp": "2025-08-01T04:55:26.368798+00:00"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=8tx2viHpgA8",
+    "video_id": "8tx2viHpgA8",
+    "title": "GPT-5 is here... Can it win back programmers?",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "published_date": "2025-08-08T16:23:54+00:00",
+    "queued_at": "2025-08-11T01:36:29.197537",
+    "status": "processed_simulation",
+    "processed_at": "2025-08-11T01:36:29.209429"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=5ZYLt17wlCk",
+    "video_id": "5ZYLt17wlCk",
+    "title": "Not even Mark is safe from the spice in the finale \u00b7 Leet Heat S1.E12",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "published_date": "2025-08-05T13:00:17+00:00",
+    "queued_at": "2025-08-11T01:36:29.197542",
+    "status": "processed_simulation",
+    "processed_at": "2025-08-11T01:36:31.212213"
   }
 ]
