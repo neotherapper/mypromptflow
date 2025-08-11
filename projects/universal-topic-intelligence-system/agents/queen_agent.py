@@ -22,6 +22,7 @@ from core import (
     SourceMetadata,
     SourceType
 )
+from storage import StorageManager
 
 
 class ResourceAllocationStrategy(Enum):
@@ -95,12 +96,13 @@ class QueenAgent:
     Manages resource allocation, cross-topic intelligence, and emergency response
     """
     
-    def __init__(self, config_dir: str = "configs/topics"):
+    def __init__(self, config_dir: str = "configs/topics", db_path: str = "topic_intelligence.db"):
         """
         Initialize Queen Agent
         
         Args:
             config_dir: Directory containing topic configurations
+            db_path: Path to database file for persistence
         """
         self.config_dir = Path(config_dir)
         self.logger = logging.getLogger("QueenAgent")
@@ -120,6 +122,9 @@ class QueenAgent:
         
         # Prioritizer for cross-topic analysis
         self.prioritizer = UniversalContentPrioritizer()
+        
+        # Storage manager for persistence
+        self.storage = StorageManager(db_path)
         
         # Performance tracking
         self.orchestration_count = 0
@@ -240,6 +245,33 @@ class QueenAgent:
                 state.last_monitored = datetime.now()
                 state.items_collected += len(result.get('items', []))
                 state.critical_items += len(result.get('critical', []))
+        
+        # Save collected items to database
+        if all_items:
+            items_to_save = []
+            for item in all_items:
+                # Prioritize each item
+                priority_result = self.prioritizer.prioritize(item)
+                items_to_save.append((
+                    item,
+                    priority_result.total_score,
+                    priority_result.priority_level.value
+                ))
+            
+            # Batch save to database
+            saved_count = self.storage.save_content_items_batch(items_to_save)
+            self.logger.info(f"Saved {saved_count} new items to database")
+            
+            # Update topic statistics in database
+            for topic_slug in topics_monitored:
+                state = self.topics[topic_slug]
+                topic_items = [i for i in all_items if topic_slug in i.topics]
+                topic_critical = [i for i in critical_items if topic_slug in i.topics]
+                self.storage.update_topic_stats(
+                    topic_slug,
+                    items_collected=len(topic_items),
+                    critical_items=len(topic_critical)
+                )
         
         # Perform cross-topic analysis
         cross_topic_insights = self._analyze_cross_topic_patterns(all_items)
@@ -397,6 +429,36 @@ class QueenAgent:
         if not config:
             return {"items": [], "critical": []}
         
+        # Check if this topic uses a specialized monitor
+        if config.get('topic_metadata', {}).get('use_specialized_monitor'):
+            # Use the ClaudeFocusedMonitor for this topic
+            from sources.claude_focused_monitor import ClaudeFocusedMonitor
+            claude_monitor = ClaudeFocusedMonitor()
+            
+            self.logger.info(f"Using ClaudeFocusedMonitor for topic {topic_slug}")
+            
+            # Get results from the specialized monitor
+            results = await claude_monitor.monitor_all()
+            all_items = []
+            critical_items = []
+            
+            for source_id, result in results.items():
+                if result.success:
+                    all_items.extend(result.new_items)
+                    # Identify critical items
+                    for item in result.new_items:
+                        priority_result = self.prioritizer.prioritize(item)
+                        if priority_result.priority_level in [ContentPriority.CRITICAL, ContentPriority.HIGH]:
+                            critical_items.append(item)
+                    self.logger.info(
+                        f"ClaudeFocusedMonitor collected {len(result.new_items)} items from {source_id}"
+                    )
+            
+            return {
+                "items": all_items,
+                "critical": critical_items
+            }
+        
         # Determine how many sources to monitor based on resources
         max_sources = int(resources / 10)  # 10 resource units per source
         
@@ -437,9 +499,54 @@ class QueenAgent:
                                     source_config: Dict,
                                     topic_slug: str) -> List[ContentItem]:
         """Monitor a single source for a topic"""
-        # This would integrate with the actual monitoring system
-        # For now, return empty list as placeholder
-        return []
+        try:
+            # Create source metadata from config
+            from sources.rss_monitor import RSSSourceMonitor
+            
+            metadata = SourceMetadata(
+                source_id=source_config.get('name', 'unknown'),
+                source_name=source_config.get('name', 'Unknown'),
+                source_type=SourceType.RSS if source_config.get('type') == 'rss' else SourceType.API,
+                source_url=source_config.get('url', ''),
+                authority_score=source_config.get('authority_score', 0.7),
+                update_frequency=source_config.get('update_frequency', 'hourly'),
+                topics=source_config.get('topics_focus', [topic_slug])
+            )
+            
+            # Create appropriate monitor based on source type
+            if source_config.get('type') == 'rss' and source_config.get('url'):
+                # Use RSS monitor for RSS feeds
+                monitor = RSSSourceMonitor(
+                    metadata,
+                    config={
+                        'timeout': source_config.get('config', {}).get('timeout', 15),
+                        'max_items': source_config.get('config', {}).get('max_items', 20)
+                    }
+                )
+                
+                # Actually monitor the source
+                result = await monitor.monitor()
+                
+                if result.success:
+                    self.logger.info(
+                        f"Collected {len(result.new_items)} items from {source_config.get('name')} for {topic_slug}"
+                    )
+                    return result.new_items
+                else:
+                    self.logger.warning(
+                        f"Failed to monitor {source_config.get('name')}: {', '.join(result.errors)}"
+                    )
+                    return []
+            else:
+                # For non-RSS sources, log and return empty for now
+                self.logger.debug(
+                    f"Skipping non-RSS source {source_config.get('name')} (type: {source_config.get('type')})"
+                )
+                return []
+                
+        except Exception as e:
+            self.logger.error(f"Error monitoring source {source_config.get('name')}: {str(e)}")
+            return []
     
     def _analyze_cross_topic_patterns(self, items: List[ContentItem]) -> List[Dict[str, Any]]:
         """Analyze patterns across topics"""
