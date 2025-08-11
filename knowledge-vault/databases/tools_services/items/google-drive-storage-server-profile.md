@@ -13,15 +13,15 @@ quality_score: 8.0
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
+- MCP Server
+- Collaboration Platform
+- Google Services
 - Cloud Storage
 - Document Management
-- Google Services
-- OAuth Authentication
 - Enterprise Storage
-- Collaboration Platform
 - File Operations
+- OAuth Authentication
 - Real-time Sync
 information_capabilities:
   access_methods:

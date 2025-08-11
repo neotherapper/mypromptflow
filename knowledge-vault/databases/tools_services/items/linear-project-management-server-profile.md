@@ -13,16 +13,16 @@ quality_score: 8.4
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Project Management
-- Issue Tracking
-- Agile Development
-- Modern Workflow
+- MCP Server
 - API Service
-- Team Collaboration
-- High Performance
 - Developer Tools
+- Agile Development
+- High Performance
+- Issue Tracking
+- Modern Workflow
+- Project Management
+- Team Collaboration
 information_capabilities:
   access_methods:
     - method: "Linear GraphQL API"

@@ -23,19 +23,17 @@ setup_complexity: Medium
 source_database: tools_services
 status: active
 tags:
+- Tier 2
 - MCP Server
+- Business Tools
+- Cloud Service
+- Collaboration
+- data
+- Data Management
+- Google Workspace
+- google-sheets
 - Productivity
 - Spreadsheet
-- Data Management
-- Business Tools
-- Google Workspace
-- Collaboration
-- Tier 2
-- Cloud Service
-- mcp-server
-- google-sheets
-- spreadsheet
-- data
 tier: Tier 2
 transport_protocols:
 - Google Sheets REST API

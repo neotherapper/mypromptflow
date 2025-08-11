@@ -13,16 +13,16 @@ quality_score: 8.2
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Monitoring
-- Metrics Collection
-- Time Series Database
-- Infrastructure Monitoring
-- Observability
-- Alerting
-- Performance Analytics
+- MCP Server
 - DevOps Tools
+- Alerting
+- Infrastructure Monitoring
+- Metrics Collection
+- Monitoring
+- Observability
+- Performance Analytics
+- Time Series Database
 information_capabilities:
   access_methods:
     - method: "Prometheus HTTP API"

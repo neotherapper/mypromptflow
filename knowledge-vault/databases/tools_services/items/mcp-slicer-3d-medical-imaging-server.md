@@ -25,21 +25,19 @@ setup_complexity: Very High
 source_database: tools_services
 status: discovered
 tags:
-- MCP Server
-- Healthcare Technology
-- Medical Imaging
-- 3D Processing
-- AI/ML Integration
-- DICOM Processing
-- Clinical Workflows
 - Tier 3
-- Specialized
-- mcp-server
-- tier-3
-- medical-imaging
+- MCP Server
+- 3D Processing
 - 3d-processing
+- AI/ML Integration
+- Clinical Workflows
 - dicom
+- DICOM Processing
+- Healthcare Technology
 - healthcare-ai
+- Medical Imaging
+- medical-imaging
+- Specialized
 tier: Tier 3
 transport_protocols:
 - DICOM Protocol

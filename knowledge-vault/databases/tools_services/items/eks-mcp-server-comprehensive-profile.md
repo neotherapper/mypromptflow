@@ -10,17 +10,17 @@ quality_score: 8.65
 source_database: tools_services
 status: active
 tags:
+- Tier 1
+- MCP Server
+- Cloud Platform
+- Auto Scaling
 - AWS
 - Container Orchestration
-- Kubernetes
-- EKS
-- MCP Server
-- Enterprise Grade
-- Microservices
-- Auto Scaling
 - DevOps Automation
-- Cloud Platform
-- Tier 1
+- EKS
+- Enterprise Grade
+- Kubernetes
+- Microservices
 tier: Tier 1
 ---
 

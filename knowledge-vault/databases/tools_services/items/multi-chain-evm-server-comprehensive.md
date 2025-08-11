@@ -25,22 +25,17 @@ setup_complexity: Moderate
 source_database: tools_services
 status: discovered
 tags:
+- Tier 2
 - MCP Server
 - Blockchain
-- Ethereum
-- Multi-Chain
-- DeFi
-- Smart Contracts
 - Cross-Chain
-- Web3
-- Tier 2
+- DeFi
 - Enterprise
-- mcp-server
-- tier-2
-- ethereum
-- multi-chain
+- Ethereum
 - evm
-- defi
+- Multi-Chain
+- Smart Contracts
+- Web3
 tier: Tier 2
 transport_protocols:
 - Ethereum JSON-RPC

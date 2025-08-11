@@ -10,14 +10,14 @@ quality_score: 5.7
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 3
-- Academic Research
-- Scientific Computing
-- Research Discovery
-- Academic Papers
-- Scientific Analysis
+- MCP Server
 - Research Platform
+- Academic Papers
+- Academic Research
+- Research Discovery
+- Scientific Analysis
+- Scientific Computing
 information_capabilities:
   access_patterns:
     - real_time_research_discovery

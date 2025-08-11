@@ -17,16 +17,16 @@ quality_score: 8.4
 source_database: tools_services
 status: active
 tags:
-- mcp-server
-- tier-2
-- development-tools
-- react
+- Tier 2
+- MCP Server
 - component-debugging
-- state-management
-- performance-profiling
-- javascript
-- frontend
 - debugging
+- development-tools
+- frontend
+- javascript
+- performance-profiling
+- react
+- state-management
 transport_protocols:
 - WebSocket
 - HTTP/HTTPS

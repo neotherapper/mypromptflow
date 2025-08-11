@@ -11,16 +11,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- Communication
+- Tier 2
 - MCP Server
 - API Service
-- Tier 2
 - Collaboration
+- Communication
 - Enterprise
 - Microsoft
+- Productivity
 - Team Communication
 - Video Conferencing
-- Productivity
 maturity_level: stable
 deployment_model: cloud_hosted
 integration_complexity: moderate

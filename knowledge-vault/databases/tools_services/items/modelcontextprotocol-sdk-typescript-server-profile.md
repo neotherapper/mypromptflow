@@ -10,14 +10,14 @@ quality_score: 9.7
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
-- Development Platform
+- MCP Server
 - API Service
+- Development Platform
+- Enterprise
+- Official Package
 - SDK
 - TypeScript
-- Official Package
-- Enterprise
 ---
 
 ## 📋 Basic Information

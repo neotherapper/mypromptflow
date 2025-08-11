@@ -24,17 +24,15 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Database
-- SQL
-- Data Infrastructure
-- Enterprise
-- Analytics
 - Tier 1
+- MCP Server
 - ACID Compliance
-- mcp-server
-- tier-1
+- Analytics
+- Data Infrastructure
+- Database
+- Enterprise
 - postgresql
+- SQL
 tier: Tier 1
 transport_protocols:
 - PostgreSQL Wire Protocol

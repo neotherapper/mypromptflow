@@ -25,22 +25,19 @@ setup_complexity: High
 source_database: tools_services
 status: discovered
 tags:
-- MCP Server
-- Payment Processing
-- E-commerce
-- Financial Technology
-- Fraud Detection
-- Multi-Currency
-- Marketplace
-- PCI Compliance
 - Tier 2
-- Enterprise
-- mcp-server
-- tier-2
-- payments
+- MCP Server
 - adyen
+- E-commerce
+- Enterprise
+- Financial Technology
 - fintech
-- e-commerce
+- Fraud Detection
+- Marketplace
+- Multi-Currency
+- Payment Processing
+- payments
+- PCI Compliance
 tier: Tier 2
 transport_protocols:
 - HTTP/HTTPS REST API

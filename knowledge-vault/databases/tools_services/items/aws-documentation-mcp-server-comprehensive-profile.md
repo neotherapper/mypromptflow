@@ -20,19 +20,17 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Technical Documentation
-- AWS Documentation
-- API References
-- Developer Tools
-- Knowledge Access
 - Tier 2
-- Enterprise
-- mcp-server
-- tier-2
+- MCP Server
+- Developer Tools
 - amazon
-- documentation
+- API References
+- AWS Documentation
 - developer-tools
+- documentation
+- Enterprise
+- Knowledge Access
+- Technical Documentation
 tier: Tier 2
 transport_protocols:
 - AWS Documentation API

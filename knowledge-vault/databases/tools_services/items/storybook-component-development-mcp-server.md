@@ -17,15 +17,15 @@ quality_score: 8.5
 source_database: tools_services
 status: active
 tags:
-- mcp-server
-- tier-1
-- development-tools
+- Tier 1
+- MCP Server
 - component-libraries
-- testing
-- documentation
 - design-systems
+- development-tools
+- documentation
 - frontend
 - javascript
+- testing
 - typescript
 transport_protocols:
 - HTTP/HTTPS

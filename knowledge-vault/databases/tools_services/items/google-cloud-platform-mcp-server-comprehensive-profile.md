@@ -11,16 +11,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- Cloud Platform
-- MCP Server
-- API Service
 - Tier 1
-- Infrastructure
+- MCP Server
+- AI/ML Platform
+- API Service
+- Cloud Platform
+- Cloud Hosting
+- Data Analytics
 - Enterprise
 - Google
-- Cloud Hosting
-- AI/ML Platform
-- Data Analytics
+- Infrastructure
 maturity_level: stable
 deployment_model: cloud_hosted
 integration_complexity: moderate

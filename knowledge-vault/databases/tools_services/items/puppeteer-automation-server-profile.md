@@ -13,16 +13,16 @@ quality_score: 8.2
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Browser Automation
-- Web Scraping
-- Testing Framework
-- Data Extraction
-- Screenshot Generation
-- Performance Testing
+- MCP Server
 - Chrome DevTools
+- Browser Automation
+- Data Extraction
 - JavaScript Automation
+- Performance Testing
+- Screenshot Generation
+- Testing Framework
+- Web Scraping
 information_capabilities:
   access_methods:
     - method: "Chrome DevTools Protocol"

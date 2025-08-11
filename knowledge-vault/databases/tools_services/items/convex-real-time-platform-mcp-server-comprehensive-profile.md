@@ -22,18 +22,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Real-Time Platform
-- Backend-as-a-Service
-- Serverless Functions
-- Live Data Sync
-- TypeScript Platform
 - Tier 2
+- MCP Server
+- Backend-as-a-Service
+- Real-Time Platform
+- TypeScript Platform
 - Collaborative Apps
-- mcp-server
-- tier-2
 - convex
+- Live Data Sync
 - real-time
+- Serverless Functions
 tier: Tier 2
 transport_protocols:
 - HTTP/2

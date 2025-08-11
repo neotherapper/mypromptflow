@@ -11,16 +11,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- Monitoring
+- Tier 2
 - MCP Server
 - API Service
-- Tier 2
+- Analytics
 - DevOps
 - Enterprise
+- Monitoring
 - New Relic
 - Observability
 - Performance Monitoring
-- Analytics
 maturity_level: stable
 deployment_model: cloud_hosted
 integration_complexity: moderate

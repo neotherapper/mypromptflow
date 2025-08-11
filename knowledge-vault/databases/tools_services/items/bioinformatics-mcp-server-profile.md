@@ -10,14 +10,14 @@ quality_score: 4.75
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 3
+- MCP Server
 - Bioinformatics
+- Computational Biology
 - Genomics
-- Scientific Computing
 - Life Sciences
 - Research Analytics
-- Computational Biology
+- Scientific Computing
 information_capabilities:
   access_patterns:
     - genomic_data_analysis

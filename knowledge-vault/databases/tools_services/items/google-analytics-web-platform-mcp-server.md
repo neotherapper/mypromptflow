@@ -9,15 +9,15 @@ quality_score: 86.5
 source_database: tools_services
 status: active
 tags:
-- Analytics
-- Web Analytics
-- Marketing Tool
-- Business Intelligence
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- Google Service
 - Development Platform
+- Google Service
+- Marketing Tool
+- Analytics
+- Business Intelligence
+- Web Analytics
 ---
 
 ## 📋 Basic Information

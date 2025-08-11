@@ -25,22 +25,20 @@ setup_complexity: Moderate
 source_database: tools_services
 status: discovered
 tags:
+- Tier 2
 - MCP Server
 - AI Development Tools
+- ai-coding
 - Code Generation
 - Code Review
-- Software Development
-- Machine Learning
-- Development Automation
-- IDE Integration
-- Tier 2
-- Enterprise
-- mcp-server
-- tier-2
-- ai-coding
-- rocketshipai
 - code-generation
+- Development Automation
 - development-tools
+- Enterprise
+- IDE Integration
+- Machine Learning
+- rocketshipai
+- Software Development
 tier: Tier 2
 transport_protocols:
 - HTTP/HTTPS REST API

@@ -22,18 +22,17 @@ setup_complexity: Very Low
 source_database: tools_services
 status: active
 tags:
+- Tier 1
 - MCP Server
-- File System
-- Local Storage
-- File Operations
+- Core Infrastructure
 - Directory Management
 - Document Processing
-- Tier 1
-- Core Infrastructure
-- Official
-- mcp-server
-- filesystem
+- File Operations
+- File System
 - files
+- filesystem
+- Local Storage
+- Official
 - storage
 tier: Tier 1
 transport_protocols:

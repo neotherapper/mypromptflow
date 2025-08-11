@@ -8,11 +8,11 @@ priority: 1st_priority
 source_database: tools_services
 status: active
 tags:
-- Database
-- API Service
-- MCP Server
 - Tier 1
+- MCP Server
+- API Service
 - Development Platform
+- Database
 ---
 
 ## 📋 Basic Information

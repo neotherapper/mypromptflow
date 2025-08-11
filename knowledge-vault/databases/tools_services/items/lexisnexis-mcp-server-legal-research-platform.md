@@ -8,12 +8,12 @@ priority: 1st_priority
 source_database: tools_services
 status: active
 tags:
+- Tier 1
+- MCP Server
+- Development Platform
+- Security Tool
 - Database
 - Search Engine
-- MCP Server
-- Security Tool
-- Tier 1
-- Development Platform
 ---
 
 ## 📋 Basic Information

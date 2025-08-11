@@ -20,19 +20,17 @@ setup_complexity: Complex
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- System Orchestration
-- Meta-Orchestration
-- Workflow Planning
-- Server Management
-- Load Balancing
 - Tier 2
-- Enterprise
-- mcp-server
-- tier-2
+- MCP Server
 - amazon
+- Enterprise
+- Load Balancing
+- Meta-Orchestration
 - orchestration
+- Server Management
+- System Orchestration
 - system-management
+- Workflow Planning
 tier: Tier 2
 transport_protocols:
 - MCP Protocol v1.0

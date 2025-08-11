@@ -9,15 +9,15 @@ quality_score: 85.0
 source_database: tools_services
 status: active
 tags:
-- Monitoring
-- Observability
-- Cloud Platform
-- Analytics
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- Alibaba Cloud
+- Cloud Platform
 - Development Platform
+- Alibaba Cloud
+- Analytics
+- Monitoring
+- Observability
 ---
 
 ## 📋 Basic Information

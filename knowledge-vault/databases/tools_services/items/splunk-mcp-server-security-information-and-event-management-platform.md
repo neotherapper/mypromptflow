@@ -10,10 +10,10 @@ status: active
 tags:
 - Tier 2
 - MCP Server
-- Security Tool
-- Monitoring
-- Analytics
 - Development Platform
+- Security Tool
+- Analytics
+- Monitoring
 ---
 
 ## 📋 Basic Information

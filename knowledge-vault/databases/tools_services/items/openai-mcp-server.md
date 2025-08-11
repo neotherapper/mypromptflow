@@ -15,17 +15,17 @@ repository_url: https://github.com/modelcontextprotocol/servers/tree/main/src/op
 source_database: tools_services
 status: active
 tags:
-- Database
-- Vector Database
-- Storage Service
+- Tier 1
 - MCP Server
 - API Service
-- Search Engine
-- Security Tool
-- Tier 1
-- Analytics
-- Monitoring
 - Development Platform
+- Security Tool
+- Storage Service
+- Analytics
+- Database
+- Monitoring
+- Search Engine
+- Vector Database
 tier: Tier 2
 transport_protocols:
 - HTTP Transport

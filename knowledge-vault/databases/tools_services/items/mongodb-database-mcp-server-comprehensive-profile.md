@@ -11,16 +11,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- Database
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- Database - NoSQL
-- Database - Document
-- Software Development
 - Developer Tools
-- MongoDB
+- Database
+- Database - Document
+- Database - NoSQL
 - Enterprise
+- MongoDB
+- Software Development
 maturity_level: stable
 deployment_model: hybrid
 integration_complexity: moderate

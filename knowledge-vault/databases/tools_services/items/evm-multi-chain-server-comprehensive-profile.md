@@ -10,14 +10,14 @@ quality_score: 9.1
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
-- Blockchain
-- Multi-Chain
-- EVM Compatible
-- Cross-Chain
+- MCP Server
 - Universal Platform
+- Blockchain
+- Cross-Chain
 - Enterprise Integration
+- EVM Compatible
+- Multi-Chain
 ---
 
 ## 📋 Basic Information

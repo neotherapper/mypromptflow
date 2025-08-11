@@ -24,22 +24,17 @@ setup_complexity: Moderate
 source_database: tools_services
 status: discovered
 tags:
+- Tier 4
 - MCP Server
-- Transportation
+- Analytics
 - Aviation
+- Enterprise
+- Flight Tracking
+- flightradar
 - Logistics
 - Real-time Data
+- Transportation
 - Travel Planning
-- Flight Tracking
-- Analytics
-- Tier 4
-- Enterprise
-- mcp-server
-- tier-4
-- aviation
-- flightradar
-- transportation
-- logistics
 tier: Tier 4
 transport_protocols:
 - HTTP/HTTPS REST API

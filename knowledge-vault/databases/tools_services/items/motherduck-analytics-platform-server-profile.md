@@ -13,16 +13,16 @@ quality_score: 5.4
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 3
-- Analytics Platform
-- Data Processing
-- Cloud Analytics
-- SQL Engine
+- MCP Server
 - API Service
-- Data Science
+- Analytics Platform
 - Business Intelligence
+- Cloud Analytics
+- Data Processing
+- Data Science
 - Serverless Computing
+- SQL Engine
 information_capabilities:
   access_methods:
     - method: "MotherDuck REST API"

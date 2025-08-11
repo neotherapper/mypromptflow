@@ -17,16 +17,16 @@ quality_score: 8.7
 source_database: tools_services
 status: active
 tags:
-- mcp-server
-- tier-1
-- development-tools
+- Tier 1
+- MCP Server
+- automation
 - browser-debugging
+- development-tools
+- devops
+- javascript
 - performance-analysis
 - testing
-- automation
-- javascript
 - web-development
-- devops
 transport_protocols:
 - WebSocket
 - HTTP/HTTPS

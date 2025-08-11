@@ -20,18 +20,16 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Knowledge Management
-- AWS Documentation
-- Real-time Updates
-- Enterprise
-- Cloud Infrastructure
 - Tier 1
-- mcp-server
-- tier-1
+- MCP Server
 - amazon
+- AWS Documentation
+- Cloud Infrastructure
 - documentation
+- Enterprise
+- Knowledge Management
 - knowledge-retrieval
+- Real-time Updates
 tier: Tier 1
 transport_protocols:
 - AWS API Gateway

@@ -13,15 +13,15 @@ quality_score: 91.0
 source_database: tools_services
 status: active
 tags:
-- IDE Integration
-- Development Environment
-- Code Completion
-- AI-Powered Development
+- Tier 1
 - MCP Server
 - Development Platform
-- Tier 1
 - Development Tools
+- AI-Powered Development
 - Code Assistant
+- Code Completion
+- Development Environment
+- IDE Integration
 - Productivity Enhancement
 - Software Development
 ---

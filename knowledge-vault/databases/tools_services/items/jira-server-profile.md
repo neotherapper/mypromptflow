@@ -13,16 +13,16 @@ quality_score: 8.2
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Project Management
-- Issue Tracking
+- MCP Server
+- API Service
 - Agile Development
 - Atlassian
-- API Service
-- Workflow Automation
-- Team Collaboration
 - Enterprise Ready
+- Issue Tracking
+- Project Management
+- Team Collaboration
+- Workflow Automation
 information_capabilities:
   access_methods:
     - method: "JIRA REST API v3"

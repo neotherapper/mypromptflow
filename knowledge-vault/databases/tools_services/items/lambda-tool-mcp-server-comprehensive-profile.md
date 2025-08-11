@@ -10,21 +10,21 @@ quality_score: 8.85
 source_database: tools_services
 status: active
 tags:
-- AWS
-- Serverless Computing
-- Lambda
-- Model Context Protocol
-- MCP Server
 - Tier 1
-- AWS Labs
+- MCP Server
 - Function as a Service
-- Cloud Computing
 - AI Integration
+- AWS
+- AWS Labs
+- Cloud Computing
 - Enterprise Ready
-- Security
-- Infrastructure as Code
 - Event-Driven Architecture
+- Infrastructure as Code
+- Lambda
 - Microservices
+- Model Context Protocol
+- Security
+- Serverless Computing
 tier: Tier 1
 ---
 

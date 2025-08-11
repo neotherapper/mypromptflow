@@ -10,14 +10,14 @@ quality_score: 5.75
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 3
+- MCP Server
+- Research Platform
+- Data Analysis
 - Data Science
 - Interactive Computing
-- Scientific Computing
 - Machine Learning
-- Data Analysis
-- Research Platform
+- Scientific Computing
 information_capabilities:
   access_patterns:
     - interactive_code_execution

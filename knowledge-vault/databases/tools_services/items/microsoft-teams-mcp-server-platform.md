@@ -16,16 +16,16 @@ quality_score: 8.08
 source_database: tools_services
 status: active
 tags:
-- Storage Service
+- Tier 1
 - MCP Server
 - API Service
-- Search Engine
-- Security Tool
-- Tier 1
-- Analytics
-- Monitoring
 - Cloud Platform
 - Development Platform
+- Security Tool
+- Storage Service
+- Analytics
+- Monitoring
+- Search Engine
 tier: Tier 1
 transport_protocols:
 - HTTPS REST API

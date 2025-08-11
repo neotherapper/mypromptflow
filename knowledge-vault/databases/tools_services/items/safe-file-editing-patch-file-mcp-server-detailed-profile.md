@@ -13,13 +13,13 @@ quality_score: 9.0
 source_database: tools_services
 status: active
 tags:
-- Database
-- API Service
-- MCP Server
-- Security Tool
 - Tier 1
-- Monitoring
+- MCP Server
+- API Service
 - Development Platform
+- Security Tool
+- Database
+- Monitoring
 tier: Tier 1
 ---
 

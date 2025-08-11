@@ -10,17 +10,17 @@ quality_score: 9.4
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
-- Development Platform
-- Python Framework
+- MCP Server
 - API Service
-- High Performance
-- Rapid Development
-- Enterprise
+- Development Platform
 - Complete Ecosystem
-- Rapid Prototyping
+- Enterprise
 - Framework Enhancement
+- High Performance
+- Python Framework
+- Rapid Development
+- Rapid Prototyping
 ---
 
 ## 📋 Basic Information

@@ -22,18 +22,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
+- Tier 2
 - MCP Server
 - Analytics Platform
-- Event Processing
-- Real-time Monitoring
-- Data Analytics
-- Observability
-- Tier 2
-- Streaming Analytics
-- mcp-server
-- tier-2
 - analytics
+- Data Analytics
+- Event Processing
 - monitoring
+- Observability
+- Real-time Monitoring
+- Streaming Analytics
 tier: Tier 3
 transport_protocols:
 - REST API

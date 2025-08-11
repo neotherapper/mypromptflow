@@ -20,19 +20,17 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Documentation Automation
-- Code Analysis
-- AI-Powered
-- Multi-Language
-- Developer Tools
 - Tier 1
-- Enterprise
-- mcp-server
-- tier-1
+- MCP Server
+- Developer Tools
+- AI-Powered
 - amazon
-- documentation
 - automation
+- Code Analysis
+- documentation
+- Documentation Automation
+- Enterprise
+- Multi-Language
 tier: Tier 1
 transport_protocols:
 - File System API

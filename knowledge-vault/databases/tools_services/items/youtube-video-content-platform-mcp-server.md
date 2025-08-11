@@ -9,15 +9,15 @@ quality_score: 86.5
 source_database: tools_services
 status: active
 tags:
-- Video Platform
-- Content Management
-- Analytics
-- Media
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- Google Service
 - Development Platform
+- Google Service
+- Video Platform
+- Analytics
+- Content Management
+- Media
 ---
 
 ## 📋 Basic Information

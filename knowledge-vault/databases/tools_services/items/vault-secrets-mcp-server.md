@@ -9,14 +9,14 @@ quality_score: 85.0
 source_database: tools_services
 status: active
 tags:
-- Security Tool
-- Secrets Management
-- Identity Management
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- HashiCorp
 - Development Platform
+- Security Tool
+- HashiCorp
+- Identity Management
+- Secrets Management
 ---
 
 ## 📋 Basic Information

@@ -17,16 +17,16 @@ quality_score: 8.8
 source_database: tools_services
 status: active
 tags:
-- mcp-server
-- tier-1
-- performance-analysis
-- testing
-- seo
+- Tier 1
+- MCP Server
 - accessibility
-- web-vitals
 - automation
-- quality-assurance
 - optimization
+- performance-analysis
+- quality-assurance
+- seo
+- testing
+- web-vitals
 transport_protocols:
 - HTTP/HTTPS
 - CLI Process

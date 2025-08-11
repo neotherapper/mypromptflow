@@ -9,14 +9,14 @@ quality_score: 8.2
 source_database: tools_services
 status: active
 tags:
-- Database
-- Analytics
-- MCP Server
-- Real-Time Processing
 - Tier 2
+- MCP Server
+- Analytics
 - Business Intelligence
-- Streaming Data
+- Database
 - OLAP
+- Real-Time Processing
+- Streaming Data
 tier: Tier 2
 ---
 

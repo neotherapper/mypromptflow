@@ -10,13 +10,13 @@ quality_score: 9.5
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
-- Meta Server
-- Aggregation Hub
+- MCP Server
 - Enterprise Platform
-- Server Management
+- Aggregation Hub
+- Meta Server
 - Orchestration
+- Server Management
 - Universal Integration
 ---
 

@@ -10,14 +10,14 @@ quality_score: 9.2
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
+- MCP Server
+- Enterprise Platform
+- Bitcoin
 - Blockchain
 - Cryptocurrency
-- Bitcoin
-- Lightning Network
-- Enterprise Platform
 - Financial Technology
+- Lightning Network
 ---
 
 ## 📋 Basic Information

@@ -22,18 +22,16 @@ setup_complexity: Low-Medium
 source_database: tools_services
 status: experimental
 tags:
-- MCP Server
-- Entertainment
-- API Service
-- Music Streaming
-- Media Platform
-- OAuth
 - Tier 4
+- MCP Server
+- API Service
 - Consumer Service
-- mcp-server
-- spotify
+- Media Platform
+- Entertainment
 - music
-- entertainment
+- Music Streaming
+- OAuth
+- spotify
 tier: Tier 4
 transport_protocols:
 - Spotify Web API REST

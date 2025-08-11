@@ -17,16 +17,16 @@ quality_score: 8.2
 source_database: tools_services
 status: active
 tags:
-- mcp-server
-- tier-1
-- design
+- Tier 1
+- MCP Server
+- API Service
 - collaboration
-- ui-ux-design
-- development-tools
-- api-service
-- enterprise
-- design-systems
 - component-libraries
+- design
+- design-systems
+- development-tools
+- enterprise
+- ui-ux-design
 transport_protocols:
 - HTTP/HTTPS
 - WebSocket

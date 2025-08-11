@@ -19,18 +19,18 @@ quality_score: 8.3
 source_database: tools_services
 status: active
 tags:
-- AWS
-- NoSQL Database
-- Data Storage
-- MCP Server
-- Database Operations
 - Tier 1
-- Enterprise Grade
-- Data Modeling
-- Performance Optimization
+- MCP Server
+- AWS
 - Backup Recovery
-- Scalable Infrastructure
+- Data Modeling
+- Data Storage
+- Database Operations
+- Enterprise Grade
+- NoSQL Database
+- Performance Optimization
 - Real-time Operations
+- Scalable Infrastructure
 tier: Tier 1
 ---
 

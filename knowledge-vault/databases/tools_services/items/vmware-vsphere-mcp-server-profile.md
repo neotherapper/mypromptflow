@@ -11,13 +11,13 @@ priority: 3rd_priority
 source_database: tools_services
 status: active
 tags:
-- Storage Service
+- Tier 3
 - MCP Server
+- Development Platform
 - Security Tool
+- Storage Service
 - Analytics
 - Monitoring
-- Tier 3
-- Development Platform
 ---
 
 ## 📋 Basic Information

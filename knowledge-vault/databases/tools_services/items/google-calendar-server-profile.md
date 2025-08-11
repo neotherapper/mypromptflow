@@ -13,16 +13,16 @@ quality_score: 6.3
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Productivity
-- Calendar Management
-- Google Services
-- OAuth Authentication
+- MCP Server
 - API Service
+- Google Services
+- Calendar Management
+- Enterprise Ready
+- OAuth Authentication
+- Productivity
 - Scheduling Automation
 - Time Analytics
-- Enterprise Ready
 information_capabilities:
   access_methods:
     - method: "Google Calendar API"

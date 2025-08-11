@@ -22,18 +22,16 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
+- Tier 2
 - MCP Server
 - Monitoring Platform
-- Observability
-- Application Performance
-- Infrastructure Monitoring
-- Security Analytics
-- Tier 2
 - AI-Powered Insights
-- mcp-server
-- tier-2
+- Application Performance
 - datadog
+- Infrastructure Monitoring
 - monitoring
+- Observability
+- Security Analytics
 tier: Tier 2
 transport_protocols:
 - REST API

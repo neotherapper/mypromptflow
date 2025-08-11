@@ -22,18 +22,15 @@ setup_complexity: Moderate
 source_database: tools_services
 status: active
 tags:
+- Tier 2
 - MCP Server
-- Containerization
 - DevOps Platform
-- Microservices
 - Application Deployment
 - Container Orchestration
-- Tier 2
-- Infrastructure
-- mcp-server
-- tier-2
+- Containerization
 - docker
-- containerization
+- Infrastructure
+- Microservices
 tier: Tier 2
 transport_protocols:
 - REST API

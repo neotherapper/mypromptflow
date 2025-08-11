@@ -25,20 +25,18 @@ setup_complexity: High
 source_database: tools_services
 status: discovered
 tags:
+- Tier 4
 - MCP Server
-- Healthcare Technology
-- EMR Integration
-- FHIR Standard
 - AI/ML Integration
 - Clinical Workflows
-- HIPAA Compliant
-- Tier 4
-- Enterprise
-- mcp-server
-- tier-4
-- healthcare
 - emr
+- EMR Integration
+- Enterprise
 - fhir
+- FHIR Standard
+- healthcare
+- Healthcare Technology
+- HIPAA Compliant
 - kartha-ai
 tier: Tier 4
 transport_protocols:

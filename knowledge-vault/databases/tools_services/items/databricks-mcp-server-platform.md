@@ -15,16 +15,16 @@ repository_url: https://github.com/RafaelCartenet/mcp-databricks-server
 source_database: tools_services
 status: active
 tags:
-- Database
-- Storage Service
+- Tier 3
 - MCP Server
 - API Service
-- Security Tool
-- Tier 3
-- Analytics
-- Monitoring
 - Cloud Platform
 - Development Platform
+- Security Tool
+- Storage Service
+- Analytics
+- Database
+- Monitoring
 tier: Tier 3
 transport_protocols:
 - REST API

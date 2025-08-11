@@ -25,22 +25,18 @@ setup_complexity: High
 source_database: tools_services
 status: discovered
 tags:
+- Tier 2
 - MCP Server
-- Financial Trading
 - Algorithmic Trading
-- Forex
+- algorithmic-trading
 - CFD Trading
+- Enterprise
+- Financial Trading
+- Forex
+- Market Analysis
 - MetaTrader
 - Risk Management
-- Market Analysis
-- Tier 2
-- Enterprise
-- mcp-server
-- tier-2
 - trading
-- metatrader
-- forex
-- algorithmic-trading
 tier: Tier 2
 transport_protocols:
 - MetaTrader API

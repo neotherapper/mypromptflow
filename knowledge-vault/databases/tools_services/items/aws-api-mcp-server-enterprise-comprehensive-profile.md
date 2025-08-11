@@ -21,18 +21,16 @@ setup_complexity: Complex
 source_database: tools_services
 status: active
 tags:
+- Tier 2
 - MCP Server
-- Cloud Infrastructure
+- API Service
+- amazon
 - AWS API Management
-- Security Controls
+- Cloud Infrastructure
+- cloud-hosting
 - Command Validation
 - Enterprise
-- Tier 2
-- mcp-server
-- tier-2
-- amazon
-- cloud-hosting
-- api-service
+- Security Controls
 tier: Tier 2
 transport_protocols:
 - AWS API Gateway v2

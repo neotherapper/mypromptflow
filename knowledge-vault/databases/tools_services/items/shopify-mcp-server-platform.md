@@ -16,14 +16,14 @@ repository_url: https://github.com/shopify/shopify-app-js
 source_database: tools_services
 status: active
 tags:
-- Storage Service
-- API Service
-- MCP Server
-- Security Tool
 - Tier 1
+- MCP Server
+- API Service
+- Development Platform
+- Security Tool
+- Storage Service
 - Analytics
 - Monitoring
-- Development Platform
 tier: Tier 1
 transport_protocols:
 - REST API

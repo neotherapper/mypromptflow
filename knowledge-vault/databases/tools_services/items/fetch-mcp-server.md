@@ -16,15 +16,15 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- Storage Service
-- Search Engine
-- API Service
-- MCP Server
-- Security Tool
 - Tier 1
+- MCP Server
+- API Service
+- Security Tool
+- Storage Service
 - Monitoring
-- web-content
 - real-time-data
+- Search Engine
+- web-content
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP

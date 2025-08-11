@@ -8,11 +8,11 @@ priority: 3rd_priority
 source_database: tools_services
 status: active
 tags:
-- Security Tool
-- API Service
-- MCP Server
 - Tier 3
+- MCP Server
+- API Service
 - Development Platform
+- Security Tool
 ---
 
 ## 📋 Basic Information

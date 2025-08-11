@@ -23,18 +23,16 @@ setup_complexity: Medium
 source_database: tools_services
 status: experimental
 tags:
+- Tier 4
 - MCP Server
-- Communication
 - API Service
 - Chat Platform
-- Community Management
-- Bot Integration
-- Tier 4
 - Social Platform
-- mcp-server
-- discord
-- communication
+- Bot Integration
+- Communication
 - community
+- Community Management
+- discord
 tier: Tier 4
 transport_protocols:
 - Discord REST API

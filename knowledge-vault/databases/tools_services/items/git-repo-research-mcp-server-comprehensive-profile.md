@@ -20,19 +20,17 @@ setup_complexity: Complex
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Research & Analysis
-- Code Intelligence
-- AI-Powered
-- Semantic Search
-- Repository Management
 - Tier 1
-- Enterprise
-- mcp-server
-- tier-1
-- amazon
-- research
+- MCP Server
 - ai
+- AI-Powered
+- amazon
+- Code Intelligence
+- Enterprise
+- Repository Management
+- research
+- Research & Analysis
+- Semantic Search
 tier: Tier 1
 transport_protocols:
 - Amazon Bedrock API

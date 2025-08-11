@@ -20,19 +20,17 @@ setup_complexity: Complex
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Enterprise Knowledge
-- RAG System
-- Document Retrieval
-- AI-Powered
-- Citation Support
 - Tier 1
-- Enterprise
-- mcp-server
-- tier-1
-- amazon
-- knowledge-retrieval
+- MCP Server
 - ai
+- AI-Powered
+- amazon
+- Citation Support
+- Document Retrieval
+- Enterprise
+- Enterprise Knowledge
+- knowledge-retrieval
+- RAG System
 tier: Tier 1
 transport_protocols:
 - Amazon Bedrock API

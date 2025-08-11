@@ -12,13 +12,13 @@ quality_score: 9.25
 source_database: tools_services
 status: active
 tags:
-- API Service
-- MCP Server
-- Security Tool
 - Tier 1
-- Monitoring
+- MCP Server
+- API Service
 - Cloud Platform
 - Development Platform
+- Security Tool
+- Monitoring
 tier: Tier 1
 ---
 

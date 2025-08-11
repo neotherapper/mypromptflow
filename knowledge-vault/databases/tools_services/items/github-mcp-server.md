@@ -23,17 +23,15 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Development Platform
-- API Service
-- Version Control
-- CI/CD
-- Security Tool
 - Tier 1
+- MCP Server
+- API Service
+- Development Platform
+- Security Tool
+- CI/CD
 - Enterprise
-- mcp-server
-- tier-1
 - github
+- Version Control
 tier: Tier 1
 transport_protocols:
 - GitHub REST API

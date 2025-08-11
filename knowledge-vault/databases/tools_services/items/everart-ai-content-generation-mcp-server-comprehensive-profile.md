@@ -21,18 +21,16 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- AI Content Generation
-- Creative Automation
-- Marketing Tools
-- Visual Content
-- Brand Assets
 - Tier 2
-- Creative Workflow
-- mcp-server
-- tier-2
+- MCP Server
+- Marketing Tools
+- AI Content Generation
 - ai-content
+- Brand Assets
+- Creative Automation
+- Creative Workflow
 - creative-tools
+- Visual Content
 tier: Tier 2
 transport_protocols:
 - REST API

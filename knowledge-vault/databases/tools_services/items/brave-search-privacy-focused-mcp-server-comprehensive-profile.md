@@ -20,18 +20,16 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- MCP Server
-- Search Engine
-- Information Retrieval
-- Privacy-Focused
-- Web Intelligence
-- API Service
 - Tier 2
+- MCP Server
+- API Service
 - Content Discovery
-- mcp-server
-- tier-2
-- search
+- Information Retrieval
 - privacy
+- Privacy-Focused
+- search
+- Search Engine
+- Web Intelligence
 tier: Tier 2
 transport_protocols:
 - REST API

@@ -11,15 +11,15 @@ setup_complexity: Simple
 source_database: tools_services
 status: active
 tags:
-- Database
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
-- Database - SQL
-- Software Development
 - Developer Tools
-- MySQL
+- Database
+- Database - SQL
 - Enterprise
+- MySQL
+- Software Development
 maturity_level: stable
 deployment_model: hybrid
 integration_complexity: moderate

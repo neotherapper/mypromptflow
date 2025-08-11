@@ -13,16 +13,16 @@ quality_score: 9.5
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
+- MCP Server
 - Caching
-- In-Memory Database
-- High Performance
 - Data Structures
+- High Performance
+- In-Memory Database
+- Performance Optimization
 - Pub/Sub Messaging
 - Real-time Applications
 - Scalability
-- Performance Optimization
 information_capabilities:
   access_methods:
     - method: "Redis Protocol (RESP)"

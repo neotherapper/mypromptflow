@@ -10,14 +10,14 @@ quality_score: 9.3
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 1
+- MCP Server
+- Enterprise Platform
+- Base Network
 - Blockchain
+- Coinbase
 - Cryptocurrency
 - Ethereum Layer-2
-- Base Network
-- Coinbase
-- Enterprise Platform
 ---
 
 ## 📋 Basic Information

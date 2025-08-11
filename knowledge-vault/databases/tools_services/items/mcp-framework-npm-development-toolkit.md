@@ -24,20 +24,17 @@ setup_complexity: Simple
 source_database: tools_services
 status: discovered
 tags:
-- MCP Server
-- Development Framework
-- TypeScript
-- Node.js
-- Developer Tools
-- SDK
-- Community Ecosystem
 - Tier 1
-- Enterprise
-- mcp-server
-- tier-1
+- MCP Server
+- Developer Tools
+- Community Ecosystem
+- Development Framework
 - development-framework
-- typescript
+- Enterprise
+- Node.js
 - npm
+- SDK
+- TypeScript
 tier: Tier 1
 transport_protocols:
 - HTTP/HTTPS REST API

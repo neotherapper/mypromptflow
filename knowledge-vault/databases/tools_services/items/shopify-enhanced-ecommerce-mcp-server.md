@@ -9,14 +9,14 @@ quality_score: 85.0
 source_database: tools_services
 status: active
 tags:
-- E-commerce
-- Retail Platform
-- Sales Analytics
-- Inventory Management
+- Tier 1
 - MCP Server
 - API Service
-- Tier 1
 - Development Platform
+- Retail Platform
+- E-commerce
+- Inventory Management
+- Sales Analytics
 ---
 
 ## 📋 Basic Information

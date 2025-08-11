@@ -13,16 +13,16 @@ quality_score: 7.2
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Customer Support
+- MCP Server
 - Service Management
-- Ticket Management
+- Customer Analytics
+- Customer Support
+- Enterprise CX
 - Knowledge Base
 - Live Chat
-- Customer Analytics
+- Ticket Management
 - Workforce Management
-- Enterprise CX
 information_capabilities:
   access_methods:
     - method: "Zendesk REST API v2"

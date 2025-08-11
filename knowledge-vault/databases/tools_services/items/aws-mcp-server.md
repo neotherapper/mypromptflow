@@ -14,20 +14,18 @@ quality_score: 9.5
 source_database: tools_services
 status: active
 tags:
-- Cloud Platform
-- Infrastructure
-- DevOps
 - Tier 1
-- Storage Service
 - MCP Server
 - API Service
-- Security Tool
-- Analytics
-- Monitoring
+- Cloud Platform
 - Development Platform
+- Security Tool
+- Storage Service
+- Analytics
 - aws
-- tier-1
-- mcp-server
+- DevOps
+- Infrastructure
+- Monitoring
 tier: Tier 1
 transport_protocols:
 - HTTPS REST APIs

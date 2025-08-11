@@ -23,19 +23,19 @@ quality_score: 8.05
 source_database: tools_services
 status: active
 tags:
-- AWS
-- Infrastructure as Code
-- CDK
+- Tier 1
 - MCP Server
 - Development Platform
-- Tier 1
-- Security Validation
-- Multi-Language Support
-- Solutions Constructs
-- GenAI Integration
-- Enterprise Grade
-- DevOps Automation
+- AWS
+- CDK
 - Cloud Development
+- DevOps Automation
+- Enterprise Grade
+- GenAI Integration
+- Infrastructure as Code
+- Multi-Language Support
+- Security Validation
+- Solutions Constructs
 - Well-Architected Framework
 tier: Tier 1
 ---

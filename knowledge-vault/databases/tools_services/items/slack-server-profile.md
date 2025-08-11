@@ -13,16 +13,16 @@ quality_score: 8.1
 source_database: tools_services
 status: active
 tags:
-- MCP Server
 - Tier 2
-- Team Communication
+- MCP Server
 - Messaging Platform
-- Workflow Automation
 - Bot Integration
+- Channel Management
 - Enterprise Collaboration
 - Real-time Messaging
-- Channel Management
 - Slack API
+- Team Communication
+- Workflow Automation
 information_capabilities:
   access_methods:
     - method: "Slack Web API"

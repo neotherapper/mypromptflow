@@ -14,11 +14,11 @@ repository_url: https://github.com/modelcontextprotocol/servers/tree/main/src/ev
 source_database: tools_services
 status: active
 tags:
-- Storage Service
-- API Service
-- MCP Server
-- Security Tool
 - Tier 1
+- MCP Server
+- API Service
+- Security Tool
+- Storage Service
 - Monitoring
 tier: Tier 1
 transport_protocols:

@@ -14,17 +14,17 @@ repository_url: https://github.com/qdrant/qdrant-mcp
 source_database: tools_services
 status: active
 tags:
-- Database
-- Vector Database
-- Storage Service
+- Tier 1
 - MCP Server
 - API Service
-- Search Engine
-- Security Tool
-- Tier 1
-- Analytics
-- Monitoring
 - Cloud Platform
+- Security Tool
+- Storage Service
+- Analytics
+- Database
+- Monitoring
+- Search Engine
+- Vector Database
 tier: Tier 1
 transport_protocols:
 - HTTP REST API
