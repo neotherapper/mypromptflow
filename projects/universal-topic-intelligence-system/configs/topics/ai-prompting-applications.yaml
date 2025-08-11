@@ -1,0 +1,291 @@
+# AI Prompting & Business Applications Topic Configuration
+# Monitoring prompt engineering, AI applications, and business innovation
+
+topic_metadata:
+  name: "AI Prompting & Business Applications"
+  slug: "ai-prompting-apps"
+  description: "Monitor prompt engineering techniques, AI application development, business use cases, and innovative AI-powered solutions"
+  priority_level: "high"
+  monitoring_frequency: "hourly"
+  
+  keywords:
+    primary:
+      - prompt engineering
+      - prompting
+      - ai applications
+      - llm applications
+      - ai business
+      - ai startup
+    secondary:
+      - chain of thought
+      - few shot learning
+      - rag
+      - langchain
+      - ai agents
+      - ai automation
+      - ai tools
+      - gpt
+      - claude prompts
+    exclude:
+      - prompt payment  # Financial
+      - prompt delivery # Logistics
+
+source_mapping:
+  tier_1_official:
+    description: "Leading AI companies and research"
+    sources:
+      - name: "OpenAI Blog"
+        url: "https://openai.com/blog/rss.xml"
+        type: "rss"
+        authority_score: 0.95
+        monitoring_method: "RSS"
+        
+      - name: "Anthropic Blog"
+        url: "https://www.anthropic.com/blog/rss.xml"
+        type: "rss"
+        authority_score: 1.0
+        monitoring_method: "RSS"
+        
+      - name: "Google AI Blog"
+        url: "https://ai.googleblog.com/feeds/posts/default"
+        type: "rss"
+        authority_score: 0.9
+        monitoring_method: "RSS"
+        
+      - name: "LangChain Blog"
+        url: "https://blog.langchain.dev/rss/"
+        type: "rss"
+        authority_score: 0.85
+        monitoring_method: "RSS"
+        topics_focus: ["ai applications", "agents", "rag"]
+      
+  tier_2_community:
+    description: "Expert practitioners and tutorials"
+    sources:
+      - name: "Simon Willison"
+        url: "https://simonwillison.net/atom/everything/"
+        type: "rss"
+        authority_score: 0.9
+        topics_focus: ["prompting", "llm", "applications"]
+        
+      - name: "Lilian Weng"
+        url: "https://lilianweng.github.io/index.xml"
+        type: "rss"
+        authority_score: 0.85
+        topics_focus: ["ai research", "prompting techniques"]
+        
+      - name: "Dev.to AI Tag"
+        url: "https://dev.to/feed/tag/ai"
+        type: "rss"
+        authority_score: 0.7
+        noise_filter: "medium"
+        
+      - name: "Towards Data Science AI"
+        url: "https://towardsdatascience.com/feed/tagged/artificial-intelligence"
+        type: "rss"
+        authority_score: 0.75
+        
+      - name: "HackerNews AI"
+        url: "https://hnrss.org/newest?q=prompt+engineering+OR+llm+applications"
+        type: "rss"
+        authority_score: 0.8
+        
+      - name: "Reddit r/LocalLLaMA"
+        url: "https://www.reddit.com/r/LocalLLaMA/.rss"
+        type: "rss"
+        authority_score: 0.65
+        topics_focus: ["open source", "local ai", "applications"]
+        
+  tier_3_aggregators:
+    description: "Business and startup focused sources"
+    sources:
+      - name: "Product Hunt AI"
+        url: "https://www.producthunt.com/topics/artificial-intelligence/feed"
+        type: "rss"
+        authority_score: 0.7
+        topics_focus: ["ai products", "startups", "tools"]
+        
+      - name: "TechCrunch AI"
+        url: "https://techcrunch.com/category/artificial-intelligence/feed/"
+        type: "rss"
+        authority_score: 0.75
+        topics_focus: ["ai business", "funding", "startups"]
+        
+      - name: "AI Newsletter"
+        url: "https://newsletter.theaiedge.io/feed"
+        type: "rss"
+        authority_score: 0.7
+
+mcp_server_mapping:
+  fetch_server:
+    enabled: true
+    use_cases:
+      - "AI documentation sites"
+      - "Tutorial websites"
+      - "Business case studies"
+    config:
+      max_length: 15000
+      
+  github_server:
+    enabled: true
+    repositories:
+      - "openai/openai-cookbook"
+      - "anthropics/courses"
+      - "langchain-ai/langchain"
+      - "microsoft/guidance"
+      - "hwchase17/langchainjs"
+    monitoring_scope: ["examples", "templates", "releases"]
+    
+  youtube_server:
+    enabled: true
+    channels:
+      - "@OpenAI"
+      - "@AnthropicAI"
+      - "@TwoMinutePapers"
+    content_types: ["tutorials", "demos", "case-studies"]
+
+quality_configuration:
+  thresholds:
+    critical: 0.85    # Breakthrough techniques or major releases
+    high: 0.70        # Proven techniques and case studies
+    medium: 0.50      # Experimental approaches
+    low: 0.35         # General discussions
+    
+  weights:
+    source_authority: 0.20
+    content_accuracy: 0.30
+    relevance_alignment: 0.25      # High weight on practical relevance
+    completeness_depth: 0.15
+    constitutional_compliance: 0.10
+    
+  topic_specific_rules:
+    - rule: "boost_practical_examples"
+      condition: "content contains 'example' or 'code' or 'implementation'"
+      action: "multiply_score by 1.2"
+      
+    - rule: "boost_business_cases"
+      condition: "content contains 'roi' or 'business case' or 'case study'"
+      action: "multiply_score by 1.15"
+      
+    - rule: "boost_new_techniques"
+      condition: "content contains 'novel' or 'breakthrough' or 'new technique'"
+      action: "multiply_score by 1.25"
+      
+    - rule: "boost_open_source"
+      condition: "content contains 'open source' AND content contains 'release'"
+      action: "multiply_score by 1.1"
+      
+    - rule: "penalize_hype"
+      condition: "content contains 'game changer' AND NOT content contains 'evidence'"
+      action: "multiply_score by 0.7"
+
+agent_configuration:
+  architect_specialization:
+    research_architect:
+      focus: "Track new prompting techniques and research"
+      priority_sources: ["openai_blog", "anthropic_blog", "lilian_weng"]
+      
+    application_architect:
+      focus: "Monitor practical AI applications and tools"
+      priority_sources: ["langchain_blog", "product_hunt", "github_cookbooks"]
+      
+    business_architect:
+      focus: "Track business applications and ROI"
+      priority_sources: ["techcrunch_ai", "case_studies"]
+  
+  specialist_roles:
+    - role: "Prompting Technique Specialist"
+      responsibilities:
+        - "Document new prompting patterns"
+        - "Validate technique effectiveness"
+        - "Create prompt templates"
+        
+    - role: "Application Developer"
+      responsibilities:
+        - "Track AI application frameworks"
+        - "Monitor integration patterns"
+        - "Document implementation guides"
+        
+    - role: "Business Analyst"
+      responsibilities:
+        - "Identify business use cases"
+        - "Track ROI metrics"
+        - "Document success stories"
+        
+    - role: "Tool Evaluator"
+      responsibilities:
+        - "Test new AI tools"
+        - "Compare solutions"
+        - "Create tool recommendations"
+
+cross_topic_integration:
+  related_topics:
+    - topic_slug: "claude-ai"
+      relationship: "complementary"
+      shared_sources: ["anthropic_blog", "simon_willison"]
+      
+    - topic_slug: "react-typescript"
+      relationship: "application"
+      context: "AI-powered React applications"
+      
+    - topic_slug: "startup-ecosystem"
+      relationship: "business"
+      influence_weight: 0.7
+  
+  knowledge_sharing:
+    share_patterns: true
+    share_sources: true
+    share_insights: true
+
+notification_configuration:
+  alert_conditions:
+    - condition: "content contains 'breakthrough' AND source_authority > 0.8"
+      action: "research_alert"
+      channels: ["primary"]
+      
+    - condition: "content contains 'prompt injection' or 'jailbreak'"
+      action: "security_alert"
+      channels: ["all"]
+      
+    - condition: "content contains '$' AND content contains 'funding'"
+      action: "business_alert"
+      channels: ["business"]
+      
+  summary_schedule:
+    daily_digest: "09:00"
+    weekly_report: "monday 09:00"
+    
+performance_targets:
+  coverage_percentage: 90        # Good coverage of AI landscape
+  relevance_accuracy: 85         # Focus on practical applications
+  response_time_minutes: 15      # Moderate response time
+  false_positive_rate: 8         # Acceptable false positive rate
+  
+storage_configuration:
+  knowledge_vault_path: "knowledge-vault/topics/ai-prompting-apps/"
+  archive_after_days: 30
+  compression_enabled: true
+  
+  special_collections:
+    - name: "prompt_library"
+      path: "knowledge-vault/topics/ai-prompting-apps/prompts/"
+    - name: "business_cases"
+      path: "knowledge-vault/topics/ai-prompting-apps/business/"
+    - name: "tool_reviews"
+      path: "knowledge-vault/topics/ai-prompting-apps/tools/"
+    - name: "implementation_guides"
+      path: "knowledge-vault/topics/ai-prompting-apps/guides/"
+  
+constitutional_ai:
+  principles:
+    - truthfulness: "Verify claims about AI capabilities"
+    - completeness: "Include limitations and failure modes"
+    - fairness: "Balanced view of different AI providers"
+    - transparency: "Clear about experimental vs production-ready"
+    - harm_prevention: "Avoid overhyping or underselling AI capabilities"
+    
+  validation_requirements:
+    multi_source_verification: true
+    effectiveness_validation: true
+    ethical_review: true
+    business_impact_assessment: true

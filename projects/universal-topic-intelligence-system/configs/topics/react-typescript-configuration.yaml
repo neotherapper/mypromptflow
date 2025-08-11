@@ -1,0 +1,310 @@
+# React & TypeScript Development Topic Configuration
+# Monitoring React, TypeScript, Next.js, and modern frontend development
+
+topic_metadata:
+  name: "React & TypeScript Frontend Development"
+  slug: "react-typescript"
+  description: "Comprehensive monitoring of React ecosystem, TypeScript advancements, and modern frontend development practices with focus on practical implementation"
+  priority_level: "high"
+  monitoring_frequency: "hourly"
+  
+  keywords:
+    primary:
+      - react
+      - typescript
+      - nextjs
+      - react hooks
+      - jsx
+      - tsx
+    secondary:
+      - react server components
+      - react native
+      - vite
+      - webpack
+      - tailwind
+      - frontend
+      - ui components
+    exclude:
+      - react chemically  # Chemistry
+      - reaction video    # YouTube reactions
+
+source_mapping:
+  tier_1_official:
+    description: "Official React and TypeScript sources"
+    sources:
+      - name: "React Blog"
+        url: "https://react.dev/blog.rss"
+        type: "rss"
+        authority_score: 1.0
+        monitoring_method: "RSS"
+        config:
+          max_items: 50
+          
+      - name: "TypeScript Blog"
+        url: "https://devblogs.microsoft.com/typescript/feed/"
+        type: "rss"
+        authority_score: 1.0
+        monitoring_method: "RSS"
+        
+      - name: "React GitHub"
+        url: "https://github.com/facebook/react"
+        type: "github"
+        authority_score: 0.95
+        monitoring_method: "GitHub MCP"
+        monitoring_scope: ["releases", "rfcs", "discussions"]
+        
+      - name: "TypeScript GitHub"
+        url: "https://github.com/microsoft/TypeScript"
+        type: "github"
+        authority_score: 0.95
+        monitoring_method: "GitHub MCP"
+        monitoring_scope: ["releases", "issues", "roadmap"]
+        
+      - name: "Next.js Blog"
+        url: "https://nextjs.org/feed.xml"
+        type: "rss"
+        authority_score: 0.95
+        monitoring_method: "RSS"
+      
+  tier_2_community:
+    description: "Expert blogs and high-quality resources"
+    sources:
+      - name: "Vercel Blog"
+        url: "https://vercel.com/blog/rss.xml"
+        type: "rss"
+        authority_score: 0.9
+        topics_focus: ["nextjs", "react", "deployment"]
+        
+      - name: "Kent C. Dodds Blog"
+        url: "https://kentcdodds.com/blog/rss.xml"
+        type: "rss"
+        authority_score: 0.85
+        topics_focus: ["react", "testing", "patterns"]
+        
+      - name: "Josh W. Comeau"
+        url: "https://www.joshwcomeau.com/rss.xml"
+        type: "rss"
+        authority_score: 0.85
+        topics_focus: ["react", "css", "animations"]
+        
+      - name: "Dev.to React"
+        url: "https://dev.to/feed/tag/react"
+        type: "rss"
+        authority_score: 0.75
+        noise_filter: "medium"
+        
+      - name: "Dev.to TypeScript"
+        url: "https://dev.to/feed/tag/typescript"
+        type: "rss"
+        authority_score: 0.75
+        noise_filter: "medium"
+        
+      - name: "HackerNews React"
+        url: "https://hnrss.org/newest?q=react+OR+typescript+OR+nextjs"
+        type: "rss"
+        authority_score: 0.8
+        
+      - name: "Reddit r/reactjs"
+        url: "https://www.reddit.com/r/reactjs/.rss"
+        type: "rss"
+        authority_score: 0.7
+        noise_filter: "high"
+        
+  tier_3_aggregators:
+    description: "Community and learning resources"
+    sources:
+      - name: "Awesome React"
+        url: "https://github.com/enaqx/awesome-react"
+        type: "github"
+        authority_score: 0.75
+        monitoring_method: "GitHub MCP"
+        update_check: "weekly"
+        
+      - name: "React Status Newsletter"
+        url: "https://react.statuscode.com/rss/"
+        type: "rss"
+        authority_score: 0.8
+        
+      - name: "TypeScript Weekly"
+        url: "https://typescript-weekly.com/feed"
+        type: "rss"
+        authority_score: 0.75
+
+mcp_server_mapping:
+  fetch_server:
+    enabled: true
+    use_cases:
+      - "React documentation"
+      - "TypeScript documentation"
+      - "Blog posts and tutorials"
+    config:
+      max_length: 20000
+      
+  github_server:
+    enabled: true
+    repositories:
+      - "facebook/react"
+      - "microsoft/TypeScript"
+      - "vercel/next.js"
+      - "vitejs/vite"
+      - "remix-run/remix"
+      - "TanStack/query"
+    monitoring_scope: ["releases", "issues", "discussions", "rfcs"]
+    
+  youtube_server:
+    enabled: true
+    channels:
+      - "@TheNetNinja"
+      - "@Fireship"
+      - "@JackHerrington"
+    content_types: ["tutorials", "updates", "best-practices"]
+
+quality_configuration:
+  thresholds:
+    critical: 0.85    # Major React/TS releases
+    high: 0.70        # Important updates and patterns
+    medium: 0.50      # Community content
+    low: 0.35         # General discussions
+    
+  weights:
+    source_authority: 0.25
+    content_accuracy: 0.35      # Technical accuracy crucial
+    relevance_alignment: 0.20
+    completeness_depth: 0.10
+    constitutional_compliance: 0.10
+    
+  topic_specific_rules:
+    - rule: "boost_major_releases"
+      condition: "title contains 'release' AND (title contains 'react 19' or 'typescript 5')"
+      action: "multiply_score by 1.4"
+      
+    - rule: "boost_server_components"
+      condition: "content contains 'server components' or 'RSC'"
+      action: "multiply_score by 1.2"
+      
+    - rule: "boost_performance_content"
+      condition: "content contains 'performance' AND (content contains 'optimization' or 'memo')"
+      action: "multiply_score by 1.15"
+      
+    - rule: "boost_typescript_features"
+      condition: "content contains 'type safety' or 'generics' or 'type inference'"
+      action: "multiply_score by 1.1"
+      
+    - rule: "penalize_outdated"
+      condition: "content contains 'class component' AND NOT content contains 'migration'"
+      action: "multiply_score by 0.7"
+
+agent_configuration:
+  architect_specialization:
+    official_architect:
+      focus: "Monitor React and TypeScript official channels"
+      priority_sources: ["react_blog", "typescript_blog", "react_github", "typescript_github"]
+      
+    framework_architect:
+      focus: "Track Next.js, Remix, and meta-framework developments"
+      priority_sources: ["nextjs_blog", "vercel_blog", "remix_github"]
+      
+    patterns_architect:
+      focus: "Identify best practices and emerging patterns"
+      priority_sources: ["kent_dodds", "josh_comeau", "dev_to_react"]
+  
+  specialist_roles:
+    - role: "Performance Specialist"
+      responsibilities:
+        - "Track React performance optimizations"
+        - "Monitor bundle size improvements"
+        - "Document optimization patterns"
+        
+    - role: "TypeScript Expert"
+      responsibilities:
+        - "Monitor TypeScript releases and features"
+        - "Track type safety patterns"
+        - "Document advanced TypeScript techniques"
+        
+    - role: "Component Pattern Analyst"
+      responsibilities:
+        - "Identify reusable component patterns"
+        - "Track hooks and composition patterns"
+        - "Document testing strategies"
+        
+    - role: "Framework Evolution Tracker"
+      responsibilities:
+        - "Monitor Next.js App Router updates"
+        - "Track Server Components adoption"
+        - "Document migration strategies"
+
+cross_topic_integration:
+  related_topics:
+    - topic_slug: "claude-ai"
+      relationship: "tool"
+      context: "Using Claude for React development"
+      
+    - topic_slug: "web-performance"
+      relationship: "complementary"
+      influence_weight: 0.7
+      
+    - topic_slug: "css-modern"
+      relationship: "complementary"
+      shared_sources: ["josh_comeau", "dev_to"]
+      
+    - topic_slug: "testing-javascript"
+      relationship: "dependent"
+      influence_weight: 0.8
+  
+  knowledge_sharing:
+    share_patterns: true
+    share_sources: true
+    share_insights: true
+
+notification_configuration:
+  alert_conditions:
+    - condition: "source in ['react_blog', 'typescript_blog'] AND priority = critical"
+      action: "immediate_notification"
+      channels: ["primary"]
+      
+    - condition: "title contains 'breaking change' OR 'deprecation'"
+      action: "migration_alert"
+      channels: ["primary", "email"]
+      
+    - condition: "content contains 'security' AND (content contains 'react' or 'npm')"
+      action: "security_alert"
+      channels: ["all"]
+      
+  summary_schedule:
+    daily_digest: "09:00"
+    weekly_report: "monday 09:00"
+    
+performance_targets:
+  coverage_percentage: 95        # High coverage for React ecosystem
+  relevance_accuracy: 92         # High accuracy for technical content
+  response_time_minutes: 10      # Quick response for releases
+  false_positive_rate: 5         # Low false positives
+  
+storage_configuration:
+  knowledge_vault_path: "knowledge-vault/topics/react-typescript/"
+  archive_after_days: 45
+  compression_enabled: true
+  
+  special_collections:
+    - name: "component_patterns"
+      path: "knowledge-vault/topics/react-typescript/patterns/"
+    - name: "typescript_techniques"
+      path: "knowledge-vault/topics/react-typescript/typescript/"
+    - name: "performance_guides"
+      path: "knowledge-vault/topics/react-typescript/performance/"
+    - name: "migration_guides"
+      path: "knowledge-vault/topics/react-typescript/migrations/"
+  
+constitutional_ai:
+  principles:
+    - truthfulness: "Verify all code examples and technical claims"
+    - completeness: "Include browser compatibility and known issues"
+    - fairness: "Present balanced view of different approaches"
+    - transparency: "Clear about experimental vs stable features"
+    - harm_prevention: "Avoid promoting deprecated or insecure patterns"
+    
+  validation_requirements:
+    multi_source_verification: true
+    code_validation: true
+    security_check: true
+    performance_impact_assessment: true

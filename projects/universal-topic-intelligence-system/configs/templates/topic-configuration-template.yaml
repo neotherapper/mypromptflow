@@ -1,0 +1,178 @@
+# Universal Topic Intelligence System - Topic Configuration Template
+# This template provides the structure for configuring monitoring for any topic
+
+topic_metadata:
+  name: "Topic Full Name"  # Human-readable name
+  slug: "topic-slug"       # URL-safe identifier
+  description: "Comprehensive description of the topic and monitoring goals"
+  priority_level: "high"   # high/medium/low - affects resource allocation
+  monitoring_frequency: "hourly"  # continuous/hourly/daily/weekly
+  
+  # Keywords that identify this topic in content
+  keywords:
+    primary:   # Must-have keywords
+      - keyword1
+      - keyword2
+    secondary: # Nice-to-have keywords
+      - keyword3
+      - keyword4
+    exclude:   # Keywords to filter out
+      - unwanted1
+      - unwanted2
+
+# Source configuration with tiered authority
+source_mapping:
+  tier_1_official:
+    description: "Official sources with highest authority"
+    sources:
+      - name: "Official Source Name"
+        url: "https://official.source/rss"
+        type: "rss"  # rss/api/youtube/github
+        authority_score: 1.0
+        monitoring_method: "RSS"  # RSS/Fetch/GitHub MCP/YouTube MCP
+        config:
+          max_items: 50
+          timeout: 30
+      
+  tier_2_community:
+    description: "Expert and community sources"
+    sources:
+      - name: "Expert Blog"
+        url: "https://expert.blog/feed"
+        type: "rss"
+        authority_score: 0.85
+        topics_focus: ["subtopic1", "subtopic2"]
+        
+  tier_3_aggregators:
+    description: "Aggregator and social sources"
+    sources:
+      - name: "Reddit Community"
+        url: "https://reddit.com/r/topic.rss"
+        type: "rss"
+        authority_score: 0.65
+        noise_filter: "high"  # Filter level for noisy sources
+
+# MCP Server mapping for intelligent processing
+mcp_server_mapping:
+  fetch_server:
+    enabled: true
+    use_cases:
+      - "Documentation sites"
+      - "Blog posts"
+      - "News articles"
+    config:
+      max_length: 10000
+      
+  github_server:
+    enabled: false
+    repositories: []
+    monitoring_scope: ["releases", "issues", "discussions"]
+    
+  youtube_server:
+    enabled: false
+    channels: []
+    content_types: ["tutorials", "announcements", "reviews"]
+
+# Quality assessment configuration
+quality_configuration:
+  thresholds:
+    critical: 0.85   # Threshold for critical priority
+    high: 0.70       # Threshold for high priority
+    medium: 0.50     # Threshold for medium priority
+    low: 0.30        # Threshold for low priority
+    
+  weights:
+    source_authority: 0.25
+    content_accuracy: 0.30
+    relevance_alignment: 0.20
+    completeness_depth: 0.15
+    constitutional_compliance: 0.10
+    
+  topic_specific_rules:
+    - rule: "boost_breaking_news"
+      condition: "title contains 'breaking' or 'urgent'"
+      action: "multiply_score by 1.2"
+    - rule: "penalize_speculation"
+      condition: "content contains 'rumor' or 'unconfirmed'"
+      action: "multiply_score by 0.7"
+
+# Agent configuration for topic processing
+agent_configuration:
+  architect_specialization:
+    official_source_architect:
+      focus: "Monitor and validate official announcements"
+      priority_sources: ["tier_1_official"]
+      
+    community_intelligence_architect:
+      focus: "Track expert opinions and community sentiment"
+      priority_sources: ["tier_2_community"]
+      
+    trend_detection_architect:
+      focus: "Identify emerging patterns and trends"
+      priority_sources: ["tier_3_aggregators"]
+  
+  specialist_roles:
+    - role: "Technical Validator"
+      responsibilities: ["Verify technical accuracy", "Check implementation details"]
+    - role: "Impact Analyst"
+      responsibilities: ["Assess business impact", "Evaluate adoption potential"]
+    - role: "Sentiment Tracker"
+      responsibilities: ["Monitor community reaction", "Track opinion shifts"]
+
+# Cross-topic relationships
+cross_topic_integration:
+  related_topics:
+    - topic_slug: "related-topic-1"
+      relationship: "complementary"  # competitive/complementary/dependent
+      shared_sources: ["source1", "source2"]
+      
+    - topic_slug: "related-topic-2"
+      relationship: "dependent"
+      influence_weight: 0.7
+  
+  knowledge_sharing:
+    share_patterns: true      # Share learned patterns
+    share_sources: false      # Share source evaluations
+    share_insights: true      # Share cross-topic insights
+
+# Notification and alerting
+notification_configuration:
+  alert_conditions:
+    - condition: "priority = critical"
+      action: "immediate_notification"
+      channels: ["primary"]
+      
+    - condition: "multiple_sources_confirm"
+      action: "verified_alert"
+      threshold: 3  # Number of sources
+      
+  summary_schedule:
+    daily_digest: "09:00"
+    weekly_report: "monday 09:00"
+    
+# Performance monitoring
+performance_targets:
+  coverage_percentage: 95        # % of significant developments captured
+  relevance_accuracy: 90         # % accuracy in relevance scoring
+  response_time_minutes: 10      # Time to process critical updates
+  false_positive_rate: 5         # Maximum % of irrelevant content
+  
+# Storage configuration
+storage_configuration:
+  knowledge_vault_path: "knowledge-vault/topics/{topic_slug}/"
+  archive_after_days: 30
+  compression_enabled: true
+  
+# Constitutional AI compliance
+constitutional_ai:
+  principles:
+    - truthfulness: "All information must be verifiable"
+    - completeness: "Analysis must acknowledge limitations"
+    - fairness: "Balanced perspective without bias"
+    - transparency: "Clear about uncertainty levels"
+    - harm_prevention: "Avoid spreading misinformation"
+    
+  validation_requirements:
+    multi_source_verification: true
+    fact_checking_enabled: true
+    bias_detection: true
