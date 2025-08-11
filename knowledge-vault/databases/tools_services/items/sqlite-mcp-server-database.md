@@ -7,9 +7,7 @@ estimated_setup_time: 5-15 minutes
 id: e86ff7f8-9226-42e6-8f41-c2535a66d44f
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: SQLite MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/sqlite-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: Community (Official SQLite Integration)
@@ -32,7 +30,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - JSON API
-mcp_profile_reference: "@mcp_profile/sqlite"
 ---
 
 **Zero-configuration embedded database for rapid development and edge computing applications**  

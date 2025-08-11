@@ -6,9 +6,7 @@ description: Data transformation and analytics engineering platform for building
 id: 438ca1d5-a126-4d39-8e7e-f25232a50265
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: dbt MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/dbt-server-profile.md
 priority: 3rd_priority
 production_readiness: 96
 provider: Community/Third-party
@@ -30,7 +28,6 @@ tier: Tier 3
 transport_protocols:
 - HTTPS
 - REST API
-mcp_profile_reference: "@mcp_profile/dbt"
 ---
 
 **Data transformation and analytics engineering platform for building reliable data pipelines**  

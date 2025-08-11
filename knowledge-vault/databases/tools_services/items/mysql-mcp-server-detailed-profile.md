@@ -7,9 +7,7 @@ estimated_setup_time: 5-15 minutes
 id: 956adaba-ce60-472d-90b0-31f32a22a9fc
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: MySQL MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/mysql-server-profile.md
 priority: 1st_priority
 quality_score: 8.65
 setup_complexity: Simple
@@ -27,7 +25,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/mysql"
 ---
 
 **Tier**: Tier 1 Immediate  

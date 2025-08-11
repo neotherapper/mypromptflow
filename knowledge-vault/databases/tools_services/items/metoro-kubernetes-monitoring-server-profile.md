@@ -7,9 +7,7 @@ description: The Metoro Kubernetes Monitoring MCP server represents a critical i
 id: 1dd92882-74b1-4277-b24e-eb0c3309a1c3
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Metoro Kubernetes Monitoring MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/metoro-kubernetes-monitoring-server-profile.md
 priority: 1st_priority
 quality_score: 89.0
 source_database: tools_services

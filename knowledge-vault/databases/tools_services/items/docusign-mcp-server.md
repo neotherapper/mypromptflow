@@ -7,9 +7,7 @@ description: Leading digital signature and document management platform for lega
 id: ea160c8e-d306-4aa4-881d-964dd2d59896
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: DocuSign MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/docusign-server-profile.md
 priority: 1st_priority
 production_readiness: 92
 provider: Enterprise (DocuSign Inc.)
@@ -31,7 +29,6 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - SOAP API
-mcp_profile_reference: "@mcp_profile/docusign"
 ---
 
 **Leading digital signature and document management platform for legal and business workflows**  

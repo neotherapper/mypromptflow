@@ -7,9 +7,7 @@ description: New Relic MCP Server provides enterprise-grade application performa
 id: c71f91ba-6a66-49af-9d70-e26dc01bd843
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: New Relic Application Performance Monitoring MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/new-relic-application-monitoring-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/new-relic-application-performance-monitoring"
 ---
 
 ## Server Identity

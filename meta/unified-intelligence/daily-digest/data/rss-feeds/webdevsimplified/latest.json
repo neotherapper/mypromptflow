@@ -1,0 +1,63 @@
+{
+  "channel_id": "webdevsimplified",
+  "collected_at": "2025-08-01T07:51:59.892091+00:00",
+  "item_count": 2,
+  "items": [
+    {
+      "id": "qcDpJ2ptlMs",
+      "title": "What Is MCP Explained In 3 Minutes",
+      "url": "https://www.youtube.com/shorts/qcDpJ2ptlMs",
+      "published_date": "2025-07-31T16:01:27+00:00",
+      "updated_date": "2025-07-31T16:01:27+00:00",
+      "author": "Web Dev Simplified",
+      "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+      "channel_name": "Web Dev Simplified",
+      "description": "",
+      "source_channel": "webdevsimplified",
+      "platform": "youtube",
+      "priority_score": 4.5,
+      "quality_rating": 4.7,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "categories": [
+        "web-development",
+        "react",
+        "javascript"
+      ],
+      "collected_at": "2025-08-01T07:51:59.891789+00:00",
+      "content_hash": "405375502653a622e3e59c761c57bf4b",
+      "content_age_days": 0.6601029160069445
+    },
+    {
+      "id": "vmbqrOBrYIo",
+      "title": "CSS Style Queries Have So Much Potential",
+      "url": "https://www.youtube.com/watch?v=vmbqrOBrYIo",
+      "published_date": "2025-07-29T16:01:25+00:00",
+      "updated_date": "2025-07-31T22:00:30+00:00",
+      "author": "Web Dev Simplified",
+      "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+      "channel_name": "Web Dev Simplified",
+      "description": "",
+      "source_channel": "webdevsimplified",
+      "platform": "youtube",
+      "priority_score": 4.5,
+      "quality_rating": 4.7,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "categories": [
+        "web-development",
+        "react",
+        "javascript"
+      ],
+      "collected_at": "2025-08-01T07:51:59.891812+00:00",
+      "content_hash": "0a26a93f99bbe93a0ecc122f969eb612",
+      "content_age_days": 2.6601260642013886
+    }
+  ]
+}

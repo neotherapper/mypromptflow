@@ -1,0 +1,173 @@
+{
+  "priority_topics": {
+    "claude": {
+      "weight": 1.3,
+      "description": "Claude AI and Anthropic developments",
+      "aliases": ["Claude AI", "Anthropic Claude", "Claude Code", "@claude.ai", "claude.ai"],
+      "keywords": ["claude", "anthropic", "constitutional ai", "claude-3", "claude-4", "sonnet", "opus", "haiku", "ai safety", "helpful ai", "harmless ai", "honest ai"],
+      "contexts": ["AI development", "conversational AI", "language models", "AI safety", "constitutional AI"],
+      "quality_bonuses": {
+        "anthropic_official": 0.4,
+        "claude_team_verified": 0.3,
+        "constitutional_ai_principles": 0.2,
+        "safety_considerations": 0.1
+      },
+      "authority_sources": ["anthropic.com", "claude.ai", "docs.anthropic.com"]
+    },
+    "claude-code": {
+      "weight": 1.4,
+      "description": "Claude Code IDE and development tools",
+      "aliases": ["Claude Code", "@claude.ai/code", "claude.ai/code", "Claude IDE"],
+      "keywords": ["claude code", "claude ide", "ai coding", "anthropic dev tools", "claude development", "automated development", "ai-assisted development", "workflow optimization"],
+      "contexts": ["development tools", "AI-assisted coding", "IDE", "code generation", "workflow automation", "team collaboration"],
+      "quality_bonuses": {
+        "claude_code_official": 0.4,
+        "working_claude_examples": 0.3,
+        "ai_assisted_architecture": 0.3,
+        "end_to_end_workflows": 0.2,
+        "automated_development": 0.25
+      },
+      "special_categories": ["ai-development", "workflow", "automation", "productivity"]
+    },
+    "react": {
+      "weight": 0.9,
+      "description": "React framework and ecosystem",
+      "aliases": ["React.js", "ReactJS", "React Framework", "React Library"],
+      "keywords": ["react", "jsx", "react hooks", "react components", "next.js", "gatsby", "create-react-app"],
+      "contexts": ["frontend development", "web development", "JavaScript frameworks", "UI libraries"]
+    },
+    "typescript": {
+      "weight": 0.8,
+      "description": "TypeScript language and tooling",
+      "aliases": ["TypeScript", "TS", "TypeScript Language"],
+      "keywords": ["typescript", "type safety", "javascript types", "tsc", "ts config", "type definitions"],
+      "contexts": ["programming languages", "JavaScript", "static typing", "development tools"]
+    },
+    "meta-prompting": {
+      "weight": 1.25,
+      "description": "Prompt engineering and meta-prompting techniques",
+      "aliases": ["prompt engineering", "meta prompting", "AI prompting", "prompt design", "prompt optimization"],
+      "keywords": ["prompt engineering", "meta prompting", "chain of thought", "few shot", "prompt design", "ai prompting", "prompt optimization", "constitutional prompting", "workflow automation", "multi-step reasoning"],
+      "contexts": ["AI techniques", "language model optimization", "AI interaction", "prompt design", "workflow automation"],
+      "quality_bonuses": {
+        "chain_of_thought": 0.2,
+        "few_shot_prompting": 0.15,
+        "prompt_optimization": 0.25,
+        "constitutional_prompting": 0.2,
+        "workflow_automation": 0.2,
+        "multi_step_reasoning": 0.25
+      },
+      "special_categories": ["meta-prompting", "ai-techniques", "automation"]
+    },
+    "nextjs": {
+      "weight": 0.9,
+      "description": "Next.js React framework for production",
+      "aliases": ["Next.js", "NextJS", "Next Framework", "@next/core", "Vercel Next"],
+      "keywords": ["nextjs", "next.js", "app router", "pages router", "server components", "vercel", "full stack react", "ssr", "static generation"],
+      "contexts": ["React framework", "full-stack React", "server-side rendering", "static site generation", "web development"]
+    }
+  },
+  "secondary_topics": {
+    "web-development": {
+      "weight": 0.6,
+      "description": "General web development topics",
+      "keywords": ["web development", "frontend", "backend", "full stack", "javascript", "css", "html"]
+    },
+    "ai": {
+      "weight": 0.7,
+      "description": "General artificial intelligence topics",
+      "keywords": ["artificial intelligence", "machine learning", "deep learning", "neural networks", "ai research"]
+    },
+    "programming": {
+      "weight": 0.5,
+      "description": "General programming topics",
+      "keywords": ["programming", "software development", "coding", "algorithms", "data structures"]
+    },
+    "devtools": {
+      "weight": 0.6,
+      "description": "Development tools and productivity",
+      "keywords": ["development tools", "ide", "editor", "productivity", "automation", "ci/cd"]
+    }
+  },
+  "topic_combinations": {
+    "claude-code-workflows": {
+      "weight": 1.5,
+      "description": "Claude Code + workflow automation content",
+      "required_topics": ["claude-code", "meta-prompting"],
+      "bonus_multiplier": 0.5,
+      "special_scoring": "highest_priority"
+    },
+    "meta-prompting-claude": {
+      "weight": 1.4,
+      "description": "Meta-prompting + Claude techniques",
+      "required_topics": ["meta-prompting", "claude"],
+      "bonus_multiplier": 0.4,
+      "special_scoring": "high_priority"
+    },
+    "claude-react-development": {
+      "weight": 1.3,
+      "description": "Claude-assisted React development",
+      "required_topics": ["claude", "react"],
+      "bonus_multiplier": 0.35,
+      "special_scoring": "ai_development_focus"
+    },
+    "claude-typescript-automation": {
+      "weight": 1.25,
+      "description": "Claude Code + TypeScript automation",
+      "required_topics": ["claude-code", "typescript"],
+      "bonus_multiplier": 0.3,
+      "special_scoring": "productivity_focus"
+    },
+    "react-typescript": {
+      "weight": 1.1,
+      "description": "React + TypeScript combination content",
+      "required_topics": ["react", "typescript"],
+      "bonus_multiplier": 0.2
+    },
+    "react-nextjs": {
+      "weight": 1.2,
+      "description": "React + Next.js development content",
+      "required_topics": ["react", "nextjs"],
+      "bonus_multiplier": 0.3
+    }
+  },
+  "content_scoring": {
+    "base_score_calculation": "engagement_score * relevance_score * freshness_score",
+    "priority_topic_boost": "base_score * topic_weight",
+    "combination_bonus": "base_score * combination_bonus_multiplier",
+    "freshness_decay": {
+      "0-24_hours": 1.0,
+      "1-3_days": 0.8,
+      "3-7_days": 0.6,
+      "7-30_days": 0.4,
+      "30+_days": 0.2
+    }
+  },
+  "source_priorities": {
+    "official_sources": {
+      "anthropic.com": {"priority": "highest", "topics": ["claude", "claude-code"]},
+      "react.dev": {"priority": "highest", "topics": ["react"]},
+      "nextjs.org": {"priority": "highest", "topics": ["nextjs"]},
+      "typescriptlang.org": {"priority": "highest", "topics": ["typescript"]}
+    },
+    "expert_sources": {
+      "dan_abramov": {"priority": "high", "topics": ["react"]},
+      "ryan_florence": {"priority": "high", "topics": ["react"]},
+      "vercel_team": {"priority": "highest", "topics": ["nextjs"]},
+      "leerob": {"priority": "high", "topics": ["nextjs", "react"]},
+      "anthropic_team": {"priority": "highest", "topics": ["claude", "meta-prompting"]}
+    }
+  },
+  "discovery_patterns": {
+    "trending_detection": {
+      "min_engagement_threshold": 100,
+      "time_window_hours": 24,
+      "cross_platform_correlation": true
+    },
+    "quality_filters": {
+      "min_content_length": 50,
+      "spam_detection": true,
+      "source_credibility_check": true
+    }
+  }
+}

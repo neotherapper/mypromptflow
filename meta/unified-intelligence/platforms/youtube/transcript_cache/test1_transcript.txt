@@ -1,0 +1,12 @@
+
+        This is a simulated transcript for video test1.
+        
+        In this video, we discuss React performance optimization techniques.
+        We cover topics like useMemo, useCallback, and React.memo.
+        We also explore code splitting and lazy loading strategies.
+        
+        Key tools mentioned: React DevTools, Lighthouse, Bundle Analyzer.
+        
+        The main learning outcomes include understanding when to optimize,
+        measuring performance impacts, and implementing effective solutions.
+        

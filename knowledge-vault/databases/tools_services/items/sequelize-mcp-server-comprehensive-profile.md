@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Database ORM & M
 id: 1b68c875-b9c8-4ace-a7d5-4c047feba44e
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Sequelize MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/sequelize-database-orm-server-profile.md
 priority: 1st_priority
 production_readiness: 96
 quality_score: 8.2
@@ -23,7 +21,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/sequelize"
 ---
 
 ## Header Classification

@@ -1,0 +1,309 @@
+# YAML-Specific Information Source Mappings
+# Integration with AI-PR Validation System and Information Access Framework
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-28"
+  purpose: "YAML-specific information source mappings for AI agents"
+  integration: "AI-PR validation system, infrastructure-validator, knowledge-vault"
+  authority: "Specific technology mappings override general categorical patterns"
+
+# YAML TECHNOLOGY PROFILE
+yaml_technology_profile:
+  primary_sources:
+    github_repositories:
+      source_type: "version_control"
+      priority: "primary"
+      mcp_server: "github-mcp-server-platform"
+      access_pattern: "mcp__MCP_DOCKER__get_file_contents"
+      authentication: "github_pat"
+      
+      recommended_repositories:
+        yaml_parsers:
+          - "yaml/pyyaml"
+          - "go-yaml/yaml"
+          - "eemeli/yaml"
+          - "nodeca/js-yaml"
+        
+        kubernetes_ecosystem:
+          - "kubernetes/kubernetes"
+          - "helm/helm"
+          - "kubernetes/kompose"
+          - "kubernetes-sigs/kustomize"
+        
+        ci_cd_platforms:
+          - "actions/runner"
+          - "github/super-actions"
+          - "gitlab-org/gitlab-ci-yml"
+          - "circleci/circleci-docs"
+        
+        infrastructure_as_code:
+          - "ansible/ansible"
+          - "saltstack/salt"
+          - "docker/compose"
+          - "openapi-tools/openapi-generator"
+        
+        configuration_management:
+          - "mikefarah/yq"
+          - "adrienverge/yamllint"
+          - "prettier/prettier"
+      
+      integration_patterns:
+        ai_pr_validation: "Used by infrastructure-validator for YAML pattern validation"
+        file_detection: "Triggered by .yml/.yaml files and YAML-based configuration"
+        knowledge_source: "knowledge-vault/knowledge/technologies/yaml/yaml-devops.md"
+    
+    documentation_sources:
+      context7_library_docs:
+        source_type: "structured_data"
+        priority: "primary"
+        mcp_server: "context7-mcp-server"
+        access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+        authentication: "none"
+        
+        library_mappings:
+          kubernetes: "/kubernetes/kubernetes"
+          docker_compose: "/docker/compose"
+          ansible: "/ansible/ansible"
+          github_actions: "/actions/runner"
+          helm: "/helm/helm"
+          openapi: "/OAI/OpenAPI-Specification"
+        
+        usage_patterns:
+          topic_resolution: "Always call resolve-library-id first to get exact Context7 ID"
+          documentation_access: "Use get-library-docs with resolved library ID"
+          topic_filtering: "Use topic parameter for specific areas (k8s, docker, ci/cd)"
+          version_specific: "Request specific versions when compatibility matters"
+        
+        integration_with_validation:
+          infrastructure_validator: "Reference for YAML configuration patterns and best practices"
+          schema_validation: "Validate against official YAML schema documentation"
+          security_patterns: "Cross-reference secure YAML configuration practices"
+    
+    specification_sources:
+      yaml_specification:
+        source_type: "web_content"
+        priority: "primary"
+        access_pattern: "WebFetch"
+        base_urls:
+          - "https://yaml.org/spec/"
+          - "https://yaml.org/type/"
+        
+        yaml_standards:
+          core_specification: "YAML 1.2 specification"
+          data_types: "YAML data type definitions"
+          schema_validation: "JSON Schema for YAML validation"
+          best_practices: "YAML style guides and conventions"
+        
+        validation_integration:
+          syntax_validation: "Check YAML syntax against official specification"
+          schema_compliance: "Validate YAML documents against schema definitions"
+          security_assessment: "Cross-reference with security-validator for YAML vulnerabilities"
+
+# CONDITIONAL SOURCE SELECTION LOGIC
+conditional_selection:
+  yaml_detection_triggers:
+    file_patterns:
+      - "**/*.yml"
+      - "**/*.yaml"
+      - "**/docker-compose.yml"
+      - "**/.github/workflows/*.yml"
+      - "**/k8s/*.yaml"
+      - "**/ansible/*.yml"
+    
+    configuration_indicators:
+      infrastructure_files:
+        - "docker-compose.yml"
+        - "kubernetes.yaml"
+        - "deployment.yml"
+        - ".github/workflows/"
+        - "ansible-playbook.yml"
+      
+      config_contexts:
+        - "CI/CD pipelines"
+        - "Container orchestration"
+        - "Infrastructure as Code"
+        - "API specifications"
+        - "Configuration management"
+    
+    content_analysis:
+      yaml_syntax:
+        - "apiVersion:"
+        - "kind:"
+        - "metadata:"
+        - "spec:"
+        - "- name:"
+      
+      domain_indicators:
+        - "containers"
+        - "deployment"
+        - "service"
+        - "workflow"
+        - "playbook"
+
+  source_selection_algorithm:
+    step_1_detection:
+      confidence_scoring:
+        file_patterns: 0.5
+        config_indicators: 0.3
+        content_analysis: 0.2
+      minimum_confidence: 0.6
+    
+    step_2_source_prioritization:
+      primary_sources:
+        condition: "confidence >= 0.8"
+        sources: ["github_repositories", "context7_library_docs", "yaml_specification"]
+      
+      supplementary_sources:
+        condition: "0.6 <= confidence < 0.8"
+        sources: ["context7_library_docs", "yaml_specification"]
+      
+      fallback_sources:
+        condition: "confidence < 0.6"
+        sources: ["general_infrastructure_patterns"]
+    
+    step_3_integration_coordination:
+      ai_pr_validation:
+        infrastructure_validator: "Use YAML-specific validation patterns"
+        schema_validation: "Reference official YAML schema documentation"
+        security_assessment: "Apply YAML security best practices"
+      
+      knowledge_vault_integration:
+        knowledge_source: "knowledge-vault/knowledge/technologies/yaml/yaml-devops.md"
+        context_loading: "REQUEST_CONTEXT(yaml-devops)"
+        role_assignment: "devops specialist agent"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  ai_pr_validation_system:
+    validation_enhancement:
+      infrastructure_validator:
+        yaml_patterns: "Enhanced with YAML-specific configuration patterns"
+        schema_validation: "YAML schema validation using official sources"
+        security_validation: "YAML security pattern validation"
+        syntax_validation: "YAML syntax and formatting validation"
+      
+      file_detection_system:
+        multi_layered_detection: "Extension + content + YAML context analysis"
+        confidence_scoring: "YAML-specific confidence calculation"
+        agent_spawning: "Role-aware YAML/DevOps specialist spawning"
+      
+      knowledge_context_loading:
+        progressive_loading: "Load YAML context only when YAML files detected"
+        role_specialization: "devops role with YAML expertise"
+        unlimited_context: "Full YAML configuration knowledge without token limits"
+    
+    orchestration_integration:
+      conditional_activation: "YAML sources activated when YAML files detected in PR"
+      parallel_validation: "YAML validation runs parallel with security and infrastructure"
+      result_aggregation: "YAML validation results integrated into comprehensive PR report"
+      fallback_handling: "Graceful degradation to general infrastructure patterns if YAML detection fails"
+
+  research_framework_integration:
+    source_discovery:
+      step_2_7_integration: "Add YAML source discovery to research orchestrator workflow"
+      topic_specific_routing: "YAML research requests route to YAML-specific sources"
+      multi_source_coordination: "Coordinate GitHub, Context7, and specification sources for YAML research"
+    
+    method_enhancement:
+      domain_adaptive: "Enhanced with YAML-specific domain adaptation patterns"
+      multi_perspective: "YAML perspectives include syntax, schemas, security, tooling"
+      constitutional_ai: "YAML validation includes ethical configuration management assessment"
+
+  knowledge_vault_coordination:
+    authoritative_sources:
+      yaml_devops: "knowledge-vault/knowledge/technologies/yaml/yaml-devops.md"
+      yaml_security: "knowledge-vault/knowledge/technologies/yaml/yaml-security.md"
+      infrastructure_architect: "knowledge-vault/knowledge/technologies/infrastructure/infrastructure-architect.md"
+    
+    cross_reference_validation:
+      source_consistency: "Ensure YAML mappings align with knowledge vault content"
+      update_coordination: "Knowledge vault updates trigger YAML mapping reviews"
+      bidirectional_sync: "YAML source discoveries update knowledge vault"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  yaml_detection_workflow:
+    step_1: "Scan PR files for YAML indicators using conditional_selection logic"
+    step_2: "Calculate confidence score based on file patterns, context, content"
+    step_3: "If confidence >= 0.6, activate YAML-specific source mappings"
+    step_4: "Load YAML knowledge context using REQUEST_CONTEXT(yaml-devops)"
+    step_5: "Spawn devops specialist agent with YAML expertise"
+    step_6: "Coordinate YAML validation with security and infrastructure validators"
+  
+  source_access_workflow:
+    github_analysis:
+      step_1: "Use mcp__MCP_DOCKER__get_file_contents for YAML repository analysis"
+      step_2: "Focus on configuration patterns, schema definitions, and best practices"
+      step_3: "Reference official YAML ecosystem repositories for validation patterns"
+    
+    context7_documentation:
+      step_1: "Call mcp__MCP_DOCKER__resolve-library-id with YAML tool name to get Context7 ID"
+      step_2: "Use mcp__MCP_DOCKER__get-library-docs with resolved library ID"
+      step_3: "Apply topic filtering for specific YAML areas (k8s, docker, ci/cd)"
+    
+    specification_validation:
+      step_1: "Use WebFetch for YAML specification and standards validation"
+      step_2: "Cross-reference syntax and schema compliance"
+      step_3: "Apply security best practices from YAML security documentation"
+  
+  validation_coordination:
+    schema_validation: "Enhance infrastructure validation with YAML-specific schema patterns"
+    security_assessment: "Include YAML-specific security patterns (injection, secrets)"
+    syntax_compliance: "Apply YAML syntax and formatting validation"
+    tooling_integration: "YAML tooling patterns and CI/CD integration"
+
+# DOMAIN-SPECIFIC YAML CONTEXTS
+domain_contexts:
+  kubernetes:
+    file_patterns: ["k8s/*.yaml", "kubernetes/*.yml", "*deployment.yaml"]
+    sources: ["kubernetes/kubernetes", "helm/helm"]
+    validation_focus: ["resource definitions", "security policies", "networking"]
+  
+  docker_compose:
+    file_patterns: ["docker-compose*.yml", "compose*.yaml"]
+    sources: ["docker/compose"]
+    validation_focus: ["service definitions", "networking", "volumes"]
+  
+  github_actions:
+    file_patterns: [".github/workflows/*.yml", ".github/workflows/*.yaml"]
+    sources: ["actions/runner", "github/super-actions"]
+    validation_focus: ["workflow syntax", "security", "performance"]
+  
+  ansible:
+    file_patterns: ["playbooks/*.yml", "roles/*/tasks/*.yml", "ansible*.yaml"]
+    sources: ["ansible/ansible"]
+    validation_focus: ["playbook structure", "security", "idempotency"]
+  
+  openapi:
+    file_patterns: ["api/*.yaml", "openapi*.yml", "swagger*.yaml"]
+    sources: ["OAI/OpenAPI-Specification"]
+    validation_focus: ["API schema", "documentation", "validation"]
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_accuracy:
+    github_repositories: "Use only official and well-maintained YAML ecosystem repositories"
+    documentation_currency: "Prefer latest stable YAML specification versions"
+    ecosystem_completeness: "Cover YAML parsers, schema validation, security, tooling"
+  
+  integration_effectiveness:
+    ai_pr_validation: "≥95% accuracy in YAML pattern detection and validation"
+    research_coordination: "≥90% relevant source selection for YAML research topics"
+    knowledge_consistency: "100% alignment with knowledge vault YAML content"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct YAML technology identification"
+    completeness: "≥90% coverage of YAML ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive YAML configuration guidance only"
+    transparency: "Clear rationale for YAML source selection decisions"
+
+# SUCCESS CRITERIA
+success_criteria:
+  yaml_specificity: "YAML configuration gets dedicated GitHub, Context7, specification sources"
+  ai_pr_integration: "Seamless integration with infrastructure-validator"
+  research_enhancement: "YAML research requests automatically use optimized sources"
+  knowledge_consistency: "YAML mappings align with knowledge vault structure"
+  performance_optimization: "YAML-specific context loading only when needed"
+  validation_accuracy: "≥95% accuracy in YAML configuration information retrieval"

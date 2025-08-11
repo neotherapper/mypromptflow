@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading Conversa
 id: 5c5fcb7e-52bb-4ecd-8fc2-16331e242444
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Claude AI Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/claude-ai-platform-server-profile.md
 priority: 1st_priority
 quality_score: 9.8
 source_database: tools_services
@@ -22,7 +20,6 @@ tags:
 - Analytics
 - Monitoring
 - Development Platform
-mcp_profile_reference: "@mcp_profile/claude-ai-platform"
 ---
 
 ## Header Classification

@@ -6,9 +6,7 @@ description: Couchbase MCP Server delivers enterprise-grade NoSQL database capab
 id: 5335fbfd-8bce-4dc7-b4c9-e9d6cd4b9ebb
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Couchbase MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/couchbase-server-profile.md
 priority: 1st_priority
 quality_score: 8.3
 source_database: tools_services
@@ -26,7 +24,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/couchbase"
 ---
 
 **Tier**: Tier 1 Immediate  

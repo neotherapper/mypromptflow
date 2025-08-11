@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: a0c8b033-c57b-4449-9c14-86efad93f80e
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Neo4j MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/neo4j-server-profile.md
 priority: 1st_priority
 quality_score: 8.3
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Tier 1
 - Analytics
 - Monitoring
-mcp_profile_reference: "@mcp_profile/neo4j"
 ---
 
 ## Header Classification

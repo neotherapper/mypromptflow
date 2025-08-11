@@ -1,0 +1,107 @@
+{
+  "test_started_at": "2025-08-01T07:51:59.463718+00:00",
+  "phases": {
+    "rss_collection": {
+      "phase": "rss_collection",
+      "started_at": "2025-08-01T07:51:59.463890+00:00",
+      "success": true,
+      "channels_tested": 23,
+      "channels_successful": 17,
+      "channels_failed": 6,
+      "total_items_collected": 21,
+      "errors": [],
+      "collection_time_seconds": 21.44,
+      "system_stats": {
+        "total_channels": 23,
+        "active_channels": 17,
+        "total_items": 21,
+        "last_collection": "2025-08-01T07:52:20.898893+00:00",
+        "channel_stats": {
+          "webdevsimplified": {
+            "item_count": 2,
+            "last_collection": "2025-08-01T07:51:59.892091+00:00"
+          },
+          "developedbyed": {
+            "item_count": 1,
+            "last_collection": "2025-08-01T07:52:06.678445+00:00"
+          },
+          "jackherrington": {
+            "item_count": 1,
+            "last_collection": "2025-08-01T07:52:06.735390+00:00"
+          },
+          "fireship": {
+            "item_count": 1,
+            "last_collection": "2025-08-01T07:51:59.738398+00:00"
+          },
+          "designcourse": {
+            "item_count": 4,
+            "last_collection": "2025-08-01T07:52:07.324782+00:00"
+          },
+          "leerob": {
+            "item_count": 1,
+            "last_collection": "2025-08-01T07:52:06.873016+00:00"
+          },
+          "techwithtim": {
+            "item_count": 10,
+            "last_collection": "2025-08-01T07:52:07.097577+00:00"
+          },
+          "codevolution": {
+            "item_count": 1,
+            "last_collection": "2025-08-01T07:51:59.966731+00:00"
+          }
+        }
+      },
+      "success_rate": 0.739,
+      "completed_at": "2025-08-01T07:52:20.900962+00:00"
+    },
+    "digest_integration": {
+      "phase": "digest_integration",
+      "started_at": "2025-08-01T07:52:20.900968+00:00",
+      "success": true,
+      "rss_items_found": 21,
+      "integration_working": true,
+      "errors": [],
+      "completed_at": "2025-08-01T07:52:20.902189+00:00"
+    },
+    "end_to_end": {
+      "phase": "end_to_end",
+      "started_at": "2025-08-01T07:52:20.902208+00:00",
+      "success": true,
+      "digest_generated": true,
+      "rss_content_included": true,
+      "html_file_created": true,
+      "errors": [],
+      "generation_time_seconds": 0.11,
+      "html_file_path": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/meta/unified-intelligence/daily-digest/generated/content/daily-digest.html",
+      "total_items": 29,
+      "subscribed_items": 13,
+      "completed_at": "2025-08-01T07:52:21.014882+00:00"
+    },
+    "output_validation": {
+      "phase": "output_validation",
+      "started_at": "2025-08-01T07:52:21.014984+00:00",
+      "success": false,
+      "html_valid": false,
+      "content_quality": {
+        "has_priority_topics": true,
+        "has_statistics": true,
+        "has_recommendations": true,
+        "has_source_attribution": true
+      },
+      "errors": [],
+      "html_checks": {
+        "has_doctype": true,
+        "has_title": true,
+        "has_css": true,
+        "has_content": true,
+        "has_rss_mention": false
+      },
+      "content_items_in_html": 17,
+      "completed_at": "2025-08-01T07:52:21.015257+00:00"
+    }
+  },
+  "test_completed_at": "2025-08-01T07:52:21.015264+00:00",
+  "overall_success": false,
+  "phases_passed": 3,
+  "total_phases": 4
+}

@@ -3,12 +3,9 @@ description: 'Enterprise security information and event management (SIEM) platfo
 id: b9f6c3a8-7d4e-5f9b-8c7a-4e7b9f2c5a8d
 installation_priority: 9
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Splunk SIEM MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/splunk-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/splunk-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 98
@@ -26,7 +23,6 @@ tags:
 - Fraud Detection
 - Enterprise Security
 - Data Analytics
-mcp_profile_reference: "@mcp_profile/splunk-siem"
 information_capabilities:
   access_methods:
     - method: "Splunk REST API"

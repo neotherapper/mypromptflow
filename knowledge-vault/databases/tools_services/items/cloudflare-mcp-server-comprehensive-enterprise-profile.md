@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: cbddcc34-18bb-499a-8335-01303e411a3f
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Cloudflare MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/cloudflare-server-profile.md
 priority: 3rd_priority
 quality_score: 8.7
 source_database: tools_services
@@ -20,7 +18,6 @@ tags:
 - Cloud Platform
 - Tier 3
 - Development Platform
-mcp_profile_reference: "@mcp_profile/cloudflare"
 ---
 
 ## Header Classification

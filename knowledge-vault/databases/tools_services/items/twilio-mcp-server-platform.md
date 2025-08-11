@@ -8,9 +8,7 @@ description: Cloud communications platform for voice, SMS, messaging, and custom
 id: d4ff9623-e73a-4073-9447-eb707e8dc2ea
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Twilio MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/twilio-server-profile.md
 priority: 1st_priority
 production_readiness: 93
 provider: Enterprise (Twilio Inc.)
@@ -31,7 +29,6 @@ tier: Tier 1
 transport_protocols:
 - HTTPS REST API
 - WebSockets
-mcp_profile_reference: "@mcp_profile/twilio"
 ---
 
 **Cloud communications platform for voice, SMS, messaging, and customer engagement**  

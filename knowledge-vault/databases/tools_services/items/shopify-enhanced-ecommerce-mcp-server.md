@@ -3,9 +3,7 @@ description: "Enhanced e-commerce platform management and analytics with MCP int
 id: 9e0f1a2b-3c4d-5e6f-7a8b-9c0d1e2f3a4b
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Shopify Enhanced E-commerce MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/shopify-ecommerce-platform-profile.md
 priority: 1st_priority
 quality_score: 85.0
 source_database: tools_services
@@ -19,7 +17,6 @@ tags:
 - API Service
 - Tier 1
 - Development Platform
-mcp_profile_reference: "@mcp_profile/shopify-enhanced-ecommerce"
 ---
 
 # Shopify Enhanced E-commerce MCP Server

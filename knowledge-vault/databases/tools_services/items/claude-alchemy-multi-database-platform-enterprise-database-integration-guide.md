@@ -3,10 +3,8 @@ description: '## How companies Can Use This Generic Tool'
 id: fd1683c7-80ac-4843-be72-33c958893184
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Claude Alchemy Multi-Database Platform - Enterprise Database Integration Guide MCP Server
   MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/claude-alchemy-multi-database-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active

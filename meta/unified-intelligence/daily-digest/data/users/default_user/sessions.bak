@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "user_id": "default_user",
+    "last_updated": "2025-08-09T19:24:05.141423+00:00"
+  },
+  "current_session": {
+    "session_id": "sess_1754767445141",
+    "started_at": "2025-08-09T19:24:05.141421+00:00",
+    "last_activity_at": "2025-08-09T19:24:05.141422+00:00",
+    "videos_viewed": [],
+    "actions_performed": []
+  },
+  "recent_sessions": [
+    {
+      "session_id": "sess_1754767445139",
+      "started_at": "2025-08-09T19:24:05.139792+00:00",
+      "last_activity_at": "2025-08-09T19:24:05.139793+00:00",
+      "videos_viewed": [],
+      "actions_performed": [],
+      "ended_at": "2025-08-09T19:24:05.141413+00:00",
+      "duration_minutes": 2.7083333333333332e-05
+    }
+  ],
+  "last_visit_timestamp": "2025-08-09T19:24:05.141423+00:00"
+}

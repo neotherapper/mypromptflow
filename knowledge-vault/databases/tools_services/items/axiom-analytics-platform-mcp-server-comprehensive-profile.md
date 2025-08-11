@@ -12,9 +12,7 @@ estimated_setup_time: 30-45 minutes
 id: 2c8f1b5e-7a9d-4e6c-b3f2-8d5a7c9e1f4b
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Axiom Analytics Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/axiom-analytics-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 provider: Community
@@ -68,7 +66,6 @@ information_capabilities:
   - "Track user behavior analytics and business metrics"
   - "Monitor infrastructure health and resource utilization"
   - "Implement security event monitoring and threat detection"
-mcp_profile_reference: "@mcp_profile/axiom-analytics-platform"
 ---
 
 **Event processing and analytics platform for comprehensive data analytics, real-time monitoring, and observability through MCP**

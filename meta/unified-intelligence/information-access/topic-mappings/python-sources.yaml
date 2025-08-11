@@ -1,0 +1,286 @@
+# Python-Specific Information Source Mappings
+# Integration with AI-PR Validation System and Information Access Framework
+
+metadata:
+  version: "1.0.0"
+  last_updated: "2025-07-28"
+  purpose: "Python-specific information source mappings for AI agents"
+  integration: "AI-PR validation system, backend-validator, knowledge-vault"
+  authority: "Specific technology mappings override general categorical patterns"
+
+# PYTHON TECHNOLOGY PROFILE
+python_technology_profile:
+  primary_sources:
+    github_repositories:
+      source_type: "version_control"
+      priority: "primary"
+      mcp_server: "github-mcp-server-platform"
+      access_pattern: "mcp__MCP_DOCKER__get_file_contents"
+      authentication: "github_pat"
+      
+      recommended_repositories:
+        official_python:
+          - "python/cpython"
+          - "python/peps"
+          - "pypa/pip"
+          - "pypa/setuptools"
+        
+        web_frameworks:
+          - "django/django"
+          - "pallets/flask"
+          - "tiangolo/fastapi"
+          - "encode/starlette"
+          - "tornadoweb/tornado"
+        
+        async_frameworks:
+          - "aio-libs/aiohttp"
+          - "python-trio/trio"
+          - "agronholm/anyio"
+        
+        data_science:
+          - "pandas-dev/pandas"
+          - "numpy/numpy"
+          - "scikit-learn/scikit-learn"
+          - "matplotlib/matplotlib"
+          - "jupyter/notebook"
+        
+        testing_libraries:
+          - "pytest-dev/pytest" 
+          - "spulec/freezegun"
+          - "kevin1024/vcrpy"
+          - "Yelp/mock"
+      
+      integration_patterns:
+        ai_pr_validation: "Used by backend-validator for Python pattern validation"
+        file_detection: "Triggered by .py files and Python dependencies in requirements.txt"
+        knowledge_source: "knowledge-vault/knowledge/technologies/python/python-backend-dev.md"
+    
+    documentation_sources:
+      context7_library_docs:
+        source_type: "structured_data"
+        priority: "primary"
+        mcp_server: "context7-mcp-server"
+        access_pattern: "mcp__MCP_DOCKER__get-library-docs"
+        authentication: "none"
+        
+        library_mappings:
+          python_core: "/python/cpython"
+          django: "/django/django"
+          flask: "/pallets/flask"
+          fastapi: "/tiangolo/fastapi"
+          requests: "/psf/requests"
+          sqlalchemy: "/sqlalchemy/sqlalchemy"
+        
+        usage_patterns:
+          topic_resolution: "Always call resolve-library-id first to get exact Context7 ID"
+          documentation_access: "Use get-library-docs with resolved library ID"
+          topic_filtering: "Use topic parameter for specific areas (async, orm, testing)"
+          version_specific: "Request specific versions when compatibility matters"
+        
+        integration_with_validation:
+          backend_validator: "Reference for Python backend patterns and best practices"
+          api_architecture: "Validate against official Python web framework patterns"
+          performance_optimization: "Cross-reference async patterns, caching, optimization"
+    
+    package_ecosystem:
+      pypi_registry:
+        source_type: "structured_data"
+        priority: "secondary"
+        access_pattern: "WebFetch"
+        base_urls:
+          - "https://pypi.org/pypi/"
+          - "https://pypi.org/project/"
+        
+        python_packages:
+          core: ["python", "pip", "setuptools", "wheel"]
+          web_frameworks: ["django", "flask", "fastapi", "starlette", "tornado"]
+          async: ["aiohttp", "asyncio", "trio", "anyio"]
+          databases: ["sqlalchemy", "psycopg2-binary", "pymongo", "redis"]
+          data_science: ["pandas", "numpy", "scipy", "matplotlib", "jupyter"]
+          testing: ["pytest", "unittest", "mock", "coverage", "tox"]
+          deployment: ["gunicorn", "uvicorn", "celery", "docker"]
+        
+        validation_integration:
+          dependency_analysis: "Check requirements.txt/pyproject.toml for Python ecosystem dependencies"
+          version_compatibility: "Validate Python version compatibility across packages"
+          security_assessment: "Cross-reference with security-validator for vulnerability scanning"
+
+# CONDITIONAL SOURCE SELECTION LOGIC
+conditional_selection:
+  python_detection_triggers:
+    file_patterns:
+      - "**/*.py"
+      - "**/requirements.txt"
+      - "**/pyproject.toml"
+      - "**/setup.py"
+      - "**/Pipfile"
+    
+    dependency_indicators:
+      requirements_dependencies:
+        - "django"
+        - "flask"
+        - "fastapi"
+        - "requests"
+        - "sqlalchemy"
+      
+      config_files:
+        - "pyproject.toml"
+        - "setup.cfg"
+        - "tox.ini"
+        - "pytest.ini"
+        - "mypy.ini"
+    
+    content_analysis:
+      import_patterns:
+        - "import django"
+        - "from flask import"
+        - "import fastapi"
+        - "import asyncio"
+        - "def __init__"
+      
+      python_syntax:
+        - "if __name__ == '__main__':"
+        - "class "
+        - "def "
+        - "async def"
+
+  source_selection_algorithm:
+    step_1_detection:
+      confidence_scoring:
+        file_patterns: 0.4
+        dependencies: 0.3
+        config_files: 0.2
+        content_analysis: 0.1
+      minimum_confidence: 0.7
+    
+    step_2_source_prioritization:
+      primary_sources:
+        condition: "confidence >= 0.8"
+        sources: ["github_repositories", "context7_library_docs", "pypi_registry"]
+      
+      supplementary_sources:
+        condition: "0.7 <= confidence < 0.8"
+        sources: ["context7_library_docs", "pypi_registry"]
+      
+      fallback_sources:
+        condition: "confidence < 0.7"
+        sources: ["general_backend_patterns"]
+    
+    step_3_integration_coordination:
+      ai_pr_validation:
+        backend_validator: "Use Python-specific validation patterns"
+        api_architecture: "Reference official Python framework documentation"
+        performance_assessment: "Apply Python performance optimization patterns"
+      
+      knowledge_vault_integration:
+        knowledge_source: "knowledge-vault/knowledge/technologies/python/python-backend-dev.md"
+        context_loading: "REQUEST_CONTEXT(python-backend-dev)"
+        role_assignment: "backend-dev specialist agent"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+integration_patterns:
+  ai_pr_validation_system:
+    validation_enhancement:
+      backend_validator:
+        python_patterns: "Enhanced with Python-specific backend patterns"
+        framework_validation: "Web framework architecture validation using official sources"
+        async_validation: "Async/await pattern validation against Python documentation"
+        orm_patterns: "SQLAlchemy, Django ORM validation"
+      
+      file_detection_system:
+        multi_layered_detection: "Extension + content + Python dependency analysis"
+        confidence_scoring: "Python-specific confidence calculation"
+        agent_spawning: "Role-aware Python backend specialist spawning"
+      
+      knowledge_context_loading:
+        progressive_loading: "Load Python context only when Python files detected"
+        role_specialization: "backend-dev role with Python expertise"
+        unlimited_context: "Full Python implementation knowledge without token limits"
+    
+    orchestration_integration:
+      conditional_activation: "Python sources activated when Python files detected in PR"
+      parallel_validation: "Python validation runs parallel with security and performance"
+      result_aggregation: "Python validation results integrated into comprehensive PR report"
+      fallback_handling: "Graceful degradation to general backend patterns if Python detection fails"
+
+  research_framework_integration:
+    source_discovery:
+      step_2_7_integration: "Add Python source discovery to research orchestrator workflow"
+      topic_specific_routing: "Python research requests route to Python-specific sources"
+      multi_source_coordination: "Coordinate GitHub, Context7, and PyPI sources for Python research"
+    
+    method_enhancement:
+      domain_adaptive: "Enhanced with Python-specific domain adaptation patterns"
+      multi_perspective: "Python perspectives include core, web, async, data science, testing"
+      constitutional_ai: "Python validation includes ethical framework usage assessment"
+
+  knowledge_vault_coordination:
+    authoritative_sources:
+      python_backend_dev: "knowledge-vault/knowledge/technologies/python/python-backend-dev.md"
+      python_performance: "knowledge-vault/knowledge/technologies/python/python-performance.md"
+      python_security: "knowledge-vault/knowledge/technologies/python/python-security.md"
+    
+    cross_reference_validation:
+      source_consistency: "Ensure Python mappings align with knowledge vault content"
+      update_coordination: "Knowledge vault updates trigger Python mapping reviews"
+      bidirectional_sync: "Python source discoveries update knowledge vault"
+
+# USAGE PATTERNS FOR AI AGENTS
+ai_agent_instructions:
+  python_detection_workflow:
+    step_1: "Scan PR files for Python indicators using conditional_selection logic"
+    step_2: "Calculate confidence score based on file patterns, dependencies, content"
+    step_3: "If confidence >= 0.7, activate Python-specific source mappings"
+    step_4: "Load Python knowledge context using REQUEST_CONTEXT(python-backend-dev)"
+    step_5: "Spawn backend-dev specialist agent with Python expertise"
+    step_6: "Coordinate Python validation with security and performance validators"
+  
+  source_access_workflow:
+    github_analysis:
+      step_1: "Use mcp__MCP_DOCKER__get_file_contents for Python repository analysis"
+      step_2: "Focus on framework patterns, async usage, and architectural decisions"
+      step_3: "Reference official Python repositories for validation patterns"
+    
+    context7_documentation:
+      step_1: "Call mcp__MCP_DOCKER__resolve-library-id with Python framework name to get Context7 ID"
+      step_2: "Use mcp__MCP_DOCKER__get-library-docs with resolved Python library ID"
+      step_3: "Apply topic filtering for specific Python areas (async, orm, testing, etc.)"
+    
+    pypi_ecosystem:
+      step_1: "Analyze requirements.txt/pyproject.toml for Python ecosystem dependencies"
+      step_2: "Use WebFetch for PyPI registry queries when version compatibility needed"
+      step_3: "Cross-reference with security scanning for vulnerability assessment"
+  
+  validation_coordination:
+    framework_integration: "Enhance backend validation with Python-specific patterns"
+    security_assessment: "Include Python-specific security patterns (injection, deserialization)"
+    performance_analysis: "Apply Python performance optimization validation"
+    async_compliance: "Python async/await patterns and event loop management"
+
+# QUALITY ASSURANCE
+quality_metrics:
+  source_accuracy:
+    github_repositories: "Use only official and well-maintained Python repositories"
+    documentation_currency: "Prefer latest stable Python documentation versions"
+    ecosystem_completeness: "Cover core Python, web frameworks, async, data science, testing"
+  
+  integration_effectiveness:
+    ai_pr_validation: "≥95% accuracy in Python pattern detection and validation"
+    research_coordination: "≥90% relevant source selection for Python research topics"
+    knowledge_consistency: "100% alignment with knowledge vault Python content"
+  
+  constitutional_ai_compliance:
+    accuracy: "≥95% correct Python technology identification"
+    completeness: "≥90% coverage of Python ecosystem sources"
+    consistency: "≥95% repeatable source selection across similar contexts"
+    responsibility: "Constructive Python development guidance only"
+    transparency: "Clear rationale for Python source selection decisions"
+
+# SUCCESS CRITERIA
+success_criteria:
+  python_specificity: "Python development gets dedicated GitHub, Context7, PyPI sources"
+  ai_pr_integration: "Seamless integration with backend-validator"
+  research_enhancement: "Python research requests automatically use optimized sources"
+  knowledge_consistency: "Python mappings align with knowledge vault structure"
+  performance_optimization: "Python-specific context loading only when needed"
+  validation_accuracy: "≥95% accuracy in Python development information retrieval"

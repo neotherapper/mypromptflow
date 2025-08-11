@@ -3,9 +3,7 @@ description: "HashiCorp Vault secrets management and security platform with MCP 
 id: 6e9f2a3b-8c7d-4e2a-9f3e-5a8b7c4d6e2f
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-27'
 name: Vault Secrets MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/security-vault-secrets-mcp.md
 priority: 1st_priority
 quality_score: 85.0
 source_database: tools_services
@@ -19,7 +17,6 @@ tags:
 - Tier 1
 - HashiCorp
 - Development Platform
-mcp_profile_reference: "@mcp_profile/vault-secrets"
 ---
 
 # Vault Secrets MCP Server

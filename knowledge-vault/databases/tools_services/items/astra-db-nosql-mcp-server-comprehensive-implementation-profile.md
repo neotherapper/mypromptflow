@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: 126df285-22a1-4f67-8f3e-530fe9cb4cf0
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Astra DB NoSQL MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/astra-db-nosql-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -22,7 +20,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/astra-db-nosql"
 ---
 
 ## Header Classification

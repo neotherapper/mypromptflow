@@ -7,9 +7,7 @@ description: Salesforce CRM MCP Server provides comprehensive customer relations
 id: f9e61767-bd39-41ed-a235-5229fdce4be5
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Salesforce CRM MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/salesforce-server-profile.md
 priority: 1st_priority
 quality_score: 9.02
 source_database: tools_services
@@ -25,7 +23,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/salesforce-crm"
 ---
 
 **Tier**: Tier 1 Immediate  

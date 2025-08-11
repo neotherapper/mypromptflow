@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel Intelligence Report - 2025-08-01</title>
+    <link rel="stylesheet" href="/static/css/design-system.css">
+    <style>
+        /* Intelligence Report specific overrides */
+        .insight {
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--primary-gradient);
+            background: var(--glass-light);
+            backdrop-filter: blur(10px);
+        }
+        
+        .insight.strength {
+            border-left: 4px solid var(--status-active);
+            background: rgba(34, 197, 94, 0.1);
+        }
+        
+        .insight.opportunity {
+            border-left: 4px solid var(--status-inactive);
+            background: rgba(245, 158, 11, 0.1);
+        }
+        
+        .insight.trend {
+            border-left: 4px solid #8b5cf6;
+            background: rgba(139, 92, 246, 0.1);
+        }
+        
+        .insight h3 {
+            margin: 0 0 var(--spacing-sm) 0;
+            color: var(--text-primary);
+            font-size: var(--text-xl);
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .insight p {
+            margin: var(--spacing-xs) 0;
+            color: var(--text-secondary);
+        }
+        
+        .data-points {
+            margin: var(--spacing-md) 0;
+        }
+        
+        .data-points li {
+            color: var(--text-tertiary);
+            margin: var(--spacing-xs) 0;
+        }
+        
+        .channel-card {
+            background: var(--glass-light);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        
+        .channel-name {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-md);
+            font-size: var(--text-lg);
+        }
+        
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            margin: var(--spacing-xs) 0;
+            font-size: var(--text-sm);
+        }
+        
+        .metric-label {
+            color: var(--text-tertiary);
+        }
+        
+        .metric-value {
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-secondary);
+        }
+        
+        .ranking-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .ranking-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md);
+            background: var(--glass-light);
+            margin: var(--spacing-sm) 0;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        
+        .rank {
+            background: var(--primary-gradient);
+            color: var(--text-primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--text-sm);
+            font-weight: var(--font-weight-bold);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .recommendation {
+            background: var(--glass-light);
+            border: 1px solid var(--status-inactive-border);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-xl);
+            margin: var(--spacing-lg) 0;
+            backdrop-filter: blur(10px);
+            border-left: 4px solid var(--status-inactive);
+        }
+        
+        .recommendation.high {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: var(--status-error-border);
+            border-left: 4px solid var(--status-error);
+        }
+        
+        .recommendation.medium {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: var(--status-inactive-border);
+            border-left: 4px solid var(--status-inactive);
+        }
+        
+        .recommendation h4 {
+            margin: 0 0 var(--spacing-sm) 0;
+            color: var(--text-primary);
+            font-size: var(--text-lg);
+            font-weight: var(--font-weight-semibold);
+        }
+        
+        .recommendation p {
+            color: var(--text-secondary);
+            margin: var(--spacing-xs) 0;
+        }
+        
+        .recommendation ul {
+            margin: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+        }
+        
+        .recommendation li {
+            color: var(--text-secondary);
+            margin: var(--spacing-xs) 0;
+        }
+        
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: var(--font-weight-bold);
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            margin-top: var(--spacing-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: var(--font-weight-medium);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="glass-card text-center mb-xl">
+            <h1 class="heading-1">📊 Channel Intelligence Report</h1>
+            <p class="text-body mb-lg">Comprehensive YouTube Channel Analysis & Insights</p>
+            <p class="text-small text-muted">Generated on <span data-timestamp="2025-08-01T11:51:00Z" data-format="display">August 01, 2025 at 11:51 UTC</span></p>
+        </header>
+        
+        <!-- Statistics Grid -->
+        <div class="grid grid-auto-fit mb-xl">
+            <div class="glass-card text-center">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Total Videos</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-number">0</div>
+                <div class="stat-label">High-Value Videos</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-number">1/23</div>
+                <div class="stat-label">Channels Analyzed</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-number">0.325</div>
+                <div class="stat-label">Average Quality</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Total Views</div>
+            </div>
+            <div class="glass-card text-center">
+                <div class="stat-number">0.0%</div>
+                <div class="stat-label">High-Value Rate</div>
+            </div>
+        </div>
+        
+        <!-- Key Insights Section -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">🔍 Key Insights</h2>
+            <div class="insight trend">
+                <h3>High Content Frequency Channels</h3>
+                <p>1 channels with frequent content updates</p>
+                <ul class="data-points">
+                    <li>Most active: Fireship (1.4 videos/week)</li>
+                    <li>Average frequency: 1.40 videos/week</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Performance Rankings Section -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">🏆 Performance Rankings</h2>
+            
+            <h3 class="heading-3 mb-md">📈 Top Quality Channels</h3>
+            <ol class="ranking-list mb-lg">
+                <li class="ranking-item">
+                    <div class="flex gap-md">
+                        <span class="rank">1</span>
+                        <span class="text-body font-weight-medium">Fireship</span>
+                    </div>
+                    <span class="text-body font-weight-semibold">0.325</span>
+                </li>
+            </ol>
+            
+            <h3 class="heading-3 mb-md">⭐ High-Value Content Leaders</h3>
+            <ol class="ranking-list mb-lg">
+                <li class="ranking-item">
+                    <div class="flex gap-md">
+                        <span class="rank">1</span>
+                        <span class="text-body font-weight-medium">Fireship</span>
+                    </div>
+                    <span class="text-body font-weight-semibold">0</span>
+                </li>
+            </ol>
+            
+            <h3 class="heading-3 mb-md">🚀 Most Active Publishers</h3>
+            <ol class="ranking-list">
+                <li class="ranking-item">
+                    <div class="flex gap-md">
+                        <span class="rank">1</span>
+                        <span class="text-body font-weight-medium">Fireship</span>
+                    </div>
+                    <span class="text-body font-weight-semibold">1.400</span>
+                </li>
+            </ol>
+        </section>
+        
+        <!-- System Recommendations Section -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">🎯 System Recommendations</h2>
+            
+            <div class="recommendation high">
+                <h4>Improve Channel Data Coverage</h4>
+                <p>Only 1/23 channels have analyzable data</p>
+                <p><strong>Impact:</strong> Comprehensive intelligence requires data from all configured channels</p>
+                <p><strong>Action Items:</strong></p>
+                <ul>
+                    <li>Configure YouTube API key for comprehensive data collection</li>
+                    <li>Run full channel analysis on all configured channels</li>
+                    <li>Fix channel configuration issues causing data gaps</li>
+                </ul>
+            </div>
+            
+            <div class="recommendation medium">
+                <h4>Optimize Quality Threshold Settings</h4>
+                <p>Only 0.0% of content meets high-value criteria</p>
+                <p><strong>Impact:</strong> Better content discovery and utilization of available content</p>
+                <p><strong>Action Items:</strong></p>
+                <ul>
+                    <li>Review and adjust importance scoring algorithm</li>
+                    <li>Lower quality threshold for initial content collection</li>
+                    <li>Enhance priority topic detection and weighting</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="text-center mt-xl">
+            <p class="text-small text-muted">
+                Report generated in 0.00 seconds | Unified Intelligence System
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/js/time-formatter.js"></script>
+</body>
+</html>

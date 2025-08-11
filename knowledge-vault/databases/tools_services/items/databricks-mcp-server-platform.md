@@ -6,9 +6,7 @@ description: Enterprise unified analytics platform for big data and machine lear
 id: f18c9847-552f-441c-9158-be206c44a8f3
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Databricks MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/databricks-server-profile.md
 priority: 3rd_priority
 production_readiness: 90
 provider: Databricks (Enterprise)
@@ -31,7 +29,6 @@ tier: Tier 3
 transport_protocols:
 - REST API
 - WebSockets
-mcp_profile_reference: "@mcp_profile/databricks"
 ---
 
 **Enterprise unified analytics platform for big data and machine learning workflows**  

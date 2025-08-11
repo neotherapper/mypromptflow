@@ -1,0 +1,35 @@
+{
+  "channel_id": "jackherrington",
+  "collected_at": "2025-08-01T07:52:06.735390+00:00",
+  "item_count": 1,
+  "items": [
+    {
+      "id": "6P-2urhScwk",
+      "title": "Zod VS Valibot: JS/TS Validator Battle!",
+      "url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+      "published_date": "2025-07-28T13:49:50+00:00",
+      "updated_date": "2025-07-31T01:29:26+00:00",
+      "author": "Jack Herrington",
+      "channel_id": "UC6vRUjYqDuoUsYsku86Lrsw",
+      "channel_name": "Jack Herrington",
+      "description": "",
+      "source_channel": "jackherrington",
+      "platform": "youtube",
+      "priority_score": 4.6,
+      "quality_rating": 4.7,
+      "priority_topics": [
+        "typescript",
+        "react",
+        "nextjs"
+      ],
+      "categories": [
+        "typescript",
+        "react",
+        "nextjs"
+      ],
+      "collected_at": "2025-08-01T07:52:06.735116+00:00",
+      "content_hash": "56d357b695f562d999330a05cc7facbc",
+      "content_age_days": 3.751582584039352
+    }
+  ]
+}

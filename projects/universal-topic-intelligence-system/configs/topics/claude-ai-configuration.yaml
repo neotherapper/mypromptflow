@@ -1,0 +1,260 @@
+# Claude AI & Claude Code Topic Configuration
+# Monitoring Claude, Claude Code, Claude Desktop, and Anthropic developments
+
+topic_metadata:
+  name: "Claude AI Development & Applications"
+  slug: "claude-ai"
+  description: "Comprehensive monitoring of Claude AI, Claude Code, Claude Desktop, and Anthropic innovations with focus on practical applications and developer tools"
+  priority_level: "high"
+  monitoring_frequency: "continuous"
+  use_specialized_monitor: true  # Enable ClaudeFocusedMonitor for optimized Claude content collection
+  
+  keywords:
+    primary:
+      - claude
+      - claude code
+      - claude desktop
+      - anthropic
+      - constitutional ai
+    secondary:
+      - claude api
+      - claude prompting
+      - claude mcp
+      - claude agents
+      - claude integration
+    exclude:
+      - claude debussy  # Composer
+      - claude monet    # Painter
+
+source_mapping:
+  tier_1_official:
+    description: "Anthropic official channels"
+    sources:
+      - name: "Anthropic Blog"
+        url: "https://www.anthropic.com/blog/rss.xml"
+        type: "rss"
+        authority_score: 1.0
+        monitoring_method: "RSS"
+        config:
+          max_items: 50
+          timeout: 30
+          
+      - name: "Anthropic Docs"
+        url: "https://docs.anthropic.com"
+        type: "documentation"
+        authority_score: 1.0
+        monitoring_method: "Fetch"
+        config:
+          check_frequency: "daily"
+          sections:
+            - "/claude-code"
+            - "/claude-desktop"
+            - "/api"
+            
+      - name: "Anthropic GitHub"
+        url: "https://github.com/anthropics"
+        type: "github"
+        authority_score: 0.95
+        monitoring_method: "GitHub MCP"
+        repositories:
+          - "anthropics/claude-code"
+          - "anthropics/courses"
+      
+  tier_2_community:
+    description: "Expert blogs and community resources"
+    sources:
+      - name: "Simon Willison's Blog"
+        url: "https://simonwillison.net/atom/everything/"
+        type: "rss"
+        authority_score: 0.9
+        topics_focus: ["claude", "llm", "prompting"]
+        
+      - name: "Dev.to Claude Tag"
+        url: "https://dev.to/feed/tag/claude"
+        type: "rss"
+        authority_score: 0.75
+        noise_filter: "medium"
+        
+      - name: "HackerNews Claude"
+        url: "https://hnrss.org/newest?q=claude+OR+anthropic+OR+%22claude+code%22"
+        type: "rss"
+        authority_score: 0.8
+        
+      - name: "Reddit r/ClaudeAI"
+        url: "https://www.reddit.com/r/ClaudeAI/.rss"
+        type: "rss"
+        authority_score: 0.65
+        noise_filter: "high"
+        
+  tier_3_aggregators:
+    description: "Social media and discussion platforms"
+    sources:
+      - name: "Twitter/X Claude Topics"
+        url: "twitter://search?q=claude+anthropic+OR+claudecode"
+        type: "social"
+        authority_score: 0.6
+        monitoring_method: "Manual"
+        
+      - name: "YouTube Claude Tutorials"
+        url: "https://www.youtube.com/results?search_query=claude+code+tutorial"
+        type: "youtube"
+        authority_score: 0.7
+        monitoring_method: "YouTube MCP"
+
+mcp_server_mapping:
+  fetch_server:
+    enabled: true
+    use_cases:
+      - "Anthropic documentation"
+      - "Blog posts about Claude"
+      - "Tutorial websites"
+    config:
+      max_length: 15000
+      
+  github_server:
+    enabled: true
+    repositories:
+      - "anthropics/claude-code"
+      - "anthropics/courses"
+      - "modelcontextprotocol/discussions"
+    monitoring_scope: ["releases", "issues", "discussions", "commits"]
+    
+  youtube_server:
+    enabled: true
+    channels:
+      - "@AnthropicAI"
+    content_types: ["tutorials", "announcements", "demos"]
+
+quality_configuration:
+  thresholds:
+    critical: 0.9    # Official Anthropic announcements
+    high: 0.75       # Expert analysis and tutorials
+    medium: 0.55     # Community discussions
+    low: 0.35        # General mentions
+    
+  weights:
+    source_authority: 0.30      # High weight on official sources
+    content_accuracy: 0.35      # Critical for technical accuracy
+    relevance_alignment: 0.15
+    completeness_depth: 0.10
+    constitutional_compliance: 0.10
+    
+  topic_specific_rules:
+    - rule: "boost_official_announcements"
+      condition: "source = 'anthropic_blog' AND title contains 'announce' or 'release'"
+      action: "multiply_score by 1.3"
+      
+    - rule: "boost_claude_code_content"
+      condition: "content contains 'claude code' or 'claude desktop'"
+      action: "multiply_score by 1.2"
+      
+    - rule: "boost_mcp_content"
+      condition: "content contains 'mcp' or 'model context protocol'"
+      action: "multiply_score by 1.15"
+      
+    - rule: "penalize_speculation"
+      condition: "content contains 'rumor' or 'allegedly' or 'unconfirmed'"
+      action: "multiply_score by 0.6"
+
+agent_configuration:
+  architect_specialization:
+    official_source_architect:
+      focus: "Monitor Anthropic announcements and documentation updates"
+      priority_sources: ["anthropic_blog", "anthropic_docs", "anthropic_github"]
+      
+    tutorial_architect:
+      focus: "Track high-quality tutorials and implementation guides"
+      priority_sources: ["simon_willison", "dev_to_claude", "youtube_tutorials"]
+      
+    community_architect:
+      focus: "Monitor community adoption and feedback"
+      priority_sources: ["reddit_claude", "hackernews_claude", "twitter_claude"]
+  
+  specialist_roles:
+    - role: "Claude Code Specialist"
+      responsibilities: 
+        - "Track Claude Code updates and features"
+        - "Monitor IDE integration developments"
+        - "Identify best practices and patterns"
+        
+    - role: "Prompting Expert"
+      responsibilities:
+        - "Collect effective prompting techniques"
+        - "Document prompt patterns and templates"
+        - "Track constitutional AI applications"
+        
+    - role: "Integration Analyst"
+      responsibilities:
+        - "Monitor MCP server developments"
+        - "Track API updates and changes"
+        - "Document integration patterns"
+
+cross_topic_integration:
+  related_topics:
+    - topic_slug: "mcp-servers"
+      relationship: "complementary"
+      shared_sources: ["github_mcp", "anthropic_docs"]
+      
+    - topic_slug: "ai-prompting"
+      relationship: "complementary"
+      influence_weight: 0.8
+      
+    - topic_slug: "react-development"
+      relationship: "application"
+      context: "Using Claude for React development"
+  
+  knowledge_sharing:
+    share_patterns: true
+    share_sources: true
+    share_insights: true
+
+notification_configuration:
+  alert_conditions:
+    - condition: "source = 'anthropic_blog' AND priority = critical"
+      action: "immediate_notification"
+      channels: ["primary", "email"]
+      
+    - condition: "content contains 'claude code' AND content contains 'release'"
+      action: "feature_alert"
+      channels: ["primary"]
+      
+    - condition: "content contains 'breaking change' OR 'deprecation'"
+      action: "urgent_alert"
+      channels: ["all"]
+      
+  summary_schedule:
+    daily_digest: "09:00"
+    weekly_report: "monday 09:00"
+    
+performance_targets:
+  coverage_percentage: 98        # Near-complete coverage for Claude topics
+  relevance_accuracy: 95         # High accuracy for technical content
+  response_time_minutes: 5       # Fast response for official announcements
+  false_positive_rate: 3         # Very low false positives
+  
+storage_configuration:
+  knowledge_vault_path: "knowledge-vault/topics/claude-ai/"
+  archive_after_days: 60         # Keep Claude content longer
+  compression_enabled: true
+  
+  special_collections:
+    - name: "prompting_patterns"
+      path: "knowledge-vault/topics/claude-ai/prompting/"
+    - name: "claude_code_guides"
+      path: "knowledge-vault/topics/claude-ai/claude-code/"
+    - name: "mcp_integrations"
+      path: "knowledge-vault/topics/claude-ai/mcp/"
+  
+constitutional_ai:
+  principles:
+    - truthfulness: "Verify all technical claims about Claude capabilities"
+    - completeness: "Include limitations and known issues"
+    - fairness: "Present balanced view of capabilities vs alternatives"
+    - transparency: "Clear about experimental vs stable features"
+    - harm_prevention: "Avoid spreading misinformation about AI capabilities"
+    
+  validation_requirements:
+    multi_source_verification: true
+    official_source_priority: true
+    fact_checking_enabled: true
+    bias_detection: true

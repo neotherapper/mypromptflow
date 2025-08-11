@@ -1,0 +1,421 @@
+# Unified Source Registry
+# System-wide registry of all intelligence sources across all platforms
+# Location: @meta/unified-intelligence/source-registry.yaml
+# Available to all projects for unified topic intelligence
+
+metadata:
+  version: "1.0.0"
+  purpose: "Master registry of all intelligence sources"
+  scope: "System-wide availability"
+  last_updated: "2025-07-31"
+
+# USER PREFERENCES (System-wide)
+user_preferences:
+  stated_preferences:
+    theprimegen_channel: 5.0
+    theo_t3gg_channel: 5.0
+    official_sources: 1.0
+    github_changelogs: 1.0
+  
+  learning_weights:
+    engagement_time: 0.3
+    explicit_feedback: 0.4
+    save_share_actions: 0.2
+    source_credibility_ratings: 0.1
+
+# YOUTUBE SOURCES
+youtube_sources:
+  tier_1_premium_educators:
+    quality_weight: 1.0
+    sources:
+      - name: "ThePrimeagen"
+        channel_id: "UC8ENHE5xdFSwx71u3fDH5Xw"
+        url: "https://www.youtube.com/@ThePrimeagen"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw"
+        user_preference: 5.0
+        authority_score: 0.95
+        topics: ["software-engineering", "vim", "programming", "development-workflow"]
+        
+      - name: "Theo - t3․gg"
+        channel_id: "UC7K3iGDFa6OlnshFLrr2_Mw"
+        url: "https://www.youtube.com/@t3dotgg"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7K3iGDFa6OlnshFLrr2_Mw"
+        user_preference: 5.0
+        authority_score: 0.95
+        topics: ["typescript", "react", "trpc", "t3-stack", "modern-web-dev"]
+        
+      - name: "Fireship"
+        channel_id: "UCsBjURrPoezykLs9EqgamOA"
+        url: "https://www.youtube.com/@Fireship"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA"
+        authority_score: 0.90
+        topics: ["programming", "web-development", "tech-trends", "tutorials"]
+        
+      - name: "Learn With Jason"
+        channel_id: "UCnty0z0pNRDgnuoirYXnC5A"
+        url: "https://www.youtube.com/@learnwithjason"
+        rss_feed: "https://www.youtube.com/feeds/videos.xml?channel_id=UCnty0z0pNRDgnuoirYXnC5A"
+        authority_score: 0.90
+        topics: ["web-development", "live-coding", "javascript", "community"]
+
+  tier_2_specialized_educators:
+    quality_weight: 0.9
+    sources:
+      - name: "James Q Quick"
+        channel_id: "UC-T8W79DN6PBnzomelvqJYw"
+        url: "https://www.youtube.com/@JamesQQuick"
+        authority_score: 0.85
+        topics: ["javascript", "react", "career-advice", "web-development"]
+        
+      - name: "UI.dev"
+        channel_id: "UCsKsymTY_4BYR-wytLjex7A"
+        url: "https://www.youtube.com/@uidotdev"
+        authority_score: 0.85
+        topics: ["javascript", "frontend", "ecosystem", "tutorials"]
+
+# GITHUB SOURCES
+github_sources:
+  official_repositories:
+    authority_score: 1.0
+    sources:
+      - name: "React"
+        url: "https://github.com/facebook/react"
+        monitoring_scope: ["releases", "discussions", "issues"]
+        topics: ["react", "frontend", "javascript"]
+        priority: "maximum"
+        
+      - name: "TypeScript"
+        url: "https://github.com/microsoft/TypeScript"
+        monitoring_scope: ["releases", "discussions", "issues"]
+        topics: ["typescript", "javascript", "type-safety"]
+        priority: "maximum"
+        
+      - name: "Next.js"
+        url: "https://github.com/vercel/next.js"
+        monitoring_scope: ["releases", "discussions", "issues"]
+        topics: ["nextjs", "react", "fullstack", "vercel"]
+        priority: "high"
+        
+      - name: "Vite"
+        url: "https://github.com/vitejs/vite"
+        monitoring_scope: ["releases", "discussions"]
+        topics: ["vite", "build-tools", "frontend"]
+        priority: "high"
+
+  ecosystem_repositories:
+    authority_score: 0.8-0.9
+    discovery_pattern: "trending repositories in user's tech stack"
+    quality_thresholds:
+      min_stars: 1000
+      min_recent_activity: "30 days"
+      min_maintainer_quality: 0.7
+
+# OFFICIAL DOCUMENTATION SOURCES
+official_sources:
+  authority_score: 1.0
+  sources:
+    - name: "React Documentation"
+      url: "https://react.dev"
+      monitoring_method: "WebFetch"
+      topics: ["react", "frontend", "javascript"]
+      update_frequency: "weekly"
+      
+    - name: "TypeScript Handbook"
+      url: "https://www.typescriptlang.org/docs/"
+      monitoring_method: "WebFetch"
+      topics: ["typescript", "javascript", "type-safety"]
+      update_frequency: "weekly"
+      
+    - name: "MDN Web Docs"
+      url: "https://developer.mozilla.org/en-US/docs/Web"
+      monitoring_method: "WebFetch"
+      topics: ["web-standards", "javascript", "css", "html"]
+      update_frequency: "weekly"
+
+# REDDIT SOURCES
+reddit_sources:
+  programming_communities:
+    authority_score: 0.6-0.8
+    sources:
+      - name: "r/programming"
+        url: "https://www.reddit.com/r/programming"
+        monitoring_scope: ["hot", "trending", "top weekly"]
+        topics: ["programming", "software-engineering", "industry-news"]
+        
+      - name: "r/javascript"
+        url: "https://www.reddit.com/r/javascript"
+        monitoring_scope: ["hot", "trending", "top weekly"]
+        topics: ["javascript", "web-development", "frameworks"]
+        
+      - name: "r/reactjs"
+        url: "https://www.reddit.com/r/reactjs"
+        monitoring_scope: ["hot", "trending", "top weekly"]
+        topics: ["react", "frontend", "components"]
+        
+      - name: "r/typescript"
+        url: "https://www.reddit.com/r/typescript"
+        monitoring_scope: ["hot", "trending", "top weekly"]
+        topics: ["typescript", "type-safety", "javascript"]
+
+# HACKERNEWS SOURCES
+hackernews_sources:
+  authority_score: 0.7
+  sources:
+    - name: "HackerNews Front Page"
+      url: "https://news.ycombinator.com/"
+      monitoring_scope: ["front page", "top stories"]
+      topics: ["technology", "programming", "startups", "industry-news"]
+      
+    - name: "HackerNews Show"
+      url: "https://news.ycombinator.com/show"
+      monitoring_scope: ["Show HN posts"]
+      topics: ["new-tools", "open-source", "side-projects"]
+
+# MCP SERVER MAPPINGS - CURRENTLY ACTIVE
+mcp_server_mappings:
+  # COMPREHENSIVE GITHUB INTEGRATION (Currently Active)
+  github_integration:
+    server: "mcp__MCP_DOCKER__"
+    status: "active"
+    tools: ["search_repositories", "get_file_contents", "search_code", "search_issues", "search_pull_requests", "get_pull_request", "list_commits", "create_issue", "add_comment"]
+    use_cases: ["repository discovery", "code search", "issue management", "pull request workflows", "release monitoring"]
+    
+  # COMPREHENSIVE JIRA INTEGRATION (Currently Active)
+  jira_integration:
+    server: "mcp__MCP_DOCKER__jira_"
+    status: "active"
+    tools: ["get_issue", "create_issue", "search", "add_comment", "add_worklog", "batch_create_issues", "transition_issue", "update_issue"]
+    use_cases: ["project management", "issue tracking", "workflow automation", "sprint management"]
+    
+  # NOTION INTEGRATION (Currently Active)
+  notion_integration:
+    server: "mcp__MCP_DOCKER__API-"
+    status: "active"
+    tools: ["retrieve-a-page", "post-page", "patch-page", "post-database-query", "create-a-database", "update-a-database"]
+    use_cases: ["knowledge management", "documentation", "database operations", "content creation"]
+    
+  # BROWSER AUTOMATION (Currently Active)
+  browser_automation:
+    server: "mcp__MCP_DOCKER__browser_"
+    status: "active"
+    tools: ["navigate", "click", "snapshot", "take_screenshot", "evaluate", "type", "wait_for"]
+    use_cases: ["web automation", "testing", "content scraping", "ui interaction"]
+    
+  # YOUTUBE INTEGRATION (Currently Active)
+  youtube_integration:
+    server: "mcp__MCP_DOCKER__get_transcript"
+    status: "active"
+    use_cases: ["transcript extraction", "content analysis"]
+    
+  # WIKIPEDIA INTEGRATION (Currently Active)
+  wikipedia_integration:
+    server: "mcp__MCP_DOCKER__"
+    status: "active"
+    tools: ["search_wikipedia", "get_article", "get_summary", "get_links", "get_sections", "extract_key_facts"]
+    use_cases: ["knowledge research", "factual information", "topic exploration"]
+    
+  # WEB CONTENT ACCESS (Currently Active)
+  web_content:
+    server: "mcp__MCP_DOCKER__fetch"
+    status: "active"
+    tools: ["fetch", "fetch_content"]
+    use_cases: ["official documentation", "blog monitoring", "web content retrieval"]
+    
+  # DOCKER INTEGRATION (Currently Active)
+  docker_integration:
+    server: "mcp__MCP_DOCKER__docker"
+    status: "active"
+    use_cases: ["container management", "deployment automation"]
+    
+  # MEMORY AND SEARCH (Currently Active)
+  memory_search:
+    server: "mcp__MCP_DOCKER__"
+    status: "active"
+    tools: ["memory", "search", "sequentialthinking"]
+    use_cases: ["information storage", "intelligent search", "complex reasoning"]
+
+# EXISTING AWS CAPABILITIES (Currently Active via MCP_DOCKER)
+existing_aws_capabilities:
+  aws_cdk_integration:
+    server: "mcp__MCP_DOCKER__"
+    status: "active"
+    tools: ["CDKGeneralGuidance", "CheckCDKNagSuppressions", "ExplainCDKNagRule", "SearchGenAICDKConstructs", "GetAwsSolutionsConstructPattern"]
+    capabilities: ["cdk_guidance", "security_validation", "best_practices", "construct_discovery"]
+    use_cases: ["infrastructure_as_code", "aws_development", "security_compliance"]
+    
+  aws_bedrock_integration:
+    server: "mcp__MCP_DOCKER__GenerateBedrockAgentSchema"
+    status: "active"
+    capabilities: ["bedrock_agent_schemas", "openapi_generation"]
+    use_cases: ["bedrock_agent_development", "schema_generation"]
+    
+  aws_documentation:
+    server: "mcp__MCP_DOCKER__"
+    status: "active"
+    tools: ["read_documentation", "search_documentation", "recommend"]
+    capabilities: ["aws_docs_access", "documentation_search", "content_recommendations"]
+    use_cases: ["aws_learning", "technical_documentation", "feature_discovery"]
+    
+  aws_lambda_powertools:
+    server: "lambda-powertools://"
+    status: "active"
+    resource_uri: "lambda-powertools://"
+    capabilities: ["structured_logging", "tracing", "metrics", "cdk_integration", "bedrock_integration"]
+    use_cases: ["lambda_development", "observability", "best_practices"]
+
+# AWS MCP SERVER INTEGRATIONS (HIGH-VALUE ADDITIONS)
+# Status: Planned for future implementation pending AWS Bedrock access
+aws_mcp_integrations:
+  tier_1_intelligence_enhancers:
+    git_repo_research:
+      server: "awslabs.git-repo-research-mcp-server"
+      priority: 1
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "bedrock_access", "titan_embeddings_access"]
+      capabilities: ["semantic_code_search", "repository_indexing", "intelligent_discovery"]
+      tools: ["create_research_repository", "search_research_repository", "search_repos_on_github"]
+      integration_value: "Revolutionary semantic search for automated research workflows"
+      unified_intelligence_impact: "Will transform research automation with AI-powered code analysis"
+      use_cases: ["automated_repository_analysis", "semantic_code_discovery", "technical_research"]
+      current_fallback: "traditional_github_search_via_mcp_docker"
+      
+    aws_knowledge_managed:
+      server: "aws-knowledge-mcp-server"
+      priority: 1
+      status: "planned_future_implementation"
+      prerequisites: ["aws_account", "managed_service_access"]
+      capabilities: ["real_time_aws_docs", "api_references", "whats_new_posts", "builder_center"]
+      deployment: "fully_managed_by_aws"
+      integration_value: "Real-time AWS knowledge with automatic updates"
+      unified_intelligence_impact: "Will provide authoritative AWS intelligence for all projects"
+      use_cases: ["aws_documentation_access", "api_reference_queries", "latest_features_tracking"]
+      current_fallback: "webfetch_aws_documentation"
+      
+    bedrock_kb_retrieval:
+      server: "awslabs.bedrock-kb-retrieval-mcp-server"
+      priority: 1
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "bedrock_access", "knowledge_base_setup"]
+      capabilities: ["enterprise_knowledge_bases", "citation_support", "rag_workflows"]
+      integration_value: "Enterprise knowledge retrieval with full citation tracking"
+      unified_intelligence_impact: "Will enable enterprise-grade RAG workflows"
+      use_cases: ["knowledge_base_queries", "enterprise_search", "compliance_research"]
+      current_fallback: "local_knowledge_vault_search"
+      
+    code_doc_generation:
+      server: "awslabs.code-doc-gen-mcp-server"
+      priority: 1
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "code_analysis_permissions"]
+      capabilities: ["automated_documentation", "code_analysis", "cross_reference_linking"]
+      integration_value: "Automated documentation generation from repository analysis"
+      unified_intelligence_impact: "Will automate documentation workflows across all projects"
+      use_cases: ["automatic_documentation", "code_analysis", "project_documentation"]
+      current_fallback: "manual_documentation_with_existing_tools"
+
+  tier_2_strategic_infrastructure:
+    core_orchestration:
+      server: "awslabs.core-mcp-server"
+      priority: 2
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "orchestration_permissions"]
+      capabilities: ["intelligent_planning", "mcp_orchestration", "service_discovery"]
+      integration_value: "Meta-orchestration for coordinating multiple MCP servers"
+      unified_intelligence_impact: "Will provide intelligent coordination of all MCP resources"
+      use_cases: ["mcp_server_coordination", "intelligent_routing", "load_balancing"]
+      current_fallback: "manual_mcp_coordination"
+      
+    aws_api_comprehensive:
+      server: "awslabs.aws-api-mcp-server"
+      priority: 2
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "iam_permissions", "api_access"]
+      capabilities: ["comprehensive_aws_apis", "security_controls", "command_validation"]
+      integration_value: "Complete AWS infrastructure management through natural language"
+      unified_intelligence_impact: "Will enable AI-driven AWS operations and management"
+      use_cases: ["aws_resource_management", "infrastructure_operations", "security_validation"]
+      current_fallback: "aws_cli_with_manual_commands"
+      
+    cdk_enhanced:
+      server: "awslabs.cdk-mcp-server"
+      priority: 2
+      status: "planned_future_implementation"
+      prerequisites: ["aws_credentials", "cdk_toolkit_access"]
+      capabilities: ["aws_cdk_development", "security_compliance", "best_practices"]
+      integration_value: "Infrastructure as Code with built-in security and compliance"
+      unified_intelligence_impact: "Will enable secure, compliant infrastructure development"
+      use_cases: ["infrastructure_as_code", "security_validation", "compliance_checking"]
+      current_fallback: "manual_cdk_development_with_validation"
+      
+    aws_documentation:
+      server: "awslabs.aws-documentation-mcp-server"
+      priority: 2
+      status: "planned_future_implementation"
+      prerequisites: ["basic_aws_access"]
+      capabilities: ["latest_aws_docs", "api_references", "contextual_search"]
+      integration_value: "Technical documentation access for development workflows"
+      unified_intelligence_impact: "Will provide technical documentation context for all AWS operations"
+      use_cases: ["technical_documentation", "api_reference", "development_guidance"]
+      current_fallback: "webfetch_aws_docs_manual_search"
+
+# DISCOVERY ALGORITHMS REFERENCE
+discovery_algorithms:
+  github_discovery:
+    triggers: ["trending repos", "new releases", "community mentions"]
+    quality_filters: ["stars > 1000", "recent activity", "maintainer quality"]
+    
+  youtube_discovery:
+    triggers: ["channel mentions in transcripts", "tool recommendations"]
+    quality_filters: ["subscriber count", "upload consistency", "content quality"]
+    
+  reddit_discovery:
+    triggers: ["trending discussions", "expert AMAs", "tool announcements"]
+    quality_filters: ["upvote ratio", "comment quality", "community size"]
+
+# QUALITY THRESHOLDS
+quality_thresholds:
+  minimum_authority_score: 0.6
+  minimum_user_preference: 2.0
+  minimum_engagement_threshold: 0.3
+  cross_platform_validation_required: true
+
+# INTEGRATION PATTERNS
+integration_patterns:
+  cross_platform_validation:
+    description: "Validate information across multiple source types"
+    example: "YouTube video mentioning tool → GitHub repo discovery → Reddit discussion analysis"
+    
+  official_source_prioritization:
+    description: "Always prioritize official sources for factual information"
+    weighting: "Official sources get 2x weight in final scoring"
+    
+  user_preference_amplification:
+    description: "Amplify content from sources user has explicitly preferred"
+    multiplier: "User preference score * content relevance * source authority"
+
+# USAGE TRACKING
+usage_tracking:
+  engagement_metrics:
+    - "time spent on content"
+    - "save/share actions"
+    - "explicit feedback (like/dislike)"
+    - "follow-up actions (visit source, explore related)"
+  
+  source_performance:
+    - "content quality over time"
+    - "user engagement rates"
+    - "cross-platform consistency"
+    - "discovery success rate"
+
+# SYSTEM AVAILABILITY
+system_availability:
+  access_scope: "All projects in the system"
+  api_endpoints:
+    source_discovery: "@meta/unified-intelligence/api/discover-sources"
+    quality_assessment: "@meta/unified-intelligence/api/assess-quality"
+    preference_learning: "@meta/unified-intelligence/api/update-preferences"
+  
+  project_integration:
+    universal_topic_intelligence: "Primary consumer and testing ground"
+    vanguard_ai: "Maritime-specific intelligence integration"
+    other_projects: "Available on-demand for any topic intelligence needs"

@@ -11,10 +11,8 @@ description: Containerization and application deployment platform integration se
 estimated_setup_time: 30-45 minutes
 id: 5a8c2e9f-7d4b-4e1f-9a6c-3e7d5a9c2f8b
 installation_priority: 2
-item_type: mcp_server
-migration_date: '2025-07-27'
-name: Docker Containerization Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/docker-containerization-server-profile.md
+item_type: platform
+name: Docker
 priority: 2nd_priority
 production_readiness: 99
 provider: Community/Docker
@@ -69,7 +67,6 @@ information_capabilities:
   - "Manage development environments with consistent containers"
   - "Deploy scalable applications with container orchestration"
   - "Implement infrastructure as code with containerized services"
-mcp_profile_reference: "@mcp_profile/docker-containerization-platform"
 ---
 
 **Containerization and application deployment platform for comprehensive DevOps workflows, microservices architecture, and modern application deployment**

@@ -3,12 +3,9 @@ description: 'Advanced browser automation and web scraping platform with complet
 id: e5b8c9d6-4f3a-5e7b-9c6d-4a8f2e5b7c9e
 installation_priority: 6
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: Puppeteer Automation MCP Server
 <<<<<<< HEAD
-original_file: projects/universal-topic-intelligence-system/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
 =======
-original_file: projects/ai-knowledge-intelligence-orchestrator/mcp-registry/detailed-profiles/tier-2/puppeteer-automation-server-profile.md
 >>>>>>> origin/master
 priority: 2nd_priority
 production_readiness: 95
@@ -26,7 +23,6 @@ tags:
 - Performance Testing
 - Chrome DevTools
 - JavaScript Automation
-mcp_profile_reference: "@mcp_profile/puppeteer-automation"
 information_capabilities:
   access_methods:
     - method: "Chrome DevTools Protocol"

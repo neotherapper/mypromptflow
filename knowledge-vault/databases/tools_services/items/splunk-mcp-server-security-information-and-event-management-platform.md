@@ -3,9 +3,7 @@ description: "Enterprise identity and access management platform with MCP integr
 id: ac20a183-73e4-4d12-9e62-2073ec8c39f2
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Splunk MCP Server
-original_file: mcp-registry/detailed-profiles/tier-2/splunk-server-profile.md
 priority: 2nd_priority
 source_database: tools_services
 status: active
@@ -16,7 +14,6 @@ tags:
 - Monitoring
 - Analytics
 - Development Platform
-mcp_profile_reference: "@mcp_profile/splunk"
 ---
 
 ## Enterprise Use Cases

@@ -3,7 +3,6 @@ description: 'Official TypeScript SDK for Model Context Protocol - Tier 1 Enterp
 id: 84f2c1a8-9b3e-4d87-a2e1-7f8e2d94c5b6
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-28'
 name: '@modelcontextprotocol/sdk TypeScript MCP Server'
 priority: 1st_priority
 production_readiness: 95
@@ -19,7 +18,6 @@ tags:
 - TypeScript
 - Official Package
 - Enterprise
-mcp_profile_reference: "@mcp_profile/modelcontextprotocol-sdk"
 ---
 
 ## 📋 Basic Information

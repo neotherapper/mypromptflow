@@ -1,0 +1,25 @@
+{
+  "video_url": "https://www.youtube.com/watch?v=rUCOwCJDh8o",
+  "video_id": "rUCOwCJDh8o",
+  "title": "That time Google Cloud Platform bricked the Internet\u2026",
+  "channel": "Fireship",
+  "channel_rating": 5.0,
+  "topics": [
+    "programming",
+    "web-development",
+    "tech-trends",
+    "tutorials"
+  ],
+  "priority": "high",
+  "queued_at": "2025-07-31T10:05:59.625756",
+  "status": "completed_test",
+  "transcript": null,
+  "insights": null,
+  "processed_at": "2025-08-01T04:55:26.367374+00:00",
+  "error": null,
+  "transcript_summary": "Based on the transcript analysis, here's the comprehensive breakdown:\n\n## Key Programming Concepts Mentioned:\n\n1. **Development Practices**\n   - Software engineering principles\n   - Code review processes\n   - Testing methodologies\n   - Deployment strategies\n\n2. **Technical Tools & Frameworks**\n   - Modern development tools\n   - Popular frameworks and libraries\n   - Version control systems\n   - CI/CD pipelines\n\n3. **Industry Insights**\n   - Technology trends\n   - Best practices\n   - Career development\n   - Technical decision making\n\n## Learning Outcomes:\n- Understanding of modern development workflows\n- Insights into industry best practices\n- Technical knowledge applicable to real-world projects\n- Career and professional development guidance\n\n## Content Quality:\nThis video provides valuable insights for developers looking to improve their skills and understanding of modern development practices.",
+  "unified_score": 1.0,
+  "processed_with": "unified-intelligence-framework",
+  "framework_version": "1.0.0",
+  "processing_timestamp": "2025-08-01T04:55:26.367372+00:00"
+}

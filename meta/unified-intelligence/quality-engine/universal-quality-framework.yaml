@@ -1,0 +1,391 @@
+# Universal Quality Assessment Framework
+# System-wide quality scoring for all content types across all platforms
+# Location: @meta/unified-intelligence/quality-engine/universal-quality-framework.yaml
+
+metadata:
+  version: "1.0.0"
+  purpose: "Universal quality assessment across all platforms and content types"
+  scope: "YouTube, GitHub, Reddit, HackerNews, Official Sources"
+  last_updated: "2025-07-31"
+
+# UNIVERSAL QUALITY DIMENSIONS
+quality_dimensions:
+  source_authority:
+    weight: 0.25
+    description: "Credibility and expertise of the source"
+    scoring_criteria:
+      official_sources: 1.0
+      expert_creators: 0.8-0.9
+      community_sources: 0.6-0.8
+      unknown_sources: 0.3-0.5
+    
+    platform_specific:
+      youtube:
+        indicators: ["subscriber count", "channel age", "consistent uploads", "community engagement"]
+        thresholds:
+          high_authority: ">100k subscribers, >2 years, weekly uploads"
+          medium_authority: ">10k subscribers, >1 year, monthly uploads"
+          low_authority: "<10k subscribers, irregular uploads"
+      
+      github:
+        indicators: ["star count", "fork count", "contributor quality", "maintenance activity"]
+        thresholds:
+          high_authority: ">10k stars, active maintenance, quality contributors"
+          medium_authority: ">1k stars, regular updates, community involvement"
+          low_authority: "<1k stars, sporadic updates"
+      
+      reddit:
+        indicators: ["subreddit quality", "upvote ratio", "comment quality", "moderator standards"]
+        thresholds:
+          high_authority: "Major programming subreddits, >90% upvote ratio"
+          medium_authority: "Specialized subreddits, >75% upvote ratio"
+          low_authority: "Small communities, <75% upvote ratio"
+
+  content_accuracy:
+    weight: 0.30
+    description: "Factual correctness and technical accuracy"
+    scoring_criteria:
+      verified_information: 1.0
+      expert_validated: 0.9
+      community_validated: 0.7
+      unverified: 0.4
+    
+    validation_methods:
+      cross_platform_consistency: "Same information across multiple reliable sources"
+      official_source_verification: "Confirmation from official documentation"
+      expert_consensus: "Agreement among recognized experts"
+      community_feedback: "Positive reception from knowledgeable community"
+    
+    accuracy_indicators:
+      positive: ["code examples work", "references official docs", "explains concepts clearly"]
+      negative: ["broken examples", "outdated information", "misleading claims"]
+
+  relevance_alignment:
+    weight: 0.20
+    description: "Alignment with user interests and topic scope"
+    scoring_criteria:
+      perfect_match: 1.0
+      strong_relevance: 0.8
+      moderate_relevance: 0.6
+      weak_relevance: 0.3
+    
+    relevance_factors:
+      topic_keywords: "Match with specified topic keywords"
+      user_preferences: "Alignment with user's stated preferences"
+      contextual_relevance: "Relevance within current context or project"
+      timeliness: "Recency and current applicability"
+
+  completeness_depth:
+    weight: 0.15
+    description: "Thoroughness and comprehensiveness of coverage"
+    scoring_criteria:
+      comprehensive: 1.0
+      substantial: 0.8
+      adequate: 0.6
+      superficial: 0.3
+    
+    depth_indicators:
+      coverage_breadth: "Covers multiple aspects of the topic"
+      detail_level: "Provides sufficient implementation details"
+      practical_examples: "Includes working code examples or demonstrations"
+      context_explanation: "Explains why and when to use approaches"
+
+  constitutional_compliance:
+    weight: 0.10
+    description: "Adherence to ethical guidelines and quality standards"
+    scoring_criteria:
+      fully_compliant: 1.0
+      mostly_compliant: 0.8
+      partially_compliant: 0.5
+      non_compliant: 0.0
+    
+    compliance_checks:
+      truthfulness: "Information is factually accurate and verifiable"
+      fairness: "Balanced perspective without harmful bias"
+      transparency: "Clear about limitations and sources"
+      harm_prevention: "Avoids content that could cause harm"
+
+# TOPIC-SPECIFIC QUALITY ENHANCEMENTS
+topic_specific_enhancements:
+  claude_ai_content:
+    weight_multiplier: 1.3  # High priority for Claude-related content
+    description: "Enhanced scoring for Claude AI and Anthropic content"
+    
+    authority_bonuses:
+      anthropic_official: +0.4  # Maximum bonus for official Anthropic sources
+      claude_team_verified: +0.3  # Bonus for verified Anthropic team members
+      claude_community_leaders: +0.2  # Bonus for recognized Claude community contributors
+      anthropic_research_papers: +0.3  # Bonus for official research publications
+    
+    accuracy_indicators:
+      constitutional_ai_principles: +0.2  # Content demonstrating Constitutional AI understanding
+      claude_api_examples: +0.15  # Working Claude API integration examples
+      anthropic_best_practices: +0.15  # Content following Anthropic's recommended practices
+      safety_considerations: +0.1  # Content addressing AI safety and responsible use
+    
+    relevance_keywords:
+      primary: ["claude", "anthropic", "constitutional ai", "claude api", "claude code", "claude.ai"]
+      secondary: ["ai assistant", "conversational ai", "ai safety", "helpful ai", "harmless ai", "honest ai"]
+      advanced: ["meta-prompting", "prompt engineering", "ai coordination", "claude workflows"]
+    
+    quality_signals:
+      meta_prompting_examples: +0.2  # Bonus for practical meta-prompting techniques
+      claude_code_workflows: +0.25  # High bonus for Claude Code development workflows
+      anthropic_policy_compliance: +0.15  # Bonus for content that follows Anthropic policies
+      claude_integration_patterns: +0.15  # Bonus for integration architecture examples
+
+  claude_code_development:
+    weight_multiplier: 1.4  # Highest priority for Claude Code development content
+    description: "Specialized scoring for Claude Code IDE and development practices"
+    
+    authority_bonuses:
+      claude_code_official: +0.4  # Official Claude Code documentation and examples
+      experienced_claude_users: +0.25  # Users with demonstrated Claude Code expertise
+      ai_development_experts: +0.2  # Recognized experts in AI-assisted development
+    
+    accuracy_indicators:
+      working_claude_examples: +0.3  # Verified working Claude Code workflows
+      best_practice_adherence: +0.2  # Following Claude Code best practices
+      practical_implementation: +0.25  # Real-world implementation examples
+      performance_optimization: +0.15  # Content about optimizing Claude Code usage
+    
+    completeness_factors:
+      end_to_end_workflows: +0.2  # Complete development workflow examples
+      troubleshooting_guidance: +0.15  # Includes common issues and solutions
+      integration_examples: +0.2  # Shows integration with other tools/systems
+      productivity_metrics: +0.1  # Includes measurable productivity improvements
+    
+    special_categories:
+      ai_assisted_architecture: +0.3  # System architecture with AI assistance
+      automated_development: +0.25  # Automated development workflow patterns
+      claude_team_collaboration: +0.2  # Team collaboration using Claude Code
+      claude_code_extensions: +0.15  # Custom extensions and configurations
+
+  meta_prompting_techniques:
+    weight_multiplier: 1.25
+    description: "Enhanced scoring for meta-prompting and advanced AI interaction"
+    
+    technique_bonuses:
+      chain_of_thought: +0.2  # Chain of reasoning examples
+      few_shot_prompting: +0.15  # Few-shot learning demonstrations
+      prompt_optimization: +0.25  # Prompt engineering optimization techniques
+      constitutional_prompting: +0.2  # Constitutional AI prompting methods
+    
+    practical_application:
+      workflow_automation: +0.2  # Automating tasks with advanced prompting
+      multi_step_reasoning: +0.25  # Complex multi-step problem solving
+      domain_expertise: +0.15  # Domain-specific prompting strategies
+      error_handling: +0.1  # Robust error handling in prompts
+
+  ai_development_workflows:
+    weight_multiplier: 1.2
+    description: "General AI-assisted development and productivity content"
+    
+    workflow_categories:
+      code_generation: +0.15  # AI-assisted code generation techniques
+      documentation_automation: +0.1  # Automated documentation workflows
+      testing_assistance: +0.15  # AI-assisted testing strategies
+      refactoring_guidance: +0.1  # AI-guided refactoring approaches
+    
+    productivity_indicators:
+      time_savings_quantified: +0.15  # Measurable productivity improvements
+      quality_improvements: +0.1  # Demonstrable code quality enhancements
+      learning_acceleration: +0.1  # Accelerated skill development
+      collaboration_enhancement: +0.1  # Improved team collaboration
+
+# PLATFORM-SPECIFIC QUALITY ADAPTATIONS
+platform_adaptations:
+  youtube:
+    quality_adjustments:
+      transcript_coherence: "Bonus for clear, well-structured speech"
+      visual_aids: "Bonus for effective visual demonstrations"
+      engagement_quality: "High-quality audience engagement in comments"
+      educational_value: "Clear learning outcomes and practical applications"
+    
+    penalty_factors:
+      clickbait_title: "-0.1 for misleading titles"
+      poor_audio: "-0.1 for unclear audio quality"
+      outdated_content: "-0.2 for seriously outdated information"
+      promotional_heavy: "-0.1 for excessive self-promotion"
+
+  github:
+    quality_adjustments:
+      documentation_quality: "Bonus for comprehensive README and docs"
+      code_quality: "Bonus for clean, well-commented code"
+      active_maintenance: "Bonus for regular updates and issue responses"
+      community_health: "Bonus for welcoming community and good practices"
+    
+    penalty_factors:
+      poor_documentation: "-0.2 for inadequate documentation"
+      inactive_project: "-0.3 for abandoned projects"
+      security_issues: "-0.5 for known security vulnerabilities"
+      license_issues: "-0.2 for unclear or problematic licensing"
+
+  official_sources:
+    quality_adjustments:
+      official_designation: "+0.3 bonus for verified official status"
+      content_freshness: "Bonus for regularly updated content"
+      comprehensive_coverage: "Bonus for thorough topic coverage"
+      clear_authorship: "Bonus for clear author credentials"
+    
+    penalty_factors:
+      outdated_content: "-0.3 for significantly outdated information"
+      incomplete_coverage: "-0.1 for gaps in important topics"
+
+# USER PREFERENCE INTEGRATION
+user_preference_integration:
+  preference_multipliers:
+    range: [0.5, 2.0]
+    application: "Multiply base quality score by user preference factor"
+    
+  preference_sources:
+    stated_preferences:
+      weight: 0.6
+      source: "user-preferences.json stated_preferences"
+    
+    learned_preferences:
+      weight: 0.3
+      source: "user-preferences.json learned_preferences"
+    
+    engagement_patterns:
+      weight: 0.1
+      source: "user-preferences.json engagement_tracking"
+  
+  preference_calculation:
+    channel_preference: "Direct preference for specific channels/sources"
+    topic_preference: "Preference for content topics"
+    format_preference: "Preference for content formats (tutorial, discussion, etc.)"
+    depth_preference: "Preference for technical depth level"
+
+# SCORING ALGORITHM
+scoring_algorithm:
+  base_calculation:
+    formula: "(source_authority * 0.25) + (content_accuracy * 0.30) + (relevance_alignment * 0.20) + (completeness_depth * 0.15) + (constitutional_compliance * 0.10)"
+    range: [0.0, 1.0]
+  
+  topic_enhancement:
+    formula: "base_score * topic_weight_multiplier + topic_specific_bonuses"
+    topic_detection:
+      claude_ai_patterns: ["claude", "anthropic", "constitutional ai", "claude api", "claude code"]
+      claude_code_patterns: ["claude code", "claude.ai/code", "ai coding", "automated development"]
+      meta_prompting_patterns: ["meta-prompting", "prompt engineering", "chain of thought", "few shot"]
+      ai_workflow_patterns: ["ai assistant", "ai development", "automated workflow", "ai productivity"]
+    constraints: "Topic bonuses capped at +0.4 maximum per content item"
+  
+  preference_adjustment:
+    formula: "topic_enhanced_score * user_preference_multiplier"
+    constraints: "Final score capped at 1.0"
+  
+  platform_adjustment:
+    formula: "preference_adjusted_score + platform_bonuses - platform_penalties"
+    constraints: "Final score clamped to [0.0, 1.0] range"
+  
+  final_calculation_steps:
+    step_1: "Calculate base quality score using 5 dimensions"
+    step_2: "Apply topic-specific weight multipliers and bonuses"
+    step_3: "Apply user preference adjustments"
+    step_4: "Apply platform-specific bonuses and penalties"
+    step_5: "Clamp final score to valid range [0.0, 1.0]"
+
+# QUALITY THRESHOLDS
+quality_thresholds:
+  auto_approve: 0.90
+  high_quality: 0.80
+  medium_quality: 0.60
+  review_required: 0.40
+  auto_reject: 0.30
+  
+  # Topic-specific threshold adjustments
+  topic_specific_thresholds:
+    claude_content:
+      priority_boost: "Claude content at 0.75+ treated as high_quality"
+      auto_approve_threshold: 0.85  # Slightly lower threshold for Claude content
+      knowledge_vault_priority: "high"
+    
+    claude_code_content:
+      priority_boost: "Claude Code content at 0.70+ treated as high_quality"
+      auto_approve_threshold: 0.80  # Even lower threshold for Claude Code content
+      knowledge_vault_priority: "highest"
+      special_tagging: ["claude-code", "ai-development", "workflow"]
+    
+    meta_prompting_content:
+      priority_boost: "Meta-prompting content at 0.75+ treated as high_quality"
+      auto_approve_threshold: 0.85
+      knowledge_vault_priority: "high"
+      special_tagging: ["meta-prompting", "ai-techniques"]
+  
+  threshold_actions:
+    auto_approve: "Include in high-priority digest, save to knowledge vault with topic tags"
+    high_quality: "Include in daily digest, save to knowledge vault with relevance scoring"
+    medium_quality: "Include in weekly digest, conditional save based on topic priority"
+    review_required: "Flag for manual review before inclusion, topic-aware routing"
+    auto_reject: "Exclude from all digests, log for pattern analysis with topic context"
+
+# ADAPTIVE QUALITY LEARNING
+adaptive_learning:
+  feedback_integration:
+    user_feedback: "Like/dislike affects future scoring for similar content"
+    engagement_feedback: "Time spent, actions taken affect content type preferences"
+    source_feedback: "Source promotion/demotion affects authority scores"
+  
+  learning_rules:
+    positive_feedback: "Increase quality scores for similar content by 0.05"
+    negative_feedback: "Decrease quality scores for similar content by 0.05"
+    source_promotion: "Increase source authority by 0.1"
+    source_demotion: "Decrease source authority by 0.1"
+  
+  decay_mechanism:
+    learning_decay: "Learned adjustments decay by 5% weekly unless reinforced"
+    recency_bias: "More recent feedback weighted higher (90% for current week)"
+
+# CROSS-PLATFORM VALIDATION
+cross_platform_validation:
+  consistency_checks:
+    information_alignment: "Verify consistent information across platforms"
+    source_credibility: "Cross-validate source authority across platforms"
+    community_consensus: "Check for community agreement on quality"
+  
+  validation_bonuses:
+    cross_platform_consistency: "+0.05 for information confirmed across platforms"
+    expert_endorsement: "+0.1 for content endorsed by recognized experts"
+    community_validation: "+0.05 for positive community reception"
+  
+  validation_penalties:
+    contradictory_information: "-0.2 for information contradicted elsewhere"
+    disputed_claims: "-0.1 for claims disputed by credible sources"
+    community_rejection: "-0.1 for content widely criticized by community"
+
+# QUALITY REPORTING
+quality_reporting:
+  score_breakdown:
+    components: "Show contribution of each quality dimension"
+    adjustments: "Show user preference and platform adjustments"
+    final_score: "Display final quality score with explanation"
+  
+  improvement_suggestions:
+    low_authority: "Suggest seeking additional authoritative sources"
+    low_accuracy: "Suggest fact-checking or verification steps"
+    low_relevance: "Suggest refining topic focus or search criteria"
+    low_completeness: "Suggest seeking more comprehensive coverage"
+  
+  trend_analysis:
+    source_performance: "Track quality trends for individual sources"
+    topic_coverage: "Analyze quality coverage across different topics"
+    user_satisfaction: "Monitor correlation between quality scores and user engagement"
+
+# IMPLEMENTATION GUIDELINES
+implementation_guidelines:
+  quality_assessment_frequency:
+    real_time: "Assess quality for all new content as it's discovered"
+    batch_processing: "Re-assess quality for existing content weekly"
+    user_triggered: "Re-assess quality when user provides feedback"
+  
+  performance_optimization:
+    caching: "Cache quality scores for stable content"
+    incremental_updates: "Update only changed quality factors"
+    parallel_processing: "Assess multiple content items simultaneously"
+  
+  error_handling:
+    missing_data: "Use default values for missing quality indicators"
+    api_failures: "Graceful degradation when external validation fails"
+    timeout_handling: "Set reasonable timeouts for quality assessment operations"

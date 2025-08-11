@@ -6,9 +6,7 @@ estimated_setup_time: 5-15 minutes
 id: 6f3ebc6b-def5-483a-bbd9-802bda845a7e
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Anthropic Claude MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/anthropic-claude-server-profile.md
 priority: 1st_priority
 quality_score: 9.9
 setup_complexity: Simple
@@ -26,7 +24,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/anthropic-claude"
 ---
 
 ## Header Classification

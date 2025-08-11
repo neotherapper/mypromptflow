@@ -6,9 +6,7 @@ estimated_setup_time: 5-15 minutes
 id: 05e8bd40-75a6-4885-927f-b1c431f618ec
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Memory MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/memory-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 provider: Anthropic
@@ -31,7 +29,6 @@ tags:
 tier: Tier 1
 transport_protocols:
 - Streamable HTTP
-mcp_profile_reference: "@mcp_profile/memory"
 ---
 
 **Official Anthropic server for persistent knowledge graph-based memory management**  

@@ -6,9 +6,7 @@ description: GraphQL MCP Server provides modern API query language capabilities 
 id: 656e6303-4e3b-4a48-8a6b-fe604d3bb0e6
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: GraphQL MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/graphql-server-profile.md
 priority: 1st_priority
 quality_score: 8.85
 source_database: tools_services
@@ -24,7 +22,6 @@ tags:
 - Cloud Platform
 - Development Platform
 tier: Tier 1
-mcp_profile_reference: "@mcp_profile/graphql"
 ---
 
 **Tier**: Tier 1 Immediate  

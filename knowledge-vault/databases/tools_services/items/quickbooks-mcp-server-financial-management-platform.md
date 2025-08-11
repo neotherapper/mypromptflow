@@ -3,9 +3,7 @@ description: "Enterprise identity and access management platform with MCP integr
 id: 59ae0d2e-484f-4a4d-bba6-67b8acf96cf6
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: QuickBooks MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/quickbooks-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -15,7 +13,6 @@ tags:
 - MCP Server
 - Tier 1
 - Development Platform
-mcp_profile_reference: "@mcp_profile/quickbooks"
 ---
 
 ## Enterprise Use Cases

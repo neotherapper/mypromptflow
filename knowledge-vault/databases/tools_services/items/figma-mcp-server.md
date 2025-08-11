@@ -9,9 +9,7 @@ description: Design system automation and design-to-code workflows for modern de
 id: 909b2608-5524-4872-8b77-8cd26b2bc04e
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Figma MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/figma-server-profile.md
 priority: 3rd_priority
 production_readiness: 88
 provider: Community/Third-party
@@ -32,7 +30,6 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - WebSocket
-mcp_profile_reference: "@mcp_profile/figma"
 ---
 
 **Design system automation and design-to-code workflows for modern development teams**  

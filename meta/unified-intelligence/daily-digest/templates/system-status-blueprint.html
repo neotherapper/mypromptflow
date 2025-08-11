@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔧 System Status Dashboard - {date}</title>
+    <link rel="stylesheet" href="/static/css/design-system.css">
+    <style>
+        /* System Status specific overrides */
+        .system-status-specific {
+            /* Custom styles only for system status if needed */
+        }
+        
+        /* Status-specific table styles */
+        .status-table {
+            background: var(--glass-light);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+        
+        .status-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .status-table th,
+        .status-table td {
+            text-align: left;
+            padding: var(--spacing-md);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .status-table th {
+            background: var(--glass-lighter);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-primary);
+        }
+        
+        .status-table td {
+            color: var(--text-secondary);
+        }
+        
+        .source-status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: var(--spacing-sm);
+        }
+        
+        .source-status-indicator.healthy {
+            background: var(--status-active);
+        }
+        
+        .source-status-indicator.warning {
+            background: var(--status-inactive);
+        }
+        
+        .source-status-indicator.error {
+            background: var(--status-error);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="glass-card text-center mb-xl">
+            <h1 class="heading-1">🔧 System Status Dashboard</h1>
+            <p class="text-body mb-lg">Generated: <span data-timestamp="{generated_at}" data-format="display">{generated_at}</span></p>
+            <p class="text-small text-muted">System Health Monitoring</p>
+        </header>
+
+        <!-- System Overview -->
+        <div class="grid grid-auto-fit mb-xl">
+            <div class="glass-card text-center active">
+                <h3 class="heading-3 mb-sm">{overall_status}</h3>
+                <p class="text-small text-muted">Overall Status</p>
+            </div>
+            <div class="glass-card text-center">
+                <h3 class="heading-3 mb-sm">{uptime}</h3>
+                <p class="text-small text-muted">System Uptime</p>
+            </div>
+            <div class="glass-card text-center">
+                <h3 class="heading-3 mb-sm">{active_sources}</h3>
+                <p class="text-small text-muted">Active Sources</p>
+            </div>
+            <div class="glass-card text-center">
+                <h3 class="heading-3 mb-sm">{processing_queue}</h3>
+                <p class="text-small text-muted">Processing Queue</p>
+            </div>
+        </div>
+
+        <!-- Component Status -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">⚙️ Component Status</h2>
+            <div class="grid grid-auto-fit">
+                {component_status_content}
+            </div>
+        </section>
+
+        <!-- Performance Metrics -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">📊 Performance Metrics</h2>
+            <div class="grid grid-auto-fit">
+                <div class="glass-card text-center">
+                    <h3 class="heading-3 mb-sm">{processing_speed}</h3>
+                    <p class="text-small text-muted">Avg Processing Speed</p>
+                </div>
+                <div class="glass-card text-center">
+                    <h3 class="heading-3 mb-sm">{success_rate}</h3>
+                    <p class="text-small text-muted">Success Rate</p>
+                </div>
+                <div class="glass-card text-center">
+                    <h3 class="heading-3 mb-sm">{error_rate}</h3>
+                    <p class="text-small text-muted">Error Rate</p>
+                </div>
+                <div class="glass-card text-center">
+                    <h3 class="heading-3 mb-sm">{response_time}</h3>
+                    <p class="text-small text-muted">Avg Response Time</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Source Monitoring -->
+        <section class="glass-card mb-xl">
+            <h2 class="heading-2 mb-lg">📡 Source Monitoring</h2>
+            <div class="status-table scroll-x">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Status</th>
+                            <th>Last Check</th>
+                            <th class="hide-on-mobile">Response Time</th>
+                            <th class="hide-on-mobile">Success Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {source_monitoring_content}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Alerts (if any) -->
+        {alerts_section}
+
+        <div class="text-center mt-xl">
+            <p class="text-small text-muted">
+                System Status Dashboard | Unified Intelligence System Monitoring
+            </p>
+        </div>
+    </div>
+
+    <script src="/static/js/time-formatter.js"></script>
+</body>
+</html>

@@ -6,9 +6,7 @@ estimated_setup_time: 5-15 minutes
 id: 0454725a-4962-45ca-b123-a7dd62411176
 installation_priority: 1
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Notion Productivity MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/notion-productivity-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 quality_score: 8.15
@@ -27,7 +25,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/notion-productivity"
 ---
 
 ## Header Classification

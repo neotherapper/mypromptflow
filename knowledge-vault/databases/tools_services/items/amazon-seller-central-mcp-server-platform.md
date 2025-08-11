@@ -7,9 +7,7 @@ description: Amazon marketplace seller analytics and management platform for e-c
 id: c1e96d5f-3c09-40d2-9cc4-5560a4bd4a6b
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Amazon Seller Central MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/amazon-seller-central-server-profile.md
 priority: 1st_priority
 production_readiness: 89
 provider: Amazon Web Services
@@ -30,7 +28,6 @@ tier: Tier 1
 transport_protocols:
 - REST API
 - Reports API
-mcp_profile_reference: "@mcp_profile/amazon-seller-central"
 ---
 
 **Amazon marketplace seller analytics and management platform for e-commerce intelligence**  

@@ -7,9 +7,7 @@ description: The Adfin Financial Integration Server represents a comprehensive f
 id: 8b3d80a7-ecb3-4912-a7d1-8098634936bc
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Adfin Financial Integration MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/adfin-financial-integration-server-profile.md
 priority: 1st_priority
 quality_score: 90.0
 source_database: tools_services

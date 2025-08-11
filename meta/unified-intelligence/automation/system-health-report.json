@@ -1,0 +1,86 @@
+{
+  "report_timestamp": "2025-07-31T11:31:09.292120+00:00",
+  "system_components": {
+    "youtube_queue": {
+      "name": "YouTube Processing Queue",
+      "health": {
+        "status": "healthy",
+        "health_status": "poor",
+        "metrics": {
+          "total_videos": 21,
+          "completed_videos": 6,
+          "pending_videos": 15,
+          "failed_videos": 0,
+          "completion_rate": 28.6,
+          "failure_rate": 0.0
+        },
+        "status_breakdown": {
+          "completed_test": 6,
+          "pending": 15
+        }
+      }
+    },
+    "knowledge_vault": {
+      "name": "Knowledge Vault",
+      "health": {
+        "status": "healthy",
+        "metrics": {
+          "youtube_content_files": 0,
+          "vault_exists": true,
+          "youtube_vault_exists": false
+        }
+      }
+    },
+    "daily_digest": {
+      "name": "Daily Digest System",
+      "health": {
+        "status": "healthy",
+        "metrics": {
+          "total_json_digests": 7,
+          "total_md_digests": 1,
+          "latest_json_exists": true,
+          "latest_md_exists": true,
+          "latest_digest_stats": {
+            "total_items": 6,
+            "high_quality_items": 6,
+            "average_score": 1.0,
+            "generated_at": "2025-07-31T11:30:43.229508+00:00"
+          }
+        }
+      }
+    },
+    "user_preferences": {
+      "name": "User Preferences & Learning",
+      "health": {
+        "status": "healthy",
+        "metrics": {
+          "stated_preferences_count": 4,
+          "learned_source_patterns": 2,
+          "learned_content_patterns": 3,
+          "topic_preferences_count": 4,
+          "total_learning_events": 0,
+          "last_update": "Never"
+        }
+      }
+    },
+    "automation": {
+      "name": "Automation System",
+      "health": {
+        "status": "healthy",
+        "metrics": {
+          "last_automation_status": "partial_success",
+          "last_run_timestamp": "2025-07-31T10:42:40.169222+00:00",
+          "log_file_exists": true,
+          "log_file_size_bytes": 2234,
+          "automation_configured": true
+        }
+      }
+    }
+  },
+  "overall_health": "excellent",
+  "health_metrics": {
+    "healthy_components": 5,
+    "total_components": 5,
+    "health_percentage": 100.0
+  }
+}

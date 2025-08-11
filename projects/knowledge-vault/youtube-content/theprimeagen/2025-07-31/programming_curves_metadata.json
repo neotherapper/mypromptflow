@@ -1,0 +1,24 @@
+{
+  "video_id": "yt:video:_ebVsYQou8A",
+  "video_url": "https://www.youtube.com/shorts/_ebVsYQou8A",
+  "title": "Programming Curves",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "processing_date": null,
+  "relevance_score": 0.0,
+  "tools_mentioned": [],
+  "key_takeaways_count": 0,
+  "code_examples_count": 0,
+  "file_paths": {
+    "transcript": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/programming_curves_transcript.md",
+    "insights": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/programming_curves_insights.md",
+    "metadata": "../knowledge-vault/youtube-content/theprimeagen/2025-07-31/programming_curves_metadata.json"
+  }
+}

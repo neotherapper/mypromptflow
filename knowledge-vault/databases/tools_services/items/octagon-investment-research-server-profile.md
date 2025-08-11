@@ -7,9 +7,7 @@ description: The Octagon Investment Research MCP server delivers comprehensive r
 id: 5e141221-6442-4149-ab3a-2693d27856b2
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Octagon Investment Research MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/octagon-investment-research-server-profile.md
 priority: 1st_priority
 quality_score: 82.0
 source_database: tools_services

@@ -6,9 +6,7 @@ description: The VMware vSphere MCP Server provides comprehensive integration be
 id: c5ffd383-66c6-4f01-852a-8892b35b6ea3
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: VMware vSphere MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/vmware-vsphere-server-profile.md
 priority: 3rd_priority
 source_database: tools_services
 status: active
@@ -20,7 +18,6 @@ tags:
 - Monitoring
 - Tier 3
 - Development Platform
-mcp_profile_reference: "@mcp_profile/vmware-vsphere-mcp"
 ---
 
 ## Executive Summary

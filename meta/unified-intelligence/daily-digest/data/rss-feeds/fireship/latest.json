@@ -1,0 +1,35 @@
+{
+  "channel_id": "fireship",
+  "collected_at": "2025-08-01T07:51:59.738398+00:00",
+  "item_count": 1,
+  "items": [
+    {
+      "id": "miTpJmMt7uo",
+      "title": "The dating app that doxxed 72,000 women...",
+      "url": "https://www.youtube.com/watch?v=miTpJmMt7uo",
+      "published_date": "2025-07-30T14:56:15+00:00",
+      "updated_date": "2025-08-01T03:00:30+00:00",
+      "author": "Fireship",
+      "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+      "channel_name": "Fireship",
+      "description": "",
+      "source_channel": "fireship",
+      "platform": "youtube",
+      "priority_score": 5.0,
+      "quality_rating": 4.9,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "categories": [
+        "programming",
+        "web-development",
+        "tutorials"
+      ],
+      "collected_at": "2025-08-01T07:51:59.738067+00:00",
+      "content_hash": "9b7451be7d3d91d91de25c84ba9cebe2",
+      "content_age_days": 1.705378914571759
+    }
+  ]
+}

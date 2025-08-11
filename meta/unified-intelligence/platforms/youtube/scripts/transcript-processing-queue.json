@@ -1,0 +1,434 @@
+[
+  {
+    "video_url": "https://www.youtube.com/watch?v=taoAAcS5PSw",
+    "video_id": "taoAAcS5PSw",
+    "title": "Musician turned Programmer turned Musician",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509701",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=ZH3iKbEiks0",
+    "video_id": "ZH3iKbEiks0",
+    "title": "I was wrong btw",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509705",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/dhuX9t2j5Hc",
+    "video_id": "yt:video:dhuX9t2j5Hc",
+    "title": "This Keyboard",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509706",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/c3yRbrYIUeo",
+    "video_id": "yt:video:c3yRbrYIUeo",
+    "title": "Programming Tier List 2024",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509707",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/_ebVsYQou8A",
+    "video_id": "yt:video:_ebVsYQou8A",
+    "title": "Programming Curves",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509708",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/SEVD2nI4Bis",
+    "video_id": "yt:video:SEVD2nI4Bis",
+    "title": "Why Do I Suck At Programming?",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509708",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/u2trdurv638",
+    "video_id": "yt:video:u2trdurv638",
+    "title": "Imposter Syndrome",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509709",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/fIhZqY_XKsc",
+    "video_id": "yt:video:fIhZqY_XKsc",
+    "title": "You Have Time...",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509710",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/D9q5wnX2_DY",
+    "video_id": "yt:video:D9q5wnX2_DY",
+    "title": "AI Scuffed Programming",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509711",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=3f9tbqSIm-E",
+    "video_id": "3f9tbqSIm-E",
+    "title": "1000 Players - One Game of Doom",
+    "channel": "ThePrimeagen",
+    "channel_rating": 5.0,
+    "topics": [
+      "software-engineering",
+      "vim",
+      "programming",
+      "development-workflow"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509712",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=miTpJmMt7uo",
+    "video_id": "miTpJmMt7uo",
+    "title": "The dating app that doxxed 72,000 women...",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509713",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=-w53i6Ae-YM",
+    "video_id": "-w53i6Ae-YM",
+    "title": "Alibaba is coming for Claude...",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509714",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=-_6dHIPVoTM",
+    "video_id": "-_6dHIPVoTM",
+    "title": "When being over-employed goes wrong...",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509715",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=rUCOwCJDh8o",
+    "video_id": "rUCOwCJDh8o",
+    "title": "That time Google Cloud Platform bricked the Internet\u2026",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509715",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=cNywlNWan9o",
+    "video_id": "cNywlNWan9o",
+    "title": "When bad C code puts you behind bars...",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509716",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=NIgrGqmoeHs",
+    "video_id": "NIgrGqmoeHs",
+    "title": "Microsoft just opened the flood gates\u2026",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509717",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=jCTvblRXnzg",
+    "video_id": "jCTvblRXnzg",
+    "title": "Google\u2019s AlphaEvolve is making new discoveries in math\u2026",
+    "channel": "Fireship",
+    "channel_rating": 5.0,
+    "topics": [
+      "programming",
+      "web-development",
+      "tech-trends",
+      "tutorials"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509718",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=rvr-xOwrY70",
+    "video_id": "rvr-xOwrY70",
+    "title": "Touch Grass \u00b7 Web Dev Challenge S2.E7",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509719",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=kL4Tp8RmJwo",
+    "video_id": "kL4Tp8RmJwo",
+    "title": "Asynchronous Svelte",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509720",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=ekQ7t6_MvOQ",
+    "video_id": "ekQ7t6_MvOQ",
+    "title": "Generative user interfaces",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509720",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/shorts/OEXI8uVFw3A",
+    "video_id": "yt:video:OEXI8uVFw3A",
+    "title": "\"any blockers?\" \"@davidkpiano's code\" \ud83d\udc80",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509721",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=I4SBLMGzDss",
+    "video_id": "I4SBLMGzDss",
+    "title": "Build a Custom Web App in 4 Hours w/AI-Native UX \u00b7 Web Dev Challenge S2.E6",
+    "channel": "Learn With Jason",
+    "channel_rating": 5.0,
+    "topics": [
+      "web-development",
+      "live-coding",
+      "javascript",
+      "community"
+    ],
+    "priority": "high",
+    "queued_at": "2025-07-31T13:24:21.509722",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=vGclr9p1oqg",
+    "video_id": "vGclr9p1oqg",
+    "title": "Here's the Product I've Been Working For",
+    "channel": "James Q Quick",
+    "channel_rating": 4.0,
+    "topics": [
+      "javascript",
+      "react",
+      "career-advice",
+      "web-development"
+    ],
+    "priority": "medium",
+    "queued_at": "2025-07-31T13:24:21.509723",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=_NEjH2vIOso",
+    "video_id": "_NEjH2vIOso",
+    "title": "99 Dev Problems with James Quick",
+    "channel": "James Q Quick",
+    "channel_rating": 4.0,
+    "topics": [
+      "javascript",
+      "react",
+      "career-advice",
+      "web-development"
+    ],
+    "priority": "medium",
+    "queued_at": "2025-07-31T13:24:21.509724",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=FtbvREA8RD4",
+    "video_id": "FtbvREA8RD4",
+    "title": "Build a Comma Separated Input Component in Next.js",
+    "channel": "James Q Quick",
+    "channel_rating": 4.0,
+    "topics": [
+      "javascript",
+      "react",
+      "career-advice",
+      "web-development"
+    ],
+    "priority": "medium",
+    "queued_at": "2025-07-31T13:24:21.509724",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=TSW0Ybxs_bE",
+    "video_id": "TSW0Ybxs_bE",
+    "title": "Next js Forms Crash Course (Zod, Actions, useFormState, Progressive Enhancement, and more!",
+    "channel": "James Q Quick",
+    "channel_rating": 4.0,
+    "topics": [
+      "javascript",
+      "react",
+      "career-advice",
+      "web-development"
+    ],
+    "priority": "medium",
+    "queued_at": "2025-07-31T13:24:21.509725",
+    "status": "pending"
+  },
+  {
+    "video_url": "https://www.youtube.com/watch?v=OTgGpovffNY",
+    "video_id": "OTgGpovffNY",
+    "title": "How to Build an Email Confirmation Workflow with Next.js, Resend, and Prisma",
+    "channel": "James Q Quick",
+    "channel_rating": 4.0,
+    "topics": [
+      "javascript",
+      "react",
+      "career-advice",
+      "web-development"
+    ],
+    "priority": "medium",
+    "queued_at": "2025-07-31T13:24:21.509726",
+    "status": "pending"
+  }
+]

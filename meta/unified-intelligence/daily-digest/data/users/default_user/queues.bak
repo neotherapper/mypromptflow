@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "user_id": "default_user",
+    "last_updated": "2025-08-09T19:24:05.138755+00:00",
+    "total_queues": 2
+  },
+  "queues": {
+    "watch_later": {
+      "queue_id": "watch_later",
+      "name": "Watch Later",
+      "description": "Default watch later queue",
+      "queue_type": "personal",
+      "created_at": "2025-08-09T19:24:05.138767+00:00",
+      "last_accessed_at": "2025-08-09T19:24:05.138767+00:00",
+      "is_active": true,
+      "settings": {
+        "auto_sort": false,
+        "max_videos": 100,
+        "estimated_total_time_minutes": 0
+      },
+      "videos": []
+    },
+    "daily_learning": {
+      "queue_id": "daily_learning",
+      "name": "Today's Learning",
+      "description": "AI-curated daily learning queue",
+      "queue_type": "system",
+      "created_at": "2025-08-09T19:24:05.138800+00:00",
+      "last_accessed_at": "2025-08-09T19:24:05.138800+00:00",
+      "is_active": true,
+      "settings": {
+        "auto_sort": true,
+        "max_videos": 10,
+        "target_duration_minutes": 30,
+        "auto_refresh_daily": true
+      },
+      "videos": []
+    }
+  }
+}

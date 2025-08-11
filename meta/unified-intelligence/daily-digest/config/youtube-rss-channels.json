@@ -1,0 +1,331 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created_at": "2025-08-01T07:45:00.000Z",
+    "description": "YouTube RSS feed configuration for unified intelligence system",
+    "total_channels": 23,
+    "priority_topics": ["claude", "claude-code", "react", "typescript", "meta-prompting", "nextjs", "ai", "development"]
+  },
+  "channels": [
+    {
+      "id": "theprimeagen",
+      "name": "ThePrimeagen",
+      "channel_id": "UC8ENHE5xdFSwx71u3fDH5Xw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC8ENHE5xdFSwx71u3fDH5Xw",
+      "categories": ["programming", "react", "typescript", "development"],
+      "priority_score": 5.0,
+      "quality_rating": 4.8,
+      "update_frequency": "daily",
+      "priority_topics": ["react", "typescript", "development"],
+      "description": "Software engineering insights, TypeScript, React, and development practices"
+    },
+    {
+      "id": "fireship",
+      "name": "Fireship",
+      "channel_id": "UCsBjURrPoezykLs9EqgamOA",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA",
+      "categories": ["programming", "web-development", "tutorials"],
+      "priority_score": 5.0,
+      "quality_rating": 4.9,
+      "update_frequency": "2-3x/week",
+      "priority_topics": ["react", "typescript", "nextjs"],
+      "description": "Fast-paced web development tutorials and technology overviews"
+    },
+    {
+      "id": "webdevsimplified",
+      "name": "Web Dev Simplified",
+      "channel_id": "UCFbNIlppjAuEX4znoulh0Cw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFbNIlppjAuEX4znoulh0Cw",
+      "categories": ["web-development", "react", "javascript"],
+      "priority_score": 4.5,
+      "quality_rating": 4.7,
+      "update_frequency": "2x/week",
+      "priority_topics": ["react", "typescript", "nextjs"],
+      "description": "Simplified web development tutorials with React and modern JavaScript"
+    },
+    {
+      "id": "programmingwithmosh",
+      "name": "Programming with Mosh",
+      "channel_id": "UCWv7vMbMWH4-V0ZXdmDpPBA",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCWv7vMbMWH4-V0ZXdmDpPBA",
+      "categories": ["programming", "tutorials", "typescript"],
+      "priority_score": 4.3,
+      "quality_rating": 4.6,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "typescript"],
+      "description": "Comprehensive programming tutorials including React and TypeScript"
+    },
+    {
+      "id": "codevolution",
+      "name": "Codevolution",
+      "channel_id": "UC80PWRj_ZU8Zu0HSMNVwKWw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC80PWRj_ZU8Zu0HSMNVwKWw",
+      "categories": ["react", "nextjs", "typescript"],
+      "priority_score": 4.2,
+      "quality_rating": 4.5,
+      "update_frequency": "2x/week",
+      "priority_topics": ["react", "nextjs", "typescript"],
+      "description": "In-depth React, Next.js, and TypeScript tutorials"
+    },
+    {
+      "id": "anthopicai",
+      "name": "Anthropic",
+      "channel_id": "UC_6uTBqeEgOQUKZl3P0mYqw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC_6uTBqeEgOQUKZl3P0mYqw",
+      "categories": ["ai", "claude", "machine-learning"],
+      "priority_score": 5.0,
+      "quality_rating": 4.9,
+      "update_frequency": "weekly",
+      "priority_topics": ["claude"],
+      "description": "Official Anthropic channel with Claude AI insights and updates"
+    },
+    {
+      "id": "ai-explained",
+      "name": "AI Explained",
+      "channel_id": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw",
+      "categories": ["ai", "machine-learning", "claude"],
+      "priority_score": 4.8,
+      "quality_rating": 4.7,
+      "update_frequency": "2x/week",
+      "priority_topics": ["claude", "ai", "meta-prompting"],
+      "description": "AI developments and explanations, including Claude AI coverage"
+    },
+    {
+      "id": "mattvidpro",
+      "name": "Matt Wolfe",
+      "channel_id": "UCbhMVxSjB8AB8wN8LG6p4Fw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbhMVxSjB8AB8wN8LG6p4Fw",
+      "categories": ["ai", "tools", "productivity"],  
+      "priority_score": 4.4,
+      "quality_rating": 4.3,
+      "update_frequency": "2x/week",
+      "priority_topics": ["ai", "claude"],
+      "description": "AI tools and productivity, including Claude AI tutorials"
+    },
+    {
+      "id": "developedbyed",
+      "name": "developedByEd",
+      "channel_id": "UClb90NQQcskPUGDIXsQEz5Q",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UClb90NQQcskPUGDIXsQEz5Q",
+      "categories": ["web-development", "react", "design"],
+      "priority_score": 4.0,
+      "quality_rating": 4.4,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "typescript"],
+      "description": "Creative web development with React and modern design patterns"
+    },
+    {
+      "id": "jackherrington",
+      "name": "Jack Herrington",
+      "channel_id": "UC6vRUjYqDuoUsYsku86Lrsw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6vRUjYqDuoUsYsku86Lrsw",
+      "categories": ["typescript", "react", "nextjs"],
+      "priority_score": 4.6,
+      "quality_rating": 4.7,
+      "update_frequency": "weekly",
+      "priority_topics": ["typescript", "react", "nextjs"],
+      "description": "Advanced TypeScript, React, and Next.js development patterns"
+    },
+    {
+      "id": "leerob",
+      "name": "Lee Robinson",
+      "channel_id": "UCZMli3czZnd1uoc1ShTouQw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZMli3czZnd1uoc1ShTouQw",
+      "categories": ["nextjs", "react", "web-development"],
+      "priority_score": 4.8,
+      "quality_rating": 4.8,
+      "update_frequency": "weekly",
+      "priority_topics": ["nextjs", "react"],
+      "description": "Next.js creator with cutting-edge React and web development insights"
+    },
+    {
+      "id": "netwininjas",
+      "name": "The Net Ninja",
+      "channel_id": "UCW5YeuERMmlnqo4oq8vwUpg",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCW5YeuERMmlnqo4oq8vwUpg",
+      "categories": ["web-development", "tutorials", "javascript"],
+      "priority_score": 4.1,
+      "quality_rating": 4.5,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "typescript"],
+      "description": "Comprehensive web development tutorials including React and TypeScript"
+    },
+    {
+      "id": "benawad",
+      "name": "Ben Awad",
+      "channel_id": "UC-8QAzbLcRglXeN_MY9blyw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-8QAzbLcRglXeN_MY9blyw",
+      "categories": ["programming", "react", "typescript"],
+      "priority_score": 4.4,
+      "quality_rating": 4.6,
+      "update_frequency": "2x/week",
+      "priority_topics": ["react", "typescript"],
+      "description": "Full-stack development with React, TypeScript, and modern tools"
+    },
+    {
+      "id": "bytebybyte",
+      "name": "Byte by Byte",  
+      "channel_id": "UCaO6VoaYJv4kS-TQO_M-N_g",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCaO6VoaYJv4kS-TQO_M-N_g",
+      "categories": ["programming", "algorithms", "development"],
+      "priority_score": 3.8,
+      "quality_rating": 4.2,
+      "update_frequency": "weekly",
+      "priority_topics": ["development"],
+      "description": "Programming algorithms and development best practices"
+    },
+    {
+      "id": "techwithtim",
+      "name": "Tech With Tim",
+      "channel_id": "UC4JX40jDee_tINbkjycV4Sg",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4JX40jDee_tINbkjycV4Sg",
+      "categories": ["programming", "python", "tutorials"],
+      "priority_score": 3.9,
+      "quality_rating": 4.3,
+      "update_frequency": "2x/week",
+      "priority_topics": ["development"],
+      "description": "Programming tutorials and project builds"
+    },
+    {
+      "id": "designcourse",
+      "name": "DesignCourse",
+      "channel_id": "UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCVyRiMvfUNMA1UPlDPzG5Ow",
+      "categories": ["web-design", "frontend", "react"],
+      "priority_score": 3.7,
+      "quality_rating": 4.1,
+      "update_frequency": "weekly",
+      "priority_topics": ["react"],
+      "description": "Web design and frontend development with React focus"
+    },
+    {
+      "id": "cleverprogrammer",
+      "name": "Clever Programmer",
+      "channel_id": "UCqrILQNl5Ed9Dz6CGMyvMTQ",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCqrILQNl5Ed9Dz6CGMyvMTQ",
+      "categories": ["programming", "projects", "tutorials"],
+      "priority_score": 3.6,
+      "quality_rating": 4.0,
+      "update_frequency": "2x/week",
+      "priority_topics": ["react", "development"],
+      "description": "Programming projects and tutorials including React"
+    },
+    {
+      "id": "academind",
+      "name": "Academind",
+      "channel_id": "UCSJbGtTlrDami-tDGPUV9-w",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSJbGtTlrDami-tDGPUV9-w",
+      "categories": ["web-development", "react", "tutorials"],
+      "priority_score": 4.2,
+      "quality_rating": 4.5,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "typescript"],
+      "description": "Professional web development tutorials with React and TypeScript"
+    },
+    {
+      "id": "codewithleon",
+      "name": "Code with Leon",
+      "channel_id": "UCbWxnk-zn5LrfCmI8Qp4E9A",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbWxnk-zn5LrfCmI8Qp4E9A",
+      "categories": ["programming", "ai", "automation"],
+      "priority_score": 4.0,
+      "quality_rating": 4.3,
+      "update_frequency": "weekly",
+      "priority_topics": ["ai", "development"],
+      "description": "Programming with focus on AI tools and automation"
+    },
+    {
+      "id": "javascriptmastery",
+      "name": "JavaScript Mastery",
+      "channel_id": "UCmXmlB4-HJytD7wek0Uo97A",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCmXmlB4-HJytD7wek0Uo97A",
+      "categories": ["javascript", "react", "nextjs"],
+      "priority_score": 4.3,
+      "quality_rating": 4.6,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "nextjs", "typescript"],
+      "description": "Advanced JavaScript, React, and Next.js project tutorials"
+    },
+    {
+      "id": "codingwithlewis",
+      "name": "Coding with Lewis",
+      "channel_id": "UC6Ak4rBbm7IJ9aD4HHrZcPw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC6Ak4rBbm7IJ9aD4HHrZcPw",
+      "categories": ["react", "nextjs", "tutorials"],
+      "priority_score": 3.8,
+      "quality_rating": 4.2,
+      "update_frequency": "weekly",
+      "priority_topics": ["react", "nextjs"],
+      "description": "React and Next.js development tutorials and projects"
+    },
+    {
+      "id": "aiadvantage",
+      "name": "AI Advantage",
+      "channel_id": "UCpNtTmW1k3cBZj9a43P7TWw",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpNtTmW1k3cBZj9a43P7TWw",
+      "categories": ["ai", "productivity", "tools"],
+      "priority_score": 4.1,
+      "quality_rating": 4.4,
+      "update_frequency": "2x/week",
+      "priority_topics": ["ai", "claude", "meta-prompting"],
+      "description": "AI productivity tools and techniques, including Claude AI usage"
+    },
+    {
+      "id": "harkirat",
+      "name": "Harkirat Singh",
+      "channel_id": "UCrHmSYpp2g1tVwqJrfqym6g",
+      "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCrHmSYpp2g1tVwqJrfqym6g",
+      "categories": ["programming", "react", "nextjs"],
+      "priority_score": 4.5,
+      "quality_rating": 4.7,
+      "update_frequency": "2x/week",
+      "priority_topics": ["react", "nextjs", "typescript"],
+      "description": "Full-stack development with React, Next.js, and TypeScript"
+    }
+  ],
+  "feed_settings": {
+    "check_interval_minutes": 30,
+    "max_items_per_feed": 10,
+    "timeout_seconds": 30,
+    "retry_attempts": 3,
+    "quality_threshold": 0.7,
+    "content_age_limit_days": 7
+  },
+  "priority_weights": {
+    "claude": 2.0,
+    "claude-code": 1.8,
+    "react": 1.5,
+    "typescript": 1.4,
+    "meta-prompting": 1.7,
+    "nextjs": 1.3,
+    "ai": 1.6,
+    "development": 1.2
+  },
+  "categories": {
+    "ai": {
+      "description": "Artificial Intelligence and machine learning content",
+      "priority_multiplier": 1.6
+    },
+    "programming": {
+      "description": "General programming and software development",
+      "priority_multiplier": 1.2
+    },
+    "react": {
+      "description": "React.js framework and ecosystem",
+      "priority_multiplier": 1.5
+    },
+    "typescript": {
+      "description": "TypeScript language and development",
+      "priority_multiplier": 1.4
+    },
+    "web-development": {
+      "description": "General web development practices",
+      "priority_multiplier": 1.3
+    },
+    "nextjs": {
+      "description": "Next.js React framework",
+      "priority_multiplier": 1.3
+    }
+  }
+}

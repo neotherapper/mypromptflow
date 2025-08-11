@@ -1,0 +1,25 @@
+{
+  "video_url": "https://www.youtube.com/watch?v=3f9tbqSIm-E",
+  "video_id": "3f9tbqSIm-E",
+  "title": "1000 Players - One Game of Doom",
+  "channel": "ThePrimeagen",
+  "channel_rating": 5.0,
+  "topics": [
+    "software-engineering",
+    "vim",
+    "programming",
+    "development-workflow"
+  ],
+  "priority": "high",
+  "queued_at": "2025-07-31T10:05:59.625751",
+  "status": "completed_test",
+  "transcript": null,
+  "insights": null,
+  "processed_at": null,
+  "error": null,
+  "transcript_summary": "## Analysis of \"1000 Players - One Game of Doom\" Video\n\n### 1. Key Programming Concepts Mentioned\n\n**Networking & Real-time Systems:**\n- Real-time game engine implementation\n- Network latency challenges (5+ second Twitch delay)\n- Client-server architecture with relay servers\n- UDP vs TCP protocols in WebRTC context\n\n**Data Compression & Optimization:**\n- **Run Length Encoding (RLE)** - Compressing repeated characters\n- **XOR operations** - Bitwise operations with memory properties for frame diff...",
+  "unified_score": 1.0,
+  "processed_with": "unified-intelligence-framework",
+  "framework_version": "1.0.0",
+  "processing_timestamp": "2025-07-31T10:43:16.262600+00:00"
+}

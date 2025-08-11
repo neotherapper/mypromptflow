@@ -7,9 +7,7 @@ description: Auth0 Identity Platform represents the comprehensive identity manag
 id: 18ad375e-b0ac-4ba0-aa70-aec3d907669b
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Auth0 Identity Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/auth0-identity-platform-server-profile.md
 priority: 1st_priority
 quality_score: 96.0
 source_database: tools_services

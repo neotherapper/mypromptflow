@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading AI/ML Mo
 id: 8727d7a9-5b3a-43af-8643-e66427516fd1
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Hugging Face AI Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/huggingface-ai-platform-server-profile.md
 priority: 1st_priority
 production_readiness: 98
 quality_score: 9.3
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/hugging-face-ai-platform"
 ---
 
 ## Header Classification

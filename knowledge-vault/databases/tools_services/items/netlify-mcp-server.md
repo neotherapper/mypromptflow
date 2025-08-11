@@ -9,9 +9,7 @@ description: JAMstack deployment and edge computing platform for modern web deve
 id: 8e26ac6b-1857-49f4-a7d1-b596e43683fa
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Netlify MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/netlify-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 provider: Community/Third-party
@@ -34,7 +32,6 @@ tier: Tier 3
 transport_protocols:
 - HTTPS/HTTP2
 - WebSocket
-mcp_profile_reference: "@mcp_profile/netlify"
 ---
 
 **JAMstack deployment and edge computing platform for modern web development**  

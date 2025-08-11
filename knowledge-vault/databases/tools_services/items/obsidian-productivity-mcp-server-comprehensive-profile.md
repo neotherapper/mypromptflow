@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading Personal
 id: 5f153b85-30d2-4825-8c4d-9963f4018116
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Obsidian Productivity MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/obsidian-productivity-server-profile.md
 priority: 1st_priority
 production_readiness: 95
 quality_score: 8.25
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/obsidian-productivity"
 ---
 
 ## Header Classification

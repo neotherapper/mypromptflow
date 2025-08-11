@@ -1,0 +1,95 @@
+{
+  "video_id": "KmYoJmZs3sY",
+  "video_url": "https://www.youtube.com/watch?v=KmYoJmZs3sY",
+  "title": "Introduction to TypeScript with React - Complete Tutorial 2024",
+  "channel": "Programming Tutorial Channel",
+  "programming_concepts": [
+    "typescript",
+    "component",
+    "interface",
+    "props",
+    "react",
+    "state",
+    "hook",
+    "type",
+    "yarn",
+    "api",
+    "npm",
+    "go"
+  ],
+  "priority_topics": [
+    "react",
+    "typescript"
+  ],
+  "topic_scores": {
+    "react": 0.9,
+    "typescript": 0.8
+  },
+  "unified_score": 0.29333333333333333,
+  "quality_score": 0.8433333333333334,
+  "content_summary": "## Analysis of \"Introduction to TypeScript with React - Complete Tutorial 2024\"\n\n### Key Programming Concepts Mentioned\n\n**Languages:**\n- typescript\n- react\n- go\n\n**Patterns:**\n- component\n- interface\n- props\n- state\n- hook\n\n**Tools:**\n- yarn\n- npm\n\n**Concepts:**\n- api\n\n### Key Points from Transcript\n\n1. so in this video we will learn how to\nuse typescript with react from Basics so\nto get started you first need to install\ntypescript on your machine which you can\ndo using npm install hyphen G type\nscript\nand you need to mention the version that\nyou want to install so the current\nlatest version X 5\n2. 2\nyou can also mention latest if you want\nto install the latest version but I will\ngo with 5\n3. 2 which is the latest one so\nonce you execute this command it will\ninstall typescript globally so not on a\nspecific project but for their entire\napplication all the application so once\nit's installed now we can create a\nproject using typescript\nso we can use wheat JS to create the\ntypescript project so we can say npm\ncreate\nso it will ask you the project name I\ncan say react type script demo\nnow select react and for the variant I\nwill select typescript\nnow this folder is created we can CD\ninto that\nI will open this in the current vs code\nnow after opening we can open the\nterminal let me make this smaller\nso you will see all the files you can\nsee the\ntsconfig\n4. css now this all the\nboilerplate code I don't want I can\nremove and I will create new app\ncomponent\nnow as we you can see there is a red\nline because we don't have node modules\nfolder so once you create with just you\nneed to install the packages so just\nexecute npm install and it will install\nall the packages from package\n5. json so\nreact\nreact Dom and all the div dependencies\nit will install those packages\nnow once the packages are installed you\nwill see that there is still a red\nunderline coming here so it's saying\ndoes not take this sum error so what you\nneed to do is you need to press command\nshift p or Ctrl shift p and you need to\nselect\ntype script version so type here type\nscript select this option select type\nscript version and you need to select\nthe workspace version so you need to\nselect that option use workspace version\n5\n",
+  "insights": {
+    "priority_video": true,
+    "expected_topics_covered": {
+      "expected": [
+        "react",
+        "typescript"
+      ],
+      "found": [
+        "react",
+        "typescript"
+      ],
+      "covered": [
+        "react",
+        "typescript"
+      ],
+      "missing": [],
+      "coverage_percentage": 100.0
+    },
+    "concept_count": 12,
+    "transcript_length": 20218,
+    "topic_diversity": 2,
+    "technical_depth": 0,
+    "content_quality_indicators": {
+      "has_code_examples": true,
+      "has_explanations": true,
+      "has_best_practices": true,
+      "has_troubleshooting": true,
+      "has_step_by_step": true,
+      "has_practical_demo": true
+    },
+    "learning_value_indicators": {
+      "beginner_friendly": true,
+      "advanced_concepts": false,
+      "comprehensive_coverage": false,
+      "practical_focus": true
+    },
+    "topic_score_breakdown": {
+      "react": 0.9,
+      "typescript": 0.8
+    },
+    "top_concepts": [
+      "typescript",
+      "component",
+      "interface",
+      "props",
+      "react",
+      "state",
+      "hook",
+      "type",
+      "yarn",
+      "api"
+    ],
+    "transcript_analysis": {
+      "word_count": 4024,
+      "unique_technical_terms": 12,
+      "code_discussion_density": 37,
+      "explanation_quality": 12
+    }
+  },
+  "processing_timestamp": "2025-08-01T05:40:05.513619+00:00",
+  "processed_with": "direct-transcript-processor",
+  "framework_version": "1.0.0",
+  "content_type": "priority_youtube_video",
+  "transcript_available": true
+}

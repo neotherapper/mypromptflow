@@ -1,0 +1,9 @@
+# MCP Context Log
+# Captures user intent, task context, and system state for MCP operations
+# Format: [TIMESTAMP] [LEVEL] [CONTEXT_TYPE] - [DATA]
+
+[2025-07-31 00:13:28] [INFO] [MCP_OPERATION] - jira::jira_get_issue - Get test issue
+[2025-07-31 00:19:43] [INFO] [MCP_OPERATION] - jira::jira_get_issue - Get test issue
+[2025-07-31 00:22:19] [INFO] [SESSION_START] - New session: session_20250731_002219 - Goal: Testing MCP learning integration workflow
+[2025-07-31 00:26:05] [INFO] [MCP_OPERATION] - jira::jira_search - Find open test issues
+[2025-07-31 00:26:17] [SUCCESS] [MCP_OPERATION] - jira::jira_search - Success: Found 8 open issues in TEST project

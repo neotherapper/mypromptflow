@@ -6,9 +6,7 @@ description: Advanced social media monitoring, engagement analytics, and automat
 id: a21349e0-a3b3-4c05-9662-5bb2f8f1b128
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Twitter/X MCP Server
-original_file: mcp-registry/detailed-profiles/tier-4/twitter-x-server-profile.md
 priority: 4th_priority
 production_readiness: 72
 provider: Community / Third-party
@@ -27,7 +25,6 @@ tags:
 tier: Tier 2
 transport_protocols:
 - HTTP Transport
-mcp_profile_reference: "@mcp_profile/twitterx"
 ---
 
 **Advanced social media monitoring, engagement analytics, and automated response systems for AI agents**  

@@ -1,0 +1,306 @@
+{
+  "digests": [
+    {
+      "timestamp": "2025-07-31_17-30-02",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T14:30:02.761741+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_17-30-02.json"
+    },
+    {
+      "timestamp": "2025-07-31_17-30-02",
+      "digest_type": "system_wide_yesterday",
+      "date_range": "yesterday",
+      "generated_at": "2025-07-31T14:30:02.762944+00:00",
+      "total_items": 0,
+      "high_quality_items": 0,
+      "average_score": 0,
+      "recommendation": "",
+      "top_sources": [],
+      "file_path": "system_wide_yesterday_2025-07-31_17-30-02.json"
+    },
+    {
+      "timestamp": "2025-07-31_17-30-02",
+      "digest_type": "system_wide_last_3_days",
+      "date_range": "last_3_days",
+      "generated_at": "2025-07-31T14:30:02.763726+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_last_3_days_2025-07-31_17-30-02.json"
+    },
+    {
+      "timestamp": "2025-07-31_17-30-02",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T14:30:02.764877+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_17-30-02.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-46",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T13:24:46.077313+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_16-24-46.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-46",
+      "digest_type": "system_wide_yesterday",
+      "date_range": "yesterday",
+      "generated_at": "2025-07-31T13:24:46.078430+00:00",
+      "total_items": 0,
+      "high_quality_items": 0,
+      "average_score": 0,
+      "recommendation": "",
+      "top_sources": [],
+      "file_path": "system_wide_yesterday_2025-07-31_16-24-46.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-46",
+      "digest_type": "system_wide_last_3_days",
+      "date_range": "last_3_days",
+      "generated_at": "2025-07-31T13:24:46.079211+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_last_3_days_2025-07-31_16-24-46.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-46",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T13:24:46.080579+00:00",
+      "total_items": 6,
+      "high_quality_items": 0,
+      "average_score": 0.003,
+      "recommendation": "Light day for new content, consider exploring discovery algorithms.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_16-24-46.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-18",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T13:24:18.675409+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_16-24-18.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-18",
+      "digest_type": "system_wide_yesterday",
+      "date_range": "yesterday",
+      "generated_at": "2025-07-31T13:24:18.676796+00:00",
+      "total_items": 0,
+      "high_quality_items": 0,
+      "average_score": 0,
+      "recommendation": "",
+      "top_sources": [],
+      "file_path": "system_wide_yesterday_2025-07-31_16-24-18.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-18",
+      "digest_type": "system_wide_last_3_days",
+      "date_range": "last_3_days",
+      "generated_at": "2025-07-31T13:24:18.677362+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_last_3_days_2025-07-31_16-24-18.json"
+    },
+    {
+      "timestamp": "2025-07-31_16-24-18",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T13:24:18.678497+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_16-24-18.json"
+    },
+    {
+      "timestamp": "2025-07-31_15-53-31",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T12:53:31.681495+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_15-53-31.json"
+    },
+    {
+      "timestamp": "2025-07-31_15-53-31",
+      "digest_type": "system_wide_yesterday",
+      "date_range": "yesterday",
+      "generated_at": "2025-07-31T12:53:31.682493+00:00",
+      "total_items": 0,
+      "high_quality_items": 0,
+      "average_score": 0,
+      "recommendation": "",
+      "top_sources": [],
+      "file_path": "system_wide_yesterday_2025-07-31_15-53-31.json"
+    },
+    {
+      "timestamp": "2025-07-31_15-53-31",
+      "digest_type": "system_wide_last_3_days",
+      "date_range": "last_3_days",
+      "generated_at": "2025-07-31T12:53:31.683116+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_last_3_days_2025-07-31_15-53-31.json"
+    },
+    {
+      "timestamp": "2025-07-31_15-53-31",
+      "digest_type": "system_wide_today",
+      "date_range": "today",
+      "generated_at": "2025-07-31T12:53:31.684242+00:00",
+      "total_items": 6,
+      "high_quality_items": 6,
+      "average_score": 1.0,
+      "recommendation": "Excellent day for learning! Multiple high-quality items available.",
+      "top_sources": [
+        {
+          "source": "ThePrimeagen",
+          "items": 4
+        },
+        {
+          "source": "Fireship",
+          "items": 2
+        }
+      ],
+      "file_path": "system_wide_today_2025-07-31_15-53-31.json"
+    }
+  ],
+  "last_updated": "2025-07-31T14:30:02.765436+00:00",
+  "total_digests": 16
+}

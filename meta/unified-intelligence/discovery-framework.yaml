@@ -1,0 +1,250 @@
+# Unified Topic Intelligence Discovery Framework
+# Master configuration for system-wide intelligent source discovery and learning
+# Location: @meta/unified-intelligence/discovery-framework.yaml
+# Version: 1.0 - Unified System Launch
+
+metadata:
+  version: "1.0.0"
+  purpose: "System-wide unified topic intelligence and source discovery"
+  scope: "All projects, all topics, all platforms"
+  integration: "Consolidates @meta/information-access + YouTube system + multi-platform discovery"
+  created: "2025-07-31"
+
+# SYSTEM-WIDE CONFIGURATION
+system_config:
+  base_path: "@meta/unified-intelligence/"
+  availability: "system-wide"
+  projects_access: "all"
+  learning_persistence: "cross-project"
+  
+  components:
+    information_access: "information-access/"
+    source_monitoring: "platforms/"
+    discovery_algorithms: "discovery-algorithms/"
+    quality_engine: "quality-engine/"
+    ai_learning: "ai-learning-agent/"
+    knowledge_vault: "knowledge-vault/"
+    daily_digest: "daily-digest/"
+
+# UNIFIED SOURCE REGISTRY REFERENCE
+source_registry:
+  location: "source-registry.yaml"
+  scope: "All platforms, all topics, all projects"
+  platforms:
+    - youtube
+    - github
+    - reddit
+    - hackernews
+    - official_blogs
+    - documentation_sites
+    - mcp_servers
+  
+  quality_framework: "quality-engine/assessment-framework.yaml"
+  user_preferences: "user-preferences.json"
+
+# DISCOVERY ALGORITHM INTEGRATION
+discovery_algorithms:
+  github_discovery:
+    algorithm: "discovery-algorithms/github-discovery.py"
+    triggers: ["new topic", "trending repos", "official releases"]
+    quality_indicators: ["stars > 1000", "active maintenance", "contributor quality"]
+    
+  youtube_discovery:
+    algorithm: "discovery-algorithms/youtube-discovery.py" 
+    triggers: ["channel mentions in transcripts", "tool recommendations", "expert citations"]
+    quality_indicators: ["subscriber count", "upload consistency", "content quality"]
+    
+  official_source_discovery:
+    algorithm: "discovery-algorithms/official-discovery.py"
+    triggers: ["new technology adoption", "project homepage analysis", "changelog tracking"]
+    quality_indicators: ["official designation", "primary source", "update frequency"]
+    
+  reddit_discovery:
+    algorithm: "discovery-algorithms/reddit-discovery.py"
+    triggers: ["trending discussions", "expert AMAs", "tool announcements"]
+    quality_indicators: ["community size", "discussion quality", "moderator standards"]
+
+# AI LEARNING AGENT CONFIGURATION
+ai_learning_agent:
+  location: "ai-learning-agent/"
+  scope: "system-wide learning"
+  learning_inputs:
+    - "user explicit feedback (like/dislike)"
+    - "engagement patterns across all projects"
+    - "source credibility adjustments"
+    - "cross-project content preferences"
+  
+  adaptation_capabilities:
+    - "boost similar content system-wide"
+    - "reduce weight of demoted sources everywhere"
+    - "discover preference patterns"
+    - "cross-topic intelligence synthesis"
+  
+  preference_recording:
+    stated_preferences:
+      theprimegen: 5.0
+      theo_t3gg: 5.0
+      official_sources: 1.0
+      github_changelogs: 1.0
+    learning_database: "user-preferences.json"
+
+# PLATFORM INTEGRATION
+platform_integration:
+  youtube:
+    current_system: "platforms/youtube/"
+    channels_monitored: 23
+    processing_queue: 22
+    integration_status: "active"
+    
+  github:
+    integration: "platforms/github/"
+    monitoring_scope: ["releases", "issues", "discussions", "trending"]
+    priority_repos: ["facebook/react", "microsoft/TypeScript", "vercel/next.js"]
+    
+  reddit:
+    integration: "platforms/reddit/"
+    subreddits: ["programming", "javascript", "reactjs", "typescript", "webdev"]
+    monitoring_focus: ["trending posts", "expert discussions", "tool announcements"]
+    
+  hackernews:
+    integration: "platforms/hackernews/"
+    monitoring_focus: ["trending tech discussions", "Show HN", "official announcements"]
+
+# QUALITY ENGINE
+quality_engine:
+  location: "quality-engine/"
+  universal_scoring:
+    official_sources: 1.0
+    expert_creators: 0.8-0.9
+    community_sources: 0.6-0.8
+    user_preference_multiplier: "0.5-2.0"
+  
+  quality_indicators:
+    github:
+      - "star count and growth"
+      - "recent commit activity"
+      - "maintainer reputation"
+      - "issue response time"
+    youtube:
+      - "subscriber count and growth"
+      - "upload consistency"
+      - "transcript quality and coherence"
+      - "technical accuracy"
+    official_sources:
+      - "domain authority"
+      - "content freshness"
+      - "technical depth"
+      - "official designation verification"
+
+# DAILY INTELLIGENCE SYSTEM
+daily_intelligence:
+  location: "daily-digest/"
+  generation_frequency: "daily"
+  personalization: "user preferences + AI learning"
+  
+  digest_types:
+    system_wide: "Top intelligence across all platforms"
+    project_specific: "Tailored to individual project needs"
+    topic_focused: "Deep dive on specific technologies"
+    
+  content_curation:
+    - "AI agent selects top content"
+    - "Cross-platform insight connections"
+    - "Official updates prioritization"
+    - "Personalized ranking based on preferences"
+
+# INTEGRATION WITH EXISTING SYSTEMS
+existing_system_integration:
+  information_access_framework:
+    location: "information-access/"
+    enhancement: "Integrated with unified discovery algorithms"
+    status: "consolidated and enhanced"
+    
+  youtube_monitoring:
+    current_location: "projects/universal-topic-intelligence-system/"
+    target_location: "platforms/youtube/"
+    migration_plan: "Move processing logic to unified platform"
+    
+  mcp_coordination:
+    existing_patterns: "information-access/source-discovery-framework.yaml"
+    enhancement: "Extended with multi-platform coordination"
+    
+  knowledge_vault:
+    integration: "Cross-platform insights storage"
+    organization: "knowledge-vault/unified-intelligence/"
+
+# CROSS-PROJECT AVAILABILITY
+cross_project_features:
+  source_discovery:
+    availability: "Any project can request source discovery for any topic"
+    api: "Unified discovery API for consistent access"
+    
+  preference_learning:
+    scope: "Learning applies across all projects using the system"
+    persistence: "Cross-project preference memory"
+    
+  quality_assessment:
+    universal: "Same quality standards across all project contexts"
+    adaptation: "Quality thresholds adapt to topic characteristics"
+    
+  daily_intelligence:
+    customization: "Each project can request tailored intelligence digest"
+    formats: "Markdown, JSON, structured data as needed"
+
+# SUCCESS METRICS
+success_metrics:
+  discovery_effectiveness:
+    target: "95% of significant developments captured within 24 hours"
+    measurement: "Cross-platform coverage analysis"
+    
+  learning_accuracy:
+    target: "90% accuracy in predicting user preferences"
+    measurement: "Feedback correlation analysis"
+    
+  source_quality:
+    target: "85% of discovered sources meet quality thresholds"
+    measurement: "Quality engine validation"
+    
+  cross_project_value:
+    target: "3+ projects actively using unified intelligence"
+    measurement: "System adoption metrics"
+
+# USAGE EXAMPLES
+usage_examples:
+  project_specific_intelligence:
+    example: "VanguardAI maritime project requests React + TypeScript intelligence"
+    processing: "AI agent curates React/TypeScript content based on user preferences"
+    output: "Daily digest with React performance updates, TypeScript releases, expert videos"
+    
+  cross_platform_discovery:
+    example: "New AI tool mentioned in ThePrimeagen video"
+    processing: "System discovers GitHub repo, Reddit discussions, official docs"
+    output: "Unified intelligence report with cross-platform coverage"
+    
+  preference_learning:
+    example: "User consistently engages with TypeScript content"
+    processing: "AI agent boosts TypeScript sources across all projects"
+    output: "Improved TypeScript content recommendations system-wide"
+
+# ROADMAP
+roadmap:
+  phase_1: "Consolidate existing systems (Week 1)"
+  phase_2: "Deploy discovery algorithms (Week 2)"  
+  phase_3: "Launch AI learning agent (Week 3)"
+  phase_4: "Multi-platform integration (Week 4)"
+  phase_5: "Cross-project optimization (Week 5)"
+
+# CONSTITUTIONAL AI COMPLIANCE
+constitutional_ai:
+  principles:
+    - "Truthfulness: All discovered sources must be factually accurate"
+    - "Completeness: Comprehensive coverage within scope limitations"
+    - "Fairness: Balanced perspective across different viewpoints"
+    - "Transparency: Clear source attribution and quality assessment"
+    - "Harm Prevention: Avoid content that could cause harm or misinformation"
+  
+  quality_assurance:
+    - "Multi-source verification for critical information"
+    - "Source credibility tracking and validation"
+    - "User feedback integration for continuous improvement"
+    - "Cross-platform consistency checking"

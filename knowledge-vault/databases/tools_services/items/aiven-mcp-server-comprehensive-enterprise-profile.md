@@ -3,9 +3,7 @@ description: '## Header Classification'
 id: 594a99f7-be4d-4989-a0f3-0463f72672f5
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Aiven MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/aiven-server-profile.md
 priority: 1st_priority
 quality_score: 8.5
 source_database: tools_services
@@ -22,7 +20,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/aiven-server"
 ---
 
 ## Header Classification

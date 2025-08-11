@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - Leading European
 id: eae3ad31-c3e8-4724-a351-53ef76fed7a4
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Mistral AI Platform MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/mistral-ai-platform-server-profile.md
 priority: 1st_priority
 production_readiness: 99
 quality_score: 9.5
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/mistral-ai-platform"
 ---
 
 ## Header Classification

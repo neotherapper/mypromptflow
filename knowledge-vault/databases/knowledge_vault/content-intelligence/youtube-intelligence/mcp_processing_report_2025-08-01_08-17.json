@@ -1,0 +1,64 @@
+{
+  "processing_summary": {
+    "timestamp": "2025-08-01T05:17:50.025451+00:00",
+    "total_videos": 1,
+    "successful_processing": 1,
+    "failed_processing": 0,
+    "average_unified_score": 0.117,
+    "high_value_videos": 0,
+    "processor_version": "1.0.0"
+  },
+  "top_performing_videos": [
+    {
+      "title": "1000 Players - One Game of Doom",
+      "channel": "ThePrimeagen",
+      "unified_score": 0.11666666666666667,
+      "priority_topics": [
+        "typescript"
+      ],
+      "concept_count": 2
+    }
+  ],
+  "topic_analysis": {
+    "most_common_topics": [
+      [
+        "typescript",
+        1
+      ]
+    ],
+    "unique_topics_discovered": 1,
+    "topic_distribution": {
+      "typescript": 1
+    }
+  },
+  "concept_analysis": {
+    "most_common_concepts": [
+      [
+        "javascript",
+        1
+      ],
+      [
+        "go",
+        1
+      ]
+    ],
+    "unique_concepts_discovered": 2,
+    "concept_categories": {
+      "languages": [
+        "javascript",
+        "go"
+      ]
+    }
+  },
+  "quality_metrics": {
+    "videos_with_transcripts": 1,
+    "videos_with_multiple_topics": 0,
+    "videos_with_rich_concepts": 0,
+    "technical_depth_distribution": {
+      "low": 1,
+      "medium": 0,
+      "high": 0
+    }
+  },
+  "failed_processing": []
+}

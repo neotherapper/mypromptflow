@@ -5,9 +5,7 @@ description: '## Header Classification Tier: 1 (High Priority - AI-Powered Forec
 id: 163214bf-01c9-492d-8638-8faa750ec792
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Chronulus AI Forecasting MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/chronulus-ai-forecasting-server-profile.md
 priority: 1st_priority
 production_readiness: 96
 quality_score: 8.6
@@ -24,7 +22,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/chronulus-ai-forecasting"
 ---
 
 ## Header Classification

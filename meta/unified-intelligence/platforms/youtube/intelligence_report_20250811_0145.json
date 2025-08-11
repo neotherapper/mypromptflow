@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-11T01:45:25.864362",
+  "videos_analyzed": 2,
+  "average_relevance": 0.7683333333333333,
+  "high_value_videos": [],
+  "trending_topics": {
+    "Performance Optimization": 2
+  },
+  "key_concepts": {
+    "react": 2,
+    "performance": 2,
+    "optimization": 2
+  },
+  "popular_tools": {
+    "react devtools": 2,
+    "lighthouse": 2
+  },
+  "cross_platform_opportunities": []
+}

@@ -5,10 +5,8 @@ description: Enterprise container orchestration platform for cloud-native applic
   server for scalable microservices architecture and DevOps excellence
 id: 4d507693-4e6e-47c1-aab7-b7a31d0511da
 installation_priority: 4
-item_type: mcp_server
-migration_date: '2025-07-26'
-name: Kubernetes MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/kubernetes-server-profile.md
+item_type: platform
+name: Kubernetes
 priority: 1st_priority
 production_readiness: 95
 provider: CNCF (Community MCP Server)
@@ -30,7 +28,6 @@ tier: Tier 1
 transport_protocols:
 - HTTPS API
 - gRPC
-mcp_profile_reference: "@mcp_profile/kubernetes"
 ---
 
 **Enterprise container orchestration platform for cloud-native application deployment and intelligent infrastructure management**  

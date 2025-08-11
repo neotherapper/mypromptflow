@@ -1,0 +1,79 @@
+{
+  "search_terms": {
+    "claude": [
+      "Claude AI tutorial",
+      "Claude Code IDE",
+      "Anthropic Claude development",
+      "Claude AI programming",
+      "Claude Code tutorial",
+      "Claude API development"
+    ],
+    "claude-code": [
+      "Claude Code IDE",
+      "Claude Code tutorial",
+      "Claude Code development",
+      "AI coding assistant",
+      "Claude Code features",
+      "Claude Code workflow"
+    ],
+    "react": [
+      "React TypeScript tutorial",
+      "React 2024 development",
+      "React hooks advanced",
+      "React best practices",
+      "React performance optimization",
+      "React modern patterns"
+    ],
+    "typescript": [
+      "TypeScript advanced features",
+      "TypeScript React development",
+      "TypeScript 2024 updates",
+      "TypeScript best practices",
+      "TypeScript type safety",
+      "TypeScript modern patterns"
+    ],
+    "meta-prompting": [
+      "prompt engineering techniques",
+      "meta prompting strategies",
+      "AI prompt optimization",
+      "prompt design patterns",
+      "chain of thought prompting",
+      "few shot prompting"
+    ],
+    "nextjs": [
+      "Next.js 14 tutorial",
+      "Next.js App Router",
+      "Next.js TypeScript",
+      "Next.js server components",
+      "Next.js best practices",
+      "Next.js deployment"
+    ]
+  },
+  "filters": {
+    "published_after_days": 30,
+    "min_view_count": 100,
+    "min_duration_seconds": 120,
+    "max_duration_seconds": 3600,
+    "exclude_shorts": true,
+    "language": "en"
+  },
+  "thresholds": {
+    "min_relevance_score": 0.6,
+    "min_engagement_score": 0.4,
+    "min_unified_score": 0.5,
+    "max_results_per_term": 10,
+    "max_total_results": 100
+  },
+  "rate_limiting": {
+    "requests_per_minute": 30,
+    "delay_between_requests": 2.0,
+    "backoff_multiplier": 1.5,
+    "max_retries": 3
+  },
+  "output_settings": {
+    "include_transcript_preview": false,
+    "include_thumbnail": true,
+    "save_individual_files": true,
+    "generate_summary": true
+  }
+}

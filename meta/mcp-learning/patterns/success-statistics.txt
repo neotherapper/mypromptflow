@@ -1,0 +1,5 @@
+[2025-07-31 09:24:30] jira mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:30] jira mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:24:41] jira mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] jira mcp__MCP_DOCKER__jira_get_issue
+[2025-07-31 09:34:18] jira mcp__MCP_DOCKER__jira_get_issue

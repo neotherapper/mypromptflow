@@ -7,9 +7,7 @@ description: Premier legal research platform with comprehensive case law and AI-
 id: 2e0b2b4b-7e26-482e-9df4-0b0e79715cdd
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Westlaw MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/westlaw-server-profile.md
 priority: 1st_priority
 production_readiness: 93
 provider: Thomson Reuters
@@ -32,7 +30,6 @@ tier: Tier 1
 transport_protocols:
 - REST API
 - GraphQL API
-mcp_profile_reference: "@mcp_profile/westlaw"
 ---
 
 **Premier legal research platform with comprehensive case law and AI-powered legal analytics**  

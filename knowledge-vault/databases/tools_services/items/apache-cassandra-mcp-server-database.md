@@ -6,9 +6,7 @@ description: Distributed NoSQL database designed for handling massive amounts of
 id: c2da724a-04b5-4313-8133-6f3811868094
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Apache Cassandra MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/apache-cassandra-server-profile.md
 priority: 3rd_priority
 production_readiness: 94
 provider: Community/Third-party
@@ -28,7 +26,6 @@ tags:
 tier: Tier 3
 transport_protocols:
 - HTTPS
-mcp_profile_reference: "@mcp_profile/apache-cassandra"
 ---
 
 **Distributed NoSQL database designed for handling massive amounts of data across commodity servers**  

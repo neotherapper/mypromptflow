@@ -6,9 +6,7 @@ description: Cloud-native CI/CD platform integration for automated DevOps workfl
 id: 95a01a03-294d-4fa8-b596-f75044e795dd
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: CircleCI MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/circleci-server-profile.md
 priority: 3rd_priority
 production_readiness: 92
 provider: Community/Third-party
@@ -26,7 +24,6 @@ tags:
 - Tier 3
 - Development Platform
 tier: Tier 3
-mcp_profile_reference: "@mcp_profile/circleci"
 ---
 
 **Cloud-native CI/CD platform integration for automated DevOps workflows**  

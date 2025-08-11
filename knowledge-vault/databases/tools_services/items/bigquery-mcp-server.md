@@ -6,9 +6,7 @@ description: Google's serverless data warehouse for super-fast analytics and mac
 id: 82f639f7-c197-4c2b-9f17-259b56351ab9
 installation_priority: 3
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: BigQuery MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/bigquery-server-profile.md
 priority: 3rd_priority
 production_readiness: 94
 provider: Google/Community
@@ -31,7 +29,6 @@ transport_protocols:
 - HTTPS REST API
 - gRPC
 - Streaming API
-mcp_profile_reference: "@mcp_profile/bigquery"
 ---
 
 **Google's serverless data warehouse for super-fast analytics and machine learning at scale**  

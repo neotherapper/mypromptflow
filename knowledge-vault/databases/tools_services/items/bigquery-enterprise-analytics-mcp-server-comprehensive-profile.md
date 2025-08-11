@@ -6,9 +6,7 @@ description: BigQuery MCP Server provides enterprise-grade serverless data wareh
 id: 6a351238-af28-4d21-9528-90993bbbfa81
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: BigQuery Enterprise Analytics MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/bigquery-enterprise-analytics-mcp-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -23,7 +21,6 @@ tags:
 - Monitoring
 - Cloud Platform
 - Development Platform
-mcp_profile_reference: "@mcp_profile/bigquery"
 ---
 
 ## Server Identity

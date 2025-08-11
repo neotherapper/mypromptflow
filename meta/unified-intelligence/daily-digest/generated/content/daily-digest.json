@@ -1,0 +1,1774 @@
+{
+  "generated_at": "2025-08-01T08:28:40.859315+00:00",
+  "date_range": "today",
+  "total_items": 29,
+  "high_quality_items": 0,
+  "average_score": 0.015,
+  "priority_items": 10,
+  "subscribed_items": 13,
+  "discovered_items": 2,
+  "content": [
+    {
+      "title": "Warp vs Claude Code for Daily Coding",
+      "url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+      "video_url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+      "channel": "Codevolution",
+      "channel_name": "Codevolution",
+      "source_name": "Codevolution",
+      "description": "",
+      "published_date": "2025-07-30T10:30:28+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "codevolution",
+      "priority_score": 0.037333333333333336,
+      "quality_rating": 0.9,
+      "priority_topics": [
+        "react",
+        "nextjs",
+        "typescript"
+      ],
+      "categories": [
+        "react",
+        "nextjs",
+        "typescript"
+      ],
+      "content_age_days": 1.8899533166435183,
+      "content_hash": "6a1ec97d94c0c176d5e61dacaf751c13",
+      "collected_at": "2025-08-01T07:51:59.966409+00:00",
+      "unified_score": 0.9,
+      "intelligence_score": 0.037333333333333336,
+      "detected_priority_topics": [
+        "claude",
+        "claude-code"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.8,
+        "relevance_score": 0.3333333333333333,
+        "priority_boost": 1.4,
+        "priority_boosts": {
+          "claude": 1.3,
+          "claude-code": 1.4
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.800 \u00d7 0.333 \u00d7 1.400 + 0.000 = 0.037"
+      }
+    },
+    {
+      "video_id": "dQw4w9WgXcQ",
+      "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "title": "Advanced Claude Prompt Engineering",
+      "channel": "AI Development",
+      "programming_concepts": [
+        "authentication",
+        "authorization",
+        "optimization",
+        "performance",
+        "component",
+        "debugging",
+        "database",
+        "testing",
+        "api",
+        "git",
+        "sql",
+        "go"
+      ],
+      "priority_topics": [
+        "claude",
+        "typescript",
+        "meta-prompting"
+      ],
+      "topic_scores": {
+        "claude": 0.26,
+        "typescript": 0.8,
+        "meta-prompting": 0.25
+      },
+      "unified_score": 0.6599999999999999,
+      "content_summary": "## Analysis of \"Advanced Claude Prompt Engineering\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+      "insights": {
+        "concept_count": 12,
+        "transcript_length": 4156,
+        "topic_diversity": 3,
+        "technical_depth": 2,
+        "content_quality_indicators": {
+          "has_code_examples": true,
+          "has_explanations": true,
+          "has_best_practices": true,
+          "has_troubleshooting": true
+        },
+        "topic_score_breakdown": {
+          "claude": 0.26,
+          "typescript": 0.8,
+          "meta-prompting": 0.25
+        },
+        "top_concepts": [
+          "authentication",
+          "authorization",
+          "optimization",
+          "performance",
+          "component",
+          "debugging",
+          "database",
+          "testing",
+          "api",
+          "git"
+        ]
+      },
+      "processing_timestamp": "2025-08-01T05:12:12.251274+00:00",
+      "processed_with": "mcp-youtube-processor",
+      "framework_version": "1.0.0",
+      "transcript_available": true,
+      "error": null,
+      "platform": "youtube",
+      "content_source": "subscribed_channel",
+      "source_type": "subscribed",
+      "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/aidevelopment/2025-08-01/dQw4w9WgXcQ_unified_intelligence.json",
+      "content_age_days": 999.0,
+      "intelligence_score": 0.029999999999999995,
+      "priority_score": 0.029999999999999995,
+      "detected_priority_topics": [
+        "claude",
+        "meta-prompting"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.5,
+        "relevance_score": 0.3333333333333333,
+        "priority_boost": 1.7999999999999998,
+        "priority_boosts": {
+          "claude": 1.3,
+          "meta-prompting": 1.25,
+          "combo_meta-prompting-claude": 1.7999999999999998
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.800 + 0.000 = 0.030"
+      }
+    },
+    {
+      "video_id": "SqcY0GlETPk",
+      "video_url": "https://www.youtube.com/watch?v=SqcY0GlETPk",
+      "title": "Next.js Tutorial - Build a Portfolio",
+      "channel": "Web Dev Simplified",
+      "programming_concepts": [
+        "authentication",
+        "authorization",
+        "optimization",
+        "performance",
+        "component",
+        "debugging",
+        "database",
+        "testing",
+        "api",
+        "git",
+        "sql",
+        "go"
+      ],
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "topic_scores": {
+        "react": 0.09000000000000001,
+        "typescript": 0.8,
+        "nextjs": 0.18000000000000002
+      },
+      "unified_score": 0.6000000000000001,
+      "content_summary": "## Analysis of \"Next.js Tutorial - Build a Portfolio\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+      "insights": {
+        "concept_count": 12,
+        "transcript_length": 4156,
+        "topic_diversity": 3,
+        "technical_depth": 2,
+        "content_quality_indicators": {
+          "has_code_examples": true,
+          "has_explanations": true,
+          "has_best_practices": true,
+          "has_troubleshooting": true
+        },
+        "topic_score_breakdown": {
+          "react": 0.09000000000000001,
+          "typescript": 0.8,
+          "nextjs": 0.18000000000000002
+        },
+        "top_concepts": [
+          "authentication",
+          "authorization",
+          "optimization",
+          "performance",
+          "component",
+          "debugging",
+          "database",
+          "testing",
+          "api",
+          "git"
+        ]
+      },
+      "processing_timestamp": "2025-08-01T05:12:11.744425+00:00",
+      "processed_with": "mcp-youtube-processor",
+      "framework_version": "1.0.0",
+      "transcript_available": true,
+      "error": null,
+      "platform": "youtube",
+      "content_source": "subscribed_channel",
+      "source_type": "subscribed",
+      "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/webdevsimplified/2025-08-01/SqcY0GlETPk_unified_intelligence.json",
+      "content_age_days": 999.0,
+      "intelligence_score": 0.025,
+      "priority_score": 0.025,
+      "detected_priority_topics": [
+        "react",
+        "nextjs"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.5,
+        "relevance_score": 0.3333333333333333,
+        "priority_boost": 1.5,
+        "priority_boosts": {
+          "react": 0.9,
+          "nextjs": 0.9,
+          "combo_react-nextjs": 1.5
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.500 + 0.000 = 0.025"
+      }
+    },
+    {
+      "video_id": "airHRQL5Xtg",
+      "video_url": "https://www.youtube.com/watch?v=airHRQL5Xtg",
+      "title": "React TypeScript Tutorial for Beginners",
+      "channel": "Programming with Mosh",
+      "programming_concepts": [
+        "authentication",
+        "authorization",
+        "optimization",
+        "performance",
+        "component",
+        "debugging",
+        "database",
+        "testing",
+        "api",
+        "git",
+        "sql",
+        "go"
+      ],
+      "priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "topic_scores": {
+        "react": 0.18000000000000002,
+        "typescript": 0.8
+      },
+      "unified_score": 0.47333333333333333,
+      "content_summary": "## Analysis of \"React TypeScript Tutorial for Beginners\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+      "insights": {
+        "concept_count": 12,
+        "transcript_length": 4156,
+        "topic_diversity": 2,
+        "technical_depth": 2,
+        "content_quality_indicators": {
+          "has_code_examples": true,
+          "has_explanations": true,
+          "has_best_practices": true,
+          "has_troubleshooting": true
+        },
+        "topic_score_breakdown": {
+          "react": 0.18000000000000002,
+          "typescript": 0.8
+        },
+        "top_concepts": [
+          "authentication",
+          "authorization",
+          "optimization",
+          "performance",
+          "component",
+          "debugging",
+          "database",
+          "testing",
+          "api",
+          "git"
+        ]
+      },
+      "processing_timestamp": "2025-08-01T05:12:11.237613+00:00",
+      "processed_with": "mcp-youtube-processor",
+      "framework_version": "1.0.0",
+      "transcript_available": true,
+      "error": null,
+      "platform": "youtube",
+      "content_source": "subscribed_channel",
+      "source_type": "subscribed",
+      "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/programmingwithmosh/2025-08-01/airHRQL5Xtg_unified_intelligence.json",
+      "content_age_days": 999.0,
+      "intelligence_score": 0.021666666666666667,
+      "priority_score": 0.021666666666666667,
+      "detected_priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.5,
+        "relevance_score": 0.3333333333333333,
+        "priority_boost": 1.3,
+        "priority_boosts": {
+          "react": 0.9,
+          "typescript": 0.8,
+          "combo_react-typescript": 1.3
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.300 + 0.000 = 0.022"
+      }
+    },
+    {
+      "title": "From Figma to Browser with MCP in Minutes (No Coding)",
+      "url": "https://www.youtube.com/watch?v=lM9K9D0IZvA",
+      "video_url": "https://www.youtube.com/watch?v=lM9K9D0IZvA",
+      "channel": "DesignCourse",
+      "channel_name": "DesignCourse",
+      "source_name": "DesignCourse",
+      "description": "",
+      "published_date": "2025-07-31T13:15:09+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "designcourse",
+      "priority_score": 0.0125,
+      "quality_rating": 0.82,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "content_age_days": 0.7756750539236111,
+      "content_hash": "bbd61c770fdcb36530c278911769dcc1",
+      "collected_at": "2025-08-01T07:52:07.324508+00:00",
+      "unified_score": 0.82,
+      "intelligence_score": 0.0125,
+      "detected_priority_topics": [],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 1.0,
+        "relevance_score": 0.125,
+        "priority_boost": 1.0,
+        "priority_boosts": {},
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 1.000 \u00d7 0.125 \u00d7 1.000 + 0.000 = 0.013"
+      }
+    },
+    {
+      "video_id": "-w53i6Ae-YM",
+      "video_url": "https://www.youtube.com/watch?v=-w53i6Ae-YM",
+      "title": "Alibaba is coming for Claude...",
+      "channel": "Fireship",
+      "programming_concepts": [
+        "optimization",
+        "performance",
+        "deployment",
+        "component",
+        "angular",
+        "netlify",
+        "testing",
+        "devops",
+        "vercel",
+        "ci/cd",
+        "react",
+        "redux",
+        "state",
+        "api",
+        "aws",
+        "vue"
+      ],
+      "priority_topics": [
+        "claude",
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "topic_scores": {
+        "claude": 0.26,
+        "react": 0.54,
+        "typescript": 0.4,
+        "nextjs": 0.09000000000000001
+      },
+      "unified_score": 0.6399999999999999,
+      "content_summary": "## Analysis of \"Alibaba is coming for Claude...\"\n\n### Key Programming Concepts Mentioned\n\n**Patterns:**\n- optimization\n- performance\n- component\n- redux\n- state\n\n**Concepts:**\n- deployment\n- testing\n- devops\n- ci/cd\n- api\n\n**Languages:**\n- angular\n- react\n- vue\n\n**Tools:**\n- netlify\n- vercel\n- aws\n\n### Key Points from Transcript\n\n1. These principles apply whether we're working with React, Vue, Angular, or any other framework\n2. Let's start with component structure\n3. Components should be small, focused, and reusable\n4. Each component should have a single responsibility\n5. Now, let's talk about state management\n",
+      "insights": {
+        "concept_count": 16,
+        "transcript_length": 1868,
+        "topic_diversity": 4,
+        "technical_depth": 2,
+        "content_quality_indicators": {
+          "has_code_examples": true,
+          "has_explanations": false,
+          "has_best_practices": true,
+          "has_troubleshooting": true
+        },
+        "topic_score_breakdown": {
+          "claude": 0.26,
+          "react": 0.54,
+          "typescript": 0.4,
+          "nextjs": 0.09000000000000001
+        },
+        "top_concepts": [
+          "optimization",
+          "performance",
+          "deployment",
+          "component",
+          "angular",
+          "netlify",
+          "testing",
+          "devops",
+          "vercel",
+          "ci/cd"
+        ]
+      },
+      "processing_timestamp": "2025-08-01T05:29:36.048018+00:00",
+      "processed_with": "mcp-youtube-processor",
+      "framework_version": "1.0.0",
+      "transcript_available": true,
+      "error": null,
+      "platform": "youtube",
+      "content_source": "subscribed_channel",
+      "source_type": "subscribed",
+      "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/fireship/2025-08-01/-w53i6Ae-YM_unified_intelligence.json",
+      "content_age_days": 999.0,
+      "intelligence_score": 0.010833333333333334,
+      "priority_score": 0.010833333333333334,
+      "detected_priority_topics": [
+        "claude"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.5,
+        "relevance_score": 0.16666666666666666,
+        "priority_boost": 1.3,
+        "priority_boosts": {
+          "claude": 1.3
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.500 \u00d7 0.167 \u00d7 1.300 + 0.000 = 0.011"
+      }
+    },
+    {
+      "title": "CSS Style Queries Have So Much Potential",
+      "url": "https://www.youtube.com/watch?v=vmbqrOBrYIo",
+      "video_url": "https://www.youtube.com/watch?v=vmbqrOBrYIo",
+      "channel": "Web Dev Simplified",
+      "channel_name": "Web Dev Simplified",
+      "source_name": "Web Dev Simplified",
+      "description": "",
+      "published_date": "2025-07-29T16:01:25+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "webdevsimplified",
+      "priority_score": 0.010000000000000002,
+      "quality_rating": 0.9400000000000001,
+      "priority_topics": [
+        "react",
+        "typescript",
+        "nextjs"
+      ],
+      "categories": [
+        "web-development",
+        "react",
+        "javascript"
+      ],
+      "content_age_days": 2.6601260642013886,
+      "content_hash": "0a26a93f99bbe93a0ecc122f969eb612",
+      "collected_at": "2025-08-01T07:51:59.891812+00:00",
+      "unified_score": 0.9400000000000001,
+      "intelligence_score": 0.010000000000000002,
+      "detected_priority_topics": [],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.8,
+        "relevance_score": 0.125,
+        "priority_boost": 1.0,
+        "priority_boosts": {},
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.800 \u00d7 0.125 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "Microsoft's NEW Vibe Coding Platform: GitHub Spark",
+      "url": "https://www.youtube.com/watch?v=iK1ilPEkoek",
+      "video_url": "https://www.youtube.com/watch?v=iK1ilPEkoek",
+      "channel": "DesignCourse",
+      "channel_name": "DesignCourse",
+      "source_name": "DesignCourse",
+      "description": "",
+      "published_date": "2025-07-29T15:24:05+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "designcourse",
+      "priority_score": 0.010000000000000002,
+      "quality_rating": 0.82,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "content_age_days": 2.6861380169444447,
+      "content_hash": "0da91cfe242d30691a31c2b0fa06c136",
+      "collected_at": "2025-08-01T07:52:07.324539+00:00",
+      "unified_score": 0.82,
+      "intelligence_score": 0.010000000000000002,
+      "detected_priority_topics": [],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.8,
+        "relevance_score": 0.125,
+        "priority_boost": 1.0,
+        "priority_boosts": {},
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.800 \u00d7 0.125 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "Python AI Voice Agent Tutorial - Full Developer Guide (Deepgram, Twilio, Function Calling)",
+      "url": "https://www.youtube.com/watch?v=hDKBREokidU",
+      "video_url": "https://www.youtube.com/watch?v=hDKBREokidU",
+      "channel": "Tech With Tim",
+      "channel_name": "Tech With Tim",
+      "source_name": "Tech With Tim",
+      "description": "",
+      "published_date": "2025-07-30T14:10:24+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "techwithtim",
+      "priority_score": 0.010000000000000002,
+      "quality_rating": 0.86,
+      "priority_topics": [
+        "development"
+      ],
+      "categories": [
+        "programming",
+        "python",
+        "tutorials"
+      ],
+      "content_age_days": 1.7373043686458334,
+      "content_hash": "3dfaa5feaeb4d4312043ccbbbf76f3a6",
+      "collected_at": "2025-08-01T07:52:07.097323+00:00",
+      "unified_score": 0.86,
+      "intelligence_score": 0.010000000000000002,
+      "detected_priority_topics": [],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.8,
+        "relevance_score": 0.125,
+        "priority_boost": 1.0,
+        "priority_boosts": {},
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.800 \u00d7 0.125 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "Zod VS Valibot: JS/TS Validator Battle!",
+      "url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+      "video_url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+      "channel": "Jack Herrington",
+      "channel_name": "Jack Herrington",
+      "source_name": "Jack Herrington",
+      "description": "",
+      "published_date": "2025-07-28T13:49:50+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "jackherrington",
+      "priority_score": 0.009999999999999998,
+      "quality_rating": 0.9400000000000001,
+      "priority_topics": [
+        "typescript",
+        "react",
+        "nextjs"
+      ],
+      "categories": [
+        "typescript",
+        "react",
+        "nextjs"
+      ],
+      "content_age_days": 3.751582584039352,
+      "content_hash": "56d357b695f562d999330a05cc7facbc",
+      "collected_at": "2025-08-01T07:52:06.735116+00:00",
+      "unified_score": 0.9400000000000001,
+      "intelligence_score": 0.009999999999999998,
+      "detected_priority_topics": [
+        "typescript"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.6,
+        "relevance_score": 0.16666666666666666,
+        "priority_boost": 1.0,
+        "priority_boosts": {
+          "typescript": 0.8
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.600 \u00d7 0.167 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "Designing Custom Layouts in Figma for MCP - SideBling",
+      "url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+      "video_url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+      "channel": "DesignCourse",
+      "channel_name": "DesignCourse",
+      "source_name": "DesignCourse",
+      "description": "",
+      "published_date": "2025-07-28T13:50:15+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "designcourse",
+      "priority_score": 0.009999999999999998,
+      "quality_rating": 0.82,
+      "priority_topics": [
+        "react"
+      ],
+      "categories": [
+        "web-design",
+        "frontend",
+        "react"
+      ],
+      "content_age_days": 3.7513000539814816,
+      "content_hash": "413d8380bb007eaba1a1e5689ea701fe",
+      "collected_at": "2025-08-01T07:52:07.324547+00:00",
+      "unified_score": 0.82,
+      "intelligence_score": 0.009999999999999998,
+      "detected_priority_topics": [
+        "typescript"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.6,
+        "relevance_score": 0.16666666666666666,
+        "priority_boost": 1.0,
+        "priority_boosts": {
+          "typescript": 0.8
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.600 \u00d7 0.167 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "The Fastest Way to Build AI Agents With Your Data (MindsDB Walkthrough)",
+      "url": "https://www.youtube.com/watch?v=MX3OKpnsoLM",
+      "video_url": "https://www.youtube.com/watch?v=MX3OKpnsoLM",
+      "channel": "Tech With Tim",
+      "channel_name": "Tech With Tim",
+      "source_name": "Tech With Tim",
+      "description": "",
+      "published_date": "2025-07-27T14:18:54+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "techwithtim",
+      "priority_score": 0.009999999999999998,
+      "quality_rating": 0.86,
+      "priority_topics": [
+        "development"
+      ],
+      "categories": [
+        "programming",
+        "python",
+        "tutorials"
+      ],
+      "content_age_days": 4.731401590902777,
+      "content_hash": "f6c24a52a81c14e9824f02e292ed8404",
+      "collected_at": "2025-08-01T07:52:07.097359+00:00",
+      "unified_score": 0.86,
+      "intelligence_score": 0.009999999999999998,
+      "detected_priority_topics": [
+        "typescript"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.6,
+        "relevance_score": 0.16666666666666666,
+        "priority_boost": 1.0,
+        "priority_boosts": {
+          "typescript": 0.8
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.600 \u00d7 0.167 \u00d7 1.000 + 0.000 = 0.010"
+      }
+    },
+    {
+      "title": "React TypeScript Best Practices",
+      "url": "https://www.youtube.com/watch?v=sample_video_2",
+      "video_url": "https://www.youtube.com/watch?v=sample_video_2",
+      "channel": "React Experts",
+      "channel_id": "UC_sample_channel_2",
+      "published_date": "2024-07-20T14:30:00Z",
+      "description": "Modern React with TypeScript patterns and practices...",
+      "platform": "youtube",
+      "content_source": "dynamic_search",
+      "source_type": "discovered",
+      "priority_topic": "react",
+      "search_term": "React TypeScript tutorial",
+      "unified_score": 0.82,
+      "relevance_score": 0.8,
+      "engagement_score": 0.7,
+      "freshness_score": 0.95,
+      "view_count": 3200,
+      "duration": "PT12M45S",
+      "thumbnail_url": "https://example.com/thumbnail2.jpg",
+      "content_age_days": 376.7490838122454,
+      "intelligence_score": 0.008666666666666668,
+      "priority_score": 0.008666666666666668,
+      "detected_priority_topics": [
+        "react",
+        "typescript"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.2,
+        "relevance_score": 0.3333333333333333,
+        "priority_boost": 1.3,
+        "priority_boosts": {
+          "react": 0.9,
+          "typescript": 0.8,
+          "combo_react-typescript": 1.3
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.200 \u00d7 0.333 \u00d7 1.300 + 0.000 = 0.009"
+      }
+    },
+    {
+      "title": "Wanna land your dream internship  as a coding student in 2025? Do THIS NOW",
+      "url": "https://www.youtube.com/shorts/1yVSbNuJt-w",
+      "video_url": "https://www.youtube.com/shorts/1yVSbNuJt-w",
+      "channel": "Tech With Tim",
+      "channel_name": "Tech With Tim",
+      "source_name": "Tech With Tim",
+      "description": "",
+      "published_date": "2025-07-27T14:30:02+00:00",
+      "platform": "youtube",
+      "content_source": "rss_feed",
+      "source_type": "subscribed",
+      "source_channel": "techwithtim",
+      "priority_score": 0.0075,
+      "quality_rating": 0.86,
+      "priority_topics": [
+        "development"
+      ],
+      "categories": [
+        "programming",
+        "python",
+        "tutorials"
+      ],
+      "content_age_days": 4.723670109421296,
+      "content_hash": "2852269eb49a051726bcae219e4f5dea",
+      "collected_at": "2025-08-01T07:52:07.097351+00:00",
+      "unified_score": 0.86,
+      "intelligence_score": 0.0075,
+      "detected_priority_topics": [],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.6,
+        "relevance_score": 0.125,
+        "priority_boost": 1.0,
+        "priority_boosts": {},
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.600 \u00d7 0.125 \u00d7 1.000 + 0.000 = 0.007"
+      }
+    },
+    {
+      "title": "Claude AI Advanced Tutorial 2024",
+      "url": "https://www.youtube.com/watch?v=sample_video_1",
+      "video_url": "https://www.youtube.com/watch?v=sample_video_1",
+      "channel": "AI Development Channel",
+      "channel_id": "UC_sample_channel_1",
+      "published_date": "2024-07-15T10:00:00Z",
+      "description": "Learn advanced Claude AI techniques for developers...",
+      "platform": "youtube",
+      "content_source": "dynamic_search",
+      "source_type": "discovered",
+      "priority_topic": "claude",
+      "search_term": "Claude AI tutorial",
+      "unified_score": 0.85,
+      "relevance_score": 0.85,
+      "engagement_score": 0.75,
+      "freshness_score": 0.9,
+      "view_count": 5000,
+      "duration": "PT15M30S",
+      "thumbnail_url": "https://example.com/thumbnail1.jpg",
+      "content_age_days": 381.93658380961807,
+      "intelligence_score": 0.004333333333333334,
+      "priority_score": 0.004333333333333334,
+      "detected_priority_topics": [
+        "claude"
+      ],
+      "score_breakdown": {
+        "base_score": 0.1,
+        "freshness_score": 0.2,
+        "relevance_score": 0.16666666666666666,
+        "priority_boost": 1.3,
+        "priority_boosts": {
+          "claude": 1.3
+        },
+        "claude_boost": 0.0,
+        "claude_multiplier": 1.0,
+        "claude_enhancement": null,
+        "calculation": "0.100 \u00d7 0.200 \u00d7 0.167 \u00d7 1.300 + 0.000 = 0.004"
+      }
+    }
+  ],
+  "priority_topics": {
+    "claude": {
+      "count": 4,
+      "items": [
+        {
+          "title": "Warp vs Claude Code for Daily Coding",
+          "url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+          "video_url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+          "channel": "Codevolution",
+          "channel_name": "Codevolution",
+          "source_name": "Codevolution",
+          "description": "",
+          "published_date": "2025-07-30T10:30:28+00:00",
+          "platform": "youtube",
+          "content_source": "rss_feed",
+          "source_type": "subscribed",
+          "source_channel": "codevolution",
+          "priority_score": 0.037333333333333336,
+          "quality_rating": 0.9,
+          "priority_topics": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "categories": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "content_age_days": 1.8899533166435183,
+          "content_hash": "6a1ec97d94c0c176d5e61dacaf751c13",
+          "collected_at": "2025-08-01T07:51:59.966409+00:00",
+          "unified_score": 0.9,
+          "intelligence_score": 0.037333333333333336,
+          "detected_priority_topics": [
+            "claude",
+            "claude-code"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.8,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.4,
+            "priority_boosts": {
+              "claude": 1.3,
+              "claude-code": 1.4
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.800 \u00d7 0.333 \u00d7 1.400 + 0.000 = 0.037"
+          }
+        },
+        {
+          "video_id": "dQw4w9WgXcQ",
+          "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Advanced Claude Prompt Engineering",
+          "channel": "AI Development",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "claude",
+            "typescript",
+            "meta-prompting"
+          ],
+          "topic_scores": {
+            "claude": 0.26,
+            "typescript": 0.8,
+            "meta-prompting": 0.25
+          },
+          "unified_score": 0.6599999999999999,
+          "content_summary": "## Analysis of \"Advanced Claude Prompt Engineering\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 3,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "claude": 0.26,
+              "typescript": 0.8,
+              "meta-prompting": 0.25
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:12.251274+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/aidevelopment/2025-08-01/dQw4w9WgXcQ_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.029999999999999995,
+          "priority_score": 0.029999999999999995,
+          "detected_priority_topics": [
+            "claude",
+            "meta-prompting"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.7999999999999998,
+            "priority_boosts": {
+              "claude": 1.3,
+              "meta-prompting": 1.25,
+              "combo_meta-prompting-claude": 1.7999999999999998
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.800 + 0.000 = 0.030"
+          }
+        },
+        {
+          "video_id": "-w53i6Ae-YM",
+          "video_url": "https://www.youtube.com/watch?v=-w53i6Ae-YM",
+          "title": "Alibaba is coming for Claude...",
+          "channel": "Fireship",
+          "programming_concepts": [
+            "optimization",
+            "performance",
+            "deployment",
+            "component",
+            "angular",
+            "netlify",
+            "testing",
+            "devops",
+            "vercel",
+            "ci/cd",
+            "react",
+            "redux",
+            "state",
+            "api",
+            "aws",
+            "vue"
+          ],
+          "priority_topics": [
+            "claude",
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "topic_scores": {
+            "claude": 0.26,
+            "react": 0.54,
+            "typescript": 0.4,
+            "nextjs": 0.09000000000000001
+          },
+          "unified_score": 0.6399999999999999,
+          "content_summary": "## Analysis of \"Alibaba is coming for Claude...\"\n\n### Key Programming Concepts Mentioned\n\n**Patterns:**\n- optimization\n- performance\n- component\n- redux\n- state\n\n**Concepts:**\n- deployment\n- testing\n- devops\n- ci/cd\n- api\n\n**Languages:**\n- angular\n- react\n- vue\n\n**Tools:**\n- netlify\n- vercel\n- aws\n\n### Key Points from Transcript\n\n1. These principles apply whether we're working with React, Vue, Angular, or any other framework\n2. Let's start with component structure\n3. Components should be small, focused, and reusable\n4. Each component should have a single responsibility\n5. Now, let's talk about state management\n",
+          "insights": {
+            "concept_count": 16,
+            "transcript_length": 1868,
+            "topic_diversity": 4,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": false,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "claude": 0.26,
+              "react": 0.54,
+              "typescript": 0.4,
+              "nextjs": 0.09000000000000001
+            },
+            "top_concepts": [
+              "optimization",
+              "performance",
+              "deployment",
+              "component",
+              "angular",
+              "netlify",
+              "testing",
+              "devops",
+              "vercel",
+              "ci/cd"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:29:36.048018+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/fireship/2025-08-01/-w53i6Ae-YM_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.010833333333333334,
+          "priority_score": 0.010833333333333334,
+          "detected_priority_topics": [
+            "claude"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.16666666666666666,
+            "priority_boost": 1.3,
+            "priority_boosts": {
+              "claude": 1.3
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.167 \u00d7 1.300 + 0.000 = 0.011"
+          }
+        }
+      ],
+      "avg_score": 0.021
+    },
+    "claude-code": {
+      "count": 1,
+      "items": [
+        {
+          "title": "Warp vs Claude Code for Daily Coding",
+          "url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+          "video_url": "https://www.youtube.com/watch?v=m2OHmyyDTdQ",
+          "channel": "Codevolution",
+          "channel_name": "Codevolution",
+          "source_name": "Codevolution",
+          "description": "",
+          "published_date": "2025-07-30T10:30:28+00:00",
+          "platform": "youtube",
+          "content_source": "rss_feed",
+          "source_type": "subscribed",
+          "source_channel": "codevolution",
+          "priority_score": 0.037333333333333336,
+          "quality_rating": 0.9,
+          "priority_topics": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "categories": [
+            "react",
+            "nextjs",
+            "typescript"
+          ],
+          "content_age_days": 1.8899533166435183,
+          "content_hash": "6a1ec97d94c0c176d5e61dacaf751c13",
+          "collected_at": "2025-08-01T07:51:59.966409+00:00",
+          "unified_score": 0.9,
+          "intelligence_score": 0.037333333333333336,
+          "detected_priority_topics": [
+            "claude",
+            "claude-code"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.8,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.4,
+            "priority_boosts": {
+              "claude": 1.3,
+              "claude-code": 1.4
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.800 \u00d7 0.333 \u00d7 1.400 + 0.000 = 0.037"
+          }
+        }
+      ],
+      "avg_score": 0.037
+    },
+    "meta-prompting": {
+      "count": 1,
+      "items": [
+        {
+          "video_id": "dQw4w9WgXcQ",
+          "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Advanced Claude Prompt Engineering",
+          "channel": "AI Development",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "claude",
+            "typescript",
+            "meta-prompting"
+          ],
+          "topic_scores": {
+            "claude": 0.26,
+            "typescript": 0.8,
+            "meta-prompting": 0.25
+          },
+          "unified_score": 0.6599999999999999,
+          "content_summary": "## Analysis of \"Advanced Claude Prompt Engineering\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 3,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "claude": 0.26,
+              "typescript": 0.8,
+              "meta-prompting": 0.25
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:12.251274+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/aidevelopment/2025-08-01/dQw4w9WgXcQ_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.029999999999999995,
+          "priority_score": 0.029999999999999995,
+          "detected_priority_topics": [
+            "claude",
+            "meta-prompting"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.7999999999999998,
+            "priority_boosts": {
+              "claude": 1.3,
+              "meta-prompting": 1.25,
+              "combo_meta-prompting-claude": 1.7999999999999998
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.800 + 0.000 = 0.030"
+          }
+        }
+      ],
+      "avg_score": 0.03
+    },
+    "react": {
+      "count": 3,
+      "items": [
+        {
+          "video_id": "SqcY0GlETPk",
+          "video_url": "https://www.youtube.com/watch?v=SqcY0GlETPk",
+          "title": "Next.js Tutorial - Build a Portfolio",
+          "channel": "Web Dev Simplified",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "topic_scores": {
+            "react": 0.09000000000000001,
+            "typescript": 0.8,
+            "nextjs": 0.18000000000000002
+          },
+          "unified_score": 0.6000000000000001,
+          "content_summary": "## Analysis of \"Next.js Tutorial - Build a Portfolio\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 3,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "react": 0.09000000000000001,
+              "typescript": 0.8,
+              "nextjs": 0.18000000000000002
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:11.744425+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/webdevsimplified/2025-08-01/SqcY0GlETPk_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.025,
+          "priority_score": 0.025,
+          "detected_priority_topics": [
+            "react",
+            "nextjs"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.5,
+            "priority_boosts": {
+              "react": 0.9,
+              "nextjs": 0.9,
+              "combo_react-nextjs": 1.5
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.500 + 0.000 = 0.025"
+          }
+        },
+        {
+          "video_id": "airHRQL5Xtg",
+          "video_url": "https://www.youtube.com/watch?v=airHRQL5Xtg",
+          "title": "React TypeScript Tutorial for Beginners",
+          "channel": "Programming with Mosh",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "topic_scores": {
+            "react": 0.18000000000000002,
+            "typescript": 0.8
+          },
+          "unified_score": 0.47333333333333333,
+          "content_summary": "## Analysis of \"React TypeScript Tutorial for Beginners\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 2,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "react": 0.18000000000000002,
+              "typescript": 0.8
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:11.237613+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/programmingwithmosh/2025-08-01/airHRQL5Xtg_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.021666666666666667,
+          "priority_score": 0.021666666666666667,
+          "detected_priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.3,
+            "priority_boosts": {
+              "react": 0.9,
+              "typescript": 0.8,
+              "combo_react-typescript": 1.3
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.300 + 0.000 = 0.022"
+          }
+        },
+        {
+          "title": "React TypeScript Best Practices",
+          "url": "https://www.youtube.com/watch?v=sample_video_2",
+          "video_url": "https://www.youtube.com/watch?v=sample_video_2",
+          "channel": "React Experts",
+          "channel_id": "UC_sample_channel_2",
+          "published_date": "2024-07-20T14:30:00Z",
+          "description": "Modern React with TypeScript patterns and practices...",
+          "platform": "youtube",
+          "content_source": "dynamic_search",
+          "source_type": "discovered",
+          "priority_topic": "react",
+          "search_term": "React TypeScript tutorial",
+          "unified_score": 0.82,
+          "relevance_score": 0.8,
+          "engagement_score": 0.7,
+          "freshness_score": 0.95,
+          "view_count": 3200,
+          "duration": "PT12M45S",
+          "thumbnail_url": "https://example.com/thumbnail2.jpg",
+          "content_age_days": 376.7490838122454,
+          "intelligence_score": 0.008666666666666668,
+          "priority_score": 0.008666666666666668,
+          "detected_priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.2,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.3,
+            "priority_boosts": {
+              "react": 0.9,
+              "typescript": 0.8,
+              "combo_react-typescript": 1.3
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.200 \u00d7 0.333 \u00d7 1.300 + 0.000 = 0.009"
+          }
+        }
+      ],
+      "avg_score": 0.018
+    },
+    "nextjs": {
+      "count": 1,
+      "items": [
+        {
+          "video_id": "SqcY0GlETPk",
+          "video_url": "https://www.youtube.com/watch?v=SqcY0GlETPk",
+          "title": "Next.js Tutorial - Build a Portfolio",
+          "channel": "Web Dev Simplified",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "react",
+            "typescript",
+            "nextjs"
+          ],
+          "topic_scores": {
+            "react": 0.09000000000000001,
+            "typescript": 0.8,
+            "nextjs": 0.18000000000000002
+          },
+          "unified_score": 0.6000000000000001,
+          "content_summary": "## Analysis of \"Next.js Tutorial - Build a Portfolio\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 3,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "react": 0.09000000000000001,
+              "typescript": 0.8,
+              "nextjs": 0.18000000000000002
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:11.744425+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/webdevsimplified/2025-08-01/SqcY0GlETPk_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.025,
+          "priority_score": 0.025,
+          "detected_priority_topics": [
+            "react",
+            "nextjs"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.5,
+            "priority_boosts": {
+              "react": 0.9,
+              "nextjs": 0.9,
+              "combo_react-nextjs": 1.5
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.500 + 0.000 = 0.025"
+          }
+        }
+      ],
+      "avg_score": 0.025
+    },
+    "typescript": {
+      "count": 5,
+      "items": [
+        {
+          "video_id": "airHRQL5Xtg",
+          "video_url": "https://www.youtube.com/watch?v=airHRQL5Xtg",
+          "title": "React TypeScript Tutorial for Beginners",
+          "channel": "Programming with Mosh",
+          "programming_concepts": [
+            "authentication",
+            "authorization",
+            "optimization",
+            "performance",
+            "component",
+            "debugging",
+            "database",
+            "testing",
+            "api",
+            "git",
+            "sql",
+            "go"
+          ],
+          "priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "topic_scores": {
+            "react": 0.18000000000000002,
+            "typescript": 0.8
+          },
+          "unified_score": 0.47333333333333333,
+          "content_summary": "## Analysis of \"React TypeScript Tutorial for Beginners\"\n\n### Key Programming Concepts Mentioned\n\n**Concepts:**\n- authentication\n- authorization\n- debugging\n- database\n- testing\n\n**Patterns:**\n- optimization\n- performance\n- component\n\n**Tools:**\n- git\n\n**Languages:**\n- go\n\n### Key Points from Transcript\n\n1. Arrays are ordered collections:\n        - Use for sequential data\n        - Good for iteration\n        - Access by index is O(1)\n\n        Objects/Maps are key-value pairs:\n        - Use for associative data\n        - Good for lookups\n        - Access by key is typically O(1)\n\n        Algorithm complexity matters\n2. Big O notation helps us understand performance:\n        - O(1): Constant time - hash table lookups\n        - O(log n): Logarithmic time - binary search\n        - O(n): Linear time - array iteration\n        - O(n\u00b2): Quadratic time - nested loops\n\n        Error handling is not optional\n3. Always anticipate what can go wrong and handle errors gracefully:\n        - Validate input data\n        - Handle network failures\n        - Provide meaningful error messages\n        - Log errors for debugging\n\n        Testing ensures code quality:\n        - Unit tests verify individual functions\n        - Integration tests verify component interactions\n        - End-to-end tests verify complete workflows\n        - Write tests before fixing bugs\n\n        Version control with Git is essential:\n        - Commit frequently with meaningful messages\n        - Use branches for features and experiments\n        - Review code before merging\n        - Keep a clean commit history\n\n        Database fundamentals apply to most applications:\n        - Understand CRUD operations (Create, Read, Update, Delete)\n        - Learn about relationships between data\n        - Understand indexing for performance\n        - Consider data consistency and transactions\n\n        API design principles:\n        - RESTful endpoints are predictable\n        - Use appropriate HTTP methods\n        - Return consistent response formats\n        - Include proper error status codes\n        - Document your APIs thoroughly\n\n        Security should be built in, not bolted on:\n        - Validate and sanitize all input\n        - Use parameterized queries to prevent SQL injection\n        - Implement proper authentication and authorization\n        - Keep dependencies updated\n        - Follow the principle of least privilege\n\n        Performance optimization strategies:\n        - Profile before optimizing\n        - Cache expensive operations\n        - Minimize database queries\n        - Optimize critical paths first\n        - Consider lazy loading for resources\n\n        Code organization and architecture:\n        - Separate concerns into different modules\n        - Use dependency injection for flexibility\n        - Follow SOLID principles\n        - Consider design patterns for common problems\n        - Keep business logic separate from presentation\n\n        Debugging is a skill that improves with practice:\n        - Use debugging tools effectively\n        - Read error messages carefully\n        - Isolate problems systematically\n        - Reproduce issues consistently\n        - Document solutions for future reference\n\n        Continuous learning is essential in programming:\n        - Stay updated with industry trends\n        - Practice coding regularly\n        - Contribute to open source projects\n        - Learn from code reviews\n        - Teach others to reinforce your knowledge\n\n        These fundamentals apply across languages and frameworks\n",
+          "insights": {
+            "concept_count": 12,
+            "transcript_length": 4156,
+            "topic_diversity": 2,
+            "technical_depth": 2,
+            "content_quality_indicators": {
+              "has_code_examples": true,
+              "has_explanations": true,
+              "has_best_practices": true,
+              "has_troubleshooting": true
+            },
+            "topic_score_breakdown": {
+              "react": 0.18000000000000002,
+              "typescript": 0.8
+            },
+            "top_concepts": [
+              "authentication",
+              "authorization",
+              "optimization",
+              "performance",
+              "component",
+              "debugging",
+              "database",
+              "testing",
+              "api",
+              "git"
+            ]
+          },
+          "processing_timestamp": "2025-08-01T05:12:11.237613+00:00",
+          "processed_with": "mcp-youtube-processor",
+          "framework_version": "1.0.0",
+          "transcript_available": true,
+          "error": null,
+          "platform": "youtube",
+          "content_source": "subscribed_channel",
+          "source_type": "subscribed",
+          "content_file": "/Users/georgiospilitsoglou/Developer/projects/mypromptflow/knowledge-vault/databases/knowledge_vault/content-intelligence/youtube-intelligence/programmingwithmosh/2025-08-01/airHRQL5Xtg_unified_intelligence.json",
+          "content_age_days": 999.0,
+          "intelligence_score": 0.021666666666666667,
+          "priority_score": 0.021666666666666667,
+          "detected_priority_topics": [
+            "react",
+            "typescript"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.5,
+            "relevance_score": 0.3333333333333333,
+            "priority_boost": 1.3,
+            "priority_boosts": {
+              "react": 0.9,
+              "typescript": 0.8,
+              "combo_react-typescript": 1.3
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.500 \u00d7 0.333 \u00d7 1.300 + 0.000 = 0.022"
+          }
+        },
+        {
+          "title": "Zod VS Valibot: JS/TS Validator Battle!",
+          "url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+          "video_url": "https://www.youtube.com/watch?v=6P-2urhScwk",
+          "channel": "Jack Herrington",
+          "channel_name": "Jack Herrington",
+          "source_name": "Jack Herrington",
+          "description": "",
+          "published_date": "2025-07-28T13:49:50+00:00",
+          "platform": "youtube",
+          "content_source": "rss_feed",
+          "source_type": "subscribed",
+          "source_channel": "jackherrington",
+          "priority_score": 0.009999999999999998,
+          "quality_rating": 0.9400000000000001,
+          "priority_topics": [
+            "typescript",
+            "react",
+            "nextjs"
+          ],
+          "categories": [
+            "typescript",
+            "react",
+            "nextjs"
+          ],
+          "content_age_days": 3.751582584039352,
+          "content_hash": "56d357b695f562d999330a05cc7facbc",
+          "collected_at": "2025-08-01T07:52:06.735116+00:00",
+          "unified_score": 0.9400000000000001,
+          "intelligence_score": 0.009999999999999998,
+          "detected_priority_topics": [
+            "typescript"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.6,
+            "relevance_score": 0.16666666666666666,
+            "priority_boost": 1.0,
+            "priority_boosts": {
+              "typescript": 0.8
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.600 \u00d7 0.167 \u00d7 1.000 + 0.000 = 0.010"
+          }
+        },
+        {
+          "title": "Designing Custom Layouts in Figma for MCP - SideBling",
+          "url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+          "video_url": "https://www.youtube.com/watch?v=Ycu0wlPf5KA",
+          "channel": "DesignCourse",
+          "channel_name": "DesignCourse",
+          "source_name": "DesignCourse",
+          "description": "",
+          "published_date": "2025-07-28T13:50:15+00:00",
+          "platform": "youtube",
+          "content_source": "rss_feed",
+          "source_type": "subscribed",
+          "source_channel": "designcourse",
+          "priority_score": 0.009999999999999998,
+          "quality_rating": 0.82,
+          "priority_topics": [
+            "react"
+          ],
+          "categories": [
+            "web-design",
+            "frontend",
+            "react"
+          ],
+          "content_age_days": 3.7513000539814816,
+          "content_hash": "413d8380bb007eaba1a1e5689ea701fe",
+          "collected_at": "2025-08-01T07:52:07.324547+00:00",
+          "unified_score": 0.82,
+          "intelligence_score": 0.009999999999999998,
+          "detected_priority_topics": [
+            "typescript"
+          ],
+          "score_breakdown": {
+            "base_score": 0.1,
+            "freshness_score": 0.6,
+            "relevance_score": 0.16666666666666666,
+            "priority_boost": 1.0,
+            "priority_boosts": {
+              "typescript": 0.8
+            },
+            "claude_boost": 0.0,
+            "claude_multiplier": 1.0,
+            "claude_enhancement": null,
+            "calculation": "0.100 \u00d7 0.600 \u00d7 0.167 \u00d7 1.000 + 0.000 = 0.010"
+          }
+        }
+      ],
+      "avg_score": 0.012
+    }
+  },
+  "source_breakdown": {
+    "youtube_subscribed": 13,
+    "youtube_discovered": 2
+  }
+}

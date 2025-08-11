@@ -1,0 +1,406 @@
+# Information Retrieval Mechanisms Guide
+# Comprehensive guide for AI agents on how to access information using different mechanisms
+# Integrates with knowledge-vault views and provides practical implementation patterns
+
+guide_info:
+  name: "Information Retrieval Mechanisms Guide"
+  description: "Practical guide for AI agents to access information using MCP servers, APIs, and tools"
+  version: "1.0.0"
+  created: "2025-07-27"
+  integration: "knowledge-vault tools_services database and views"
+
+# Mechanism Categories and Priorities
+mechanism_priorities:
+  tier_1_mcp_tools:
+    description: "MCP Docker tools - Primary recommendation"
+    priority: 1
+    reliability: "high"
+    setup_complexity: "medium"
+    capabilities: "comprehensive"
+    integration: "standardized"
+    
+  tier_2_direct_apis:
+    description: "Direct API access via WebFetch"
+    priority: 2
+    reliability: "medium-high"
+    setup_complexity: "low-medium"
+    capabilities: "source-dependent"
+    integration: "manual"
+    
+  tier_3_builtin_tools:
+    description: "Built-in Claude tools (Read, Write, Bash, WebFetch, WebSearch)"
+    priority: 3
+    reliability: "high"
+    setup_complexity: "none"
+    capabilities: "basic"
+    integration: "native"
+    
+  tier_4_manual_methods:
+    description: "Manual extraction and processing methods"
+    priority: 4
+    reliability: "low"
+    setup_complexity: "high"
+    capabilities: "limited"
+    integration: "custom"
+
+# MCP Tool Mechanisms (Primary)
+mcp_mechanisms:
+  github_access:
+    tools:
+      - "mcp__MCP_DOCKER__get_file_contents"
+      - "mcp__MCP_DOCKER__list_branches"
+      - "mcp__MCP_DOCKER__get_commit"
+      - "mcp__MCP_DOCKER__search_code"
+    knowledge_vault_reference: "@knowledge-vault/tools_services name:github-mcp-server-platform"
+    authentication: "Personal Access Token or GitHub App"
+    rate_limits: "5,000 requests/hour (authenticated)"
+    usage_examples:
+      - use_case: "Get repository file content"
+        tool: "mcp__MCP_DOCKER__get_file_contents"
+        parameters: '{"owner": "repo_owner", "repo": "repo_name", "path": "file_path"}'
+      - use_case: "Search code across repositories"
+        tool: "mcp__MCP_DOCKER__search_code"
+        parameters: '{"q": "search_query language:python"}'
+    
+  web_content_access:
+    tools:
+      - "mcp__MCP_DOCKER__fetch_content"
+      - "mcp__MCP_DOCKER__browser_navigate"
+      - "mcp__MCP_DOCKER__browser_snapshot"
+    knowledge_vault_reference: "@knowledge-vault/tools_services name:fetch-mcp-server"
+    authentication: "none_required"
+    rate_limits: "none (built-in throttling)"
+    usage_examples:
+      - use_case: "Fetch web page content"
+        tool: "mcp__MCP_DOCKER__fetch_content"
+        parameters: '{"url": "https://example.com"}'
+      - use_case: "Navigate and capture web page"
+        tool: "mcp__MCP_DOCKER__browser_navigate"
+        parameters: '{"url": "https://example.com"}'
+        
+  database_access:
+    tools:
+      - "mcp__MCP_DOCKER__post_database_query"
+      - "mcp__MCP_DOCKER__redis_get"
+      - "mcp__MCP_DOCKER__postgresql_query"
+    knowledge_vault_reference: "@knowledge-vault/tools_services tag:database-access"
+    authentication: "database_credentials_required"
+    rate_limits: "database_dependent"
+    usage_examples:
+      - use_case: "Query PostgreSQL database"
+        tool: "mcp__MCP_DOCKER__postgresql_query"
+        parameters: '{"query": "SELECT * FROM table WHERE condition"}'
+      - use_case: "Get Redis key value"
+        tool: "mcp__MCP_DOCKER__redis_get"
+        parameters: '{"key": "cache_key"}'
+        
+  notion_access:
+    tools:
+      - "mcp__MCP_DOCKER__API-retrieve-a-page"
+      - "mcp__MCP_DOCKER__API-post-database_query"
+      - "mcp__MCP_DOCKER__API-patch-page"
+    knowledge_vault_reference: "@knowledge-vault/tools_services name:notion-productivity-mcp-server"
+    authentication: "Notion integration token"
+    rate_limits: "moderate (varies by operation)"
+    usage_examples:
+      - use_case: "Retrieve Notion page content"
+        tool: "mcp__MCP_DOCKER__API-retrieve-a-page"
+        parameters: '{"page_id": "notion_page_id"}'
+      - use_case: "Query Notion database"
+        tool: "mcp__MCP_DOCKER__API-post-database-query"
+        parameters: '{"database_id": "database_id", "filter": {}}'
+
+# Direct API Mechanisms (Secondary)
+direct_api_mechanisms:
+  github_api:
+    base_url: "https://api.github.com"
+    method: "WebFetch"
+    authentication: "Bearer token in headers"
+    usage_pattern: 'WebFetch("https://api.github.com/repos/owner/repo/contents/path", "Extract file content")'
+    fallback_for: "GitHub MCP server unavailable"
+    rate_limits: "Same as MCP server (5,000/hour authenticated)"
+    
+  rest_apis:
+    description: "Generic REST API access pattern"
+    method: "WebFetch"
+    authentication: "API key, Bearer token, or Basic auth"
+    usage_pattern: 'WebFetch("https://api.service.com/endpoint", "Extract data from API response")'
+    headers_example: '{"Authorization": "Bearer token", "Content-Type": "application/json"}'
+    best_practices:
+      - "Include authentication in WebFetch prompt"
+      - "Specify expected response format"
+      - "Handle rate limiting gracefully"
+      - "Use meaningful prompts for data extraction"
+    
+  public_apis:
+    description: "Public APIs without authentication"
+    method: "WebFetch"
+    authentication: "none"
+    usage_pattern: 'WebFetch("https://api.service.com/public-endpoint", "Parse JSON response for specific data")'
+    examples:
+      - "Weather APIs: WebFetch weather service for current conditions"
+      - "News APIs: WebFetch news aggregators for latest articles"
+      - "Public data: WebFetch government or open data APIs"
+
+# Built-in Tool Mechanisms (Tertiary)
+builtin_tool_mechanisms:
+  file_system_access:
+    tools: ["Read", "Write", "LS"]
+    use_cases:
+      - "Local file content access"
+      - "Configuration file reading"
+      - "Log file analysis"
+      - "Document processing"
+    usage_patterns:
+      - method: "Read"
+        syntax: 'Read(file_path="/absolute/path/to/file")'
+        limitations: "Local files only, absolute paths required"
+      - method: "Write"
+        syntax: 'Write(file_path="/path/to/file", content="content")'
+        limitations: "Local files only, overwrites existing content"
+      - method: "LS"
+        syntax: 'LS(path="/absolute/path/to/directory")'
+        limitations: "Directory listing only"
+        
+  web_access:
+    tools: ["WebFetch", "WebSearch"]
+    use_cases:
+      - "Public web content retrieval"
+      - "Simple API calls"
+      - "Search result gathering"
+      - "URL content extraction"
+    usage_patterns:
+      - method: "WebFetch"
+        syntax: 'WebFetch(url="https://example.com", prompt="Extract specific information")'
+        limitations: "Static content, no JavaScript execution"
+      - method: "WebSearch"
+        syntax: 'WebSearch(query="search terms", max_results=10)'
+        limitations: "Search results only, no direct content"
+        
+  system_operations:
+    tools: ["Bash"]
+    use_cases:
+      - "Command-line operations"
+      - "System information gathering"
+      - "Local tool execution"
+      - "File system operations"
+    usage_patterns:
+      - method: "Bash"
+        syntax: 'Bash(command="command with args", description="What this does")'
+        limitations: "Security restrictions, platform-dependent"
+        examples:
+          - "Git operations: git log, git show, git diff"
+          - "File operations: find, grep, awk, sed"
+          - "System info: ps, df, netstat, curl"
+
+# Knowledge-Vault Integration Patterns
+knowledge_vault_integration:
+  source_discovery:
+    query_pattern: "@knowledge-vault/tools_services view:information-sources-by-type"
+    filter_examples:
+      - "tag:web-content AND complexity_score:<=3"
+      - "tag:database-access AND authentication:required"
+      - "tag:real-time-data AND performance_tier:low_latency"
+    response_format: "List of matching sources with metadata"
+    
+  capability_assessment:
+    query_pattern: "@knowledge-vault/tools_services item:{server_name}"
+    information_extraction: "information_capabilities section"
+    fields_of_interest:
+      - "data_types: What information is available"
+      - "access_methods: How to access the information"
+      - "authentication: What credentials are needed"
+      - "rate_limits: Usage restrictions"
+      - "complexity_score: Setup difficulty"
+      - "typical_use_cases: Practical applications"
+      
+  implementation_guidance:
+    profile_access: "@knowledge-vault/tools_services items/{server-profile}.md"
+    sections_to_review:
+      - "Information Access Capabilities: Practical usage patterns"
+      - "Setup & Configuration: Authentication and dependencies"
+      - "Core Capabilities & Features: Available functionality"
+      - "Technical Specifications: Performance and limitations"
+
+# Mechanism Selection Logic
+selection_logic:
+  step_1_identify_information_type:
+    process: "Classify information need using knowledge-vault tags"
+    tags: ["web-content", "database-access", "file-systems", "real-time-data", "version-control", "structured-data"]
+    
+  step_2_query_available_sources:
+    process: "Use knowledge-vault views to find matching sources"
+    views:
+      - "information-sources-by-type.yaml: Filter by information type"
+      - "real-time-sources.yaml: Filter by real-time capabilities"
+      - "authentication-required.yaml: Filter by auth complexity"
+      
+  step_3_assess_constraints:
+    factors:
+      - "Time constraints: setup_time vs. deadline"
+      - "Authentication: available credentials vs. requirements"
+      - "Rate limits: intended usage vs. restrictions"
+      - "Complexity: team capability vs. setup complexity"
+      
+  step_4_select_mechanism:
+    priority_order:
+      1: "MCP tools if available and feasible"
+      2: "Direct APIs if MCP unavailable or insufficient"
+      3: "Built-in tools for simple cases"
+      4: "Manual methods as last resort"
+      
+  step_5_implement_with_fallbacks:
+    pattern: "Primary mechanism with fallback chain"
+    example: "GitHub MCP → GitHub API → Git commands → Manual download"
+
+# Common Implementation Patterns
+implementation_patterns:
+  single_source_access:
+    description: "Access information from one source"
+    pattern: |
+      1. Identify source using knowledge-vault views
+      2. Check authentication and rate limits
+      3. Use highest-priority available mechanism
+      4. Implement error handling and retries
+      
+  multi_source_aggregation:
+    description: "Combine information from multiple sources"
+    pattern: |
+      1. Identify all relevant sources
+      2. Determine access mechanisms for each
+      3. Execute parallel or sequential access
+      4. Aggregate and correlate results
+      5. Handle partial failures gracefully
+      
+  fallback_chain:
+    description: "Primary mechanism with backup options"
+    pattern: |
+      1. Attempt primary mechanism (usually MCP)
+      2. On failure, try secondary (direct API)
+      3. On failure, try tertiary (built-in tools)
+      4. Log failures for improvement
+      
+  real_time_monitoring:
+    description: "Continuous information monitoring"
+    pattern: |
+      1. Use real-time sources where available
+      2. Implement polling for non-real-time sources
+      3. Set up event-driven updates when possible
+      4. Handle connection failures and reconnection
+
+# Error Handling and Troubleshooting
+error_handling:
+  common_errors:
+    authentication_failures:
+      symptoms: ["401 Unauthorized", "403 Forbidden", "Invalid credentials"]
+      solutions:
+        - "Verify credentials are current and valid"
+        - "Check required permissions and scopes"
+        - "Ensure correct authentication method"
+        
+    rate_limiting:
+      symptoms: ["429 Too Many Requests", "Rate limit exceeded"]
+      solutions:
+        - "Implement exponential backoff"
+        - "Reduce request frequency"
+        - "Use different authentication (higher limits)"
+        - "Implement request queueing"
+        
+    connectivity_issues:
+      symptoms: ["Connection timeout", "Network unreachable", "DNS resolution failed"]
+      solutions:
+        - "Check network connectivity"
+        - "Verify URLs and endpoints"
+        - "Try alternative endpoints"
+        - "Implement retry logic with backoff"
+        
+    data_format_issues:
+      symptoms: ["Unexpected response format", "Parsing errors", "Missing expected data"]
+      solutions:
+        - "Verify API version compatibility"
+        - "Check response content type"
+        - "Update parsing logic for new formats"
+        - "Add defensive parsing with error handling"
+        
+  troubleshooting_workflow:
+    step_1: "Verify source is operational (check status pages)"
+    step_2: "Test authentication separately"
+    step_3: "Check rate limits and quotas"
+    step_4: "Validate request format and parameters"
+    step_5: "Test with minimal example"
+    step_6: "Review error logs and responses"
+    step_7: "Try fallback mechanisms"
+
+# Performance Optimization
+performance_optimization:
+  caching_strategies:
+    description: "Reduce redundant requests"
+    techniques:
+      - "Cache frequently accessed data"
+      - "Use ETags and conditional requests"
+      - "Implement time-based cache invalidation"
+      - "Cache negative results (failures)"
+      
+  batch_operations:
+    description: "Optimize bulk data access"
+    techniques:
+      - "Use batch APIs where available"
+      - "Group related requests"
+      - "Implement parallel processing"
+      - "Use streaming for large datasets"
+      
+  connection_management:
+    description: "Optimize network usage"
+    techniques:
+      - "Reuse connections where possible"
+      - "Implement connection pooling"
+      - "Use persistent connections"
+      - "Minimize handshake overhead"
+
+# Security Considerations
+security_considerations:
+  credential_management:
+    best_practices:
+      - "Use environment variables for secrets"
+      - "Implement credential rotation"
+      - "Use least-privilege access"
+      - "Monitor credential usage"
+      
+  data_protection:
+    best_practices:
+      - "Encrypt sensitive data in transit"
+      - "Implement proper access logging"
+      - "Follow data retention policies"
+      - "Handle errors without exposing secrets"
+      
+  network_security:
+    best_practices:
+      - "Use HTTPS for all external requests"
+      - "Validate SSL certificates"
+      - "Implement request signing where available"
+      - "Use secure proxy configurations"
+
+# Maintenance and Updates
+maintenance:
+  regular_reviews:
+    frequency: "monthly"
+    activities:
+      - "Update mechanism availability based on knowledge-vault changes"
+      - "Review performance metrics and optimization opportunities"
+      - "Update authentication methods and credentials"
+      - "Test fallback mechanisms and error handling"
+      
+  knowledge_vault_synchronization:
+    frequency: "weekly"
+    activities:
+      - "Check for new MCP servers and capabilities"
+      - "Update mechanism priorities based on server ratings"
+      - "Synchronize with server profile updates"
+      - "Validate cross-references and links"
+      
+  performance_monitoring:
+    metrics:
+      - "Success rates by mechanism type"
+      - "Average response times"
+      - "Error patterns and frequencies"
+      - "Rate limit utilization"

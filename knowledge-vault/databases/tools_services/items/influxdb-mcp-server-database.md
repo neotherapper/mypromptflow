@@ -6,9 +6,7 @@ description: Time series database and IoT data management platform for real-time
 id: 2a8a6264-4b56-4246-894b-67da5dc992a3
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: InfluxDB MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/influxdb-server-profile.md
 priority: 3rd_priority
 production_readiness: 94
 provider: Community/Third-party
@@ -30,7 +28,6 @@ tier: Tier 3
 transport_protocols:
 - HTTP/REST
 - gRPC
-mcp_profile_reference: "@mcp_profile/influxdb"
 ---
 
 **Time series database and IoT data management platform for real-time metrics and observability**  

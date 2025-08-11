@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "user_id": "default_user",
+    "last_updated": "2025-08-09T19:24:05.139416+00:00",
+    "analytics_start_date": "2025-08-09T19:24:05.139419+00:00"
+  },
+  "daily_stats": {},
+  "weekly_stats": {},
+  "monthly_stats": {},
+  "all_time_stats": {
+    "total_videos_discovered": 0,
+    "total_videos_watched": 0,
+    "total_videos_completed": 0,
+    "total_watch_time_minutes": 0,
+    "completion_rate": 0.0,
+    "average_session_minutes": 0,
+    "longest_learning_streak": 0,
+    "favorite_watch_times": [],
+    "skill_competencies": {}
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-08-11T01:35:04.226934",
+  "rss_feeds": [
+    {
+      "channel": "Fireship",
+      "status": "error",
+      "error": "Invalid date value or format \"2025-08-08T16:23:54+00:00\""
+    },
+    {
+      "channel": "ThePrimeagen",
+      "status": "error",
+      "error": "Invalid date value or format \"2025-08-07T18:45:01+00:00\""
+    }
+  ],
+  "metadata_test": true,
+  "queue_stats": {
+    "total": 21,
+    "pending": 0,
+    "completed": 21,
+    "error": 0
+  },
+  "state_channels": 3
+}

@@ -6,11 +6,12 @@ view_info:
   name: "MCP Tier 2 Servers"
   description: "Standard business integration MCP servers with solid value proposition for workflow enhancement"
   database: "tools_services"
-  version: "1.0.0"
+  version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable systematic integration of business-valuable MCP servers with proven capabilities"
-  last_updated: "2025-07-30"
-  total_servers: 12
+  last_updated: "2025-07-31"
+  total_servers: 14
+  scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
 view_config:
@@ -19,13 +20,15 @@ view_config:
   include_inactive: false
   max_results: 75
 
-# Tier 2 Criteria and Categories
+# Tier 2 Criteria and Categories (Repository-Aligned Scoring v6.0.0)
 tier_2_criteria:
   composite_score_range: "6.0-7.9"
   business_alignment: "valuable"
   production_readiness: ">=75%"
   installation_priority: [2, 3, 4]
   implementation_complexity: "moderate"
+  technology_stack_alignment: "6.0-7.9/10.0"
+  business_domain_relevance: "5.0-8.0/10.0"
 
 # ACTUAL TIER 2 SERVERS BY BUSINESS CATEGORY
 
@@ -104,7 +107,7 @@ search_information_retrieval:
     - name: "Brave Search MCP Server"
       composite_score: 7.6
       category: "Search & Information Retrieval"
-      file_path: "knowledge-vault/databases/tools_services/items/brave-search-mcp-server.md"
+      file_path: "knowledge-vault/databases/tools_services/items/brave-search-privacy-focused-mcp-server-comprehensive-profile.md"
       production_readiness: 86
       business_value: "Alternative search engine with privacy features"
       setup_complexity: "Low"
@@ -143,18 +146,46 @@ social_media_platforms:
       setup_complexity: "Moderate"
       provider: "Twitter/X"
 
+blockchain_cryptocurrency:
+  description: "Blockchain and cryptocurrency platform integrations"
+  servers:
+    - name: "CoinGecko MCP Server"
+      composite_score: 8.2
+      category: "Cryptocurrency Market Data"
+      file_path: "knowledge-vault/databases/tools_services/items/coingecko-mcp-server-comprehensive-profile.md"
+      production_readiness: 91
+      business_value: "Comprehensive cryptocurrency market data and analytics"
+      setup_complexity: "Moderate"
+      provider: "CoinGecko Community"
+      
+
+healthcare_medical:
+  description: "Healthcare and medical systems integration"
+  servers:
+    - name: "DICOM MCP Server"
+      composite_score: 9.2
+      category: "Medical Imaging"
+      file_path: "knowledge-vault/databases/tools_services/items/dicom-mcp-server-medical-imaging-comprehensive-profile.md"
+      production_readiness: 94
+      business_value: "Enterprise medical imaging and PACS integration"
+      setup_complexity: "Very Complex"
+      provider: "FluxInc Community"
+
+enterprise_infrastructure:
+  description: "Enterprise infrastructure and governance platforms"
+  servers:
+    - name: "TrueFoundry MCP Registry"
+      composite_score: 9.1
+      category: "Enterprise Registry"
+      file_path: "knowledge-vault/databases/tools_services/items/truefoundry-mcp-registry-enterprise-server-profile.md"
+      production_readiness: 93
+      business_value: "Enterprise MCP server governance and compliance"
+      setup_complexity: "Moderate"
+      provider: "TrueFoundry"
+
 cloud_infrastructure:
   description: "General cloud infrastructure and platform services"
   servers:
-    - name: "AWS MCP Server"
-      composite_score: 6.4
-      category: "Cloud Infrastructure"
-      file_path: "knowledge-vault/databases/tools_services/items/aws-mcp-server.md"
-      production_readiness: 78
-      business_value: "Basic AWS cloud service integration"
-      setup_complexity: "Moderate"
-      provider: "Amazon Web Services"
-      
     - name: "AWS Cloud Infrastructure MCP Server"
       composite_score: 6.4
       category: "Cloud Infrastructure"
@@ -163,6 +194,8 @@ cloud_infrastructure:
       business_value: "Comprehensive AWS infrastructure management"
       setup_complexity: "High"
       provider: "Amazon Web Services"
+      technology_alignment: 6
+      business_relevance: 7
 
 # Implementation Strategy
 implementation_strategy:
@@ -206,11 +239,10 @@ implementation_strategy:
     description: "Phase 4: Advanced cloud infrastructure integration"
     timeline: "Week 10-12"
     servers:
-      - "AWS MCP Server"
       - "AWS Cloud Infrastructure MCP Server"
     success_criteria:
-      - "Basic AWS services integrated"
       - "Advanced cloud infrastructure management operational"
+      - "Multi-cloud infrastructure capabilities active"
 
 # Quality Metrics and Monitoring
 quality_metrics:

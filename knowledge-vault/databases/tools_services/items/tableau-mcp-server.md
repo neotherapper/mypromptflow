@@ -7,9 +7,7 @@ description: Leading business intelligence and data visualization platform for e
 id: 60c84a35-bbdf-42bf-b662-6d91863aa5e9
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: Tableau MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/tableau-server-profile.md
 priority: 1st_priority
 production_readiness: 91
 provider: Salesforce
@@ -32,7 +30,6 @@ transport_protocols:
 - REST API
 - JavaScript API
 - Extensions API
-mcp_profile_reference: "@mcp_profile/tableau"
 ---
 
 **Leading business intelligence and data visualization platform for enterprise analytics**  

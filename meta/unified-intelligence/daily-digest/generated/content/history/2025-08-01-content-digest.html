@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📰 Daily Content Digest - 2025-08-01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1a202c;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(79, 70, 229, 0.15);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            border-left: 4px solid #4f46e5;
+            transition: all 0.2s ease;
+        }
+        
+        .stat-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        .priority-topics {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #1e293b;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .topic-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            border-top: 4px solid #10b981;
+            transition: all 0.2s ease;
+        }
+        
+        .topic-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.06);
+            transform: translateY(-2px);
+        }
+        
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .topic-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e293b;
+            text-transform: capitalize;
+        }
+        
+        .topic-count {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+        }
+        
+        .content-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+        
+        .content-item:hover {
+            border-left-color: #4f46e5;
+            transform: translateX(2px);
+            background: #f1f5f9;
+        }
+        
+        .content-title {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+        
+        .content-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .content-title a:hover {
+            color: #4f46e5;
+            text-decoration: underline;
+        }
+        
+        .content-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        
+        .content-source {
+            font-weight: 500;
+            color: #475569;
+        }
+        
+        .content-score {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            box-shadow: 0 1px 3px rgba(245, 158, 11, 0.3);
+        }
+        
+        .content-age {
+            font-style: italic;
+            color: #64748b;
+        }
+        
+        .all-content {
+            margin-bottom: 2rem;
+        }
+        
+        .content-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .platform-section {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .platform-section:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.06);
+        }
+        
+        .platform-title {
+            font-size: 1.4rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .platform-icon {
+            font-size: 1.2em;
+        }
+        
+        .recommendations {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .recommendations h2 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+        
+        .recommendations ul {
+            list-style: none;
+        }
+        
+        .recommendations li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .recommendations li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        .no-content {
+            text-align: center;
+            padding: 3rem;
+            color: #718096;
+            font-style: italic;
+        }
+        
+        .priority-badge {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            box-shadow: 0 1px 3px rgba(239, 68, 68, 0.3);
+            margin-left: 0.5rem;
+        }
+        
+        .source-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+            display: inline-block;
+        }
+        
+        .source-badge.discovered {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 1px 3px rgba(16, 185, 129, 0.3);
+        }
+        
+        .source-badge.subscribed {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 1px 3px rgba(59, 130, 246, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📰 Daily Content Digest</h1>
+        <p>Generated: 2025-08-01T08:28:40.859315+00:00 | Priority Topics: Claude, React, TypeScript, Meta-Prompting, Next.js</p>
+    </div>
+
+    <div class="container">
+        <!-- Summary Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">29</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">High Quality</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0.015</div>
+                <div class="stat-label">Average Score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">10</div>
+                <div class="stat-label">Priority Topics</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">📺 Subscribed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">🔍 Discovered</div>
+            </div>
+        </div>
+
+        <!-- Priority Topics Section -->
+        <div class="priority-topics">
+            <h2 class="section-title">🎯 Priority Topics Detected</h2>
+            <div class="topic-grid">
+                
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">claude</div>
+                    <div class="topic-count">4 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=-w53i6Ae-YM" target="_blank">
+                            Alibaba is coming for Claude......
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Fireship</span>
+                        <span class="content-score">1.1%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">claude-code</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">meta-prompting</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">react</div>
+                    <div class="topic-count">3 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=sample_video_2" target="_blank">
+                            React TypeScript Best Practices...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">React Experts</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">376 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">nextjs</div>
+                    <div class="topic-count">1 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="topic-card">
+                <div class="topic-header">
+                    <div class="topic-name">typescript</div>
+                    <div class="topic-count">5 items</div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=6P-2urhScwk" target="_blank">
+                            Zod VS Valibot: JS/TS Validator Battle!...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Jack Herrington</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">3 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=Ycu0wlPf5KA" target="_blank">
+                            Designing Custom Layouts in Figma for MCP - SideBling...
+                        </a>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">DesignCourse</span>
+                        <span class="content-score">Low priority</span>
+                        <span class="content-age">3 days ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- All Content by Platform -->
+        <div class="all-content">
+            <h2 class="section-title">📊 Content by Platform</h2>
+            <div class="content-grid">
+                
+            <div class="platform-section">
+                <h3 class="platform-title">
+                    <span class="platform-icon">📺</span>
+                    Youtube (15 items)
+                </h3>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=m2OHmyyDTdQ" target="_blank">
+                            Warp vs Claude Code for Daily Coding...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Codevolution</span>
+                        <span class="content-score">3.7%</span>
+                        <span class="content-age">1 day ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+                            Advanced Claude Prompt Engineering...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">AI Development</span>
+                        <span class="content-score">3.0%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank">
+                            Next.js Tutorial - Build a Portfolio...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Web Dev Simplified</span>
+                        <span class="content-score">2.5%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=airHRQL5Xtg" target="_blank">
+                            React TypeScript Tutorial for Beginners...
+                        </a>
+                        <span class="priority-badge">Priority</span>
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">Programming with Mosh</span>
+                        <span class="content-score">2.2%</span>
+                        <span class="content-age">999 days ago</span>
+                    </div>
+                </div>
+                
+                <div class="content-item">
+                    <div class="content-title">
+                        <a href="https://www.youtube.com/watch?v=lM9K9D0IZvA" target="_blank">
+                            From Figma to Browser with MCP in Minutes (No Coding)...
+                        </a>
+                        
+                        <span class="source-badge subscribed">📺 Subscribed</span>
+                    </div>
+                    <div class="content-meta">
+                        <span class="content-source">DesignCourse</span>
+                        <span class="content-score">1.2%</span>
+                        <span class="content-age">18 hours ago</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="recommendations">
+            <h2>💡 Today's Recommendations</h2>
+            <ul>
+                <li>🌟 Priority: "Warp vs Claude Code for Daily Coding..." from Codevolution</li><li>🎯 10 items match your priority topics - focus on these first</li><li>🔍 2 new discoveries found through dynamic search - explore fresh content sources</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Generated by Unified Intelligence System | Priority Topic Scoring Active</p>
+    </div>
+</body>
+</html>

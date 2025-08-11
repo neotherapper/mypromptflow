@@ -6,9 +6,7 @@ description: High-performance message broker enabling scalable distributed syste
 id: 43746f11-d86c-4e62-998c-c42042ede47a
 installation_priority: 2
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: RabbitMQ MCP Server
-original_file: mcp-registry/detailed-profiles/tier-3/rabbitmq-server-profile.md
 priority: 3rd_priority
 production_readiness: 95
 provider: Community/Third-party
@@ -30,7 +28,6 @@ tier: Tier 3
 transport_protocols:
 - HTTP/HTTPS
 - WebSocket
-mcp_profile_reference: "@mcp_profile/rabbitmq"
 ---
 
 **High-performance message intermediary enabling scalable distributed system communication**  

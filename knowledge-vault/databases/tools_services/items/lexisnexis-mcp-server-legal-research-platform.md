@@ -3,9 +3,7 @@ description: "Enterprise identity and access management platform with MCP integr
 id: 530e1563-e8a9-4fb2-9db8-b77d76fa61a4
 installation_priority: 4
 item_type: mcp_server
-migration_date: '2025-07-26'
 name: LexisNexis MCP Server
-original_file: mcp-registry/detailed-profiles/tier-1/lexisnexis-server-profile.md
 priority: 1st_priority
 source_database: tools_services
 status: active
@@ -16,7 +14,6 @@ tags:
 - Security Tool
 - Tier 1
 - Development Platform
-mcp_profile_reference: "@mcp_profile/lexisnexis"
 ---
 
 ## Enterprise Use Cases
