@@ -39,6 +39,9 @@ class CrossTopicRelationship(Enum):
     DEPENDENT = "dependent"          # One topic depends on another
     CONVERGENT = "convergent"        # Topics merging over time
     INFLUENTIAL = "influential"      # One topic influences another
+    APPLICATION = "application"      # One topic applies to another
+    TOOL = "tool"                   # One topic uses another as a tool
+    BUSINESS = "business"           # Business relationship
 
 
 @dataclass
