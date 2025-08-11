@@ -7,6 +7,7 @@ topic_metadata:
   description: "Comprehensive monitoring of Claude AI, Claude Code, Claude Desktop, and Anthropic innovations with focus on practical applications and developer tools"
   priority_level: "high"
   monitoring_frequency: "continuous"
+  use_specialized_monitor: true  # Enable ClaudeFocusedMonitor for optimized Claude content collection
   
   keywords:
     primary:
