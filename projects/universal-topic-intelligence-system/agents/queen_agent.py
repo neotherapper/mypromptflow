@@ -22,6 +22,7 @@ from core import (
     SourceMetadata,
     SourceType
 )
+from core.quality_scorer import TopicQualityScorer
 from storage import StorageManager
 
 
@@ -111,6 +112,7 @@ class QueenAgent:
         self.topics: Dict[str, TopicState] = {}
         self.topic_configs: Dict[str, Dict] = {}
         self.topic_relationships: Dict[Tuple[str, str], CrossTopicRelationship] = {}
+        self.topic_quality_scorers: Dict[str, TopicQualityScorer] = {}  # Topic-specific quality scorers
         
         # Resource management
         self.resource_pool = 100.0  # Total resource units
@@ -160,6 +162,13 @@ class QueenAgent:
                 
                 # Track shared sources
                 self._track_shared_sources(topic_slug, config)
+                
+                # Initialize quality scorer if quality configuration exists
+                if 'quality_configuration' in config:
+                    self.topic_quality_scorers[topic_slug] = TopicQualityScorer(
+                        config['quality_configuration']
+                    )
+                    self.logger.info(f"Initialized quality scorer for topic: {topic_slug}")
                 
             except Exception as e:
                 self.logger.error(f"Failed to load config {config_file}: {str(e)}")
@@ -252,6 +261,23 @@ class QueenAgent:
             for item in all_items:
                 # Prioritize each item
                 priority_result = self.prioritizer.prioritize(item)
+                
+                # Apply topic-specific quality scoring if available
+                quality_score = None
+                for topic in item.topics:
+                    if topic in self.topic_quality_scorers:
+                        quality_score = self.topic_quality_scorers[topic].score_content(item)
+                        # Use quality score to adjust priority if significantly different
+                        if abs(quality_score.total_score - priority_result.total_score) > 0.3:
+                            # Blend the scores
+                            blended_score = (priority_result.total_score * 0.6 + quality_score.total_score * 0.4)
+                            self.logger.debug(
+                                f"Adjusted score for {item.title[:50]}: "
+                                f"{priority_result.total_score:.2f} -> {blended_score:.2f} (quality: {quality_score.total_score:.2f})"
+                            )
+                            priority_result.total_score = blended_score
+                        break  # Use first matching topic's quality scorer
+                
                 items_to_save.append((
                     item,
                     priority_result.total_score,
