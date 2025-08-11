@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Financial Datasets MCP Server
-npm install @modelcontextprotocol/financial-datasets-server
+pnpm install @modelcontextprotocol/financial-datasets-server
 
 # Configure environment variables
 export FINANCIAL_DATASETS_API_KEY="your_api_key"
@@ -117,7 +117,7 @@ export FINANCIAL_DATASETS_WORKSPACE="your_workspace_id"
 export FINANCIAL_DATASETS_ENVIRONMENT="production"
 
 # Initialize server
-npx financial-datasets-mcp-server --facility 3000
+pnpm dlx financial-datasets-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

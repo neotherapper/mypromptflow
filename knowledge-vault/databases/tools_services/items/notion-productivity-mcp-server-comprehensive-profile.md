@@ -137,7 +137,7 @@ curl -H "Authorization: Bearer your_notion_integration_token" \
 
 ```bash
 # Install Notion MCP server via npm
-npm install -g @modelcontextprotocol/server-notion
+pnpm install -g @modelcontextprotocol/server-notion
 
 # Configure environment variables
 export NOTION_API_KEY="your_notion_integration_token"
@@ -158,7 +158,7 @@ curl -X POST http://localhost:3000/rpc \
 
 ```bash
 # Install Notion SDK for direct integration
-npm install @notionhq/client
+pnpm install @notionhq/client
 
 # Test direct API access
 curl -H "Authorization: Bearer your_notion_integration_token" \
@@ -194,10 +194,10 @@ console.log('Notion API connection established');
 # Clone Notion MCP server source for customization
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/notion
-npm install
+pnpm install
 
 # Install additional dependencies for custom features
-npm install notion-to-md @notionhq/client winston rate-limiter
+pnpm install notion-to-md @notionhq/client winston rate-limiter
 
 # Create custom enterprise configuration
 cat > enterprise-notion-config.json << EOF
@@ -230,7 +230,7 @@ cat > enterprise-notion-config.json << EOF
 EOF
 
 # Build custom MCP server
-npm run build
+pnpm run build
 
 # Deploy with enterprise configuration
 node dist/index.js --config enterprise-notion-config.json --facility 3000

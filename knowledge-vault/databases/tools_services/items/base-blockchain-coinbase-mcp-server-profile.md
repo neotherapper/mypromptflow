@@ -216,7 +216,7 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @base/blockchain-mcp-server
+pnpm install -g @base/blockchain-mcp-server
 
 # Configure in Claude Code settings
 {
@@ -249,7 +249,7 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 Fallback installation options
-- NPM package installation: `npm install @base/blockchain-mcp-server`
+- NPM package installation: `pnpm install @base/blockchain-mcp-server`
 - Yarn package manager: `yarn add @base/blockchain-mcp-server`
 - Source compilation with TypeScript build chain
 - Hardhat plugin installation for smart contract development

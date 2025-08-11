@@ -292,7 +292,7 @@ value_realization:
 # Configure application settings and index structure
 
 # 2. MCP Server Configuration
-npm install @algolia/mcp-server
+pnpm install @algolia/mcp-server
 # Configure connection parameters and authentication
 
 # 3. Basic Index Creation

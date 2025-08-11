@@ -181,7 +181,7 @@ services:
 {
   "mcpServers": {
     "aiven": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["-y", "@aiven/mcp-server"],
       "env": {
         "AIVEN_API_TOKEN": "your_api_token",

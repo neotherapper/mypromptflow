@@ -152,7 +152,7 @@ services:
 ### Installation Process
 ```bash
 # Install Redis MCP server
-npm install @modelcontextprotocol/redis-server
+pnpm install @modelcontextprotocol/redis-server
 
 # Docker deployment (recommended for production)
 docker run -d \
@@ -211,7 +211,7 @@ EOF
 
 # Initialize MCP server with connection
 export REDIS_URL="redis://:secure_password_123@localhost:6379/0"
-npx redis-mcp-server --facility 3000 --redis-url "$REDIS_URL"
+pnpm dlx redis-mcp-server --facility 3000 --redis-url "$REDIS_URL"
 ```
 
 ### Configuration Parameters

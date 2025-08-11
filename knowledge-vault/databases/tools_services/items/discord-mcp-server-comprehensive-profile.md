@@ -146,7 +146,7 @@ information_capabilities:
 ### Basic Installation
 ```bash
 # Install Discord MCP Server
-npm install @community/discord-mcp-server
+pnpm install @community/discord-mcp-server
 
 # Configure with Discord bot credentials
 export DISCORD_BOT_TOKEN="your_bot_token"

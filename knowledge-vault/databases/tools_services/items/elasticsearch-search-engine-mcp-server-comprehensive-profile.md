@@ -111,7 +111,7 @@ services:
 ### Installation Process
 ```bash
 # Install Elasticsearch MCP Server
-npm install @modelcontextprotocol/elasticsearch-server
+pnpm install @modelcontextprotocol/elasticsearch-server
 
 # Configure environment variables
 export ELASTICSEARCH_URL="https://localhost:9200"
@@ -120,7 +120,7 @@ export ELASTICSEARCH_PASSWORD="your_password"
 export ELASTICSEARCH_API_KEY="your_api_key"
 
 # Initialize server
-npx elasticsearch-mcp-server --facility 3000
+pnpm dlx elasticsearch-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

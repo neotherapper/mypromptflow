@@ -195,7 +195,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-figma-design
+pnpm install -g @modelcontextprotocol/server-figma-design
 
 # Configure in Claude Code settings
 {
@@ -221,7 +221,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "figma-design": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-figma-design"]
     }
   }
@@ -230,7 +230,7 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 
-- NPM package installation: `npm install -g @modelcontextprotocol/server-figma-design`
+- NPM package installation: `pnpm install -g @modelcontextprotocol/server-figma-design`
 - Yarn package installation: `yarn global add @modelcontextprotocol/server-figma-design`
 - Source compilation from GitHub repository
 - Enterprise deployment through Figma organization management

@@ -138,13 +138,13 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install Brave Search MCP server
-npm install @modelcontextprotocol/brave-search-server
+pnpm install @modelcontextprotocol/brave-search-server
 
 # Configure authentication
 export BRAVE_SEARCH_API_KEY="your-api-key"
 
 # Initialize server
-npx brave-search-mcp-server --port 3000
+pnpm dlx brave-search-mcp-server --port 3000
 ```
 
 ### Configuration Options

@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install DigitalOcean MCP Server
-npm install @modelcontextprotocol/digitalocean-server
+pnpm install @modelcontextprotocol/digitalocean-server
 
 # Configure environment variables
 export DO_TOKEN="your_digitalocean_token"
@@ -117,7 +117,7 @@ export DO_REGION="nyc3"  # Default region
 export DO_SIZE="s-1vcpu-1gb"  # Default droplet size
 
 # Initialize server
-npx digitalocean-mcp-server --facility 3000
+pnpm dlx digitalocean-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

@@ -210,7 +210,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @awslabs/mcp-server-core
+pnpm install -g @awslabs/mcp-server-core
 
 # Configure in Claude Code settings
 {

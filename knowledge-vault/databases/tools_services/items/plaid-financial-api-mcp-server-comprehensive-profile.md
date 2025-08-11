@@ -108,7 +108,7 @@ services:
 ### Installation Process
 ```bash
 # Install Plaid MCP Server
-npm install @modelcontextprotocol/plaid-server
+pnpm install @modelcontextprotocol/plaid-server
 
 # Configure environment variables
 export PLAID_CLIENT_ID="your_client_id"
@@ -117,7 +117,7 @@ export PLAID_ENV="sandbox" # or "development", "production"
 export PLAID_PRODUCTS="transactions,auth,identity,assets"
 
 # Initialize server
-npx plaid-mcp-server --facility 3000
+pnpm dlx plaid-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

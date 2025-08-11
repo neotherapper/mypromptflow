@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Azure Blob Storage MCP Server
-npm install @modelcontextprotocol/azure-blob-storage-server
+pnpm install @modelcontextprotocol/azure-blob-storage-server
 
 # Configure Azure authentication
 export AZURE_STORAGE_ACCOUNT="yourstorageaccount"
@@ -123,7 +123,7 @@ export AZURE_CLIENT_SECRET="your-client-secret"
 export AZURE_TENANT_ID="your-tenant-id"
 
 # Initialize server
-npx azure-blob-mcp-server --facility 3000
+pnpm dlx azure-blob-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

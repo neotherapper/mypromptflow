@@ -140,7 +140,7 @@ class UniversalSourceMonitor(ABC):
         pass
     
     @abstractmethod
-    def parse_content(self, raw_content: Any) -> ContentItem:
+    def parse_content(self, raw_content: Any) -> Optional[ContentItem]:
         """
         Parse raw content into universal ContentItem format
         Must be implemented by each source type
@@ -149,7 +149,7 @@ class UniversalSourceMonitor(ABC):
             raw_content: Raw content from source
             
         Returns:
-            Parsed ContentItem
+            Parsed ContentItem or None if content should be filtered out
         """
         pass
     
@@ -176,6 +176,10 @@ class UniversalSourceMonitor(ABC):
             for raw_item in raw_content:
                 try:
                     content_item = self.parse_content(raw_item)
+                    
+                    # Skip if filtered out (e.g., by language detection)
+                    if content_item is None:
+                        continue
                     
                     # Filter by date if specified
                     if since and content_item.published_date < since:

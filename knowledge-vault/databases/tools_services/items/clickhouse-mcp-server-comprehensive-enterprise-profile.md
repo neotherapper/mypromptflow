@@ -168,7 +168,7 @@ services:
 {
   "mcpServers": {
     "clickhouse": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["-y", "@clickhouse/mcp-server"],
       "env": {
         "CLICKHOUSE_HOST": "localhost",

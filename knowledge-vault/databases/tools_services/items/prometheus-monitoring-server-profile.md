@@ -152,7 +152,7 @@ services:
 ### Installation Process
 ```bash
 # Install Prometheus MCP server
-npm install @modelcontextprotocol/prometheus-server
+pnpm install @modelcontextprotocol/prometheus-server
 
 # Docker deployment (recommended for production)
 docker run -d \
@@ -215,7 +215,7 @@ scrape_configs:
 EOF
 
 # Initialize MCP server
-npx prometheus-mcp-server --config prometheus.yml --facility 9090
+pnpm dlx prometheus-mcp-server --config prometheus.yml --facility 9090
 ```
 
 ### Configuration Parameters

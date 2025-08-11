@@ -202,7 +202,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-lighthouse
+pnpm install -g @modelcontextprotocol/server-lighthouse
 
 # Configure in Claude Code settings
 {
@@ -228,7 +228,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "lighthouse": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-lighthouse"]
     }
   }
@@ -237,8 +237,8 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 
-- NPM package installation: `npm install -g lighthouse @modelcontextprotocol/server-lighthouse`
-- Lighthouse CI setup: `npm install -g @lhci/cli @modelcontextprotocol/server-lighthouse`
+- NPM package installation: `pnpm install -g lighthouse @modelcontextprotocol/server-lighthouse`
+- Lighthouse CI setup: `pnpm install -g @lhci/cli @modelcontextprotocol/server-lighthouse`
 - Source compilation from GitHub repository
 - CI/CD pipeline integration with performance budget enforcement
 

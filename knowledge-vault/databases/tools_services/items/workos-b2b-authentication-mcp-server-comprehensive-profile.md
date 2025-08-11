@@ -107,7 +107,7 @@ services:
 ### Installation Process
 ```bash
 # Install WorkOS MCP Server
-npm install @modelcontextprotocol/workos-server
+pnpm install @modelcontextprotocol/workos-server
 
 # Configure environment variables
 export WORKOS_API_KEY="sk_test_your_api_key"
@@ -115,7 +115,7 @@ export WORKOS_CLIENT_ID="client_your_client_id"
 export WORKOS_REDIRECT_URI="https://yourapp.com/callback"
 
 # Initialize server
-npx workos-mcp-server --facility 3000
+pnpm dlx workos-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

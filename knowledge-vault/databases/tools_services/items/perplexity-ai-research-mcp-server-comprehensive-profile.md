@@ -110,7 +110,7 @@ services:
 ### Installation Process
 ```bash
 # Install Perplexity MCP Server
-npm install @modelcontextprotocol/perplexity-server
+pnpm install @modelcontextprotocol/perplexity-server
 
 # Configure environment variables
 export PERPLEXITY_API_KEY="pplx-your-api-key-here"
@@ -118,7 +118,7 @@ export PERPLEXITY_MODEL="llama-3.1-sonar-large-128k-online"
 export PERPLEXITY_MAX_TOKENS="4096"
 
 # Initialize server
-npx perplexity-mcp-server --facility 3000
+pnpm dlx perplexity-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

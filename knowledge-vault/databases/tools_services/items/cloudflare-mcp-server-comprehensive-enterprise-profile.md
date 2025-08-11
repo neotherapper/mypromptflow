@@ -178,7 +178,7 @@ services:
 {
   "mcpServers": {
     "cloudflare": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["-y", "@cloudflare/mcp-server"],
       "env": {
         "CLOUDFLARE_API_KEY": "your_api_key",

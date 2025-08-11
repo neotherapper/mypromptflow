@@ -208,7 +208,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @awslabs/mcp-server-git-repo-research
+pnpm install -g @awslabs/mcp-server-git-repo-research
 
 # Configure in Claude Code settings
 {

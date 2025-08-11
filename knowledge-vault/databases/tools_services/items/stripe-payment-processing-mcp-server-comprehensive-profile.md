@@ -107,7 +107,7 @@ services:
 ### Installation Process
 ```bash
 # Install Stripe MCP Server
-npm install @modelcontextprotocol/stripe-server
+pnpm install @modelcontextprotocol/stripe-server
 
 # Configure environment variables
 export STRIPE_SECRET_KEY="sk_test_your_test_secret_key"
@@ -115,7 +115,7 @@ export STRIPE_PUBLISHABLE_KEY="pk_test_your_test_publishable_key"
 export STRIPE_WEBHOOK_SECRET="whsec_your_webhook_secret"
 
 # Initialize server
-npx stripe-mcp-server --facility 3000
+pnpm dlx stripe-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

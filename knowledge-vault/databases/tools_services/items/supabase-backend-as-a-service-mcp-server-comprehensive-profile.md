@@ -110,7 +110,7 @@ services:
 ### Installation Process
 ```bash
 # Install Supabase MCP Server
-npm install @modelcontextprotocol/supabase-server
+pnpm install @modelcontextprotocol/supabase-server
 
 # Configure environment variables
 export SUPABASE_URL="https://your-project.supabase.co"
@@ -118,7 +118,7 @@ export SUPABASE_ANON_KEY="your_anon_key"
 export SUPABASE_SERVICE_ROLE_KEY="your_service_role_key"
 
 # Initialize server
-npx supabase-mcp-server --facility 3000
+pnpm dlx supabase-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

@@ -207,7 +207,7 @@ services:
 #### Method 3: Claude Code Integration
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-github
+pnpm install -g @modelcontextprotocol/server-github
 
 # Configure in Claude Code settings
 {

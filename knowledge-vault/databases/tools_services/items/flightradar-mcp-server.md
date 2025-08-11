@@ -188,7 +188,7 @@ services:
 #### Method 3: Claude Code Integration
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-flightradar
+pnpm install -g @modelcontextprotocol/server-flightradar
 
 # Configure in Claude Code settings
 {

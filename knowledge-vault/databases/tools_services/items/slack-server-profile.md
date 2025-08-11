@@ -151,7 +151,7 @@ services:
 ### Installation Process
 ```bash
 # Install Slack MCP server
-npm install @modelcontextprotocol/slack-server
+pnpm install @modelcontextprotocol/slack-server
 
 # Configure environment variables
 export SLACK_BOT_TOKEN="xoxb-your-bot-token-here"
@@ -159,7 +159,7 @@ export SLACK_SIGNING_SECRET="your-signing-secret"
 export SLACK_APP_TOKEN="xapp-your-app-token" # For Socket Mode
 
 # Initialize MCP server
-npx slack-mcp-server --facility 3000 --bot-token "$SLACK_BOT_TOKEN"
+pnpm dlx slack-mcp-server --facility 3000 --bot-token "$SLACK_BOT_TOKEN"
 ```
 
 ### Configuration Parameters

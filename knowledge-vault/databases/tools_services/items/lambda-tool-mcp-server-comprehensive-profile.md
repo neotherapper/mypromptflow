@@ -180,7 +180,7 @@ git clone https://github.com/awslabs/mcp.git
 cd mcp/servers/lambda-tool
 
 # Install dependencies
-npm install
+pnpm install
 
 # Configure environment
 cat > .env << EOF
@@ -194,7 +194,7 @@ MCP_SERVER_PORT=3000
 EOF
 
 # Start the server
-npm start
+pnpm start
 ```
 
 ### Configuration Parameters

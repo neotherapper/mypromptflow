@@ -20,6 +20,7 @@ from core import (
     SourceType,
     SourceMonitorFactory
 )
+from core.language_filter import LanguageFilter
 
 class RSSSourceMonitor(UniversalSourceMonitor):
     """
@@ -35,6 +36,13 @@ class RSSSourceMonitor(UniversalSourceMonitor):
         self.timeout = config.get("timeout", 30) if config else 30
         self.max_items = config.get("max_items", 50) if config else 50
         self.user_agent = config.get("user_agent", self._default_user_agent()) if config else self._default_user_agent()
+        
+        # Language filtering configuration
+        self.language_filter = LanguageFilter(
+            target_languages=config.get("target_languages", ["en"]) if config else ["en"],
+            min_confidence=config.get("min_language_confidence", 0.7) if config else 0.7
+        )
+        self.enable_language_filtering = config.get("enable_language_filtering", True) if config else True
         
         # Validate RSS URL
         if not source_metadata.source_url:
@@ -227,16 +235,30 @@ class RSSSourceMonitor(UniversalSourceMonitor):
         
         return list(set(categories))  # Remove duplicates
     
-    def parse_content(self, raw_content: Dict[str, Any]) -> ContentItem:
+    def parse_content(self, raw_content: Dict[str, Any]) -> Optional[ContentItem]:
         """
-        Parse RSS entry into ContentItem
+        Parse RSS entry into ContentItem with language filtering
         
         Args:
             raw_content: Normalized RSS entry
             
         Returns:
-            Parsed ContentItem
+            Parsed ContentItem or None if filtered out by language detection
         """
+        # Apply language filtering first if enabled
+        if self.enable_language_filtering:
+            title = raw_content.get("title", "")
+            description = raw_content.get("description", "")
+            
+            should_include, lang_result = self.language_filter.should_include_content(title, description)
+            
+            if not should_include:
+                self.logger.debug(
+                    f"Filtering out non-English content: '{title[:50]}...' "
+                    f"(detected: {lang_result.language}, confidence: {lang_result.confidence:.2f})"
+                )
+                return None
+        
         # Parse published date
         try:
             if raw_content["published"]:
@@ -251,6 +273,23 @@ class RSSSourceMonitor(UniversalSourceMonitor):
         # Determine topics from categories and content
         topics = self._extract_topics(raw_content)
         
+        # Create metadata with language information
+        metadata = {
+            "source_type": "rss",
+            "feed_title": raw_content["source_feed_title"],
+            "categories": raw_content.get("categories", []),
+            "media": raw_content.get("media", []),
+            "raw_entry": raw_content.get("raw_entry", {})
+        }
+        
+        # Add language detection results to metadata
+        if self.enable_language_filtering:
+            metadata.update({
+                "detected_language": lang_result.language,
+                "language_confidence": lang_result.confidence,
+                "is_english": lang_result.is_english
+            })
+        
         # Create content item
         return ContentItem(
             item_id=raw_content["id"],
@@ -261,13 +300,7 @@ class RSSSourceMonitor(UniversalSourceMonitor):
             published_date=published_date,
             author=raw_content["author"],
             topics=topics,
-            metadata={
-                "source_type": "rss",
-                "feed_title": raw_content["source_feed_title"],
-                "categories": raw_content.get("categories", []),
-                "media": raw_content.get("media", []),
-                "raw_entry": raw_content.get("raw_entry", {})
-            }
+            metadata=metadata
         )
     
     def _extract_topics(self, entry: Dict[str, Any]) -> List[str]:

@@ -151,7 +151,7 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install Datadog MCP server
-npm install @modelcontextprotocol/datadog-server
+pnpm install @modelcontextprotocol/datadog-server
 
 # Configure authentication
 export DD_API_KEY="your-api-key"
@@ -162,7 +162,7 @@ export DD_SITE="datadoghq.com"  # or datadoghq.eu for EU
 DD_API_KEY=$DD_API_KEY bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script.sh)"
 
 # Initialize MCP server
-npx datadog-mcp-server --port 3000
+pnpm dlx datadog-mcp-server --port 3000
 ```
 
 ## 📊 Performance & Scalability

@@ -151,7 +151,7 @@ services:
 ### Installation Process
 ```bash
 # Install Zendesk MCP server
-npm install @modelcontextprotocol/zendesk-server
+pnpm install @modelcontextprotocol/zendesk-server
 
 # Configure Zendesk authentication
 export ZENDESK_SUBDOMAIN="your-company"
@@ -162,7 +162,7 @@ export ZENDESK_API_TOKEN="your-api-token-here"
 export ZENDESK_OAUTH_TOKEN="your-oauth-token"
 
 # Initialize MCP server
-npx zendesk-mcp-server \
+pnpm dlx zendesk-mcp-server \
   --subdomain "$ZENDESK_SUBDOMAIN" \
   --email "$ZENDESK_EMAIL" \
   --token "$ZENDESK_API_TOKEN"

@@ -150,7 +150,7 @@ services:
 {
   "mcpServers": {
     "git": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["-y", "@modelcontextprotocol/server-git"],
       "env": {
         "GIT_AUTHOR_NAME": "Your Name",

@@ -198,7 +198,7 @@ services:
 #### Method 3: Claude Code Integration
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-adyen
+pnpm install -g @modelcontextprotocol/server-adyen
 
 # Configure in Claude Code settings
 {

@@ -190,13 +190,13 @@ services:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-gcp
+pnpm install -g @modelcontextprotocol/server-gcp
 
 # Configure in Claude Code settings
 {
   "mcpServers": {
     "gcp": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-gcp"],
       "env": {
         "GOOGLE_APPLICATION_CREDENTIALS": "/path/to/service-account.json",
@@ -214,7 +214,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "gcp": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-gcp"]
     }
   }

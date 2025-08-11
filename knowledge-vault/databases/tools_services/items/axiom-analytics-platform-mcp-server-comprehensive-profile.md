@@ -141,14 +141,14 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install Axiom MCP server
-npm install @modelcontextprotocol/axiom-server
+pnpm install @modelcontextprotocol/axiom-server
 
 # Configure authentication
 export AXIOM_TOKEN="xat-your-api-token"
 export AXIOM_ORG_ID="your-org-id"
 
 # Initialize server
-npx axiom-mcp-server --port 3000
+pnpm dlx axiom-mcp-server --port 3000
 ```
 
 ## 📊 Performance & Scalability

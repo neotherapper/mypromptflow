@@ -151,7 +151,7 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install Docker MCP server
-npm install @modelcontextprotocol/docker-server
+pnpm install @modelcontextprotocol/docker-server
 
 # Docker Engine installation (Linux)
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -180,7 +180,7 @@ sudo systemctl restart docker
 
 # Initialize MCP server
 export DOCKER_HOST="unix:///var/run/docker.sock"
-npx docker-mcp-server --port 3000
+pnpm dlx docker-mcp-server --port 3000
 ```
 
 ## 📊 Performance & Scalability

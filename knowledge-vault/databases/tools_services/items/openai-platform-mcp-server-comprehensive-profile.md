@@ -140,7 +140,7 @@ curl -X POST https://api.openai.com/v1/chat/completions \
 
 ```bash
 # Install OpenAI MCP server via npm
-npm install -g @modelcontextprotocol/server-openai
+pnpm install -g @modelcontextprotocol/server-openai
 
 # Configure environment variables
 export OPENAI_API_KEY="sk-your-api-key-here"
@@ -163,7 +163,7 @@ curl -X POST http://localhost:3000/rpc \
 
 ```bash
 # Install OpenAI SDK for direct integration
-npm install openai
+pnpm install openai
 
 # Test direct API access
 curl -X POST https://api.openai.com/v1/models \
@@ -198,10 +198,10 @@ console.log('OpenAI API connection established');
 # Clone OpenAI MCP server source for customization
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/openai
-npm install
+pnpm install
 
 # Install additional dependencies for custom features
-npm install openai winston rate-limiter express helmet tiktoken
+pnpm install openai winston rate-limiter express helmet tiktoken
 
 # Create custom enterprise configuration
 cat > enterprise-openai-config.json << EOF
@@ -267,7 +267,7 @@ cat > enterprise-openai-config.json << EOF
 EOF
 
 # Build custom MCP server with enterprise features
-npm run build
+pnpm run build
 
 # Deploy with enterprise configuration and monitoring
 node dist/index.js --config enterprise-openai-config.json --facility 3000 --enable-monitoring

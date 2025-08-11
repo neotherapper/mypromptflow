@@ -63,7 +63,7 @@ The YouTube Video Content Platform MCP Server provides comprehensive video conte
 
 ```bash
 # Using YouTube Data API v3
-npm install @google/youtube-api-mcp-server
+pnpm install @google/youtube-api-mcp-server
 ```
 
 **Setup Time**: 25-35 minutes  

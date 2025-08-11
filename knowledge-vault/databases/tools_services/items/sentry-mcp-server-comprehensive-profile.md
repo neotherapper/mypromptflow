@@ -105,14 +105,14 @@ services:
 ### Installation Process
 ```bash
 # Install Sentry MCP Server
-npm install @modelcontextprotocol/sentry-server
+pnpm install @modelcontextprotocol/sentry-server
 
 # Configure authentication
 export SENTRY_AUTH_TOKEN="your-auth-token"
 export SENTRY_ORG="your-organization"
 
 # Initialize server
-npx sentry-mcp-server --facility 3000
+pnpm dlx sentry-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

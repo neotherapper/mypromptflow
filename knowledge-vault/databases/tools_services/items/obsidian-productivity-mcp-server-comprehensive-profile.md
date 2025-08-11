@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Obsidian MCP Server
-npm install @modelcontextprotocol/obsidian-server
+pnpm install @modelcontextprotocol/obsidian-server
 
 # Configure environment variables
 export OBSIDIAN_VAULT_PATH="/path/to/obsidian/vault"
@@ -118,7 +118,7 @@ export OBSIDIAN_SYNC_ENABLED="true"
 export OBSIDIAN_PLUGIN_PATH="/path/to/plugins"
 
 # Initialize server
-npx obsidian-mcp-server --facility 3000
+pnpm dlx obsidian-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

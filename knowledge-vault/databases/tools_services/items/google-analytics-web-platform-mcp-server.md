@@ -63,7 +63,7 @@ The Google Analytics Web Platform MCP Server provides comprehensive web analytic
 
 ```bash
 # Using NPM package manager
-npm install @google-analytics/data-api-mcp-server
+pnpm install @google-analytics/data-api-mcp-server
 ```
 
 **Setup Time**: 30-45 minutes  

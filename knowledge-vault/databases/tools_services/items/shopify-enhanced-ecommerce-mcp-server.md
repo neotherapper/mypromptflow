@@ -62,7 +62,7 @@ The Shopify Enhanced E-commerce MCP Server provides comprehensive e-commerce pla
 
 ```bash
 # Using Shopify Admin API
-npm install @shopify/admin-api-client shopify-mcp-server
+pnpm install @shopify/admin-api-client shopify-mcp-server
 ```
 
 **Setup Time**: 30-45 minutes  

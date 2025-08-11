@@ -131,7 +131,7 @@ docker pull coingecko/mcp-server:latest
 docker run -p 3000:3000 -e COINGECKO_API_KEY=your_key coingecko/mcp-server
 
 # npm installation
-npm install -g @coingecko/mcp-server
+pnpm install -g @coingecko/mcp-server
 coingecko-mcp-server --api-key your_key --facility 3000
 
 # Python environment

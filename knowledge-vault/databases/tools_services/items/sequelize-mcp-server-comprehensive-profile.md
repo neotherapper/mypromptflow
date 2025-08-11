@@ -107,21 +107,21 @@ services:
 ### Installation Process
 ```bash
 # Install Sequelize MCP Server
-npm install @modelcontextprotocol/sequelize-server
+pnpm install @modelcontextprotocol/sequelize-server
 
 # Install Sequelize and database driver
-npm install sequelize
-npm install pg pg-hstore  # PostgreSQL
+pnpm install sequelize
+pnpm install pg pg-hstore  # PostgreSQL
 # or
-npm install mysql2       # MySQL
+pnpm install mysql2       # MySQL
 # or
-npm install sqlite3      # SQLite
+pnpm install sqlite3      # SQLite
 
 # Initialize Sequelize CLI
-npx sequelize-cli init
+pnpm dlx sequelize-cli init
 
 # Initialize MCP server
-npx sequelize-mcp-server --facility 3000
+pnpm dlx sequelize-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters
@@ -498,16 +498,16 @@ const complexAnalytics = await sequelizeMcp.query(`
 ### Diagnostic Commands
 ```bash
 # Test database connectivity
-npx sequelize-cli db:migrate:status
+pnpm dlx sequelize-cli db:migrate:status
 
 # Run database migrations
-npx sequelize-cli db:migrate
+pnpm dlx sequelize-cli db:migrate
 
 # Generate migration file
-npx sequelize-cli migration:generate --name create-users-table
+pnpm dlx sequelize-cli migration:generate --name create-users-table
 
 # Seed database with test data
-npx sequelize-cli db:seed:all
+pnpm dlx sequelize-cli db:seed:all
 
 # Check connection pool status
 node -e "

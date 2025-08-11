@@ -208,7 +208,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-react-devtools
+pnpm install -g @modelcontextprotocol/server-react-devtools
 
 # Configure in Claude Code settings
 {
@@ -234,7 +234,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "react-devtools": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-react-devtools", "--local"]
     }
   }
@@ -243,8 +243,8 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 
-- NPM package installation: `npm install -g react-devtools @modelcontextprotocol/server-react-devtools`
-- React application integration: `npm install --save-dev @modelcontextprotocol/react-devtools-addon`
+- NPM package installation: `pnpm install -g react-devtools @modelcontextprotocol/server-react-devtools`
+- React application integration: `pnpm install --save-dev @modelcontextprotocol/react-devtools-addon`
 - Source compilation from GitHub repository
 - IDE extension integration for VS Code and WebStorm
 

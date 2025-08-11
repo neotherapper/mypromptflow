@@ -389,9 +389,9 @@ domain_customization:
 
 **Installation Command**:
 ```bash
-npm install -g pr-reviewer-mcp
+pnpm install -g pr-reviewer-mcp
 # or MCP Server
-npx pr-reviewer-mcp --init
+pnpm dlx pr-reviewer-mcp --init
 ```
 
 **Quick Start Configuration**:

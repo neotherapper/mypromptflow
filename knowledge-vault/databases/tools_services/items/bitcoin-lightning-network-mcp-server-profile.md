@@ -233,7 +233,7 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @bitcoin/lightning-mcp-server
+pnpm install -g @bitcoin/lightning-mcp-server
 
 # Configure in Claude Code settings
 {

@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Chronulus AI MCP Server
-npm install @modelcontextprotocol/chronulus-server
+pnpm install @modelcontextprotocol/chronulus-server
 
 # Configure environment variables
 export CHRONULUS_API_KEY="your_chronulus_api_key"
@@ -117,7 +117,7 @@ export CHRONULUS_MODEL_ID="your_model_id"
 export CHRONULUS_WORKSPACE="your_workspace_id"
 
 # Initialize server
-npx chronulus-mcp-server --facility 3000
+pnpm dlx chronulus-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

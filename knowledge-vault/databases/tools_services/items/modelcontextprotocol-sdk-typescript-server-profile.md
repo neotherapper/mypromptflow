@@ -153,7 +153,7 @@ services:
   
   typescript-compiler:
     image: node:18-alpine
-    command: npx tsc --watch
+    command: pnpm dlx tsc --watch
     volumes:
       - ./src:/app/src
       - ./tsconfig.json:/app/tsconfig.json
@@ -163,7 +163,7 @@ services:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/sdk
+pnpm install -g @modelcontextprotocol/sdk
 
 # Configure in Claude Code settings
 {
@@ -187,7 +187,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "modelcontextprotocol-sdk": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/sdk", "serve"]
     }
   }
@@ -196,7 +196,7 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 Fallback installation options
-- NPM package installation: `npm install @modelcontextprotocol/sdk`
+- NPM package installation: `pnpm install @modelcontextprotocol/sdk`
 - Yarn package manager: `yarn add @modelcontextprotocol/sdk`
 - Source compilation from official repository
 - Enterprise deployment with custom build pipeline

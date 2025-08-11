@@ -202,7 +202,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-chrome-devtools
+pnpm install -g @modelcontextprotocol/server-chrome-devtools
 
 # Configure in Claude Code settings
 {
@@ -228,7 +228,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "chrome-devtools": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-chrome-devtools", "--local-chrome"]
     }
   }
@@ -237,7 +237,7 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 
-- NPM package installation: `npm install -g @modelcontextprotocol/server-chrome-devtools`
+- NPM package installation: `pnpm install -g @modelcontextprotocol/server-chrome-devtools`
 - Local Chrome setup: Launch Chrome with `--remote-debugging-port=9222`
 - Source compilation from GitHub repository
 - CI/CD integration for automated browser testing workflows

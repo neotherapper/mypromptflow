@@ -162,7 +162,7 @@ services:
 ### Installation Process
 ```bash
 # 1. Install Adfin Financial Integration Platform
-npm install -g @adfin/financial-integration-platform
+pnpm install -g @adfin/financial-integration-platform
 
 # 2. Initialize with business template
 adfin init --template business-risk management

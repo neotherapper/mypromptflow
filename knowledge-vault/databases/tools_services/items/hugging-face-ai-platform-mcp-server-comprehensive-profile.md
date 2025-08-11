@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Hugging Face MCP Server
-npm install @modelcontextprotocol/huggingface-server
+pnpm install @modelcontextprotocol/huggingface-server
 
 # Configure environment variables
 export HUGGINGFACE_API_TOKEN="your_hf_token"
@@ -117,7 +117,7 @@ export HUGGINGFACE_ENDPOINT="https://api-inference.huggingface.co"
 export HUGGINGFACE_CACHE_DIR="/opt/huggingface/cache"
 
 # Initialize server
-npx huggingface-mcp-server --facility 3000
+pnpm dlx huggingface-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

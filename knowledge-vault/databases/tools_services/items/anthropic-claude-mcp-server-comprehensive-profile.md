@@ -139,7 +139,7 @@ curl -X POST https://api.anthropic.com/v1/messages \
 
 ```bash
 # Install Anthropic Claude MCP server via npm
-npm install -g @modelcontextprotocol/server-anthropic-claude
+pnpm install -g @modelcontextprotocol/server-anthropic-claude
 
 # Configure environment variables
 export ANTHROPIC_API_KEY="sk-ant-api03-your-api-key-here"
@@ -161,7 +161,7 @@ curl -X POST http://localhost:3000/rpc \
 
 ```bash
 # Install Anthropic SDK for direct integration
-npm install @anthropic-ai/sdk
+pnpm install @anthropic-ai/sdk
 
 # Test direct API access
 curl -X POST https://api.anthropic.com/v1/messages \
@@ -202,10 +202,10 @@ console.log('Anthropic Claude API connection established');
 # Clone Anthropic MCP server source for customization
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/anthropic-claude
-npm install
+pnpm install
 
 # Install additional dependencies for custom features
-npm install @anthropic-ai/sdk winston rate-limiter express helmet
+pnpm install @anthropic-ai/sdk winston rate-limiter express helmet
 
 # Create custom enterprise configuration
 cat > enterprise-claude-config.json << EOF
@@ -252,7 +252,7 @@ cat > enterprise-claude-config.json << EOF
 EOF
 
 # Build custom MCP server with enterprise features
-npm run build
+pnpm run build
 
 # Deploy with enterprise configuration and monitoring
 node dist/index.js --config enterprise-claude-config.json --facility 3000 --enable-monitoring

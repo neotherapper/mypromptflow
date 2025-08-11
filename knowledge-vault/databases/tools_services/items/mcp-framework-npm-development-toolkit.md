@@ -141,15 +141,15 @@ information_capabilities:
 #### Method 1: NPM Global Installation (Recommended)
 ```bash
 # Install MCP Framework globally
-npm install -g mcp-framework
+pnpm install -g mcp-framework
 
 # Create new MCP server project
 mcp-framework create my-server --template=standard
 
 # Navigate and start development
 cd my-server
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 #### Method 2: Docker Development Environment
@@ -196,7 +196,7 @@ services:
 #### Method 4: Claude Code Integration
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-mcp-framework
+pnpm install -g @modelcontextprotocol/server-mcp-framework
 
 # Configure in Claude Code settings
 {

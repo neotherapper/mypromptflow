@@ -146,7 +146,7 @@ information_capabilities:
 ### Basic Installation
 ```bash
 # Install Filesystem MCP Server
-npm install @mcp/filesystem-server
+pnpm install @mcp/filesystem-server
 
 # Configure with directory permissions
 export MCP_FILESYSTEM_ROOT="/path/to/allowed/directory"

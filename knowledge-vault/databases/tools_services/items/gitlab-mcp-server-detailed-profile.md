@@ -161,10 +161,10 @@ services:
 #### Method 1: NPM Package Installation
 ```bash
 # Install GitLab MCP Server
-npm install -g @modelcontextprotocol/server-gitlab
+pnpm install -g @modelcontextprotocol/server-gitlab
 
 # Or install locally in project
-npm install @modelcontextprotocol/server-gitlab
+pnpm install @modelcontextprotocol/server-gitlab
 ```
 
 #### Method 2: Docker Container Deployment
@@ -864,9 +864,9 @@ code-quality:
   image: node:$NODE_VERSION
   script:
     - npm ci
-    - npm run lint
-    - npm run format:check
-    - npm run type-check
+    - pnpm run lint
+    - pnpm run format:check
+    - pnpm run type-check
   cache:
     key: $CI_COMMIT_REF_SLUG
     paths:
@@ -885,8 +885,8 @@ test:unit:
     - redis:6
   script:
     - npm ci
-    - npm run test:unit
-    - npm run test:integration
+    - pnpm run test:unit
+    - pnpm run test:integration
   coverage: '/Coverage: \\d+\\.\\d+%/'
   artifacts:
     reports:

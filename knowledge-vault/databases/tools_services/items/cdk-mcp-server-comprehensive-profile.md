@@ -211,7 +211,7 @@ Official Repository: https://github.com/awslabs/mcp/src/cdk-mcp-server
 
 ### System Requirements
 - **Runtime**: Python 3.10+ with uv package manager or Docker container environment
-- **Dependencies**: AWS CDK CLI (npm install -g aws-cdk), Node.js 18+, appropriate language SDKs
+- **Dependencies**: AWS CDK CLI (pnpm install -g aws-cdk), Node.js 18+, appropriate language SDKs
 - **Memory**: 2GB minimum, 8GB recommended for large infrastructure projects
 - **Network**: HTTPS outbound to AWS services, GitHub for Solutions Constructs documentation
 - **Storage**: 4GB for CDK synthesized templates, construct libraries, and documentation cache
@@ -391,7 +391,7 @@ EOF
 <<<<<<< HEAD
 
 # Install AWS CDK CLI globally
-npm install -g aws-cdk
+pnpm install -g aws-cdk
 
 # Verify installation
 cdk --version
@@ -430,7 +430,7 @@ cat > ~/.mcp-config.json << EOF
 EOF
 
 # Install prerequisites
-npm install -g aws-cdk typescript
+pnpm install -g aws-cdk typescript
 pip install aws-cdk-lib constructs
 ```
 
@@ -590,7 +590,7 @@ volumes:
 ### Prerequisites and Dependencies
 ```bash
 # Install AWS CDK CLI globally
-npm install -g aws-cdk
+pnpm install -g aws-cdk
 
 # Verify installation
 cdk --version
@@ -849,7 +849,7 @@ jobs:
       
       - name: Setup CDK MCP Server Environment
         run: |
-          npm install -g aws-cdk
+          pnpm install -g aws-cdk
           uv python install 3.10
           uvx awslabs.cdk-mcp-server@latest --version
       

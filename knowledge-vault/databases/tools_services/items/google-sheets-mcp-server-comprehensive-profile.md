@@ -146,7 +146,7 @@ information_capabilities:
 ### Basic Installation
 ```bash
 # Install Google Sheets MCP Server
-npm install @community/google-sheets-mcp-server
+pnpm install @community/google-sheets-mcp-server
 
 # Configure with Google API credentials
 export GOOGLE_SHEETS_CREDENTIALS="path/to/credentials.json"

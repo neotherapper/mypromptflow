@@ -112,8 +112,8 @@ services:
 ### Installation Process
 ```bash
 # Install Vercel CLI and MCP Server
-npm install -g vercel
-npm install @modelcontextprotocol/vercel-server
+pnpm install -g vercel
+pnpm install @modelcontextprotocol/vercel-server
 
 # Configure authentication
 vercel login
@@ -124,7 +124,7 @@ export VERCEL_ORG_ID="your_org_id"
 export VERCEL_PROJECT_ID="your_project_id"
 
 # Initialize server
-npx vercel-mcp-server --facility 3000
+pnpm dlx vercel-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters
@@ -136,7 +136,7 @@ npx vercel-mcp-server --facility 3000
     "projectId": "your_project_id",
     "deployment": {
       "framework": "nextjs",
-      "buildCommand": "npm run build",
+      "buildCommand": "pnpm run build",
       "outputDirectory": ".next",
       "installCommand": "npm ci",
       "nodeVersion": "18.x"
@@ -252,7 +252,7 @@ jobs:
         run: npm ci
         
       - name: Build project
-        run: npm run build
+        run: pnpm run build
         
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25

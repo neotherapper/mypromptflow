@@ -108,7 +108,7 @@ services:
 ### Installation Process
 ```bash
 # Install Infisical MCP Server
-npm install @modelcontextprotocol/infisical-server
+pnpm install @modelcontextprotocol/infisical-server
 
 # Configure environment variables
 export INFISICAL_TOKEN="st_prod_your_service_token"
@@ -119,7 +119,7 @@ export INFISICAL_ENVIRONMENT="production"
 export INFISICAL_API_URL="https://your-infisical-instance.com/api"
 
 # Initialize server
-npx infisical-mcp-server --facility 3000
+pnpm dlx infisical-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters
@@ -260,7 +260,7 @@ async function getDatabaseConnection() {
     DATABASE_URL: ${{ steps.infisical.outputs.DATABASE_URL }}
     API_KEY: ${{ steps.infisical.outputs.API_KEY }}
   run: |
-    npm run deploy
+    pnpm run deploy
 ```
 
 ### Container Integration
@@ -275,7 +275,7 @@ RUN apk add --no-cache curl && \
 
 # Application setup
 COPY package*.json ./
-RUN npm install
+RUN pnpm install
 COPY . .
 
 # Use Infisical for secret injection

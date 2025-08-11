@@ -193,13 +193,13 @@ services:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-teams
+pnpm install -g @modelcontextprotocol/server-teams
 
 # Configure in Claude Code settings
 {
   "mcpServers": {
     "teams": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-teams"],
       "env": {
         "AZURE_CLIENT_ID": "your_azure_client_id",
@@ -218,7 +218,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "teams": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-teams"]
     }
   }

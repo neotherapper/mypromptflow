@@ -209,7 +209,7 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @evm/multichain-mcp-server
+pnpm install -g @evm/multichain-mcp-server
 
 # Configure in Claude Code settings
 {
@@ -242,7 +242,7 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 Fallback installation options
-- NPM package installation: `npm install @evm/multichain-mcp-server`
+- NPM package installation: `pnpm install @evm/multichain-mcp-server`
 - Kubernetes Helm chart: `helm install evm-multichain evm/multichain-server`
 - Source compilation with TypeScript and Go build chains
 - Enterprise installer with automated multi-chain infrastructure

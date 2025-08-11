@@ -142,7 +142,7 @@ docker run -p 3000:3000 \
   walletmcp/solana-server
 
 # npm installation
-npm install -g @walletmcp/solana-server
+pnpm install -g @walletmcp/solana-server
 walletmcp-solana --config config.json
 
 # Direct binary deployment

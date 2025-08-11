@@ -145,7 +145,7 @@ information_capabilities:
 #### Method 1: NPM Installation (Recommended)
 ```bash
 # Install RocketShip AI MCP Server
-npm install -g @rocketshipai/mcp-server
+pnpm install -g @rocketshipai/mcp-server
 
 # Initialize configuration
 rocketshipai-mcp init --api-key ${ROCKETSHIPAI_API_KEY}

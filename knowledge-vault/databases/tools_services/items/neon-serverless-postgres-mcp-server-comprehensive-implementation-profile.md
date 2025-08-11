@@ -118,7 +118,7 @@ services:
 #### Method 1: Direct MCP Integration
 ```bash
 # Install Neon MCP Server
-npm install @neon/mcp-server
+pnpm install @neon/mcp-server
 
 # Configure environment variables
 export NEON_API_KEY="your_api_key_here"

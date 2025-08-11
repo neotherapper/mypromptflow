@@ -112,7 +112,7 @@ services:
 ### Installation Process
 ```bash
 # Install Grafana MCP Server
-npm install @modelcontextprotocol/grafana-server
+pnpm install @modelcontextprotocol/grafana-server
 
 # Configure environment variables
 export GRAFANA_URL="https://your-grafana-instance.com"
@@ -121,7 +121,7 @@ export GRAFANA_ORG_ID="1"
 export GRAFANA_TIMEOUT="30000"
 
 # Initialize server
-npx grafana-mcp-server --facility 3000
+pnpm dlx grafana-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

@@ -138,7 +138,7 @@ information_capabilities:
 ### Basic Installation
 ```bash
 # Install Spotify MCP Server
-npm install @community/spotify-mcp-server
+pnpm install @community/spotify-mcp-server
 
 # Configure with Spotify API credentials
 export SPOTIFY_CLIENT_ID="your_client_id"

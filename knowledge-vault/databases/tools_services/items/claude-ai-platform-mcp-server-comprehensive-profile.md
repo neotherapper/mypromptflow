@@ -107,7 +107,7 @@ services:
 ### Installation Process
 ```bash
 # Install Claude MCP Server
-npm install @modelcontextprotocol/claude-server
+pnpm install @modelcontextprotocol/claude-server
 
 # Configure environment variables
 export ANTHROPIC_API_KEY="sk-ant-your-api-key-here"
@@ -115,7 +115,7 @@ export CLAUDE_MODEL="claude-3-opus-20240229"
 export CLAUDE_MAX_TOKENS="4096"
 
 # Initialize server
-npx claude-mcp-server --facility 3000
+pnpm dlx claude-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Cohere AI MCP Server
-npm install @modelcontextprotocol/cohere-server
+pnpm install @modelcontextprotocol/cohere-server
 
 # Configure environment variables
 export COHERE_API_KEY="your-cohere-api-key-here"
@@ -117,7 +117,7 @@ export COHERE_ENDPOINT="https://api.cohere.ai/v1"
 export COHERE_MODEL_VERSION="latest"
 
 # Initialize server
-npx cohere-mcp-server --facility 3000
+pnpm dlx cohere-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

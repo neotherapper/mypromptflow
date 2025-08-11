@@ -141,14 +141,14 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install EverArt MCP server
-npm install @modelcontextprotocol/everart-server
+pnpm install @modelcontextprotocol/everart-server
 
 # Configure authentication
 export EVERART_API_KEY="your-api-key"
 export EVERART_PROJECT_ID="your-project-id"
 
 # Initialize server
-npx everart-mcp-server --port 3000
+pnpm dlx everart-mcp-server --port 3000
 ```
 
 ## 💰 Business Value & ROI

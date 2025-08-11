@@ -408,7 +408,7 @@ domain_configuration:
 
 **Installation Command**:
 ```bash
-npm install -g pr-creator-mcp
+pnpm install -g pr-creator-mcp
 # or using Cursor IDE MCP Server
 cursor --install-extension pr-creator-mcp
 ```

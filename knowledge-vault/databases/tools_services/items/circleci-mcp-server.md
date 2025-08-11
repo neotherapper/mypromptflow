@@ -280,7 +280,7 @@ class CircleCISecurityManager {
           {
             run: {
               name: 'Static Code Analysis',
-              command: 'npm run security:scan'
+              command: 'pnpm run security:scan'
             }
           },
           {
@@ -617,7 +617,7 @@ jobs:
       - run:
           name: Run Unit Tests
           command: |
-            npm run test:ci -- --maxWorkers=2
+            pnpm run test:ci -- --maxWorkers=2
       - store_test_results:
           path: test-results
       - store_artifacts:

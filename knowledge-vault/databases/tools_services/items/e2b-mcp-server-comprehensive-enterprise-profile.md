@@ -179,7 +179,7 @@ services:
 {
   "mcpServers": {
     "e2b": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["-y", "@e2b/mcp-server"],
       "env": {
         "E2B_API_KEY": "your_api_key",
@@ -490,7 +490,7 @@ class DevelopmentEnvironmentManager {
       pip3 install fastapi uvicorn sqlalchemy psycopg2-binary
       
       # Setup Node.js environment  
-      npm install -g create-react-app @types/node typescript
+      pnpm install -g create-react-app @types/node typescript
       
       # Create project structure
       mkdir -p /workspace/{backend,frontend,database,scripts}

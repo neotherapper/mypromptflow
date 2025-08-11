@@ -212,13 +212,13 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-mysql
+pnpm install -g @modelcontextprotocol/server-mysql
 
 # Configure in Claude Code settings
 {
   "mcpServers": {
     "mysql": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-mysql"],
       "env": {
         "MYSQL_HOST": "localhost",
@@ -239,7 +239,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "mysql": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-mysql"]
     }
   }

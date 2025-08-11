@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Mistral AI MCP Server
-npm install @modelcontextprotocol/mistral-server
+pnpm install @modelcontextprotocol/mistral-server
 
 # Configure environment variables
 export MISTRAL_API_KEY="your-mistral-api-key-here"
@@ -117,7 +117,7 @@ export MISTRAL_ENDPOINT="https://api.mistral.ai/v1"
 export MISTRAL_REGION="eu-west-1"
 
 # Initialize server
-npx mistral-mcp-server --facility 3000
+pnpm dlx mistral-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

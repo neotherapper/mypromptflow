@@ -110,7 +110,7 @@ services:
 ### Installation Process
 ```bash
 # Install MongoDB MCP Server
-npm install @modelcontextprotocol/mongodb-server
+pnpm install @modelcontextprotocol/mongodb-server
 
 # Configure environment variables
 export MONGODB_URI="mongodb://username:password@localhost:27017/database"
@@ -118,7 +118,7 @@ export MONGODB_DB_NAME="your_database_name"
 export MONGODB_OPTIONS='{"ssl":true,"replicaSet":"rs0"}'
 
 # Initialize server
-npx mongodb-mcp-server --facility 3000
+pnpm dlx mongodb-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

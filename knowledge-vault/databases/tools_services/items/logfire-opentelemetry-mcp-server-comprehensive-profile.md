@@ -109,7 +109,7 @@ services:
 ### Installation Process
 ```bash
 # Install Logfire MCP Server
-npm install @modelcontextprotocol/logfire-server
+pnpm install @modelcontextprotocol/logfire-server
 
 # Configure environment variables
 export LOGFIRE_TOKEN="your_logfire_token"
@@ -117,7 +117,7 @@ export LOGFIRE_PROJECT_ID="your_project_id"
 export LOGFIRE_ENVIRONMENT="production"
 
 # Initialize server
-npx logfire-mcp-server --facility 3000
+pnpm dlx logfire-mcp-server --facility 3000
 ```
 
 ### Configuration Parameters

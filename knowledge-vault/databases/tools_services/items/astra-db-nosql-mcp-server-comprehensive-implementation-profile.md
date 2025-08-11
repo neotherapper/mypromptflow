@@ -119,7 +119,7 @@ services:
 #### Method 1: Direct MCP Integration
 ```bash
 # Install Astra DB MCP Server
-npm install @datastax/astra-db-mcp-server
+pnpm install @datastax/astra-db-mcp-server
 
 # Configure environment variables
 export ASTRA_DB_APPLICATION_TOKEN="your_token_here"

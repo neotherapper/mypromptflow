@@ -213,7 +213,7 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @arxiv/research-mcp-server
+pnpm install -g @arxiv/research-mcp-server
 
 # Configure in Claude Code settings
 {

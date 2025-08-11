@@ -216,13 +216,13 @@ volumes:
 Direct integration with Claude Code development environment
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-newrelic
+pnpm install -g @modelcontextprotocol/server-newrelic
 
 # Configure in Claude Code settings
 {
   "mcpServers": {
     "newrelic": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-newrelic"],
       "env": {
         "NEW_RELIC_API_KEY": "your_user_api_key",
@@ -241,7 +241,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "newrelic": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-newrelic"]
     }
   }

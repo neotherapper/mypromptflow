@@ -200,7 +200,7 @@ Direct integration with Claude Code development environment
 
 ```bash
 # Install via Claude Code MCP configuration
-npm install -g @modelcontextprotocol/server-storybook
+pnpm install -g @modelcontextprotocol/server-storybook
 
 # Configure in Claude Code settings
 {
@@ -226,7 +226,7 @@ Integration with Claude Desktop application
 {
   "mcpServers": {
     "storybook": {
-      "command": "npx",
+      "command": "pnpm dlx",
       "args": ["@modelcontextprotocol/server-storybook", "--project", "./"]
     }
   }
@@ -235,8 +235,8 @@ Integration with Claude Desktop application
 
 #### Method 5: Alternative Installation Methods
 
-- NPM package installation: `npm install -g @modelcontextprotocol/server-storybook`
-- Framework-specific setup: `npx storybook@latest init && npm install @modelcontextprotocol/storybook-addon`
+- NPM package installation: `pnpm install -g @modelcontextprotocol/server-storybook`
+- Framework-specific setup: `pnpm dlx storybook@latest init && pnpm install @modelcontextprotocol/storybook-addon`
 - Source compilation from GitHub repository
 - Enterprise deployment through CI/CD pipeline integration
 

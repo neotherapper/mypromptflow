@@ -152,13 +152,13 @@ services:
 ### Installation Process
 ```bash
 # Install Puppeteer MCP server
-npm install @modelcontextprotocol/puppeteer-server
+pnpm install @modelcontextprotocol/puppeteer-server
 
 # Install Puppeteer with bundled Chrome
-npm install puppeteer
+pnpm install puppeteer
 
 # Alternative: Use system Chrome installation
-npm install puppeteer-core
+pnpm install puppeteer-core
 
 # Configure environment variables
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=false
@@ -166,7 +166,7 @@ export PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome"
 export PUPPETEER_CACHE_DIR="/tmp/puppeteer-cache"
 
 # Initialize MCP server
-npx puppeteer-mcp-server --facility 3000 --headless --sandbox
+pnpm dlx puppeteer-mcp-server --facility 3000 --headless --sandbox
 ```
 
 ### Configuration Parameters

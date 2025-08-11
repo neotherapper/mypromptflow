@@ -73,7 +73,7 @@ aliyun ecs-mcp-observability install --region us-west-1
 
 ```bash
 # Using package manager
-npm install @alibabacloud/observability-mcp-server
+pnpm install @alibabacloud/observability-mcp-server
 ```
 
 ### Configuration

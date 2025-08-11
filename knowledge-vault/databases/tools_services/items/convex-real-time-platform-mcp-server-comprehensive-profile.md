@@ -152,8 +152,8 @@ information_capabilities:
 ### Installation Process
 ```bash
 # Install Convex CLI and dependencies
-npm install -g convex
-npm install convex
+pnpm install -g convex
+pnpm install convex
 
 # Initialize Convex project
 convex init
