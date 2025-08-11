@@ -1196,7 +1196,7 @@ DASHBOARD_HTML = """
                 sources.forEach(source => {
                     const option = document.createElement('option');
                     option.value = source;
-                    option.textContent = source.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    option.textContent = source.replace(/_/g, ' ').replace(/\\b\\w/g, l => l.toUpperCase());
                     sourceFilter.appendChild(option);
                 });
                 
