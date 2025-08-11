@@ -30,13 +30,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 REST API MCP Server provides the foundational architecture pattern for modern web application programming interfaces. As the most critical API development standard, it supports HTTP-based communication, resource-oriented design, and scalable web service architectures essential for enterprise application integration.
 
 **CRITICAL PRIORITY STATUS**: This server achieves the **highest API development priority score** and represents the fundamental building block for all modern web service architectures and business operations system integrations.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -292,7 +306,7 @@ POST /api/v1/policies
 {
   "type": "operational",
   "asset": {
-    "imo": "1234567",
+    "regulatory body": "1234567",
     "name": "MV Example resource",
     "flag": "GB"
   },

@@ -23,6 +23,23 @@ tags:
 - Development Platform
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 1 (High Priority - Enterprise Secrets Management Platform)
 **Server Type**: Secrets Management & Configuration Service
@@ -55,6 +72,32 @@ tags:
 - **Database**: PostgreSQL for self-hosted installations
 
 ## Setup & Configuration
+
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
 
 ### Prerequisites
 1. **Infisical Account**: Organization setup with appropriate subscription plan

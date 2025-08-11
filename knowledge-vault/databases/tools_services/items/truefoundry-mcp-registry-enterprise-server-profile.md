@@ -53,9 +53,26 @@ last_modified: "2025-07-30T11:15:00Z"
 last_evaluated: "2025-07-30"
 ---
 
+## 📋 Basic Information
+
+
 # TrueFoundry MCP Registry
 
 > Enterprise MCP server registry providing centralized governance, approval workflows, and compliance management for Model Context Protocol server deployments at scale
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## 🔗 Related Technologies
 

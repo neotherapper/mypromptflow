@@ -32,13 +32,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 GraphQL MCP Server provides modern API query language capabilities that enable clients to request exactly the data they need. As a critical advanced API technology, it offers flexible data fetching, real-time subscriptions, and strong type systems essential for complex enterprise applications and business operations data integration.
 
 **ADVANCED API PRIORITY**: This server achieves **Tier 1 status** as the leading alternative to REST APIs, providing superior data fetching efficiency and client-driven query optimization for complex data relationships.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -249,17 +263,17 @@ GraphQL MCP Server provides modern API query language capabilities that enable c
 
 ### GraphQL Federation v2 Implementation
 ```graphql
-# Insurance Service Schema MCP Server
+# risk management Service Schema MCP Server
 type Policy @key(fields: "id") {
   id: ID!
   status: PolicyStatus!
   premium: Float!
-  asset: asset @provides(fields: "imo name")
+  asset: asset @provides(fields: "regulatory body name")
 }
 
 # asset Service Schema  
-type asset @key(fields: "imo") @extends {
-  imo: String! @external
+type asset @key(fields: "regulatory body") @extends {
+  regulatory body: String! @external
   name: String! @external
   specifications: VesselSpecs
   currentLocation: Location
@@ -282,7 +296,7 @@ query PolicyDetailsWithDefer($policyId: ID!) {
     status
     premium
     asset {
-      imo
+      regulatory body
       name
     }
     ... @defer(label: "claims") {
@@ -324,7 +338,7 @@ type Position {
 }
 
 type asset {
-  imo: IMONumber!
+  regulatory body: IMONumber!
   position: Position
   specifications: VesselSpecs
 }

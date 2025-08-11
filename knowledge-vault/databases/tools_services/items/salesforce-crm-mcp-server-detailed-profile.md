@@ -1,6 +1,6 @@
 ---
 description: Salesforce CRM MCP Server provides comprehensive customer relationship
-  management capabilities essential for maritime insurance business operations. Recognized
+  management capabilities essential for business operations business operations. Recognized
   as the world's leading CRM platform with extensive analytics and business intelligence
   features, critical for customer lifecycle management, sales forecasting, and regulatory
   compliance.
@@ -33,13 +33,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 Salesforce CRM MCP Server provides comprehensive customer relationship management capabilities essential for business operations business operations. Recognized as the world's leading CRM platform with extensive analytics and business intelligence features, critical for customer lifecycle management, sales forecasting, and regulatory compliance.
 
-**ENHANCED TIER 1**: This server maintains **Tier 1 Immediate** classification with enhanced scoring (9.02/10) based on business intelligence re-ranking, reflecting its critical importance as the foundation for customer relationship management and insurance business operations.
+**ENHANCED TIER 1**: This server maintains **Tier 1 Immediate** classification with enhanced scoring (9.02/10) based on business intelligence re-ranking, reflecting its critical importance as the foundation for customer relationship management and risk management business operations.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -83,10 +97,10 @@ Salesforce CRM MCP Server provides comprehensive customer relationship managemen
 - **Tableau Embedded Analytics**: Advanced visualization and reporting
 
 ### Industry-Specific Solutions
-- **Financial Services Cloud**: Insurance-specific features and compliance
+- **Financial Services Cloud**: risk management-specific features and compliance
 - **Regulatory Compliance Tools**: GDPR, CCPA, and industry regulation support
-- **Claims Management**: End-to-end insurance process management workflows
-- **Policy Administration**: Insurance policy lifecycle management
+- **Claims Management**: End-to-end risk management process management workflows
+- **Policy Administration**: risk management policy lifecycle management
 - **Risk Assessment Tools**: Underwriting and risk analysis capabilities
 
 ---
@@ -215,8 +229,8 @@ Salesforce CRM MCP Server provides comprehensive customer relationship managemen
 - **Transaction Security**: Policy-based transaction monitoring and controls
 
 ### Industry-Specific Customization
-- **operational Insurance Data Model**: Industry-specific objects and relationships
-- **Regulatory Compliance**: Built-in compliance with operational insurance regulations  
+- **operational risk management Data Model**: Industry-specific objects and relationships
+- **Regulatory Compliance**: Built-in compliance with operational risk management regulations  
 - **Industry Workflows**: Specialized processes for operational underwriting and claims
 - **business Risk Scoring**: Custom scoring models for operational risks
 

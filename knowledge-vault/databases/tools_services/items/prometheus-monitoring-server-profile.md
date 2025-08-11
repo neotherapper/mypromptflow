@@ -67,6 +67,23 @@ information_capabilities:
     - "Alert destination configuration"
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 2 (Strategic Priority - Infrastructure Monitoring Platform)
 **Server Type**: Monitoring & Observability System
@@ -98,6 +115,32 @@ information_capabilities:
 - **Network**: Stable connectivity to monitored targets and external alert destinations
 
 ## Setup & Configuration
+
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
 
 ### Prerequisites
 1. **Target Infrastructure**: Services and systems with exposed metrics endpoints
@@ -172,7 +215,7 @@ scrape_configs:
 EOF
 
 # Initialize MCP server
-npx prometheus-mcp-server --config prometheus.yml --port 9090
+npx prometheus-mcp-server --config prometheus.yml --facility 9090
 ```
 
 ### Configuration Parameters

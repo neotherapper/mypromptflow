@@ -32,13 +32,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 GitHub PR Reviewer MCP Server delivers automated pull request analysis and code review capabilities through sophisticated Claude Desktop and Google Drive integration. This server transforms development workflow efficiency by providing intelligent, AI-powered code review automation that maintains code quality while accelerating development velocity.
 
 **business operations DEVELOPMENT IMPACT**: Critical for maintaining code quality standards in business operations platform development where regulatory compliance, financial accuracy, and system reliability are paramount. Automated PR review ensures consistent application of enterprise coding standards while reducing manual review overhead.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -80,7 +94,7 @@ GitHub PR Reviewer MCP Server delivers automated pull request analysis and code 
 ### Phase 2: Pilot Implementation (Weeks 3-6)
 **Pilot Team Deployment**
 - Limited scope deployment with business operations core team
-- Custom review rules configuration for insurance domain
+- Custom review rules configuration for risk management domain
 - Integration with existing CI/CD pipelines
 - Performance monitoring and optimization
 
@@ -270,7 +284,7 @@ analysis_capabilities:
 ### Domain-Specific Intelligence
 
 **business operations Specialization**:
-- **Regulatory Pattern Recognition**: Automated detection of insurance regulation compliance
+- **Regulatory Pattern Recognition**: Automated detection of risk management regulation compliance
 - **Financial Calculation Validation**: Verification of premium calculations and rate structures
 - **Data Privacy Compliance**: GDPR/CCPA compliance validation for customer data handling
 - **Integration Pattern Analysis**: API integration security and performance validation
@@ -386,7 +400,7 @@ npx pr-reviewer-mcp --init
   "name": "pr-reviewer",
   "type": "mcp-server",
   "command": "pr-reviewer-mcp",
-  "args": ["--config", "business-insurance.json"],
+  "args": ["--config", "business-risk management.json"],
   "env": {
     "CLAUDE_API_KEY": "your-key",
     "GITHUB_TOKEN": "your-token",

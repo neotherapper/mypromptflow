@@ -1,6 +1,6 @@
 ---
 description: HubSpot Marketing Automation MCP Server provides comprehensive marketing
-  intelligence and customer acquisition capabilities essential for maritime insurance
+  intelligence and customer acquisition capabilities essential for business operations
   business growth. Recognized as a leading inbound marketing and sales platform with
   advanced analytics, critical for lead generation, customer acquisition, and marketing
   ROI
@@ -32,13 +32,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 HubSpot Marketing Automation MCP Server provides comprehensive marketing intelligence and customer acquisition capabilities essential for business operations business growth. Recognized as a leading inbound marketing and sales platform with advanced analytics, critical for lead generation, customer acquisition, and marketing ROI optimization.
 
 **ENHANCED TIER 1**: This server maintains **Tier 1 Immediate** classification with enhanced scoring (8.83/10) based on business intelligence re-ranking, reflecting its critical importance for marketing automation, lead generation, and customer acquisition analytics.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -125,7 +139,7 @@ HubSpot Marketing Automation MCP Server provides comprehensive marketing intelli
 ## Business Value Proposition
 
 ### Lead Generation Impact
-- **Lead Volume**: 200-300% increase in qualified operational insurance leads
+- **Lead Volume**: 200-300% increase in qualified operational risk management leads
 - **Lead Quality**: 40-50% improvement in lead-to-customer conversion rates
 - **Cost per Lead**: 30-40% reduction in customer acquisition costs
 - **Pipeline Velocity**: 50-60% faster progression from lead to quote
@@ -163,16 +177,16 @@ HubSpot Marketing Automation MCP Server provides comprehensive marketing intelli
 ## Success Metrics and KPIs
 
 ### Lead Generation Metrics
-- **Monthly Lead Volume**: Target 500-1000 qualified operational insurance leads/month
+- **Monthly Lead Volume**: Target 500-1000 qualified operational risk management leads/month
 - **Lead Conversion Rate**: Target >15% lead-to-customer conversion rate
-- **Cost per Acquisition**: Target <$200 cost per new operational insurance customer
+- **Cost per Acquisition**: Target <$200 cost per new operational risk management customer
 - **Lead Scoring Accuracy**: Target >80% accuracy in lead qualification scoring
 
 ### Marketing Campaign Metrics
-- **Email Open Rates**: Target >25% open rates for operational insurance content
+- **Email Open Rates**: Target >25% open rates for operational risk management content
 - **Click-Through Rates**: Target >5% CTR for email campaigns
 - **Landing Page Conversion**: Target >10% conversion rate on quote request pages
-- **Content Engagement**: Target >3 minutes average time on operational insurance content
+- **Content Engagement**: Target >3 minutes average time on operational risk management content
 
 ### Business Impact Metrics
 - **Marketing Qualified Leads**: Target 300% increase in MQL volume
@@ -191,7 +205,7 @@ HubSpot Marketing Automation MCP Server provides comprehensive marketing intelli
 - Essential email templates and sequences
 
 ### Phase 2: Lead Generation Optimization (Months 2-3)
-- Landing page development for operational insurance
+- Landing page development for operational risk management
 - Lead scoring model creation and optimization
 - Marketing automation workflow development
 - Sales and marketing process alignment

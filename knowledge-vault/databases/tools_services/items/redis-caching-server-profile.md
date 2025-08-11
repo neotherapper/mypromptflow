@@ -67,6 +67,23 @@ information_capabilities:
     - "Clustering and high availability planning"
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 2 (Strategic Priority - High-Performance Caching Platform)
 **Server Type**: In-Memory Database & Caching System
@@ -99,6 +116,32 @@ information_capabilities:
 
 ## Setup & Configuration
 
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
+
 ### Prerequisites
 1. **System Environment**: Linux/Unix environment or Docker container platform
 2. **Memory Planning**: Sufficient RAM for data storage plus 20-30% operational overhead
@@ -126,7 +169,7 @@ docker run -d \
 cat > /usr/local/etc/redis/redis.conf << 'EOF'
 # Network configuration
 bind 127.0.0.1 10.0.0.100
-port 6379
+facility 6379
 tcp-backlog 511
 timeout 0
 tcp-keepalive 300
@@ -168,7 +211,7 @@ EOF
 
 # Initialize MCP server with connection
 export REDIS_URL="redis://:secure_password_123@localhost:6379/0"
-npx redis-mcp-server --port 3000 --redis-url "$REDIS_URL"
+npx redis-mcp-server --facility 3000 --redis-url "$REDIS_URL"
 ```
 
 ### Configuration Parameters
@@ -176,7 +219,7 @@ npx redis-mcp-server --port 3000 --redis-url "$REDIS_URL"
 {
   "redis": {
     "host": "localhost",
-    "port": 6379,
+    "facility": 6379,
     "password": "secure_password_123",
     "database": 0,
     "connectTimeout": 10000,
@@ -188,9 +231,9 @@ npx redis-mcp-server --port 3000 --redis-url "$REDIS_URL"
     "cluster": {
       "enabled": false,
       "nodes": [
-        { "host": "redis-node-1", "port": 6379 },
-        { "host": "redis-node-2", "port": 6379 },
-        { "host": "redis-node-3", "port": 6379 }
+        { "host": "redis-node-1", "facility": 6379 },
+        { "host": "redis-node-2", "facility": 6379 },
+        { "host": "redis-node-3", "facility": 6379 }
       ],
       "options": {
         "redisOptions": {
@@ -203,8 +246,8 @@ npx redis-mcp-server --port 3000 --redis-url "$REDIS_URL"
     "sentinel": {
       "enabled": false,
       "sentinels": [
-        { "host": "sentinel-1", "port": 26379 },
-        { "host": "sentinel-2", "port": 26379 }
+        { "host": "sentinel-1", "facility": 26379 },
+        { "host": "sentinel-2", "facility": 26379 }
       ],
       "name": "mymaster",
       "password": "sentinel_password"

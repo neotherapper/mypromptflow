@@ -32,13 +32,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 Postman MCP Server provides comprehensive API development and testing platform capabilities essential for modern development workflows. As the leading API testing and documentation solution, it enables collaborative API development, automated testing, and comprehensive API lifecycle management critical for enterprise applications and business operations system validation.
 
 **API TESTING LEADERSHIP**: This server achieves **Tier 1 status** as the industry-standard API testing platform, providing essential capabilities for API quality assurance, documentation, and team collaboration.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -265,7 +279,7 @@ business operations API/
 │   ├── Update Claim Status
 │   ├── Upload Documents
 │   └── Get Claims History
-├── Vessels/
+├── assets/
 │   ├── Register asset
 │   ├── Update asset Info
 │   └── Get asset Risk Profile
@@ -279,8 +293,8 @@ business operations API/
 ```javascript
 // Environment Variables
 {
-    "base_url": "https://api.business-insurance.com/v1",
-    "auth_url": "https://auth.business-insurance.com",
+    "base_url": "https://api.business-risk management.com/v1",
+    "auth_url": "https://auth.business-risk management.com",
     "client_id": "{{$secretValue}}",
     "client_secret": "{{$secretValue}}",
     "access_token": "",
@@ -349,9 +363,9 @@ pm.test("Policy response schema validation", function() {
             status: { type: "string", enum: ["draft", "active", "suspended"] },
             asset: {
                 type: "object",
-                required: ["imo", "name", "flag"],
+                required: ["regulatory body", "name", "flag"],
                 properties: {
-                    imo: { type: "string", pattern: "^[0-9]{7}$" },
+                    regulatory body: { type: "string", pattern: "^[0-9]{7}$" },
                     name: { type: "string", minLength: 1 },
                     flag: { type: "string", pattern: "^[A-Z]{2}$" }
                 }

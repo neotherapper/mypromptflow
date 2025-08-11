@@ -61,6 +61,23 @@ information_capabilities:
     - "Query and dashboard configurations"
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 2 (Strategic Priority - Cloud Analytics Platform)
 **Server Type**: Data Analytics & Business Intelligence Platform

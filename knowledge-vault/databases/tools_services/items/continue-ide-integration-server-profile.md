@@ -26,7 +26,7 @@ tags:
 - Software Development
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 The Continue IDE Integration represents a cutting-edge AI-powered development environment integration designed for comprehensive software development productivity enhancement. This enterprise-grade MCP server provides advanced IDE integration capabilities, development environment enhancement, and intelligent code completion support, enabling development teams to accelerate coding workflows, automate complex development tasks, and enhance code quality through seamless AI assistance integrated directly into their preferred development environments.
 
@@ -103,6 +103,32 @@ interface ContinueIDECapabilities {
 ```
 
 ## Setup & Configuration
+
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
 
 ### VS Code Integration
 ```bash

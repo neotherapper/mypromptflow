@@ -25,7 +25,7 @@ tags:
 - Development Platform
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 The GitLab MCP Server provides comprehensive enterprise Git platform integration through the Model Context Protocol, enabling sophisticated repository management, CI/CD pipeline automation, project management, and DevOps workflow orchestration. With a business value score of 9.2/10, this server delivers critical development infrastructure capabilities for organizations requiring integrated DevOps platforms with advanced project management and collaboration features.
 
@@ -35,6 +35,20 @@ The GitLab MCP Server provides comprehensive enterprise Git platform integration
 - Integrated issue tracking, merge request workflows, and team collaboration
 - Enterprise-grade security with role-based access control and compliance features
 - Advanced DevOps analytics, monitoring, and performance optimization capabilities
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Technical Specifications
 
@@ -118,7 +132,31 @@ interface GitLabMCPCapabilities {
 
 ## Setup & Configuration
 
+
 ### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
 
 #### Method 1: NPM Package Installation
 ```bash
@@ -671,7 +709,7 @@ const mergeRequest = await mcpClient.callTool('gitlab_create_merge_request', {
   ## Changes Made
   - Added RiskAssessmentService with comprehensive scoring algorithm
   - Implemented asset data integration with industry intelligence systems
-  - Added automated flag state compliance checking
+  - Added automated jurisdiction compliance checking
   - Created audit trail for risk assessment decisions
   
   ## Testing
@@ -1979,8 +2017,8 @@ class MaritimeClaimsGitLabIntegration {
 ```
 
 #### Regulatory Compliance Automation
-- **IMO Compliance Tracking**: Automated compliance validation and reporting
-- **Flag State Requirements**: Version-controlled compliance documentation
+- **regulatory body Compliance Tracking**: Automated compliance validation and reporting
+- **jurisdiction Requirements**: Version-controlled compliance documentation
 - **business association Reporting**: Standardized reporting templates and automation
 - **Survey Management**: Automated survey scheduling and tracking
 

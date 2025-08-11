@@ -67,6 +67,23 @@ information_capabilities:
     - "Proper security configuration"
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 2 (Strategic Priority - Browser Automation Platform)
 **Server Type**: Browser Automation & Web Data Extraction System
@@ -99,6 +116,32 @@ information_capabilities:
 
 ## Setup & Configuration
 
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
+
 ### Prerequisites
 1. **Node.js Environment**: Version 12+ with package manager (npm/yarn)
 2. **Browser Dependencies**: Chrome/Chromium installation or download capability
@@ -123,7 +166,7 @@ export PUPPETEER_EXECUTABLE_PATH="/usr/bin/google-chrome"
 export PUPPETEER_CACHE_DIR="/tmp/puppeteer-cache"
 
 # Initialize MCP server
-npx puppeteer-mcp-server --port 3000 --headless --sandbox
+npx puppeteer-mcp-server --facility 3000 --headless --sandbox
 ```
 
 ### Configuration Parameters

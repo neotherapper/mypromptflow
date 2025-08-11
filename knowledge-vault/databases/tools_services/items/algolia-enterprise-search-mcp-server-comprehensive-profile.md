@@ -61,7 +61,7 @@ tags:
   - Comprehensive API reference and code examples
   - Enterprise deployment guides and best practices
 
-## Executive Summary
+## 📋 Basic Information
 
 Algolia MCP Server provides enterprise-grade search infrastructure capabilities, enabling rapid development of sophisticated search experiences with minimal setup complexity. The platform offers advanced search algorithms, real-time indexing, and comprehensive analytics, making it essential for applications requiring high-performance content discovery and information retrieval.
 
@@ -70,6 +70,20 @@ Algolia MCP Server provides enterprise-grade search infrastructure capabilities,
 - **Development Acceleration**: Rapid implementation of complex search functionality
 - **Scalability**: Handles millions of queries with auto-scaling infrastructure
 - **Analytics Integration**: Comprehensive search analytics and performance metrics
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Technical Specifications
 

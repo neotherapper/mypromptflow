@@ -34,13 +34,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 Couchbase MCP Server delivers enterprise-grade NoSQL database capabilities combining document, key-value, and analytical processing in a single platform. Designed for mobile and cloud applications, Couchbase provides automatic scaling, built-in caching, and real-time synchronization essential for modern distributed applications.
 
 **Key Strength**: Multi-model NoSQL database with mobile-first architecture, providing seamless synchronization between edge devices, mobile applications, and cloud infrastructure with enterprise-grade performance and reliability.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -241,7 +255,7 @@ async function connectToCouchbase() {
 ```sql
 -- N1QL Query Examples for business operations
 
--- Find all active policies for inventory vessels
+-- Find all active policies for inventory assets
 SELECT p.policy_number, p.asset.name, p.asset.tonnage, p.coverage.asset
 FROM maritime_insurance p
 WHERE p.type = 'policy' 
@@ -321,7 +335,7 @@ class MaritimeInsuranceApp {
 apiVersion: couchbase.com/v2
 kind: CouchbaseCluster
 metadata:
-  name: business-insurance-cluster
+  name: business-risk management-cluster
 spec:
   image: couchbase/server:7.2.0
   security:

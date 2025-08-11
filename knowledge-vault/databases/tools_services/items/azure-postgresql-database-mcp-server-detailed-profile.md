@@ -34,13 +34,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 Azure PostgreSQL Database MCP Server provides official Microsoft Azure Database for PostgreSQL integration with enterprise authentication, cloud scaling, and advanced database management capabilities through natural language operations. As Microsoft's official Azure database integration solution, it delivers enterprise-grade cloud database management essential for business operations platform data infrastructure with Azure-native security and compliance features.
 
 **CRITICAL TIER 1**: This server achieves **Tier 1 Immediate** classification with exceptional scoring (9.0/10), reflecting its fundamental importance as the enterprise cloud database platform for business operations applications requiring scalable, secure, and compliant Azure-managed PostgreSQL operations with Microsoft enterprise support.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 

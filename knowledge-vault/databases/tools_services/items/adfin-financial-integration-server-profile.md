@@ -1,7 +1,7 @@
 ---
 description: The Adfin Financial Integration Server represents a comprehensive financial
-  data integration and payment processing platform specifically engineered for maritime
-  insurance operations. This enterprise-grade MCP server provides automated premium
+  data integration and payment processing platform specifically engineered for business
+  risk management operations. This enterprise-grade MCP server provides automated premium
   calculations, claims payment processing, financial reconciliation, and multi-currency
   transaction management tailored to
 id: 8b3d80a7-ecb3-4912-a7d1-8098634936bc
@@ -23,11 +23,25 @@ tags:
 - Development Platform
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 The Adfin Financial Integration Server represents a comprehensive financial data integration and payment processing platform specifically engineered for business operations. This enterprise-grade MCP server provides automated premium calculations, claims payment processing, financial reconciliation, and multi-currency transaction management tailored to the complex requirements of business operations across global jurisdictions.
 
-**Strategic Value**: Primary financial automation engine for businesses, reducing manual financial processes by 78% while ensuring regulatory compliance across 25+ international business jurisdictions and delivering real-time financial visibility across the entire insurance lifecycle.
+**Strategic Value**: Primary financial automation engine for businesses, reducing manual financial processes by 78% while ensuring regulatory compliance across 25+ international business jurisdictions and delivering real-time financial visibility across the entire risk management lifecycle.
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Technical Specifications
 
@@ -54,7 +68,7 @@ financial_systems_support:
   regulatory_systems:
     tax_engines: "Avalara, Thomson Reuters, Vertex"
     compliance_reporting: "FinCEN, OFAC, EU AML"
-    maritime_authorities: "IMO, Flag State systems"
+    maritime_authorities: "regulatory body, jurisdiction systems"
 ```
 
 ### Multi-Currency and Exchange Rate Management
@@ -98,6 +112,32 @@ premium_calculation:
 
 ## Setup & Configuration
 
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
+
 ### Prerequisites
 ```bash
 # System Requirements MCP Server
@@ -125,7 +165,7 @@ premium_calculation:
 npm install -g @adfin/financial-integration-platform
 
 # 2. Initialize with business template
-adfin init --template business-insurance
+adfin init --template business-risk management
 
 # 3. Configure core banking connections
 adfin config banking add \
@@ -580,7 +620,7 @@ class RegulatoryReportingAutomation {
   }
   
   private async generateUSReports(data: ReportData, quarter: Quarter): Promise<RegularReport> {
-    // NAIC reporting for US insurance regulators
+    // NAIC reporting for US risk management regulators
     const naicReport = await adfin.generateNAICReport({
       quarter: quarter,
       data: data,
@@ -717,11 +757,11 @@ compliance_frameworks:
     pci_dss: "Level 1 merchant compliance"
     sox_404: "Internal controls over financial reporting"
     basel_iii: "Capital adequacy and risk management"
-    solvency_ii: "EU insurance capital requirements"
+    solvency_ii: "EU risk management capital requirements"
     
   maritime_specific:
     imo_regulations: "International business Organization compliance"
-    flag_state_requirements: "Multiple flag state regulatory compliance"
+    flag_state_requirements: "Multiple jurisdiction regulatory compliance"
     p_and_i_requirements: "Protection and Indemnity club compliance"
     sanctions_screening: "OFAC, EU, UN sanctions list screening"
     

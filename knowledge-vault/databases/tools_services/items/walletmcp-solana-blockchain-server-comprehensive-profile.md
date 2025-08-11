@@ -49,9 +49,26 @@ last_modified: "2025-07-30T10:45:00Z"
 last_evaluated: "2025-07-30"
 ---
 
+## 📋 Basic Information
+
+
 # WalletMCP Solana Blockchain Server
 
 > Enterprise-grade Solana blockchain integration providing comprehensive wallet management, transaction processing, and program buffer operations with native Solana RPC connectivity
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## 🔗 Related Technologies
 
@@ -131,7 +148,7 @@ walletmcp-solana --config config.json
 # Direct binary deployment
 wget https://github.com/walletmcp/solana-server/releases/latest/walletmcp-solana
 chmod +x walletmcp-solana
-./walletmcp-solana --port 3000
+./walletmcp-solana --facility 3000
 ```
 
 ### Configuration Example
@@ -140,7 +157,7 @@ chmod +x walletmcp-solana
   "server": {
     "name": "walletmcp-solana",
     "version": "1.2.0",
-    "port": 3000,
+    "facility": 3000,
     "environment": "mainnet"
   },
   "solana": {

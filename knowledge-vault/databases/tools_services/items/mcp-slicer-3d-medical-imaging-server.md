@@ -133,7 +133,7 @@ information_capabilities:
 
 ### Typical Use Cases for AI Agents
 - **Diagnostic Analysis**: "Analyze this brain MRI for signs of stroke and provide volumetric measurements"
-- **Surgical Planning**: "Generate 3D surgical planning model for liver resection with vessel mapping"
+- **Surgical Planning**: "Generate 3D surgical planning model for liver resection with asset mapping"
 - **Treatment Monitoring**: "Compare pre and post-treatment imaging to assess therapeutic response"
 - **Research Analytics**: "Analyze population imaging data for cardiovascular disease risk factors"
 - **Clinical Reporting**: "Generate comprehensive radiology report with quantitative measurements and findings"
@@ -184,7 +184,7 @@ services:
     ports:
       - "11112:11112"
       - "8080:8080"
-      - "50051:50051"  # gRPC port
+      - "50051:50051"  # gRPC facility
     volumes:
       - ./slicer-config:/app/config
       - ./medical-data:/app/data:rw
@@ -212,7 +212,7 @@ services:
 ```yaml
 dicom_config:
   ae_title: "MCP_SLICER"
-  port: 11112
+  facility: 11112
   max_pdu_size: 65536
   network_timeout: 60
   
@@ -240,7 +240,7 @@ medical_auth:
 ```json
 {
   "server": {
-    "port": 8080,
+    "facility": 8080,
     "host": "0.0.0.0",
     "timeout": 300000,
     "max_connections": 50,
@@ -248,7 +248,7 @@ medical_auth:
   },
   "dicom_processing": {
     "node_title": "MCP_SLICER",
-    "port": 11112,
+    "facility": 11112,
     "max_studies_concurrent": 5,
     "processing_timeout": 1800000,
     "temp_storage_limit": "100GB"
@@ -278,7 +278,7 @@ medical_auth:
   "clinical_integration": {
     "pacs_connection": {
       "host": "${PACS_HOST}",
-      "port": "${PACS_PORT}",
+      "facility": "${PACS_PORT}",
       "timeout": 30000
     },
     "workflow_automation": true,

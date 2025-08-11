@@ -1,8 +1,8 @@
 ---
 description: YouTube MCP Server provides video streaming and entertainment content
   capabilities primarily focused on consumer video consumption and content creation.
-  DEMOTED TO TIER 4 due to limited business value for development workflows and maritime
-  insurance operations, despite excellent technical capabilities and
+  DEMOTED TO TIER 4 due to limited business value for development workflows and business
+  risk management operations, despite excellent technical capabilities and
 id: 830aca3a-6e7b-4568-8eb1-211cce28bb1a
 installation_priority: 4
 item_type: mcp_server
@@ -32,13 +32,27 @@ tier: Tier 4
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 YouTube MCP Server provides video streaming and entertainment content capabilities primarily focused on consumer video consumption and content creation. **DEMOTED TO TIER 4** due to limited business value for development workflows and business operations, despite excellent technical capabilities and universal adoption.
 
 **BUSINESS ALIGNMENT ISSUE**: While YouTube has comprehensive video platform features and excellent API capabilities, it does not align with core business priorities for development infrastructure or business operations business operations. Video entertainment platforms receive lowest business priority.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -64,7 +78,7 @@ YouTube MCP Server provides video streaming and entertainment content capabiliti
 **PRIMARY REASON**: **Entertainment Video Platform Classification**
 - **Business Domain Relevance Score**: Only 3/10 points due to entertainment/consumer video focus
 - **Limited Development Value**: Minimal business development workflow applications
-- **business operations Irrelevance**: No direct application to insurance business operations
+- **business operations Irrelevance**: No direct application to risk management business operations
 - **Entertainment Category**: Video consumption and creation classified as non-essential business activity
 
 ### Business-Aligned Scoring Impact
@@ -75,7 +89,7 @@ YouTube MCP Server provides video streaming and entertainment content capabiliti
 
 ### Business Justification for Demotion
 1. **Minimal Development Workflow Value**: YouTube does not enhance SDLC processes or development productivity
-2. **Limited business operations Applications**: Marginal relevance to insurance business operations
+2. **Limited business operations Applications**: Marginal relevance to risk management business operations
 3. **Entertainment/Content Focus**: Primary use cases centered on video consumption and content creation
 4. **Resource Allocation Optimization**: Business resources better allocated to productivity and business platforms
 
@@ -153,7 +167,7 @@ YouTube MCP Server provides video streaming and entertainment content capabiliti
 - **Documentation**: Minimal documentation requirements
 
 ### 📋 Strict Evaluation Criteria
-- **business operations Relevance**: Direct insurance business application preferred
+- **business operations Relevance**: Direct risk management business application preferred
 - **Development Workflow Value**: Must support business processes or customer communication
 - **Enterprise Readiness**: Business-grade features and compliance required
 - **Integration Value**: Must integrate with existing Tier 1-2 business systems

@@ -32,13 +32,27 @@ tier: Tier 1
 
 ---
 
-## Executive Summary
+## 📋 Basic Information
 
 GitHub PR Creator MCP Server revolutionizes development workflow through automated pull request creation with sophisticated Cursor IDE and Claude AI integration. This server eliminates manual PR creation overhead while ensuring consistent, professional pull request standards that accelerate development velocity and maintain code quality.
 
 **business operations DEVELOPMENT IMPACT**: Essential for streamlining business operations platform development workflows where complex feature implementations require systematic PR management. Automated PR creation ensures consistent documentation, proper branch management, and accelerated development cycles for regulatory compliance features.
 
 ---
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Business-Aligned Scoring Breakdown
 
@@ -80,7 +94,7 @@ GitHub PR Creator MCP Server revolutionizes development workflow through automat
 ### Phase 2: Pilot Implementation (Weeks 3-6)
 **business operations Team Integration**
 - Limited deployment with core business operations development team
-- Custom PR templates for insurance domain features
+- Custom PR templates for risk management domain features
 - Integration with existing Git workflows and branch protection rules
 - Performance monitoring and optimization
 
@@ -183,10 +197,10 @@ post_implementation_metrics:
 ```javascript
 // Cursor IDE PR Creator Integration
 const prCreatorConfig = {
-  workspace: "business-insurance",
+  workspace: "business-risk management",
   templates: {
     feature: "business-feature-template",
-    bugfix: "insurance-bugfix-template",
+    bugfix: "risk management-bugfix-template",
     hotfix: "production-hotfix-template"
   },
   automation: {
@@ -251,7 +265,7 @@ jobs:
       - name: Validate PR Creator Compliance
         uses: pr-creator-mcp/validate@v1
         with:
-          compliance_rules: "business-insurance"
+          compliance_rules: "business-risk management"
           documentation_check: true
           security_validation: true
       
@@ -259,7 +273,7 @@ jobs:
         uses: pr-creator-mcp/assign@v1
         with:
           assignment_strategy: "expertise-based"
-          domain_knowledge: "business-insurance"
+          domain_knowledge: "business-risk management"
           workload_balancing: true
 ```
 
@@ -405,14 +419,14 @@ cursor --install-extension pr-creator-mcp
   "name": "pr-creator-mcp",
   "type": "mcp-server",
   "command": "pr-creator-mcp",
-  "args": ["--workspace", "business-insurance"],
+  "args": ["--workspace", "business-risk management"],
   "env": {
     "GITHUB_TOKEN": "your-github-token",
     "CLAUDE_API_KEY": "your-claude-key",
-    "CURSOR_WORKSPACE": "business-insurance"
+    "CURSOR_WORKSPACE": "business-risk management"
   },
   "configuration": {
-    "domain": "business-insurance",
+    "domain": "business-risk management",
     "template_set": "regulatory-compliance",
     "automation_level": "full"
   }

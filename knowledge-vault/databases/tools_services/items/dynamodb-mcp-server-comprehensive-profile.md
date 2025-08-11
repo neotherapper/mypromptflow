@@ -55,6 +55,20 @@ tier: Tier 1
 
 ---
 
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## 🎯 Quality & Scoring Metrics
 
 ### Overall Assessment
@@ -200,7 +214,7 @@ cat > dynamodb_mcp_config.json << EOF
 EOF
 
 # Start the server
-dynamodb-mcp-server --config dynamodb_mcp_config.json --port 3001
+dynamodb-mcp-server --config dynamodb_mcp_config.json --facility 3001
 ```
 
 ### Configuration Parameters
@@ -301,7 +315,7 @@ AWS DynamoDB MCP Server provides industry-leading NoSQL database capabilities wi
 
 *Profile Version: 1.0.0 | Last Updated: 2025-07-30 | Validation Status: Production Ready*
 =======
-## Executive Summary
+## 📋 Basic Information
 
 The DynamoDB MCP Server from AWS Labs represents a mission-critical Tier 1 NoSQL database infrastructure component that enables comprehensive Amazon DynamoDB operations through the Model Context Protocol. With a quality score of 8.3/10, this server provides enterprise-grade access to DynamoDB's complete feature set, including advanced table management, sophisticated data operations, backup and recovery systems, and expert data modeling guidance that transforms complex NoSQL database interactions into intuitive natural language workflows.
 

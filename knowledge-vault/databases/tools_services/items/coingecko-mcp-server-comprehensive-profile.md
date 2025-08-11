@@ -49,9 +49,26 @@ last_modified: "2025-07-30T10:30:00Z"
 last_evaluated: "2025-07-30"
 ---
 
+## 📋 Basic Information
+
+
 # CoinGecko MCP Server
 
 > Enterprise cryptocurrency market data integration with comprehensive API access to 15,000+ cryptocurrencies, 1,000+ exchanges, and real-time market analytics
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## 🔗 Related Technologies
 
@@ -115,7 +132,7 @@ docker run -p 3000:3000 -e COINGECKO_API_KEY=your_key coingecko/mcp-server
 
 # npm installation
 npm install -g @coingecko/mcp-server
-coingecko-mcp-server --api-key your_key --port 3000
+coingecko-mcp-server --api-key your_key --facility 3000
 
 # Python environment
 pip install coingecko-mcp-server
@@ -128,7 +145,7 @@ python -m coingecko_mcp_server --config config.json
   "server": {
     "name": "coingecko-server",
     "version": "1.0.0",
-    "port": 3000
+    "facility": 3000
   },
   "coingecko": {
     "api_key": "your_coingecko_api_key",

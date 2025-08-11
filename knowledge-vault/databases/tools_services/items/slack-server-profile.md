@@ -67,6 +67,23 @@ information_capabilities:
     - "Channel and user permission management"
 ---
 
+## 📋 Basic Information
+
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
+
 ## Header Classification
 **Tier**: 2 (Strategic Priority - Team Communication Platform)
 **Server Type**: Communication & Collaboration Platform
@@ -98,6 +115,32 @@ information_capabilities:
 
 ## Setup & Configuration
 
+
+### Installation Methods
+
+#### Method 1: Docker MCP Toolkit (Recommended)
+```bash
+# Pull and run the MCP server
+docker pull mcp/[server-name]:latest
+docker run -d --name [server-name]-mcp \
+  -e API_KEY=${API_KEY} \
+  -p 3000:3000 \
+  mcp/[server-name]:latest
+```
+
+#### Method 2: Docker Compose Deployment
+```yaml
+version: '3.8'
+services:
+  [server-name]:
+    image: mcp/[server-name]:latest
+    environment:
+      - API_KEY=${API_KEY}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+```
+
 ### Prerequisites
 1. **Slack Workspace**: Administrator access to target Slack workspace
 2. **App Creation**: Create Slack app in workspace with appropriate permissions
@@ -116,7 +159,7 @@ export SLACK_SIGNING_SECRET="your-signing-secret"
 export SLACK_APP_TOKEN="xapp-your-app-token" # For Socket Mode
 
 # Initialize MCP server
-npx slack-mcp-server --port 3000 --bot-token "$SLACK_BOT_TOKEN"
+npx slack-mcp-server --facility 3000 --bot-token "$SLACK_BOT_TOKEN"
 ```
 
 ### Configuration Parameters

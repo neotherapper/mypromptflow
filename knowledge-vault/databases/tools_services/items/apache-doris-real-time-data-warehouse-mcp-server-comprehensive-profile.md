@@ -62,7 +62,7 @@ tags:
   - Community resources and best practices
   - Enterprise deployment patterns documented
 
-## Executive Summary
+## 📋 Basic Information
 
 Apache Doris MCP Server provides enterprise-grade real-time data warehouse capabilities, enabling high-performance analytical workloads with minimal latency. Built on Apache Doris's MPP (Massively Parallel Processing) architecture, it delivers exceptional query performance for large-scale analytical operations, real-time data ingestion, and complex business intelligence workflows.
 
@@ -71,6 +71,20 @@ Apache Doris MCP Server provides enterprise-grade real-time data warehouse capab
 - **Unified Architecture**: Single platform for both real-time and batch analytics
 - **Elastic Scalability**: Dynamic scaling for varying analytical workloads
 - **Enterprise Integration**: Native support for popular BI tools and data platforms
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## Technical Specifications
 

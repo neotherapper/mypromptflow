@@ -53,9 +53,26 @@ last_modified: "2025-07-30T11:00:00Z"
 last_evaluated: "2025-07-30"
 ---
 
+## 📋 Basic Information
+
+
 # DICOM MCP Server
 
 > Enterprise medical imaging integration providing HIPAA-compliant DICOM metadata access, PACS connectivity, and AI/ML workflow support for healthcare applications
+
+
+## Quality & Scoring Metrics
+
+### Business-Aligned Scoring Analysis
+
+**Business Domain Relevance**: [Score]/10
+**Technical Development Value**: [Score]/10  
+**Production Readiness**: [Score]/10
+**Setup Complexity**: [Score]/10
+**Maintenance Status**: [Score]/10
+**Documentation Quality**: [Score]/10
+
+**Composite Score: [Score]/10** - Tier [X] Implementation Priority
 
 ## 🔗 Related Technologies
 
@@ -150,7 +167,7 @@ sudo systemctl start dicom-mcp-server
 server:
   name: "dicom-mcp-server"
   version: "2.1.0"
-  port: 8080
+  facility: 8080
   dicom_port: 11112
   ae_title: "MCPSERVER"
   
@@ -167,7 +184,7 @@ dicom:
 pacs_connections:
   - name: "primary_pacs"
     host: "pacs.hospital.local"
-    port: 104
+    facility: 104
     ae_title: "PACS"
     called_ae_title: "MCPSERVER"
     max_pdu_size: 16384
@@ -205,7 +222,7 @@ from datetime import datetime
 
 client = DICOMClient(
     host="localhost",
-    port=8080,
+    facility=8080,
     ae_title="CLIENT",
     called_ae_title="MCPSERVER"
 )
@@ -639,7 +656,7 @@ class RadiologyDecisionSupport:
 
 ### Technical Requirements
 - **Minimum Hardware**: 16 CPU cores, 64GB RAM, 10TB+ storage
-- **Network Requirements**: High-speed network with DICOM port access
+- **Network Requirements**: High-speed network with DICOM facility access
 - **Dependencies**: PACS connectivity, EMR integration capabilities
 - **Monitoring**: Medical-grade system monitoring and alerting
 
