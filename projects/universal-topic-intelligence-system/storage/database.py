@@ -196,6 +196,21 @@ class StorageManager:
             self.logger.error(f"Error saving content item: {str(e)}")
             return False
     
+    async def store_content(self, item: ContentItem, priority_score: float = 0.5, 
+                           priority_level: str = "medium") -> bool:
+        """
+        Async wrapper for saving content (compatible with auto_monitor.py)
+        
+        Args:
+            item: ContentItem to save
+            priority_score: Priority score from prioritizer
+            priority_level: Priority level (critical/high/medium/low)
+            
+        Returns:
+            True if saved successfully
+        """
+        return self.save_content_item(item, priority_score, priority_level)
+    
     def save_content_items_batch(self, items: List[tuple]) -> int:
         """
         Save multiple content items in a batch
