@@ -1,0 +1,33 @@
+{
+  "total_runs": 1,
+  "successful_runs": 1,
+  "failed_runs": 0,
+  "total_items_collected": 0,
+  "last_run": "2025-08-13T12:38:59.248928",
+  "next_run": null,
+  "topics_monitored": 2,
+  "topic_stats": {
+    "cryptocurrency": {
+      "total_items": 0,
+      "successful_runs": 1,
+      "failed_runs": 0,
+      "last_success": "2025-08-13T12:38:59.248928",
+      "avg_items_per_run": 0.0
+    },
+    "ai-ml": {
+      "total_items": 0,
+      "successful_runs": 1,
+      "failed_runs": 0,
+      "last_success": "2025-08-13T12:38:59.248928",
+      "avg_items_per_run": 0.0
+    }
+  },
+  "configuration": {
+    "interval_minutes": 30,
+    "topics_filter": null,
+    "available_topics": [
+      "cryptocurrency",
+      "ai-ml"
+    ]
+  }
+}

@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f9fafb;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #5145e0;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        .item {
+            padding: 15px;
+            border-left: 4px solid #e5e7eb;
+            margin-bottom: 15px;
+            background: #f9fafb;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.2s;
+        }
+        .item.critical {
+            border-left-color: #ef4444;
+        }
+        .item.high {
+            border-left-color: #f59e0b;
+        }
+        .item.claude {
+            border-left-color: #8b5cf6;
+            background: #faf5ff;
+        }
+        .item-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        .item-meta {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        .item-link {
+            display: inline-block;
+            color: #5145e0;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        .item-link:hover {
+            text-decoration: underline;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+        .priority-critical {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        .priority-high {
+            background: #fed7aa;
+            color: #ea580c;
+        }
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .claude-special {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .claude-special h3 {
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌐 Universal Topic Intelligence</h1>
+        <p>Today Digest - August 13, 2025</p>
+    </div>
+    
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-value">247</div>
+            <div class="stat-label">Total Items</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">69</div>
+            <div class="stat-label">Critical</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">12</div>
+            <div class="stat-label">High Priority</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">10</div>
+            <div class="stat-label">Claude Items</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🤖 Claude & Anthropic Updates</h2>
+        <div class="claude-special">
+            <h3>Priority Claude Content</h3>
+            <p>Latest updates about Claude, Anthropic, and Opus models</p>
+        </div>
+
+        <div class="item claude critical">
+            <div class="item-title">
+                Show HN: I built an open-source workout tracker app in 4 days with Claude Code
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                hackernews_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://github.com/randomlylelo/curlsapp" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item claude critical">
+            <div class="item-title">
+                Claude Code: Data Exfiltration with DNS
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                hackernews_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://embracethered.com/blog/posts/2025/claude-code-exfiltration-via-dns-requests/" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item claude critical">
+            <div class="item-title">
+                Claude Sonnet 4 vs. Kimi K2 vs. Gemini 2.5 Pro: Which AI ships production code?
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                hackernews_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://forgecode.dev/blog/kimi-k2-vs-sonnet-4-vs-gemini-2.5-pro/" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item claude critical">
+            <div class="item-title">
+                Show HN: "I Svelte That", a Book by Claude Code
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                hackernews_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://github.com/cloudstreet-dev/I-Svelte-That" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item claude critical">
+            <div class="item-title">
+                Claude Is the Drug, Cursor Is the Dealer
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                hackernews_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://middlelayer.substack.com/p/i-claude-is-the-drug-cursor-is-the" class="item-link">Read More →</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📊 High Priority Content</h2>
+
+        <div class="item critical">
+            <div class="item-title">
+                AI at the Helm: How 2025’s Smartest Models Are Redesigning the Web and Beyond
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/masila_paul_0746184050793/ai-at-the-helm-how-2025s-smartest-models-are-redesigning-the-web-and-beyond-5ad2" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                AI-Powered Anomaly Detection & Root Cause Analysis in Automated UI Regression Testing
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/freederia-research/ai-powered-anomaly-detection-root-cause-analysis-in-automated-ui-regression-testing-36l4" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                Personalized Biomechanical Modeling of Miniature Cardiac Tissues for Targeted Drug Delivery Optimization
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/freederia-research/personalized-biomechanical-modeling-of-miniature-cardiac-tissues-for-targeted-drug-delivery-1ffm" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                Automated Multi-Variant ELISA Optimization via Hyperdimensional Vector Analysis
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/freederia-research/automated-multi-variant-elisa-optimization-via-hyperdimensional-vector-analysis-15c1" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                Automated Predictive Maintenance for Reusable Rocket Engine Nozzle Cooling Systems
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/freederia-research/automated-predictive-maintenance-for-reusable-rocket-engine-nozzle-cooling-systems-40kl" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                Where MCP falls short: data integration in the AI world
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/tc87/where-mcp-falls-short-data-integration-in-the-ai-world-9aa" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                UPWORK Mobile Banking in 2025: Is It Still the Best Finance App? (606)
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/emiliana_catalin_b105cf5f/upwork-mobile-banking-in-2025-is-it-still-the-best-finance-app-606-1jpk" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                Google Finance AI Update Adds Live News, Smart Charts
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_ai • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/techthrilled/google-finance-ai-update-adds-live-news-smart-charts-3b9m" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                🚪 React Portals — Render Components Outside the Main DOM Hierarchy
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_react • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/aman_kureshi_/react-portals-render-components-outside-the-main-dom-hierarchy-15n4" class="item-link">Read More →</a>
+        </div>
+
+        <div class="item critical">
+            <div class="item-title">
+                AI emails digest
+                <span class="priority-badge priority-critical">critical</span>
+            </div>
+            <div class="item-meta">
+                dev_to_claude • 
+                Score: 1.00
+            </div>
+            <a href="https://dev.to/vendkura/ai-emails-digest-29al" class="item-link">Read More →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>📡 Top Sources: hackernews_ai, dev_to_ai, openai_blog</p>
+        <p>Generated by Universal Topic Intelligence System</p>
+        <p><a href="http://localhost:5001" style="color: #5145e0;">View Full Dashboard</a></p>
+    </div>
+</body>
+</html>

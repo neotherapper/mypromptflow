@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Intelligence Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .dashboard { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        .back-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        .metric-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+        }
+        .metric-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .metric-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #4f46e5;
+            margin-bottom: 10px;
+        }
+        .metric-label {
+            color: #6b7280;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .section-card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #3b82f6;
+        }
+        .insight-card.strength {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border-left-color: #10b981;
+        }
+        .insight-card.opportunity {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left-color: #f59e0b;
+        }
+        .insight-card.trend {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-left-color: #8b5cf6;
+        }
+        .insight-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+        .insight-description {
+            color: #4b5563;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .data-points {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+        .data-points li {
+            background: rgba(255,255,255,0.6);
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+        .action-items {
+            list-style: none;
+        }
+        .action-items li {
+            background: rgba(59,130,246,0.1);
+            padding: 8px 15px;
+            border-radius: 8px;
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: #1e40af;
+            border-left: 3px solid #3b82f6;
+        }
+        .ranking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .ranking-section {
+            background: rgba(248,250,252,0.8);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .ranking-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ranking-list {
+            list-style: none;
+        }
+        .ranking-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: white;
+            margin: 8px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .rank-badge {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .channel-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .metric-value {
+            font-weight: bold;
+            color: #4f46e5;
+        }
+        .recommendation {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            border: 1px solid #fca5a5;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .recommendation.medium {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-color: #fbbf24;
+        }
+        .recommendation-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+        .refresh-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(59,130,246,0.3);
+            transition: all 0.3s ease;
+        }
+        .refresh-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59,130,246,0.4);
+        }
+        .timestamp {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #10b981;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <button class="refresh-btn" onclick="location.reload()">
+            🔄 Refresh Dashboard
+        </button>
+        
+        <div class="header">
+            <a href="/" class="back-link">← Main Dashboard</a>
+            <h1>📊 YouTube Intelligence Dashboard</h1>
+            <p><span class="status-indicator"></span>Real-time Channel Performance Monitoring</p>
+        </div>
+        
+        <div class="dashboard-grid">
+            <div class="metric-card">
+                <div class="metric-icon">📺</div>
+                <div class="metric-number">15</div>
+                <div class="metric-label">Videos Tracked</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⭐</div>
+                <div class="metric-number">0</div>
+                <div class="metric-label">High-Value Videos</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📊</div>
+                <div class="metric-number">0.0%</div>
+                <div class="metric-label">High-Value Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🎯</div>
+                <div class="metric-number">0.325</div>
+                <div class="metric-label">Avg Quality Score</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-number">1/23</div>
+                <div class="metric-label">Channels Analyzed</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">🚀</div>
+                <div class="metric-number">1.4</div>
+                <div class="metric-label">Avg Videos/Week</div>
+            </div>
+        </div>
+        
+        <div class="section-card">
+            <h2 class="section-title">🔍 Key Insights</h2>
+            <div class="insights-grid">
+            <div class="insight-card trend">
+                <div class="insight-title">High Content Frequency Channels</div>
+                <div class="insight-description">1 channels with frequent content updates</div>
+                <ul class="data-points"><li>Most active: Fireship (1.4 videos/week)</li><li>Average frequency: 1.40 videos/week</li></ul>
+                <ul class="action-items"><li>Prioritize frequent publishers for real-time monitoring</li><li>Analyze correlation between frequency and quality</li></ul></div>
+            </div>
+        </div>
+        
+        <div class="section-card">
+            <h2 class="section-title">🏆 Performance Rankings</h2>
+            <div class="ranking-grid">
+                <div class="ranking-section">
+                    <div class="ranking-title">📈 Top Quality</div>
+                    <ol class="ranking-list">
+                    <li class="ranking-item">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span class="rank-badge">1</span>
+                            <span class="channel-name">Fireship</span>
+                        </div>
+                        <span class="metric-value">0.325</span>
+                    </li></ol></div>
+                <div class="ranking-section">
+                    <div class="ranking-title">⭐ High-Value Leaders</div>
+                    <ol class="ranking-list">
+                    <li class="ranking-item">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span class="rank-badge">1</span>
+                            <span class="channel-name">Fireship</span>
+                        </div>
+                        <span class="metric-value">0</span>
+                    </li></ol></div>
+                <div class="ranking-section">
+                    <div class="ranking-title">🚀 Most Active</div>
+                    <ol class="ranking-list">
+                    <li class="ranking-item">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span class="rank-badge">1</span>
+                            <span class="channel-name">Fireship</span>
+                        </div>
+                        <span class="metric-value">1.400</span>
+                    </li></ol></div>
+            </div>
+        </div>
+            <div class="section-card">
+                <h2 class="section-title">💡 System Recommendations</h2>
+                <div class="recommendation high">
+                    <div class="recommendation-title">Improve Channel Data Coverage</div>
+                    <p>Only 1/23 channels have analyzable data</p>
+                    <p><strong>Impact:</strong> Comprehensive intelligence requires data from all configured channels</p>
+                    <ul><li>Configure YouTube API key for comprehensive data collection</li><li>Run full channel analysis on all configured channels</li><li>Fix channel configuration issues causing data gaps</li></ul></div>
+                <div class="recommendation medium">
+                    <div class="recommendation-title">Optimize Quality Threshold Settings</div>
+                    <p>Only 0.0% of content meets high-value criteria</p>
+                    <p><strong>Impact:</strong> Better content discovery and utilization of available content</p>
+                    <ul><li>Review and adjust importance scoring algorithm</li><li>Lower quality threshold for initial content collection</li><li>Enhance priority topic detection and weighting</li></ul></div></div>
+        <div class="timestamp">
+            📊 Dashboard generated from report created on August 01, 2025 at 08:48 UTC<br>
+            Analysis completed in 0.00 seconds
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh every 5 minutes
+        setTimeout(() => {
+            location.reload();
+        }, 300000);
+        
+        // Add loading animation for refresh button
+        document.querySelector('.refresh-btn').addEventListener('click', function() {
+            this.innerHTML = '⏳ Refreshing...';
+            this.style.pointerEvents = 'none';
+        });
+    </script>
+</body>
+</html>

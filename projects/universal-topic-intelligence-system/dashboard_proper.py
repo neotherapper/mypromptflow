@@ -752,6 +752,9 @@ async def root():
             <span style="font-size: 0.75rem; color: var(--gray-500);">v5.0 - Proper Prioritization</span>
         </div>
         <div class="header-actions">
+            <a href="/youtube-intelligence" class="btn btn-secondary" style="text-decoration: none; margin-right: 10px;">
+                📊 YouTube Intelligence
+            </a>
             <button class="btn btn-claude" onclick="toggleClaudeFilter()">
                 🤖 Claude Focus
             </button>
@@ -1098,6 +1101,90 @@ async def root():
 </html>
     """
     return HTMLResponse(content=html_content)
+
+@app.get("/youtube-intelligence")
+async def youtube_intelligence():
+    """Serve the YouTube Intelligence Dashboard"""
+    youtube_dashboard_path = Path("dashboards/youtube_intelligence.html")
+    
+    if youtube_dashboard_path.exists():
+        with open(youtube_dashboard_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        return HTMLResponse(content=content)
+    else:
+        # Return a simple error page if file not found
+        error_html = """
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>YouTube Intelligence Dashboard - Not Found</title>
+            <style>
+                body { 
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+                    display: flex; 
+                    justify-content: center; 
+                    align-items: center; 
+                    height: 100vh;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    margin: 0;
+                }
+                .error-card {
+                    background: white;
+                    padding: 40px;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                    text-align: center;
+                    max-width: 500px;
+                    margin: 20px;
+                }
+                h1 { 
+                    color: #ef4444; 
+                    margin-bottom: 20px;
+                    font-size: 2rem;
+                }
+                p { 
+                    color: #6b7280; 
+                    margin: 15px 0; 
+                    line-height: 1.6;
+                }
+                .path {
+                    background: #f3f4f6;
+                    padding: 10px;
+                    border-radius: 8px;
+                    font-family: monospace;
+                    font-size: 0.9rem;
+                    word-break: break-all;
+                    margin: 20px 0;
+                }
+                a {
+                    display: inline-block;
+                    padding: 12px 24px;
+                    background: #5145e0;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    transition: background 0.3s;
+                }
+                a:hover {
+                    background: #4339c9;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="error-card">
+                <h1>📊 Dashboard Not Found</h1>
+                <p>The YouTube Intelligence Dashboard file could not be located at the expected path.</p>
+                <div class="path">""" + str(youtube_dashboard_path) + """</div>
+                <p>Please ensure the file exists or contact support.</p>
+                <a href="/">🏠 Return to Main Dashboard</a>
+            </div>
+        </body>
+        </html>
+        """
+        return HTMLResponse(content=error_html, status_code=404)
 
 if __name__ == "__main__":
     import uvicorn

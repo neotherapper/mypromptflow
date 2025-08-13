@@ -21,6 +21,7 @@ from core import (
     SourceMonitorFactory
 )
 from core.language_filter import LanguageFilter
+from core.relevance_filter import RelevanceFilter
 
 class RSSSourceMonitor(UniversalSourceMonitor):
     """
@@ -43,6 +44,10 @@ class RSSSourceMonitor(UniversalSourceMonitor):
             min_confidence=config.get("min_language_confidence", 0.7) if config else 0.7
         )
         self.enable_language_filtering = config.get("enable_language_filtering", True) if config else True
+        
+        # Relevance filtering configuration
+        self.relevance_filter = RelevanceFilter()
+        self.enable_relevance_filtering = config.get("enable_relevance_filtering", True) if config else True
         
         # Validate RSS URL
         if not source_metadata.source_url:
@@ -243,19 +248,34 @@ class RSSSourceMonitor(UniversalSourceMonitor):
             raw_content: Normalized RSS entry
             
         Returns:
-            Parsed ContentItem or None if filtered out by language detection
+            Parsed ContentItem or None if filtered out by language detection or relevance
         """
+        title = raw_content.get("title", "")
+        description = raw_content.get("description", "")
+        
         # Apply language filtering first if enabled
         if self.enable_language_filtering:
-            title = raw_content.get("title", "")
-            description = raw_content.get("description", "")
-            
             should_include, lang_result = self.language_filter.should_include_content(title, description)
             
             if not should_include:
                 self.logger.debug(
                     f"Filtering out non-English content: '{title[:50]}...' "
                     f"(detected: {lang_result.language}, confidence: {lang_result.confidence:.2f})"
+                )
+                return None
+        
+        # Apply relevance filtering if enabled
+        if self.enable_relevance_filtering:
+            # Extract topics for relevance check
+            topics = self._extract_topics(raw_content)
+            is_relevant, relevance_score, reason = self.relevance_filter.is_relevant(
+                title, description, topics
+            )
+            
+            if not is_relevant:
+                self.logger.debug(
+                    f"Filtering out irrelevant content: '{title[:50]}...' "
+                    f"(reason: {reason})"
                 )
                 return None
         
@@ -288,6 +308,13 @@ class RSSSourceMonitor(UniversalSourceMonitor):
                 "detected_language": lang_result.language,
                 "language_confidence": lang_result.confidence,
                 "is_english": lang_result.is_english
+            })
+        
+        # Add relevance score to metadata
+        if self.enable_relevance_filtering:
+            metadata.update({
+                "relevance_score": relevance_score,
+                "relevance_reason": reason
             })
         
         # Create content item

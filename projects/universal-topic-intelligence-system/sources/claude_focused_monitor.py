@@ -105,6 +105,55 @@ CLAUDE_FOCUSED_SOURCES = [
         "authority_score": 0.9,
         "topics": ["mcp", "mcp-servers", "claude", "ai-integration"],
         "description": "Model Context Protocol discussions and updates"
+    },
+    # Additional high-quality sources for Claude and AI development
+    {
+        "source_id": "langchain_blog",
+        "source_name": "LangChain Blog",
+        "source_url": "https://blog.langchain.dev/rss/",
+        "authority_score": 0.85,
+        "topics": ["langchain", "llm", "claude", "ai-development", "agents"],
+        "description": "LangChain updates and LLM development patterns"
+    },
+    {
+        "source_id": "reddit_claude",
+        "source_name": "Reddit Claude AI",
+        "source_url": "https://www.reddit.com/r/ClaudeAI/.rss",
+        "authority_score": 0.7,
+        "topics": ["claude", "anthropic", "prompting", "claude-code", "community"],
+        "description": "Claude AI community discussions and tips"
+    },
+    {
+        "source_id": "reddit_localllama_claude",
+        "source_name": "Reddit LocalLLaMA Claude",
+        "source_url": "https://www.reddit.com/r/LocalLLaMA/search.rss?q=claude+OR+anthropic&restrict_sr=1&sort=new",
+        "authority_score": 0.65,
+        "topics": ["claude", "llm", "ai-community", "comparisons"],
+        "description": "LocalLLaMA discussions about Claude"
+    },
+    {
+        "source_id": "github_blog",
+        "source_name": "GitHub Blog",
+        "source_url": "https://github.blog/feed/",
+        "authority_score": 0.9,
+        "topics": ["development", "ai-tools", "copilot", "github"],
+        "description": "GitHub updates including Copilot and AI features"
+    },
+    {
+        "source_id": "react_status",
+        "source_name": "React Status Newsletter",
+        "source_url": "https://react.statuscode.com/rss/",
+        "authority_score": 0.85,
+        "topics": ["react", "frontend", "javascript", "typescript"],
+        "description": "Weekly React news and articles"
+    },
+    {
+        "source_id": "hackernews_llm",
+        "source_name": "HackerNews LLM",
+        "source_url": "https://hnrss.org/newest?q=llm+OR+%22language+model%22+OR+prompting",
+        "authority_score": 0.75,
+        "topics": ["llm", "ai", "prompting", "news"],
+        "description": "HackerNews discussions about LLMs and prompting"
     }
 ]
 
