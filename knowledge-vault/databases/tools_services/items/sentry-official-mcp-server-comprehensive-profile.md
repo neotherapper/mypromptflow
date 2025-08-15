@@ -1,0 +1,131 @@
+---
+name: "Sentry Official MCP Server"
+category: "Error Monitoring & Bug Tracking"
+type: "Application Error Tracking Platform"
+tier: "Tier 1"
+quality_score: 9.2
+maintainer: "Sentry (Official)"
+github_url: "https://github.com/getsentry/sentry-mcp-stdio"
+npm_package: "N/A"
+description: "Official Sentry MCP server providing comprehensive error monitoring, bug tracking, and AI-powered debugging capabilities with over 30 million monthly requests"
+last_updated: "2025-08-14"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Cloud-hosted (Remote MCP)"
+  - "Self-hosted (STDIO mode)"
+  - "Cross-platform via API"
+programming_languages:
+  - "Python"
+  - "JavaScript"
+  - "TypeScript"
+  - "All languages supported by Sentry"
+dependencies:
+  - "Sentry account and project access"
+  - "OAuth authentication (remote) or API token (STDIO)"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Comprehensive error monitoring and tracking"
+    - "AI-powered Seer Analysis for root cause analysis"
+    - "Automated bug fix recommendations"
+    - "Issue context and debugging data access"
+    - "Performance monitoring integration"
+  advanced:
+    - "MCP server monitoring and observability"
+    - "Client error and transport issue tracking"
+    - "Tool execution performance analytics"
+    - "AI usage pattern analysis"
+    - "Cross-project error correlation"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Sentry account with project access"
+  - "OAuth authentication setup (remote) or API token (STDIO)"
+  - "MCP client configuration"
+  - "Error tracking project setup"
+authentication: "OAuth 2.0 (remote), API Token (STDIO), Sentry Account Integration"
+rate_limits: "Sentry API rate limits apply"
+pricing_model: "Included with Sentry subscription"
+deployment_options:
+  remote_hosted:
+    endpoint: "https://mcp.sentry.dev/mcp"
+    description: "Sentry-managed remote MCP server with OAuth support"
+    benefits: "Lower friction, latest functionality, seamless authentication"
+  local_stdio:
+    description: "Self-hosted MCP server for Sentry installations"
+    use_case: "On-premise or custom Sentry deployments"
+use_cases:
+  primary:
+    - "AI-assisted debugging and error analysis"
+    - "Automated root cause analysis"
+    - "Bug fix recommendation and tracking"
+    - "Error monitoring and alerting"
+  secondary:
+    - "Performance issue identification"
+    - "Release health monitoring"
+    - "Team productivity analytics"
+    - "Error trend analysis and reporting"
+tools_available:
+  - name: "error_analysis"
+    description: "Retrieve and analyze error reports and stacktraces"
+  - name: "seer_analysis"
+    description: "Trigger AI-powered root cause analysis"
+  - name: "fix_recommendations"
+    description: "Get AI-generated solutions for bugs and performance issues"
+  - name: "issue_management"
+    description: "Manage issues, assignments, and resolution status"
+  - name: "project_monitoring"
+    description: "Monitor project health and performance metrics"
+  - name: "release_tracking"
+    description: "Track deployment success and error rates"
+performance_metrics:
+  response_time: "Fast (Sentry API dependent)"
+  reliability: "Very High"
+  scalability: "Enterprise-scale (30M+ requests/month)"
+documentation_quality: "Excellent"
+community_adoption: "Very High (4M+ developers)"
+enterprise_readiness: "Very High"
+security_features:
+  - "OAuth 2.0 secure authentication"
+  - "Sentry enterprise security model"
+  - "Role-based access control"
+  - "Data encryption and privacy"
+  - "Audit logging and compliance"
+  - "SOC 2 and privacy certifications"
+mcp_monitoring_capabilities:
+  - "MCP server connection monitoring"
+  - "Resource access tracking"
+  - "Tool execution performance analysis"
+  - "Client error and transport issue detection"
+  - "AI usage pattern analytics"
+  - "Traffic load and performance insights"
+limitations:
+  - "Requires Sentry subscription for full features"
+  - "API rate limits apply"
+  - "Limited to Sentry ecosystem data"
+  - "Remote hosted requires internet connectivity"
+comparison_notes: "Official Sentry integration provides superior reliability, AI features, and monitoring capabilities compared to community alternatives"
+integration_examples:
+  - "AI assistant analyzing error patterns and suggesting fixes"
+  - "Automated debugging workflow with root cause analysis"
+  - "Performance issue identification and optimization"
+  - "Release health monitoring and error tracking"
+notable_features:
+  - "First official MCP server monitoring tool"
+  - "AI-powered Seer Analysis integration"
+  - "30+ million monthly requests handling"
+  - "Remote hosted with OAuth authentication"
+  - "Comprehensive debugging context access"
+  - "Enterprise-grade error monitoring"
+market_context:
+  - "Used by 4+ million developers globally"
+  - "Major milestone in MCP ecosystem development"
+  - "Gartner predicts 75% API gateway vendors will have MCP by 2026"
+  - "Rapid adoption since November 2024 MCP introduction"
+assessment_notes: "High Tier 1 rating due to official Sentry backing, comprehensive error monitoring capabilities, AI-powered debugging features, massive scale (30M+ requests), and pioneer status in MCP server monitoring. Represents gold standard for error tracking MCP integration."
+related_servers:
+  - "Datadog Official MCP Server"
+  - "New Relic MCP Server"
+  - "Monitoring and observability platforms"
+  - "Bug tracking and issue management systems"
+---
