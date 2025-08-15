@@ -12,6 +12,7 @@ from datetime import datetime
 from typing import Dict, List, Any
 
 from sources.rss_monitor import RSSSourceMonitor
+from sources.real_mcp_monitor import RealMCPMonitor, MCP_TEST_CONFIG
 from core import SourceMetadata, SourceType
 from storage.database import StorageManager
 from core.content_prioritizer import UniversalContentPrioritizer
@@ -85,8 +86,30 @@ class UniversalMonitor:
             }
         ]
         
+        # Add MCP monitoring configuration
+        self.mcp_sources = [
+            {
+                "name": "React YouTube Content",
+                "type": "youtube_mcp",
+                "config": MCP_TEST_CONFIG["youtube_react_videos"],
+                "topics": ["react", "javascript"]
+            },
+            {
+                "name": "React GitHub Repositories", 
+                "type": "github_mcp",
+                "config": MCP_TEST_CONFIG["github_react_repos"],
+                "topics": ["react", "javascript"]
+            },
+            {
+                "name": "Claude AI News Search",
+                "type": "search_mcp", 
+                "config": MCP_TEST_CONFIG["search_claude_news"],
+                "topics": ["claude", "ai"]
+            }
+        ]
+        
         self.stats = {
-            "sources_total": len(self.working_sources),
+            "sources_total": len(self.working_sources) + len(self.mcp_sources),
             "sources_successful": 0,
             "sources_failed": 0,
             "items_found": 0,
@@ -145,10 +168,88 @@ class UniversalMonitor:
             "error": None if result.success else (result.errors[0] if result.errors else "Unknown error")
         }
     
+    async def monitor_mcp_source(self, mcp_config: Dict) -> Dict[str, Any]:
+        """Monitor an MCP source"""
+        
+        # Generate MCP source ID
+        import hashlib
+        source_id = hashlib.md5(f"mcp_{mcp_config['name']}".encode()).hexdigest()[:8]
+        
+        # Create metadata for MCP source
+        metadata = SourceMetadata(
+            source_id=source_id,
+            source_name=mcp_config['name'],
+            source_type=SourceType.API,
+            source_url="https://mcp.example.com",
+            authority_score=0.8,
+            update_frequency="daily",
+            topics=mcp_config['topics']
+        )
+        
+        try:
+            # Create MCP monitor
+            mcp_monitor = RealMCPMonitor(metadata)
+            
+            # Run monitoring
+            logger.info(f"Monitoring MCP source: {mcp_config['name']} ({mcp_config['type']})")
+            monitoring_result = await mcp_monitor.monitor(mcp_config['config'])
+            
+            if not monitoring_result.success:
+                return {
+                    "source": mcp_config['name'],
+                    "url": f"MCP:{mcp_config['type']}",
+                    "success": False,
+                    "items_found": 0,
+                    "items_stored": 0,
+                    "error": monitoring_result.errors[0] if monitoring_result.errors else "MCP monitoring failed"
+                }
+            
+            # Store items in database
+            items_stored = 0
+            for item in monitoring_result.new_items:
+                try:
+                    # Calculate priority
+                    priority_result = self.prioritizer.prioritize(item)
+                    
+                    # Store item
+                    stored = await self.storage.store_content(
+                        item=item,
+                        priority_score=priority_result.total_score,
+                        priority_level=priority_result.priority_level.value
+                    )
+                    
+                    if stored:
+                        items_stored += 1
+                        logger.info(f"Stored MCP item: {item.title[:60]}... (Priority: {priority_result.priority_level.value})")
+                    
+                except Exception as e:
+                    logger.error(f"Error storing MCP item {item.item_id}: {e}")
+            
+            return {
+                "source": mcp_config['name'],
+                "url": f"MCP:{mcp_config['type']}",
+                "success": True,
+                "items_found": monitoring_result.items_found,
+                "items_stored": items_stored,
+                "error": None
+            }
+            
+        except Exception as e:
+            logger.error(f"MCP monitoring failed for {mcp_config['name']}: {e}")
+            return {
+                "source": mcp_config['name'],
+                "url": f"MCP:{mcp_config['type']}",
+                "success": False,
+                "items_found": 0,
+                "items_stored": 0,
+                "error": str(e)
+            }
+    
     async def run_monitoring_cycle(self) -> Dict[str, Any]:
         """Run one complete monitoring cycle"""
         
-        logger.info(f"Starting monitoring cycle for {len(self.working_sources)} sources")
+        total_sources = len(self.working_sources) + len(self.mcp_sources)
+        logger.info(f"Starting monitoring cycle for {total_sources} sources ({len(self.working_sources)} RSS + {len(self.mcp_sources)} MCP)")
         self.stats["last_run"] = datetime.now()
         
         # Reset per-cycle stats
@@ -159,8 +260,15 @@ class UniversalMonitor:
         
         # Monitor all sources concurrently
         tasks = []
+        
+        # Add RSS source tasks
         for source in self.working_sources:
             task = self.monitor_source(source)
+            tasks.append(task)
+        
+        # Add MCP source tasks
+        for mcp_source in self.mcp_sources:
+            task = self.monitor_mcp_source(mcp_source)
             tasks.append(task)
         
         results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -186,12 +294,14 @@ class UniversalMonitor:
         
         cycle_summary = {
             "timestamp": self.stats["last_run"].isoformat(),
-            "sources_checked": len(self.working_sources),
+            "sources_checked": total_sources,
+            "rss_sources": len(self.working_sources),
+            "mcp_sources": len(self.mcp_sources),
             "sources_successful": self.stats["sources_successful"],
             "sources_failed": self.stats["sources_failed"],
             "items_found_this_cycle": cycle_items_found,
             "items_stored_this_cycle": cycle_items_stored,
-            "success_rate": f"{(self.stats['sources_successful'] / len(self.working_sources) * 100):.1f}%",
+            "success_rate": f"{(self.stats['sources_successful'] / total_sources * 100):.1f}%",
             "source_results": source_results,
             "cumulative_stats": self.stats.copy()
         }
