@@ -1,0 +1,113 @@
+---
+name: "Apollo GraphQL Official MCP Server"
+category: "API Infrastructure"
+type: "GraphQL Platform"
+tier: "Tier 1"
+quality_score: 8.9
+maintainer: "Apollo Graph, Inc. (Official)"
+github_url: "https://github.com/apollographql/mcp-server"
+npm_package: "@apollo/mcp-server"
+description: "Official Apollo MCP server connecting GraphQL APIs to AI agents with schema introspection, federated graphs, and intelligent query generation"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Apollo Studio"
+  - "Apollo Router"
+  - "Self-hosted GraphQL servers"
+  - "Cloud and on-premise"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "GraphQL"
+dependencies:
+  - "Apollo Studio account (optional)"
+  - "GraphQL endpoint"
+  - "MCP-compatible client"
+features:
+  core:
+    - "GraphQL schema introspection"
+    - "Query generation and execution"
+    - "Mutation operations"
+    - "Subscription support"
+    - "Schema registry integration"
+  advanced:
+    - "Federated graph support"
+    - "Query plan visualization"
+    - "Performance insights"
+    - "Schema composition"
+    - "Contract testing"
+integration_complexity: "Medium"
+setup_requirements:
+  - "GraphQL API endpoint"
+  - "Schema access"
+  - "Authentication setup"
+  - "Apollo Studio (optional)"
+authentication: "API keys, JWT, custom auth"
+rate_limits: "Configurable per deployment"
+pricing_model: "Free tier available, paid for advanced features"
+use_cases:
+  primary:
+    - "AI-powered API exploration"
+    - "Automated GraphQL query generation"
+    - "API integration workflows"
+    - "Schema-driven development"
+  secondary:
+    - "API documentation generation"
+    - "Test automation"
+    - "Performance monitoring"
+    - "Schema evolution tracking"
+tools_available:
+  - name: "schema_introspection"
+    description: "Explore GraphQL schema and types"
+  - name: "query_execution"
+    description: "Execute GraphQL queries with variables"
+  - name: "mutation_execution"
+    description: "Perform GraphQL mutations"
+  - name: "subscription_management"
+    description: "Handle GraphQL subscriptions"
+  - name: "federation_tools"
+    description: "Work with federated graphs"
+  - name: "query_planning"
+    description: "Analyze and optimize query plans"
+performance_metrics:
+  response_time: "Fast"
+  reliability: "High"
+  scalability: "Enterprise-scale"
+documentation_quality: "Excellent"
+community_adoption: "High"
+enterprise_readiness: "High"
+graphql_capabilities:
+  - "Full GraphQL spec support"
+  - "Federation 2.0 compatible"
+  - "Automatic persisted queries"
+  - "Query batching"
+  - "Response caching"
+security_features:
+  - "Query depth limiting"
+  - "Query complexity analysis"
+  - "Rate limiting"
+  - "Authentication integration"
+  - "Field-level authorization"
+limitations:
+  - "Requires GraphQL API"
+  - "Complex schemas need optimization"
+  - "Subscription complexity"
+comparison_notes: "Official Apollo integration provides best-in-class GraphQL tooling and federation support"
+integration_examples:
+  - "AI-powered GraphQL API clients"
+  - "Automated API testing"
+  - "Schema migration tools"
+  - "API gateway integration"
+notable_features:
+  - "Official Apollo support"
+  - "Federation support"
+  - "Schema registry integration"
+  - "Query intelligence"
+  - "Performance insights"
+assessment_notes: "Tier 1 rating due to official Apollo backing, comprehensive GraphQL support, enterprise features, and critical role in modern API architecture"
+related_servers:
+  - "GraphQL MCP Server"
+  - "REST API MCP Server"
+  - "API infrastructure platforms"
+---

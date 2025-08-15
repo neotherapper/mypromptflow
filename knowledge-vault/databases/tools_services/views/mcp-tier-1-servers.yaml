@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 67
+  total_servers: 75
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -292,6 +292,33 @@ enterprise_integration:
       business_value: "Official Asana integration for task management and team collaboration workflows"
       technology_alignment: 9
       business_relevance: 9
+      
+    - name: "Atlassian Official MCP Server"
+      composite_score: 9.3
+      category: "Project Management & Documentation"
+      file_path: "knowledge-vault/databases/tools_services/items/atlassian-jira-confluence-mcp-server-official.md"
+      production_readiness: 95
+      business_value: "Official Atlassian integration for Jira work items and Confluence documentation"
+      technology_alignment: 10
+      business_relevance: 10
+      
+    - name: "Auth0 Official MCP Server"
+      composite_score: 9.2
+      category: "Identity & Access Management"
+      file_path: "knowledge-vault/databases/tools_services/items/auth0-identity-platform-mcp-server-official.md"
+      production_readiness: 95
+      business_value: "Enterprise identity management and authentication platform"
+      technology_alignment: 9
+      business_relevance: 9
+      
+    - name: "Microsoft Azure Comprehensive MCP Server"
+      composite_score: 9.5
+      category: "Cloud Infrastructure"
+      file_path: "knowledge-vault/databases/tools_services/items/microsoft-azure-comprehensive-mcp-server-official.md"
+      production_readiness: 97
+      business_value: "Full Azure platform integration with all key services"
+      technology_alignment: 10
+      business_relevance: 10
 
 ai_development_tools:
   description: "AI-powered development enhancement and automation"
@@ -415,6 +442,20 @@ api_development:
       file_path: "knowledge-vault/databases/tools_services/items/postman-mcp-server-detailed-profile.md"
       production_readiness: 91
       business_value: "Comprehensive API testing and documentation"
+      
+    - name: "Algolia Official MCP Server"
+      composite_score: 9.1
+      category: "Search Infrastructure"
+      file_path: "knowledge-vault/databases/tools_services/items/algolia-search-platform-mcp-server-official.md"
+      production_readiness: 96
+      business_value: "Enterprise search-as-a-service with AI-powered relevance"
+      
+    - name: "Apollo GraphQL Official MCP Server"
+      composite_score: 8.9
+      category: "API Infrastructure"
+      file_path: "knowledge-vault/databases/tools_services/items/apollo-graphql-platform-mcp-server-official.md"
+      production_readiness: 93
+      business_value: "GraphQL API management with federation support"
 
 business_applications:
   description: "Business productivity and workflow applications"
@@ -563,6 +604,27 @@ specialized_tools:
       file_path: "knowledge-vault/databases/tools_services/items/bright-data-mcp-server.md"
       production_readiness: 88
       business_value: "Enterprise web scraping and data collection"
+      
+    - name: "Brave Search Official MCP Server"
+      composite_score: 9.0
+      category: "Search & Information Retrieval"
+      file_path: "knowledge-vault/databases/tools_services/items/brave-search-official-mcp-server.md"
+      production_readiness: 94
+      business_value: "Privacy-focused independent search with AI summarization"
+      
+    - name: "Alpaca Trading Platform MCP Server"
+      composite_score: 8.7
+      category: "Financial Services"
+      file_path: "knowledge-vault/databases/tools_services/items/alpaca-trading-platform-mcp-server-official.md"
+      production_readiness: 92
+      business_value: "Stock and options trading with algorithmic strategy support"
+      
+    - name: "Arize Phoenix ML Observability MCP Server"
+      composite_score: 8.8
+      category: "ML Operations & Observability"
+      file_path: "knowledge-vault/databases/tools_services/items/arize-phoenix-ml-observability-mcp-server-official.md"
+      production_readiness: 93
+      business_value: "LLM observability with trace inspection and prompt management"
 
 # Implementation Strategy
 implementation_strategy:

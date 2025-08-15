@@ -1,0 +1,135 @@
+---
+name: "Microsoft Azure Comprehensive MCP Server"
+category: "Cloud Infrastructure"
+type: "Full Azure Platform Integration"
+tier: "Tier 1"
+quality_score: 9.5
+maintainer: "Microsoft Azure (Official)"
+github_url: "https://github.com/Azure/mcp-server"
+npm_package: "@azure/mcp-server"
+description: "Official Microsoft Azure MCP server providing comprehensive access to key Azure services including compute, storage, AI, databases, and DevOps tools"
+last_updated: "2025-01-15"
+status: "Production"
+license: "MIT"
+supported_platforms:
+  - "Azure Cloud"
+  - "Azure Government"
+  - "Azure China"
+  - "Hybrid cloud"
+programming_languages:
+  - "TypeScript"
+  - "C#"
+  - "Python"
+  - "REST API"
+dependencies:
+  - "Azure subscription"
+  - "Azure AD authentication"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Resource management across all Azure services"
+    - "Virtual machine provisioning and management"
+    - "Storage account operations"
+    - "Database service management"
+    - "Networking configuration"
+  advanced:
+    - "Azure AI and Cognitive Services integration"
+    - "AKS (Kubernetes) management"
+    - "Azure DevOps pipeline automation"
+    - "Cost management and optimization"
+    - "Security Center integration"
+integration_complexity: "Medium to High"
+setup_requirements:
+  - "Azure subscription"
+  - "Service principal or managed identity"
+  - "Role-based access control (RBAC)"
+  - "Resource group configuration"
+authentication: "Azure AD, Service Principal, Managed Identity"
+rate_limits: "Azure API throttling limits apply"
+pricing_model: "No additional cost (Azure usage charges apply)"
+supported_services:
+  compute:
+    - "Virtual Machines"
+    - "App Services"
+    - "Functions"
+    - "Container Instances"
+    - "AKS"
+  storage:
+    - "Blob Storage"
+    - "File Storage"
+    - "Queue Storage"
+    - "Table Storage"
+  databases:
+    - "SQL Database"
+    - "Cosmos DB"
+    - "PostgreSQL"
+    - "MySQL"
+  ai_ml:
+    - "Cognitive Services"
+    - "Machine Learning"
+    - "OpenAI Service"
+use_cases:
+  primary:
+    - "Infrastructure automation"
+    - "Multi-cloud management"
+    - "DevOps workflows"
+    - "Resource provisioning"
+  secondary:
+    - "Cost optimization"
+    - "Security compliance"
+    - "Disaster recovery"
+    - "Monitoring and alerting"
+tools_available:
+  - name: "resource_management"
+    description: "Create, update, delete Azure resources"
+  - name: "vm_operations"
+    description: "Manage virtual machines"
+  - name: "storage_operations"
+    description: "Handle storage accounts and data"
+  - name: "database_management"
+    description: "Manage Azure database services"
+  - name: "networking_config"
+    description: "Configure virtual networks and security"
+  - name: "devops_automation"
+    description: "Integrate with Azure DevOps"
+performance_metrics:
+  response_time: "Fast"
+  reliability: "Very High (99.95% SLA)"
+  scalability: "Global scale"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "Very High"
+compliance_certifications:
+  - "SOC 1/2/3"
+  - "ISO 27001"
+  - "HIPAA"
+  - "FedRAMP"
+  - "GDPR"
+security_features:
+  - "Azure AD integration"
+  - "Managed identities"
+  - "Key Vault integration"
+  - "Network security groups"
+  - "Azure Policy enforcement"
+limitations:
+  - "Azure subscription required"
+  - "Complex RBAC setup for advanced scenarios"
+  - "Regional service availability varies"
+comparison_notes: "Most comprehensive Azure integration available, superior to AWS MCP Server for Azure-specific workloads"
+integration_examples:
+  - "AI-powered infrastructure provisioning"
+  - "Automated DevOps pipelines"
+  - "Multi-region deployment automation"
+  - "Hybrid cloud management"
+notable_features:
+  - "Official Microsoft support"
+  - "Full Azure service coverage"
+  - "Enterprise security integration"
+  - "Hybrid cloud support"
+  - "Government cloud compatibility"
+assessment_notes: "Tier 1 rating due to official Microsoft backing, comprehensive service coverage, enterprise-grade security, and critical cloud infrastructure role"
+related_servers:
+  - "AWS MCP Server"
+  - "Google Cloud MCP Server"
+  - "Cloud infrastructure platforms"
+---

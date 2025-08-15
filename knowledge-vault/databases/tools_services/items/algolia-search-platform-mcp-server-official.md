@@ -1,0 +1,111 @@
+---
+name: "Algolia Official MCP Server"
+category: "Search Infrastructure"
+type: "Search-as-a-Service Platform"
+tier: "Tier 1"
+quality_score: 9.1
+maintainer: "Algolia (Official)"
+github_url: "https://github.com/algolia/mcp-server"
+npm_package: "@algolia/mcp-server"
+description: "Official Algolia MCP server for AI agents to provision, configure, and query Algolia search indices with advanced search and discovery capabilities"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Algolia Cloud"
+  - "Multi-region infrastructure"
+  - "Cross-platform via API"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "REST API"
+dependencies:
+  - "Algolia account"
+  - "Application ID and API keys"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Index provisioning and management"
+    - "Real-time search queries"
+    - "Faceted search configuration"
+    - "Relevance tuning"
+    - "Analytics integration"
+  advanced:
+    - "AI-powered query suggestions"
+    - "Personalization rules"
+    - "A/B testing framework"
+    - "Geo-distributed search"
+    - "Multi-language support"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Algolia account"
+  - "Application credentials"
+  - "Index configuration"
+  - "Search parameter setup"
+authentication: "Algolia API Keys"
+rate_limits: "Based on Algolia plan"
+pricing_model: "Usage-based pricing"
+use_cases:
+  primary:
+    - "E-commerce search implementation"
+    - "Documentation search"
+    - "SaaS application search"
+    - "Mobile app search"
+  secondary:
+    - "Voice search applications"
+    - "Image search solutions"
+    - "Recommendation engines"
+    - "Instant search UIs"
+tools_available:
+  - name: "index_management"
+    description: "Create, configure, and delete search indices"
+  - name: "record_operations"
+    description: "Add, update, delete search records"
+  - name: "search_query"
+    description: "Execute searches with filters and facets"
+  - name: "relevance_configuration"
+    description: "Configure ranking and relevance rules"
+  - name: "analytics_retrieval"
+    description: "Access search analytics and insights"
+  - name: "synonym_management"
+    description: "Configure search synonyms and query rules"
+performance_metrics:
+  response_time: "Ultra-fast (<100ms p99)"
+  reliability: "Very High (99.99% SLA)"
+  scalability: "Web-scale"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "Very High"
+infrastructure:
+  - "70+ data centers worldwide"
+  - "Distributed search network (DSN)"
+  - "Automatic failover"
+  - "Real-time synchronization"
+security_features:
+  - "API key security levels"
+  - "IP restriction capabilities"
+  - "Secure key generation"
+  - "GDPR compliant"
+  - "SOC 2 certified"
+limitations:
+  - "Record size limits"
+  - "API rate limits by plan"
+  - "Index size restrictions on lower tiers"
+comparison_notes: "Official Algolia integration provides fastest search performance and most comprehensive feature access compared to alternatives"
+integration_examples:
+  - "AI-powered e-commerce search"
+  - "Intelligent documentation search"
+  - "Conversational search interfaces"
+  - "Multi-modal search applications"
+notable_features:
+  - "Official Algolia support"
+  - "Sub-100ms search latency globally"
+  - "AI-powered relevance"
+  - "Typo tolerance and synonyms"
+  - "Instant search capabilities"
+assessment_notes: "Tier 1 rating due to official Algolia backing, industry-leading search performance, comprehensive feature set, and critical role in search infrastructure"
+related_servers:
+  - "Elasticsearch MCP Server"
+  - "Typesense MCP Server"
+  - "Search infrastructure platforms"
+---
