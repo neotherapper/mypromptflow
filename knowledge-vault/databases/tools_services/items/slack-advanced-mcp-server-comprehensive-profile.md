@@ -1,0 +1,107 @@
+---
+name: "Slack Advanced MCP Server"
+category: "Team Communication"
+type: "Workplace Collaboration Platform"
+tier: "Tier 1"
+quality_score: 8.9
+maintainer: "korotovsky (Community)"
+github_url: "https://github.com/korotovsky/slack-mcp-server"
+npm_package: "N/A"
+description: "The most powerful MCP Slack Server with no permission requirements, multiple transport modes, and intelligent workspace integration"
+last_updated: "2024-12-15"
+status: "Production"
+license: "MIT"
+supported_platforms:
+  - "Windows"
+  - "macOS"
+  - "Linux"
+  - "Cloud"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "Node.js"
+dependencies:
+  - "Slack workspace access"
+  - "Optional: Slack OAuth token"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Stealth mode operation (no permissions required)"
+    - "OAuth and token-based authentication"
+    - "Multiple transport protocols (Stdio, SSE)"
+    - "Direct messages and group DMs support"
+    - "Smart history fetch logic"
+  advanced:
+    - "Enterprise workspace compatibility"
+    - "Channel management and operations"
+    - "Message reactions and threading"
+    - "Proxy server support"
+    - "Apps support within Slack"
+    - "Workspace history access"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Slack workspace access"
+  - "MCP client configuration"
+  - "Optional: OAuth application setup"
+  - "Network connectivity to Slack API"
+authentication: "OAuth 2.0, Browser Token Extraction, Stealth Mode"
+rate_limits: "Slack API rate limits apply"
+pricing_model: "Free (Open Source)"
+use_cases:
+  primary:
+    - "AI-assisted team communication"
+    - "Automated workspace management"
+    - "Message monitoring and analytics"
+    - "Cross-channel workflow automation"
+  secondary:
+    - "Customer support automation"
+    - "Project status updates"
+    - "Meeting coordination"
+    - "Knowledge base integration"
+tools_available:
+  - name: "message_operations"
+    description: "Send, edit, delete messages across channels"
+  - name: "channel_management"
+    description: "Create, manage, archive channels"
+  - name: "user_operations"
+    description: "User lookup, presence, profile management"
+  - name: "workspace_analytics"
+    description: "History analysis, usage metrics"
+  - name: "reaction_management"
+    description: "Add, remove, manage message reactions"
+performance_metrics:
+  response_time: "Fast (Slack API dependent)"
+  reliability: "High"
+  scalability: "Enterprise-scale"
+documentation_quality: "Good"
+community_adoption: "High"
+enterprise_readiness: "High"
+security_features:
+  - "Stealth mode for minimal permissions"
+  - "OAuth 2.0 secure authentication"
+  - "Enterprise workspace support"
+  - "Token management and rotation"
+  - "Proxy support for corporate networks"
+limitations:
+  - "Slack API rate limits"
+  - "Requires workspace access permissions"
+  - "Stealth mode has functional limitations"
+  - "Enterprise features may require additional setup"
+comparison_notes: "Most advanced community Slack MCP server with unique stealth mode capability"
+integration_examples:
+  - "Claude Desktop integration for Slack workspace management"
+  - "Automated customer support through Slack channels"
+  - "AI-powered meeting scheduling and coordination"
+  - "Cross-team communication automation"
+notable_features:
+  - "Unique stealth mode operation"
+  - "Multiple authentication methods"
+  - "Enterprise workspace compatibility"
+  - "Advanced transport protocol support"
+  - "Smart history and context management"
+assessment_notes: "High Tier 1 rating due to advanced features, enterprise compatibility, unique stealth mode, and comprehensive Slack integration capabilities. Represents most powerful community Slack MCP solution."
+related_servers:
+  - "Discord MCP Server"
+  - "Microsoft Teams MCP Server"
+  - "Communication platform integrations"
+---

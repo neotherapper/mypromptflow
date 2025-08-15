@@ -1,0 +1,126 @@
+---
+name: "Airtable Advanced MCP Server"
+category: "Database Management"
+type: "Cloud Database & Collaboration Platform"
+tier: "Tier 1"
+quality_score: 8.7
+maintainer: "Community (Multiple Implementations)"
+github_url: "https://github.com/domdomegg/airtable-mcp-server"
+npm_package: "N/A"
+description: "Advanced Airtable MCP server enabling AI systems to interact with Airtable bases through comprehensive database operations and schema management"
+last_updated: "2024-12-15"
+status: "Production"
+license: "MIT"
+supported_platforms:
+  - "Windows"
+  - "macOS"
+  - "Linux"
+  - "Cloud"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "Python"
+  - "Node.js"
+dependencies:
+  - "Airtable personal access token"
+  - "Node.js 14+ or Python 3.10+"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Complete Airtable base management"
+    - "Dynamic table and field operations"
+    - "Advanced record filtering and querying"
+    - "Schema inspection and manipulation"
+    - "Batch operations for efficiency"
+  advanced:
+    - "AI-powered table building with staged approach"
+    - "Natural language database operations"
+    - "Complex table creation with minimized failure rates"
+    - "Data migration and transformation"
+    - "Intelligent error handling and recovery"
+integration_complexity: "Medium"
+setup_requirements:
+  - "Airtable personal access token"
+  - "Appropriate API scopes (schema.bases:read, data.records:read/write)"
+  - "MCP client configuration"
+  - "Database access permissions"
+authentication: "Airtable Personal Access Token"
+rate_limits: "Airtable API rate limits (5 requests/second)"
+pricing_model: "Free (requires Airtable subscription)"
+use_cases:
+  primary:
+    - "AI-assisted database management"
+    - "Automated data entry and updates"
+    - "Dynamic schema modification"
+    - "Business process automation"
+  secondary:
+    - "Data migration and ETL operations"
+    - "Report generation and analytics"
+    - "Inventory and asset management"
+    - "Customer relationship management"
+tools_available:
+  - name: "base_management"
+    description: "Create, modify, and manage Airtable bases"
+  - name: "table_operations"
+    description: "Full table lifecycle management"
+  - name: "field_schema_control"
+    description: "Dynamic field creation and modification"
+  - name: "record_operations"
+    description: "CRUD operations with advanced filtering"
+  - name: "batch_processor"
+    description: "Efficient bulk operations and data processing"
+  - name: "schema_inspector"
+    description: "Database schema analysis and documentation"
+performance_metrics:
+  response_time: "Medium (Airtable API dependent)"
+  reliability: "High"
+  scalability: "Business-scale"
+documentation_quality: "Good"
+community_adoption: "High"
+enterprise_readiness: "Medium to High"
+security_features:
+  - "Personal access token authentication"
+  - "Scoped API permissions"
+  - "Airtable workspace security model"
+  - "Data encryption in transit"
+  - "Audit logging through Airtable"
+implementation_variants:
+  - name: "domdomegg/airtable-mcp-server"
+    description: "Comprehensive base interaction with AI system integration"
+  - name: "felores/airtable-mcp"
+    description: "Advanced filtering and Claude Desktop optimization"
+  - name: "rashidazarang/airtable-mcp"
+    description: "Seamless data access and management focus"
+limitations:
+  - "Airtable API rate limits"
+  - "Requires Airtable subscription for full features"
+  - "Complex table operations may fail without staged approach"
+  - "Limited to Airtable ecosystem"
+comparison_notes: "Multiple high-quality implementations provide flexibility and feature diversity for different use cases"
+integration_examples:
+  - "Claude Desktop integration for database management"
+  - "Automated inventory tracking and updates"
+  - "Customer data management and CRM operations"
+  - "Project tracking with dynamic field creation"
+notable_features:
+  - "Multiple production-ready implementations"
+  - "AI-optimized table building with staged approach"
+  - "Natural language database operations"
+  - "Comprehensive schema management"
+  - "Intelligent error handling and recovery"
+  - "Cross-platform compatibility"
+api_scopes_required:
+  read_access:
+    - "schema.bases:read"
+    - "data.records:read"
+  write_access:
+    - "schema.bases:write"
+    - "data.records:write"
+    - "data.recordComments:write"
+assessment_notes: "High Tier 1 rating due to multiple production-ready implementations, comprehensive Airtable integration, AI-optimized features, and strong community adoption. Represents premier solution for Airtable database automation."
+related_servers:
+  - "Google Sheets MCP Server"
+  - "Notion Database MCP Server"
+  - "MySQL/PostgreSQL MCP Servers"
+  - "Database management platforms"
+---
