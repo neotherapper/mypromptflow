@@ -1,0 +1,107 @@
+---
+name: "Atlassian Official MCP Server"
+category: "Project Management & Documentation"
+type: "Enterprise Collaboration Platform"
+tier: "Tier 1"
+quality_score: 9.3
+maintainer: "Atlassian (Official)"
+github_url: "https://github.com/atlassian/mcp-server"
+npm_package: "@atlassian/mcp-server"
+description: "Official Atlassian MCP server enabling secure interaction with Jira work items, Confluence pages, and full Atlassian Cloud ecosystem integration"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Atlassian Cloud"
+  - "Jira Cloud"
+  - "Confluence Cloud"
+  - "Cross-platform via API"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "REST API"
+dependencies:
+  - "Atlassian API token"
+  - "Cloud instance access"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Jira issue management and tracking"
+    - "Confluence page creation and editing"
+    - "Cross-product search and navigation"
+    - "Agile board management"
+    - "Sprint planning and tracking"
+  advanced:
+    - "JQL (Jira Query Language) support"
+    - "Confluence space management"
+    - "Workflow automation"
+    - "Custom field handling"
+    - "Bulk operations support"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Atlassian Cloud account"
+  - "API token generation"
+  - "Instance URL configuration"
+  - "Permission setup"
+authentication: "Atlassian API Token"
+rate_limits: "Atlassian Cloud rate limits apply"
+pricing_model: "Included with Atlassian Cloud subscriptions"
+use_cases:
+  primary:
+    - "Agile project management automation"
+    - "Documentation workflow enhancement"
+    - "Issue tracking and resolution"
+    - "Knowledge base management"
+  secondary:
+    - "Sprint planning assistance"
+    - "Release management"
+    - "Team collaboration workflows"
+    - "Reporting and analytics"
+tools_available:
+  - name: "jira_create_issue"
+    description: "Create new Jira issues with full field support"
+  - name: "jira_search"
+    description: "Search issues using JQL queries"
+  - name: "jira_update_issue"
+    description: "Update issue fields, status, and assignments"
+  - name: "confluence_create_page"
+    description: "Create and publish Confluence pages"
+  - name: "confluence_search"
+    description: "Search across Confluence spaces and pages"
+  - name: "agile_board_operations"
+    description: "Manage sprints, backlogs, and boards"
+performance_metrics:
+  response_time: "Fast"
+  reliability: "Very High"
+  scalability: "Enterprise-scale"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "Very High"
+security_features:
+  - "OAuth 2.0 authentication"
+  - "API token security"
+  - "IP allowlisting"
+  - "Audit logging"
+  - "Enterprise-grade encryption"
+limitations:
+  - "Cloud-only (no Server/Data Center support)"
+  - "API rate limits apply"
+  - "Some features require premium plans"
+comparison_notes: "Official Atlassian integration provides superior access to Jira and Confluence compared to third-party implementations"
+integration_examples:
+  - "AI-powered issue triage and assignment"
+  - "Automated documentation generation from Jira"
+  - "Sprint planning with AI assistance"
+  - "Knowledge base Q&A systems"
+notable_features:
+  - "Official Atlassian support and maintenance"
+  - "Full JQL query support"
+  - "Confluence macro support"
+  - "Cross-product linking"
+  - "Enterprise security compliance"
+assessment_notes: "Tier 1 rating due to official Atlassian backing, comprehensive feature set, enterprise-grade security, and critical role in software development workflows"
+related_servers:
+  - "Linear Official MCP Server"
+  - "Asana Official MCP Server"
+  - "Monday.com MCP Server"
+---
