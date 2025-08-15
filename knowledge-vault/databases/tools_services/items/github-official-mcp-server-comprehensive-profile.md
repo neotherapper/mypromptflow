@@ -1,0 +1,113 @@
+---
+name: "GitHub Official MCP Server"
+category: "Version Control & Repository Management"
+type: "Development Platform Integration"
+tier: "Tier 1"
+quality_score: 9.5
+maintainer: "GitHub (Official)"
+github_url: "https://github.com/github/github-mcp-server"
+npm_package: "N/A"
+description: "GitHub's official open-source MCP Server providing comprehensive repository access and management capabilities for AI agents"
+last_updated: "2025-04-04"
+status: "Public Preview"
+license: "MIT"
+supported_platforms:
+  - "Windows"
+  - "macOS"
+  - "Linux"
+programming_languages:
+  - "Go"
+  - "JavaScript"
+  - "TypeScript"
+  - "Python"
+  - "All GitHub-supported languages"
+dependencies:
+  - "GitHub Personal Access Token"
+  - "Git installation"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Repository browsing and file operations"
+    - "Issue and pull request management"
+    - "Commit history and diff analysis"
+    - "Branch and tag operations"
+    - "Search across repositories and code"
+  advanced:
+    - "GitHub Actions workflow management"
+    - "Repository analytics and insights"
+    - "Collaboration and team management"
+    - "Security vulnerability scanning"
+    - "Code quality analysis"
+    - "Dependency management"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "GitHub account with repository access"
+  - "Personal Access Token with appropriate scopes"
+  - "Local Git installation"
+  - "MCP client configuration"
+authentication: "GitHub Personal Access Token"
+rate_limits: "GitHub API rate limits (5000 requests/hour for authenticated users)"
+pricing_model: "Free with GitHub account"
+use_cases:
+  primary:
+    - "AI-assisted code review and analysis"
+    - "Repository exploration and documentation"
+    - "Issue triaging and management"
+    - "Pull request automation"
+  secondary:
+    - "Code quality assessment"
+    - "Dependency vulnerability analysis"
+    - "Project management automation"
+    - "Development workflow optimization"
+tools_available:
+  - name: "repository_operations"
+    description: "Browse, search, and manage repository content"
+  - name: "issue_management"
+    description: "Create, update, and track issues"
+  - name: "pull_request_tools"
+    description: "Manage PR lifecycle and reviews"
+  - name: "code_analysis"
+    description: "Analyze code quality, dependencies, security"
+  - name: "workflow_management"
+    description: "GitHub Actions and CI/CD operations"
+performance_metrics:
+  response_time: "Fast (GitHub API dependent)"
+  reliability: "High"
+  scalability: "Enterprise-scale"
+documentation_quality: "Excellent"
+community_adoption: "High (most popular MCP server)"
+enterprise_readiness: "High"
+security_features:
+  - "GitHub's enterprise security model"
+  - "Fine-grained personal access tokens"
+  - "Repository access controls"
+  - "Security scanning integration"
+  - "Audit logging"
+limitations:
+  - "Public Preview status"
+  - "GitHub API rate limits"
+  - "Requires repository access permissions"
+  - "Limited to GitHub ecosystem"
+comparison_notes: "Official GitHub implementation provides superior integration and reliability compared to community alternatives"
+integration_examples:
+  - "Claude Desktop integration for repository analysis"
+  - "VS Code with GitHub Copilot for enhanced development"
+  - "Automated code review and suggestion workflows"
+  - "Repository documentation generation"
+notable_features:
+  - "Rewritten in Go for improved performance"
+  - "Collaboration with Anthropic on MCP standard"
+  - "Most popular MCP server in ecosystem"
+  - "Comprehensive GitHub platform integration"
+  - "Open source with MIT license"
+development_history:
+  - "Originally implemented by Anthropic as reference"
+  - "Rewritten by GitHub in Go for production use"
+  - "Public preview launched April 2025"
+  - "Rapid adoption across MCP ecosystem"
+assessment_notes: "Highest Tier 1 rating due to official GitHub backing, being the most popular MCP server, comprehensive platform integration, and excellent performance. Represents the gold standard for repository management MCP servers."
+related_servers:
+  - "Git MCP Server (community)"
+  - "Azure DevOps MCP Server"
+  - "GitLab MCP Server"
+---

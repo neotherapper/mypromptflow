@@ -9,8 +9,8 @@ view_info:
   version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
-  last_updated: "2025-07-31"
-  total_servers: 52
+  last_updated: "2025-08-14"
+  total_servers: 56
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -58,11 +58,20 @@ development_infrastructure:
       business_value: "Essential web content retrieval and HTTP operations"
       
     # Version Control & Repository Management
-    - name: "GitHub MCP Server"
+    - name: "GitHub Official MCP Server"
       composite_score: 9.8
       category: "Development Platform"
-      file_path: "knowledge-vault/databases/tools_services/items/github-mcp-server.md"
+      file_path: "knowledge-vault/databases/tools_services/items/github-official-mcp-server-comprehensive-profile.md"
       production_readiness: 98
+      business_value: "Official GitHub repository management and development workflow integration"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "GitHub MCP Server"
+      composite_score: 9.7
+      category: "Development Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/github-mcp-server.md"
+      production_readiness: 97
       business_value: "Core repository management and development workflow"
       technology_alignment: 10
       business_relevance: 9
@@ -191,12 +200,35 @@ enterprise_integration:
       business_value: "Enterprise knowledge base and documentation"
       
     # Enterprise Infrastructure & Governance
+    - name: "Microsoft Azure DevOps MCP Server"
+      composite_score: 9.4
+      category: "DevOps Integration"
+      file_path: "knowledge-vault/databases/tools_services/items/microsoft-azure-devops-mcp-server-comprehensive-profile.md"
+      production_readiness: 95
+      business_value: "Official Microsoft DevOps platform integration with 200,000+ users"
+      technology_alignment: 10
+      business_relevance: 9
+
     - name: "TrueFoundry MCP Registry"
       composite_score: 9.1
       category: "Enterprise Registry"
       file_path: "knowledge-vault/databases/tools_services/items/truefoundry-mcp-registry-enterprise-server-profile.md"
       production_readiness: 93
       business_value: "Enterprise MCP server governance and compliance management"
+      
+    - name: "K2View GenAI Data Fusion MCP Server"
+      composite_score: 9.1
+      category: "Enterprise Data Fabric"
+      file_path: "knowledge-vault/databases/tools_services/items/k2view-genai-data-fusion-mcp-server-comprehensive-profile.md"
+      production_readiness: 94
+      business_value: "Enterprise-grade multi-source data integration with patented Micro-Database technology"
+      
+    - name: "Paragon ActionKit MCP Server"
+      composite_score: 8.8
+      category: "Enterprise Integration Hub"
+      file_path: "knowledge-vault/databases/tools_services/items/paragon-actionkit-mcp-server-enterprise-integration-hub.md"
+      production_readiness: 92
+      business_value: "Unified access to 130+ SaaS platforms including Slack, Salesforce, Gmail"
 
     # Enterprise Applications
     - name: "Salesforce CRM MCP Server"
@@ -238,6 +270,15 @@ ai_development_tools:
       business_value: "Advanced AI integration for text generation and analysis"
       technology_alignment: 10
       business_relevance: 10
+      
+    - name: "Figma Dev Mode MCP Server"
+      composite_score: 9.2
+      category: "Design-to-Code"
+      file_path: "knowledge-vault/databases/tools_services/items/figma-dev-mode-mcp-server-profile.md"
+      production_readiness: 92
+      business_value: "Official Figma design-to-code workflow integration for AI-powered development"
+      technology_alignment: 9
+      business_relevance: 9
 
 security_compliance:
   description: "Security tools and compliance automation"
