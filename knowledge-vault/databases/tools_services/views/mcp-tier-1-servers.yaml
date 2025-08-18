@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 84
+  total_servers: 88
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -96,6 +96,15 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/github-pr-creator-mcp-server-detailed-profile.md"
       production_readiness: 91
       business_value: "Streamlined pull request creation and management"
+      
+    - name: "Docker Official MCP Server"
+      composite_score: 9.1
+      category: "Container Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/docker-container-platform-mcp-server-official.md"
+      production_readiness: 96
+      business_value: "Industry-standard container management and orchestration platform"
+      technology_alignment: 10
+      business_relevance: 10
 
     # Database Operations
     - name: "PostgreSQL MCP Server"
@@ -571,6 +580,33 @@ business_applications:
       production_readiness: 96
       business_value: "Comprehensive multi-channel communication APIs"
       technology_alignment: 9
+      business_relevance: 9
+      
+    - name: "PayPal Official MCP Server"
+      composite_score: 8.8
+      category: "Payment Processing"
+      file_path: "knowledge-vault/databases/tools_services/items/paypal-payments-platform-mcp-server-official.md"
+      production_readiness: 95
+      business_value: "Global payment platform with comprehensive financial services"
+      technology_alignment: 9
+      business_relevance: 10
+      
+    - name: "Shopify Official MCP Server"
+      composite_score: 9.0
+      category: "E-commerce Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/shopify-official-mcp-server-comprehensive.md"
+      production_readiness: 96
+      business_value: "Leading e-commerce platform with comprehensive retail management"
+      technology_alignment: 9
+      business_relevance: 10
+      
+    - name: "Notion Official MCP Server"
+      composite_score: 8.7
+      category: "Productivity & Knowledge Management"
+      file_path: "knowledge-vault/databases/tools_services/items/notion-official-mcp-server-comprehensive.md"
+      production_readiness: 93
+      business_value: "All-in-one workspace for productivity and team collaboration"
+      technology_alignment: 8
       business_relevance: 9
 
 specialized_tools:

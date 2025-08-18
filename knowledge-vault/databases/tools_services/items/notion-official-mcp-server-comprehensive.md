@@ -1,0 +1,130 @@
+---
+name: "Notion Official MCP Server"
+category: "Productivity & Knowledge Management"
+type: "All-in-One Workspace Platform"
+tier: "Tier 1"
+quality_score: 8.7
+maintainer: "Notion (Official)"
+github_url: "https://github.com/makenotion/notion-mcp"
+npm_package: "@notionhq/mcp-server"
+description: "Official Notion MCP server enabling comprehensive workspace operations including database management, page creation, content organization, and team collaboration workflows"
+last_updated: "2025-01-15"
+status: "Production"
+license: "MIT"
+supported_platforms:
+  - "Notion API"
+  - "Notion workspaces"
+  - "Cross-platform via API"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "REST API"
+dependencies:
+  - "Notion workspace"
+  - "Notion integration token"
+  - "Page and database permissions"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Page creation and editing"
+    - "Database operations and queries"
+    - "Block-level content manipulation"
+    - "User and workspace management"
+    - "Search and discovery"
+  advanced:
+    - "Template automation"
+    - "Formula and rollup calculations"
+    - "Relation and property management"
+    - "Bulk operations"
+    - "Rich content formatting"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Notion workspace access"
+  - "Internal integration creation"
+  - "Bot permissions configuration"
+  - "API token generation"
+authentication: "Notion Internal Integration Token"
+rate_limits: "Notion API rate limits (3 requests/second)"
+pricing_model: "Based on Notion workspace plan"
+notion_capabilities:
+  content_types:
+    - "Pages and subpages"
+    - "Databases (tables, kanban, calendar)"
+    - "Blocks (text, media, embeds)"
+    - "Templates and recurring content"
+  collaboration:
+    - "Team workspaces"
+    - "Sharing and permissions"
+    - "Comments and discussions"
+    - "Real-time collaboration"
+  organization:
+    - "Hierarchical page structure"
+    - "Tags and properties"
+    - "Views and filters"
+    - "Search and discovery"
+use_cases:
+  primary:
+    - "Knowledge base automation"
+    - "Project management workflows"
+    - "Content creation and organization"
+    - "Team collaboration enhancement"
+  secondary:
+    - "Documentation generation"
+    - "Meeting notes automation"
+    - "Task and project tracking"
+    - "Personal productivity systems"
+tools_available:
+  - name: "page_operations"
+    description: "Create, read, update pages and content"
+  - name: "database_management"
+    description: "Query and manipulate Notion databases"
+  - name: "block_manipulation"
+    description: "Handle block-level content operations"
+  - name: "search_operations"
+    description: "Search across workspace content"
+  - name: "user_management"
+    description: "Manage users and workspace settings"
+  - name: "template_automation"
+    description: "Create and apply content templates"
+performance_metrics:
+  response_time: "Moderate (API-dependent)"
+  reliability: "High"
+  scalability: "Team to enterprise scale"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "High"
+workspace_features:
+  - "Unlimited pages and blocks"
+  - "Advanced permissions and sharing"
+  - "Team collaboration tools"
+  - "Integration ecosystem"
+  - "Mobile and desktop apps"
+security_features:
+  - "Enterprise-grade security"
+  - "SOC 2 Type II compliance"
+  - "SAML SSO (Enterprise)"
+  - "Advanced admin controls"
+  - "Data encryption"
+limitations:
+  - "API rate limits (3 req/sec)"
+  - "Complex permission model"
+  - "Limited real-time capabilities"
+  - "Some content types not API-accessible"
+comparison_notes: "Leading all-in-one workspace with superior flexibility and collaboration features compared to traditional productivity tools"
+integration_examples:
+  - "Automated documentation generation"
+  - "AI-powered content organization"
+  - "Project status tracking"
+  - "Knowledge base maintenance"
+notable_features:
+  - "Official Notion API integration"
+  - "Flexible block-based content model"
+  - "Powerful database capabilities"
+  - "Rich collaborative features"
+  - "Extensive template ecosystem"
+assessment_notes: "Tier 1 rating due to official platform support, comprehensive workspace capabilities, strong collaboration features, and critical role in modern productivity workflows"
+related_servers:
+  - "Confluence MCP Server"
+  - "Obsidian MCP Server"
+  - "Productivity platform integrations"
+---

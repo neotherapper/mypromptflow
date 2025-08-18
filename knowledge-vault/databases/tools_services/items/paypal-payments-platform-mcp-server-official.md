@@ -1,0 +1,137 @@
+---
+name: "PayPal Official MCP Server"
+category: "Payment Processing"
+type: "Global Payment Platform"
+tier: "Tier 1"
+quality_score: 8.8
+maintainer: "PayPal (Official)"
+github_url: "https://github.com/paypal/mcp-server"
+npm_package: "@paypal/mcp-server"
+description: "Official PayPal MCP server enabling comprehensive payment processing, digital wallet operations, and financial services integration across global markets"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "PayPal REST API"
+  - "PayPal Checkout"
+  - "Braintree integration"
+  - "Venmo for Business"
+programming_languages:
+  - "Node.js"
+  - "Python"
+  - "Java"
+  - "REST API"
+dependencies:
+  - "PayPal Business account"
+  - "Client ID and Secret"
+  - "Webhook configuration"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Payment processing and authorization"
+    - "Subscription and recurring payments"
+    - "PayPal Checkout integration"
+    - "Refund and dispute management"
+    - "Multi-currency support"
+  advanced:
+    - "PayPal Credit and Pay in 4"
+    - "Marketplace and split payments"
+    - "Risk management and fraud detection"
+    - "PayPal Commerce Platform"
+    - "Advanced analytics and reporting"
+integration_complexity: "Medium"
+setup_requirements:
+  - "PayPal Business account verification"
+  - "App credentials setup"
+  - "Webhook endpoint configuration"
+  - "Payment method configuration"
+authentication: "PayPal OAuth 2.0 / API credentials"
+rate_limits: "PayPal API rate limits (varies by endpoint)"
+pricing_model: "Transaction-based fees (2.9% + fixed fee standard)"
+payment_capabilities:
+  payment_methods:
+    - "PayPal digital wallet"
+    - "Credit and debit cards"
+    - "Bank transfers (ACH)"
+    - "PayPal Credit and Pay in 4"
+    - "Alternative payment methods"
+  global_support:
+    - "200+ markets worldwide"
+    - "100+ currencies"
+    - "Local payment methods"
+    - "Regulatory compliance"
+  business_solutions:
+    - "Invoicing and billing"
+    - "Subscription management"
+    - "Marketplace solutions"
+    - "Working capital loans"
+use_cases:
+  primary:
+    - "E-commerce payment processing"
+    - "Subscription business management"
+    - "Marketplace payment splitting"
+    - "Digital wallet integration"
+  secondary:
+    - "International payment processing"
+    - "Recurring billing automation"
+    - "Dispute resolution workflows"
+    - "Financial reporting and analytics"
+tools_available:
+  - name: "payment_processing"
+    description: "Process one-time and recurring payments"
+  - name: "checkout_integration"
+    description: "Integrate PayPal Checkout experience"
+  - name: "subscription_management"
+    description: "Handle subscription lifecycle"
+  - name: "refund_operations"
+    description: "Process refunds and cancellations"
+  - name: "dispute_handling"
+    description: "Manage disputes and chargebacks"
+  - name: "analytics_reporting"
+    description: "Generate payment and revenue reports"
+performance_metrics:
+  response_time: "Fast (global CDN)"
+  reliability: "Very High (99.9% uptime)"
+  scalability: "Global scale"
+documentation_quality: "Excellent"
+community_adoption: "Extremely High"
+enterprise_readiness: "Very High"
+global_infrastructure:
+  - "24/7 customer support"
+  - "Global compliance team"
+  - "Multi-region data centers"
+  - "Local banking partnerships"
+security_features:
+  - "Advanced fraud protection"
+  - "PCI DSS compliance"
+  - "Two-factor authentication"
+  - "Encryption and tokenization"
+  - "Risk management tools"
+compliance_certifications:
+  - "PCI DSS Level 1"
+  - "SOX compliance"
+  - "Global regulatory compliance"
+  - "Anti-money laundering (AML)"
+limitations:
+  - "Transaction fees apply"
+  - "Account verification required"
+  - "Regional restrictions exist"
+  - "Dispute resolution timeframes"
+comparison_notes: "Global leader in digital payments with strong buyer protection and international reach compared to regional solutions"
+integration_examples:
+  - "Global e-commerce payment flows"
+  - "Subscription billing automation"
+  - "Marketplace payment orchestration"
+  - "International business expansion"
+notable_features:
+  - "Official PayPal development and support"
+  - "Global payment network"
+  - "Buyer and seller protection"
+  - "Comprehensive financial services"
+  - "Strong brand recognition and trust"
+assessment_notes: "Tier 1 rating due to official PayPal backing, global payment infrastructure, comprehensive financial services, and critical role in digital commerce"
+related_servers:
+  - "Stripe Official MCP Server"
+  - "Square Payment MCP Server"
+  - "Payment processing platforms"
+---
