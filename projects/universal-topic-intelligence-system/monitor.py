@@ -15,6 +15,7 @@ from sources.rss_monitor import RSSSourceMonitor
 from sources.real_mcp_monitor import RealMCPMonitor, MCP_TEST_CONFIG
 from core import SourceMetadata, SourceType
 from core.language_filter import LanguageFilter
+from core.relevance_filter import RelevanceFilter
 from storage.database import StorageManager
 from core.content_prioritizer import UniversalContentPrioritizer
 
@@ -35,6 +36,7 @@ class UniversalMonitor:
         self.storage = StorageManager()
         self.prioritizer = UniversalContentPrioritizer()
         self.language_filter = LanguageFilter(target_languages=['en'], min_confidence=0.7)
+        self.relevance_filter = RelevanceFilter()
         
         # Only verified working sources
         self.working_sources = [
@@ -233,6 +235,18 @@ class UniversalMonitor:
                     if not should_include:
                         items_filtered_out += 1
                         logger.debug(f"Filtered non-English MCP content: {item.title[:50]}... (detected: {lang_result.language})")
+                        continue
+                    
+                    # Apply relevance filter
+                    is_relevant, relevance_score, reason = self.relevance_filter.is_relevant(
+                        item.title,
+                        item.content or "",
+                        item.topics
+                    )
+                    
+                    if not is_relevant:
+                        items_filtered_out += 1
+                        logger.debug(f"Filtered irrelevant MCP content: {item.title[:50]}... ({reason})")
                         continue
                     
                     # Calculate priority
