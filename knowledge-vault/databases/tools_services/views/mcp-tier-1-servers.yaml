@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 79
+  total_servers: 84
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -141,6 +141,20 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/airtable-advanced-mcp-server-comprehensive-profile.md"
       production_readiness: 91
       business_value: "Cloud database collaboration with AI-powered operations"
+      
+    - name: "Neo4j Official MCP Server"
+      composite_score: 9.0
+      category: "Graph Database"
+      file_path: "knowledge-vault/databases/tools_services/items/neo4j-graph-database-mcp-server-official.md"
+      production_readiness: 95
+      business_value: "Leading native graph database with advanced relationship modeling"
+      
+    - name: "Neon Official MCP Server"
+      composite_score: 8.9
+      category: "Serverless Database"
+      file_path: "knowledge-vault/databases/tools_services/items/neon-serverless-postgres-mcp-server-official.md"
+      production_readiness: 94
+      business_value: "Serverless PostgreSQL with database branching capabilities"
 
 enterprise_integration:
   description: "Business-critical enterprise service integrations"
@@ -374,6 +388,15 @@ ai_development_tools:
       business_value: "Real-time web search and research capabilities with AI-powered intelligence"
       technology_alignment: 9
       business_relevance: 9
+      
+    - name: "AWS Bedrock Knowledge Base MCP Server"
+      composite_score: 9.2
+      category: "AI Knowledge Management"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-bedrock-knowledge-base-mcp-server-official.md"
+      production_readiness: 96
+      business_value: "Enterprise-grade vector search and knowledge base with foundation model integration"
+      technology_alignment: 10
+      business_relevance: 10
 
 security_compliance:
   description: "Security tools and compliance automation"
@@ -529,6 +552,24 @@ business_applications:
       file_path: "knowledge-vault/databases/tools_services/items/slack-advanced-mcp-server-comprehensive-profile.md"
       production_readiness: 93
       business_value: "Advanced Slack workspace integration with stealth mode and enterprise features"
+      technology_alignment: 9
+      business_relevance: 9
+      
+    - name: "Stripe Official MCP Server"
+      composite_score: 9.4
+      category: "Payment Processing"
+      file_path: "knowledge-vault/databases/tools_services/items/stripe-payments-platform-mcp-server-official.md"
+      production_readiness: 98
+      business_value: "Industry-leading payment processing with global infrastructure"
+      technology_alignment: 10
+      business_relevance: 10
+      
+    - name: "Twilio Official MCP Server"
+      composite_score: 9.1
+      category: "Communications Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/twilio-communications-platform-mcp-server-official.md"
+      production_readiness: 96
+      business_value: "Comprehensive multi-channel communication APIs"
       technology_alignment: 9
       business_relevance: 9
 

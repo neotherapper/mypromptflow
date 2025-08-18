@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-08-18T17:09:15.582952",
+  "duration_seconds": 0.000389,
+  "availability_check": {
+    "youtube_transcript": true,
+    "github_search": true,
+    "web_search": true,
+    "jira_integration": true
+  },
+  "tests_run": 3,
+  "tests_successful": 3,
+  "success_rate": 100.0,
+  "detailed_results": {
+    "youtube_transcript": {
+      "available": true,
+      "tested": true,
+      "success": true
+    },
+    "github_search": {
+      "available": true,
+      "tested": true,
+      "success": true
+    },
+    "web_search": {
+      "available": true,
+      "tested": false,
+      "success": false
+    },
+    "jira_integration": {
+      "available": true,
+      "tested": true,
+      "success": true
+    }
+  },
+  "recommendations": [
+    "Fix web_search integration - available but failing",
+    "All MCP servers conceptually available - focus on proper integration",
+    "Replace simulation code with actual MCP tool calls through Claude Code interface",
+    "Implement proper error handling for MCP server timeouts and failures"
+  ]
+}

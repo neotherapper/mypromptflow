@@ -1,0 +1,131 @@
+---
+name: "Neon Official MCP Server"
+category: "Serverless Database"
+type: "Serverless PostgreSQL Platform"
+tier: "Tier 1"
+quality_score: 8.9
+maintainer: "Neon (Official)"
+github_url: "https://github.com/neondatabase/mcp-server"
+npm_package: "@neondatabase/mcp-server"
+description: "Official Neon MCP server providing serverless PostgreSQL database management with instant scaling, branching, and modern cloud-native database operations"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Open Source (PostgreSQL License)"
+supported_platforms:
+  - "Neon Cloud"
+  - "Serverless architecture"
+  - "PostgreSQL-compatible"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "Python"
+  - "SQL"
+dependencies:
+  - "Neon account and project"
+  - "Database connection string"
+  - "PostgreSQL client driver"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Serverless PostgreSQL database operations"
+    - "Database branching and versioning"
+    - "Instant scaling to zero"
+    - "Connection pooling"
+    - "Automated backups"
+  advanced:
+    - "Point-in-time recovery"
+    - "Database branching for development"
+    - "Read replicas"
+    - "Compute and storage separation"
+    - "Time travel queries"
+integration_complexity: "Low"
+setup_requirements:
+  - "Neon account and project setup"
+  - "Database connection configuration"
+  - "PostgreSQL client setup"
+  - "Environment variables configuration"
+authentication: "Neon API keys and database credentials"
+rate_limits: "Based on Neon plan limits"
+pricing_model: "Usage-based pricing (compute hours + storage)"
+serverless_features:
+  scaling:
+    - "Automatic scale to zero"
+    - "Instant cold start (<1s)"
+    - "Dynamic compute scaling"
+    - "Pay-per-use pricing"
+  branching:
+    - "Git-like database branching"
+    - "Zero-cost database copies"
+    - "Development environment isolation"
+    - "Schema migration testing"
+  storage:
+    - "Compute and storage separation"
+    - "Point-in-time recovery"
+    - "Automatic backup retention"
+    - "Copy-on-write storage"
+use_cases:
+  primary:
+    - "Serverless application development"
+    - "Development and testing workflows"
+    - "Event-driven database operations"
+    - "Multi-tenant application architecture"
+  secondary:
+    - "Database schema migration testing"
+    - "Analytics and reporting workloads"
+    - "Microservices database needs"
+    - "Cost-optimized PostgreSQL hosting"
+tools_available:
+  - name: "database_operations"
+    description: "Standard PostgreSQL CRUD operations"
+  - name: "branch_management"
+    description: "Create, manage, and merge database branches"
+  - name: "project_management"
+    description: "Manage Neon projects and databases"
+  - name: "connection_management"
+    description: "Handle database connections and pooling"
+  - name: "backup_operations"
+    description: "Manage backups and point-in-time recovery"
+  - name: "scaling_control"
+    description: "Control compute scaling and hibernation"
+performance_metrics:
+  response_time: "Fast (<1s cold start)"
+  reliability: "High"
+  scalability: "Automatic serverless scaling"
+documentation_quality: "Excellent"
+community_adoption: "Growing rapidly"
+enterprise_readiness: "High"
+postgresql_compatibility:
+  - "Full PostgreSQL 15+ compatibility"
+  - "Standard SQL support"
+  - "PostgreSQL extensions support"
+  - "Existing tool compatibility"
+  - "Migration from traditional PostgreSQL"
+security_features:
+  - "TLS encryption in transit"
+  - "Encryption at rest"
+  - "IP allowlisting"
+  - "Private networking (VPC)"
+  - "SOC 2 Type II compliance"
+limitations:
+  - "PostgreSQL-only (not multi-database)"
+  - "Compute limits based on plan"
+  - "Some PostgreSQL extensions not supported"
+  - "Cold start latency considerations"
+comparison_notes: "Leading serverless PostgreSQL platform with superior branching capabilities compared to traditional cloud databases"
+integration_examples:
+  - "Serverless application backends"
+  - "Development environment automation"
+  - "Multi-tenant SaaS applications"
+  - "Event-driven data processing"
+notable_features:
+  - "Official Neon development and support"
+  - "Git-like database branching"
+  - "True serverless PostgreSQL"
+  - "Instant scaling to zero"
+  - "Modern cloud-native architecture"
+assessment_notes: "Tier 1 rating due to innovative serverless PostgreSQL approach, official platform support, developer-friendly features, and growing adoption in modern application development"
+related_servers:
+  - "PlanetScale MCP Server"
+  - "Supabase MCP Server"
+  - "Serverless database platforms"
+---

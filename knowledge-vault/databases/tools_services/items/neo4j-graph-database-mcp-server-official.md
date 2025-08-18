@@ -1,0 +1,133 @@
+---
+name: "Neo4j Official MCP Server"
+category: "Graph Database"
+type: "Native Graph Database Platform"
+tier: "Tier 1"
+quality_score: 9.0
+maintainer: "Neo4j (Official)"
+github_url: "https://github.com/neo4j/mcp-server"
+npm_package: "@neo4j/mcp-server"
+description: "Official Neo4j MCP server providing native graph database capabilities with Cypher queries, graph analytics, and advanced relationship modeling for AI applications"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Community Edition (GPLv3) / Commercial"
+supported_platforms:
+  - "Neo4j Database (self-hosted)"
+  - "Neo4j AuraDB (cloud)"
+  - "Neo4j Desktop"
+  - "Docker containers"
+programming_languages:
+  - "Python"
+  - "Java"
+  - "JavaScript"
+  - "Cypher Query Language"
+dependencies:
+  - "Neo4j database instance"
+  - "Database credentials"
+  - "Neo4j driver"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Cypher query execution"
+    - "Graph schema management"
+    - "Node and relationship CRUD operations"
+    - "Graph traversal and path finding"
+    - "Index and constraint management"
+  advanced:
+    - "Graph data science algorithms"
+    - "Graph neural network support"
+    - "APOC (Awesome Procedures) integration"
+    - "Graph streaming and real-time updates"
+    - "Multi-database support"
+integration_complexity: "Medium"
+setup_requirements:
+  - "Neo4j database instance (local or cloud)"
+  - "Database authentication credentials"
+  - "Network connectivity to database"
+  - "Cypher query knowledge (optional)"
+authentication: "Neo4j database credentials (username/password)"
+rate_limits: "Database performance and license limits"
+pricing_model: "Community free / Enterprise subscription"
+graph_capabilities:
+  data_modeling:
+    - "Flexible node and relationship modeling"
+    - "Property graph model"
+    - "Schema-optional design"
+    - "Multi-label nodes"
+  querying:
+    - "Cypher declarative query language"
+    - "Pattern matching"
+    - "Graph traversal optimization"
+    - "Aggregation and analytics"
+  algorithms:
+    - "Shortest path algorithms"
+    - "Community detection"
+    - "Centrality measures"
+    - "Similarity algorithms"
+    - "Graph neural networks"
+use_cases:
+  primary:
+    - "Knowledge graphs and semantic networks"
+    - "Recommendation engines"
+    - "Fraud detection and network analysis"
+    - "Master data management"
+  secondary:
+    - "Social network analysis"
+    - "Supply chain optimization"
+    - "Identity and access management"
+    - "AI/ML feature engineering"
+tools_available:
+  - name: "cypher_execution"
+    description: "Execute Cypher queries and return results"
+  - name: "graph_schema"
+    description: "Manage graph schema, indexes, and constraints"
+  - name: "node_operations"
+    description: "Create, read, update, delete nodes"
+  - name: "relationship_management"
+    description: "Manage relationships between nodes"
+  - name: "graph_algorithms"
+    description: "Execute graph data science algorithms"
+  - name: "transaction_management"
+    description: "Handle database transactions and consistency"
+performance_metrics:
+  response_time: "Fast (optimized graph queries)"
+  reliability: "High"
+  scalability: "Enterprise-scale (billions of nodes/relationships)"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "Very High"
+enterprise_features:
+  - "Multi-database support"
+  - "Advanced security and RBAC"
+  - "High availability clustering"
+  - "Online backup and recovery"
+  - "Performance monitoring"
+security_features:
+  - "Role-based access control (RBAC)"
+  - "Fine-grained security"
+  - "Encryption at rest and in transit"
+  - "LDAP/Active Directory integration"
+  - "Audit logging"
+limitations:
+  - "Requires graph database knowledge"
+  - "Memory-intensive for large graphs"
+  - "Cypher query optimization needed"
+  - "Enterprise features require commercial license"
+comparison_notes: "Leading native graph database with superior performance for connected data compared to relational databases"
+integration_examples:
+  - "AI-powered knowledge graph construction"
+  - "Real-time recommendation systems"
+  - "Network analysis and fraud detection"
+  - "Complex relationship modeling"
+notable_features:
+  - "Official Neo4j development and support"
+  - "Native graph processing engine"
+  - "Cypher declarative query language"
+  - "Advanced graph algorithms library"
+  - "Enterprise-grade clustering and security"
+assessment_notes: "Tier 1 rating due to official Neo4j backing, leading graph database technology, comprehensive graph capabilities, and critical role in knowledge graphs and AI applications"
+related_servers:
+  - "Amazon Neptune MCP Server"
+  - "ArangoDB MCP Server"
+  - "Graph database platforms"
+---

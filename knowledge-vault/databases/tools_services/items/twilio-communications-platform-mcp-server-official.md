@@ -1,0 +1,140 @@
+---
+name: "Twilio Official MCP Server"
+category: "Communications Platform"
+type: "Multi-Channel Communication API"
+tier: "Tier 1"
+quality_score: 9.1
+maintainer: "Twilio (Official)"
+github_url: "https://github.com/twilio/mcp-server"
+npm_package: "@twilio/mcp-server"
+description: "Official Twilio MCP server providing comprehensive communication APIs for SMS, voice, video, email, and messaging across multiple channels and global infrastructure"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Twilio API"
+  - "Global communications network"
+  - "Cross-platform via API"
+programming_languages:
+  - "Node.js"
+  - "Python"
+  - "TypeScript"
+  - "REST API"
+dependencies:
+  - "Twilio account"
+  - "Account SID and Auth Token"
+  - "Phone number or messaging service"
+  - "MCP-compatible client"
+features:
+  core:
+    - "SMS and MMS messaging"
+    - "Voice calls and conferencing"
+    - "Email delivery (SendGrid integration)"
+    - "WhatsApp Business API"
+    - "Phone number management"
+  advanced:
+    - "Programmable video and voice"
+    - "Flex contact center platform"
+    - "Conversations API (unified messaging)"
+    - "Verify API (2FA and authentication)"
+    - "Lookup API (phone number intelligence)"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Twilio account and credentials"
+  - "Phone number provisioning"
+  - "Messaging service configuration"
+  - "Webhook configuration for events"
+authentication: "Twilio Account SID and Auth Token"
+rate_limits: "Twilio API rate limits (varies by service)"
+pricing_model: "Usage-based pricing (pay-per-message/call)"
+communication_channels:
+  messaging:
+    - "SMS (global coverage)"
+    - "MMS (multimedia messaging)"
+    - "WhatsApp Business API"
+    - "Facebook Messenger"
+    - "Rich Communication Services (RCS)"
+  voice:
+    - "PSTN voice calls"
+    - "SIP trunking"
+    - "Conference calling"
+    - "IVR (Interactive Voice Response)"
+  video:
+    - "Real-time video calling"
+    - "Video conferencing"
+    - "Screen sharing"
+  email:
+    - "Transactional email (SendGrid)"
+    - "Marketing email campaigns"
+use_cases:
+  primary:
+    - "Customer communication automation"
+    - "Two-factor authentication systems"
+    - "Contact center and support workflows"
+    - "Marketing campaign automation"
+  secondary:
+    - "Emergency notification systems"
+    - "IoT device communication"
+    - "Virtual meeting platforms"
+    - "Customer journey orchestration"
+tools_available:
+  - name: "messaging_operations"
+    description: "Send SMS, MMS, and multi-channel messages"
+  - name: "voice_calling"
+    description: "Make and manage voice calls and conferences"
+  - name: "number_management"
+    description: "Provision and manage phone numbers"
+  - name: "verification_services"
+    description: "Implement 2FA and phone verification"
+  - name: "conversation_management"
+    description: "Unified messaging across channels"
+  - name: "analytics_reporting"
+    description: "Communication analytics and insights"
+performance_metrics:
+  response_time: "Fast (global edge network)"
+  reliability: "Very High (carrier-grade infrastructure)"
+  scalability: "Global scale (billions of interactions)"
+documentation_quality: "Excellent"
+community_adoption: "Very High"
+enterprise_readiness: "Very High"
+global_infrastructure:
+  - "Carrier-grade network reliability"
+  - "Global coverage (190+ countries)"
+  - "Regional data centers"
+  - "Redundant messaging routes"
+  - "99.95% uptime SLA"
+security_features:
+  - "End-to-end encryption"
+  - "SOC 2 Type II compliance"
+  - "HIPAA compliance available"
+  - "Regional data residency"
+  - "Advanced fraud protection"
+compliance_certifications:
+  - "SOC 2 Type II"
+  - "HIPAA eligible"
+  - "ISO 27001"
+  - "GDPR compliant"
+  - "Carrier certifications"
+limitations:
+  - "Usage-based pricing can scale costs"
+  - "Regulatory restrictions in some countries"
+  - "Rate limits for high-volume usage"
+  - "Some features require carrier approval"
+comparison_notes: "Industry leader in programmable communications with superior global infrastructure and developer tools"
+integration_examples:
+  - "AI-powered customer support automation"
+  - "Multi-channel marketing campaigns"
+  - "Emergency alert systems"
+  - "Voice-enabled applications"
+notable_features:
+  - "Official Twilio development and support"
+  - "Comprehensive multi-channel API"
+  - "Global carrier-grade infrastructure"
+  - "Advanced programmable features"
+  - "Enterprise-grade security and compliance"
+assessment_notes: "Tier 1 rating due to official Twilio backing, industry-leading communications infrastructure, comprehensive channel support, and critical role in customer engagement"
+related_servers:
+  - "SendGrid Email MCP Server"
+  - "Zoom Communications MCP Server"
+  - "Communication platform integrations"
+---

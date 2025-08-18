@@ -1,0 +1,295 @@
+🚀 MCP EXECUTION PLAN FOR UNIVERSAL TOPIC INTELLIGENCE
+============================================================
+Total calls queued: 22
+Estimated execution time: 44.0 seconds
+
+EXECUTION SEQUENCE:
+------------------------------
+ 1. Get transcript for YouTube video: https://www.youtube.com/watch?v=8pDqJVdNa44
+    Tool: mcp__MCP_DOCKER__get_transcript
+    ID: youtube_5370021808689662138_1755526223
+
+ 2. Get transcript for YouTube video: https://www.youtube.com/watch?v=N3AkSS5hXMA
+    Tool: mcp__MCP_DOCKER__get_transcript
+    ID: youtube_7458218249787916353_1755526223
+
+ 3. Get transcript for YouTube video: https://www.youtube.com/watch?v=Ke90Tje7VS0
+    Tool: mcp__MCP_DOCKER__get_transcript
+    ID: youtube_4340238331629522635_1755526223
+
+ 4. Search GitHub repositories: react hooks
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_534112542979854894_1755526223
+
+ 5. Search GitHub repositories: react components
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_72411174933558153_1755526223
+
+ 6. Search GitHub repositories: react performance
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_5612358682705785321_1755526223
+
+ 7. Search GitHub repositories: next.js
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_3288959408623464322_1755526223
+
+ 8. Search GitHub repositories: react typescript
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_6457083919386730653_1755526223
+
+ 9. Fetch web content: https://react.dev/blog
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_2230401045159106642_1755526223
+
+10. Fetch web content: https://overreacted.io
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_5384600380887639186_1755526223
+
+11. Fetch web content: https://kentcdodds.com/blog
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_3972083727612626728_1755526223
+
+12. Search GitHub repositories: anthropic claude
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_4661613239952632530_1755526223
+
+13. Search GitHub repositories: claude api
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_944962645528234620_1755526223
+
+14. Search GitHub repositories: constitutional ai
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_263781096113649996_1755526223
+
+15. Search GitHub repositories: model context protocol
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_3792924043308914752_1755526223
+
+16. Search GitHub repositories: mcp servers
+    Tool: mcp__MCP_DOCKER__search_repositories
+    ID: github_3894671957951482637_1755526223
+
+17. Fetch web content: https://www.anthropic.com/news
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_4057362816217569277_1755526223
+
+18. Fetch web content: https://blog.langchain.dev
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_5918710724168665090_1755526223
+
+19. Fetch web content: https://openai.com/blog
+    Tool: mcp__MCP_DOCKER__fetch
+    ID: fetch_8246312620429819686_1755526223
+
+20. Get JIRA issue: UTIS-001
+    Tool: mcp__MCP_DOCKER__jira_get_issue
+    ID: jira_get_UTIS-001_1755526223
+
+21. Get JIRA issue: MCP-123
+    Tool: mcp__MCP_DOCKER__jira_get_issue
+    ID: jira_get_MCP-123_1755526223
+
+22. Get JIRA issue: AI-456
+    Tool: mcp__MCP_DOCKER__jira_get_issue
+    ID: jira_get_AI-456_1755526223
+
+NEXT STEPS:
+1. Execute each MCP tool call through Claude Code interface
+2. Collect results and create ContentItems
+3. Apply filtering and quality assessment
+4. Store high-quality items in database
+5. Update monitoring statistics
+
+
+EXECUTE THESE MCP TOOL CALLS:
+========================================
+
+1. Call ID: youtube_5370021808689662138_1755526223
+   Tool: mcp__MCP_DOCKER__get_transcript
+   Parameters: {
+  "url": "https://www.youtube.com/watch?v=8pDqJVdNa44",
+  "lang": "en"
+}
+   Description: Get transcript for YouTube video: https://www.youtube.com/watch?v=8pDqJVdNa44
+   Expected: transcript_data
+
+2. Call ID: youtube_7458218249787916353_1755526223
+   Tool: mcp__MCP_DOCKER__get_transcript
+   Parameters: {
+  "url": "https://www.youtube.com/watch?v=N3AkSS5hXMA",
+  "lang": "en"
+}
+   Description: Get transcript for YouTube video: https://www.youtube.com/watch?v=N3AkSS5hXMA
+   Expected: transcript_data
+
+3. Call ID: youtube_4340238331629522635_1755526223
+   Tool: mcp__MCP_DOCKER__get_transcript
+   Parameters: {
+  "url": "https://www.youtube.com/watch?v=Ke90Tje7VS0",
+  "lang": "en"
+}
+   Description: Get transcript for YouTube video: https://www.youtube.com/watch?v=Ke90Tje7VS0
+   Expected: transcript_data
+
+4. Call ID: github_534112542979854894_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "react hooks",
+  "language": "JavaScript"
+}
+   Description: Search GitHub repositories: react hooks
+   Expected: repository_list
+
+5. Call ID: github_72411174933558153_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "react components",
+  "language": "JavaScript"
+}
+   Description: Search GitHub repositories: react components
+   Expected: repository_list
+
+6. Call ID: github_5612358682705785321_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "react performance",
+  "language": "JavaScript"
+}
+   Description: Search GitHub repositories: react performance
+   Expected: repository_list
+
+7. Call ID: github_3288959408623464322_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "next.js",
+  "language": "JavaScript"
+}
+   Description: Search GitHub repositories: next.js
+   Expected: repository_list
+
+8. Call ID: github_6457083919386730653_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "react typescript",
+  "language": "JavaScript"
+}
+   Description: Search GitHub repositories: react typescript
+   Expected: repository_list
+
+9. Call ID: fetch_2230401045159106642_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://react.dev/blog"
+}
+   Description: Fetch web content: https://react.dev/blog
+   Expected: web_content
+
+10. Call ID: fetch_5384600380887639186_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://overreacted.io"
+}
+   Description: Fetch web content: https://overreacted.io
+   Expected: web_content
+
+11. Call ID: fetch_3972083727612626728_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://kentcdodds.com/blog"
+}
+   Description: Fetch web content: https://kentcdodds.com/blog
+   Expected: web_content
+
+12. Call ID: github_4661613239952632530_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "anthropic claude"
+}
+   Description: Search GitHub repositories: anthropic claude
+   Expected: repository_list
+
+13. Call ID: github_944962645528234620_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "claude api"
+}
+   Description: Search GitHub repositories: claude api
+   Expected: repository_list
+
+14. Call ID: github_263781096113649996_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "constitutional ai"
+}
+   Description: Search GitHub repositories: constitutional ai
+   Expected: repository_list
+
+15. Call ID: github_3792924043308914752_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "model context protocol"
+}
+   Description: Search GitHub repositories: model context protocol
+   Expected: repository_list
+
+16. Call ID: github_3894671957951482637_1755526223
+   Tool: mcp__MCP_DOCKER__search_repositories
+   Parameters: {
+  "query": "mcp servers"
+}
+   Description: Search GitHub repositories: mcp servers
+   Expected: repository_list
+
+17. Call ID: fetch_4057362816217569277_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://www.anthropic.com/news"
+}
+   Description: Fetch web content: https://www.anthropic.com/news
+   Expected: web_content
+
+18. Call ID: fetch_5918710724168665090_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://blog.langchain.dev"
+}
+   Description: Fetch web content: https://blog.langchain.dev
+   Expected: web_content
+
+19. Call ID: fetch_8246312620429819686_1755526223
+   Tool: mcp__MCP_DOCKER__fetch
+   Parameters: {
+  "url": "https://openai.com/blog"
+}
+   Description: Fetch web content: https://openai.com/blog
+   Expected: web_content
+
+20. Call ID: jira_get_UTIS-001_1755526223
+   Tool: mcp__MCP_DOCKER__jira_get_issue
+   Parameters: {
+  "issue_key": "UTIS-001"
+}
+   Description: Get JIRA issue: UTIS-001
+   Expected: jira_issue
+
+21. Call ID: jira_get_MCP-123_1755526223
+   Tool: mcp__MCP_DOCKER__jira_get_issue
+   Parameters: {
+  "issue_key": "MCP-123"
+}
+   Description: Get JIRA issue: MCP-123
+   Expected: jira_issue
+
+22. Call ID: jira_get_AI-456_1755526223
+   Tool: mcp__MCP_DOCKER__jira_get_issue
+   Parameters: {
+  "issue_key": "AI-456"
+}
+   Description: Get JIRA issue: AI-456
+   Expected: jira_issue
+
+PROCESSING INSTRUCTIONS:
+- Execute each tool call in sequence
+- Store results with corresponding call_id
+- Handle errors gracefully with fallback data
+- Log execution status for each call
