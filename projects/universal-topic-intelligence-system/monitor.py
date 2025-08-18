@@ -14,6 +14,7 @@ from typing import Dict, List, Any
 from sources.rss_monitor import RSSSourceMonitor
 from sources.real_mcp_monitor import RealMCPMonitor, MCP_TEST_CONFIG
 from core import SourceMetadata, SourceType
+from core.language_filter import LanguageFilter
 from storage.database import StorageManager
 from core.content_prioritizer import UniversalContentPrioritizer
 
@@ -33,6 +34,7 @@ class UniversalMonitor:
     def __init__(self):
         self.storage = StorageManager()
         self.prioritizer = UniversalContentPrioritizer()
+        self.language_filter = LanguageFilter(target_languages=['en'], min_confidence=0.7)
         
         # Only verified working sources
         self.working_sources = [
@@ -140,9 +142,21 @@ class UniversalMonitor:
         result = await monitor.monitor()
         
         items_stored = 0
+        items_filtered_out = 0
         if result.success and result.new_items:
             for item in result.new_items:
                 try:
+                    # Apply language filter
+                    should_include, lang_result = self.language_filter.should_include_content(
+                        item.title, 
+                        item.content or ""
+                    )
+                    
+                    if not should_include:
+                        items_filtered_out += 1
+                        logger.debug(f"Filtered non-English content: {item.title[:50]}... (detected: {lang_result.language})")
+                        continue
+                    
                     # Calculate priority
                     priority_result = self.prioritizer.prioritize(item)
                     
@@ -164,6 +178,7 @@ class UniversalMonitor:
             "url": source_config['url'][:50] + "...",
             "success": result.success,
             "items_found": len(result.new_items) if result.success else 0,
+            "items_filtered": items_filtered_out,
             "items_stored": items_stored,
             "error": None if result.success else (result.errors[0] if result.errors else "Unknown error")
         }
@@ -206,8 +221,20 @@ class UniversalMonitor:
             
             # Store items in database
             items_stored = 0
+            items_filtered_out = 0
             for item in monitoring_result.new_items:
                 try:
+                    # Apply language filter
+                    should_include, lang_result = self.language_filter.should_include_content(
+                        item.title, 
+                        item.content or ""
+                    )
+                    
+                    if not should_include:
+                        items_filtered_out += 1
+                        logger.debug(f"Filtered non-English MCP content: {item.title[:50]}... (detected: {lang_result.language})")
+                        continue
+                    
                     # Calculate priority
                     priority_result = self.prioritizer.prioritize(item)
                     
@@ -230,6 +257,7 @@ class UniversalMonitor:
                 "url": f"MCP:{mcp_config['type']}",
                 "success": True,
                 "items_found": monitoring_result.items_found,
+                "items_filtered": items_filtered_out,
                 "items_stored": items_stored,
                 "error": None
             }
@@ -241,6 +269,7 @@ class UniversalMonitor:
                 "url": f"MCP:{mcp_config['type']}",
                 "success": False,
                 "items_found": 0,
+                "items_filtered": 0,
                 "items_stored": 0,
                 "error": str(e)
             }
@@ -257,6 +286,7 @@ class UniversalMonitor:
         self.stats["sources_failed"] = 0
         cycle_items_found = 0
         cycle_items_stored = 0
+        cycle_items_filtered = 0
         
         # Monitor all sources concurrently
         tasks = []
@@ -285,12 +315,16 @@ class UniversalMonitor:
                     self.stats["sources_successful"] += 1
                     cycle_items_found += result["items_found"]
                     cycle_items_stored += result["items_stored"]
+                    cycle_items_filtered += result.get("items_filtered", 0)
                 else:
                     self.stats["sources_failed"] += 1
         
         # Update cumulative stats
         self.stats["items_found"] += cycle_items_found
         self.stats["items_stored"] += cycle_items_stored
+        if "items_filtered" not in self.stats:
+            self.stats["items_filtered"] = 0
+        self.stats["items_filtered"] += cycle_items_filtered
         
         cycle_summary = {
             "timestamp": self.stats["last_run"].isoformat(),
@@ -300,13 +334,15 @@ class UniversalMonitor:
             "sources_successful": self.stats["sources_successful"],
             "sources_failed": self.stats["sources_failed"],
             "items_found_this_cycle": cycle_items_found,
+            "items_filtered_this_cycle": cycle_items_filtered,
             "items_stored_this_cycle": cycle_items_stored,
             "success_rate": f"{(self.stats['sources_successful'] / total_sources * 100):.1f}%",
+            "filter_rate": f"{(cycle_items_filtered / max(1, cycle_items_found) * 100):.1f}%",
             "source_results": source_results,
             "cumulative_stats": self.stats.copy()
         }
         
-        logger.info(f"Cycle complete: {cycle_items_found} found, {cycle_items_stored} stored")
+        logger.info(f"Cycle complete: {cycle_items_found} found, {cycle_items_filtered} filtered, {cycle_items_stored} stored")
         
         return cycle_summary
     
