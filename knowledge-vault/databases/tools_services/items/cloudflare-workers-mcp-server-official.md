@@ -1,0 +1,130 @@
+---
+name: "Cloudflare Workers Official MCP Server"
+category: "Edge Computing Platform"
+type: "Serverless Edge Computing"
+tier: "Tier 1"
+quality_score: 9.0
+maintainer: "Cloudflare (Official)"
+github_url: "https://github.com/cloudflare/mcp-server"
+npm_package: "@cloudflare/mcp-server"
+description: "Official Cloudflare MCP server enabling deployment and management of remote MCP servers on Cloudflare Workers edge network with global distribution"
+last_updated: "2025-01-15"
+status: "Production"
+license: "MIT"
+supported_platforms:
+  - "Cloudflare Workers"
+  - "Cloudflare Pages"
+  - "Edge runtime"
+  - "Global edge network"
+programming_languages:
+  - "TypeScript"
+  - "JavaScript"
+  - "WebAssembly"
+  - "REST API"
+dependencies:
+  - "Cloudflare account"
+  - "Workers subscription"
+  - "Wrangler CLI"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Remote MCP server deployment"
+    - "Edge-native serverless execution"
+    - "Global distribution and scaling"
+    - "Workers KV storage integration"
+    - "Durable Objects for state management"
+  advanced:
+    - "Custom domain routing"
+    - "Workers AI integration"
+    - "R2 storage connectivity"
+    - "D1 database integration"
+    - "WebSocket support for real-time MCP"
+integration_complexity: "Low to Medium"
+setup_requirements:
+  - "Cloudflare account with Workers enabled"
+  - "Wrangler CLI installation"
+  - "Domain configuration (optional)"
+  - "Environment variables setup"
+authentication: "Cloudflare API Token / OAuth 2.0"
+rate_limits: "Workers request limits apply"
+pricing_model: "Pay-per-request, free tier available"
+cloudflare_services:
+  compute:
+    - "Workers (edge functions)"
+    - "Pages (static site deployment)"
+    - "Workers AI (edge AI inference)"
+  storage:
+    - "KV (key-value store)"
+    - "R2 (object storage)"
+    - "D1 (SQL database)"
+    - "Durable Objects (stateful)"
+  networking:
+    - "Custom domains"
+    - "Load balancing"
+    - "DDoS protection"
+use_cases:
+  primary:
+    - "Global edge MCP server deployment"
+    - "Low-latency AI agent interactions"
+    - "Distributed MCP architectures"
+    - "Scalable serverless MCP hosting"
+  secondary:
+    - "Multi-region MCP failover"
+    - "Edge-cached MCP responses"
+    - "Real-time MCP applications"
+    - "Cost-optimized MCP hosting"
+tools_available:
+  - name: "worker_deployment"
+    description: "Deploy and manage MCP servers on Workers"
+  - name: "edge_routing"
+    description: "Configure global routing and load balancing"
+  - name: "kv_storage"
+    description: "Manage Workers KV data storage"
+  - name: "durable_objects"
+    description: "Handle stateful MCP server operations"
+  - name: "ai_integration"
+    description: "Connect with Cloudflare Workers AI"
+  - name: "analytics_monitoring"
+    description: "Monitor MCP server performance and usage"
+performance_metrics:
+  response_time: "Ultra-fast (<50ms cold start)"
+  reliability: "Very High (99.99% uptime)"
+  scalability: "Global scale (300+ locations)"
+documentation_quality: "Excellent"
+community_adoption: "Growing rapidly"
+enterprise_readiness: "High"
+global_infrastructure:
+  - "300+ edge locations worldwide"
+  - "Sub-50ms global latency"
+  - "Automatic geographic distribution"
+  - "DDoS protection included"
+  - "Enterprise-grade SLA"
+security_features:
+  - "Zero Trust network architecture"
+  - "WAF (Web Application Firewall)"
+  - "Rate limiting and DDoS protection"
+  - "TLS 1.3 encryption"
+  - "Bot management"
+limitations:
+  - "10ms CPU time limit per request (standard)"
+  - "Memory limits apply"
+  - "Cold start considerations"
+  - "Some Node.js APIs not supported"
+comparison_notes: "Superior edge distribution and performance compared to traditional cloud functions, ideal for global MCP deployments"
+integration_examples:
+  - "Global AI agent infrastructure"
+  - "Low-latency MCP API gateways"
+  - "Distributed knowledge retrieval systems"
+  - "Edge-cached search applications"
+notable_features:
+  - "Official Cloudflare development"
+  - "Global edge network deployment"
+  - "Sub-50ms cold start times"
+  - "Automatic scaling and distribution"
+  - "Comprehensive Cloudflare ecosystem integration"
+assessment_notes: "Tier 1 rating due to official Cloudflare support, global edge infrastructure, superior performance characteristics, and innovative approach to distributed MCP deployment"
+related_servers:
+  - "Vercel Edge Functions MCP Server"
+  - "AWS Lambda MCP Server"
+  - "Edge computing platforms"
+---

@@ -1,0 +1,132 @@
+---
+name: "Aiven Official MCP Server"
+category: "Database Platform"
+type: "Multi-Cloud Database-as-a-Service"
+tier: "Tier 1"
+quality_score: 8.9
+maintainer: "Aiven (Official)"
+github_url: "https://github.com/aiven/mcp-server"
+npm_package: "@aiven/mcp-server"
+description: "Official Aiven MCP server for managing multi-cloud database services including PostgreSQL, Apache Kafka, ClickHouse, and OpenSearch across AWS, Azure, and GCP"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Apache 2.0"
+supported_platforms:
+  - "AWS"
+  - "Microsoft Azure"
+  - "Google Cloud Platform"
+  - "DigitalOcean"
+  - "UpCloud"
+programming_languages:
+  - "Python"
+  - "TypeScript"
+  - "REST API"
+  - "GraphQL"
+dependencies:
+  - "Aiven account and API token"
+  - "Project access credentials"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Multi-cloud database deployment"
+    - "Service lifecycle management"
+    - "Real-time monitoring and alerts"
+    - "Automated backups and recovery"
+    - "Network security configuration"
+  advanced:
+    - "Cross-cloud data replication"
+    - "Performance optimization"
+    - "Cost analysis and optimization"
+    - "Integration management"
+    - "Compliance reporting"
+integration_complexity: "Medium"
+setup_requirements:
+  - "Aiven platform account"
+  - "API authentication token"
+  - "Project and service permissions"
+  - "Cloud provider credentials (optional)"
+authentication: "Aiven API Token"
+rate_limits: "Aiven API rate limits apply"
+pricing_model: "Usage-based pricing per service"
+supported_services:
+  databases:
+    - "PostgreSQL (including extensions)"
+    - "MySQL"
+    - "Redis"
+    - "Cassandra"
+    - "InfluxDB"
+  analytics:
+    - "ClickHouse"
+    - "Apache Kafka"
+    - "Apache Kafka Connect"
+    - "Apache Kafka MirrorMaker 2"
+    - "M3 (metrics)"
+  search:
+    - "OpenSearch"
+    - "Elasticsearch (legacy)"
+use_cases:
+  primary:
+    - "Multi-cloud database management"
+    - "Event streaming platform automation"
+    - "Search infrastructure provisioning"
+    - "Analytics pipeline management"
+  secondary:
+    - "Disaster recovery setup"
+    - "Performance monitoring automation"
+    - "Cost optimization workflows"
+    - "Compliance automation"
+tools_available:
+  - name: "service_management"
+    description: "Create, modify, and delete Aiven services"
+  - name: "project_navigation"
+    description: "Navigate and manage Aiven projects"
+  - name: "monitoring_integration"
+    description: "Access metrics, logs, and performance data"
+  - name: "backup_management"
+    description: "Configure and manage automated backups"
+  - name: "network_configuration"
+    description: "Set up VPC peering and IP filtering"
+  - name: "integration_setup"
+    description: "Configure service integrations and connectors"
+performance_metrics:
+  response_time: "Fast"
+  reliability: "Very High (99.95% SLA)"
+  scalability: "Enterprise-scale"
+documentation_quality: "Excellent"
+community_adoption: "High"
+enterprise_readiness: "Very High"
+compliance_certifications:
+  - "SOC 2 Type II"
+  - "ISO 27001"
+  - "GDPR compliant"
+  - "HIPAA eligible"
+  - "PCI DSS Level 1"
+security_features:
+  - "Network isolation and VPC peering"
+  - "Encryption at rest and in transit"
+  - "IP filtering and access controls"
+  - "Audit logging"
+  - "Two-factor authentication"
+limitations:
+  - "Requires Aiven subscription"
+  - "Service-specific limitations apply"
+  - "Geographic availability varies"
+  - "Some features require higher service tiers"
+comparison_notes: "Leading multi-cloud database platform with superior managed service offerings compared to single-cloud solutions"
+integration_examples:
+  - "Automated multi-cloud database provisioning"
+  - "Event streaming infrastructure management"
+  - "Search cluster scaling automation"
+  - "Cross-region disaster recovery setup"
+notable_features:
+  - "True multi-cloud portability"
+  - "100% open-source database engines"
+  - "Automated high availability"
+  - "Advanced monitoring and alerting"
+  - "Enterprise-grade security"
+assessment_notes: "Tier 1 rating due to official platform support, comprehensive multi-cloud database coverage, enterprise security features, and critical role in modern data infrastructure"
+related_servers:
+  - "AWS RDS MCP Server"
+  - "Google Cloud SQL MCP Server"
+  - "Database management platforms"
+---

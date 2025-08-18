@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 75
+  total_servers: 79
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -120,6 +120,13 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/qdrant-mcp-server-database.md"
       production_readiness: 90
       business_value: "Advanced vector search and AI data operations"
+      
+    - name: "Aiven Official MCP Server"
+      composite_score: 8.9
+      category: "Database Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/aiven-database-platform-mcp-server-official.md"
+      production_readiness: 94
+      business_value: "Multi-cloud database-as-a-service with comprehensive platform support"
       
     - name: "MySQL MCP Server"
       composite_score: 8.65
@@ -625,6 +632,27 @@ specialized_tools:
       file_path: "knowledge-vault/databases/tools_services/items/arize-phoenix-ml-observability-mcp-server-official.md"
       production_readiness: 93
       business_value: "LLM observability with trace inspection and prompt management"
+      
+    - name: "Alation Official MCP Server"
+      composite_score: 8.6
+      category: "Data Governance & Catalog"
+      file_path: "knowledge-vault/databases/tools_services/items/alation-data-catalog-mcp-server-official.md"
+      production_readiness: 92
+      business_value: "Enterprise data catalog with governance and lineage tracking"
+      
+    - name: "Cloudflare Workers Official MCP Server"
+      composite_score: 9.0
+      category: "Edge Computing Platform"
+      file_path: "knowledge-vault/databases/tools_services/items/cloudflare-workers-mcp-server-official.md"
+      production_readiness: 95
+      business_value: "Global edge deployment for MCP servers with sub-50ms latency"
+      
+    - name: "JetBrains Official MCP Server"
+      composite_score: 8.8
+      category: "IDE Integration"
+      file_path: "knowledge-vault/databases/tools_services/items/jetbrains-ide-integration-mcp-server-official.md"
+      production_readiness: 94
+      business_value: "Professional IDE integration across JetBrains development tools"
 
 # Implementation Strategy
 implementation_strategy:
