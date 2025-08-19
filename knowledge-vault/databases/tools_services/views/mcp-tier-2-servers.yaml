@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable systematic integration of business-valuable MCP servers with proven capabilities"
   last_updated: "2025-08-15"
-  total_servers: 18
+  total_servers: 16
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -230,17 +230,21 @@ financial_management:
       setup_complexity: "Medium"
       provider: "Xero"
 
-community_platforms:
-  description: "Gaming and community management platforms"
+# CORRECTED: Remove misclassified servers - moved to Tier 4
+# geospatial_mapping, financial_management, community_platforms moved to Tier 4
+# due to low technology stack alignment and business domain relevance
+
+search_analytics:
+  description: "Search and analytics platforms with moderate alignment"
   servers:
-    - name: "Discord Bot Integration MCP Server"
-      composite_score: 7.4
-      category: "Communication & Community"
-      file_path: "knowledge-vault/databases/tools_services/items/discord-bot-integration-mcp-server.md"
-      production_readiness: 85
-      business_value: "Gaming and community platform automation"
+    - name: "Elasticsearch Search Platform MCP Server"
+      composite_score: 7.2
+      category: "Search & Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/elasticsearch-search-platform-mcp-server.md"
+      production_readiness: 88
+      business_value: "Powerful search and analytics for knowledge management systems"
       setup_complexity: "Medium"
-      provider: "Discord Community"
+      provider: "Elastic Community"
 
 # Implementation Strategy
 implementation_strategy:

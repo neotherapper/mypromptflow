@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 89
+  total_servers: 93
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -35,6 +35,25 @@ tier_1_criteria:
 development_infrastructure:
   description: "Core development workflow and infrastructure servers"
   servers:
+    # Frontend Development Tools
+    - name: "React Development Tools MCP Server"
+      composite_score: 9.2
+      category: "Frontend Development"
+      file_path: "knowledge-vault/databases/tools_services/items/react-development-tools-mcp-server.md"
+      production_readiness: 94
+      business_value: "Essential React development and debugging capabilities"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "TypeScript Language Server MCP"
+      composite_score: 9.0
+      category: "Development Tools"
+      file_path: "knowledge-vault/databases/tools_services/items/typescript-language-server-mcp.md"
+      production_readiness: 95
+      business_value: "Critical TypeScript development support and type checking"
+      technology_alignment: 10
+      business_relevance: 9
+      
     # File & Content Management
     - name: "Filesystem MCP Server"
       composite_score: 9.8
@@ -184,6 +203,15 @@ enterprise_integration:
       file_path: "knowledge-vault/databases/tools_services/items/aws-mcp-server.md"
       production_readiness: 95
       business_value: "Comprehensive AWS cloud service integration and management"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "AWS S3 Storage MCP Server"
+      composite_score: 9.3
+      category: "Cloud Storage"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-s3-storage-mcp-server-official.md"
+      production_readiness: 98
+      business_value: "Essential cloud object storage for AI applications and static hosting"
       technology_alignment: 10
       business_relevance: 9
       
@@ -362,6 +390,15 @@ enterprise_integration:
 ai_development_tools:
   description: "AI-powered development enhancement and automation"
   servers:
+    - name: "Python Data Analysis MCP Server"
+      composite_score: 8.8
+      category: "Data Science & Analytics"
+      file_path: "knowledge-vault/databases/tools_services/items/python-data-analysis-mcp-server.md"
+      production_readiness: 92
+      business_value: "Essential Python data science capabilities for AI knowledge management"
+      technology_alignment: 10
+      business_relevance: 9
+      
     - name: "Anthropic Claude API MCP Server"
       composite_score: 9.65
       category: "AI & Machine Learning"
