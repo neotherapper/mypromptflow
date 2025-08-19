@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-19"
-  total_servers: 98
+  total_servers: 103
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -36,6 +36,15 @@ development_infrastructure:
   description: "Core development workflow and infrastructure servers"
   servers:
     # Frontend Development Tools
+    - name: "Next.js React Framework MCP Server"
+      composite_score: 9.5
+      category: "React Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/nextjs-react-framework-mcp-server.md"
+      production_readiness: 98
+      business_value: "Production-ready full-stack React framework with SSR and perfect TypeScript integration"
+      technology_alignment: 10
+      business_relevance: 10
+      
     - name: "React Development Tools MCP Server"
       composite_score: 9.2
       category: "Frontend Development"
@@ -60,6 +69,15 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/vite-build-tool-mcp-server.md"
       production_readiness: 92
       business_value: "Next-generation frontend build tool with lightning-fast React development experience"
+      technology_alignment: 10
+      business_relevance: 8
+      
+    - name: "Tailwind CSS Framework MCP Server"
+      composite_score: 8.6
+      category: "CSS Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/tailwind-css-framework-mcp-server.md"
+      production_readiness: 92
+      business_value: "Utility-first CSS framework with perfect React integration and design system capabilities"
       technology_alignment: 10
       business_relevance: 8
       
@@ -153,6 +171,15 @@ development_infrastructure:
       technology_alignment: 10
       business_relevance: 8
       
+    - name: "SQLAlchemy ORM Python MCP Server"
+      composite_score: 8.9
+      category: "Object-Relational Mapping"
+      file_path: "knowledge-vault/databases/tools_services/items/sqlalchemy-orm-python-mcp-server.md"
+      production_readiness: 96
+      business_value: "Enterprise-grade Python ORM with PostgreSQL optimization and FastAPI integration"
+      technology_alignment: 10
+      business_relevance: 8
+      
     - name: "Prisma ORM Database MCP Server"
       composite_score: 8.9
       category: "Object-Relational Mapping"
@@ -239,6 +266,15 @@ enterprise_integration:
       file_path: "knowledge-vault/databases/tools_services/items/aws-s3-storage-mcp-server-official.md"
       production_readiness: 98
       business_value: "Essential cloud object storage for AI applications and static hosting"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "AWS API Gateway MCP Server"
+      composite_score: 9.0
+      category: "API Management"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-api-gateway-mcp-server.md"
+      production_readiness: 96
+      business_value: "Official AWS API management with perfect React+Python+Lambda integration"
       technology_alignment: 10
       business_relevance: 9
       
@@ -434,6 +470,15 @@ ai_development_tools:
       business_value: "High-performance Python web API development with perfect TypeScript integration"
       technology_alignment: 10
       business_relevance: 9
+      
+    - name: "Pydantic Data Validation MCP Server"
+      composite_score: 8.8
+      category: "Data Validation"
+      file_path: "knowledge-vault/databases/tools_services/items/pydantic-data-validation-mcp-server.md"
+      production_readiness: 94
+      business_value: "Advanced Python data validation with FastAPI integration and TypeScript compatibility"
+      technology_alignment: 10
+      business_relevance: 8
       
     - name: "Python Data Analysis MCP Server"
       composite_score: 8.8
