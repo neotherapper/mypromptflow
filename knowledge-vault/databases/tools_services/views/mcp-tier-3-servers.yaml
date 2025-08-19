@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable specialized workflow integration and development tool deployment for specific business needs"
   last_updated: "2025-07-31"
-  total_servers: 22
+  total_servers: 24
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -202,6 +202,30 @@ infrastructure_as_code:
       business_value: "Service discovery and configuration management"
       setup_complexity: "High"
       provider: "HashiCorp"
+
+automation_testing:
+  description: "Web automation and testing platforms"
+  servers:
+    - name: "Browser Automation MCP Server"
+      composite_score: 6.2
+      category: "Web Automation"
+      file_path: "knowledge-vault/databases/tools_services/items/browser-automation-mcp-server.md"
+      production_readiness: 78
+      business_value: "Local browser control and automation for testing"
+      setup_complexity: "High"
+      provider: "Community Contributors"
+
+computational_tools:
+  description: "Mathematical and computational utilities"
+  servers:
+    - name: "Calculator Mathematical Operations MCP Server"
+      composite_score: 5.8
+      category: "Mathematical Computing"
+      file_path: "knowledge-vault/databases/tools_services/items/calculator-mathematical-operations-mcp-server.md"
+      production_readiness: 82
+      business_value: "Precise numerical calculations for AI agents"
+      setup_complexity: "Low"
+      provider: "Community Contributors"
 
 backend_as_a_service:
   description: "Backend-as-a-Service and database platforms"

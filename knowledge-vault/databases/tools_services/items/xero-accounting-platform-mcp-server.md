@@ -1,0 +1,131 @@
+---
+name: "Xero Accounting Platform MCP Server"
+category: "Financial Management"
+type: "Cloud Accounting Software"
+tier: "Tier 2"
+quality_score: 7.6
+maintainer: "Xero Community"
+github_url: "https://github.com/xero/mcp-server"
+npm_package: "@xero/mcp-server"
+description: "Xero MCP server providing comprehensive accounting and financial management capabilities including invoicing, expense tracking, financial reporting, and business analytics"
+last_updated: "2025-01-15"
+status: "Production"
+license: "Commercial"
+supported_platforms:
+  - "Xero API"
+  - "Cloud-based accounting"
+  - "Multi-region support"
+programming_languages:
+  - "Node.js"
+  - "Python"
+  - "REST API"
+  - "OAuth 2.0"
+dependencies:
+  - "Xero account and subscription"
+  - "OAuth 2.0 app credentials"
+  - "Accounting permissions"
+  - "MCP-compatible client"
+features:
+  core:
+    - "Invoice creation and management"
+    - "Expense tracking and categorization"
+    - "Bank account reconciliation"
+    - "Contact and customer management"
+    - "Financial reporting and statements"
+  advanced:
+    - "Multi-currency support"
+    - "Tax compliance and reporting"
+    - "Project tracking and profitability"
+    - "Payroll integration"
+    - "Custom reporting and analytics"
+integration_complexity: "Medium"
+setup_requirements:
+  - "Xero subscription (Starter, Standard, or Premium)"
+  - "OAuth 2.0 app registration"
+  - "Accounting permission scopes"
+  - "Webhook configuration (optional)"
+authentication: "OAuth 2.0 with Xero"
+rate_limits: "Xero API rate limits (60 calls/minute)"
+pricing_model: "Xero subscription required (from $13/month)"
+accounting_capabilities:
+  financial_management:
+    - "Profit and loss statements"
+    - "Balance sheets and cash flow"
+    - "Budget vs actual reporting"
+    - "Financial dashboard analytics"
+  invoicing:
+    - "Professional invoice creation"
+    - "Automated payment reminders"
+    - "Online payment integration"
+    - "Recurring invoice automation"
+  expense_management:
+    - "Receipt capture and processing"
+    - "Expense categorization"
+    - "Mileage and time tracking"
+    - "Employee expense reimbursement"
+use_cases:
+  primary:
+    - "Small business accounting automation"
+    - "Financial reporting and analysis"
+    - "Invoice and payment processing"
+    - "Tax preparation and compliance"
+  secondary:
+    - "Multi-entity financial management"
+    - "Project profitability analysis"
+    - "Cash flow forecasting"
+    - "Audit preparation and documentation"
+tools_available:
+  - name: "invoice_management"
+    description: "Create, send, and manage invoices"
+  - name: "expense_tracking"
+    description: "Record and categorize business expenses"
+  - name: "financial_reporting"
+    description: "Generate financial statements and reports"
+  - name: "bank_reconciliation"
+    description: "Match transactions and reconcile accounts"
+  - name: "contact_management"
+    description: "Manage customers, suppliers, and contacts"
+  - name: "tax_compliance"
+    description: "Handle tax calculations and reporting"
+performance_metrics:
+  response_time: "Moderate (cloud-based)"
+  reliability: "High (99.9% uptime)"
+  scalability: "Small to medium business scale"
+documentation_quality: "Good"
+community_adoption: "High in SMB market"
+enterprise_readiness: "Medium (SMB focused)"
+regional_support:
+  - "Australia and New Zealand"
+  - "United Kingdom"
+  - "United States"
+  - "Canada and Singapore"
+  - "South Africa"
+security_features:
+  - "Bank-level security (256-bit SSL)"
+  - "OAuth 2.0 authentication"
+  - "Two-factor authentication"
+  - "Role-based access controls"
+  - "Audit trails and logging"
+limitations:
+  - "Primarily designed for SMBs"
+  - "API rate limits can be restrictive"
+  - "Limited customization options"
+  - "Regional feature variations"
+comparison_notes: "Strong SMB accounting platform with good API, but lacks enterprise features of larger ERP systems"
+integration_examples:
+  - "Automated invoice generation from CRM"
+  - "Expense categorization using AI"
+  - "Financial dashboard automation"
+  - "Tax preparation workflows"
+notable_features:
+  - "User-friendly interface design"
+  - "Strong mobile application support"
+  - "Extensive third-party integrations"
+  - "Real-time financial data sync"
+  - "Multi-currency business support"
+assessment_notes: "Tier 2 rating due to solid accounting platform capabilities, good API access, strong SMB market presence, but limited enterprise features compared to Tier 1 platforms"
+related_servers:
+  - "QuickBooks MCP Server"
+  - "FreshBooks MCP Server"
+  - "Accounting software platforms"
+---

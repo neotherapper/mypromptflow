@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable systematic integration of business-valuable MCP servers with proven capabilities"
   last_updated: "2025-08-15"
-  total_servers: 15
+  total_servers: 18
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -205,6 +205,42 @@ cloud_infrastructure:
       provider: "Amazon Web Services"
       technology_alignment: 6
       business_relevance: 7
+
+geospatial_mapping:
+  description: "Geographic and location intelligence services"
+  servers:
+    - name: "Mapbox Geospatial Intelligence MCP Server"
+      composite_score: 7.8
+      category: "Geospatial & Mapping"
+      file_path: "knowledge-vault/databases/tools_services/items/mapbox-geospatial-intelligence-mcp-server.md"
+      production_readiness: 89
+      business_value: "Comprehensive geospatial intelligence and mapping capabilities"
+      setup_complexity: "Medium"
+      provider: "Mapbox"
+
+financial_management:
+  description: "Accounting and financial management platforms"
+  servers:
+    - name: "Xero Accounting Platform MCP Server"
+      composite_score: 7.6
+      category: "Financial Management"
+      file_path: "knowledge-vault/databases/tools_services/items/xero-accounting-platform-mcp-server.md"
+      production_readiness: 87
+      business_value: "Cloud-based accounting and financial management"
+      setup_complexity: "Medium"
+      provider: "Xero"
+
+community_platforms:
+  description: "Gaming and community management platforms"
+  servers:
+    - name: "Discord Bot Integration MCP Server"
+      composite_score: 7.4
+      category: "Communication & Community"
+      file_path: "knowledge-vault/databases/tools_services/items/discord-bot-integration-mcp-server.md"
+      production_readiness: 85
+      business_value: "Gaming and community platform automation"
+      setup_complexity: "Medium"
+      provider: "Discord Community"
 
 # Implementation Strategy
 implementation_strategy:

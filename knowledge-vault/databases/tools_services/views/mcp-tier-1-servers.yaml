@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-15"
-  total_servers: 88
+  total_servers: 89
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -164,6 +164,15 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/neon-serverless-postgres-mcp-server-official.md"
       production_readiness: 94
       business_value: "Serverless PostgreSQL with database branching capabilities"
+      
+    - name: "MongoDB Official MCP Server"
+      composite_score: 8.7
+      category: "NoSQL Database"
+      file_path: "knowledge-vault/databases/tools_services/items/mongodb-official-mcp-server.md"
+      production_readiness: 95
+      business_value: "Leading NoSQL document database with comprehensive enterprise features"
+      technology_alignment: 9
+      business_relevance: 9
 
 enterprise_integration:
   description: "Business-critical enterprise service integrations"
