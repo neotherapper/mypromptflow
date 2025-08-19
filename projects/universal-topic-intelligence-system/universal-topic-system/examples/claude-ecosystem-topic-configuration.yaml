@@ -1,328 +1,386 @@
-# Claude & AI Development Ecosystem Topic Configuration
-# Comprehensive monitoring with YouTube channels, GitHub repos, and more
-
 topic_metadata:
-  name: "Claude & AI Development Ecosystem"
-  slug: "claude-ecosystem"
-  description: "Comprehensive monitoring of Claude, AI development tools, and practical AI applications"
-  priority_level: "critical"
-  monitoring_frequency: "realtime"
-  status: "active"
+  name: Claude & AI Development Ecosystem
+  slug: claude-ecosystem
+  description: Comprehensive monitoring of Claude, AI development tools, and practical
+    AI applications
+  priority_level: critical
+  monitoring_frequency: realtime
+  status: active
   keywords_primary:
-    - "claude"
-    - "anthropic"
-    - "claude code"
-    - "opus"
-    - "sonnet"
-    - "haiku"
-    - "mcp"
-    - "model context protocol"
+  - claude
+  - anthropic
+  - claude code
+  - opus
+  - sonnet
+  - haiku
+  - mcp
+  - model context protocol
   keywords_secondary:
-    - "ai development"
-    - "prompt engineering"
-    - "llm"
-    - "ai coding"
-    - "cursor"
-    - "ai agents"
-
+  - ai development
+  - prompt engineering
+  - llm
+  - ai coding
+  - cursor
+  - ai agents
 source_mapping:
   tier_1_official:
-    description: "Official Anthropic and Claude sources"
+    description: Official Anthropic and Claude sources
     priority: 1.0
     sources:
-      - url: "https://www.anthropic.com/news/rss.xml"
-        name: "Anthropic News"
-        source_id: "anthropic_news"
-        authority_score: 1.0
-        monitoring_method: "RSS"
-        update_frequency: "hourly"
-        topics: ["claude", "anthropic", "constitutional-ai"]
-        
-      - url: "https://github.com/anthropics/anthropic-sdk-python"
-        name: "Anthropic Python SDK"
-        source_id: "anthropic_sdk_python"
-        authority_score: 1.0
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "issues", "commits"]
-        topics: ["claude", "sdk", "python"]
-        
-      - url: "https://github.com/anthropics/claude-code"
-        name: "Claude Code Repository"
-        source_id: "claude_code_repo"
-        authority_score: 1.0
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "issues", "discussions"]
-        topics: ["claude-code", "development-tools"]
-        
-      - url: "https://github.com/modelcontextprotocol/servers"
-        name: "MCP Servers Repository"
-        source_id: "mcp_servers"
-        authority_score: 0.95
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "commits"]
-        topics: ["mcp", "integrations"]
-
+    - url: https://github.com/anthropics/anthropic-sdk-python
+      name: Anthropic Python SDK
+      source_id: anthropic_sdk_python
+      authority_score: 1.0
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - issues
+      - commits
+      topics:
+      - claude
+      - sdk
+      - python
+    - url: https://github.com/anthropics/claude-code
+      name: Claude Code Repository
+      source_id: claude_code_repo
+      authority_score: 1.0
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - issues
+      - discussions
+      topics:
+      - claude-code
+      - development-tools
+    - url: https://github.com/modelcontextprotocol/servers
+      name: MCP Servers Repository
+      source_id: mcp_servers
+      authority_score: 0.95
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - commits
+      topics:
+      - mcp
+      - integrations
   tier_2_community:
-    description: "Expert YouTube channels and community sources"
+    description: Expert YouTube channels and community sources
     priority: 0.85
     sources:
-      # YouTube Channels - AI Development
-      - url: "https://www.youtube.com/@Fireship"
-        name: "Fireship"
-        source_id: "youtube_fireship"
-        authority_score: 0.9
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCsBjURrPoezykLs9EqgamOA"
-        max_videos: 5
-        topics: ["development", "ai-tools", "tech-news"]
-        relevance_keywords: ["ai", "claude", "llm", "development"]
-        
-      - url: "https://www.youtube.com/@ThePrimeTimeagen"
-        name: "ThePrimeTime"
-        source_id: "youtube_primetime"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCUyeluBRhGPCW4rPe_UvBZQ"
-        max_videos: 3
-        topics: ["development", "ai-coding", "tech-commentary"]
-        relevance_keywords: ["ai", "cursor", "copilot", "development"]
-        
-      - url: "https://www.youtube.com/@t3dotgg"
-        name: "Theo - t3.gg"
-        source_id: "youtube_theo"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCbRP3c757lWg9M-U7TyEkXA"
-        max_videos: 3
-        topics: ["web-dev", "ai-tools", "react"]
-        relevance_keywords: ["ai", "claude", "development", "react"]
-        
-      - url: "https://www.youtube.com/@MatthewBermanAI"
-        name: "Matthew Berman AI"
-        source_id: "youtube_matthew_berman"
-        authority_score: 0.8
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCE6F8vqG8kg4xKDVe-3n_qw"
-        max_videos: 5
-        topics: ["ai-news", "claude", "llm"]
-        relevance_keywords: ["claude", "anthropic", "ai", "llm"]
-        
-      - url: "https://www.youtube.com/@AIExplained-official"
-        name: "AI Explained"
-        source_id: "youtube_ai_explained"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCqaFt3L6cWjFdQVNDsJvovA"
-        max_videos: 3
-        topics: ["ai-analysis", "claude", "research"]
-        relevance_keywords: ["claude", "anthropic", "llm", "ai research"]
-        
-      # GitHub Community Projects
-      - url: "https://github.com/langchain-ai/langchain"
-        name: "LangChain"
-        source_id: "langchain_repo"
-        authority_score: 0.9
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "discussions"]
-        topics: ["llm-tools", "claude-integration"]
-        
-      - url: "https://github.com/getcursor/cursor"
-        name: "Cursor Editor"
-        source_id: "cursor_repo"
-        authority_score: 0.85
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "issues"]
-        topics: ["ai-coding", "claude-integration"]
-        
-      # Expert Blogs
-      - url: "https://blog.langchain.dev/rss/"
-        name: "LangChain Blog"
-        source_id: "langchain_blog"
-        authority_score: 0.9
-        monitoring_method: "RSS"
-        topics: ["llm", "claude", "ai-development"]
-        
-      - url: "https://www.oneusefulthing.org/feed"
-        name: "One Useful Thing"
-        source_id: "one_useful_thing"
-        authority_score: 0.85
-        monitoring_method: "RSS"
-        topics: ["ai-applications", "claude", "practical-ai"]
-
+    - url: https://www.youtube.com/@Fireship
+      name: Fireship
+      source_id: youtube_fireship
+      authority_score: 0.9
+      monitoring_method: YouTube MCP
+      channel_id: UCsBjURrPoezykLs9EqgamOA
+      max_videos: 5
+      topics:
+      - development
+      - ai-tools
+      - tech-news
+      relevance_keywords:
+      - ai
+      - claude
+      - llm
+      - development
+    - url: https://www.youtube.com/@ThePrimeTimeagen
+      name: ThePrimeTime
+      source_id: youtube_primetime
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UCUyeluBRhGPCW4rPe_UvBZQ
+      max_videos: 3
+      topics:
+      - development
+      - ai-coding
+      - tech-commentary
+      relevance_keywords:
+      - ai
+      - cursor
+      - copilot
+      - development
+    - url: https://www.youtube.com/@t3dotgg
+      name: Theo - t3.gg
+      source_id: youtube_theo
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UCbRP3c757lWg9M-U7TyEkXA
+      max_videos: 3
+      topics:
+      - web-dev
+      - ai-tools
+      - react
+      relevance_keywords:
+      - ai
+      - claude
+      - development
+      - react
+    - url: https://www.youtube.com/@MatthewBermanAI
+      name: Matthew Berman AI
+      source_id: youtube_matthew_berman
+      authority_score: 0.8
+      monitoring_method: YouTube MCP
+      channel_id: UCE6F8vqG8kg4xKDVe-3n_qw
+      max_videos: 5
+      topics:
+      - ai-news
+      - claude
+      - llm
+      relevance_keywords:
+      - claude
+      - anthropic
+      - ai
+      - llm
+    - url: https://www.youtube.com/@AIExplained-official
+      name: AI Explained
+      source_id: youtube_ai_explained
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UCqaFt3L6cWjFdQVNDsJvovA
+      max_videos: 3
+      topics:
+      - ai-analysis
+      - claude
+      - research
+      relevance_keywords:
+      - claude
+      - anthropic
+      - llm
+      - ai research
+    - url: https://github.com/langchain-ai/langchain
+      name: LangChain
+      source_id: langchain_repo
+      authority_score: 0.9
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - discussions
+      topics:
+      - llm-tools
+      - claude-integration
+    - url: https://github.com/getcursor/cursor
+      name: Cursor Editor
+      source_id: cursor_repo
+      authority_score: 0.85
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - issues
+      topics:
+      - ai-coding
+      - claude-integration
+    - url: https://blog.langchain.dev/feed/
+      name: LangChain Blog
+      source_id: langchain_blog
+      authority_score: 0.9
+      monitoring_method: RSS
+      topics:
+      - llm
+      - claude
+      - ai-development
+    - url: https://www.oneusefulthing.org/feed
+      name: One Useful Thing
+      source_id: one_useful_thing
+      authority_score: 0.85
+      monitoring_method: RSS
+      topics:
+      - ai-applications
+      - claude
+      - practical-ai
+    - url: https://simonwillison.net/atom/everything/
+      name: Simon Willison's Blog
+      source_id: simon_willison
+      authority_score: 0.9
+      topics:
+      - ai
+      - llm
+      - claude
+      - development
+      monitoring_method: RSS
   tier_3_aggregators:
-    description: "Community discussions and aggregators"
+    description: Community discussions and aggregators
     priority: 0.7
     sources:
-      # Reddit Communities
-      - url: "https://www.reddit.com/r/ClaudeAI/.rss"
-        name: "Reddit r/ClaudeAI"
-        source_id: "reddit_claude"
-        authority_score: 0.75
-        monitoring_method: "RSS"
-        topics: ["claude", "community", "tips"]
-        
-      - url: "https://www.reddit.com/r/LocalLLaMA/search.rss?q=claude+OR+anthropic&restrict_sr=1&sort=hot"
-        name: "Reddit LocalLLaMA Claude Posts"
-        source_id: "reddit_localllama_claude"
-        authority_score: 0.7
-        monitoring_method: "RSS"
-        topics: ["llm", "claude", "community"]
-        
-      # Search Monitoring
-      - search_query: "Claude Opus 4.1 release features"
-        name: "Claude Release News"
-        source_id: "search_claude_releases"
-        monitoring_method: "Search MCP"
-        update_frequency: "daily"
-        topics: ["claude", "releases"]
-        
-      - search_query: "Claude Code best practices tips"
-        name: "Claude Code Tips"
-        source_id: "search_claude_code"
-        monitoring_method: "Search MCP"
-        update_frequency: "daily"
-        topics: ["claude-code", "best-practices"]
-        
-      # HackerNews
-      - url: "https://hnrss.org/newest?q=claude+OR+anthropic"
-        name: "HackerNews Claude Posts"
-        source_id: "hn_claude"
-        authority_score: 0.75
-        monitoring_method: "RSS"
-        topics: ["claude", "tech-news", "discussion"]
-
+    - url: https://www.reddit.com/r/ClaudeAI/.rss
+      name: Reddit r/ClaudeAI
+      source_id: reddit_claude
+      authority_score: 0.75
+      monitoring_method: RSS
+      topics:
+      - claude
+      - community
+      - tips
+    - url: https://www.reddit.com/r/LocalLLaMA/search.rss?q=claude+OR+anthropic&restrict_sr=1&sort=hot
+      name: Reddit LocalLLaMA Claude Posts
+      source_id: reddit_localllama_claude
+      authority_score: 0.7
+      monitoring_method: RSS
+      topics:
+      - llm
+      - claude
+      - community
+    - search_query: Claude Opus 4.1 release features
+      name: Claude Release News
+      source_id: search_claude_releases
+      monitoring_method: Search MCP
+      update_frequency: daily
+      topics:
+      - claude
+      - releases
+    - search_query: Claude Code best practices tips
+      name: Claude Code Tips
+      source_id: search_claude_code
+      monitoring_method: Search MCP
+      update_frequency: daily
+      topics:
+      - claude-code
+      - best-practices
+    - url: https://hnrss.org/newest?q=claude+OR+anthropic
+      name: HackerNews Claude Posts
+      source_id: hn_claude
+      authority_score: 0.75
+      monitoring_method: RSS
+      topics:
+      - claude
+      - tech-news
+      - discussion
 quality_assessment:
   thresholds:
     critical: 0.85
-    high: 0.70
-    medium: 0.50
-    low: 0.30
-    noise: 0.20
-    
+    high: 0.7
+    medium: 0.5
+    low: 0.3
+    noise: 0.2
   boost_rules:
-    - rule: "official_announcement"
-      condition: "source = 'anthropic_news' or source = 'claude_code_repo'"
-      action: "multiply_score by 1.3"
-      
-    - rule: "claude_release"
-      condition: "title contains 'Claude' and (title contains 'release' or title contains 'announcement' or title contains 'launch')"
-      action: "multiply_score by 1.4"
-      
-    - rule: "mcp_updates"
-      condition: "title contains 'MCP' or title contains 'Model Context Protocol'"
-      action: "multiply_score by 1.2"
-      
-    - rule: "youtube_tutorial"
-      condition: "source contains 'youtube' and (title contains 'tutorial' or title contains 'guide')"
-      action: "multiply_score by 1.15"
-      
-    high_value_terms:
-      - term: "Claude Opus"
-        multiplier: 1.5
-      - term: "Claude 4"
-        multiplier: 1.4
-      - term: "Anthropic announcement"
-        multiplier: 1.4
-      - term: "Claude Code"
-        multiplier: 1.3
-      - term: "MCP server"
-        multiplier: 1.2
-      - term: "constitutional AI"
-        multiplier: 1.2
-
+  - rule: official_announcement
+    condition: source = 'anthropic_news' or source = 'claude_code_repo'
+    action: multiply_score by 1.3
+  - rule: claude_release
+    condition: title contains 'Claude' and (title contains 'release' or title contains
+      'announcement' or title contains 'launch')
+    action: multiply_score by 1.4
+  - rule: mcp_updates
+    condition: title contains 'MCP' or title contains 'Model Context Protocol'
+    action: multiply_score by 1.2
+  - rule: youtube_tutorial
+    condition: source contains 'youtube' and (title contains 'tutorial' or title contains
+      'guide')
+    action: multiply_score by 1.15
+  high_value_terms:
+  - term: Claude Opus
+    multiplier: 1.5
+  - term: Claude 4
+    multiplier: 1.4
+  - term: Anthropic announcement
+    multiplier: 1.4
+  - term: Claude Code
+    multiplier: 1.3
+  - term: MCP server
+    multiplier: 1.2
+  - term: constitutional AI
+    multiplier: 1.2
   exclude_patterns:
-    - pattern: "cryptocurrency"
-      severity: "high"
-    - pattern: "blockchain"
-      severity: "high"
-    - pattern: "NFT"
-      severity: "high"
-    - pattern: "trading bot"
-      severity: "high"
-    - pattern: "get rich"
-      severity: "critical"
-
+  - pattern: cryptocurrency
+    severity: high
+  - pattern: blockchain
+    severity: high
+  - pattern: NFT
+    severity: high
+  - pattern: trading bot
+    severity: high
+  - pattern: get rich
+    severity: critical
 agent_configuration:
   queen_agent:
-    role: "Claude Ecosystem Orchestrator"
+    role: Claude Ecosystem Orchestrator
     responsibilities:
-      - "Coordinate monitoring across all Claude-related sources"
-      - "Identify breaking news about Claude releases"
-      - "Track MCP server developments"
-      - "Cross-reference YouTube tutorials with documentation updates"
-      
+    - Coordinate monitoring across all Claude-related sources
+    - Identify breaking news about Claude releases
+    - Track MCP server developments
+    - Cross-reference YouTube tutorials with documentation updates
   architect_agents:
-    - name: "Official Source Architect"
-      sources: ["tier_1_official"]
-      priority_boost: 1.5
-      
-    - name: "YouTube Content Architect"
-      sources: ["youtube_*"]
-      specialization: "video_content_analysis"
-      
-    - name: "Community Intelligence Architect"
-      sources: ["reddit_*", "hn_*"]
-      specialization: "sentiment_analysis"
-      
+  - name: Official Source Architect
+    sources:
+    - tier_1_official
+    priority_boost: 1.5
+  - name: YouTube Content Architect
+    sources:
+    - youtube_*
+    specialization: video_content_analysis
+  - name: Community Intelligence Architect
+    sources:
+    - reddit_*
+    - hn_*
+    specialization: sentiment_analysis
   specialist_agents:
-    - name: "Claude Feature Specialist"
-      keywords: ["opus", "sonnet", "haiku", "release", "feature"]
-      
-    - name: "MCP Integration Specialist"
-      keywords: ["mcp", "model context protocol", "server", "integration"]
-      
-    - name: "Tutorial Quality Specialist"
-      keywords: ["tutorial", "guide", "how to", "example"]
-
+  - name: Claude Feature Specialist
+    keywords:
+    - opus
+    - sonnet
+    - haiku
+    - release
+    - feature
+  - name: MCP Integration Specialist
+    keywords:
+    - mcp
+    - model context protocol
+    - server
+    - integration
+  - name: Tutorial Quality Specialist
+    keywords:
+    - tutorial
+    - guide
+    - how to
+    - example
 monitoring_schedule:
   tier_1_official:
-    frequency: "every_30_minutes"
-    priority: "critical"
-    
+    frequency: every_30_minutes
+    priority: critical
   tier_2_community:
-    frequency: "every_2_hours"
-    priority: "high"
-    
+    frequency: every_2_hours
+    priority: high
   tier_3_aggregators:
-    frequency: "every_6_hours"
-    priority: "medium"
-    
+    frequency: every_6_hours
+    priority: medium
   youtube_channels:
-    frequency: "every_4_hours"
-    priority: "high"
-    note: "Check for new videos and transcripts"
-
+    frequency: every_4_hours
+    priority: high
+    note: Check for new videos and transcripts
 cross_topic_relationships:
   related_topics:
-    - slug: "react-ecosystem"
-      relationship: "complementary"
-      reason: "Claude Code often used for React development"
-      
-    - slug: "ai-development-tools"
-      relationship: "parent"
-      reason: "Claude is a key AI development tool"
-      
-    - slug: "prompt-engineering"
-      relationship: "dependent"
-      reason: "Prompt engineering techniques apply to Claude"
-
+  - slug: react-ecosystem
+    relationship: complementary
+    reason: Claude Code often used for React development
+  - slug: ai-development-tools
+    relationship: parent
+    reason: Claude is a key AI development tool
+  - slug: prompt-engineering
+    relationship: dependent
+    reason: Prompt engineering techniques apply to Claude
 mcp_server_configuration:
   youtube:
-    server: "mcp__MCP_DOCKER__get_transcript"
-    capabilities: ["transcript", "metadata"]
-    rate_limit: 10  # requests per minute
-    
+    server: mcp__MCP_DOCKER__get_transcript
+    capabilities:
+    - transcript
+    - metadata
+    rate_limit: 10
   github:
-    server: "mcp__MCP_DOCKER__search_repositories"
-    capabilities: ["search", "commits", "issues", "releases"]
+    server: mcp__MCP_DOCKER__search_repositories
+    capabilities:
+    - search
+    - commits
+    - issues
+    - releases
     rate_limit: 30
-    
   search:
-    server: "mcp__MCP_DOCKER__search"
-    capabilities: ["web_search", "news_search"]
+    server: mcp__MCP_DOCKER__search
+    capabilities:
+    - web_search
+    - news_search
     rate_limit: 20
-    
   fetch:
-    server: "mcp__MCP_DOCKER__fetch"
-    capabilities: ["html_parse", "markdown_convert"]
+    server: mcp__MCP_DOCKER__fetch
+    capabilities:
+    - html_parse
+    - markdown_convert
     rate_limit: 30

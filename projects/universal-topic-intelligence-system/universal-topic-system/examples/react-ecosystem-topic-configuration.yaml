@@ -1,404 +1,496 @@
-# React & Frontend Development Ecosystem Topic Configuration
-# Complete monitoring with YouTube channels, GitHub repos, blogs, and documentation
-
 topic_metadata:
-  name: "React & Frontend Development Ecosystem"
-  slug: "react-ecosystem"
-  description: "Comprehensive monitoring of React, Next.js, TypeScript, and modern frontend development"
-  priority_level: "high"
-  monitoring_frequency: "realtime"
-  status: "active"
+  name: React & Frontend Development Ecosystem
+  slug: react-ecosystem
+  description: Comprehensive monitoring of React, Next.js, TypeScript, and modern
+    frontend development
+  priority_level: high
+  monitoring_frequency: realtime
+  status: active
   keywords_primary:
-    - "react"
-    - "react 19"
-    - "next.js"
-    - "typescript"
-    - "frontend"
-    - "hooks"
-    - "components"
+  - react
+  - react 19
+  - next.js
+  - typescript
+  - frontend
+  - hooks
+  - components
   keywords_secondary:
-    - "jsx"
-    - "state management"
-    - "redux"
-    - "zustand"
-    - "tailwind"
-    - "vite"
-    - "webpack"
-
+  - jsx
+  - state management
+  - redux
+  - zustand
+  - tailwind
+  - vite
+  - webpack
 source_mapping:
   tier_1_official:
-    description: "Official React and related framework sources"
+    description: Official React and related framework sources
     priority: 1.0
     sources:
-      - url: "https://react.dev/blog/feed.xml"
-        name: "React Official Blog"
-        source_id: "react_blog"
-        authority_score: 1.0
-        monitoring_method: "RSS"
-        update_frequency: "hourly"
-        topics: ["react", "releases", "features"]
-        
-      - url: "https://github.com/facebook/react"
-        name: "React Repository"
-        source_id: "react_repo"
-        authority_score: 1.0
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "discussions", "rfcs"]
-        topics: ["react", "core"]
-        
-      - url: "https://github.com/vercel/next.js"
-        name: "Next.js Repository"
-        source_id: "nextjs_repo"
-        authority_score: 0.95
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "discussions"]
-        topics: ["nextjs", "react", "framework"]
-        
-      - url: "https://github.com/microsoft/TypeScript"
-        name: "TypeScript Repository"
-        source_id: "typescript_repo"
-        authority_score: 0.95
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "roadmap"]
-        topics: ["typescript", "types"]
-        
-      - url: "https://nextjs.org/blog/rss.xml"
-        name: "Next.js Blog"
-        source_id: "nextjs_blog"
-        authority_score: 0.95
-        monitoring_method: "RSS"
-        topics: ["nextjs", "react", "releases"]
-
+    - url: https://react.dev/rss.xml
+      name: React Official Blog
+      source_id: react_blog
+      authority_score: 1.0
+      monitoring_method: RSS
+      update_frequency: hourly
+      topics:
+      - react
+      - releases
+      - features
+    - url: https://github.com/facebook/react
+      name: React Repository
+      source_id: react_repo
+      authority_score: 1.0
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - discussions
+      - rfcs
+      topics:
+      - react
+      - core
+    - url: https://github.com/vercel/next.js
+      name: Next.js Repository
+      source_id: nextjs_repo
+      authority_score: 0.95
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - discussions
+      topics:
+      - nextjs
+      - react
+      - framework
+    - url: https://github.com/microsoft/TypeScript
+      name: TypeScript Repository
+      source_id: typescript_repo
+      authority_score: 0.95
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - roadmap
+      topics:
+      - typescript
+      - types
+    - url: https://nextjs.org/feed.xml
+      name: Next.js Blog
+      source_id: nextjs_blog
+      authority_score: 0.95
+      monitoring_method: RSS
+      topics:
+      - nextjs
+      - react
+      - releases
   tier_2_community:
-    description: "Expert YouTube channels and influential developers"
+    description: Expert YouTube channels and influential developers
     priority: 0.85
     sources:
-      # YouTube Channels - React Experts
-      - url: "https://www.youtube.com/@uidotdev"
-        name: "ui.dev"
-        source_id: "youtube_uidev"
-        authority_score: 0.95
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCbmC3HP3FaAFdcZklJQyMAA"
-        max_videos: 5
-        topics: ["react", "tutorials", "patterns"]
-        relevance_keywords: ["react", "hooks", "components", "patterns"]
-        
-      - url: "https://www.youtube.com/@jackherrington"
-        name: "Jack Herrington"
-        source_id: "youtube_jack_herrington"
-        authority_score: 0.9
-        monitoring_method: "YouTube MCP"
-        channel_id: "UC6vRUuEJWz2rimI1g8wCbcw"
-        max_videos: 5
-        topics: ["react", "nextjs", "micro-frontends"]
-        relevance_keywords: ["react", "next.js", "typescript", "micro-frontends"]
-        
-      - url: "https://www.youtube.com/@codevolution"
-        name: "Codevolution"
-        source_id: "youtube_codevolution"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UC80PWRuiqBq2kUHdHO0dBDg"
-        max_videos: 3
-        topics: ["react", "tutorials", "nextjs"]
-        relevance_keywords: ["react", "next.js", "tutorial"]
-        
-      - url: "https://www.youtube.com/@WebDevSimplified"
-        name: "Web Dev Simplified"
-        source_id: "youtube_webdevsimplified"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCFbNIlppjJuNp-8JzoKA_Lg"
-        max_videos: 3
-        topics: ["react", "javascript", "web-dev"]
-        relevance_keywords: ["react", "javascript", "frontend"]
-        
-      - url: "https://www.youtube.com/@developedbyed"
-        name: "developedbyed"
-        source_id: "youtube_deved"
-        authority_score: 0.8
-        monitoring_method: "YouTube MCP"
-        channel_id: "UClb90_G3U8zLtYTLAX3R0Tg"
-        max_videos: 3
-        topics: ["react", "design", "frontend"]
-        relevance_keywords: ["react", "design", "ui", "animation"]
-        
-      - url: "https://www.youtube.com/@LeeRobinson"
-        name: "Lee Robinson"
-        source_id: "youtube_lee_robinson"
-        authority_score: 0.95
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCZMli3czZnd1_pdOOOlvPtg"
-        max_videos: 3
-        topics: ["nextjs", "vercel", "react"]
-        relevance_keywords: ["next.js", "vercel", "react", "performance"]
-        
-      - url: "https://www.youtube.com/@TheoNash"
-        name: "Theo - t3.gg"
-        source_id: "youtube_theo_react"
-        authority_score: 0.85
-        monitoring_method: "YouTube MCP"
-        channel_id: "UCbRP3c757lWg9M-U7TyEkXA"
-        max_videos: 3
-        topics: ["react", "nextjs", "tech-opinion"]
-        relevance_keywords: ["react", "next.js", "typescript", "t3"]
-        
-      # Core Team & Expert Blogs
-      - url: "https://overreacted.io/rss.xml"
-        name: "Dan Abramov's Blog"
-        source_id: "overreacted"
-        authority_score: 1.0
-        monitoring_method: "RSS"
-        topics: ["react", "deep-dives", "patterns"]
-        
-      - url: "https://kentcdodds.com/blog/rss.xml"
-        name: "Kent C. Dodds Blog"
-        source_id: "kentcdodds"
-        authority_score: 0.95
-        monitoring_method: "RSS"
-        topics: ["react", "testing", "patterns"]
-        
-      - url: "https://joshcollinsworth.com/feed.xml"
-        name: "Josh Collinsworth Blog"
-        source_id: "josh_collinsworth"
-        authority_score: 0.85
-        monitoring_method: "RSS"
-        topics: ["frontend", "css", "react"]
-        
-      # GitHub Community Projects
-      - url: "https://github.com/pmndrs/zustand"
-        name: "Zustand State Management"
-        source_id: "zustand_repo"
-        authority_score: 0.85
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases"]
-        topics: ["state-management", "react"]
-        
-      - url: "https://github.com/TanStack/query"
-        name: "TanStack Query"
-        source_id: "tanstack_query"
-        authority_score: 0.9
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases"]
-        topics: ["data-fetching", "react"]
-        
-      - url: "https://github.com/remix-run/remix"
-        name: "Remix Framework"
-        source_id: "remix_repo"
-        authority_score: 0.9
-        monitoring_method: "GitHub MCP"
-        monitoring_scope: ["releases", "discussions"]
-        topics: ["remix", "react", "framework"]
-
+    - url: https://www.youtube.com/@uidotdev
+      name: ui.dev
+      source_id: youtube_uidev
+      authority_score: 0.95
+      monitoring_method: YouTube MCP
+      channel_id: UCbmC3HP3FaAFdcZklJQyMAA
+      max_videos: 5
+      topics:
+      - react
+      - tutorials
+      - patterns
+      relevance_keywords:
+      - react
+      - hooks
+      - components
+      - patterns
+    - url: https://www.youtube.com/@jackherrington
+      name: Jack Herrington
+      source_id: youtube_jack_herrington
+      authority_score: 0.9
+      monitoring_method: YouTube MCP
+      channel_id: UC6vRUuEJWz2rimI1g8wCbcw
+      max_videos: 5
+      topics:
+      - react
+      - nextjs
+      - micro-frontends
+      relevance_keywords:
+      - react
+      - next.js
+      - typescript
+      - micro-frontends
+    - url: https://www.youtube.com/@codevolution
+      name: Codevolution
+      source_id: youtube_codevolution
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UC80PWRuiqBq2kUHdHO0dBDg
+      max_videos: 3
+      topics:
+      - react
+      - tutorials
+      - nextjs
+      relevance_keywords:
+      - react
+      - next.js
+      - tutorial
+    - url: https://www.youtube.com/@WebDevSimplified
+      name: Web Dev Simplified
+      source_id: youtube_webdevsimplified
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UCFbNIlppjJuNp-8JzoKA_Lg
+      max_videos: 3
+      topics:
+      - react
+      - javascript
+      - web-dev
+      relevance_keywords:
+      - react
+      - javascript
+      - frontend
+    - url: https://www.youtube.com/@developedbyed
+      name: developedbyed
+      source_id: youtube_deved
+      authority_score: 0.8
+      monitoring_method: YouTube MCP
+      channel_id: UClb90_G3U8zLtYTLAX3R0Tg
+      max_videos: 3
+      topics:
+      - react
+      - design
+      - frontend
+      relevance_keywords:
+      - react
+      - design
+      - ui
+      - animation
+    - url: https://www.youtube.com/@LeeRobinson
+      name: Lee Robinson
+      source_id: youtube_lee_robinson
+      authority_score: 0.95
+      monitoring_method: YouTube MCP
+      channel_id: UCZMli3czZnd1_pdOOOlvPtg
+      max_videos: 3
+      topics:
+      - nextjs
+      - vercel
+      - react
+      relevance_keywords:
+      - next.js
+      - vercel
+      - react
+      - performance
+    - url: https://www.youtube.com/@TheoNash
+      name: Theo - t3.gg
+      source_id: youtube_theo_react
+      authority_score: 0.85
+      monitoring_method: YouTube MCP
+      channel_id: UCbRP3c757lWg9M-U7TyEkXA
+      max_videos: 3
+      topics:
+      - react
+      - nextjs
+      - tech-opinion
+      relevance_keywords:
+      - react
+      - next.js
+      - typescript
+      - t3
+    - url: https://overreacted.io/rss.xml
+      name: Dan Abramov's Blog
+      source_id: overreacted
+      authority_score: 1.0
+      monitoring_method: RSS
+      topics:
+      - react
+      - deep-dives
+      - patterns
+    - url: https://kentcdodds.com/blog/rss.xml
+      name: Kent C. Dodds Blog
+      source_id: kentcdodds
+      authority_score: 0.95
+      monitoring_method: RSS
+      topics:
+      - react
+      - testing
+      - patterns
+    - url: https://joshwcomeau.com/rss.xml
+      name: Josh Collinsworth Blog
+      source_id: josh_collinsworth
+      authority_score: 0.85
+      monitoring_method: RSS
+      topics:
+      - frontend
+      - css
+      - react
+    - url: https://github.com/pmndrs/zustand
+      name: Zustand State Management
+      source_id: zustand_repo
+      authority_score: 0.85
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      topics:
+      - state-management
+      - react
+    - url: https://github.com/TanStack/query
+      name: TanStack Query
+      source_id: tanstack_query
+      authority_score: 0.9
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      topics:
+      - data-fetching
+      - react
+    - url: https://github.com/remix-run/remix
+      name: Remix Framework
+      source_id: remix_repo
+      authority_score: 0.9
+      monitoring_method: GitHub MCP
+      monitoring_scope:
+      - releases
+      - discussions
+      topics:
+      - remix
+      - react
+      - framework
+    - url: https://beta.reactjs.org/feed.xml
+      name: React Beta Docs
+      source_id: react_beta_docs
+      authority_score: 0.9
+      topics:
+      - react
+      - beta
+      - documentation
+      monitoring_method: RSS
   tier_3_aggregators:
-    description: "Community forums and news aggregators"
+    description: Community forums and news aggregators
     priority: 0.7
     sources:
-      # Newsletters
-      - url: "https://react.statuscode.com/rss/"
-        name: "React Status Newsletter"
-        source_id: "react_status"
-        authority_score: 0.85
-        monitoring_method: "RSS"
-        topics: ["react", "newsletter", "weekly"]
-        
-      - url: "https://thisweekinreact.com/rss.xml"
-        name: "This Week in React"
-        source_id: "this_week_react"
-        authority_score: 0.85
-        monitoring_method: "RSS"
-        topics: ["react", "newsletter", "updates"]
-        
-      # Reddit Communities
-      - url: "https://www.reddit.com/r/reactjs/.rss"
-        name: "Reddit r/reactjs"
-        source_id: "reddit_reactjs"
-        authority_score: 0.7
-        monitoring_method: "RSS"
-        topics: ["react", "community", "discussion"]
-        
-      - url: "https://www.reddit.com/r/nextjs/.rss"
-        name: "Reddit r/nextjs"
-        source_id: "reddit_nextjs"
-        authority_score: 0.7
-        monitoring_method: "RSS"
-        topics: ["nextjs", "community", "discussion"]
-        
-      # Search Monitoring
-      - search_query: "React 19 new features hooks"
-        name: "React 19 Features"
-        source_id: "search_react_19"
-        monitoring_method: "Search MCP"
-        update_frequency: "daily"
-        topics: ["react", "features"]
-        
-      - search_query: "Next.js 15 app router updates"
-        name: "Next.js Updates"
-        source_id: "search_nextjs"
-        monitoring_method: "Search MCP"
-        update_frequency: "daily"
-        topics: ["nextjs", "updates"]
-        
-      # HackerNews
-      - url: "https://hnrss.org/newest?q=react+OR+nextjs+OR+typescript"
-        name: "HackerNews React Posts"
-        source_id: "hn_react"
-        authority_score: 0.75
-        monitoring_method: "RSS"
-        topics: ["react", "tech-news", "discussion"]
-
+    - url: https://react.statuscode.com/rss/
+      name: React Status Newsletter
+      source_id: react_status
+      authority_score: 0.85
+      monitoring_method: RSS
+      topics:
+      - react
+      - newsletter
+      - weekly
+    - url: https://thisweekinreact.com/feed
+      name: This Week in React
+      source_id: this_week_react
+      authority_score: 0.85
+      monitoring_method: RSS
+      topics:
+      - react
+      - newsletter
+      - updates
+    - url: https://www.reddit.com/r/reactjs/.rss
+      name: Reddit r/reactjs
+      source_id: reddit_reactjs
+      authority_score: 0.7
+      monitoring_method: RSS
+      topics:
+      - react
+      - community
+      - discussion
+    - url: https://www.reddit.com/r/nextjs/.rss
+      name: Reddit r/nextjs
+      source_id: reddit_nextjs
+      authority_score: 0.7
+      monitoring_method: RSS
+      topics:
+      - nextjs
+      - community
+      - discussion
+    - search_query: React 19 new features hooks
+      name: React 19 Features
+      source_id: search_react_19
+      monitoring_method: Search MCP
+      update_frequency: daily
+      topics:
+      - react
+      - features
+    - search_query: Next.js 15 app router updates
+      name: Next.js Updates
+      source_id: search_nextjs
+      monitoring_method: Search MCP
+      update_frequency: daily
+      topics:
+      - nextjs
+      - updates
+    - url: https://hnrss.org/newest?q=react+OR+nextjs+OR+typescript
+      name: HackerNews React Posts
+      source_id: hn_react
+      authority_score: 0.75
+      monitoring_method: RSS
+      topics:
+      - react
+      - tech-news
+      - discussion
 quality_assessment:
   thresholds:
     critical: 0.85
-    high: 0.70
-    medium: 0.50
-    low: 0.30
-    noise: 0.20
-    
+    high: 0.7
+    medium: 0.5
+    low: 0.3
+    noise: 0.2
   boost_rules:
-    - rule: "official_release"
-      condition: "source = 'react_blog' or source = 'nextjs_blog'"
-      action: "multiply_score by 1.4"
-      
-    - rule: "react_19_content"
-      condition: "title contains 'React 19' or content contains 'React 19'"
-      action: "multiply_score by 1.3"
-      
-    - rule: "breaking_change"
-      condition: "title contains 'breaking' and (title contains 'React' or title contains 'Next.js')"
-      action: "multiply_score by 1.5"
-      
-    - rule: "performance_optimization"
-      condition: "title contains 'performance' and (title contains 'React' or title contains 'optimization')"
-      action: "multiply_score by 1.2"
-      
-    - rule: "youtube_deep_dive"
-      condition: "source contains 'youtube' and (title contains 'deep dive' or title contains 'architecture')"
-      action: "multiply_score by 1.2"
-      
-    high_value_terms:
-      - term: "React 19"
-        multiplier: 1.4
-      - term: "Server Components"
-        multiplier: 1.3
-      - term: "use() hook"
-        multiplier: 1.3
-      - term: "Next.js 15"
-        multiplier: 1.3
-      - term: "App Router"
-        multiplier: 1.2
-      - term: "TypeScript 5"
-        multiplier: 1.2
-      - term: "Suspense"
-        multiplier: 1.15
-
+  - rule: official_release
+    condition: source = 'react_blog' or source = 'nextjs_blog'
+    action: multiply_score by 1.4
+  - rule: react_19_content
+    condition: title contains 'React 19' or content contains 'React 19'
+    action: multiply_score by 1.3
+  - rule: breaking_change
+    condition: title contains 'breaking' and (title contains 'React' or title contains
+      'Next.js')
+    action: multiply_score by 1.5
+  - rule: performance_optimization
+    condition: title contains 'performance' and (title contains 'React' or title contains
+      'optimization')
+    action: multiply_score by 1.2
+  - rule: youtube_deep_dive
+    condition: source contains 'youtube' and (title contains 'deep dive' or title
+      contains 'architecture')
+    action: multiply_score by 1.2
+  high_value_terms:
+  - term: React 19
+    multiplier: 1.4
+  - term: Server Components
+    multiplier: 1.3
+  - term: use() hook
+    multiplier: 1.3
+  - term: Next.js 15
+    multiplier: 1.3
+  - term: App Router
+    multiplier: 1.2
+  - term: TypeScript 5
+    multiplier: 1.2
+  - term: Suspense
+    multiplier: 1.15
   exclude_patterns:
-    - pattern: "cryptocurrency"
-      severity: "high"
-    - pattern: "blockchain"
-      severity: "high"
-    - pattern: "web3"
-      severity: "medium"
-    - pattern: "NFT"
-      severity: "high"
-
+  - pattern: cryptocurrency
+    severity: high
+  - pattern: blockchain
+    severity: high
+  - pattern: web3
+    severity: medium
+  - pattern: NFT
+    severity: high
 agent_configuration:
   queen_agent:
-    role: "React Ecosystem Orchestrator"
+    role: React Ecosystem Orchestrator
     responsibilities:
-      - "Monitor React core developments and releases"
-      - "Track Next.js and related framework updates"
-      - "Coordinate YouTube content analysis"
-      - "Identify emerging patterns and best practices"
-      
+    - Monitor React core developments and releases
+    - Track Next.js and related framework updates
+    - Coordinate YouTube content analysis
+    - Identify emerging patterns and best practices
   architect_agents:
-    - name: "Core React Architect"
-      sources: ["react_blog", "react_repo", "overreacted"]
-      priority_boost: 1.5
-      
-    - name: "Framework Architect"
-      sources: ["nextjs_*", "remix_*"]
-      specialization: "framework_analysis"
-      
-    - name: "YouTube Learning Architect"
-      sources: ["youtube_*"]
-      specialization: "video_tutorial_extraction"
-      
-    - name: "Community Trends Architect"
-      sources: ["reddit_*", "hn_*"]
-      specialization: "trend_detection"
-      
+  - name: Core React Architect
+    sources:
+    - react_blog
+    - react_repo
+    - overreacted
+    priority_boost: 1.5
+  - name: Framework Architect
+    sources:
+    - nextjs_*
+    - remix_*
+    specialization: framework_analysis
+  - name: YouTube Learning Architect
+    sources:
+    - youtube_*
+    specialization: video_tutorial_extraction
+  - name: Community Trends Architect
+    sources:
+    - reddit_*
+    - hn_*
+    specialization: trend_detection
   specialist_agents:
-    - name: "Hooks & Patterns Specialist"
-      keywords: ["hooks", "patterns", "composition", "custom hooks"]
-      
-    - name: "Performance Specialist"
-      keywords: ["performance", "optimization", "bundle", "lazy", "suspense"]
-      
-    - name: "TypeScript Integration Specialist"
-      keywords: ["typescript", "types", "generics", "type safety"]
-      
-    - name: "Server Components Specialist"
-      keywords: ["server components", "rsc", "streaming", "ssr"]
-
+  - name: Hooks & Patterns Specialist
+    keywords:
+    - hooks
+    - patterns
+    - composition
+    - custom hooks
+  - name: Performance Specialist
+    keywords:
+    - performance
+    - optimization
+    - bundle
+    - lazy
+    - suspense
+  - name: TypeScript Integration Specialist
+    keywords:
+    - typescript
+    - types
+    - generics
+    - type safety
+  - name: Server Components Specialist
+    keywords:
+    - server components
+    - rsc
+    - streaming
+    - ssr
 monitoring_schedule:
   tier_1_official:
-    frequency: "every_30_minutes"
-    priority: "critical"
-    
+    frequency: every_30_minutes
+    priority: critical
   tier_2_community:
-    frequency: "every_2_hours"
-    priority: "high"
-    
+    frequency: every_2_hours
+    priority: high
   tier_3_aggregators:
-    frequency: "every_4_hours"
-    priority: "medium"
-    
+    frequency: every_4_hours
+    priority: medium
   youtube_channels:
-    frequency: "every_6_hours"
-    priority: "high"
-    note: "Check for new React tutorials and deep dives"
-
+    frequency: every_6_hours
+    priority: high
+    note: Check for new React tutorials and deep dives
 cross_topic_relationships:
   related_topics:
-    - slug: "claude-ecosystem"
-      relationship: "complementary"
-      reason: "Claude Code used for React development"
-      
-    - slug: "frontend-architecture"
-      relationship: "parent"
-      reason: "React is core to modern frontend architecture"
-      
-    - slug: "javascript-ecosystem"
-      relationship: "dependent"
-      reason: "React depends on JavaScript ecosystem"
-
+  - slug: claude-ecosystem
+    relationship: complementary
+    reason: Claude Code used for React development
+  - slug: frontend-architecture
+    relationship: parent
+    reason: React is core to modern frontend architecture
+  - slug: javascript-ecosystem
+    relationship: dependent
+    reason: React depends on JavaScript ecosystem
 mcp_server_configuration:
   youtube:
-    server: "mcp__MCP_DOCKER__get_transcript"
-    capabilities: ["transcript", "metadata"]
+    server: mcp__MCP_DOCKER__get_transcript
+    capabilities:
+    - transcript
+    - metadata
     rate_limit: 10
     priority_channels:
-      - "uidotdev"
-      - "jack_herrington"
-      - "lee_robinson"
-    
+    - uidotdev
+    - jack_herrington
+    - lee_robinson
   github:
-    server: "mcp__MCP_DOCKER__search_repositories"
-    capabilities: ["search", "commits", "issues", "releases", "discussions"]
+    server: mcp__MCP_DOCKER__search_repositories
+    capabilities:
+    - search
+    - commits
+    - issues
+    - releases
+    - discussions
     rate_limit: 30
     priority_repos:
-      - "facebook/react"
-      - "vercel/next.js"
-      - "microsoft/TypeScript"
-    
+    - facebook/react
+    - vercel/next.js
+    - microsoft/TypeScript
   search:
-    server: "mcp__MCP_DOCKER__search"
-    capabilities: ["web_search", "documentation_search"]
+    server: mcp__MCP_DOCKER__search
+    capabilities:
+    - web_search
+    - documentation_search
     rate_limit: 20
-    
   fetch:
-    server: "mcp__MCP_DOCKER__fetch"
-    capabilities: ["html_parse", "markdown_convert"]
+    server: mcp__MCP_DOCKER__fetch
+    capabilities:
+    - html_parse
+    - markdown_convert
     rate_limit: 30

@@ -9,8 +9,8 @@ view_info:
   version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
-  last_updated: "2025-08-15"
-  total_servers: 93
+  last_updated: "2025-08-19"
+  total_servers: 98
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -53,6 +53,15 @@ development_infrastructure:
       business_value: "Critical TypeScript development support and type checking"
       technology_alignment: 10
       business_relevance: 9
+      
+    - name: "Vite Build Tool MCP Server"
+      composite_score: 8.7
+      category: "Build Tools"
+      file_path: "knowledge-vault/databases/tools_services/items/vite-build-tool-mcp-server.md"
+      production_readiness: 92
+      business_value: "Next-generation frontend build tool with lightning-fast React development experience"
+      technology_alignment: 10
+      business_relevance: 8
       
     # File & Content Management
     - name: "Filesystem MCP Server"
@@ -126,12 +135,30 @@ development_infrastructure:
       business_relevance: 10
 
     # Database Operations
+    - name: "PostgreSQL Database Official MCP Server"
+      composite_score: 9.6
+      category: "Database"
+      file_path: "knowledge-vault/databases/tools_services/items/postgresql-database-official-mcp-server.md"
+      production_readiness: 98
+      business_value: "Official PostgreSQL relational database operations with perfect technology stack alignment"
+      technology_alignment: 10
+      business_relevance: 10
+      
     - name: "PostgreSQL MCP Server"
       composite_score: 8.95
       category: "Database"
       file_path: "knowledge-vault/databases/tools_services/items/postgresql-mcp-server-enhanced.md"
       production_readiness: 93
       business_value: "Enterprise database operations and management"
+      technology_alignment: 10
+      business_relevance: 8
+      
+    - name: "Prisma ORM Database MCP Server"
+      composite_score: 8.9
+      category: "Object-Relational Mapping"
+      file_path: "knowledge-vault/databases/tools_services/items/prisma-orm-database-mcp-server.md"
+      production_readiness: 94
+      business_value: "Next-generation ORM with type-safe database access and perfect TypeScript integration"
       technology_alignment: 10
       business_relevance: 8
       
@@ -237,6 +264,15 @@ enterprise_integration:
       file_path: "knowledge-vault/databases/tools_services/items/cdk-mcp-server-comprehensive-profile.md"
       production_readiness: 93
       business_value: "Enterprise infrastructure automation and deployment"
+      
+    - name: "AWS Lambda Serverless MCP Server"
+      composite_score: 9.1
+      category: "Serverless Computing"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-lambda-serverless-mcp-server.md"
+      production_readiness: 96
+      business_value: "Official AWS Lambda serverless function deployment with perfect React+Python integration"
+      technology_alignment: 10
+      business_relevance: 9
       
     - name: "AWS Lambda Tool MCP Server"
       composite_score: 8.85
@@ -390,6 +426,15 @@ enterprise_integration:
 ai_development_tools:
   description: "AI-powered development enhancement and automation"
   servers:
+    - name: "FastAPI Python Web Framework MCP Server"
+      composite_score: 9.4
+      category: "Web Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/fastapi-python-web-framework-mcp-server.md"
+      production_readiness: 96
+      business_value: "High-performance Python web API development with perfect TypeScript integration"
+      technology_alignment: 10
+      business_relevance: 9
+      
     - name: "Python Data Analysis MCP Server"
       composite_score: 8.8
       category: "Data Science & Analytics"
