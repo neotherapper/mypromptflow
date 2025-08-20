@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-19"
-  total_servers: 103
+  total_servers: 108
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -78,6 +78,25 @@ development_infrastructure:
       file_path: "knowledge-vault/databases/tools_services/items/tailwind-css-framework-mcp-server.md"
       production_readiness: 92
       business_value: "Utility-first CSS framework with perfect React integration and design system capabilities"
+      technology_alignment: 10
+      business_relevance: 8
+      
+    # Testing & Code Quality
+    - name: "Jest Testing Framework MCP Server"
+      composite_score: 8.8
+      category: "Testing Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/jest-testing-framework-mcp-server.md"
+      production_readiness: 94
+      business_value: "Comprehensive JavaScript testing with React and TypeScript integration"
+      technology_alignment: 10
+      business_relevance: 8
+      
+    - name: "ESLint Code Quality MCP Server"
+      composite_score: 8.7
+      category: "Code Quality"
+      file_path: "knowledge-vault/databases/tools_services/items/eslint-code-quality-mcp-server.md"
+      production_readiness: 94
+      business_value: "Automated code quality enforcement for React and TypeScript applications"
       technology_alignment: 10
       business_relevance: 8
       
@@ -189,6 +208,15 @@ development_infrastructure:
       technology_alignment: 10
       business_relevance: 8
       
+    - name: "Redis Cache Database MCP Server"
+      composite_score: 8.8
+      category: "In-Memory Database"
+      file_path: "knowledge-vault/databases/tools_services/items/redis-cache-database-mcp-server.md"
+      production_readiness: 95
+      business_value: "High-performance caching and session management with AWS ElastiCache integration"
+      technology_alignment: 9
+      business_relevance: 8
+      
     - name: "SQLite MCP Server"
       composite_score: 8.9
       category: "Database Operations"
@@ -275,6 +303,15 @@ enterprise_integration:
       file_path: "knowledge-vault/databases/tools_services/items/aws-api-gateway-mcp-server.md"
       production_readiness: 96
       business_value: "Official AWS API management with perfect React+Python+Lambda integration"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "AWS CloudWatch Monitoring MCP Server"
+      composite_score: 8.9
+      category: "Monitoring & Observability"
+      file_path: "knowledge-vault/databases/tools_services/items/aws-cloudwatch-monitoring-mcp-server.md"
+      production_readiness: 96
+      business_value: "Comprehensive monitoring and logging for AWS infrastructure and applications"
       technology_alignment: 10
       business_relevance: 9
       
@@ -477,6 +514,15 @@ ai_development_tools:
       file_path: "knowledge-vault/databases/tools_services/items/pydantic-data-validation-mcp-server.md"
       production_readiness: 94
       business_value: "Advanced Python data validation with FastAPI integration and TypeScript compatibility"
+      technology_alignment: 10
+      business_relevance: 8
+      
+    - name: "Pytest Python Testing MCP Server"
+      composite_score: 9.0
+      category: "Testing Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/pytest-python-testing-mcp-server.md"
+      production_readiness: 96
+      business_value: "Powerful Python testing with FastAPI integration and PostgreSQL support"
       technology_alignment: 10
       business_relevance: 8
       
