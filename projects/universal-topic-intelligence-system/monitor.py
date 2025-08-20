@@ -12,7 +12,8 @@ from datetime import datetime
 from typing import Dict, List, Any
 
 from sources.rss_monitor import RSSSourceMonitor
-from sources.real_mcp_monitor import RealMCPMonitor, MCP_TEST_CONFIG
+from sources.production_mcp_integration import ProductionMCPIntegration
+from sources.real_mcp_monitor import MCP_TEST_CONFIG
 from core import SourceMetadata, SourceType
 from core.language_filter import LanguageFilter
 from core.relevance_filter import RelevanceFilter
@@ -204,12 +205,36 @@ class UniversalMonitor:
         )
         
         try:
-            # Create MCP monitor
-            mcp_monitor = RealMCPMonitor(metadata)
+            # Create production MCP integration
+            mcp_integration = ProductionMCPIntegration()
             
-            # Run monitoring
+            # Run monitoring based on MCP source type
             logger.info(f"Monitoring MCP source: {mcp_config['name']} ({mcp_config['type']})")
-            monitoring_result = await mcp_monitor.monitor(mcp_config['config'])
+            
+            collected_items = []
+            
+            if mcp_config['type'] == 'youtube_mcp':
+                video_urls = mcp_config['config'].get('video_urls', [])
+                if video_urls:
+                    collected_items = await mcp_integration.extract_youtube_transcripts(video_urls[:3])
+            
+            elif mcp_config['type'] == 'github_mcp':
+                repo_queries = mcp_config['config'].get('repo_queries', [])
+                if repo_queries:
+                    collected_items = await mcp_integration.search_github_repositories(repo_queries[:3])
+            
+            elif mcp_config['type'] == 'search_mcp':
+                search_queries = mcp_config['config'].get('search_queries', [])
+                if search_queries:
+                    collected_items = await mcp_integration.search_web_content(search_queries[:2])
+            
+            # Create monitoring result
+            monitoring_result = type('MonitoringResult', (), {
+                'success': len(collected_items) > 0,
+                'new_items': collected_items,
+                'items_found': len(collected_items),
+                'errors': [] if collected_items else ['No items collected']
+            })()
             
             if not monitoring_result.success:
                 return {

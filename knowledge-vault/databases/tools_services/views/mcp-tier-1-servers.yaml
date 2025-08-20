@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-19"
-  total_servers: 108
+  total_servers: 113
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -99,6 +99,55 @@ development_infrastructure:
       business_value: "Automated code quality enforcement for React and TypeScript applications"
       technology_alignment: 10
       business_relevance: 8
+
+realtime_communication:
+  description: "Real-time communication and event streaming infrastructure"
+  servers:
+    # Event Streaming
+    - name: "Apache Kafka Streaming Platform MCP Server"
+      composite_score: 8.8
+      category: "Event Streaming"
+      file_path: "knowledge-vault/databases/tools_services/items/apache-kafka-streaming-platform-mcp-server.md"
+      production_readiness: 94
+      business_value: "Enterprise-grade event streaming for microservices and real-time data pipelines"
+      technology_alignment: 9
+      business_relevance: 8
+      
+    - name: "GraphQL Apollo Federation MCP Server"
+      composite_score: 8.7
+      category: "API Federation"
+      file_path: "knowledge-vault/databases/tools_services/items/graphql-apollo-federation-mcp-server.md"
+      production_readiness: 92
+      business_value: "Advanced GraphQL schema federation and microservices API composition"
+      technology_alignment: 9
+      business_relevance: 8
+      
+    - name: "RabbitMQ Message Queue MCP Server"
+      composite_score: 8.6
+      category: "Message Queue"
+      file_path: "knowledge-vault/databases/tools_services/items/rabbitmq-message-queue-mcp-server.md"
+      production_readiness: 94
+      business_value: "Enterprise message queuing with Python Celery integration"
+      technology_alignment: 8
+      business_relevance: 8
+      
+    - name: "Socket.io Real-Time Communication MCP Server"
+      composite_score: 8.5
+      category: "Real-Time Communication"
+      file_path: "knowledge-vault/databases/tools_services/items/socketio-realtime-communication-mcp-server.md"
+      production_readiness: 90
+      business_value: "WebSocket real-time bidirectional communication for React applications"
+      technology_alignment: 9
+      business_relevance: 8
+      
+    - name: "gRPC Protocol Buffers MCP Server"
+      composite_score: 8.4
+      category: "RPC Framework"
+      file_path: "knowledge-vault/databases/tools_services/items/grpc-protocol-buffers-mcp-server.md"
+      production_readiness: 92
+      business_value: "High-performance RPC for microservices communication"
+      technology_alignment: 8
+      business_relevance: 7
       
     # File & Content Management
     - name: "Filesystem MCP Server"

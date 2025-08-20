@@ -50,7 +50,7 @@ class StorageManager:
                 )
             """)
             
-            # Content items table
+            # Enhanced content items table with MCP-specific columns
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS content_items (
                     item_id TEXT PRIMARY KEY,
@@ -64,12 +64,45 @@ class StorageManager:
                     topics TEXT,  -- JSON array
                     priority_score REAL,
                     priority_level TEXT,
-                    metadata TEXT,  -- JSON object
+                    
+                    -- MCP Source Type
+                    mcp_source_type TEXT,  -- youtube_transcript, github_repository, web_search, web_content
+                    
+                    -- YouTube specific fields
+                    youtube_video_id TEXT,
+                    youtube_channel TEXT,
+                    youtube_duration TEXT,
+                    youtube_view_count INTEGER,
+                    youtube_like_count INTEGER,
+                    youtube_language TEXT,
+                    
+                    -- GitHub specific fields
+                    github_repo_name TEXT,
+                    github_stars INTEGER,
+                    github_forks INTEGER,
+                    github_language TEXT,
+                    github_license TEXT,
+                    github_open_issues INTEGER,
+                    
+                    -- Search specific fields
+                    search_query TEXT,
+                    search_rank INTEGER,
+                    search_engine TEXT,
+                    search_relevance_score REAL,
+                    
+                    -- Web content fields
+                    web_domain TEXT,
+                    web_content_type TEXT,
+                    web_content_length INTEGER,
+                    
+                    -- Generic metadata for extensibility
+                    metadata TEXT,  -- JSON object for additional fields
+                    
                     FOREIGN KEY (source_id) REFERENCES sources(source_id)
                 )
             """)
             
-            # Create index for faster lookups
+            # Create indexes for faster lookups
             cursor.execute("""
                 CREATE INDEX IF NOT EXISTS idx_items_published 
                 ON content_items(published_date DESC)
@@ -84,6 +117,9 @@ class StorageManager:
                 CREATE INDEX IF NOT EXISTS idx_items_priority 
                 ON content_items(priority_level, priority_score DESC)
             """)
+            
+            # Create MCP-specific indexes only if columns exist
+            self._create_mcp_indexes_if_possible(cursor)
             
             # Topics table
             cursor.execute("""
@@ -140,10 +176,39 @@ class StorageManager:
         finally:
             conn.close()
     
+    def _create_mcp_indexes_if_possible(self, cursor):
+        """
+        Create MCP-specific indexes only if the columns exist
+        This prevents errors when initializing existing databases
+        """
+        try:
+            # Check if MCP columns exist
+            cursor.execute("PRAGMA table_info(content_items)")
+            columns = [row[1] for row in cursor.fetchall()]
+            
+            mcp_indexes = [
+                ("idx_items_mcp_type", "mcp_source_type"),
+                ("idx_items_youtube_channel", "youtube_channel"),
+                ("idx_items_github_stars", "github_stars DESC"),
+                ("idx_items_search_query", "search_query"),
+                ("idx_items_web_domain", "web_domain")
+            ]
+            
+            for index_name, column_spec in mcp_indexes:
+                column_name = column_spec.split()[0]  # Extract column name (remove DESC)
+                if column_name in columns:
+                    cursor.execute(f"""
+                        CREATE INDEX IF NOT EXISTS {index_name}
+                        ON content_items({column_spec})
+                    """)
+                    
+        except Exception as e:
+            self.logger.warning(f"Could not create MCP indexes: {e}")
+    
     def save_content_item(self, item: ContentItem, priority_score: float = 0.5, 
                          priority_level: str = "medium") -> bool:
         """
-        Save a content item to the database
+        Save a content item to the database with MCP-specific field extraction
         
         Args:
             item: ContentItem to save
@@ -167,29 +232,43 @@ class StorageManager:
                     self.logger.debug(f"Item {item.item_id} already exists, skipping")
                     return False
                 
-                # Insert new item
+                # Extract MCP-specific fields from metadata
+                mcp_fields = self._extract_mcp_fields(item.metadata)
+                
+                # Insert new item with MCP fields
                 cursor.execute("""
                     INSERT INTO content_items (
-                        item_id, source_id, title, content, url,
-                        published_date, author, topics, priority_score,
-                        priority_level, metadata
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        item_id, source_id, title, content, url, published_date, author, topics, 
+                        priority_score, priority_level, 
+                        mcp_source_type,
+                        youtube_video_id, youtube_channel, youtube_duration, youtube_view_count, 
+                        youtube_like_count, youtube_language,
+                        github_repo_name, github_stars, github_forks, github_language, 
+                        github_license, github_open_issues,
+                        search_query, search_rank, search_engine, search_relevance_score,
+                        web_domain, web_content_type, web_content_length,
+                        metadata
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (
-                    item.item_id,
-                    item.source_id,
-                    item.title,
-                    item.content,
-                    item.url,
+                    item.item_id, item.source_id, item.title, item.content, item.url,
                     item.published_date.isoformat() if item.published_date else None,
-                    item.author,
-                    json.dumps(item.topics),
-                    priority_score,
-                    priority_level,
+                    item.author, json.dumps(item.topics), priority_score, priority_level,
+                    mcp_fields['mcp_source_type'],
+                    mcp_fields['youtube_video_id'], mcp_fields['youtube_channel'], 
+                    mcp_fields['youtube_duration'], mcp_fields['youtube_view_count'], 
+                    mcp_fields['youtube_like_count'], mcp_fields['youtube_language'],
+                    mcp_fields['github_repo_name'], mcp_fields['github_stars'], 
+                    mcp_fields['github_forks'], mcp_fields['github_language'], 
+                    mcp_fields['github_license'], mcp_fields['github_open_issues'],
+                    mcp_fields['search_query'], mcp_fields['search_rank'], 
+                    mcp_fields['search_engine'], mcp_fields['search_relevance_score'],
+                    mcp_fields['web_domain'], mcp_fields['web_content_type'], 
+                    mcp_fields['web_content_length'],
                     json.dumps(item.metadata)
                 ))
                 
                 conn.commit()
-                self.logger.debug(f"Saved item: {item.title[:50]}...")
+                self.logger.debug(f"Saved item: {item.title[:50]}... (MCP type: {mcp_fields['mcp_source_type']})")
                 return True
                 
         except Exception as e:
@@ -213,7 +292,7 @@ class StorageManager:
     
     def save_content_items_batch(self, items: List[tuple]) -> int:
         """
-        Save multiple content items in a batch
+        Save multiple content items in a batch with MCP field extraction
         
         Args:
             items: List of (ContentItem, priority_score, priority_level) tuples
@@ -235,23 +314,37 @@ class StorageManager:
                     )
                     
                     if not cursor.fetchone():
+                        # Extract MCP-specific fields
+                        mcp_fields = self._extract_mcp_fields(item.metadata)
+                        
                         cursor.execute("""
                             INSERT INTO content_items (
-                                item_id, source_id, title, content, url,
-                                published_date, author, topics, priority_score,
-                                priority_level, metadata
-                            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                                item_id, source_id, title, content, url, published_date, author, topics,
+                                priority_score, priority_level,
+                                mcp_source_type,
+                                youtube_video_id, youtube_channel, youtube_duration, youtube_view_count,
+                                youtube_like_count, youtube_language,
+                                github_repo_name, github_stars, github_forks, github_language,
+                                github_license, github_open_issues,
+                                search_query, search_rank, search_engine, search_relevance_score,
+                                web_domain, web_content_type, web_content_length,
+                                metadata
+                            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                         """, (
-                            item.item_id,
-                            item.source_id,
-                            item.title,
-                            item.content,
-                            item.url,
+                            item.item_id, item.source_id, item.title, item.content, item.url,
                             item.published_date.isoformat() if item.published_date else None,
-                            item.author,
-                            json.dumps(item.topics),
-                            score,
-                            level,
+                            item.author, json.dumps(item.topics), score, level,
+                            mcp_fields['mcp_source_type'],
+                            mcp_fields['youtube_video_id'], mcp_fields['youtube_channel'],
+                            mcp_fields['youtube_duration'], mcp_fields['youtube_view_count'],
+                            mcp_fields['youtube_like_count'], mcp_fields['youtube_language'],
+                            mcp_fields['github_repo_name'], mcp_fields['github_stars'],
+                            mcp_fields['github_forks'], mcp_fields['github_language'],
+                            mcp_fields['github_license'], mcp_fields['github_open_issues'],
+                            mcp_fields['search_query'], mcp_fields['search_rank'],
+                            mcp_fields['search_engine'], mcp_fields['search_relevance_score'],
+                            mcp_fields['web_domain'], mcp_fields['web_content_type'],
+                            mcp_fields['web_content_length'],
                             json.dumps(item.metadata)
                         ))
                         saved_count += 1
@@ -263,6 +356,98 @@ class StorageManager:
             self.logger.error(f"Error in batch save: {str(e)}")
         
         return saved_count
+    
+    def _extract_mcp_fields(self, metadata: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Extract MCP-specific fields from metadata dictionary
+        
+        Args:
+            metadata: Raw metadata dictionary from ContentItem
+            
+        Returns:
+            Dictionary with extracted MCP fields
+        """
+        # Initialize all fields with None
+        mcp_fields = {
+            'mcp_source_type': None,
+            # YouTube fields
+            'youtube_video_id': None,
+            'youtube_channel': None,
+            'youtube_duration': None,
+            'youtube_view_count': None,
+            'youtube_like_count': None,
+            'youtube_language': None,
+            # GitHub fields
+            'github_repo_name': None,
+            'github_stars': None,
+            'github_forks': None,
+            'github_language': None,
+            'github_license': None,
+            'github_open_issues': None,
+            # Search fields
+            'search_query': None,
+            'search_rank': None,
+            'search_engine': None,
+            'search_relevance_score': None,
+            # Web content fields
+            'web_domain': None,
+            'web_content_type': None,
+            'web_content_length': None
+        }
+        
+        if not metadata:
+            return mcp_fields
+        
+        # Extract source type
+        mcp_fields['mcp_source_type'] = metadata.get('source_type')
+        
+        # Extract YouTube fields
+        if 'video_id' in metadata:
+            mcp_fields['youtube_video_id'] = metadata.get('video_id')
+        if 'channel' in metadata:
+            mcp_fields['youtube_channel'] = metadata.get('channel')
+        if 'duration' in metadata:
+            mcp_fields['youtube_duration'] = metadata.get('duration')
+        if 'view_count' in metadata:
+            mcp_fields['youtube_view_count'] = metadata.get('view_count')
+        if 'like_count' in metadata:
+            mcp_fields['youtube_like_count'] = metadata.get('like_count')
+        if 'language' in metadata:
+            mcp_fields['youtube_language'] = metadata.get('language')
+        
+        # Extract GitHub fields
+        if 'repo_name' in metadata:
+            mcp_fields['github_repo_name'] = metadata.get('repo_name')
+        if 'stars' in metadata:
+            mcp_fields['github_stars'] = metadata.get('stars')
+        if 'forks' in metadata:
+            mcp_fields['github_forks'] = metadata.get('forks')
+        if 'language' in metadata and mcp_fields['mcp_source_type'] == 'github_repository':
+            mcp_fields['github_language'] = metadata.get('language')
+        if 'license' in metadata:
+            mcp_fields['github_license'] = metadata.get('license')
+        if 'open_issues' in metadata:
+            mcp_fields['github_open_issues'] = metadata.get('open_issues')
+        
+        # Extract search fields
+        if 'search_query' in metadata:
+            mcp_fields['search_query'] = metadata.get('search_query')
+        if 'search_rank' in metadata:
+            mcp_fields['search_rank'] = metadata.get('search_rank')
+        if 'search_engine' in metadata:
+            mcp_fields['search_engine'] = metadata.get('search_engine')
+        if 'relevance_score' in metadata:
+            mcp_fields['search_relevance_score'] = metadata.get('relevance_score')
+        
+        # Extract web content fields
+        if 'domain' in metadata:
+            mcp_fields['web_domain'] = metadata.get('domain')
+        if 'content_type' in metadata:
+            mcp_fields['web_content_type'] = metadata.get('content_type')
+        if 'content_length' in metadata:
+            mcp_fields['web_content_length'] = metadata.get('content_length')
+        
+        return mcp_fields
     
     def get_recent_items(self, 
                         topic: Optional[str] = None,
@@ -320,6 +505,15 @@ class StorageManager:
                     # Parse JSON fields
                     item['topics'] = json.loads(item['topics']) if item['topics'] else []
                     item['metadata'] = json.loads(item['metadata']) if item['metadata'] else {}
+                    
+                    # Add computed fields for easier access
+                    if item.get('mcp_source_type'):
+                        item['is_mcp_content'] = True
+                        item['source_category'] = self._categorize_mcp_source(item['mcp_source_type'])
+                    else:
+                        item['is_mcp_content'] = False
+                        item['source_category'] = 'rss'
+                    
                     items.append(item)
                 
                 return items
@@ -487,3 +681,212 @@ class StorageManager:
         except Exception as e:
             self.logger.error(f"Error getting statistics: {str(e)}")
             return {}
+    
+    def get_mcp_analytics(self) -> Dict[str, Any]:
+        """
+        Get analytics specific to MCP content types
+        
+        Returns:
+            Dictionary with MCP analytics
+        """
+        try:
+            with self._get_connection() as conn:
+                cursor = conn.cursor()
+                
+                analytics = {}
+                
+                # Content by MCP source type
+                cursor.execute("""
+                    SELECT mcp_source_type, COUNT(*) as count 
+                    FROM content_items 
+                    WHERE mcp_source_type IS NOT NULL
+                    GROUP BY mcp_source_type
+                    ORDER BY count DESC
+                """)
+                analytics['content_by_mcp_type'] = {
+                    row['mcp_source_type']: row['count'] 
+                    for row in cursor.fetchall()
+                }
+                
+                # Top YouTube channels
+                cursor.execute("""
+                    SELECT youtube_channel, COUNT(*) as videos, AVG(youtube_view_count) as avg_views
+                    FROM content_items 
+                    WHERE youtube_channel IS NOT NULL
+                    GROUP BY youtube_channel
+                    ORDER BY videos DESC
+                    LIMIT 10
+                """)
+                analytics['top_youtube_channels'] = [
+                    {
+                        'channel': row['youtube_channel'],
+                        'videos': row['videos'],
+                        'avg_views': int(row['avg_views']) if row['avg_views'] else 0
+                    }
+                    for row in cursor.fetchall()
+                ]
+                
+                # Top GitHub repositories by stars
+                cursor.execute("""
+                    SELECT github_repo_name, github_stars, github_forks, github_language
+                    FROM content_items 
+                    WHERE github_repo_name IS NOT NULL AND github_stars IS NOT NULL
+                    ORDER BY github_stars DESC
+                    LIMIT 10
+                """)
+                analytics['top_github_repos'] = [
+                    {
+                        'repo': row['github_repo_name'],
+                        'stars': row['github_stars'],
+                        'forks': row['github_forks'],
+                        'language': row['github_language']
+                    }
+                    for row in cursor.fetchall()
+                ]
+                
+                # Programming languages distribution
+                cursor.execute("""
+                    SELECT github_language, COUNT(*) as count
+                    FROM content_items 
+                    WHERE github_language IS NOT NULL
+                    GROUP BY github_language
+                    ORDER BY count DESC
+                    LIMIT 10
+                """)
+                analytics['programming_languages'] = {
+                    row['github_language']: row['count']
+                    for row in cursor.fetchall()
+                }
+                
+                # Top search queries
+                cursor.execute("""
+                    SELECT search_query, COUNT(*) as count, AVG(search_relevance_score) as avg_relevance
+                    FROM content_items 
+                    WHERE search_query IS NOT NULL
+                    GROUP BY search_query
+                    ORDER BY count DESC
+                    LIMIT 10
+                """)
+                analytics['top_search_queries'] = [
+                    {
+                        'query': row['search_query'],
+                        'count': row['count'],
+                        'avg_relevance': round(row['avg_relevance'], 2) if row['avg_relevance'] else 0
+                    }
+                    for row in cursor.fetchall()
+                ]
+                
+                # Web domains distribution
+                cursor.execute("""
+                    SELECT web_domain, COUNT(*) as count
+                    FROM content_items 
+                    WHERE web_domain IS NOT NULL
+                    GROUP BY web_domain
+                    ORDER BY count DESC
+                    LIMIT 10
+                """)
+                analytics['top_web_domains'] = {
+                    row['web_domain']: row['count']
+                    for row in cursor.fetchall()
+                }
+                
+                return analytics
+                
+        except Exception as e:
+            self.logger.error(f"Error getting MCP analytics: {str(e)}")
+            return {}
+    
+    def get_content_by_source_type(self, source_type: str, limit: int = 20) -> List[Dict]:
+        """
+        Get content items filtered by MCP source type
+        
+        Args:
+            source_type: MCP source type to filter by
+            limit: Maximum number of items to return
+            
+        Returns:
+            List of content items
+        """
+        try:
+            with self._get_connection() as conn:
+                cursor = conn.cursor()
+                
+                cursor.execute("""
+                    SELECT * FROM content_items 
+                    WHERE mcp_source_type = ?
+                    ORDER BY published_date DESC
+                    LIMIT ?
+                """, (source_type, limit))
+                
+                items = []
+                for row in cursor.fetchall():
+                    item = dict(row)
+                    item['topics'] = json.loads(item['topics']) if item['topics'] else []
+                    item['metadata'] = json.loads(item['metadata']) if item['metadata'] else {}
+                    items.append(item)
+                
+                return items
+                
+        except Exception as e:
+            self.logger.error(f"Error getting content by source type: {str(e)}")
+            return []
+    
+    def migrate_database_schema(self) -> bool:
+        """
+        Migrate existing database to support MCP fields
+        This adds the new columns to existing installations
+        
+        Returns:
+            True if migration successful
+        """
+        try:
+            with self._get_connection() as conn:
+                cursor = conn.cursor()
+                
+                # Check if migration is needed
+                cursor.execute("PRAGMA table_info(content_items)")
+                columns = [row[1] for row in cursor.fetchall()]
+                
+                mcp_columns = [
+                    'mcp_source_type', 'youtube_video_id', 'youtube_channel', 'youtube_duration',
+                    'youtube_view_count', 'youtube_like_count', 'youtube_language',
+                    'github_repo_name', 'github_stars', 'github_forks', 'github_language',
+                    'github_license', 'github_open_issues', 'search_query', 'search_rank',
+                    'search_engine', 'search_relevance_score', 'web_domain', 'web_content_type',
+                    'web_content_length'
+                ]
+                
+                # Add missing columns
+                for column in mcp_columns:
+                    if column not in columns:
+                        if 'count' in column or 'rank' in column or 'length' in column:
+                            cursor.execute(f"ALTER TABLE content_items ADD COLUMN {column} INTEGER")
+                        elif 'score' in column:
+                            cursor.execute(f"ALTER TABLE content_items ADD COLUMN {column} REAL")
+                        else:
+                            cursor.execute(f"ALTER TABLE content_items ADD COLUMN {column} TEXT")
+                        
+                        self.logger.info(f"Added column: {column}")
+                
+                # Create new indexes if they don't exist
+                indexes = [
+                    "CREATE INDEX IF NOT EXISTS idx_items_mcp_type ON content_items(mcp_source_type)",
+                    "CREATE INDEX IF NOT EXISTS idx_items_youtube_channel ON content_items(youtube_channel)",
+                    "CREATE INDEX IF NOT EXISTS idx_items_github_stars ON content_items(github_stars DESC)",
+                    "CREATE INDEX IF NOT EXISTS idx_items_search_query ON content_items(search_query)",
+                    "CREATE INDEX IF NOT EXISTS idx_items_web_domain ON content_items(web_domain)"
+                ]
+                
+                for index_sql in indexes:
+                    cursor.execute(index_sql)
+                
+                # Create indexes after adding columns
+                self._create_mcp_indexes_if_possible(cursor)
+                
+                conn.commit()
+                self.logger.info("Database migration completed successfully")
+                return True
+                
+        except Exception as e:
+            self.logger.error(f"Error migrating database schema: {str(e)}")
+            return False
