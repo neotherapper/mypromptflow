@@ -1,0 +1,483 @@
+# MCP Servers by Technology Stack View
+# Groups servers by technology compatibility and stack alignment
+# Helps users find servers that work well with their existing technology choices
+
+view_metadata:
+  name: "MCP Servers by Technology Stack"
+  version: "1.0.0"
+  created: "2025-08-21"
+  purpose: "Technology-oriented discovery of compatible MCP servers"
+  description: "Find MCP servers that align with your technology stack"
+
+# Frontend Technology Stacks
+frontend_stacks:
+  
+  react_ecosystem:
+    title: "React Ecosystem"
+    description: "MCP servers optimized for React applications"
+    core_technology: "React"
+    
+    frameworks:
+      - name: "Next.js React Framework"
+        alignment_score: 10
+        integration: "Native React framework"
+        tier: 1
+      - name: "Vite Build Tool"
+        alignment_score: 9
+        integration: "Fast React bundling"
+        tier: 1
+      - name: "Create React App"
+        alignment_score: 8
+        integration: "React starter"
+        tier: 2
+        
+    styling:
+      - name: "Tailwind CSS Framework"
+        alignment_score: 9
+        integration: "Utility-first CSS"
+        tier: 1
+      - name: "Styled Components"
+        alignment_score: 8
+        integration: "CSS-in-JS"
+        tier: 2
+        
+    state_management:
+      - name: "Redux Toolkit"
+        alignment_score: 8
+        integration: "State management"
+        tier: 2
+      - name: "Zustand"
+        alignment_score: 8
+        integration: "Lightweight state"
+        tier: 2
+        
+    testing:
+      - name: "Jest Testing Framework"
+        alignment_score: 9
+        integration: "React testing"
+        tier: 1
+      - name: "React Testing Library"
+        alignment_score: 9
+        integration: "Component testing"
+        tier: 1
+        
+    monitoring:
+      - name: "LogRocket Session Replay"
+        alignment_score: 10
+        integration: "React-specific monitoring"
+        tier: 1
+      - name: "Sentry Error Tracking"
+        alignment_score: 9
+        integration: "React error boundary support"
+        tier: 1
+        
+  vue_ecosystem:
+    title: "Vue.js Ecosystem"
+    description: "MCP servers for Vue.js applications"
+    core_technology: "Vue.js"
+    
+    frameworks:
+      - name: "Nuxt.js Framework"
+        alignment_score: 10
+        integration: "Vue meta-framework"
+        tier: 2
+      - name: "Vite Build Tool"
+        alignment_score: 10
+        integration: "Created by Vue team"
+        tier: 1
+        
+    state_management:
+      - name: "Pinia"
+        alignment_score: 10
+        integration: "Official Vue store"
+        tier: 2
+      - name: "Vuex"
+        alignment_score: 8
+        integration: "Legacy state management"
+        tier: 3
+
+# Backend Technology Stacks
+backend_stacks:
+  
+  python_stack:
+    title: "Python Backend Stack"
+    description: "MCP servers for Python backend development"
+    core_technology: "Python"
+    
+    frameworks:
+      - name: "FastAPI Python Framework"
+        alignment_score: 10
+        integration: "Modern async Python API"
+        tier: 1
+      - name: "Django Framework"
+        alignment_score: 9
+        integration: "Full-featured Python framework"
+        tier: 2
+      - name: "Flask Framework"
+        alignment_score: 8
+        integration: "Lightweight Python web"
+        tier: 2
+        
+    orm_database:
+      - name: "SQLAlchemy ORM"
+        alignment_score: 10
+        integration: "Python SQL toolkit"
+        tier: 1
+      - name: "Prisma ORM"
+        alignment_score: 8
+        integration: "Python client available"
+        tier: 1
+      - name: "Django ORM"
+        alignment_score: 9
+        integration: "Built into Django"
+        tier: 2
+        
+    validation:
+      - name: "Pydantic Data Validation"
+        alignment_score: 10
+        integration: "Python data validation"
+        tier: 1
+      - name: "Marshmallow"
+        alignment_score: 8
+        integration: "Serialization library"
+        tier: 2
+        
+    testing:
+      - name: "Pytest Python Testing"
+        alignment_score: 10
+        integration: "Python testing framework"
+        tier: 1
+      - name: "Coverage.py"
+        alignment_score: 9
+        integration: "Code coverage"
+        tier: 2
+        
+    async_tools:
+      - name: "AsyncIO"
+        alignment_score: 10
+        integration: "Native Python async"
+        tier: 1
+      - name: "Celery Task Queue"
+        alignment_score: 8
+        integration: "Distributed tasks"
+        tier: 2
+        
+  nodejs_stack:
+    title: "Node.js Backend Stack"
+    description: "MCP servers for Node.js backend development"
+    core_technology: "Node.js"
+    
+    frameworks:
+      - name: "Express.js"
+        alignment_score: 9
+        integration: "Minimal Node.js framework"
+        tier: 2
+      - name: "NestJS"
+        alignment_score: 9
+        integration: "Enterprise Node.js"
+        tier: 2
+      - name: "Fastify"
+        alignment_score: 8
+        integration: "Fast Node.js framework"
+        tier: 3
+        
+    typescript:
+      - name: "TypeScript"
+        alignment_score: 10
+        integration: "Type safety for Node.js"
+        tier: 1
+      - name: "ts-node"
+        alignment_score: 9
+        integration: "TypeScript execution"
+        tier: 2
+        
+    testing:
+      - name: "Jest Testing Framework"
+        alignment_score: 10
+        integration: "JavaScript/TypeScript testing"
+        tier: 1
+      - name: "Mocha"
+        alignment_score: 8
+        integration: "Flexible test framework"
+        tier: 2
+
+# Database Technology Stacks
+database_stacks:
+  
+  sql_databases:
+    title: "SQL Databases"
+    description: "Relational database MCP servers"
+    
+    primary:
+      - name: "PostgreSQL Database"
+        alignment_score: 10
+        features: ["ACID", "JSON support", "Full-text search"]
+        tier: 1
+      - name: "MySQL Database"
+        alignment_score: 9
+        features: ["Wide adoption", "Replication", "Performance"]
+        tier: 1
+      - name: "SQLite"
+        alignment_score: 8
+        features: ["Embedded", "Zero-config", "Portable"]
+        tier: 2
+        
+    orm_tools:
+      - name: "Prisma ORM"
+        alignment_score: 9
+        supports: ["PostgreSQL", "MySQL", "SQLite"]
+        tier: 1
+      - name: "SQLAlchemy ORM"
+        alignment_score: 9
+        supports: ["All major SQL databases"]
+        tier: 1
+      - name: "TypeORM"
+        alignment_score: 8
+        supports: ["TypeScript SQL ORM"]
+        tier: 2
+        
+  nosql_databases:
+    title: "NoSQL Databases"
+    description: "Non-relational database MCP servers"
+    
+    document:
+      - name: "MongoDB"
+        alignment_score: 9
+        type: "Document store"
+        tier: 2
+      - name: "CouchDB"
+        alignment_score: 7
+        type: "Document with sync"
+        tier: 3
+        
+    key_value:
+      - name: "Redis Cache"
+        alignment_score: 10
+        type: "In-memory key-value"
+        tier: 1
+      - name: "Memcached"
+        alignment_score: 7
+        type: "Simple caching"
+        tier: 3
+        
+    vector:
+      - name: "Qdrant Vector Database"
+        alignment_score: 9
+        type: "Vector similarity"
+        tier: 1
+      - name: "Pinecone"
+        alignment_score: 8
+        type: "Managed vector DB"
+        tier: 2
+
+# Cloud Platform Stacks
+cloud_platforms:
+  
+  aws_stack:
+    title: "AWS Cloud Stack"
+    description: "MCP servers for AWS cloud platform"
+    
+    compute:
+      - name: "AWS Lambda Serverless"
+        alignment_score: 10
+        service: "Serverless functions"
+        tier: 1
+      - name: "AWS EC2"
+        alignment_score: 9
+        service: "Virtual machines"
+        tier: 2
+        
+    storage:
+      - name: "AWS S3"
+        alignment_score: 10
+        service: "Object storage"
+        tier: 1
+      - name: "AWS DynamoDB"
+        alignment_score: 9
+        service: "NoSQL database"
+        tier: 2
+        
+    monitoring:
+      - name: "AWS CloudWatch"
+        alignment_score: 10
+        service: "Cloud monitoring"
+        tier: 1
+      - name: "AWS X-Ray"
+        alignment_score: 8
+        service: "Distributed tracing"
+        tier: 2
+        
+    api:
+      - name: "AWS API Gateway"
+        alignment_score: 9
+        service: "API management"
+        tier: 1
+      - name: "AWS AppSync"
+        alignment_score: 8
+        service: "GraphQL service"
+        tier: 2
+        
+  vercel_stack:
+    title: "Vercel Platform"
+    description: "MCP servers for Vercel deployment"
+    
+    frameworks:
+      - name: "Next.js React Framework"
+        alignment_score: 10
+        integration: "Created by Vercel"
+        tier: 1
+      - name: "SvelteKit"
+        alignment_score: 8
+        integration: "Vercel supported"
+        tier: 2
+        
+    edge:
+      - name: "Vercel Edge Functions"
+        alignment_score: 10
+        integration: "Edge computing"
+        tier: 2
+      - name: "Vercel KV"
+        alignment_score: 9
+        integration: "Edge Redis"
+        tier: 2
+
+# AI/ML Technology Stacks
+ai_ml_stacks:
+  
+  llm_platforms:
+    title: "Large Language Model Platforms"
+    description: "MCP servers for LLM integration"
+    
+    providers:
+      - name: "Anthropic Claude API"
+        alignment_score: 10
+        capabilities: ["Claude 3", "Long context", "Constitutional AI"]
+        tier: 1
+      - name: "OpenAI Platform"
+        alignment_score: 9
+        capabilities: ["GPT-4", "DALL-E", "Whisper"]
+        tier: 1
+      - name: "Perplexity AI"
+        alignment_score: 8
+        capabilities: ["Search-enhanced LLM"]
+        tier: 2
+        
+    frameworks:
+      - name: "LangChain"
+        alignment_score: 9
+        purpose: "LLM orchestration"
+        tier: 1
+      - name: "LlamaIndex"
+        alignment_score: 8
+        purpose: "Data framework for LLMs"
+        tier: 2
+        
+    vector_search:
+      - name: "Qdrant"
+        alignment_score: 9
+        purpose: "Vector similarity search"
+        tier: 1
+      - name: "Chroma"
+        alignment_score: 8
+        purpose: "Embedding database"
+        tier: 2
+
+# Full Stack Combinations
+recommended_combinations:
+  
+  modern_react_python:
+    title: "Modern React + Python Stack"
+    description: "High-performance full-stack setup"
+    alignment_score: 9.5
+    components:
+      frontend:
+        - "Next.js React Framework"
+        - "Tailwind CSS"
+        - "TypeScript"
+      backend:
+        - "FastAPI Python"
+        - "Pydantic Validation"
+        - "SQLAlchemy ORM"
+      database:
+        - "PostgreSQL"
+        - "Redis Cache"
+      monitoring:
+        - "Sentry Error Tracking"
+        - "Prometheus + Grafana"
+      deployment:
+        - "Docker"
+        - "AWS or Vercel"
+        
+  enterprise_nodejs:
+    title: "Enterprise Node.js Stack"
+    description: "Scalable enterprise application stack"
+    alignment_score: 9.0
+    components:
+      frontend:
+        - "Next.js or Angular"
+        - "Material UI"
+        - "TypeScript"
+      backend:
+        - "NestJS Framework"
+        - "TypeORM"
+        - "Bull Queue"
+      database:
+        - "PostgreSQL"
+        - "Redis"
+        - "Elasticsearch"
+      monitoring:
+        - "New Relic APM"
+        - "ELK Stack"
+      deployment:
+        - "Kubernetes"
+        - "AWS EKS"
+        
+  serverless_jamstack:
+    title: "Serverless JAMstack"
+    description: "Modern serverless architecture"
+    alignment_score: 8.8
+    components:
+      frontend:
+        - "Next.js or Gatsby"
+        - "Tailwind CSS"
+      backend:
+        - "AWS Lambda"
+        - "API Gateway"
+      database:
+        - "DynamoDB"
+        - "Fauna"
+      cdn_hosting:
+        - "Vercel or Netlify"
+        - "CloudFlare"
+      monitoring:
+        - "AWS CloudWatch"
+        - "Sentry"
+
+# Technology Migration Paths
+migration_paths:
+  
+  from_monolith_to_microservices:
+    current: ["Single Node.js/Python app", "Single database"]
+    target: ["Multiple services", "Service mesh", "Event-driven"]
+    recommended_servers:
+      - "Apache Kafka (Event streaming)"
+      - "Redis (Caching layer)"
+      - "Kubernetes (Orchestration)"
+      - "Istio (Service mesh)"
+      
+  from_rest_to_graphql:
+    current: ["REST APIs", "Multiple endpoints"]
+    target: ["GraphQL API", "Single endpoint", "Type safety"]
+    recommended_servers:
+      - "Apollo GraphQL"
+      - "GraphQL Yoga"
+      - "Hasura"
+      
+  from_traditional_to_ai:
+    current: ["Rule-based logic", "Static responses"]
+    target: ["AI-powered features", "Dynamic generation"]
+    recommended_servers:
+      - "Anthropic Claude API"
+      - "OpenAI Platform"
+      - "Qdrant Vector DB"
+      - "LangChain Framework"

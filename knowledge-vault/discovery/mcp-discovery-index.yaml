@@ -1,0 +1,318 @@
+# MCP Discovery Index
+# Central searchable index for all MCP servers with enhanced discovery metadata
+# Enables natural language search, semantic matching, and smart recommendations
+
+index_metadata:
+  version: "1.0.0"
+  created: "2025-08-21"
+  purpose: "Unified discovery system for MCP server ecosystem"
+  total_servers: 118
+  last_updated: "2025-08-21"
+  scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
+
+# Discovery Configuration
+discovery_config:
+  semantic_search_enabled: true
+  natural_language_processing: true
+  technology_stack_matching: true
+  use_case_mapping: true
+  similarity_threshold: 0.75
+  max_results: 20
+  ranking_weights:
+    relevance_score: 0.35
+    technology_alignment: 0.30
+    business_value: 0.20
+    ease_of_integration: 0.15
+
+# Technology Stack Profiles for Matching
+technology_profiles:
+  primary_stack:
+    frontend: ["React", "TypeScript", "Next.js", "Vite", "Tailwind CSS"]
+    backend: ["Python", "FastAPI", "Node.js", "Express", "GraphQL"]
+    database: ["PostgreSQL", "Redis", "MongoDB", "SQLite", "Prisma"]
+    cloud: ["AWS", "Vercel", "Docker", "Kubernetes", "CloudFlare"]
+    ai_ml: ["OpenAI", "Anthropic Claude", "Hugging Face", "LangChain", "Vector DBs"]
+
+# Problem-Solution Mappings
+problem_categories:
+  monitoring_observability:
+    problems:
+      - "How do I monitor my application?"
+      - "Need error tracking"
+      - "Want performance metrics"
+      - "Debug production issues"
+    solution_servers:
+      - "Sentry Error Tracking"
+      - "New Relic APM"
+      - "Prometheus Metrics"
+      - "Grafana Visualization"
+      - "LogRocket Session Replay"
+      - "AWS CloudWatch"
+    
+  data_management:
+    problems:
+      - "Need database access"
+      - "Want to query data"
+      - "Store structured data"
+      - "Cache frequently accessed data"
+    solution_servers:
+      - "PostgreSQL Database"
+      - "Redis Cache"
+      - "MongoDB NoSQL"
+      - "SQLAlchemy ORM"
+      - "Prisma ORM"
+    
+  search_discovery:
+    problems:
+      - "Search across content"
+      - "Find information quickly"
+      - "Semantic search needs"
+      - "Full-text search"
+    solution_servers:
+      - "Elasticsearch Search"
+      - "Algolia Search"
+      - "MeiliSearch"
+      - "Brave Search"
+      - "Exa AI Search"
+      - "Tavily AI Search"
+    
+  development_tools:
+    problems:
+      - "Build React applications"
+      - "Test Python code"
+      - "Lint JavaScript"
+      - "Bundle frontend assets"
+    solution_servers:
+      - "Next.js Framework"
+      - "Vite Build Tool"
+      - "Jest Testing"
+      - "Pytest Testing"
+      - "ESLint Code Quality"
+    
+  real_time_communication:
+    problems:
+      - "Real-time updates"
+      - "WebSocket connections"
+      - "Message queuing"
+      - "Event streaming"
+    solution_servers:
+      - "Socket.io Real-Time"
+      - "Apache Kafka Streaming"
+      - "RabbitMQ Message Queue"
+      - "GraphQL Apollo"
+      - "gRPC Protocol"
+    
+  ai_integration:
+    problems:
+      - "Generate text content"
+      - "AI-powered features"
+      - "Language model integration"
+      - "Semantic analysis"
+    solution_servers:
+      - "Anthropic Claude API"
+      - "OpenAI Platform"
+      - "Perplexity AI"
+      - "Hugging Face Models"
+    
+  authentication_security:
+    problems:
+      - "User authentication"
+      - "API security"
+      - "Access control"
+      - "Secrets management"
+    solution_servers:
+      - "Auth0 Platform"
+      - "WorkOS B2B Auth"
+      - "Infisical Secrets"
+
+# Discovery Keywords Mapping
+keyword_mappings:
+  monitoring: ["monitor", "observe", "track", "metric", "performance", "error", "debug", "log"]
+  database: ["db", "sql", "query", "store", "persist", "data", "schema", "table"]
+  search: ["find", "discover", "lookup", "query", "retrieve", "index", "semantic"]
+  frontend: ["ui", "react", "component", "browser", "client", "view", "dom"]
+  backend: ["api", "server", "endpoint", "rest", "graphql", "service", "microservice"]
+  realtime: ["websocket", "live", "stream", "push", "subscribe", "event", "instant"]
+  ai: ["llm", "gpt", "claude", "generate", "intelligent", "semantic", "embedding"]
+  testing: ["test", "spec", "unit", "integration", "e2e", "coverage", "mock"]
+  build: ["bundle", "compile", "transpile", "webpack", "vite", "rollup", "package"]
+  cloud: ["deploy", "host", "scale", "container", "kubernetes", "serverless", "edge"]
+
+# Quick Evaluation Matrix
+evaluation_criteria:
+  immediate_value:
+    description: "Can be integrated and provide value within 1 hour"
+    servers:
+      - "Filesystem MCP (score: 9.8)"
+      - "Fetch MCP (score: 9.5)"
+      - "Memory MCP (score: 9.3)"
+      - "PostgreSQL Database (score: 9.6)"
+      - "Redis Cache (score: 8.8)"
+  
+  low_complexity_high_impact:
+    description: "Simple setup with significant business value"
+    servers:
+      - "Sentry Error Tracking (score: 8.9)"
+      - "Next.js Framework (score: 9.5)"
+      - "FastAPI Framework (score: 9.4)"
+      - "Brave Search (score: 8.5)"
+  
+  enterprise_ready:
+    description: "Production-grade with enterprise features"
+    servers:
+      - "New Relic APM (score: 8.6)"
+      - "AWS CloudWatch (score: 8.9)"
+      - "Grafana Platform (score: 8.7)"
+      - "Prometheus Metrics (score: 8.8)"
+  
+  ai_powered:
+    description: "Leverages AI for enhanced capabilities"
+    servers:
+      - "Anthropic Claude (score: 9.8)"
+      - "OpenAI Platform (score: 9.2)"
+      - "Perplexity AI (score: 8.7)"
+      - "Exa AI Search (score: 8.3)"
+      - "Tavily AI Search (score: 8.5)"
+
+# Server Discovery Entries (Sample - Full 118 servers to be populated)
+servers:
+  - id: "postgresql-database-official"
+    name: "PostgreSQL Database Official MCP Server"
+    score: 9.6
+    tier: 1
+    category: "Database"
+    keywords: ["database", "sql", "postgres", "relational", "acid", "queries"]
+    problem_statements:
+      - "Need reliable relational database"
+      - "Want SQL query capabilities"
+      - "Require ACID compliance"
+    solution_patterns:
+      - "Direct database connection via MCP"
+      - "SQL query execution"
+      - "Transaction management"
+    tech_stack_alignment:
+      postgresql: 10
+      python: 9
+      typescript: 8
+    quick_value: "Production database access in 30 minutes"
+    
+  - id: "nextjs-react-framework"
+    name: "Next.js React Framework MCP Server"
+    score: 9.5
+    tier: 1
+    category: "Frontend Framework"
+    keywords: ["react", "next", "ssr", "frontend", "typescript", "vercel"]
+    problem_statements:
+      - "Build production React applications"
+      - "Need server-side rendering"
+      - "Want optimized performance"
+    solution_patterns:
+      - "Full-stack React framework"
+      - "API routes integration"
+      - "Static and dynamic rendering"
+    tech_stack_alignment:
+      react: 10
+      typescript: 10
+      vercel: 9
+    quick_value: "Full React app framework with built-in optimizations"
+    
+  - id: "sentry-error-tracking"
+    name: "Sentry Error Tracking MCP Server"
+    score: 8.9
+    tier: 1
+    category: "Monitoring"
+    keywords: ["error", "tracking", "monitoring", "debug", "exception", "alert"]
+    problem_statements:
+      - "Track production errors"
+      - "Debug customer issues"
+      - "Get error alerts"
+    solution_patterns:
+      - "Automatic error capture"
+      - "Stack trace analysis"
+      - "Performance monitoring"
+    tech_stack_alignment:
+      react: 9
+      python: 9
+      typescript: 9
+    quick_value: "Production error tracking in 15 minutes"
+
+# Discovery Shortcuts (Common Combinations)
+discovery_shortcuts:
+  react_fullstack:
+    name: "React Full-Stack Bundle"
+    description: "Complete React application stack"
+    servers:
+      - "Next.js React Framework"
+      - "PostgreSQL Database"
+      - "Redis Cache"
+      - "Sentry Error Tracking"
+      - "Tailwind CSS Framework"
+    
+  python_backend:
+    name: "Python Backend Suite"
+    description: "Python API development stack"
+    servers:
+      - "FastAPI Framework"
+      - "SQLAlchemy ORM"
+      - "Pytest Testing"
+      - "Pydantic Validation"
+      - "Redis Cache"
+    
+  monitoring_stack:
+    name: "Complete Monitoring Solution"
+    description: "Full observability stack"
+    servers:
+      - "Prometheus Metrics"
+      - "Grafana Visualization"
+      - "Sentry Error Tracking"
+      - "New Relic APM"
+      - "LogRocket Session Replay"
+    
+  ai_knowledge_base:
+    name: "AI Knowledge Management"
+    description: "AI-powered knowledge system"
+    servers:
+      - "Anthropic Claude API"
+      - "PostgreSQL Database"
+      - "Elasticsearch Search"
+      - "Redis Cache"
+      - "FastAPI Framework"
+
+# Similarity Mappings (If you use X, consider Y)
+similarity_recommendations:
+  postgresql:
+    similar: ["MySQL", "SQLite"]
+    complementary: ["Prisma ORM", "SQLAlchemy ORM", "Redis Cache"]
+    alternatives: ["MongoDB", "DynamoDB"]
+    
+  nextjs:
+    similar: ["Gatsby", "Remix"]
+    complementary: ["Tailwind CSS", "Vercel Deployment", "Prisma ORM"]
+    alternatives: ["Vite", "Create React App"]
+    
+  sentry:
+    similar: ["Rollbar", "Bugsnag"]
+    complementary: ["LogRocket", "New Relic APM", "Grafana"]
+    alternatives: ["DataDog", "AppDynamics"]
+    
+  elasticsearch:
+    similar: ["Algolia", "MeiliSearch"]
+    complementary: ["Kibana", "Logstash"]
+    alternatives: ["PostgreSQL Full-Text", "MongoDB Atlas Search"]
+
+# Natural Language Query Examples
+query_examples:
+  - query: "I need to monitor my React application"
+    matches: ["Sentry", "LogRocket", "New Relic APM"]
+    
+  - query: "How can I add search to my app?"
+    matches: ["Elasticsearch", "Algolia", "MeiliSearch", "PostgreSQL Full-Text"]
+    
+  - query: "Want real-time updates in my web app"
+    matches: ["Socket.io", "GraphQL Subscriptions", "Server-Sent Events"]
+    
+  - query: "Need to test Python code"
+    matches: ["Pytest", "Python Testing Framework", "Coverage.py"]
+    
+  - query: "Building an AI chatbot"
+    matches: ["Anthropic Claude", "OpenAI", "LangChain", "Redis Cache"]

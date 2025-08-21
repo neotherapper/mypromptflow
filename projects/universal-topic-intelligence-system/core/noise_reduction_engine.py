@@ -359,10 +359,11 @@ class NoiseReductionEngine:
         if self._is_broken_content(content):
             quality_results[NoiseType.BROKEN_CONTENT] = 0.9
         
-        # Check topic relevance (basic implementation)
+        # Check topic relevance with improved semantic understanding
         if content.topics:
             topic_relevance = self._check_topic_relevance(content)
-            if topic_relevance < 0.3:
+            # Only flag as off-topic if truly irrelevant (very low score)
+            if topic_relevance < 0.1:  # Very generous threshold - only catch truly irrelevant content
                 quality_results[NoiseType.OFF_TOPIC] = 1.0 - topic_relevance
         
         return quality_results
@@ -446,21 +447,96 @@ class NoiseReductionEngine:
         return False
     
     def _check_topic_relevance(self, content: ContentItem) -> float:
-        """Check how relevant content is to its assigned topics"""
+        """Check how relevant content is to its assigned topics with semantic understanding"""
         if not content.topics:
             return 0.5  # Neutral if no topics
         
-        # Simple relevance check based on topic keywords in content
         full_text = f"{content.title} {content.content or ''}".lower()
+        
+        # Define semantic topic relationships for better relevance detection
+        topic_synonyms = {
+            "react": [
+                # Core React terms
+                "react", "reactjs", "jsx", "tsx", "component", "hook", "state", "props", "virtual dom", "fiber",
+                # React ecosystem
+                "next.js", "remix", "gatsby", "create-react-app", "vite", "webpack", "babel",
+                # React concepts
+                "memo", "usememo", "usecallback", "useeffect", "usestate", "context", "provider", "reducer",
+                "suspense", "concurrent", "server component", "rsc", "hydration", "rendering"
+            ],
+            "javascript": [
+                # Core JavaScript
+                "javascript", "js", "ecmascript", "es6", "es2020", "es2023", "typescript", "node", "npm", "yarn", "pnpm",
+                # Web platform
+                "browser", "web", "dom", "api", "fetch", "async", "promise", "module", "import", "export",
+                # Development concepts  
+                "framework", "library", "bundler", "compiler", "transpiler", "polyfill", "performance", "optimization"
+            ],
+            "frontend": [
+                "frontend", "ui", "ux", "browser", "css", "html", "dom", "responsive", "design", "interface",
+                "component", "styling", "animation", "accessibility", "seo", "progressive web app", "pwa"
+            ],
+            "testing": [
+                "test", "testing", "jest", "cypress", "playwright", "vitest", "unit test", "integration", "e2e",
+                "tdd", "assertion", "mock", "stub", "coverage", "automation", "quality assurance"
+            ],
+            "typescript": [
+                "typescript", "ts", "type", "interface", "generic", "enum", "compile", "static typing", 
+                "javascript", "tsc", "definition", "declaration", "inference", "annotation"
+            ],
+            "ai": [
+                "ai", "artificial intelligence", "machine learning", "ml", "neural", "gpt", "claude", "anthropic", 
+                "openai", "llm", "language model", "agent", "assistant", "chatbot", "nlp", "deep learning"
+            ],
+            "claude": [
+                "claude", "anthropic", "assistant", "chatbot", "llm", "language model", "ai", "constitutional ai",
+                "prompt", "reasoning", "safety", "alignment", "helpful", "harmless", "honest"
+            ],
+            "llm": [
+                "llm", "language model", "gpt", "claude", "transformer", "attention", "embeddings", "tokenizer",
+                "prompt", "completion", "fine-tuning", "rag", "retrieval", "generation", "chat", "assistant"
+            ],
+            "crypto": [
+                "crypto", "cryptocurrency", "bitcoin", "ethereum", "blockchain", "defi", "token", "trading",
+                "smart contract", "web3", "nft", "dao", "yield", "staking", "mining", "wallet"
+            ],
+            "tech": [
+                "technology", "tech", "software", "development", "programming", "coding", "engineering",
+                "algorithm", "data structure", "architecture", "system", "platform", "infrastructure"
+            ],
+            "news": [
+                "news", "update", "announcement", "release", "launch", "feature", "bug", "security",
+                "version", "breaking", "important", "critical", "urgent", "alert"
+            ],
+            "performance": [
+                "performance", "optimization", "speed", "fast", "slow", "benchmark", "memory", "cache", 
+                "efficient", "latency", "throughput", "scaling", "bottleneck", "profiling"
+            ]
+        }
         
         total_relevance = 0.0
         for topic in content.topics:
-            topic_words = topic.lower().split()
-            topic_matches = sum(1 for word in topic_words if word in full_text)
-            topic_relevance = topic_matches / len(topic_words) if topic_words else 0
+            topic_lower = topic.lower()
+            
+            # Get related terms for this topic
+            related_terms = topic_synonyms.get(topic_lower, [topic_lower])
+            
+            # Count matches for any related terms
+            matches = 0
+            for term in related_terms:
+                if term in full_text:
+                    matches += 1
+            
+            # Calculate relevance as percentage of related terms found
+            topic_relevance = min(1.0, matches / max(1, len(related_terms) * 0.3))  # Only need 30% of terms
             total_relevance += topic_relevance
         
-        return min(1.0, total_relevance / len(content.topics))
+        # Be more generous with topic relevance scoring
+        final_relevance = min(1.0, total_relevance / len(content.topics))
+        
+        # Return the actual relevance score for decision making
+        # Values: 0.0-0.1 = off-topic, 0.1-0.4 = borderline, 0.4+ = clearly relevant
+        return final_relevance
     
     def _calculate_overall_noise_score(self, confidence_scores: Dict[NoiseType, float]) -> float:
         """Calculate overall noise score from individual confidence scores"""

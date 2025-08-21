@@ -1,0 +1,281 @@
+# Smart Query Processor for MCP Discovery
+# Natural language understanding and intelligent query routing
+# Maps user intent to relevant MCP servers with semantic matching
+
+processor_metadata:
+  version: "1.0.0"
+  created: "2025-08-21"
+  purpose: "Natural language query processing for MCP server discovery"
+  capabilities:
+    - "Intent detection from natural language"
+    - "Technology stack extraction"
+    - "Problem-solution mapping"
+    - "Semantic similarity matching"
+    - "Fuzzy matching fallback"
+
+# Query Processing Pipeline
+processing_pipeline:
+  stages:
+    1_preprocessing:
+      description: "Clean and normalize query input"
+      operations:
+        - lowercase_conversion
+        - remove_punctuation
+        - expand_contractions
+        - spell_correction
+        
+    2_intent_detection:
+      description: "Identify user intent and need type"
+      operations:
+        - action_verb_extraction
+        - problem_statement_detection
+        - technology_mention_extraction
+        - use_case_classification
+        
+    3_entity_extraction:
+      description: "Extract key entities from query"
+      operations:
+        - technology_stack_entities
+        - business_domain_entities
+        - integration_pattern_entities
+        - quality_requirement_entities
+        
+    4_query_expansion:
+      description: "Expand query with synonyms and related terms"
+      operations:
+        - synonym_expansion
+        - acronym_resolution
+        - related_term_inclusion
+        - semantic_similarity_expansion
+        
+    5_matching_scoring:
+      description: "Score and rank matching servers"
+      operations:
+        - keyword_matching
+        - semantic_similarity_scoring
+        - technology_alignment_scoring
+        - business_value_scoring
+        
+    6_result_ranking:
+      description: "Final ranking and filtering"
+      operations:
+        - composite_score_calculation
+        - tier_based_prioritization
+        - relevance_threshold_filtering
+        - result_deduplication
+
+# Intent Patterns and Mappings
+intent_patterns:
+  monitoring_intent:
+    keywords: ["monitor", "track", "observe", "watch", "alert", "metric", "performance"]
+    questions: ["how to monitor", "need monitoring", "track performance", "get alerts"]
+    server_categories: ["monitoring", "observability", "metrics", "alerting"]
+    recommended_servers:
+      - "Sentry Error Tracking"
+      - "New Relic APM"
+      - "Prometheus Metrics"
+      - "Grafana Visualization"
+      
+  search_intent:
+    keywords: ["search", "find", "discover", "lookup", "query", "retrieve", "index"]
+    questions: ["how to search", "add search", "find content", "search across"]
+    server_categories: ["search", "discovery", "indexing", "retrieval"]
+    recommended_servers:
+      - "Elasticsearch"
+      - "Algolia Search"
+      - "MeiliSearch"
+      - "Brave Search"
+      
+  database_intent:
+    keywords: ["database", "store", "persist", "save", "query", "sql", "nosql"]
+    questions: ["store data", "database for", "persist information", "query data"]
+    server_categories: ["database", "storage", "persistence", "querying"]
+    recommended_servers:
+      - "PostgreSQL"
+      - "MongoDB"
+      - "Redis Cache"
+      - "SQLite"
+      
+  realtime_intent:
+    keywords: ["realtime", "live", "instant", "push", "websocket", "stream", "event"]
+    questions: ["real-time updates", "live data", "push notifications", "streaming"]
+    server_categories: ["realtime", "websocket", "streaming", "events"]
+    recommended_servers:
+      - "Socket.io"
+      - "Apache Kafka"
+      - "RabbitMQ"
+      - "GraphQL Subscriptions"
+      
+  ai_intent:
+    keywords: ["ai", "llm", "generate", "gpt", "claude", "intelligent", "semantic"]
+    questions: ["use ai", "generate text", "ai features", "language model"]
+    server_categories: ["ai", "llm", "generation", "intelligence"]
+    recommended_servers:
+      - "Anthropic Claude"
+      - "OpenAI Platform"
+      - "Perplexity AI"
+      - "Hugging Face"
+      
+  testing_intent:
+    keywords: ["test", "testing", "unit", "integration", "e2e", "coverage", "mock"]
+    questions: ["test code", "testing framework", "unit tests", "test coverage"]
+    server_categories: ["testing", "quality", "validation", "mocking"]
+    recommended_servers:
+      - "Jest Testing"
+      - "Pytest"
+      - "Playwright"
+      - "Cypress"
+
+# Technology Stack Recognition
+technology_recognition:
+  frontend_technologies:
+    react: ["react", "reactjs", "react.js", "jsx", "hooks", "components"]
+    vue: ["vue", "vuejs", "vue.js", "vuex", "composition api"]
+    angular: ["angular", "ng", "angular.js", "rxjs"]
+    nextjs: ["next", "nextjs", "next.js", "vercel", "ssr"]
+    
+  backend_technologies:
+    python: ["python", "py", "django", "flask", "fastapi", "asyncio"]
+    nodejs: ["node", "nodejs", "node.js", "express", "nestjs", "javascript"]
+    java: ["java", "spring", "springboot", "jvm", "maven", "gradle"]
+    go: ["go", "golang", "gin", "fiber", "gorilla"]
+    
+  database_technologies:
+    sql: ["sql", "postgres", "postgresql", "mysql", "sqlite", "mariadb"]
+    nosql: ["nosql", "mongodb", "mongo", "dynamodb", "cassandra", "couchdb"]
+    cache: ["redis", "memcached", "cache", "caching", "in-memory"]
+    vector: ["vector", "pinecone", "weaviate", "qdrant", "chroma", "embedding"]
+    
+  cloud_platforms:
+    aws: ["aws", "amazon", "lambda", "s3", "ec2", "cloudwatch", "dynamodb"]
+    gcp: ["gcp", "google cloud", "firebase", "bigquery", "cloud run"]
+    azure: ["azure", "microsoft cloud", "cosmos", "functions"]
+    vercel: ["vercel", "edge", "serverless", "next.js hosting"]
+
+# Semantic Similarity Patterns
+semantic_patterns:
+  problem_to_solution:
+    "errors in production": ["error tracking", "monitoring", "debugging", "logging"]
+    "slow performance": ["performance monitoring", "profiling", "metrics", "optimization"]
+    "search not working": ["search engine", "indexing", "full-text search", "relevance"]
+    "need authentication": ["auth", "identity", "login", "security", "access control"]
+    "scale application": ["load balancing", "caching", "cdn", "optimization", "kubernetes"]
+    
+  technology_synonyms:
+    database: ["db", "datastore", "persistence", "storage", "repository"]
+    api: ["endpoint", "service", "rest", "graphql", "backend", "server"]
+    frontend: ["ui", "client", "browser", "spa", "web app", "interface"]
+    monitoring: ["observability", "tracking", "metrics", "telemetry", "apm"]
+    search: ["find", "discover", "query", "lookup", "retrieve", "index"]
+
+# Query Examples with Expected Results
+query_examples:
+  natural_language_queries:
+    - query: "I need to add search to my React app"
+      detected_intent: "search_intent"
+      extracted_technologies: ["react"]
+      expected_results:
+        - "Algolia Search (React SDK available)"
+        - "Elasticsearch (with React client)"
+        - "MeiliSearch (React integration)"
+        
+    - query: "How can I monitor errors in my Python backend?"
+      detected_intent: "monitoring_intent"
+      extracted_technologies: ["python"]
+      expected_results:
+        - "Sentry Error Tracking (Python SDK)"
+        - "New Relic APM (Python agent)"
+        - "Prometheus (Python client)"
+        
+    - query: "Want real-time updates between my Next.js frontend and FastAPI backend"
+      detected_intent: "realtime_intent"
+      extracted_technologies: ["nextjs", "fastapi"]
+      expected_results:
+        - "Socket.io (both Next.js and Python support)"
+        - "GraphQL Subscriptions"
+        - "Server-Sent Events"
+        
+    - query: "Building an AI chatbot with knowledge base"
+      detected_intent: "ai_intent"
+      extracted_keywords: ["chatbot", "knowledge base"]
+      expected_results:
+        - "Anthropic Claude API"
+        - "OpenAI Platform"
+        - "PostgreSQL (for knowledge storage)"
+        - "Redis (for session cache)"
+
+# Scoring Weights for Ranking
+scoring_configuration:
+  weights:
+    keyword_match: 0.25
+    intent_alignment: 0.20
+    technology_compatibility: 0.20
+    tier_score: 0.15
+    business_value: 0.10
+    ease_of_integration: 0.10
+    
+  thresholds:
+    minimum_relevance_score: 0.5
+    high_confidence_score: 0.8
+    exact_match_bonus: 0.2
+    tier_1_bonus: 0.1
+
+# Fallback Strategies
+fallback_strategies:
+  no_exact_matches:
+    strategy: "fuzzy_matching"
+    operations:
+      - "Use Levenshtein distance for similar terms"
+      - "Expand search to related categories"
+      - "Include partial matches with lower scores"
+      
+  ambiguous_query:
+    strategy: "clarification_request"
+    operations:
+      - "Return top matches from multiple categories"
+      - "Suggest query refinements"
+      - "Provide category options for filtering"
+      
+  technology_not_found:
+    strategy: "generic_recommendations"
+    operations:
+      - "Return highest-rated servers in detected category"
+      - "Suggest popular technology alternatives"
+      - "Provide general-purpose solutions"
+
+# Response Formatting
+response_format:
+  structure:
+    query_understanding:
+      original_query: "string"
+      detected_intent: "string"
+      extracted_entities: "array"
+      confidence_score: "float"
+      
+    results:
+      exact_matches: "array of servers with score >= 0.8"
+      good_matches: "array of servers with score 0.6-0.79"
+      related_suggestions: "array of servers with score 0.5-0.59"
+      
+    metadata:
+      total_results: "integer"
+      processing_time: "milliseconds"
+      fallback_used: "boolean"
+      suggestions: "array of query refinements"
+
+# Integration Points
+integrations:
+  mcp_servers_used:
+    - name: "Brave Search MCP"
+      purpose: "External web search for unknown technologies"
+      
+    - name: "Elasticsearch MCP"
+      purpose: "Internal index search with advanced queries"
+      
+    - name: "Exa AI Search"
+      purpose: "Semantic similarity matching"
+      
+  data_sources:
+    - "knowledge-vault/discovery/mcp-discovery-index.yaml"
+    - "knowledge-vault/databases/tools_services/views/*.yaml"
+    - "meta/mcp-system/intelligence/ecosystem-registry.yaml"
