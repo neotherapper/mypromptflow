@@ -140,6 +140,15 @@ class UniversalContentPrioritizer:
         self.register_strategy("news", NewsPriorityStrategy())
         self.register_strategy("technical", TechnicalContentStrategy())
         self.register_strategy("social", SocialSignalsStrategy())
+        
+        # Add intelligent MCP-aware strategy
+        try:
+            from .intelligent_scoring_system import IntelligentPriorityStrategy
+            self.register_strategy("intelligent", IntelligentPriorityStrategy())
+            self.register_strategy("mcp", IntelligentPriorityStrategy())  # Alias
+        except ImportError as e:
+            self.logger.warning(f"Could not load intelligent scoring system: {e}")
+            # Fallback to default strategy
     
     def register_strategy(self, name: str, strategy: PriorityStrategy):
         """Register a prioritization strategy"""

@@ -160,8 +160,8 @@ class UniversalMonitor:
                         logger.debug(f"Filtered non-English content: {item.title[:50]}... (detected: {lang_result.language})")
                         continue
                     
-                    # Calculate priority
-                    priority_result = self.prioritizer.prioritize(item)
+                    # Calculate priority using intelligent strategy
+                    priority_result = self.prioritizer.prioritize(item, strategy="intelligent")
                     
                     # Store in database
                     stored = await self.storage.store_content(
@@ -274,8 +274,8 @@ class UniversalMonitor:
                         logger.debug(f"Filtered irrelevant MCP content: {item.title[:50]}... ({reason})")
                         continue
                     
-                    # Calculate priority
-                    priority_result = self.prioritizer.prioritize(item)
+                    # Calculate priority using intelligent strategy
+                    priority_result = self.prioritizer.prioritize(item, strategy="intelligent")
                     
                     # Store item
                     stored = await self.storage.store_content(
