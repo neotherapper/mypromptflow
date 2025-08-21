@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-19"
-  total_servers: 113
+  total_servers: 118
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -363,6 +363,55 @@ enterprise_integration:
       business_value: "Comprehensive monitoring and logging for AWS infrastructure and applications"
       technology_alignment: 10
       business_relevance: 9
+
+monitoring_observability:
+  description: "Advanced monitoring, observability, and performance tracking infrastructure"
+  servers:
+    # Error Tracking & APM
+    - name: "Sentry Error Tracking MCP Server"
+      composite_score: 8.9
+      category: "Error Monitoring"
+      file_path: "knowledge-vault/databases/tools_services/items/sentry-error-tracking-mcp-server.md"
+      production_readiness: 96
+      business_value: "Real-time error tracking and performance monitoring for React and Python applications"
+      technology_alignment: 10
+      business_relevance: 9
+      
+    - name: "Prometheus Metrics Collection MCP Server"
+      composite_score: 8.8
+      category: "Metrics Collection"
+      file_path: "knowledge-vault/databases/tools_services/items/prometheus-metrics-collection-mcp-server.md"
+      production_readiness: 94
+      business_value: "Enterprise-grade metrics collection and time-series monitoring"
+      technology_alignment: 8
+      business_relevance: 8
+      
+    - name: "Grafana Visualization Platform MCP Server"
+      composite_score: 8.7
+      category: "Data Visualization"
+      file_path: "knowledge-vault/databases/tools_services/items/grafana-visualization-platform-mcp-server.md"
+      production_readiness: 94
+      business_value: "Comprehensive data visualization and monitoring dashboards"
+      technology_alignment: 8
+      business_relevance: 9
+      
+    - name: "New Relic APM MCP Server"
+      composite_score: 8.6
+      category: "Application Performance Monitoring"
+      file_path: "knowledge-vault/databases/tools_services/items/new-relic-apm-mcp-server.md"
+      production_readiness: 94
+      business_value: "Full-stack application performance monitoring with AI-powered insights"
+      technology_alignment: 9
+      business_relevance: 8
+      
+    - name: "LogRocket Session Replay MCP Server"
+      composite_score: 8.4
+      category: "Frontend Monitoring"
+      file_path: "knowledge-vault/databases/tools_services/items/logrocket-session-replay-mcp-server.md"
+      production_readiness: 92
+      business_value: "Frontend monitoring and session replay for React application debugging"
+      technology_alignment: 10
+      business_relevance: 7
       
     - name: "AWS Security MCP Server"
       composite_score: 9.5
