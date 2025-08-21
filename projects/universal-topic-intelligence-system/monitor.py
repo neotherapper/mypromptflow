@@ -19,6 +19,8 @@ from core.language_filter import LanguageFilter
 from core.relevance_filter import RelevanceFilter
 from storage.database import StorageManager
 from core.content_prioritizer import UniversalContentPrioritizer
+from core.trend_detection_engine import TrendDetectionEngine
+from core.noise_reduction_engine import NoiseReductionEngine
 
 # Configure logging
 logging.basicConfig(
@@ -38,6 +40,8 @@ class UniversalMonitor:
         self.prioritizer = UniversalContentPrioritizer()
         self.language_filter = LanguageFilter(target_languages=['en'], min_confidence=0.7)
         self.relevance_filter = RelevanceFilter()
+        self.trend_detector = TrendDetectionEngine()
+        self.noise_filter = NoiseReductionEngine()
         
         # Only verified working sources
         self.working_sources = [
@@ -160,6 +164,14 @@ class UniversalMonitor:
                         logger.debug(f"Filtered non-English content: {item.title[:50]}... (detected: {lang_result.language})")
                         continue
                     
+                    # Apply noise filter
+                    should_filter, noise_result = self.noise_filter.should_filter_content(item)
+                    
+                    if should_filter:
+                        items_filtered_out += 1
+                        logger.info(f"Filtered noisy content: {item.title[:50]}... (reason: {noise_result.reasoning})")
+                        continue
+                    
                     # Calculate priority using intelligent strategy
                     priority_result = self.prioritizer.prioritize(item, strategy="intelligent")
                     
@@ -172,6 +184,12 @@ class UniversalMonitor:
                     
                     if stored:
                         items_stored += 1
+                        
+                        # Add to trend detection engine
+                        try:
+                            self.trend_detector.add_content_signal(item, priority_result.total_score)
+                        except Exception as e:
+                            logger.error(f"Error adding trend signal for {item.item_id}: {e}")
                         
                 except Exception as e:
                     logger.error(f"Error storing item from {source_config['name']}: {e}")
@@ -262,6 +280,14 @@ class UniversalMonitor:
                         logger.debug(f"Filtered non-English MCP content: {item.title[:50]}... (detected: {lang_result.language})")
                         continue
                     
+                    # Apply noise filter
+                    should_filter, noise_result = self.noise_filter.should_filter_content(item)
+                    
+                    if should_filter:
+                        items_filtered_out += 1
+                        logger.info(f"Filtered noisy MCP content: {item.title[:50]}... (reason: {noise_result.reasoning})")
+                        continue
+                    
                     # Apply relevance filter
                     is_relevant, relevance_score, reason = self.relevance_filter.is_relevant(
                         item.title,
@@ -287,6 +313,12 @@ class UniversalMonitor:
                     if stored:
                         items_stored += 1
                         logger.info(f"Stored MCP item: {item.title[:60]}... (Priority: {priority_result.priority_level.value})")
+                        
+                        # Add to trend detection engine
+                        try:
+                            self.trend_detector.add_content_signal(item, priority_result.total_score)
+                        except Exception as e:
+                            logger.error(f"Error adding MCP trend signal for {item.item_id}: {e}")
                     
                 except Exception as e:
                     logger.error(f"Error storing MCP item {item.item_id}: {e}")
@@ -365,6 +397,17 @@ class UniversalMonitor:
             self.stats["items_filtered"] = 0
         self.stats["items_filtered"] += cycle_items_filtered
         
+        # Perform trend analysis if we have new items
+        trend_summary = {}
+        if cycle_items_stored > 0:
+            try:
+                trend_summary = self.trend_detector.get_trend_summary("short")
+                logger.info(f"Trend analysis: {trend_summary['total_trends']} trends detected, "
+                           f"{len(trend_summary['top_emerging'])} emerging topics")
+            except Exception as e:
+                logger.error(f"Error in trend analysis: {e}")
+                trend_summary = {"error": str(e)}
+        
         cycle_summary = {
             "timestamp": self.stats["last_run"].isoformat(),
             "sources_checked": total_sources,
@@ -378,7 +421,8 @@ class UniversalMonitor:
             "success_rate": f"{(self.stats['sources_successful'] / total_sources * 100):.1f}%",
             "filter_rate": f"{(cycle_items_filtered / max(1, cycle_items_found) * 100):.1f}%",
             "source_results": source_results,
-            "cumulative_stats": self.stats.copy()
+            "cumulative_stats": self.stats.copy(),
+            "trend_analysis": trend_summary
         }
         
         logger.info(f"Cycle complete: {cycle_items_found} found, {cycle_items_filtered} filtered, {cycle_items_stored} stored")
