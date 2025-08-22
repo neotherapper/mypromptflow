@@ -1,0 +1,434 @@
+# MCP Similarity Engine
+# Provides intelligent recommendations based on server relationships
+# "If you use X, you might also need Y" recommendation system
+
+engine_metadata:
+  name: "MCP Server Similarity Engine"
+  version: "1.0.0"
+  created: "2025-08-21"
+  purpose: "Generate intelligent server recommendations based on relationships"
+  description: "Discovers complementary, alternative, and related MCP servers"
+
+# Similarity Calculation Methods
+similarity_methods:
+  
+  functional_similarity:
+    description: "Servers that solve similar problems"
+    weight: 0.35
+    calculation: "Overlap in problem_statements and use_cases"
+    
+  technology_similarity:
+    description: "Servers using similar technologies"
+    weight: 0.25
+    calculation: "Common programming languages and frameworks"
+    
+  integration_patterns:
+    description: "Servers that integrate well together"
+    weight: 0.20
+    calculation: "Known good combinations and patterns"
+    
+  user_journey:
+    description: "Servers typically used in sequence"
+    weight: 0.20
+    calculation: "Common adoption patterns and progressions"
+
+# Server Relationship Mappings
+server_relationships:
+  
+  # Database Servers
+  postgresql:
+    name: "PostgreSQL Database"
+    complementary:
+      strong:
+        - server: "Prisma ORM"
+          reason: "Type-safe database access for PostgreSQL"
+          strength: 0.95
+        - server: "SQLAlchemy ORM"
+          reason: "Python ORM with excellent PostgreSQL support"
+          strength: 0.90
+        - server: "Redis Cache"
+          reason: "Caching layer for database queries"
+          strength: 0.85
+      moderate:
+        - server: "pgvector"
+          reason: "Vector similarity search in PostgreSQL"
+          strength: 0.70
+        - server: "PostGIS"
+          reason: "Geospatial data in PostgreSQL"
+          strength: 0.65
+    alternatives:
+      similar_purpose:
+        - server: "MySQL"
+          reason: "Alternative relational database"
+          similarity: 0.85
+        - server: "MariaDB"
+          reason: "MySQL-compatible alternative"
+          similarity: 0.80
+      different_approach:
+        - server: "MongoDB"
+          reason: "NoSQL document database alternative"
+          similarity: 0.60
+        - server: "DynamoDB"
+          reason: "Serverless database alternative"
+          similarity: 0.55
+    typically_followed_by:
+      - "ORM selection (Prisma/SQLAlchemy)"
+      - "Caching layer (Redis)"
+      - "Backup solution"
+      
+  # Frontend Frameworks
+  nextjs:
+    name: "Next.js React Framework"
+    complementary:
+      strong:
+        - server: "Tailwind CSS"
+          reason: "Rapid UI development for React"
+          strength: 0.90
+        - server: "Vercel"
+          reason: "Optimized hosting for Next.js"
+          strength: 0.95
+        - server: "TypeScript"
+          reason: "Type safety for React applications"
+          strength: 0.85
+      moderate:
+        - server: "Prisma ORM"
+          reason: "Full-stack type safety"
+          strength: 0.75
+        - server: "tRPC"
+          reason: "End-to-end typesafe APIs"
+          strength: 0.70
+    alternatives:
+      similar_purpose:
+        - server: "Gatsby"
+          reason: "Alternative React framework"
+          similarity: 0.75
+        - server: "Remix"
+          reason: "Modern React framework alternative"
+          similarity: 0.80
+      different_framework:
+        - server: "Nuxt.js"
+          reason: "Vue.js alternative to Next.js"
+          similarity: 0.70
+        - server: "SvelteKit"
+          reason: "Svelte alternative to Next.js"
+          similarity: 0.65
+    typically_followed_by:
+      - "Styling solution (Tailwind/CSS-in-JS)"
+      - "State management (Redux/Zustand)"
+      - "API integration (REST/GraphQL)"
+      
+  # Monitoring Solutions
+  sentry:
+    name: "Sentry Error Tracking"
+    complementary:
+      strong:
+        - server: "LogRocket"
+          reason: "Session replay complements error tracking"
+          strength: 0.85
+        - server: "Prometheus"
+          reason: "Metrics to accompany error tracking"
+          strength: 0.80
+        - server: "Grafana"
+          reason: "Visualization for error trends"
+          strength: 0.75
+      moderate:
+        - server: "New Relic APM"
+          reason: "Full APM complements error tracking"
+          strength: 0.70
+        - server: "PagerDuty"
+          reason: "Incident management for errors"
+          strength: 0.65
+    alternatives:
+      similar_purpose:
+        - server: "Rollbar"
+          reason: "Alternative error tracking"
+          similarity: 0.90
+        - server: "Bugsnag"
+          reason: "Alternative error monitoring"
+          similarity: 0.85
+      broader_scope:
+        - server: "DataDog"
+          reason: "Full observability platform"
+          similarity: 0.70
+        - server: "New Relic"
+          reason: "Complete APM solution"
+          similarity: 0.75
+    typically_followed_by:
+      - "Performance monitoring (APM)"
+      - "Log aggregation"
+      - "Custom dashboards"
+      
+  # Search Platforms
+  elasticsearch:
+    name: "Elasticsearch Search Platform"
+    complementary:
+      strong:
+        - server: "Kibana"
+          reason: "Visualization for Elasticsearch"
+          strength: 0.95
+        - server: "Logstash"
+          reason: "Data pipeline for Elasticsearch"
+          strength: 0.90
+        - server: "Redis"
+          reason: "Cache search results"
+          strength: 0.75
+      moderate:
+        - server: "PostgreSQL Full-Text"
+          reason: "Simpler search alternative"
+          strength: 0.60
+    alternatives:
+      similar_purpose:
+        - server: "Algolia"
+          reason: "Managed search service"
+          similarity: 0.80
+        - server: "MeiliSearch"
+          reason: "Simpler search alternative"
+          similarity: 0.75
+      different_approach:
+        - server: "PostgreSQL Full-Text"
+          reason: "Database-native search"
+          similarity: 0.60
+        - server: "Typesense"
+          reason: "Fast search alternative"
+          similarity: 0.70
+    typically_followed_by:
+      - "Search UI components"
+      - "Relevance tuning"
+      - "Analytics integration"
+      
+  # AI Platforms
+  claude_api:
+    name: "Anthropic Claude API"
+    complementary:
+      strong:
+        - server: "Redis Cache"
+          reason: "Cache AI responses for cost/speed"
+          strength: 0.90
+        - server: "Qdrant Vector DB"
+          reason: "Semantic search for RAG"
+          strength: 0.85
+        - server: "PostgreSQL"
+          reason: "Store conversation history"
+          strength: 0.80
+      moderate:
+        - server: "LangChain"
+          reason: "AI orchestration framework"
+          strength: 0.75
+        - server: "Pinecone"
+          reason: "Vector search alternative"
+          strength: 0.70
+    alternatives:
+      similar_purpose:
+        - server: "OpenAI Platform"
+          reason: "Alternative LLM provider"
+          similarity: 0.90
+        - server: "Cohere"
+          reason: "Alternative language AI"
+          similarity: 0.75
+      specialized:
+        - server: "Perplexity AI"
+          reason: "Search-focused AI"
+          similarity: 0.65
+        - server: "Hugging Face"
+          reason: "Open model alternative"
+          similarity: 0.70
+    typically_followed_by:
+      - "Response caching (Redis)"
+      - "Vector storage (Qdrant/Pinecone)"
+      - "Prompt management system"
+      
+  # Caching Solutions
+  redis:
+    name: "Redis Cache Database"
+    complementary:
+      strong:
+        - server: "PostgreSQL"
+          reason: "Cache for database queries"
+          strength: 0.85
+        - server: "Node.js/Python backends"
+          reason: "Session storage"
+          strength: 0.80
+        - server: "Bull Queue"
+          reason: "Redis-based job queue"
+          strength: 0.75
+      moderate:
+        - server: "Elasticsearch"
+          reason: "Cache search results"
+          strength: 0.70
+    alternatives:
+      similar_purpose:
+        - server: "Memcached"
+          reason: "Simpler caching alternative"
+          similarity: 0.75
+        - server: "Hazelcast"
+          reason: "Distributed cache alternative"
+          similarity: 0.70
+      different_approach:
+        - server: "CDN caching"
+          reason: "Edge caching alternative"
+          similarity: 0.60
+        - server: "Browser caching"
+          reason: "Client-side alternative"
+          similarity: 0.50
+    typically_followed_by:
+      - "Cache invalidation strategy"
+      - "Monitoring setup"
+      - "Clustering for HA"
+
+# Recommendation Patterns
+recommendation_patterns:
+  
+  starter_stack:
+    description: "Common starting combinations"
+    patterns:
+      web_app:
+        initial: ["Next.js", "PostgreSQL"]
+        immediate_additions: ["Tailwind CSS", "TypeScript"]
+        week_2: ["Redis Cache", "Sentry"]
+        month_2: ["Elasticsearch", "CI/CD"]
+        
+      api_service:
+        initial: ["FastAPI", "PostgreSQL"]
+        immediate_additions: ["SQLAlchemy", "Pydantic"]
+        week_2: ["Redis", "Pytest"]
+        month_2: ["Kafka", "Monitoring"]
+        
+      ai_app:
+        initial: ["Claude API", "Redis"]
+        immediate_additions: ["PostgreSQL", "Rate limiting"]
+        week_2: ["Vector DB", "LangChain"]
+        month_2: ["Fine-tuning", "Analytics"]
+        
+  upgrade_paths:
+    description: "Natural progression paths"
+    from_to:
+      sqlite_to_postgresql:
+        trigger: "Need concurrent writes"
+        path: ["SQLite", "PostgreSQL", "Add migrations"]
+        
+      basic_to_elasticsearch:
+        trigger: "Need advanced search"
+        path: ["Database search", "MeiliSearch", "Elasticsearch"]
+        
+      logs_to_monitoring:
+        trigger: "Need observability"
+        path: ["Console logs", "Sentry", "APM", "Full observability"]
+        
+  technology_ecosystems:
+    description: "Servers that form ecosystems"
+    ecosystems:
+      elastic_stack:
+        core: ["Elasticsearch", "Kibana", "Logstash", "Beats"]
+        extends_with: ["APM", "Machine Learning", "Security"]
+        
+      aws_ecosystem:
+        core: ["Lambda", "DynamoDB", "API Gateway", "CloudWatch"]
+        extends_with: ["S3", "SQS", "Cognito", "CDK"]
+        
+      kubernetes_ecosystem:
+        core: ["Kubernetes", "Helm", "Prometheus", "Grafana"]
+        extends_with: ["Istio", "ArgoCD", "Falco", "OPA"]
+
+# Similarity Scoring Algorithm
+scoring_algorithm:
+  
+  calculate_similarity:
+    inputs:
+      - "technology_overlap"
+      - "use_case_similarity"
+      - "integration_compatibility"
+      - "user_pattern_correlation"
+    formula: |
+      similarity_score = (
+        technology_overlap * 0.25 +
+        use_case_similarity * 0.35 +
+        integration_compatibility * 0.25 +
+        user_pattern_correlation * 0.15
+      )
+      
+  recommendation_threshold:
+    strong_recommendation: ">= 0.80"
+    moderate_recommendation: "0.60 - 0.79"
+    weak_recommendation: "0.40 - 0.59"
+    no_recommendation: "< 0.40"
+    
+  boost_factors:
+    same_tier: "+0.10"
+    proven_combination: "+0.15"
+    same_vendor: "+0.05"
+    community_validated: "+0.10"
+
+# Anti-Patterns to Avoid
+anti_patterns:
+  
+  conflicting_servers:
+    - servers: ["Multiple ORMs for same database"]
+      reason: "Complexity without benefit"
+      
+    - servers: ["Competing monitoring solutions"]
+      reason: "Redundant data and cost"
+      
+    - servers: ["Multiple caching layers"]
+      reason: "Cache invalidation complexity"
+      
+  premature_additions:
+    - pattern: "Adding Kubernetes before proving scale need"
+      alternative: "Start with simple deployment"
+      
+    - pattern: "Multiple databases before data modeling"
+      alternative: "Start with one versatile database"
+      
+    - pattern: "Complex monitoring before basic errors"
+      alternative: "Start with error tracking"
+
+# Recommendation Templates
+recommendation_templates:
+  
+  complementary:
+    template: |
+      Since you're using {current_server}, you might benefit from:
+      - {recommended_server}: {reason}
+      - Compatibility: {compatibility_score}
+      - Setup effort: {setup_complexity}
+      - Added value: {value_proposition}
+      
+  alternative:
+    template: |
+      Alternative to {current_server}:
+      - {alternative_server}: {comparison}
+      - Pros: {advantages}
+      - Cons: {disadvantages}
+      - Migration effort: {migration_complexity}
+      
+  progression:
+    template: |
+      Natural next step from {current_server}:
+      - Current: {current_state}
+      - Recommended: {next_server}
+      - Why now: {trigger_reason}
+      - Implementation: {implementation_path}
+
+# API Integration Points
+api_endpoints:
+  
+  get_similar:
+    endpoint: "/similarity/find"
+    parameters:
+      server_id: "string"
+      similarity_type: "complementary|alternative|progression"
+      limit: "integer"
+    response: "Ranked list of similar servers"
+    
+  get_stack_recommendations:
+    endpoint: "/similarity/stack"
+    parameters:
+      current_stack: "array of server_ids"
+      goal: "string"
+    response: "Missing pieces and recommendations"
+    
+  check_compatibility:
+    endpoint: "/similarity/compatibility"
+    parameters:
+      server_a: "string"
+      server_b: "string"
+    response: "Compatibility score and notes"

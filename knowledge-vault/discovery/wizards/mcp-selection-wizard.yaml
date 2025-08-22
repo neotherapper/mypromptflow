@@ -1,0 +1,437 @@
+# MCP Selection Wizard
+# Interactive questionnaire for discovering the right MCP servers
+# Guides users through a decision tree to find optimal solutions
+
+wizard_metadata:
+  name: "MCP Server Selection Wizard"
+  version: "1.0.0"
+  created: "2025-08-21"
+  purpose: "Guide users to the right MCP servers through intelligent questioning"
+  description: "Answer a few questions to get personalized MCP server recommendations"
+
+# Wizard Flow Configuration
+wizard_config:
+  max_questions: 7
+  allow_skip: true
+  show_confidence_score: true
+  provide_alternatives: true
+  save_preferences: true
+
+# Question Flow
+questions:
+  
+  # Question 1: Primary Goal
+  q1_primary_goal:
+    id: "primary_goal"
+    text: "What's your primary goal?"
+    type: "single_choice"
+    required: true
+    options:
+      build_application:
+        label: "Build a new application"
+        next: "q2_application_type"
+        tags: ["development", "new_project"]
+        
+      enhance_existing:
+        label: "Enhance existing application"
+        next: "q2_enhancement_type"
+        tags: ["improvement", "existing_project"]
+        
+      solve_problem:
+        label: "Solve a specific problem"
+        next: "q2_problem_category"
+        tags: ["problem_solving", "specific_need"]
+        
+      explore_options:
+        label: "Explore what's possible"
+        next: "q2_interest_area"
+        tags: ["discovery", "exploration"]
+  
+  # Question 2A: Application Type
+  q2_application_type:
+    id: "application_type"
+    text: "What type of application are you building?"
+    type: "single_choice"
+    condition: "primary_goal == build_application"
+    options:
+      web_app:
+        label: "Web application"
+        next: "q3_tech_stack"
+        recommendations:
+          immediate: ["Next.js", "FastAPI", "PostgreSQL"]
+          
+      api_service:
+        label: "API service"
+        next: "q3_api_type"
+        recommendations:
+          immediate: ["FastAPI", "Express", "PostgreSQL"]
+          
+      ai_application:
+        label: "AI-powered application"
+        next: "q3_ai_capabilities"
+        recommendations:
+          immediate: ["Claude API", "OpenAI", "Qdrant"]
+          
+      data_platform:
+        label: "Data platform"
+        next: "q3_data_type"
+        recommendations:
+          immediate: ["PostgreSQL", "Elasticsearch", "Kafka"]
+  
+  # Question 2B: Enhancement Type
+  q2_enhancement_type:
+    id: "enhancement_type"
+    text: "What do you want to enhance?"
+    type: "multiple_choice"
+    condition: "primary_goal == enhance_existing"
+    options:
+      add_monitoring:
+        label: "Add monitoring/observability"
+        recommendations:
+          immediate: ["Sentry", "Prometheus", "Grafana"]
+          complementary: ["New Relic", "LogRocket"]
+          
+      improve_performance:
+        label: "Improve performance"
+        recommendations:
+          immediate: ["Redis", "CDN", "Caching"]
+          analysis: ["Performance profiling needed"]
+          
+      add_search:
+        label: "Add search functionality"
+        recommendations:
+          immediate: ["Elasticsearch", "MeiliSearch", "Algolia"]
+          
+      add_ai_features:
+        label: "Add AI capabilities"
+        recommendations:
+          immediate: ["Claude API", "OpenAI", "LangChain"]
+          
+      improve_testing:
+        label: "Improve testing"
+        recommendations:
+          immediate: ["Jest", "Pytest", "Playwright"]
+  
+  # Question 2C: Problem Category
+  q2_problem_category:
+    id: "problem_category"
+    text: "What problem are you trying to solve?"
+    type: "single_choice"
+    condition: "primary_goal == solve_problem"
+    options:
+      errors_bugs:
+        label: "Errors and bugs in production"
+        solution_path: "monitoring_path"
+        recommendations:
+          immediate: ["Sentry", "LogRocket", "New Relic"]
+          
+      slow_performance:
+        label: "Slow performance"
+        solution_path: "performance_path"
+        recommendations:
+          immediate: ["Redis", "CDN", "Profiling tools"]
+          
+      data_management:
+        label: "Data management issues"
+        solution_path: "data_path"
+        recommendations:
+          immediate: ["PostgreSQL", "Migration tools", "ORMs"]
+          
+      user_experience:
+        label: "Poor user experience"
+        solution_path: "ux_path"
+        recommendations:
+          immediate: ["LogRocket", "Analytics", "A/B testing"]
+  
+  # Question 3: Technology Stack
+  q3_tech_stack:
+    id: "tech_stack"
+    text: "What's your primary technology stack?"
+    type: "multiple_choice"
+    options:
+      frontend:
+        - label: "React"
+          boost_servers: ["Next.js", "Vite", "Jest"]
+        - label: "Vue"
+          boost_servers: ["Nuxt", "Vite", "Vitest"]
+        - label: "Angular"
+          boost_servers: ["Nx", "Karma", "Protractor"]
+          
+      backend:
+        - label: "Python"
+          boost_servers: ["FastAPI", "Django", "SQLAlchemy"]
+        - label: "Node.js"
+          boost_servers: ["Express", "NestJS", "TypeORM"]
+        - label: "Go"
+          boost_servers: ["Gin", "GORM", "Echo"]
+          
+      database:
+        - label: "PostgreSQL"
+          boost_servers: ["Prisma", "SQLAlchemy", "PostGIS"]
+        - label: "MongoDB"
+          boost_servers: ["Mongoose", "MongoDB Atlas"]
+        - label: "Redis"
+          boost_servers: ["Redis Stack", "RedisJSON"]
+  
+  # Question 4: Team Size and Experience
+  q4_team_context:
+    id: "team_context"
+    text: "Tell us about your team"
+    type: "composite"
+    fields:
+      team_size:
+        type: "single_choice"
+        options:
+          - label: "Solo developer"
+            prefer: ["simple_setup", "good_docs", "community_support"]
+          - label: "Small team (2-5)"
+            prefer: ["collaboration_tools", "standard_practices"]
+          - label: "Large team (6+)"
+            prefer: ["enterprise_features", "rbac", "audit_logs"]
+            
+      experience_level:
+        type: "single_choice"
+        options:
+          - label: "Beginner"
+            prefer: ["easy_setup", "tutorials", "managed_services"]
+          - label: "Intermediate"
+            prefer: ["flexible", "customizable", "good_defaults"]
+          - label: "Expert"
+            prefer: ["advanced_features", "fine_control", "performance"]
+  
+  # Question 5: Requirements and Constraints
+  q5_requirements:
+    id: "requirements"
+    text: "What are your key requirements?"
+    type: "multiple_choice"
+    max_selections: 3
+    options:
+      high_performance:
+        label: "High performance"
+        boost_servers: ["Redis", "Rust-based", "Native"]
+        
+      easy_setup:
+        label: "Easy setup"
+        boost_servers: ["Managed services", "Docker", "One-click"]
+        
+      cost_effective:
+        label: "Cost-effective"
+        boost_servers: ["Open source", "Free tier", "Self-hosted"]
+        
+      enterprise_grade:
+        label: "Enterprise-grade"
+        boost_servers: ["New Relic", "DataDog", "AWS"]
+        
+      privacy_focused:
+        label: "Privacy-focused"
+        boost_servers: ["Self-hosted", "Brave", "Open source"]
+        
+      scalable:
+        label: "Highly scalable"
+        boost_servers: ["Kubernetes", "Serverless", "Auto-scaling"]
+  
+  # Question 6: Timeline
+  q6_timeline:
+    id: "timeline"
+    text: "When do you need this working?"
+    type: "single_choice"
+    options:
+      today:
+        label: "Today"
+        filter: "setup_time <= 30"
+        prefer: ["quick_wins", "instant_setup"]
+        
+      this_week:
+        label: "This week"
+        filter: "setup_time <= 240"
+        prefer: ["proven_solutions", "good_docs"]
+        
+      this_month:
+        label: "This month"
+        filter: "any"
+        prefer: ["best_practices", "long_term_value"]
+        
+      planning_phase:
+        label: "Just planning"
+        filter: "any"
+        prefer: ["comprehensive", "future_proof"]
+  
+  # Question 7: Budget
+  q7_budget:
+    id: "budget"
+    text: "What's your budget for tools and services?"
+    type: "single_choice"
+    optional: true
+    options:
+      free_only:
+        label: "Free/Open source only"
+        filter: "pricing == free"
+        
+      small_budget:
+        label: "< $100/month"
+        filter: "pricing <= 100"
+        
+      moderate_budget:
+        label: "$100-1000/month"
+        filter: "pricing <= 1000"
+        
+      enterprise_budget:
+        label: "> $1000/month"
+        filter: "any"
+
+# Recommendation Logic
+recommendation_engine:
+  
+  scoring_algorithm:
+    base_score: "From tier and quality_score"
+    modifiers:
+      tech_stack_match: "+2.0 if exact match"
+      requirement_match: "+1.0 per requirement met"
+      timeline_fit: "+1.5 if meets timeline"
+      budget_fit: "+1.0 if within budget"
+      team_fit: "+0.5 if matches team profile"
+      
+  confidence_calculation:
+    high_confidence: ">= 3 matching criteria"
+    medium_confidence: "2 matching criteria"
+    low_confidence: "1 matching criterion"
+    
+  result_structure:
+    primary_recommendations:
+      count: 3-5
+      criteria: "Highest scores with high confidence"
+      
+    alternative_options:
+      count: 2-3
+      criteria: "Different approach or technology"
+      
+    complementary_servers:
+      count: 3-5
+      criteria: "Work well with primary choices"
+
+# Wizard Result Templates
+result_templates:
+  
+  web_application_stack:
+    scenario: "Building a web application"
+    confidence: "high"
+    primary_stack:
+      frontend:
+        recommended: "Next.js + TypeScript + Tailwind"
+        servers: ["Next.js Framework", "Tailwind CSS"]
+        setup_time: "2 hours"
+        
+      backend:
+        recommended: "FastAPI + PostgreSQL"
+        servers: ["FastAPI", "PostgreSQL", "SQLAlchemy"]
+        setup_time: "3 hours"
+        
+      monitoring:
+        recommended: "Sentry + Basic Metrics"
+        servers: ["Sentry Error Tracking"]
+        setup_time: "30 minutes"
+        
+    total_setup_time: "~6 hours"
+    first_step: "Start with Next.js and PostgreSQL"
+    
+  monitoring_solution:
+    scenario: "Adding monitoring to existing app"
+    confidence: "high"
+    immediate_value:
+      error_tracking:
+        server: "Sentry"
+        setup: "15 minutes"
+        value: "Catch all errors immediately"
+        
+      performance:
+        server: "New Relic APM"
+        setup: "30 minutes"
+        value: "Full performance visibility"
+        
+      frontend:
+        server: "LogRocket"
+        setup: "20 minutes"
+        value: "See what users see"
+        
+    progressive_path:
+      week_1: "Sentry for errors"
+      week_2: "Add performance monitoring"
+      week_3: "Add custom metrics"
+      week_4: "Build dashboards"
+      
+  ai_integration:
+    scenario: "Adding AI features"
+    confidence: "high"
+    quick_start:
+      llm:
+        server: "Claude API"
+        setup: "30 minutes"
+        capabilities: ["Text generation", "Analysis", "Code"]
+        
+      caching:
+        server: "Redis"
+        setup: "20 minutes"
+        purpose: "Cache AI responses"
+        
+      vector_search:
+        server: "Qdrant"
+        setup: "45 minutes"
+        purpose: "Semantic search"
+        
+    use_cases_enabled:
+      - "Chatbot in 1 hour"
+      - "Content generation in 30 minutes"
+      - "Semantic search in 2 hours"
+
+# Wizard Shortcuts
+shortcuts:
+  
+  "I need monitoring NOW":
+    instant_result:
+      servers: ["Sentry"]
+      setup_time: "15 minutes"
+      next_steps: ["Add New Relic", "Add Grafana"]
+      
+  "Just want to try AI":
+    instant_result:
+      servers: ["Claude API", "Memory MCP"]
+      setup_time: "30 minutes"
+      next_steps: ["Add Redis", "Add vector DB"]
+      
+  "Build a React app":
+    instant_result:
+      servers: ["Next.js", "PostgreSQL", "Tailwind"]
+      setup_time: "2 hours"
+      next_steps: ["Add Sentry", "Add Redis"]
+      
+  "Need search functionality":
+    instant_result:
+      servers: ["MeiliSearch"]
+      setup_time: "30 minutes"
+      alternatives: ["Elasticsearch", "Algolia"]
+
+# Follow-up Actions
+follow_up_actions:
+  
+  after_selection:
+    - action: "Generate implementation guide"
+      details: "Step-by-step setup instructions"
+      
+    - action: "Create integration checklist"
+      details: "Ensure smooth integration"
+      
+    - action: "Suggest learning resources"
+      details: "Tutorials and documentation"
+      
+    - action: "Identify potential issues"
+      details: "Common pitfalls and solutions"
+      
+  progressive_enhancement:
+    - action: "Plan next additions"
+      details: "What to add after initial setup"
+      
+    - action: "Scaling recommendations"
+      details: "How to scale when needed"
+      
+    - action: "Migration paths"
+      details: "Moving to more advanced solutions"
