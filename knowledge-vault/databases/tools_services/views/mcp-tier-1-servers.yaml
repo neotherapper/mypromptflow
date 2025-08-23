@@ -9,8 +9,8 @@ view_info:
   version: "2.0.0"
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
-  last_updated: "2025-08-19"
-  total_servers: 118
+  last_updated: "2025-08-22"
+  total_servers: 122
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -363,6 +363,15 @@ enterprise_integration:
       business_value: "Comprehensive monitoring and logging for AWS infrastructure and applications"
       technology_alignment: 10
       business_relevance: 9
+      
+    - name: "ArgoCD GitOps Deployment MCP Server"
+      composite_score: 8.8
+      category: "DevOps & Deployment"
+      file_path: "knowledge-vault/databases/tools_services/items/argocd-gitops-deployment-mcp-server.md"
+      production_readiness: 94
+      business_value: "Kubernetes-native GitOps continuous deployment with declarative application delivery"
+      technology_alignment: 8
+      business_relevance: 9
 
 monitoring_observability:
   description: "Advanced monitoring, observability, and performance tracking infrastructure"
@@ -690,6 +699,24 @@ ai_development_tools:
 security_compliance:
   description: "Security tools and compliance automation"
   servers:
+    - name: "Snyk Security Scanning MCP Server"
+      composite_score: 9.0
+      category: "Security & Compliance"
+      file_path: "knowledge-vault/databases/tools_services/items/snyk-security-scanning-mcp-server.md"
+      production_readiness: 95
+      business_value: "Enterprise-grade vulnerability detection and automated security remediation"
+      technology_alignment: 9
+      business_relevance: 9
+      
+    - name: "HashiCorp Vault Secrets Management MCP Server"
+      composite_score: 9.1
+      category: "Security & Compliance"
+      file_path: "knowledge-vault/databases/tools_services/items/hashicorp-vault-secrets-mcp-server.md"
+      production_readiness: 96
+      business_value: "Industry-standard secrets management and encryption as a service"
+      technology_alignment: 9
+      business_relevance: 9
+      
     - name: "PortSwigger Burp Suite Official MCP Server"
       composite_score: 9.5
       category: "Security Testing"
@@ -779,6 +806,15 @@ api_development:
 business_applications:
   description: "Business productivity and workflow applications"
   servers:
+    - name: "Slack Team Communication MCP Server"
+      composite_score: 9.2
+      category: "Communication & Collaboration"
+      file_path: "knowledge-vault/databases/tools_services/items/slack-team-communication-mcp-server.md"
+      production_readiness: 98
+      business_value: "Enterprise team communication with extensive integration ecosystem"
+      technology_alignment: 9
+      business_relevance: 9
+      
     - name: "Shopify MCP Server"
       composite_score: 8.65
       category: "E-commerce Platform"
