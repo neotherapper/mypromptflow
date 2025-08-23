@@ -10,7 +10,7 @@ view_info:
   created: "2025-07-30"
   purpose: "Enable immediate deployment of highest-priority MCP servers with proven business value"
   last_updated: "2025-08-22"
-  total_servers: 122
+  total_servers: 121
   scoring_algorithm: "Repository-Aligned Scoring Algorithm v6.0.0"
 
 # View Configuration
@@ -870,15 +870,6 @@ business_applications:
       file_path: "knowledge-vault/databases/tools_services/items/sec-edgar-mcp-server.md"
       production_readiness: 88
       business_value: "Financial regulatory data access and compliance"
-      
-    - name: "Slack Advanced MCP Server"
-      composite_score: 8.9
-      category: "Team Communication"
-      file_path: "knowledge-vault/databases/tools_services/items/slack-advanced-mcp-server-comprehensive-profile.md"
-      production_readiness: 93
-      business_value: "Advanced Slack workspace integration with stealth mode and enterprise features"
-      technology_alignment: 9
-      business_relevance: 9
       
     - name: "Stripe Official MCP Server"
       composite_score: 9.4
