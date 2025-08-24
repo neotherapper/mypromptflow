@@ -1,0 +1,45 @@
+{
+  "tasks": [
+    {
+      "task_id": "main_monitoring",
+      "name": "Main Topic Monitoring",
+      "interval_minutes": 30,
+      "next_run": "2025-08-21T23:13:27.056558",
+      "last_run": "2025-08-21T22:42:05.553336",
+      "status": "completed",
+      "error_count": 0,
+      "max_retries": 3,
+      "metadata": {
+        "description": "Monitor all RSS and MCP sources for new content",
+        "sources_count": 11
+      }
+    },
+    {
+      "task_id": "priority_monitoring",
+      "name": "Priority Source Monitoring",
+      "interval_minutes": 10,
+      "next_run": "2025-08-21T22:51:59.366893",
+      "last_run": null,
+      "status": "pending",
+      "error_count": 0,
+      "max_retries": 3,
+      "metadata": {
+        "description": "Monitor high-authority sources more frequently",
+        "priority_sources": [
+          "React Blog",
+          "Dan Abramov Blog",
+          "Reddit ClaudeAI"
+        ]
+      }
+    }
+  ],
+  "last_saved": "2025-08-21T22:43:27.056580",
+  "stats": {
+    "total_executions": 1,
+    "successful_executions": 1,
+    "failed_executions": 0,
+    "total_runtime_seconds": 81.503213,
+    "average_execution_time": 81.503213,
+    "last_cleanup": "2025-08-21 22:42:05.552655"
+  }
+}
