@@ -111,6 +111,38 @@ class TopicQualityScorer:
         if item.metadata.get("source_type") == "official":
             authority = min(1.0, authority + 0.2)
         
+        # Enhanced scoring for development tool ecosystem sources
+        source_name = item.metadata.get("source_name", "").lower()
+        source_url = item.url.lower() if hasattr(item, 'url') and item.url else ""
+        
+        # Tier 1 Official Sources - Maximum Authority (1.0)
+        tier_1_patterns = [
+            "react.dev", "nextjs.org", "anthropic.com", 
+            "vercel.com", "figma.com", "github.blog",
+            "aws.amazon.com/blogs", "microsoft.com",
+            "typescript"
+        ]
+        
+        if any(pattern in source_url or pattern in source_name for pattern in tier_1_patterns):
+            authority = 1.0
+        
+        # Tier 2 Community Leaders - High Authority (0.9-0.95)
+        elif any(pattern in source_url or pattern in source_name for pattern in [
+            "overreacted.io", "kentcdodds.com", "cursor.com",
+            "storybook.js.org", "playwright.dev", "notion.so"
+        ]):
+            authority = max(authority, 0.95)
+        
+        # Development tool official channels - High Authority (0.85-0.9)
+        elif any(pattern in source_url or pattern in source_name for pattern in [
+            "pnpm.io", "blog.nrwl.io", "vitest.dev"
+        ]):
+            authority = max(authority, 0.85)
+        
+        # Additional boost for official blogs in devtools ecosystem
+        if "official" in source_name or "blog" in source_url:
+            authority = min(1.0, authority + 0.1)
+        
         return authority
     
     def _score_content_accuracy(self, item: ContentItem) -> float:
@@ -118,18 +150,43 @@ class TopicQualityScorer:
         score = 0.5  # Base score
         
         content = (item.content or "").lower()
+        title = item.title.lower() if item.title else ""
         
-        # Positive indicators
-        if any(word in content for word in ["verified", "confirmed", "official"]):
+        # Development tool content quality indicators
+        dev_quality_indicators = [
+            "release", "version", "update", "changelog", "documentation",
+            "tutorial", "guide", "best practice", "api", "feature",
+            "security", "performance", "bug fix", "improvement"
+        ]
+        
+        # Enhanced positive indicators for development content
+        positive_indicators = ["verified", "confirmed", "official"] + dev_quality_indicators
+        matches = sum(1 for indicator in positive_indicators if indicator in content or indicator in title)
+        
+        if matches >= 3:
+            score += 0.3
+        elif matches >= 2:
             score += 0.2
+        elif matches >= 1:
+            score += 0.1
         
-        # Check for citations/references
+        # Check for citations/references (common in technical content)
         if "http://" in content or "https://" in content:
             score += 0.1
         
+        # Check for code examples (high value for dev content)
+        if any(marker in content for marker in ["```", "<code>", "npm install", "git clone"]):
+            score += 0.15
+        
         # Negative indicators
-        if any(word in content for word in ["rumor", "unconfirmed", "allegedly"]):
+        negative_indicators = ["rumor", "unconfirmed", "allegedly", "clickbait", "leaked"]
+        if any(word in content or word in title for word in negative_indicators):
             score -= 0.3
+        
+        # Promotional content detection (common in tech blogs)
+        promotional_terms = ["buy now", "limited offer", "discount", "sale"]
+        if any(term in content or term in title for term in promotional_terms):
+            score -= 0.2
         
         return max(0.0, min(1.0, score))
     

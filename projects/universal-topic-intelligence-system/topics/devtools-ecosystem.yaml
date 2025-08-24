@@ -1,0 +1,337 @@
+# Development Tools Ecosystem Topic Configuration
+# Monitors official blogs from all tools in AI SDLC workflow blueprint
+
+topic_id: "devtools-ecosystem"
+name: "Development Tools Ecosystem"
+description: "Comprehensive monitoring of official blogs from development tools, AI platforms, and infrastructure services"
+priority: "high"
+authority_score: 0.95  # High authority for official sources
+
+# Content Categories
+categories:
+  - development-tools
+  - ai-platforms
+  - infrastructure
+  - testing-frameworks
+  - design-tools
+  - collaboration-platforms
+  - deployment-services
+
+# Monitoring Configuration
+monitoring:
+  frequency: "4h"  # Every 4 hours for high-priority tools
+  max_items_per_cycle: 200
+  quality_threshold: 0.7
+  relevance_threshold: 0.8
+
+# Source Configuration
+sources:
+  # AI Development Platforms
+  - name: "Anthropic/Claude Blog"
+    url: "https://www.anthropic.com/blog"
+    type: "rss"
+    rss_url: "https://www.anthropic.com/blog/rss.xml"
+    authority: 1.0
+    categories: ["ai-platforms", "development-tools"]
+    keywords: ["claude", "ai", "coding", "development", "api", "integration"]
+    notes: "Primary AI development platform - highest priority"
+    
+  - name: "Cursor AI Blog"
+    url: "https://cursor.com/en/blog"
+    type: "rss"
+    rss_url: "https://cursor.com/rss.xml"
+    authority: 0.9
+    categories: ["development-tools", "ai-platforms"]
+    keywords: ["cursor", "ide", "ai-coding", "editor", "development"]
+    notes: "Primary IDE - monitor for feature updates"
+    
+  # Frontend Development
+  - name: "Vercel Blog"
+    url: "https://vercel.com/blog"
+    type: "rss"
+    rss_url: "https://vercel.com/blog/rss.xml"
+    authority: 0.95
+    categories: ["deployment-services", "infrastructure"]
+    keywords: ["vercel", "next.js", "deployment", "frontend", "performance"]
+    notes: "Primary deployment platform"
+    
+  - name: "Next.js Blog"
+    url: "https://nextjs.org/blog"
+    type: "rss"
+    rss_url: "https://nextjs.org/feed.xml"
+    authority: 0.95
+    categories: ["development-tools", "infrastructure"]
+    keywords: ["nextjs", "react", "frontend", "framework", "performance"]
+    notes: "Primary frontend framework"
+    
+  - name: "React Dev Blog"
+    url: "https://react.dev/blog"
+    type: "rss"
+    rss_url: "https://react.dev/rss.xml"
+    authority: 0.95
+    categories: ["development-tools"]
+    keywords: ["react", "javascript", "frontend", "hooks", "components"]
+    notes: "Core frontend library"
+    
+  # Testing and Quality
+  - name: "Playwright Blog"
+    url: "https://dev.to/playwright"
+    type: "rss"
+    rss_url: "https://dev.to/feed/playwright"
+    authority: 0.9
+    categories: ["testing-frameworks"]
+    keywords: ["playwright", "testing", "e2e", "automation", "browsers"]
+    notes: "Primary testing framework - dev.to official blog"
+    
+  - name: "Storybook Blog"
+    url: "https://storybook.js.org/blog"
+    type: "rss"
+    rss_url: "https://storybook.js.org/rss.xml"
+    authority: 0.9
+    categories: ["testing-frameworks", "development-tools"]
+    keywords: ["storybook", "components", "ui", "testing", "design-system"]
+    notes: "Component development and testing"
+    
+  - name: "Vitest Releases"
+    url: "https://github.com/vitest-dev/vitest/releases"
+    type: "rss"
+    rss_url: "https://github.com/vitest-dev/vitest/releases.atom"
+    authority: 0.85
+    categories: ["testing-frameworks"]
+    keywords: ["vitest", "unit-testing", "javascript", "vite", "testing", "releases"]
+    notes: "Unit testing framework - GitHub releases feed"
+    
+  # AWS Infrastructure
+  - name: "AWS CDK Blog"
+    url: "https://aws.amazon.com/blogs/developer/category/developer-tools/aws-cloud-development-kit-cdk/"
+    type: "rss"
+    rss_url: "https://aws.amazon.com/blogs/developer/category/developer-tools/aws-cloud-development-kit-cdk/feed/"
+    authority: 0.95
+    categories: ["infrastructure", "development-tools"]
+    keywords: ["aws", "cdk", "infrastructure", "cloud", "deployment"]
+    notes: "Primary infrastructure as code tool"
+    
+  - name: "AWS RDS Blog"
+    url: "https://aws.amazon.com/blogs/database/category/database/amazon-rds/"
+    type: "rss"
+    rss_url: "https://aws.amazon.com/blogs/database/category/database/amazon-rds/feed/"
+    authority: 0.9
+    categories: ["infrastructure"]
+    keywords: ["aws", "rds", "database", "postgresql", "aurora"]
+    notes: "Database infrastructure"
+    
+  - name: "AWS Aurora Blog"
+    url: "https://aws.amazon.com/blogs/database/category/database/amazon-aurora/"
+    type: "rss"
+    rss_url: "https://aws.amazon.com/blogs/database/category/database/amazon-aurora/feed/"
+    authority: 0.9
+    categories: ["infrastructure"]
+    keywords: ["aws", "aurora", "postgresql", "database", "performance"]
+    notes: "Primary database platform"
+    
+  # Collaboration and Design
+  - name: "Figma Blog"
+    url: "https://www.figma.com/blog"
+    type: "rss"
+    rss_url: "https://www.figma.com/blog/rss.xml"
+    authority: 0.9
+    categories: ["design-tools", "collaboration-platforms"]
+    keywords: ["figma", "design", "ui", "ux", "collaboration", "mcp"]
+    notes: "Primary design platform"
+    
+  - name: "Notion Blog"
+    url: "https://www.notion.so/blog"
+    type: "rss"
+    rss_url: "https://www.notion.so/blog/rss.xml"
+    authority: 0.85
+    categories: ["collaboration-platforms", "development-tools"]
+    keywords: ["notion", "documentation", "mcp", "productivity", "collaboration"]
+    notes: "Documentation and project management"
+    
+  - name: "GitHub Blog"
+    url: "https://github.blog"
+    type: "rss"
+    rss_url: "https://github.blog/feed/"
+    authority: 0.95
+    categories: ["development-tools", "collaboration-platforms"]
+    keywords: ["github", "git", "actions", "ci-cd", "development", "security"]
+    notes: "Primary version control and CI/CD"
+    
+  # Microsoft/Teams Integration
+  - name: "Microsoft Teams Developer Blog"
+    url: "https://devblogs.microsoft.com/microsoft365dev/category/microsoft-teams/"
+    type: "rss"
+    rss_url: "https://devblogs.microsoft.com/microsoft365dev/category/microsoft-teams/feed/"
+    authority: 0.8
+    categories: ["collaboration-platforms"]
+    keywords: ["teams", "microsoft", "collaboration", "api", "integration"]
+    notes: "Team communication platform"
+    
+  # Additional Development Tools
+  - name: "TypeScript Blog"
+    url: "https://devblogs.microsoft.com/typescript/"
+    type: "rss"
+    rss_url: "https://devblogs.microsoft.com/typescript/feed/"
+    authority: 0.9
+    categories: ["development-tools"]
+    keywords: ["typescript", "javascript", "types", "development", "language"]
+    notes: "Primary programming language"
+    
+  - name: "pnpm Blog"
+    url: "https://pnpm.io/blog"
+    type: "rss"
+    rss_url: "https://pnpm.io/blog/rss.xml"
+    authority: 0.8
+    categories: ["development-tools"]
+    keywords: ["pnpm", "package-manager", "npm", "dependencies", "monorepo"]
+    notes: "Primary package manager"
+    
+  - name: "Nx Dev Blog"
+    url: "https://blog.nrwl.io"
+    type: "rss" 
+    rss_url: "https://blog.nrwl.io/feed"
+    authority: 0.85
+    categories: ["development-tools", "infrastructure"]
+    keywords: ["nx", "monorepo", "build-system", "development", "toolchain"]
+    notes: "Monorepo management system"
+    
+  # Authentication and Security
+  - name: "WorkOS Blog"
+    url: "https://workos.com/blog"
+    type: "rss"
+    rss_url: "https://workos.com/blog/rss.xml"
+    authority: 0.9
+    categories: ["collaboration-platforms", "infrastructure"]
+    keywords: ["workos", "authentication", "sso", "security", "enterprise"]
+    notes: "Authentication platform - selected for AI SDLC workflow"
+    
+  # Deployment Platforms
+  - name: "Railway Blog"
+    url: "https://blog.railway.com"
+    type: "rss"
+    rss_url: "https://blog.railway.com/rss.xml"
+    authority: 0.85
+    categories: ["deployment-services", "infrastructure"]
+    keywords: ["railway", "deployment", "hosting", "infrastructure", "serverless"]
+    notes: "Deployment platform - infrastructure option"
+    
+  - name: "Render Blog"
+    url: "https://render.com/blog"
+    type: "rss"
+    rss_url: "https://render.com/blog/feed.rss"
+    authority: 0.85
+    categories: ["deployment-services", "infrastructure"]
+    keywords: ["render", "deployment", "hosting", "web-services", "infrastructure"]
+    notes: "Deployment platform - infrastructure option"
+    
+  # Database and AI
+  - name: "PostgreSQL Releases"
+    url: "https://github.com/postgres/postgres/releases"
+    type: "rss"
+    rss_url: "https://github.com/postgres/postgres/releases.atom"
+    authority: 0.95
+    categories: ["infrastructure"]
+    keywords: ["postgresql", "database", "releases", "sql", "performance"]
+    notes: "Primary database platform - GitHub releases"
+    
+  - name: "Google AI Developer Blog"
+    url: "https://developers.googleblog.com"
+    type: "rss"
+    rss_url: "https://developers.googleblog.com/feeds/posts/default?alt=rss"
+    authority: 0.9
+    categories: ["ai-platforms", "development-tools"]
+    keywords: ["gemini", "ai", "google", "machine-learning", "api"]
+    notes: "Google AI tools including Gemini CLI updates"
+    
+  # Development Environment
+  - name: "GitPod Blog"
+    url: "https://www.gitpod.io/blog"
+    type: "rss"
+    rss_url: "https://www.gitpod.io/blog/rss.xml"
+    authority: 0.85
+    categories: ["development-tools", "infrastructure"]
+    keywords: ["gitpod", "cloud-ide", "development", "workspace", "containers"]
+    notes: "Cloud development environment - planned for year-2 expansion"
+
+# Quality Scoring Rules
+quality_rules:
+  official_source_boost: 0.2  # Boost for official blogs
+  technical_depth_weight: 0.3
+  recency_weight: 0.2
+  engagement_weight: 0.1
+  authority_weight: 0.4
+
+# Filtering and Processing
+filters:
+  exclude_patterns:
+    - "job posting"
+    - "hiring"
+    - "recruitment" 
+    - "career"
+    - "webinar registration"
+    - "event registration"
+  
+  include_patterns:
+    - "release"
+    - "update"
+    - "feature" 
+    - "announcement"
+    - "tutorial"
+    - "guide"
+    - "best practices"
+    - "security"
+    - "performance"
+    - "integration"
+    - "api"
+    - "documentation"
+
+# Cross-Topic Intelligence
+related_topics:
+  - "ai-development"
+  - "frontend-frameworks"
+  - "backend-infrastructure"
+  - "testing-automation"
+  - "deployment-platforms"
+
+# Expected Volume
+expected_items_per_cycle: 150-200
+peak_periods:
+  - "major_release_weeks"
+  - "conference_seasons"
+  - "quarterly_updates"
+
+# Alerts and Notifications
+alerts:
+  critical_updates:
+    - "security vulnerabilities"
+    - "breaking changes"
+    - "major version releases"
+    - "deprecated features"
+    - "service outages"
+  
+  priority_keywords:
+    - "breaking change"
+    - "security"
+    - "vulnerability"
+    - "deprecated"
+    - "migration"
+    - "upgrade"
+    - "compatibility"
+
+# Integration Settings
+integrations:
+  mcp_servers:
+    - "notion"
+    - "github"
+  
+  export_formats:
+    - "markdown"
+    - "json"
+    - "rss"
+
+# Monitoring Metadata
+created: "2025-01-22"
+last_updated: "2025-01-22"
+version: "1.0"
+maintainer: "universal-topic-intelligence-system"
+validation_status: "active"
