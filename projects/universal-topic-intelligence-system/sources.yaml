@@ -1,0 +1,165 @@
+# Universal Topic Intelligence System - RSS Sources Configuration
+# Simplified configuration for SQLite+FTS5 implementation
+
+sources:
+  # AI Development Platforms
+  Anthropic:
+    rss_url: "https://www.anthropic.com/blog/rss.xml"
+    source_name: "Anthropic Blog"
+    keywords: ["claude", "ai", "coding", "development", "api"]
+
+  Cursor:
+    rss_url: "https://cursor.com/rss.xml"
+    source_name: "Cursor AI Blog"
+    keywords: ["cursor", "ide", "ai-coding", "editor", "development"]
+
+  # Frontend Development
+  React:
+    rss_url: "https://react.dev/rss.xml"
+    source_name: "React Dev Blog"
+    keywords: ["react", "javascript", "frontend", "hooks", "components"]
+
+  Next.js:
+    rss_url: "https://nextjs.org/feed.xml"
+    source_name: "Next.js Blog"
+    keywords: ["nextjs", "react", "frontend", "framework", "performance"]
+
+  Vercel:
+    rss_url: "https://vercel.com/blog/rss.xml"
+    source_name: "Vercel Blog"
+    keywords: ["vercel", "deployment", "frontend", "performance"]
+
+  TypeScript:
+    rss_url: "https://devblogs.microsoft.com/typescript/feed/"
+    source_name: "TypeScript Blog"
+    keywords: ["typescript", "javascript", "types", "development", "language"]
+
+  # Testing and Quality
+  Playwright:
+    rss_url: "https://dev.to/feed/playwright"
+    source_name: "Playwright on Dev.to"
+    keywords: ["playwright", "testing", "e2e", "automation", "browsers"]
+
+  Storybook:
+    rss_url: "https://storybook.js.org/rss.xml"
+    source_name: "Storybook Blog"
+    keywords: ["storybook", "components", "ui", "testing", "design-system"]
+
+  Vitest:
+    rss_url: "https://github.com/vitest-dev/vitest/releases.atom"
+    source_name: "Vitest Releases"
+    keywords: ["vitest", "unit-testing", "javascript", "vite", "testing"]
+
+  # Infrastructure and Cloud
+  AWS:
+    rss_url: "https://aws.amazon.com/blogs/developer/category/developer-tools/aws-cloud-development-kit-cdk/feed/"
+    source_name: "AWS CDK Blog"
+    keywords: ["aws", "cdk", "infrastructure", "cloud", "deployment"]
+
+  PostgreSQL:
+    rss_url: "https://github.com/postgres/postgres/releases.atom"
+    source_name: "PostgreSQL Releases"
+    keywords: ["postgresql", "database", "releases", "sql", "performance"]
+
+  # Development Tools
+  GitHub:
+    rss_url: "https://github.blog/feed/"
+    source_name: "GitHub Blog"
+    keywords: ["github", "git", "actions", "ci-cd", "development", "security"]
+
+  pnpm:
+    rss_url: "https://pnpm.io/blog/rss.xml"
+    source_name: "pnpm Blog"
+    keywords: ["pnpm", "package-manager", "npm", "dependencies", "monorepo"]
+
+  # Design and Collaboration
+  Figma:
+    rss_url: "https://www.figma.com/blog/rss.xml"
+    source_name: "Figma Blog"
+    keywords: ["figma", "design", "ui", "ux", "collaboration", "mcp"]
+
+  Notion:
+    rss_url: "https://www.notion.so/blog/rss.xml"
+    source_name: "Notion Blog"
+    keywords: ["notion", "documentation", "mcp", "productivity", "collaboration"]
+
+  # Authentication and Security
+  WorkOS:
+    rss_url: "https://workos.com/blog/rss.xml"
+    source_name: "WorkOS Blog"
+    keywords: ["workos", "authentication", "sso", "security", "enterprise"]
+
+  # Deployment Platforms
+  Railway:
+    rss_url: "https://blog.railway.com/rss.xml"
+    source_name: "Railway Blog"
+    keywords: ["railway", "deployment", "hosting", "infrastructure", "serverless"]
+
+  Render:
+    rss_url: "https://render.com/blog/feed.rss"
+    source_name: "Render Blog"
+    keywords: ["render", "deployment", "hosting", "web-services", "infrastructure"]
+
+  # Monorepo and Build Tools
+  Nx:
+    rss_url: "https://blog.nrwl.io/feed"
+    source_name: "Nx Dev Blog"
+    keywords: ["nx", "monorepo", "build-system", "development", "toolchain"]
+
+  # AI Platforms
+  Google:
+    rss_url: "https://developers.googleblog.com/feeds/posts/default?alt=rss"
+    source_name: "Google AI Developer Blog"
+    keywords: ["gemini", "ai", "google", "machine-learning", "api"]
+
+  # Development Environment
+  GitPod:
+    rss_url: "https://www.gitpod.io/blog/rss.xml"
+    source_name: "GitPod Blog"
+    keywords: ["gitpod", "cloud-ide", "development", "workspace", "containers"]
+
+# System Configuration
+system:
+  database_path: "intelligence.db"
+  collection_frequency: "4h"  # Collect every 4 hours
+  max_items_per_cycle: 200
+  quality_threshold: 0.7
+
+# Security Keywords for Priority Detection
+security_keywords:
+  - "security"
+  - "vulnerability"
+  - "CVE"
+  - "patch"
+  - "fix"
+  - "exploit"
+  - "attack"
+  - "breach"
+  - "malware"
+  - "XSS"
+  - "injection"
+  - "csrf"
+  - "authentication"
+  - "authorization"
+
+# Content Filtering
+content_filters:
+  exclude_patterns:
+    - "job posting"
+    - "hiring"
+    - "recruitment"
+    - "career"
+    - "webinar registration"
+    - "event registration"
+  
+  priority_keywords:
+    - "breaking change"
+    - "security"
+    - "vulnerability"
+    - "deprecated"
+    - "migration"
+    - "upgrade"
+    - "compatibility"
+    - "release"
+    - "update"
+    - "feature"
