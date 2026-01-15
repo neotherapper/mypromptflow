@@ -34,6 +34,19 @@ ai/features/*/meta/development-log.md
 # Temporary files
 *.tmp
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
 # IDE
 .vscode/
 .idea/
