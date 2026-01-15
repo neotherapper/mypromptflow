@@ -17,14 +17,7 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": {
-          "tools": [
-            "mcp__MCP_DOCKER__jira_search",
-            "mcp__MCP_DOCKER__jira_get_issue",
-            "mcp__MCP_DOCKER__jira_create_issue",
-            "mcp__MCP_DOCKER__jira_update_issue"
-          ]
-        },
+        "matcher": "mcp__MCP_DOCKER__jira_search|mcp__MCP_DOCKER__jira_get_issue|mcp__MCP_DOCKER__jira_create_issue|mcp__MCP_DOCKER__jira_update_issue",
         "hooks": [
           {
             "type": "command",
@@ -35,14 +28,7 @@
     ],
     "PostToolUse": [
       {
-        "matcher": {
-          "tools": [
-            "mcp__MCP_DOCKER__jira_search",
-            "mcp__MCP_DOCKER__jira_get_issue",
-            "mcp__MCP_DOCKER__jira_create_issue",
-            "mcp__MCP_DOCKER__jira_update_issue"
-          ]
-        },
+        "matcher": "mcp__MCP_DOCKER__jira_search|mcp__MCP_DOCKER__jira_get_issue|mcp__MCP_DOCKER__jira_create_issue|mcp__MCP_DOCKER__jira_update_issue",
         "hooks": [
           {
             "type": "command",
